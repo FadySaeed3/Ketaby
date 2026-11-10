@@ -247,7 +247,7 @@ private fun WordCell(w: OWord, greekMode: Int, cantillation: Boolean, scale: Flo
             }
         }
         if (!w.gloss.isNullOrBlank()) {
-            Text(w.gloss, fontSize = (11 * scale).sp, color = Muted, maxLines = 2)
+            Text(w.gloss, fontSize = (11 * scale).sp, color = Muted, maxLines = 2, style = TextStyle(textDirection = TextDirection.Ltr))
         }
     }
 }

@@ -23,8 +23,13 @@ tap_text() {
 import re, sys
 pat, where = sys.argv[1], sys.argv[2]
 xml = open('u.xml', encoding='utf-8').read()
-for m in re.finditer(r'<node [^>]*?text="([^"]*)"[^>]*?bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"', xml):
-    t, x1, y1, x2, y2 = m.group(1), *map(int, m.groups()[1:])
+for node in re.findall(r'<node [^>]*>', xml):
+    a = dict(re.findall(r'([\w-]+)="([^"]*)"', node))
+    t = a.get('text') or a.get('content-desc') or ''
+    b = re.match(r'\[(\d+),(\d+)\]\[(\d+),(\d+)\]', a.get('bounds', ''))
+    if not b:
+        continue
+    x1, y1, x2, y2 = map(int, b.groups())
     if re.search(pat, t):
         if where == 'firstword':
             print(x2 - 140, y1 + 40)
@@ -39,6 +44,7 @@ PY
 
 shot 1_reader
 tap_text '^١ ' firstword
+sleep 3
 shot 2_word_sheet
 tap_text 'كل المواضع' center
 shot 3_concordance
@@ -49,6 +55,17 @@ shot 4_interlinear
 tap_text 'بين السطور' center
 tap_text 'الإصحاح الجاي' center
 shot 5_next_chapter
+
+# Greek: search a Strong's number, open its concordance, then a verse in interlinear view
+tap_text '^بحث$' center
+adb shell input text G3056; adb shell input keyevent KEYCODE_ENTER; sleep 4
+shot 6_search
+tap_text 'λόγος' center
+shot 7_greek_concordance
+tap_text 'متى ' center
+tap_text 'بين السطور' center
+sleep 3
+shot 8_greek_interlinear
 
 echo "=====LOGCAT"
 adb logcat -d -s AndroidRuntime:E $PKG:* System.err:W | tail -200

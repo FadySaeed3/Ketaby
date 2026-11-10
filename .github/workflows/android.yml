@@ -3,7 +3,11 @@ name: Build APK
 on:
   push:
     branches: [ main ]
+    tags: [ 'v*' ]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -37,7 +41,21 @@ jobs:
         with:
           gradle-version: '8.10.2'
 
+      - name: Signing key (from secret, if set)
+        env:
+          KS_B64: ${{ secrets.KETABY_KEYSTORE_B64 }}
+        run: |
+          if [ -n "$KS_B64" ]; then
+            echo "$KS_B64" | base64 -d > "$RUNNER_TEMP/ketaby.jks"
+            echo "KETABY_KEYSTORE=$RUNNER_TEMP/ketaby.jks" >> "$GITHUB_ENV"
+            echo "fixed signing key: yes"
+          else
+            echo "fixed signing key: no (secret KETABY_KEYSTORE_B64 not set)"
+          fi
+
       - name: Build debug APK
+        env:
+          KETABY_KEY_PASS: ${{ secrets.KETABY_KEY_PASS }}
         run: gradle :app:assembleDebug --no-daemon --stacktrace
 
       - uses: actions/upload-artifact@v4
@@ -45,6 +63,20 @@ jobs:
           name: ketaby-debug-apk
           path: app/build/outputs/apk/debug/*.apk
           retention-days: 30
+
+      # Pushing a tag like v0.1.0 publishes a GitHub Release with the installable APK.
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          KETABY_KEY_PASS: ${{ secrets.KETABY_KEY_PASS }}
+        run: |
+          gradle :app:assembleRelease --no-daemon
+          cp app/build/outputs/apk/release/app-release.apk "ketaby-$TAG.apk"
+          notes=".github/release-notes/$TAG.md"
+          [ -f "$notes" ] || notes=/dev/null
+          gh release create "$TAG" "ketaby-$TAG.apk" --title "كتابي $TAG" --notes-file "$notes"
 
   # Installs the APK on an emulator, taps through the main screens, and prints
   # screenshots (base64) and crash logs into the job log for review.

@@ -16,9 +16,26 @@ android {
         versionName = "0.1.0"
     }
 
+    // A fixed signing key lets each new APK install over the old one.
+    // CI writes it from the KETABY_KEYSTORE_B64 secret; without the secret,
+    // builds fall back to the runner's throwaway debug key.
+    val ks = System.getenv("KETABY_KEYSTORE")?.let { file(it) }?.takeIf { it.exists() }
+    signingConfigs {
+        if (ks != null) create("ketaby") {
+            storeFile = ks
+            storePassword = System.getenv("KETABY_KEY_PASS")
+            keyAlias = "ketaby"
+            keyPassword = System.getenv("KETABY_KEY_PASS")
+        }
+    }
+
     buildTypes {
+        debug {
+            if (ks != null) signingConfig = signingConfigs.getByName("ketaby")
+        }
         release {
             isMinifyEnabled = false
+            signingConfig = if (ks != null) signingConfigs.getByName("ketaby") else signingConfigs.getByName("debug")
         }
     }
     compileOptions {

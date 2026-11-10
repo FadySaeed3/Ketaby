@@ -31,3 +31,6 @@ captures/
 # allow page indexes explicitly (names contain halot/bdag)
 !content/indexes/
 !content/indexes/*.json
+
+# built database asset (CI builds it)
+app/src/main/assets/ketaby.db

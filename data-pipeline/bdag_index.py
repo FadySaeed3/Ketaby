@@ -29,7 +29,7 @@ def clean(s):
     return re.sub(r'^[\d\s]+|[\d\s*†]+$', '', s)
 
 
-def main(pdf, gnt_dir, out_path):
+def main(pdf, gnt_dir, out_path, tagnt_dir=None):
     doc = pymupdf.open(pdf)
     spans = []
     for pno in range(doc.page_count):
@@ -74,6 +74,36 @@ def main(pdf, gnt_dir, out_path):
                 lemmas[lem] = hit; stats['variant'] += 1
             else:
                 stats['unmatched'] += 1
+    # STEPBible TAGNT: extended Strong's -> dictionary form -> entries
+    lemmas_d, stats_d = {}, collections.Counter()
+    if tagnt_dir:
+        forms = {}
+        for f in glob.glob(os.path.join(tagnt_dir, 'TAGNT*.txt')):
+            for line in open(f, encoding='utf-8'):
+                parts = line.rstrip('\n').split('\t')
+                if len(parts) < 5 or not re.match(r'(?:[1-3][A-Z][a-z]|[A-Z][a-z]{2})\.\d+\.\d+', parts[0]):
+                    continue
+                for ds, df in zip(parts[3].split('+'), parts[4].split('+')):
+                    key = ds.split('=')[0].strip()
+                    if re.fullmatch(r'G\d+[A-Za-z]?', key) and key not in forms:
+                        forms[key] = [unicodedata.normalize('NFC', x.strip()) for x in df.split('=')[0].split(',')]
+        for key, fl in forms.items():
+            hit = None
+            for fm in fl:
+                hit = by_exact.get(fm) or by_loose.get(strip_accents(fm))
+                if hit:
+                    break
+            if not hit:
+                for fm in fl:
+                    variants = {re.sub(r'\((\w)\)', '', fm), re.sub(r'\((\w)\)', r'\1', fm)}
+                    variants |= {re.sub(r'ομαι$', 'ω', v) for v in variants} | {re.sub(r'αμαι$', 'ημι', v) for v in variants}
+                    hit = next((by_loose[strip_accents(v)] for v in variants if strip_accents(v) in by_loose), None)
+                    if hit:
+                        break
+            if hit:
+                lemmas_d[key] = hit; stats_d['matched'] += 1
+            else:
+                stats_d['unmatched'] += 1
     # "s. <lemma>" cross references
     links = []
     for i, (p, bb, f, sz, t) in enumerate(spans[:-1]):
@@ -90,8 +120,10 @@ def main(pdf, gnt_dir, out_path):
         'note': 'Lemmas, numbers and coordinates only. No entry text.',
         'entries': entries,
         'lemmas': lemmas,
+        'lemmas_dstrong': lemmas_d,
         'links': links,
         'stats': dict(stats, entries=len(entries), gnt_lemmas=len(gnt), links=len(links)),
+        'stats_dstrong': dict(stats_d),
     }
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
@@ -99,4 +131,4 @@ def main(pdf, gnt_dir, out_path):
 
 
 if __name__ == '__main__':
-    main(*sys.argv[1:4])
+    main(*sys.argv[1:5])

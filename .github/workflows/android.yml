@@ -11,6 +11,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch pinned open sources
+        run: python3 data-pipeline/fetch_sources.py
+
+      - name: Build ketaby.db
+        run: |
+          mkdir -p app/src/main/assets
+          python3 data-pipeline/build_db.py app/src/main/assets/ketaby.db
+
+      - name: Pipeline tests
+        run: python3 data-pipeline/tests/test_bw_decode.py
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin

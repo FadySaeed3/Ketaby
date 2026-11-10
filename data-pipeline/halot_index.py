@@ -14,7 +14,7 @@ coordinates. Entry text is read in memory to score references and then
 discarded.
 
 Usage:
-  python3 halot_index.py HALOT.pdf path/to/morphhb/wlc path/to/HebrewStrong.xml out.json
+  python3 halot_index.py HALOT.pdf path/to/morphhb/wlc path/to/HebrewStrong.xml out.json [path/to/TAHOT_dir]
 """
 import hashlib, json, re, sys, glob, os, collections, unicodedata, difflib
 import pymupdf
@@ -132,42 +132,18 @@ def strong_heads(xml):
     return out
 
 
-def main(pdf, wlc_dir, strong_xml, out_path):
-    pages, spans = read_spans(pdf)
-    heads = find_headers(spans)
-    # entry bodies -> references (in memory only)
-    for k, h in enumerate(heads):
-        end = heads[k + 1]['idx'] if k + 1 < len(heads) else len(spans)
-        h['refs'] = entry_refs(spans, h['idx'], end)
-        h['end'] = end
-    by_cons = collections.defaultdict(list)
-    by_loose = collections.defaultdict(list)   # without matres lectionis (ו/י)
-    by_letter = collections.defaultdict(list)
-    loose = lambda c: c.replace('ו', '').replace('י', '')
-    stem = lambda c: loose(re.sub(r'(ות|ים|ה|ת)$', '', c)) if len(c) > 3 else loose(c)
-    by_stem = collections.defaultdict(list)
-    for h in heads:
-        forms = set(re.split(r' / | ', h['he'])) | set(h['he'].split(' / '))
-        for form in forms:
-            c = consonants(form)
-            if c:
-                by_cons[c].append(h)
-                by_loose[loose(c)].append(h)
-                by_stem[stem(c)].append(h)
-        c0 = consonants(h['he'])[:1]
-        if c0:
-            by_letter[c0].append(h)
-    lemrefs = oshb_lemmas(wlc_dir)
-    sh = strong_heads(strong_xml)
+def match_lemmas(lemrefs, headinfo, heads, spans, by_cons, by_loose, by_stem, by_letter, loose, stem):
+    """lemrefs: key -> set of (osis, ch, v); headinfo: key -> (pointed head, is_aramaic) or None."""
     lemmas, stats, low, pos = {}, collections.Counter(), [], {}
     num_of = {h['n']: h for h in heads}
     for key, refs in lemrefs.items():
-        num = re.match(r'\d+', key).group(0)
-        if num not in sh:
-            stats['no_strong'] += 1; continue
-        head, lang = sh[num]
+        hi = headinfo(key)
+        if hi is None:
+            stats['no_head'] += 1; continue
+        head, aram = hi
         hc = consonants(head)
-        aram = (lang == 'arc')
+        if not hc:
+            stats['no_head'] += 1; continue
         def pick(cs):
             cs = [c for c in cs if c['aram'] == aram] or cs
             return sorted(((len(refs & c['refs']), c['n']) for c in {c['n']: c for c in cs}.values()), reverse=True)
@@ -198,17 +174,88 @@ def main(pdf, wlc_dir, strong_xml, out_path):
             low.append(key)
         lemmas[key] = top
         if how != 'exact' and len(top) == 1:
-            # the lemma may be a sub-entry inside another entry: find its own spot
             h = num_of[top[0]]
             for p_, bb_, f_, sz_, t_ in spans[h['idx']:h['end']]:
                 if f_ == 'Bwhebb' and consonants(decode_hebrew(t_)) == hc:
                     if (p_, bb_[1]) != (h['page'], h['y']):
                         pos[key] = [p_, round(bb_[1], 1)]
                     break
+    return lemmas, stats, low, pos
+
+
+def tahot_lemmas(tahot_dir):
+    """STEPBible TAHOT: extended Strong's (main lemma) -> refs (Hebrew numbering), head, aramaic flag."""
+    from books import STEP2OSIS
+    refs, heads = collections.defaultdict(set), {}
+    for f in glob.glob(os.path.join(tahot_dir, 'TAHOT*.txt')):
+        for line in open(f, encoding='utf-8'):
+            m = re.match(r'((?:[1-3][A-Z][a-z]|[A-Z][a-z]{2}))\.(\d+)\.(\d+)(?:\((\d+)\.(\d+)\))?#\d+=\S*\t', line)
+            if not m:
+                continue
+            parts = line.rstrip('\n').split('\t')
+            if len(parts) < 12:
+                continue
+            ch, v = (m.group(4), m.group(5)) if m.group(4) else (m.group(2), m.group(3))
+            osis = STEP2OSIS.get(m.group(1))
+            main = re.search(r'\{(H\d+[A-Za-z]?)\}', parts[4])
+            if not main or not osis:
+                continue
+            key = main.group(1)
+            refs[key].add((osis, int(ch), int(v)))
+            if key not in heads:
+                ex = re.search(r'\{' + re.escape(key) + r'=([^=]+)=', parts[11])
+                heads[key] = ((ex.group(1).split(',')[0].strip() if ex else ''), parts[5].startswith('A'))
+    return refs, heads
+
+
+def main(pdf, wlc_dir, strong_xml, out_path, tahot_dir=None):
+    pages, spans = read_spans(pdf)
+    heads = find_headers(spans)
+    # entry bodies -> references (in memory only)
+    for k, h in enumerate(heads):
+        end = heads[k + 1]['idx'] if k + 1 < len(heads) else len(spans)
+        h['refs'] = entry_refs(spans, h['idx'], end)
+        h['end'] = end
+    by_cons = collections.defaultdict(list)
+    by_loose = collections.defaultdict(list)   # without matres lectionis (ו/י)
+    by_letter = collections.defaultdict(list)
+    loose = lambda c: c.replace('ו', '').replace('י', '')
+    stem = lambda c: loose(re.sub(r'(ות|ים|ה|ת)$', '', c)) if len(c) > 3 else loose(c)
+    by_stem = collections.defaultdict(list)
+    for h in heads:
+        forms = set(re.split(r' / | ', h['he'])) | set(h['he'].split(' / '))
+        for form in forms:
+            c = consonants(form)
+            if c:
+                by_cons[c].append(h)
+                by_loose[loose(c)].append(h)
+                by_stem[stem(c)].append(h)
+        c0 = consonants(h['he'])[:1]
+        if c0:
+            by_letter[c0].append(h)
+    lemrefs = oshb_lemmas(wlc_dir)
+    sh = strong_heads(strong_xml)
+    def oshb_head(key):
+        num = re.match(r'\d+', key).group(0)
+        if num not in sh:
+            return None
+        return sh[num][0], sh[num][1] == 'arc'
+    lemmas, stats, low, pos = match_lemmas(lemrefs, oshb_head, heads, spans, by_cons, by_loose, by_stem, by_letter, loose, stem)
+    lemmas_d, stats_d, low_d, pos_d = {}, {}, [], {}
+    if tahot_dir:
+        trefs, theads = tahot_lemmas(tahot_dir)
+        lemmas_d, stats_d, low_d, pos_d = match_lemmas(trefs, lambda k: theads.get(k), heads, spans,
+                                                       by_cons, by_loose, by_stem, by_letter, loose, stem)
     ov_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'halot_overrides.json')
     if os.path.exists(ov_path):
         for k, v in json.load(open(ov_path, encoding='utf-8')).items():
             if not k.startswith('_'):
+                if k.startswith('H'):
+                    lemmas_d[k] = v; pos_d.pop(k, None)
+                    if k in low_d:
+                        low_d.remove(k)
+                    stats['manual'] += 1
+                    continue
                 lemmas[k] = v; pos.pop(k, None)
                 if k in low:
                     low.remove(k)
@@ -242,9 +289,13 @@ def main(pdf, wlc_dir, strong_xml, out_path):
         'entries': [{'n': h['n'], 'he': h['he'], 'aram': h['aram'], 'page': h['page'], 'y': h['y']} for h in heads],
         'lemmas': lemmas,
         'lemma_pos': pos,
+        'lemmas_dstrong': lemmas_d,
+        'lemma_pos_dstrong': pos_d,
+        'low_confidence_dstrong': sorted(low_d),
         'low_confidence': sorted(low),
         'links': links,
         'stats': dict(stats, entries=len(heads), lemmas_total=len(lemrefs), links=len(links)),
+        'stats_dstrong': dict(stats_d),
     }
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
@@ -252,4 +303,4 @@ def main(pdf, wlc_dir, strong_xml, out_path):
 
 
 if __name__ == '__main__':
-    main(*sys.argv[1:5])
+    main(*sys.argv[1:6])

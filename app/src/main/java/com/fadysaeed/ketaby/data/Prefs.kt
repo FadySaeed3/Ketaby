@@ -24,12 +24,12 @@ class Prefs(ctx: Context) {
     var lastChapter by mutableIntStateOf(sp.getInt("lastChapter", 1)); private set
     var lastVerseIndex by mutableIntStateOf(sp.getInt("lastVerseIndex", 0)); private set
 
-    fun setTextScale(v: Float) { textScale = v; sp.edit().putFloat("textScale", v).apply() }
-    fun setGreekMode(v: Int) { greekMode = v; sp.edit().putInt("greekMode", v).apply() }
-    fun setCantillation(v: Boolean) { cantillation = v; sp.edit().putBoolean("cantillation", v).apply() }
-    fun setHarakat(v: Boolean) { harakat = v; sp.edit().putBoolean("harakat", v).apply() }
-    fun setScriptureFont(v: String) { scriptureFont = v; sp.edit().putString("scriptureFont", v).apply() }
-    fun setInterlinear(v: Boolean) { interlinear = v; sp.edit().putBoolean("interlinear", v).apply() }
+    fun putTextScale(v: Float) { textScale = v; sp.edit().putFloat("textScale", v).apply() }
+    fun putGreekMode(v: Int) { greekMode = v; sp.edit().putInt("greekMode", v).apply() }
+    fun putCantillation(v: Boolean) { cantillation = v; sp.edit().putBoolean("cantillation", v).apply() }
+    fun putHarakat(v: Boolean) { harakat = v; sp.edit().putBoolean("harakat", v).apply() }
+    fun putScriptureFont(v: String) { scriptureFont = v; sp.edit().putString("scriptureFont", v).apply() }
+    fun putInterlinear(v: Boolean) { interlinear = v; sp.edit().putBoolean("interlinear", v).apply() }
 
     fun savePosition(book: Int, ch: Int, verseIndex: Int) {
         lastBook = book; lastChapter = ch; lastVerseIndex = verseIndex

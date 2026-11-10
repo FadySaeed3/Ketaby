@@ -68,25 +68,25 @@ fun SettingsScreen(nav: Nav) {
         Column(Modifier.padding(pad).fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp)) {
             Section("حجم الخط") {
                 Slider(
-                    value = p.textScale, onValueChange = { p.setTextScale(it) }, valueRange = 0.8f..1.7f, steps = 8,
+                    value = p.textScale, onValueChange = { p.putTextScale(it) }, valueRange = 0.8f..1.7f, steps = 8,
                     colors = SliderDefaults.colors(thumbColor = Gold, activeTrackColor = Gold),
                 )
                 VerseText(1, listOf(Token(-1, "فِي الْبَدْءِ كَانَ الْكَلِمَةُ، وَالْكَلِمَةُ كَانَ عِنْدَ اللهِ.", false))) {}
             }
             Section("خط الكتاب") {
-                Choice("نسخ (كلاسيكي)", p.scriptureFont == "naskh") { p.setScriptureFont("naskh") }
-                Choice("بلكس (حديث)", p.scriptureFont == "plex") { p.setScriptureFont("plex") }
+                Choice("نسخ (كلاسيكي)", p.scriptureFont == "naskh") { p.putScriptureFont("naskh") }
+                Choice("بلكس (حديث)", p.scriptureFont == "plex") { p.putScriptureFont("plex") }
             }
             Section("العربي") {
-                Toggle("التشكيل", "إظهار الحركات في نص فاندايك", p.harakat) { p.setHarakat(it) }
+                Toggle("التشكيل", "إظهار الحركات في نص فاندايك", p.harakat) { p.putHarakat(it) }
             }
             Section("العبري") {
-                Toggle("علامات الترنيم", "علامات التنغيم (الطعاميم) فوق وتحت الحروف؛ النقط بتفضل ظاهرة دايمًا", p.cantillation) { p.setCantillation(it) }
+                Toggle("علامات الترنيم", "علامات التنغيم (الطعاميم) فوق وتحت الحروف؛ النقط بتفضل ظاهرة دايمًا", p.cantillation) { p.putCantillation(it) }
             }
             Section("نطق اليوناني") {
-                Choice("الاتنين جنب بعض", p.greekMode == 0) { p.setGreekMode(0) }
-                Choice("الأكاديمي بس (إيراسموس)", p.greekMode == 1) { p.setGreekMode(1) }
-                Choice("الحديث بس (زي الكنيسة)", p.greekMode == 2) { p.setGreekMode(2) }
+                Choice("الاتنين جنب بعض", p.greekMode == 0) { p.putGreekMode(0) }
+                Choice("الأكاديمي بس (إيراسموس)", p.greekMode == 1) { p.putGreekMode(1) }
+                Choice("الحديث بس (زي الكنيسة)", p.greekMode == 2) { p.putGreekMode(2) }
             }
             Section("المصادر") {
                 Text(

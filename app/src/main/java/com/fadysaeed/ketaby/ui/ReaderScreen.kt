@@ -152,7 +152,7 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
                 onBack = { nav.pop() },
                 onTitle = { nav.push(Screen.Chapters(screen.book)) },
             ) {
-                TextButton(onClick = { prefs.setInterlinear(!prefs.interlinear) }) {
+                TextButton(onClick = { prefs.putInterlinear(!prefs.interlinear) }) {
                     Text("بين السطور", color = if (prefs.interlinear) Teal else Muted, fontSize = 13.sp)
                 }
                 SearchSettingsActions(nav)

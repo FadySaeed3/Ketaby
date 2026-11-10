@@ -24,7 +24,9 @@ jobs:
           python3 data-pipeline/build_db.py app/src/main/assets/ketaby.db
 
       - name: Pipeline tests
-        run: python3 data-pipeline/tests/test_bw_decode.py
+        run: |
+          python3 data-pipeline/tests/test_bw_decode.py
+          python3 data-pipeline/tests/test_translit.py
 
       - uses: actions/setup-java@v4
         with:

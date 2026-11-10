@@ -5,10 +5,11 @@ Tables
   verses(id, book, ch, v, text)                         Van Dyke text and numbering
   tokens(id, verse_id, idx, text, strongs)              display order; strongs NULL = punctuation/space,
                                                         otherwise an Arabic word/phrase unit (tagged)
-  owords(id, lang, book, ch, v, oc, ov, wno, text, translit, gloss, dstrong, dstrongs, grammar, editions, vd_verse)
+  owords(id, lang, book, ch, v, oc, ov, wno, text, tr, tr2, gloss, dstrong, dstrongs, grammar, editions, vd_verse)
+                                                        tr = Arabic-script reading (Greek: academic), tr2 = Greek modern
                                                         original words (TAHOT/TAGNT), oc/ov = original numbering
   links(token_id, oword_id)                             Arabic unit -> original word(s)
-  lemmas(dstrong, lang, lemma, gloss, count, halot, halot_page, halot_y, bdag, bdag_page, bdag_y)
+  lemmas(dstrong, lang, lemma, tr, tr2, gloss, count, halot, halot_page, halot_y, bdag, bdag_page, bdag_y)
   meta(key, value)
 
 Usage: python3 build_db.py out.db
@@ -16,6 +17,7 @@ Usage: python3 build_db.py out.db
 import glob, json, os, re, sqlite3, sys, unicodedata, collections, html
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from books import BOOKS, STEP2ID, OSIS2ID
+from translit import hebrew_to_arabic, greek_academic, greek_modern
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DL = os.path.join(HERE, 'downloads', 'STEPBible-Data')
@@ -34,10 +36,10 @@ def schema(db):
     CREATE TABLE verses(id INTEGER PRIMARY KEY, book INTEGER, ch INTEGER, v INTEGER, text TEXT);
     CREATE TABLE tokens(id INTEGER PRIMARY KEY, verse_id INTEGER, idx INTEGER, text TEXT, strongs TEXT);
     CREATE TABLE owords(id INTEGER PRIMARY KEY, lang TEXT, book INTEGER, ch INTEGER, v INTEGER, oc INTEGER, ov INTEGER,
-        wno INTEGER, text TEXT, translit TEXT, gloss TEXT, dstrong TEXT, dstrongs TEXT, grammar TEXT, editions TEXT,
+        wno INTEGER, text TEXT, tr TEXT, tr2 TEXT, gloss TEXT, dstrong TEXT, dstrongs TEXT, grammar TEXT, editions TEXT,
         vd_verse INTEGER);
     CREATE TABLE links(token_id INTEGER, oword_id INTEGER);
-    CREATE TABLE lemmas(dstrong TEXT PRIMARY KEY, lang TEXT, lemma TEXT, gloss TEXT, count INTEGER,
+    CREATE TABLE lemmas(dstrong TEXT PRIMARY KEY, lang TEXT, lemma TEXT, tr TEXT, tr2 TEXT, gloss TEXT, count INTEGER,
         halot TEXT, halot_page INTEGER, halot_y REAL, bdag TEXT, bdag_page INTEGER, bdag_y REAL);
     ''')
 
@@ -102,7 +104,7 @@ def load_owords(db, vid):
             ds = main.group(1) if main else ''
             lang = 'arc' if p[5].startswith('A') else 'heb'
             oid += 1
-            rows.append((oid, lang, book, ch, v, oc, ov, wno, text, p[2], p[3], ds, p[4], p[5], m.group(7),
+            rows.append((oid, lang, book, ch, v, oc, ov, wno, text, hebrew_to_arabic(text), None, p[3], ds, p[4], p[5], m.group(7),
                          vid.get((book, ch, v))))
             key2id[('H', book, oc, ov, wno)] = oid
             if ds:
@@ -132,7 +134,8 @@ def load_owords(db, vid):
             grammar = '+'.join(x.split('=')[1] if '=' in x else '' for x in ds_g)
             dfg = p[4].split('+')[0]
             oid += 1
-            rows.append((oid, 'grc', book, ch, v, oc, ov, wno, unicodedata.normalize('NFC', text), translit, p[2],
+            text = unicodedata.normalize('NFC', text)
+            rows.append((oid, 'grc', book, ch, v, oc, ov, wno, text, greek_academic(text), greek_modern(text), p[2],
                          ds, p[3], grammar, m.group(7), vid.get((book, ch, v))))
             key2id[('G', book, ch, v, wno)] = oid
             if ds:
@@ -140,7 +143,7 @@ def load_owords(db, vid):
                 if ds not in lem and '=' in dfg:
                     form, gloss = dfg.split('=', 1)
                     lem[ds] = ('grc', unicodedata.normalize('NFC', form.split(',')[0].strip()), gloss.strip())
-    db.executemany('INSERT INTO owords VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', rows)
+    db.executemany('INSERT INTO owords VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', rows)
     return key2id, lem, count
 
 
@@ -196,9 +199,13 @@ def load_lemmas(db, lem, count):
         b = bd.get('lemmas_dstrong', {}).get(ds) if lang == 'grc' else None
         hp = hal.get('lemma_pos_dstrong', {}).get(ds) or ([hE[h[0]]['page'], hE[h[0]]['y']] if h else [None, None])
         bp = [bE[b[0]]['page'], bE[b[0]]['y']] if b else [None, None]
-        rows.append((ds, lang, form, gloss, count[ds], json.dumps(h) if h else None, hp[0], hp[1],
+        if lang == 'grc':
+            tr, tr2 = greek_academic(form), greek_modern(form)
+        else:
+            tr, tr2 = (hebrew_to_arabic(form) if re.search(r'[\u05d0-\u05ea]', form) else ''), None
+        rows.append((ds, lang, form, tr, tr2, gloss, count[ds], json.dumps(h) if h else None, hp[0], hp[1],
                      json.dumps(b) if b else None, bp[0], bp[1]))
-    db.executemany('INSERT INTO lemmas VALUES (?,?,?,?,?,?,?,?,?,?,?)', rows)
+    db.executemany('INSERT INTO lemmas VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', rows)
     return hal['file'], bd['file']
 
 

@@ -23,6 +23,7 @@ Agreed with Fady on 2026-11-10.
 | Rare words | Lemmas (excluding proper names) occurring 1, 2 or 3 times in the Hebrew Bible or Greek NT |
 | HALOT copy | **Text-layer edition only** (CD-ROM layout, 3537 pages, sha256 `7ba7a134…c964`). The scanned edition is dropped for good. References are HALOT entry number + page/position in this file (no printed-book page numbers) |
 | BDAG copy | `BDAG.pdf` (text layer, 1080 pages, sha256 `4daf02c8…dd95`) |
+| Releases | Bump `versionName` in `app/build.gradle.kts` and add `.github/release-notes/v<version>.md`; the next push to main publishes a GitHub pre-release with `ketaby-v<version>.apk`. Signing uses the `KETABY_KEYSTORE_B64` / `KETABY_KEY_PASS` secrets when set (needed so updates install over the old version); otherwise a throwaway key per build |
 | In-app links | Tapping a word opens the owner's PDF at the exact entry (page + y), highlighted; cross-references inside HALOT (→) and BDAG (s.) are tappable and jump to the target entry |
 
 ## Sources (open)

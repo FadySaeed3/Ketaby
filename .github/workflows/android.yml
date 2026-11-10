@@ -88,6 +88,7 @@ jobs:
           fi
           gradle :app:assembleRelease --no-daemon
           cp app/build/outputs/apk/release/app-release.apk "ketaby-$TAG.apk"
+          "$(ls -d "$ANDROID_HOME"/build-tools/* | tail -1)/apksigner" verify --print-certs "ketaby-$TAG.apk" | grep -i "SHA-256"
           if [ "$exists" = yes ]; then
             gh release upload "$TAG" "ketaby-$TAG.apk" --clobber
           else

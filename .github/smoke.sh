@@ -9,6 +9,7 @@ adb shell am start -n $PKG/.MainActivity
 sleep 75
 
 shot() {
+  dismiss_anr
   adb exec-out screencap -p > "shots/$1.png"
   echo "=====SHOT $1 BEGIN"
   base64 -w 0 "shots/$1.png"; echo
@@ -16,7 +17,21 @@ shot() {
 }
 
 # tap the node whose text matches a python regex; dx/dy pick the point inside its bounds
+# close "X isn't responding" system dialogs that slow emulators sometimes raise
+dismiss_anr() {
+  for i in 1 2 3; do
+    adb shell uiautomator dump /sdcard/u.xml >/dev/null
+    adb pull /sdcard/u.xml u.xml >/dev/null
+    grep -q "responding" u.xml || return 0
+    xy=$(python3 -c "import re;x=open('u.xml',encoding='utf-8').read();m=re.search(r'text=\"Wait\"[^>]*bounds=\"\[(\d+),(\d+)\]\[(\d+),(\d+)\]',x);print((int(m[1])+int(m[3]))//2,(int(m[2])+int(m[4]))//2) if m else print('')")
+    echo "ANR dialog, tapping Wait at $xy"
+    [ -n "$xy" ] && adb shell input tap $xy
+    sleep 3
+  done
+}
+
 tap_text() {
+  dismiss_anr
   adb shell uiautomator dump /sdcard/u.xml >/dev/null
   adb pull /sdcard/u.xml u.xml >/dev/null
   python3 - "$1" "$2" <<'PY' > tap.txt

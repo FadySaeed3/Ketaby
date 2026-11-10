@@ -1,0 +1,33 @@
+# --- Copyrighted lexicons: never commit ---
+*HALOT*
+*halot*.pdf
+*BDAG*
+*bdag*.pdf
+**/lexicon_private/
+**/ocr/
+**/ocr_*/
+
+# --- Build outputs ---
+*.db
+*.sqlite
+data-pipeline/build/
+data-pipeline/downloads/
+__pycache__/
+*.pyc
+
+# --- Android / Gradle ---
+.gradle/
+**/build/
+local.properties
+*.apk
+*.aab
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# allow page indexes explicitly (names contain halot/bdag)
+!content/indexes/
+!content/indexes/*.json

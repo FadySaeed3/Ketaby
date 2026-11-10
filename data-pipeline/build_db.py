@@ -33,7 +33,8 @@ def schema(db):
     PRAGMA journal_mode=OFF; PRAGMA synchronous=OFF;
     CREATE TABLE meta(key TEXT PRIMARY KEY, value TEXT);
     CREATE TABLE books(id INTEGER PRIMARY KEY, code TEXT, osis TEXT, name_ar TEXT, testament TEXT, chapters INTEGER);
-    CREATE TABLE verses(id INTEGER PRIMARY KEY, book INTEGER, ch INTEGER, v INTEGER, text TEXT);
+    CREATE TABLE verses(id INTEGER PRIMARY KEY, book INTEGER, ch INTEGER, v INTEGER, text TEXT, plain TEXT);
+    CREATE TABLE cards(strong TEXT, kind TEXT, json TEXT);
     CREATE TABLE tokens(id INTEGER PRIMARY KEY, verse_id INTEGER, idx INTEGER, text TEXT, strongs TEXT);
     CREATE TABLE owords(id INTEGER PRIMARY KEY, lang TEXT, book INTEGER, ch INTEGER, v INTEGER, oc INTEGER, ov INTEGER,
         wno INTEGER, text TEXT, tr TEXT, tr2 TEXT, gloss TEXT, dstrong TEXT, dstrongs TEXT, grammar TEXT, editions TEXT,
@@ -42,6 +43,23 @@ def schema(db):
     CREATE TABLE lemmas(dstrong TEXT PRIMARY KEY, lang TEXT, lemma TEXT, tr TEXT, tr2 TEXT, gloss TEXT, count INTEGER,
         halot TEXT, halot_page INTEGER, halot_y REAL, bdag TEXT, bdag_page INTEGER, bdag_y REAL);
     ''')
+
+
+def plain_ar(s):
+    """Arabic without harakat, unified alef/ya/ta marbuta, for searching."""
+    s = re.sub(r'[\u064b-\u065f\u0670\u0640]', '', s)
+    s = re.sub('[أإآٱ]', 'ا', s).replace('ى', 'ي').replace('ة', 'ه')
+    return re.sub(r'[^\u0621-\u064a ]', ' ', s)
+
+
+def load_cards(db):
+    rows = []
+    for f in glob.glob(os.path.join(HERE, '..', 'content', 'rare_words', '*', '*.json')):
+        d = json.load(open(f, encoding='utf-8'))
+        for w in d.get('words', []):
+            rows.append((w['strong'], 'rare', json.dumps(w, ensure_ascii=False)))
+    db.executemany('INSERT INTO cards VALUES (?,?,?)', rows)
+    return len(rows)
 
 
 def load_verses(db):
@@ -76,8 +94,9 @@ def load_verses(db):
                 tok_rows.append((tid, verse_id, idx, txt, None))
                 plain.append(txt)
             idx += 1
-        verse_rows.append((verse_id, book, int(c), int(v), re.sub(r'\s+', ' ', ''.join(plain)).strip()))
-    db.executemany('INSERT INTO verses VALUES (?,?,?,?,?)', verse_rows)
+        vt = re.sub(r'\s+', ' ', ''.join(plain)).strip()
+        verse_rows.append((verse_id, book, int(c), int(v), vt, plain_ar(vt)))
+    db.executemany('INSERT INTO verses VALUES (?,?,?,?,?,?)', verse_rows)
     db.executemany('INSERT INTO tokens VALUES (?,?,?,?,?)', tok_rows)
     return vid
 
@@ -218,6 +237,7 @@ def main(out):
     key2id, lem, count = load_owords(db, vid)
     lstats = load_links(db, vid, key2id)
     hfile, bfile = load_lemmas(db, lem, count)
+    ncards = load_cards(db)
     chap = collections.Counter()
     for b, c in db.execute('SELECT book, MAX(ch) FROM verses GROUP BY book'):
         chap[b] = c
@@ -225,6 +245,7 @@ def main(out):
                    [(i + 1, s, o, n, t, chap[i + 1]) for i, (s, o, n, t) in enumerate(BOOKS)])
     db.executescript('''
     CREATE INDEX i_verses ON verses(book, ch, v);
+    CREATE INDEX i_cards ON cards(strong);
     CREATE INDEX i_tokens ON tokens(verse_id);
     CREATE INDEX i_owords_v ON owords(vd_verse);
     CREATE INDEX i_owords_ds ON owords(dstrong);
@@ -248,12 +269,16 @@ def main(out):
         'owords_without_vd_verse': q('SELECT COUNT(*) FROM owords WHERE vd_verse IS NULL'),
         'units_linked': q('SELECT COUNT(DISTINCT token_id) FROM links'),
         'lemmas': q('SELECT COUNT(*) FROM lemmas'),
+        'cards': q('SELECT COUNT(*) FROM cards'),
         'lemmas_with_halot': q("SELECT COUNT(*) FROM lemmas WHERE halot IS NOT NULL"),
         'lemmas_with_bdag': q("SELECT COUNT(*) FROM lemmas WHERE bdag IS NOT NULL"),
         **{'links_' + k: v for k, v in lstats.items()},
     }
     db.execute('VACUUM')
     db.close()
+    # the app reads this to show copy progress on first run
+    with open(out + '.len', 'w') as f:
+        f.write(str(os.path.getsize(out)))
     print(json.dumps(checks, ensure_ascii=False, indent=1))
     assert checks['verses'] == 31102, 'Van Dyke must have 31,102 verses'
     return checks

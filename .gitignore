@@ -34,3 +34,4 @@ captures/
 
 # built database asset (CI builds it)
 app/src/main/assets/ketaby.db
+app/src/main/assets/ketaby.db.len

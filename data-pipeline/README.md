@@ -12,6 +12,7 @@ Planned scripts (Phase 1 onward):
 | `build_versification.py` | Hebrew/Greek ↔ Van Dyke verse map (TVTMS) |
 | `translit.py` + `tests/` | Hebrew → Arabic, Greek → Arabic (academic + modern) |
 | `rare_words.py` | lemma frequency, rare-word lists per book |
-| `halot_index.py` | lemma → HALOT page (header OCR + monotone filter) |
-| `bdag_index.py` | lemma → BDAG page (from the BDAG index pages) |
+| `bw_decode.py` + `tests/` | BibleWorks Bwhebb → Unicode Hebrew (done) |
+| `halot_index.py` | HALOT entries, lemma map, positions, internal links (done; manual fixes in `halot_overrides.json`) |
+| `bdag_index.py` | BDAG entries, lemma map, positions, links (done) |
 | `build_db.py` | assembles `build/ketaby.db` and checks counts |

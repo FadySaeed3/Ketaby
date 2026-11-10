@@ -2,6 +2,8 @@
  "book": "Song of Songs",
  "criterion": "non-name lemmas occurring 3 times or fewer in the Hebrew Bible",
  "count": 76,
+ "halot_file_sha256": "7ba7a1346bef2ef0e8829650b2ebbf86b2ffb3e48b5a2e98f78a8b42bc86c964",
+ "checked": "2026-11-10, every card against the text-layer HALOT",
  "words": [
   {
    "strong": "H5390",
@@ -12,21 +14,23 @@
     "Prov.27.6",
     "Song.1.2"
    ],
-   "song_refs_vandyke": [
-    "1:2"
-   ],
    "vandyke_word": "بقبلات",
    "certainty": "واضح",
    "note_ar": "اسم من فعل «نشق» يعني باس، والكلمة نفسها جت مرتين بس في الكتاب كله: هنا في أول سطر في النشيد، وفي الأمثال «قبلات العدو غاشة». يعني نفس الكلمة مرة في أصدق طلب حب ومرة في أكدب بوسة. وفي العبري حرف «مِن» قبلها، فبعض الدارسين بيقروها «يبوسني شوية بوسات من بوسات فمه»، كأنها مش طالبة كل البوس، طالبة نصيبها منه.",
    "halot": {
     "checked": true,
-    "pdf_page": 785,
-    "printed_page": 729
+    "entry": 6378,
+    "headword": "נְשִׁיקָה",
+    "page": 1768,
+    "y": 285.3
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:2"
    ]
   },
   {
@@ -37,21 +41,23 @@
    "refs_hebrew_numbering": [
     "Song.1.6"
    ],
-   "song_refs_vandyke": [
-    "1:6"
-   ],
    "vandyke_word": "سوداء",
    "certainty": "واضح",
    "note_ar": "الكلمة مكررة الحروف «شحرحورت»، والتكرار ده في العبري بيقلل اللون مش بيزوده، يعني «مسوّدة شوية» أو «سمرانية»، مش سودا خالص. ومعناها في القاموس لون مايل للغامق في الوش، وده بيتماشى مع اللي بعدها: السواد ده من الشمس مش من الخلقة. ما جاتش في الكتاب غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 1525,
-    "printed_page": 1469
+    "entry": 9529,
+    "headword": "שְׁחַרְחֹר",
+    "page": 2868,
+    "y": 254.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:6"
    ]
   },
   {
@@ -64,21 +70,23 @@
     "Job.28.7",
     "Song.1.6"
    ],
-   "song_refs_vandyke": [
-    "1:6"
-   ],
    "vandyke_word": "لوّحتني",
    "certainty": "واضح",
    "note_ar": "الفعل ده جه تلات مرات بس، مرتين في أيوب بمعنى «لمح أو شاف»، ومرة هنا بمعنى «الشمس سمّرتني». والقاموس بيناقش العلاقة بين المعنيين. ومن عندي: لو المعنيين من أصل واحد، تبقى الجملة قريبة من «الشمس بحلقت فيا فسمّرتني»، وده بيدّي معنى لطيف للي قبلها: «ما تبصوليش» لإن الشمس بصّت كفاية.",
    "halot": {
     "checked": true,
-    "pdf_page": 1512,
-    "printed_page": 1456
+    "entry": 9490,
+    "headword": "שׁזף",
+    "page": 2852,
+    "y": 52.3
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:6"
    ]
   },
   {
@@ -89,21 +97,23 @@
    "refs_hebrew_numbering": [
     "Song.1.8"
    ],
-   "song_refs_vandyke": [
-    "1:8"
-   ],
    "vandyke_word": "جداءك",
    "certainty": "واضح",
    "note_ar": "مؤنث «جدي»، وهو نفس الكلمة العربي بالحرف، والقاموس بيذكر «جَدْي» العربي وأوغاريتي وآرامي. الصيغة المؤنثة دي ما جاتش غير هنا، يعني الراعية بترعى «جدياتها» هي، والصورة كلها صورة بنت صغيرة شغالة في الرعي، مش ملكة.",
    "halot": {
     "checked": true,
-    "pdf_page": 235,
-    "printed_page": 178
+    "entry": 1632,
+    "headword": "גְּדִי",
+    "page": 727,
+    "y": 551.5
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:8"
    ]
   },
   {
@@ -114,21 +124,23 @@
    "refs_hebrew_numbering": [
     "Song.1.9"
    ],
-   "song_refs_vandyke": [
-    "1:9"
-   ],
    "vandyke_word": "بفرس",
    "certainty": "فيه خلاف",
    "note_ar": "الكلمة هنا «سوستي» يعني «فرستي» بالمؤنث، وما جاتش غير هنا. القاموس بيقول إن كتير من الدارسين بيقروها جمع أو اسم جمع «خيولي»، وفيه رأي إنها مفرد. ومن عندي: عربيات فرعون الحربية كانت بتجرها خيول دكور، وفيه تفسير مشهور إن فرسة وسط الخيول دي كانت بتلخبط الجيش كله، فالتشبيه معناه إنها بتجنن كل اللي حواليها، مش بس إنها جميلة.",
    "halot": {
     "checked": true,
-    "pdf_page": 802,
-    "printed_page": 746
+    "entry": 6487,
+    "headword": "סוּסָה",
+    "page": 1797,
+    "y": 530.6
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:9"
    ]
   },
   {
@@ -141,21 +153,23 @@
     "Ps.93.5",
     "Song.1.10"
    ],
-   "song_refs_vandyke": [
-    "1:10"
-   ],
    "vandyke_word": "ما أجمل",
    "certainty": "واضح",
    "note_ar": "الفعل ده جه تلات مرات بس، وأشهرهم في إشعياء «ما أجمل على الجبال قدمي المبشّر». ومعناه في القاموس «يبقى حلو ويريّح العين»، وكمان «يليق». فنفس الفعل اللي بيوصف رجلين اللي جاي بالبشارة بيوصف هنا خدود الحبيبة.",
    "halot": {
     "checked": true,
-    "pdf_page": 713,
-    "printed_page": 657
+    "entry": 5904,
+    "headword": "נאה",
+    "page": 1645,
+    "y": 486.5
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:10"
    ]
   },
   {
@@ -166,21 +180,23 @@
    "refs_hebrew_numbering": [
     "Song.1.10"
    ],
-   "song_refs_vandyke": [
-    "1:10"
-   ],
    "vandyke_word": "بقلائد",
    "certainty": "واضح",
    "note_ar": "القاموس بيربطها بالعربي «خَرَز»، يعني قلادة من صدف أو خرز، وده بالظبط الخرز اللي لسه بنقول عليه في مصر. ما جاتش غير هنا، وفيها تواضع: مش عقد دهب، عقد خرز.",
    "halot": {
     "checked": true,
-    "pdf_page": 408,
-    "printed_page": 351
+    "entry": 3191,
+    "headword": "חֲרוּזִים",
+    "page": 1069,
+    "y": 294.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:10"
    ]
   },
   {
@@ -191,21 +207,23 @@
    "refs_hebrew_numbering": [
     "Song.1.11"
    ],
-   "song_refs_vandyke": [
-    "1:11"
-   ],
    "vandyke_word": "جمان",
    "certainty": "واضح",
    "note_ar": "من جذر «نقد» بمعنى نقطة أو بقعة. القاموس بيشرحها «نقط من فضة»، ويمكن خرز من إزاز أو حلق مدوّر على شكل نقطة. ما جاتش غير هنا، والصورة سلاسل دهب منقطة بفضة.",
    "halot": {
     "checked": true,
-    "pdf_page": 776,
-    "printed_page": 720
+    "entry": 6330,
+    "headword": "נְקֻדָּה",
+    "page": 1753,
+    "y": 193.9
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:11"
    ]
   },
   {
@@ -218,23 +236,25 @@
     "Song.4.13",
     "Song.4.14"
    ],
-   "song_refs_vandyke": [
-    "1:12",
-    "4:13",
-    "4:14"
-   ],
    "vandyke_word": "ناردين",
    "certainty": "واضح",
    "note_ar": "اسم عطر جاي من الهند، والقاموس بيرجّعه للسنسكريتي، وهو نبات بيطلع في جبال الهيمالايا. وعدّى على اليوناني «ناردوس» وعلى العربي «ناردين». يعني ريحة جاية من آخر الدنيا المعروفة وقتها، وده جزء من فخامة النشيد. ونفس العطر هو اللي مريم كسرت قارورته على رجلين يسوع في الأناجيل.",
    "halot": {
     "checked": true,
-    "pdf_page": 780,
-    "printed_page": 724
+    "entry": 6359,
+    "headword": "נֵרְדְּ",
+    "page": 1760,
+    "y": 254.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:12",
+    "4:13",
+    "4:14"
    ]
   },
   {
@@ -245,20 +265,29 @@
    "refs_hebrew_numbering": [
     "Song.1.17"
    ],
-   "song_refs_vandyke": [
-    "1:17"
-   ],
    "vandyke_word": "روافدنا",
    "certainty": "فيه خلاف",
-   "note_ar": "الكلمة دي بتتكتب في المخطوطات بشكلين، وأغلب الدارسين بيفهموها «عوارض السقف» أو «ألواح تغطية الحيطان». ما جاتش غير هنا، وما لحقتش أراجع مادتها في القاموس، فالمعنى ده من المعرفة العامة عنها.",
+   "note_ar": "القاموس بيقول إنها كلمة آرامية دخلت العبري، والمخطوطات بتكتبها بشكلين. ومعناها في العبري المتأخر «العارضة الرئيسية في سقف البيت»، والقاموس بيقول «عوارض أو روافد؟» بعلامة استفهام. والترجمات القديمة اختلفت: السبعينية «سقف خشب مطعّم»، واللاتيني «سقف مقسوم مربعات»، والسرياني «عارضة من خشب العرعر». ما جاتش غير هنا.",
    "halot": {
-    "checked": false,
-    "pdf_page": null,
-    "printed_page": null
+    "checked": true,
+    "entry": 8694,
+    "headword": "רָהִיט",
+    "page": 2502,
+    "y": 459.6,
+    "also": {
+     "entry": 8749,
+     "headword": "רָחִיט",
+     "page": 2534,
+     "y": 376.1
+    }
    },
    "sources": [
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:17"
    ]
   },
   {
@@ -269,21 +298,23 @@
    "refs_hebrew_numbering": [
     "Song.1.17"
    ],
-   "song_refs_vandyke": [
-    "1:17"
-   ],
    "vandyke_word": "سرو",
    "certainty": "واضح",
    "note_ar": "القاموس بيقول إنها الصيغة الآرامية لكلمة «بروش» العبري، ومعناها شجر العرعر، وفاندايك ترجمها «سرو». ما جاتش بالشكل ده غير هنا، والآية كلها بيت سقفه شجر: الأرز عواميد، والعرعر عوارض، يعني أوضة الحب هي الغابة نفسها.",
    "halot": {
     "checked": true,
-    "pdf_page": 212,
-    "printed_page": 155
+    "entry": 1433,
+    "headword": "בְּרוֹת",
+    "page": 681,
+    "y": 624.5
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "1:17"
    ]
   },
   {
@@ -295,21 +326,23 @@
     "Isa.35.1",
     "Song.2.1"
    ],
-   "song_refs_vandyke": [
-    "2:1"
-   ],
    "vandyke_word": "نرجس",
    "certainty": "فيه خلاف",
    "note_ar": "القاموس بيعرض رأيين: نوع من الزنابق اسمه «أسفوديل»، أو زهرة «اللحلاح» البنفسجي اللي بتطلع في المروج. والكلمة جت مرتين بس، هنا وفي إشعياء «ويزهر كالنرجس». يعني مهما كان اسمها، هي زهرة برية عادية بتطلع في السهل، مش وردة مزروعة في جنينة ملك، والبنت بتوصف نفسها بتواضع.",
    "halot": {
     "checked": true,
-    "pdf_page": 344,
-    "printed_page": 287
+    "entry": 2630,
+    "headword": "חֲבַצֶּֽלֶת",
+    "page": 943,
+    "y": 102.3
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:1"
    ]
   },
   {
@@ -322,21 +355,23 @@
     "Job.41.22",
     "Song.2.5"
    ],
-   "song_refs_vandyke": [
-    "2:5"
-   ],
    "vandyke_word": "أنعشوني",
    "certainty": "واضح",
    "note_ar": "القاموس بيقارنه بالعربي «رفد» بمعنى سند وساعد، ومنه «رِفادة». ومعنى الفعل هنا «سنّدوني وقوّوني»، وفي أيوب بمعنى «فرش سريره». يعني هي بتطلب حد يسندها جسديًا من كتر الحب، وده نفس الجذر اللي هييجي في «رفادتها» في الإصحاح التالت.",
    "halot": {
     "checked": true,
-    "pdf_page": 1332,
-    "printed_page": 1276
+    "entry": 8930,
+    "headword": "רפד",
+    "page": 2622,
+    "y": 358.7
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:5"
    ]
   },
   {
@@ -347,21 +382,23 @@
    "refs_hebrew_numbering": [
     "Song.2.9"
    ],
-   "song_refs_vandyke": [
-    "2:9"
-   ],
    "vandyke_word": "حائطنا",
    "certainty": "واضح",
    "note_ar": "كلمة آرامية دخلت العبري، والقاموس بيرجّعها للأكادي بمعنى «الحيطة الجانبية». ما جاتش في العبري غير هنا، وجت كتير في آرامي سفر دانيال وعزرا. وده من العلامات اللي بيستخدمها الدارسين في تحديد إن لغة النشيد فيها طبقة متأخرة.",
    "halot": {
     "checked": true,
-    "pdf_page": 561,
-    "printed_page": 505
+    "entry": 4468,
+    "headword": "כֹּתֶל",
+    "page": 1359,
+    "y": 116.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:9"
    ]
   },
   {
@@ -374,21 +411,23 @@
     "Ps.33.14",
     "Song.2.9"
    ],
-   "song_refs_vandyke": [
-    "2:9"
-   ],
    "vandyke_word": "يتطلع",
    "certainty": "واضح",
    "note_ar": "القاموس بيشرحه «يبص بتدقيق ويفحص»، وجه تلات مرات بس: الرب بيبص من السما بتدقيق على سكان الأرض في المزمور، والناس بيبحلقوا في ملك بابل بعد ما وقع في إشعياء، وهنا الحبيب بيتطلع من الشبابيك. يعني نظرة فاحصة مش نظرة عابرة.",
    "halot": {
     "checked": true,
-    "pdf_page": 1470,
-    "printed_page": 1414
+    "entry": 9370,
+    "headword": "שׁגח",
+    "page": 2801,
+    "y": 421.8
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:9"
    ]
   },
   {
@@ -399,21 +438,23 @@
    "refs_hebrew_numbering": [
     "Song.2.9"
    ],
-   "song_refs_vandyke": [
-    "2:9"
-   ],
    "vandyke_word": "الشبابيك",
    "certainty": "واضح",
    "note_ar": "القاموس بيقول إن معناها «شبكة أو مشربية» في الشباك، يعني فتحات خشب متقاطعة. ما جاتش غير هنا، والصورة إنه شايفها من خلال الشبكة وهي مش شايفاه كويس، زي المشربيات القديمة عندنا بالظبط.",
    "halot": {
     "checked": true,
-    "pdf_page": 410,
-    "printed_page": 353
+    "entry": 3232,
+    "headword": "חָרָךְ",
+    "page": 1074,
+    "y": 417.5
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:9"
    ]
   },
   {
@@ -424,21 +465,23 @@
    "refs_hebrew_numbering": [
     "Song.2.11"
    ],
-   "song_refs_vandyke": [
-    "2:11"
-   ],
    "vandyke_word": "الشتاء",
    "certainty": "واضح",
    "note_ar": "دي نفس الكلمة العربي «شتاء»، والقاموس بيقارنها بالعربي والسرياني، ومعناها موسم المطر. ما جاتش غير هنا، وفي فلسطين الشتا هو موسم المطر، فلما يمشي الشتا تبتدي الأرض تطلع ورد، وده بالظبط اللي بتقوله الآية اللي بعدها.",
    "halot": {
     "checked": true,
-    "pdf_page": 827,
-    "printed_page": 771
+    "entry": 6688,
+    "headword": "סְתָו",
+    "page": 1839,
+    "y": 440.7
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:11"
    ]
   },
   {
@@ -449,21 +492,23 @@
    "refs_hebrew_numbering": [
     "Song.2.12"
    ],
-   "song_refs_vandyke": [
-    "2:12"
-   ],
    "vandyke_word": "الزهور",
    "certainty": "واضح",
    "note_ar": "جمع كلمة معناها «برعم أو زهرة»، من جذر بمعنى يلمع أو يطلع. ما جاتش بالشكل ده غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 773,
-    "printed_page": 717
+    "entry": 6315,
+    "headword": "נִצָּנִים",
+    "page": 1749,
+    "y": 307.8
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:12"
    ]
   },
   {
@@ -474,21 +519,23 @@
    "refs_hebrew_numbering": [
     "Song.2.12"
    ],
-   "song_refs_vandyke": [
-    "2:12"
-   ],
    "vandyke_word": "القضب",
    "certainty": "فيه خلاف",
-   "note_ar": "دي من أشهر الكلمات اللي عليها خلاف في النشيد، لأن الجذر «زمر» في العبري ليه معنيين: «يغني» و«يقلّم الكرم». فالجملة يا إما «جه وقت الغنا»، يا إما «جه وقت تقليم الكروم». فاندايك اختار التقليم «أوان القضب»، وأغلب الترجمات الحديثة اختارت الغنا، والقاموس بيعرض الخلاف. ويمكن الشاعر قاصد الاتنين مع بعض.",
+   "note_ar": "الجذر «زمر» في العبري ليه معنيين: «يغني» و«يقلّم الكرم»، والقاموس عامل لكل معنى مادة لوحده. وحط آية النشيد تحت معنى «تقليم الكروم» زي فاندايك بالظبط «أوان القضب»، وذكر إن فيه دارسين بيقروها «وقت الغنا». يعني الخلاف حقيقي، والقاموس واقف في صف فاندايك.",
    "halot": {
     "checked": true,
-    "pdf_page": 330,
-    "printed_page": 273
+    "entry": 2504,
+    "headword": "זָמִיר",
+    "page": 915,
+    "y": 580.8
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:12"
    ]
   },
   {
@@ -499,21 +546,23 @@
    "refs_hebrew_numbering": [
     "Song.2.13"
    ],
-   "song_refs_vandyke": [
-    "2:13"
-   ],
    "vandyke_word": "فجّها",
    "certainty": "واضح",
    "note_ar": "دي «الفِجّ» العربي بالحرف، يعني التين الأخضر اللي لسه ما استواش، والقاموس بيذكر العربي والسرياني. ومن نفس الكلمة جه اسم «بيت فاجي» في الأناجيل، يعني «بيت التين الفج». ما جاتش غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 965,
-    "printed_page": 909
+    "entry": 7454,
+    "headword": "פַּג",
+    "page": 2050,
+    "y": 564.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:13"
    ]
   },
   {
@@ -526,23 +575,25 @@
     "Song.2.15",
     "Song.7.13"
    ],
-   "song_refs_vandyke": [
-    "2:13",
-    "2:15",
-    "7:12"
-   ],
    "vandyke_word": "قعال",
    "certainty": "غامض",
    "note_ar": "معناها زهر الكرم أو العنب في أول طلوعه، والكلمة جت تلات مرات وكلها في النشيد. القاموس بيقول إن محدش يقدر يعرف أصلها، ويمكن تكون كلمة دخيلة، ولقوها مكتوبة على جرة نبيذ قديمة في حاصور. وفاندايك ترجمها بكلمة نادرة كمان، «القَعال»، اللي معناها نور العنب.",
    "halot": {
     "checked": true,
-    "pdf_page": 815,
-    "printed_page": 759
+    "entry": 6593,
+    "headword": "סְמָדַר",
+    "page": 1819,
+    "y": 550.3
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:13",
+    "2:15",
+    "7:12"
    ]
   },
   {
@@ -555,21 +606,23 @@
     "Obad.1.3",
     "Song.2.14"
    ],
-   "song_refs_vandyke": [
-    "2:14"
-   ],
    "vandyke_word": "محاجئ",
    "certainty": "واضح",
    "note_ar": "معناها «شقوق الصخر»، والقاموس بيقارنها بالعربي «حجا» بمعنى استخبى، ومنها الملجأ. وفاندايك نفسه ترجمها «محاجئ» من نفس الجذر العربي. جت تلات مرات: هنا، وفي إرميا وعوبديا عن أدوم «الساكن في محاجئ الصخر»، فنفس الصورة اللي بتوصف الحبيبة المستخبية بتوصف هناك عدو متكبر متحصّن.",
    "halot": {
     "checked": true,
-    "pdf_page": 347,
-    "printed_page": 290
+    "entry": 2663,
+    "headword": "חָֽגוּ",
+    "page": 950,
+    "y": 116.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:14"
    ]
   },
   {
@@ -581,21 +634,23 @@
     "Ezek.38.20",
     "Song.2.14"
    ],
-   "song_refs_vandyke": [
-    "2:14"
-   ],
    "vandyke_word": "المعاقل",
    "certainty": "واضح",
    "note_ar": "القاموس بيقارنها بالعربي «درجة» و«مدرجة»، ومعناها «مدقّ في الصخر أو سلالم الجبل». جت مرتين بس: هنا، وفي حزقيال عن الجبال اللي هتتهد. يعني الحمامة في مكان عالي صعب الوصول ليه، وهو بيطلب يشوفها هناك.",
    "halot": {
     "checked": true,
-    "pdf_page": 606,
-    "printed_page": 550
+    "entry": 4850,
+    "headword": "מַדְרֵגָה",
+    "page": 1439,
+    "y": 645.5
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:14"
    ]
   },
   {
@@ -607,21 +662,23 @@
     "Prov.20.17",
     "Song.2.14"
    ],
-   "song_refs_vandyke": [
-    "2:14"
-   ],
    "vandyke_word": "لطيف",
    "certainty": "واضح",
    "note_ar": "صفة معناها «حلو ويريّح»، جت مرتين بس: هنا عن صوتها، وفي الأمثال «خبز الكذب لذيذ للإنسان». يعني نفس الكلمة مرة لحلاوة حقيقية ومرة لحلاوة كدابة، زي حكاية «القبلات» بالظبط.",
    "halot": {
     "checked": true,
-    "pdf_page": 935,
-    "printed_page": 879
+    "entry": 7293,
+    "headword": "עָרֵב",
+    "page": 2006,
+    "y": 262.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:14"
    ]
   },
   {
@@ -632,21 +689,23 @@
    "refs_hebrew_numbering": [
     "Song.2.17"
    ],
-   "song_refs_vandyke": [
-    "2:17"
-   ],
    "vandyke_word": "المشعّبة",
    "certainty": "فيه خلاف",
    "note_ar": "القاموس بيرجّعها لجذر «بتر» العربي بمعنى قطع، ومعناها «الجبال المقسومة بالوديان»، وده اللي اختاره فاندايك «المشعّبة». لكن الترجمات القديمة اختلفت: فيه اللي اعتبرها اسم مكان «جبال باتر»، والسبعينية «جبال كلها شقوق»، وترجمات تانية «جبال العطور» على أساس نبات هندي اسمه ملباثرون. ما جاتش غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 224,
-    "printed_page": 167
+    "entry": 1520,
+    "headword": "בֶּתֶר",
+    "page": 704,
+    "y": 595.3
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "2:17"
    ]
   },
   {
@@ -658,21 +717,23 @@
     "Joel.3.3",
     "Song.3.6"
    ],
-   "song_refs_vandyke": [
-    "3:6"
-   ],
    "vandyke_word": "كأعمدة",
    "certainty": "واضح",
    "note_ar": "معناها «عمود دخان»، وجت مرتين بس: هنا، وفي يوئيل «دم ونار وأعمدة دخان». والقاموس بينقل رأي أوتمار كيل إن الكلمة يمكن مرتبطة بـ«تَمار» يعني النخلة، فالصورة عمود دخان طالع على شكل نخلة. يعني اللي طالعة من البرية جاية في سحابة بخور.",
    "halot": {
     "checked": true,
-    "pdf_page": 1783,
-    "printed_page": 1727
+    "entry": 10144,
+    "headword": "תִּימָרָה",
+    "page": 3183,
+    "y": 307.8
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "3:6"
    ]
   },
   {
@@ -683,21 +744,23 @@
    "refs_hebrew_numbering": [
     "Song.3.6"
    ],
-   "song_refs_vandyke": [
-    "3:6"
-   ],
    "vandyke_word": "أذرّة",
    "certainty": "واضح",
    "note_ar": "من جذر «أبق» يعني تراب ناعم، ومعناها في القاموس «بودرة العطور». ما جاتش غير هنا، والصورة بياع عطور متجول وكل بضاعته في البودرة دي.",
    "halot": {
     "checked": true,
-    "pdf_page": 66,
-    "printed_page": 9
+    "entry": 83,
+    "headword": "אֲבָקָה",
+    "page": 254,
+    "y": 508.9
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "3:6"
    ]
   },
   {
@@ -708,21 +771,23 @@
    "refs_hebrew_numbering": [
     "Song.3.9"
    ],
-   "song_refs_vandyke": [
-    "3:9"
-   ],
    "vandyke_word": "تختا",
    "certainty": "فيه خلاف",
    "note_ar": "كلمة دخيلة، والقاموس بيعرض كذا رأي لأصلها: من اليوناني «فوريون» يعني محفّة، أو من السنسكريتي اللي منه جت كلمة «بالانكين» الإنجليزي، أو من فارسي قديم. ومعناها «محفّة أو كرسي محمول». ما جاتش غير هنا، ووجود كلمة يوناني أو فارسي في سفر منسوب لسليمان من الحاجات اللي بيستخدمها الدارسين في تأريخ النص.",
    "halot": {
     "checked": true,
-    "pdf_page": 137,
-    "printed_page": 80
+    "entry": 787,
+    "headword": "אַפִּרְיוֹן",
+    "page": 394,
+    "y": 654.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "3:9"
    ]
   },
   {
@@ -733,21 +798,23 @@
    "refs_hebrew_numbering": [
     "Song.3.10"
    ],
-   "song_refs_vandyke": [
-    "3:10"
-   ],
    "vandyke_word": "رفادتها",
    "certainty": "فيه خلاف",
    "note_ar": "ما جاتش غير هنا، والقاموس بيقول إن الترجمات القديمة اختلفت فيها: السبعينية «مسند الضهر»، واللاتيني «مِتّكأ»، والسرياني «غطا من دهب». وفاندايك قال «رفادتها» من نفس الجذر العربي «رفد»، اللي منه الرِّفادة يعني المخدة أو المسند، وده نفس جذر «أنعشوني» في الإصحاح التاني.",
    "halot": {
     "checked": true,
-    "pdf_page": 1334,
-    "printed_page": 1278
+    "entry": 8940,
+    "headword": "רְפִידָה",
+    "page": 2625,
+    "y": 692.6
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "3:10"
    ]
   },
   {
@@ -760,21 +827,23 @@
     "Lev.15.9",
     "Song.3.10"
    ],
-   "song_refs_vandyke": [
-    "3:10"
-   ],
    "vandyke_word": "مقعده",
    "certainty": "واضح",
    "note_ar": "القاموس بيشرحها «سرج أو كرسي طري»، وبيقارنها بالعربي «مَرْكَب». جت تلات مرات: سرج في سفر اللاويين، وعربيات في الملوك، وهنا كرسي المحفّة.",
    "halot": {
     "checked": true,
-    "pdf_page": 692,
-    "printed_page": 636
+    "entry": 5681,
+    "headword": "מֶרְכָּב",
+    "page": 1603,
+    "y": 551.9
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "3:10"
    ]
   },
   {
@@ -785,21 +854,23 @@
    "refs_hebrew_numbering": [
     "Song.3.10"
    ],
-   "song_refs_vandyke": [
-    "3:10"
-   ],
    "vandyke_word": "مرصوفا",
    "certainty": "فيه خلاف",
    "note_ar": "دي «رصف» العربي بالحرف، والقاموس بيشرحها «مطعّم» يعني مرصوف بقطع صغيرة. ما جاتش بالمعنى ده غير هنا. والجملة «مرصوف محبة» غريبة، فالقاموس بيذكر إن فيه دارسين اقترحوا تصحيح كلمة «محبة» لكلمة تانية زي «أبنوس»، وفيه اللي رافضين التصحيح وشايفين إن المحبة نفسها هي المادة اللي رصفوا بيها المحفّة.",
    "halot": {
     "checked": true,
-    "pdf_page": 1341,
-    "printed_page": 1285
+    "entry": 8967,
+    "headword": "רצף",
+    "page": 2635,
+    "y": 540.9
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "3:10"
    ]
   },
   {
@@ -810,21 +881,23 @@
    "refs_hebrew_numbering": [
     "Song.3.11"
    ],
-   "song_refs_vandyke": [
-    "3:11"
-   ],
    "vandyke_word": "عرسه",
    "certainty": "واضح",
    "note_ar": "من جذر «ختن»، ومنه في العربي «الخَتَن» يعني قريب الزوجة أو الصهر، والقاموس بيذكر كلمة كنعانية قريبة بمعنى المصاهرة. معناها «الفرح أو الجواز»، وما جاتش غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 422,
-    "printed_page": 365
+    "entry": 3353,
+    "headword": "חֲתֻנָּה",
+    "page": 1098,
+    "y": 540.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "3:11"
    ]
   },
   {
@@ -836,22 +909,24 @@
     "Song.4.1",
     "Song.6.5"
    ],
-   "song_refs_vandyke": [
-    "4:1",
-    "6:5"
-   ],
    "vandyke_word": "رابض",
    "certainty": "غامض",
    "note_ar": "دي كلمة لطيفة جدًا. معناها مش أكيد، والقاموس بيقول «ينط أو ينزل»، وبيذكر إن العربي «جلس» من نفس الجذر. وفاندايك ترجمها «رابض» يعني قاعد، فمشي ورا معنى «جلس» العربي من غير ما يقول. لكن الصورة الأقرب للترجمات الحديثة قطيع معيز سودا نازل يجري على سفح الجبل، زي الشعر الطويل وهو نازل على الكتاف. جت مرتين بس، والاتنين في النشيد.",
    "halot": {
     "checked": true,
-    "pdf_page": 252,
-    "printed_page": 195
+    "entry": 1810,
+    "headword": "גלשׁ",
+    "page": 763,
+    "y": 125.6
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "4:1",
+    "6:5"
    ]
   },
   {
@@ -863,21 +938,23 @@
     "2Kgs.6.6",
     "Song.4.2"
    ],
-   "song_refs_vandyke": [
-    "4:2"
-   ],
    "vandyke_word": "الجزائز",
    "certainty": "واضح",
    "note_ar": "القاموس بيقارنه بالعربي «قصب» بمعنى قطّع الدبيحة، ومنه «القصّاب» يعني الجزار. ومعنى الكلمة هنا «النعاج المجزوزة»، وجت مرتين بس: هنا، وفي الملوك التاني لما أليشع «قطع» عود خشب. يعني الأسنان بيضا ونضيفة زي نعاج لسه جزّين صوفها وطالعة من الغسيل.",
    "halot": {
     "checked": true,
-    "pdf_page": 1175,
-    "printed_page": 1119
+    "entry": 8457,
+    "headword": "קצב",
+    "page": 2386,
+    "y": 234.5
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "4:2"
    ]
   },
   {
@@ -889,22 +966,24 @@
     "Song.4.2",
     "Song.6.6"
    ],
-   "song_refs_vandyke": [
-    "4:2",
-    "6:6"
-   ],
    "vandyke_word": "الغسل",
    "certainty": "واضح",
    "note_ar": "القاموس بيشرحها «مكان الغسيل أو الشرب للغنم». جت مرتين، والاتنين في نفس تشبيه الأسنان في النشيد.",
    "halot": {
     "checked": true,
-    "pdf_page": 1277,
-    "printed_page": 1221
+    "entry": 8764,
+    "headword": "רַחְצָה",
+    "page": 2541,
+    "y": 481.3
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "4:2",
+    "6:6"
    ]
   },
   {
@@ -915,21 +994,23 @@
    "refs_hebrew_numbering": [
     "Song.4.4"
    ],
-   "song_refs_vandyke": [
-    "4:4"
-   ],
    "vandyke_word": "المبني للأسلحة",
    "certainty": "فيه خلاف",
    "note_ar": "فاندايك ترجمها «المبني للأسلحة» على أساس التفسير التقليدي اللي بيقسم الكلمة لـ«تل» و«أفواه» السيوف. لكن القاموس بيرجّحها لجذر عربي «لفأ» بمعنى رصّ بالترتيب، فيبقى معناها «مبني بصفوف حجر مرصوصة»، وبينقل عن أوتمار كيل إن الصورة برج حجره متظبط في صفوف منتظمة بتدّي إحساس بالثبات. ما جاتش غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 1797,
-    "printed_page": 1741
+    "entry": 10185,
+    "headword": "תַּלְפִּיּוֹת",
+    "page": 3200,
+    "y": 591.0
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "4:4"
    ]
   },
   {
@@ -941,22 +1022,24 @@
     "Song.4.5",
     "Song.7.4"
    ],
-   "song_refs_vandyke": [
-    "4:5",
-    "7:3"
-   ],
    "vandyke_word": "ظبية",
    "certainty": "واضح",
-   "note_ar": "مؤنث «ظبي»، يعني الظبية بالحرف، والقاموس بيذكر العربي «ظبي». جت مرتين، والاتنين في تشبيه الصدر في النشيد.",
+   "note_ar": "مؤنث «ظبي»، يعني الظبية بالحرف. والقاموس بيحط معاها كمان «الظباء» في القرار اللي بيتكرر «أحلفكن يا بنات أورشليم بالظباء وبأيائل الحقل»، يعني الكلمة نفسها هي اللي البنت بتحلف بيها، وهي اللي بيشبّه بيها صدرها.",
    "halot": {
     "checked": true,
-    "pdf_page": 1054,
-    "printed_page": 998
+    "entry": 7859,
+    "headword": "צְבִיָּה",
+    "page": 2189,
+    "y": 253.4
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "4:5",
+    "7:3"
    ]
   },
   {
@@ -969,21 +1052,23 @@
     "Prov.1.9",
     "Song.4.9"
    ],
-   "song_refs_vandyke": [
-    "4:9"
-   ],
    "vandyke_word": "قلادة",
    "certainty": "واضح",
-   "note_ar": "معناها «سلسلة الرقبة»، والقاموس بيقارنها بكلمة أكادية بمعنى «حلقة»، وهي مرتبطة بكلمة «عُنُق» العربي. جت تلات مرات: هنا، وفي الأمثال عن قلادة الحكمة، وفي القضاة عن القلايد اللي كانت على رقاب جمال المديانيين.",
+   "note_ar": "معناها «سلسلة الرقبة»، والقاموس بيقارنها بالعربي «عُنُق» و«أعنق» يعني اللي رقبته طويلة، وبكلمة أكادية معناها «خاتم». جت تلات مرات: هنا، وفي الأمثال عن قلادة الحكمة، وفي القضاة عن القلايد اللي على رقاب جمال المديانيين.",
    "halot": {
     "checked": true,
-    "pdf_page": 915,
-    "printed_page": 859
+    "entry": 7170,
+    "headword": "עֲנָק",
+    "page": 1975,
+    "y": 84.2
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "4:9"
    ]
   },
   {
@@ -996,21 +1081,23 @@
     "Neh.2.8",
     "Song.4.13"
    ],
-   "song_refs_vandyke": [
-    "4:13"
-   ],
    "vandyke_word": "فردوس",
    "certainty": "واضح",
    "note_ar": "كلمة فارسية الأصل معناها «جنينة مسوّرة»، ومنها جت الكلمة اليوناني اللي بقت «الفردوس» و«الجنة» في كل اللغات، ومنها «الفردوس» العربي. جت تلات مرات: هنا، وفي الجامعة «عملت لنفسي جنات وفراديس»، وفي نحميا عن غابة الملك. والقاموس بيذكر الأصل الفارسي من أيام الأخمينيين، وده من أقوى العلامات على إن النشيد في شكله الحالي متأخر عن أيام سليمان.",
    "halot": {
     "checked": true,
-    "pdf_page": 1019,
-    "printed_page": 963
+    "entry": 7707,
+    "headword": "פַּרְדֵּס",
+    "page": 2135,
+    "y": 720.2
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "4:13"
    ]
   },
   {
@@ -1021,21 +1108,23 @@
    "refs_hebrew_numbering": [
     "Song.4.14"
    ],
-   "song_refs_vandyke": [
-    "4:14"
-   ],
    "vandyke_word": "كركم",
    "certainty": "واضح",
    "note_ar": "دي «الكركم» اللي في مطبخنا، والقاموس بيقول إن الكلمة مستعملة عن الكركم الأصفر وعن الزعفران مع بعض. أصلها من السنسكريتي، ودخلت العربي والفارسي. ما جاتش غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 554,
-    "printed_page": 498
+    "entry": 4417,
+    "headword": "כַּרְכֹּם",
+    "page": 1346,
+    "y": 659.3
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "4:14"
    ]
   },
   {
@@ -1048,21 +1137,23 @@
     "Prov.7.17",
     "Song.4.14"
    ],
-   "song_refs_vandyke": [
-    "4:14"
-   ],
    "vandyke_word": "قرفة",
    "certainty": "واضح",
    "note_ar": "كلمة دخيلة من الهند أو الملايو، ومنها اليوناني واللاتيني «سينامون». القاموس بيقول إنها القرفة الصيني. جت تلات مرات: في زيت المسحة المقدس في سفر الخروج، وفي الأمثال على سرير المرأة الغريبة، وهنا في جنينة الحبيبة. يعني نفس العطر بين المقدس والمحرم والحب.",
    "halot": {
     "checked": true,
-    "pdf_page": 1170,
-    "printed_page": 1114
+    "entry": 8430,
+    "headword": "קִנָּמוֹן",
+    "page": 2378,
+    "y": 513.3
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "4:14"
    ]
   },
   {
@@ -1074,20 +1165,23 @@
     "Ps.80.13",
     "Song.5.1"
    ],
-   "song_refs_vandyke": [
-    "5:1"
-   ],
    "vandyke_word": "قطفت",
    "certainty": "واضح",
-   "note_ar": "فعل معناه «قطف أو جمع»، وجه مرتين بس: هنا، وفي المزمور عن الكرمة اللي «يقطفها كل عابري الطريق». ما لحقتش أراجع مادته في القاموس.",
+   "note_ar": "القاموس بيقول إن معناه «قطف»، وإن في العبري المتأخر بيتقال على جمع التين، وليه مقابل في الفينيقي والحبشي بمعنى «جمع المحصول». جه مرتين بس: هنا، وفي المزمور عن الكرمة اللي «يقطفها كل عابري الطريق».",
    "halot": {
-    "checked": false,
-    "pdf_page": null,
-    "printed_page": null
+    "checked": true,
+    "entry": 846,
+    "headword": "ארה",
+    "page": 404,
+    "y": 522.0
    },
    "sources": [
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:1"
    ]
   },
   {
@@ -1098,20 +1192,23 @@
    "refs_hebrew_numbering": [
     "Song.5.1"
    ],
-   "song_refs_vandyke": [
-    "5:1"
-   ],
    "vandyke_word": "طيبي",
    "certainty": "واضح",
-   "note_ar": "صيغة نادرة لكلمة «بُسِم» يعني البلسم أو الطيب، وما جاتش بالشكل ده غير هنا. وفي العربي فيه شجرة عطرية اسمها «البَشام» من نفس الأصل على الأرجح. ما لحقتش أراجع مادتها في القاموس.",
+   "note_ar": "دي صيغة نادرة من «بُسِم» يعني البلسم، وما جاتش بالشكل ده غير هنا. والقاموس بيقارنها بالعربي «بَشام»، وهو شجر ريحته حلوة، وبيقول إن من نفس الكلمة جه اليوناني «بلسامون»، ومنه «البَلَسان» العربي و«البلسم» اللي بنقوله. ومعناها في النشيد «شجر البلسم» نفسه، مش زيته بس.",
    "halot": {
-    "checked": false,
-    "pdf_page": null,
-    "printed_page": null
+    "checked": true,
+    "entry": 1486,
+    "headword": "בֹּשֶׂם",
+    "page": 696,
+    "y": 549.6
    },
    "sources": [
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:1"
    ]
   },
   {
@@ -1124,21 +1221,23 @@
     "Judg.19.22",
     "Song.5.2"
    ],
-   "song_refs_vandyke": [
-    "5:2"
-   ],
    "vandyke_word": "قارعا",
    "certainty": "واضح",
    "note_ar": "الفعل ده ليه في العهد القديم كله معنيين: «يسوق بقسوة» في كلام يعقوب لعيسو عن الغنم، و«يخبط على الباب» هنا بس. ونفس الفعل بصيغة تانية في القضاة 19 عن رجالة جبعة وهم بيخبطوا على الباب بالليل. القاموس بيقارنه بالعربي «دفق» بمعنى ساق الدابة، وحاطط عليه علامة استفهام. وفي العبري الحديث «دوفيق» معناها النبض.",
    "halot": {
     "checked": true,
-    "pdf_page": 286,
-    "printed_page": 229
+    "entry": 2143,
+    "headword": "דפק",
+    "page": 831,
+    "y": 129.9
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:2"
    ]
   },
   {
@@ -1150,22 +1249,24 @@
     "Song.5.11",
     "Song.5.2"
    ],
-   "song_refs_vandyke": [
-    "5:11",
-    "5:2"
-   ],
    "vandyke_word": "قصصي",
    "certainty": "واضح",
    "note_ar": "من جذر «قصّ» بمعنى قطع، والقاموس بيقارنها بالعربي «قُصّة»، يعني بالظبط «القُصّة» اللي بنقولها على خصلة الشعر اللي على الجبهة. جت مرتين بس، والاتنين في الإصحاح الخامس: هنا وهي مبلولة بندى الليل، وفي آية 11 وهي بتوصفه بعد ما مشي.",
    "halot": {
     "checked": true,
-    "pdf_page": 1146,
-    "printed_page": 1090
+    "entry": 8319,
+    "headword": "קְוֻצּוֹת",
+    "page": 2341,
+    "y": 365.8
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:11",
+    "5:2"
    ]
   },
   {
@@ -1177,21 +1278,23 @@
     "Amos.6.11",
     "Song.5.2"
    ],
-   "song_refs_vandyke": [
-    "5:2"
-   ],
    "vandyke_word": "ندى",
    "certainty": "واضح",
    "note_ar": "معناها «نقط الندى»، والقاموس بيقول إن الجذر بمعنى ينقّط ويرشّ، وبيقارنه بالعربي «رشّ». ما جاتش بالمعنى ده غير هنا، وفيه كلمة شبهها في عاموس بس معناها «فتافيت».",
    "halot": {
     "checked": true,
-    "pdf_page": 1305,
-    "printed_page": 1249
+    "entry": 8862,
+    "headword": "רָסִיס",
+    "page": 2583,
+    "y": 257.7
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:2"
    ]
   },
   {
@@ -1202,21 +1305,23 @@
    "refs_hebrew_numbering": [
     "Song.5.3"
    ],
-   "song_refs_vandyke": [
-    "5:3"
-   ],
    "vandyke_word": "أوسخهما",
    "certainty": "واضح",
    "note_ar": "معناها «يوسّخ»، والقاموس بيقول إنها آرامية وليها مقابل أكادي، وما جاتش غير هنا. وده عذرها الصغير المريح: «أنا لسه غاسلة رجليا، أوسّخهم إزاي؟».",
    "halot": {
     "checked": true,
-    "pdf_page": 433,
-    "printed_page": 377
+    "entry": 3444,
+    "headword": "טנף",
+    "page": 1119,
+    "y": 458.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:3"
    ]
   },
   {
@@ -1228,21 +1333,23 @@
     "Jer.31.22",
     "Song.5.6"
    ],
-   "song_refs_vandyke": [
-    "5:6"
-   ],
    "vandyke_word": "تحوّل",
    "certainty": "واضح",
    "note_ar": "القاموس بيشرحه «لفّ ومشي»، وجه مرتين بس: هنا، وفي إرميا بصيغة تانية عن البنت اللي بتلف هنا وهناك ومش ثابتة. وفي الآية دي بيوصف اللحظة اللي ضاعت: فتحت لقيته لفّ ومشي، مش اختفى فجأة.",
    "halot": {
     "checked": true,
-    "pdf_page": 387,
-    "printed_page": 330
+    "entry": 2985,
+    "headword": "חמק",
+    "page": 1025,
+    "y": 239.6
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:6"
    ]
   },
   {
@@ -1255,21 +1362,23 @@
     "Deut.23.2",
     "Song.5.7"
    ],
-   "song_refs_vandyke": [
-    "5:7"
-   ],
    "vandyke_word": "جرحوني",
    "certainty": "واضح",
    "note_ar": "معناه «يجرح»، والقاموس بيقارنه بفعل أوغاريتي معناه «يقشّر الجلد أو يخدشه». جه تلات مرات، ومنهم في الملوك الأول لما راجل ضرب نبي «ضربة جارحة». وفي النشيد دي الحاجة الوحيدة العنيفة في السفر كله: الحراس اللي المفروض يحموا هم اللي بيجرحوا.",
    "halot": {
     "checked": true,
-    "pdf_page": 1010,
-    "printed_page": 954
+    "entry": 7676,
+    "headword": "פצע",
+    "page": 2122,
+    "y": 257.7
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:7"
    ]
   },
   {
@@ -1281,21 +1390,23 @@
     "Isa.3.23",
     "Song.5.7"
    ],
-   "song_refs_vandyke": [
-    "5:7"
-   ],
    "vandyke_word": "إزاري",
    "certainty": "واضح",
    "note_ar": "دي «رِداء» العربي، والقاموس بيقارنها بيها، ومعناها «شال أو طرحة». جت مرتين: هنا، وفي إشعياء وسط لستة لبس بنات صهيون. يعني الحراس قلعوها الطرحة، وده إهانة مش مجرد ضرب.",
    "halot": {
     "checked": true,
-    "pdf_page": 1247,
-    "printed_page": 1191
+    "entry": 8683,
+    "headword": "רְדִיד",
+    "page": 2497,
+    "y": 389.9
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:7"
    ]
   },
   {
@@ -1306,21 +1417,23 @@
    "refs_hebrew_numbering": [
     "Song.5.11"
    ],
-   "song_refs_vandyke": [
-    "5:11"
-   ],
    "vandyke_word": "مسترسلة",
    "certainty": "غامض",
-   "note_ar": "ما جاتش غير هنا، والقاموس بيقول صراحة إن أصلها ومعناها لسه محدش عرفهم بالظبط. من الاقتراحات إنها من «تلتل» العربي بمعنى هزّ وحرّك، فيبقى المعنى شعر متموج أو كثيف بيتحرك. فاندايك قال «مسترسلة» وده تخمين معقول.",
+   "note_ar": "ما جاتش غير هنا، والقاموس بيقول صراحة إن أصلها ومعناها لسه محدش عرفهم. ومن الاقتراحات إنها من «تلتل» العربي بمعنى هزّ، فيبقى المعنى شعر بيتموج، أو إنها مرتبطة بكلمة أكادية معناها «طَلع النخل»، يعني خصل الشعر شبه سباطة البلح، بس القاموس متحفظ على الاقتراح ده. وفاندايك قال «مسترسلة» وده تخمين معقول.",
    "halot": {
     "checked": true,
-    "pdf_page": 1797,
-    "printed_page": 1741
+    "entry": 10187,
+    "headword": "תַּלְתַּלִּים",
+    "page": 3201,
+    "y": 113.8
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:11"
    ]
   },
   {
@@ -1331,21 +1444,23 @@
    "refs_hebrew_numbering": [
     "Song.5.12"
    ],
-   "song_refs_vandyke": [
-    "5:12"
-   ],
    "vandyke_word": "وقبيهما",
    "certainty": "غامض",
    "note_ar": "القاموس بيقول إن معناها مش أكيد، وبيعرض تلات احتمالات: إن الحمام قاعد جنب «حوض مليان مية» زي ما فهمت السبعينية واللاتيني، أو إن العينين في «تجويفهم» زي السرياني، أو إنها «تركيبة» زي الحجر الكريم في الخاتم. وفاندايك اختار التجويف «جالستان في وقبيهما»، والوَقْب في العربي هو نقرة العين. ما جاتش غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 642,
-    "printed_page": 586
+    "entry": 5203,
+    "headword": "מִלֵּאת",
+    "page": 1510,
+    "y": 648.9
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:12"
    ]
   },
   {
@@ -1356,21 +1471,23 @@
    "refs_hebrew_numbering": [
     "Song.5.13"
    ],
-   "song_refs_vandyke": [
-    "5:13"
-   ],
    "vandyke_word": "رياحين",
    "certainty": "واضح",
    "note_ar": "من جذر «رقح» بمعنى خلط العطور، ومعناها «أعشاب عطرية» أو «عطر مركّب». ما جاتش غير هنا، ومن نفس الجذر «الخمر الممزوجة» في الإصحاح التامن، يعني الخدود ريحتها زي خلطة عطار شاطر.",
    "halot": {
     "checked": true,
-    "pdf_page": 694,
-    "printed_page": 638
+    "entry": 5710,
+    "headword": "מֶרְקָח",
+    "page": 1608,
+    "y": 321.6
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:13"
    ]
   },
   {
@@ -1381,20 +1498,23 @@
    "refs_hebrew_numbering": [
     "Song.5.14"
    ],
-   "song_refs_vandyke": [
-    "5:14"
-   ],
    "vandyke_word": "عاج",
-   "certainty": "فيه خلاف",
-   "note_ar": "ما جاتش غير هنا، والعبارة «عشت شين» بيفهموها «لوح أو قطعة مصقولة من العاج». أصل الكلمة عليه نقاش، وما لحقتش أراجع مادتها في القاموس.",
+   "certainty": "واضح",
+   "note_ar": "القاموس بيقول إن الكلمة في العبري المتأخر معناها «سبايك أو قطع معدن»، وفي مخطوطة النحاس من قمران «سبايك دهب». والعبارة في النشيد «عِشِت شِن» معناها «ألواح أو صفايح من العاج». ما جاتش غير هنا، فبطنه في الوصف لوح عاج مصقول.",
    "halot": {
-    "checked": false,
-    "pdf_page": null,
-    "printed_page": null
+    "checked": true,
+    "entry": 7405,
+    "headword": "עֶשֶׁת",
+    "page": 2036,
+    "y": 230.1
    },
    "sources": [
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:14"
    ]
   },
   {
@@ -1406,21 +1526,23 @@
     "Neh.8.10",
     "Song.5.16"
    ],
-   "song_refs_vandyke": [
-    "5:16"
-   ],
    "vandyke_word": "حلاوة",
    "certainty": "واضح",
    "note_ar": "معناها «حلاوة» أو «حاجات حلوة»، وجت مرتين: هنا عن فمه، وفي نحميا «كلوا السمين واشربوا الحلو». القاموس بيقول إنها بتيجي في الجمع بس.",
    "halot": {
     "checked": true,
-    "pdf_page": 652,
-    "printed_page": 596
+    "entry": 5292,
+    "headword": "מַמְתַקִּים",
+    "page": 1528,
+    "y": 563.4
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "5:16"
    ]
   },
   {
@@ -1433,22 +1555,24 @@
     "Song.6.10",
     "Song.6.4"
    ],
-   "song_refs_vandyke": [
-    "6:10",
-    "6:4"
-   ],
    "vandyke_word": "مرهبة",
    "certainty": "فيه خلاف",
    "note_ar": "معناها «مخيفة أو مرعبة»، وجت تلات مرات: مرتين في النشيد، ومرة في حبقوق عن جيش الكلدانيين «هائل ومخوف». والقاموس بيقترح إنها في النشيد بمعنى «مهيبة»، ويمكن تكون في الآية التانية إضافة من ناسخ. يعني الجمال هنا مش رقيق وبس، ده جمال بيهيب زي جيش.",
    "halot": {
     "checked": true,
-    "pdf_page": 98,
-    "printed_page": 41
+    "entry": 435,
+    "headword": "אָיֹם",
+    "page": 320,
+    "y": 435.6
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "6:10",
+    "6:4"
    ]
   },
   {
@@ -1461,21 +1585,23 @@
     "Isa.30.26",
     "Song.6.10"
    ],
-   "song_refs_vandyke": [
-    "6:10"
-   ],
    "vandyke_word": "كالقمر",
    "certainty": "واضح",
    "note_ar": "معناها الحرفي «البيضا»، وهي اسم للقمر وهو بدر، والقاموس بيقول إنها جت في توازي مع كلمة «الشمس» الشعرية. جت تلات مرات، وكلها في الشعر.",
    "halot": {
     "checked": true,
-    "pdf_page": 574,
-    "printed_page": 518
+    "entry": 4537,
+    "headword": "לְבָנָה",
+    "page": 1378,
+    "y": 731.7
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "6:10"
    ]
   },
   {
@@ -1486,21 +1612,23 @@
    "refs_hebrew_numbering": [
     "Song.6.11"
    ],
-   "song_refs_vandyke": [
-    "6:11"
-   ],
    "vandyke_word": "الجوز",
    "certainty": "واضح",
    "note_ar": "دي كلمة «الجوز» العربي نفسها، والقاموس بيقول إنها من الفارسي «جَوز»، ودخلت السرياني والعربي. ومعناها شجرة عين الجمل، وما جاتش غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 67,
-    "printed_page": 10
+    "entry": 102,
+    "headword": "אֱגוֹז",
+    "page": 257,
+    "y": 253.4
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "6:11"
    ]
   },
   {
@@ -1512,20 +1640,23 @@
     "Job.8.12",
     "Song.6.11"
    ],
-   "song_refs_vandyke": [
-    "6:11"
-   ],
    "vandyke_word": "خضر",
    "certainty": "واضح",
-   "note_ar": "معناها «الخُضرة الطرية أو أول طلوع النبات»، وجت مرتين: هنا، وفي أيوب عن البردي «وهو بعد في نضارته». وكتير من الدارسين بيربطوها بالكلمة العربي «أبّ» يعني المرعى، اللي في القرآن «وفاكهة وأبّا». ما لحقتش أراجع مادتها في القاموس.",
+   "note_ar": "القاموس بيقول إن معناها «الطَّلعة الجديدة»، يعني النبات اللي لسه بيطلع في الأرض، وبيقارنها بفعل آرامي معناه «يخلّي الحاجة تستوي» وبكلمة أمهرية معناها «زهرة». جت مرتين بس: هنا، وفي أيوب عن البردي «وهو بعد في نضارته». وفيه دارسين بيربطوها كمان بالعربي «أبّ» اللي معناها المرعى، والربط ده من عندي ومش مذكور في القاموس.",
    "halot": {
-    "checked": false,
-    "pdf_page": null,
-    "printed_page": null
+    "checked": true,
+    "entry": 3,
+    "headword": "אֵב",
+    "page": 239,
+    "y": 166.3
    },
    "sources": [
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "6:11"
    ]
   },
   {
@@ -1538,21 +1669,30 @@
     "Song.6.11",
     "Song.7.13"
    ],
-   "song_refs_vandyke": [
-    "6:11",
-    "7:12"
-   ],
    "vandyke_word": "نوّر",
    "certainty": "واضح",
-   "note_ar": "معناه «يزهر أو يطلع برعم»، وجه مرتين في النشيد عن الرمان، ومرة في المراثي بمعنى مختلف «هربوا». ما لحقتش أراجع مادته في القاموس.",
+   "note_ar": "القاموس بيحط الفعل ده في النشيد تحت جذر «نصص» بمعنى «يلمع أو يزهر»، ومعناه هنا «يطلّع زهره»، في الآيتين «هل نوّر الرمان». أما الفعل اللي شبهه في المراثي فمعناه «يبعد ويهرب»، والقاموس بيحطه في مادة تانية خالص، وبيقارنه بالعربي «ناص» بمعنى بعد وهرب.",
    "halot": {
-    "checked": false,
-    "pdf_page": null,
-    "printed_page": null
+    "checked": true,
+    "entry": 6317,
+    "headword": "נצץ",
+    "page": 1749,
+    "y": 435.6,
+    "also": {
+     "entry": 6059,
+     "headword": "נוץ",
+     "page": 1688,
+     "y": 462.5
+    }
    },
    "sources": [
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "6:11",
+    "7:12"
    ]
   },
   {
@@ -1563,20 +1703,23 @@
    "refs_hebrew_numbering": [
     "Song.7.1"
    ],
-   "song_refs_vandyke": [
-    "6:13"
-   ],
    "vandyke_word": "شولميث",
    "certainty": "فيه خلاف",
-   "note_ar": "ما جاتش غير هنا، وفيها تلات تفسيرات مشهورة: إنها «الشونمية» زي أبيشج الجميلة اللي جت لداود في آخر أيامه، أو إنها مؤنث «سليمان» يعني «السليمانية»، أو إنها من جذر «سالم» بمعنى «الكاملة أو المسالمة». ما لحقتش أراجع مادتها في القاموس.",
+   "note_ar": "ما جاتش غير هنا، والقاموس بيقول إن معناها مش أكيد، وبيعرض أربع احتمالات: إنها «الشونمية» يعني من بلدة شونم، أو نسبة لمكان اسمه «شولم» ما حدش يعرفه، أو إنها مؤنث «سليمان»، أو إنها في الأصل صيغة معناها «اللي جت بدل حد تاني». والقاموس بيرجّح الأولانية والتالتة.",
    "halot": {
-    "checked": false,
-    "pdf_page": null,
-    "printed_page": null
+    "checked": true,
+    "entry": 9439,
+    "headword": "שׁוּלַמִּית",
+    "page": 2834,
+    "y": 654.8
    },
    "sources": [
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "6:13"
    ]
   },
   {
@@ -1587,21 +1730,23 @@
    "refs_hebrew_numbering": [
     "Song.7.2"
    ],
-   "song_refs_vandyke": [
-    "7:1"
-   ],
    "vandyke_word": "دوائر",
    "certainty": "واضح",
    "note_ar": "من جذر «حمق» بمعنى لفّ، ومعناها في القاموس «انحناءة الوركين». ما جاتش غير هنا، وجذرها هو نفسه الفعل اللي قال إنه «تحوّل» ومشي في الإصحاح الخامس.",
    "halot": {
     "checked": true,
-    "pdf_page": 384,
-    "printed_page": 327
+    "entry": 2961,
+    "headword": "חַמּוּק",
+    "page": 1020,
+    "y": 394.2
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:1"
    ]
   },
   {
@@ -1613,21 +1758,23 @@
     "Prov.25.12",
     "Song.7.2"
    ],
-   "song_refs_vandyke": [
-    "7:1"
-   ],
    "vandyke_word": "الحلي",
    "certainty": "واضح",
    "note_ar": "دي «الحَلي» العربي بالحرف، والقاموس بيقارنها بيه، ومعناها «حلية الست». جت مرتين: هنا، وفي الأمثال «قرط من ذهب وحلي من إبريز».",
    "halot": {
     "checked": true,
-    "pdf_page": 375,
-    "printed_page": 318
+    "entry": 2894,
+    "headword": "חֲלִי",
+    "page": 1003,
+    "y": 243.9
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:1"
    ]
   },
   {
@@ -1638,21 +1785,23 @@
    "refs_hebrew_numbering": [
     "Song.7.2"
    ],
-   "song_refs_vandyke": [
-    "7:1"
-   ],
    "vandyke_word": "صناع",
    "certainty": "واضح",
    "note_ar": "كلمة دخيلة من الأكادي «أُمّانو» يعني الصنايعي الماهر، وعدّت على الآرامي. ما جاتش غير هنا، يعني جسمها شغل فنان محترف.",
    "halot": {
     "checked": true,
-    "pdf_page": 121,
-    "printed_page": 64
+    "entry": 636,
+    "headword": "אָמָּן",
+    "page": 363,
+    "y": 166.3
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:1"
    ]
   },
   {
@@ -1663,20 +1812,23 @@
    "refs_hebrew_numbering": [
     "Song.7.3"
    ],
-   "song_refs_vandyke": [
-    "7:2"
-   ],
    "vandyke_word": "سرتك",
    "certainty": "واضح",
-   "note_ar": "دي «السُّرّة» العربي، من نفس الجذر، ما جاتش غير هنا. وفيه دارسين بيشوفوا إن الكلمة هنا كناية أجرأ من السرة، لأن الوصف ماشي من تحت لفوق. ما لحقتش أراجع مادتها في القاموس.",
+   "note_ar": "دي «السُّرّة» العربي بالحرف، والقاموس بيقارنها بالعربي «سُرّ» يعني الحبل السري، وبكلمة أوغاريتية بنفس المعنى، وبالسرياني. جت تلات مرات: الحبل السري اللي ما اتقطعش في حزقيال، و«شفاء لسرتك» في الأمثال، وهنا. ومعناها في النشيد «السرة»، والقاموس ما بيقولش إنها كناية عن حاجة تانية، فاللي قلته قبل كده عن الكناية ده رأي بعض المفسرين بس.",
    "halot": {
-    "checked": false,
-    "pdf_page": null,
-    "printed_page": null
+    "checked": true,
+    "entry": 9930,
+    "headword": "שֹׁר",
+    "page": 3088,
+    "y": 545.3
    },
    "sources": [
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:2"
    ]
   },
   {
@@ -1689,21 +1841,23 @@
     "Isa.22.24",
     "Song.7.3"
    ],
-   "song_refs_vandyke": [
-    "7:2"
-   ],
    "vandyke_word": "كأس",
    "certainty": "واضح",
    "note_ar": "القاموس بيشرحها «طاسة كبيرة وعميقة»، وبيقول إن منها جت الكلمة العربي «إجّانة»، اللي هي «الإجانة» أو «اللجان» اللي بيغسلوا فيه في مصر. جت تلات مرات، منهم أحواض دم العهد في سفر الخروج.",
    "halot": {
     "checked": true,
-    "pdf_page": 68,
-    "printed_page": 11
+    "entry": 114,
+    "headword": "אַגָּן",
+    "page": 258,
+    "y": 636.0
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:2"
    ]
   },
   {
@@ -1714,21 +1868,23 @@
    "refs_hebrew_numbering": [
     "Song.7.3"
    ],
-   "song_refs_vandyke": [
-    "7:2"
-   ],
    "vandyke_word": "مدورة",
    "certainty": "غامض",
    "note_ar": "القاموس بيقارنها بالأوغاريتي بمعنى «مدور» وبالعربي «سور» و«سِوار»، وفي الآرامي «سهرا» يعني القمر. ومعناها هنا مش أكيد، والقاموس بيقترح «كاس مدور». ما جاتش غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 800,
-    "printed_page": 744
+    "entry": 6467,
+    "headword": "סַֽהַר",
+    "page": 1793,
+    "y": 408.0
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:2"
    ]
   },
   {
@@ -1739,21 +1895,23 @@
    "refs_hebrew_numbering": [
     "Song.7.3"
    ],
-   "song_refs_vandyke": [
-    "7:2"
-   ],
    "vandyke_word": "شراب ممزوج",
    "certainty": "واضح",
    "note_ar": "دي «مزج» العربي، والقاموس بيقول إنها كلمة آرامية بمعنى «نبيذ ممزوج أو متبّل». ما جاتش غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 620,
-    "printed_page": 564
+    "entry": 4962,
+    "headword": "מֶזג",
+    "page": 1466,
+    "y": 270.8
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:2"
    ]
   },
   {
@@ -1764,21 +1922,23 @@
    "refs_hebrew_numbering": [
     "Song.7.3"
    ],
-   "song_refs_vandyke": [
-    "7:2"
-   ],
    "vandyke_word": "مسيجة",
    "certainty": "واضح",
    "note_ar": "القاموس بيقارنها بالعربي «سياج»، ومعناها «مسوّرة»، وفاندايك نفسه قال «مسيّجة» من نفس الكلمة. ما جاتش غير هنا، والصورة كومة قمح عليها سور من الزنابق، يعني حماية رقيقة جدًا.",
    "halot": {
     "checked": true,
-    "pdf_page": 801,
-    "printed_page": 745
+    "entry": 6471,
+    "headword": "סוג",
+    "page": 1794,
+    "y": 417.5
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:2"
    ]
   },
   {
@@ -1789,21 +1949,23 @@
    "refs_hebrew_numbering": [
     "Song.7.9"
    ],
-   "song_refs_vandyke": [
-    "7:8"
-   ],
    "vandyke_word": "بعذوقها",
    "certainty": "واضح",
    "note_ar": "القاموس بيشرحها «عنقود البلح على النخلة»، وبيقول إن في العربي «سِنسِن» بمعنى فقرات الضهر، وفي الأكادي والأوغاريتي كلمات قريبة. ما جاتش غير هنا.",
    "halot": {
     "checked": true,
-    "pdf_page": 817,
-    "printed_page": 761
+    "entry": 6611,
+    "headword": "סַנְסִנָּה",
+    "page": 1823,
+    "y": 36.1
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:8"
    ]
   },
   {
@@ -1814,21 +1976,23 @@
    "refs_hebrew_numbering": [
     "Song.7.10"
    ],
-   "song_refs_vandyke": [
-    "7:9"
-   ],
    "vandyke_word": "السائحة",
    "certainty": "غامض",
    "note_ar": "ما جاتش غير هنا، والقاموس بيقول معناها «يسيل؟ يزحلق؟» بعلامة استفهام، وبيقارنها بالعربي «دبّ» بمعنى زحف ببطء. والترجمات القديمة فهمتها «يخلّي النايمين يتكلموا». فاندايك قال «السائحة على شفاه النائمين»، يعني النبيذ اللي بينزل على مهله.",
    "halot": {
     "checked": true,
-    "pdf_page": 265,
-    "printed_page": 208
+    "entry": 1930,
+    "headword": "דבב",
+    "page": 787,
+    "y": 731.7
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:9"
    ]
   },
   {
@@ -1841,21 +2005,23 @@
     "Gen.4.7",
     "Song.7.11"
    ],
-   "song_refs_vandyke": [
-    "7:10"
-   ],
    "vandyke_word": "اشتياقه",
    "certainty": "واضح",
    "note_ar": "دي من أهم كلمات النشيد. جت تلات مرات بس في الكتاب كله: مرتين في سفر التكوين، «وإلى رجلك يكون اشتياقك وهو يسود عليك» في عقاب حوا، و«إليك اشتياقها» عن الخطية، ومرة هنا «وإليّ اشتياقه». يعني النشيد بيقلب جملة التكوين: هناك الاشتياق من الست والسيادة للراجل، وهنا الاشتياق من الراجل ليها. والقاموس بيحيل على أوتمار كيل اللي ناقش المعنى ده.",
    "halot": {
     "checked": true,
-    "pdf_page": 1858,
-    "printed_page": 1802
+    "entry": 10340,
+    "headword": "תְּשׁוּקָה",
+    "page": 3276,
+    "y": 257.7
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:10"
    ]
   },
   {
@@ -1867,21 +2033,29 @@
     "1Chr.27.25",
     "Song.7.12"
    ],
-   "song_refs_vandyke": [
-    "7:11"
-   ],
    "vandyke_word": "القرى",
    "certainty": "فيه خلاف",
-   "note_ar": "فاندايك ترجمها «القرى»، وده معنى الكلمة في أخبار الأيام. لكن القاموس بيقول إن في النشيد يمكن معناها «شجر الحنة»، لأن نفس الكلمة في الإصحاح الأول والرابع معناها الحنة، وفاندايك نفسه ترجمها هناك «فاغية». فالجملة يا إما «نبات في القرى» يا إما «نبات بين شجر الحنة».",
+   "note_ar": "فاندايك ترجمها «القرى»، وده معنى الكلمة في أخبار الأيام، والقاموس بيقول إن الكلمة دي عدّت للعربي «كَفْر» يعني القرية، زي «كفر الشيخ» عندنا. لكن في مادة «الحنة» القاموس بيحط آية النشيد دي تحت «شجر الحنة»، وبيقول إن الترجمات القديمة هي اللي قرتها «قرى». فالجملة يا إما «نبات في القرى» يا إما «نبات بين شجر الحنة».",
    "halot": {
     "checked": true,
-    "pdf_page": 551,
-    "printed_page": 495
+    "entry": 4386,
+    "headword": "כָּפָר",
+    "page": 1341,
+    "y": 84.2,
+    "also": {
+     "entry": 4393,
+     "headword": "כֹּפֶר",
+     "page": 1342,
+     "y": 88.5
+    }
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "7:11"
    ]
   },
   {
@@ -1892,21 +2066,23 @@
    "refs_hebrew_numbering": [
     "Song.8.2"
    ],
-   "song_refs_vandyke": [
-    "8:2"
-   ],
    "vandyke_word": "الممزوجة",
    "certainty": "واضح",
    "note_ar": "من جذر «رقح» بمعنى خلط العطور، ومعناها «متبّل». ما جاتش غير هنا، والجذر نفسه اللي في «رياحين» في الإصحاح الخامس.",
    "halot": {
     "checked": true,
-    "pdf_page": 1346,
-    "printed_page": 1290
+    "entry": 8987,
+    "headword": "רֶֽקַח",
+    "page": 2642,
+    "y": 532.2
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "8:2"
    ]
   },
   {
@@ -1917,21 +2093,23 @@
    "refs_hebrew_numbering": [
     "Song.8.5"
    ],
-   "song_refs_vandyke": [
-    "8:5"
-   ],
    "vandyke_word": "مستندة",
    "certainty": "واضح",
    "note_ar": "معناه «تسند نفسها على»، والقاموس بيذكر العربي «رفق»، ومنه «المِرفق» و«ارتفق» يعني اتكى على كوعه. ما جاتش غير هنا، والصورة البنت طالعة من البرية ساندة على دراعه.",
    "halot": {
     "checked": true,
-    "pdf_page": 1335,
-    "printed_page": 1279
+    "entry": 8949,
+    "headword": "רפק",
+    "page": 2627,
+    "y": 394.2
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "8:5"
    ]
   },
   {
@@ -1944,21 +2122,23 @@
     "Job.15.30",
     "Song.8.6"
    ],
-   "song_refs_vandyke": [
-    "8:6"
-   ],
    "vandyke_word": "لظى الرب",
    "certainty": "فيه خلاف",
    "note_ar": "الكلمة في النص «شلهبتيه»، وآخرها ممكن يكون اختصار اسم الله «ياه»، فيبقى معناها «لهيب الرب»، أو يكون مجرد صيغة مبالغة «لهيب جبار». القاموس بيقول إنها ما جاتش غير هنا، وإن الترجمات القديمة كل واحدة شرحتها على مزاجها. ولو القراية الأولى صح، يبقى ده المكان الوحيد في السفر كله اللي اسم الله ظهر فيه، وفاندايك اختار القراية دي «لظى الرب».",
    "halot": {
     "checked": true,
-    "pdf_page": 1560,
-    "printed_page": 1504
+    "entry": 9618,
+    "headword": "שַׁלְהֶבֶת",
+    "page": 2911,
+    "y": 216.3
    },
    "sources": [
-    "HALOT",
+    "HALOT (text edition, owner copy)",
     "OSHB morphology (CC BY 4.0)",
     "Van Dyke Arabic text"
+   ],
+   "refs_vandyke": [
+    "8:6"
    ]
   }
  ]

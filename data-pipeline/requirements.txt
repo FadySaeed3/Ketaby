@@ -1,1 +1,1 @@
-# pinned in Phase 1
+pymupdf==2.1

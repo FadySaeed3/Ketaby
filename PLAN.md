@@ -21,8 +21,9 @@ Agreed with Fady on 2026-11-10.
 | Hebrew transliteration | Classical Semitic values written in Arabic letters (ح ع ص ق ط kept distinct), rule-based, with tests |
 | Greek transliteration | Two fields side by side: academic (Erasmian) and modern Greek pronunciation, rule-based, with tests |
 | Rare words | Lemmas (excluding proper names) occurring 1, 2 or 3 times in the Hebrew Bible or Greek NT |
-| HALOT copy | The full scanned 1859-page PDF (`HALOT-full.pdf`). The partial text-layer copy (א–ל) is used only to cross-check OCR, never for page numbers |
-| BDAG copy | `BDAG.pdf` (text layer, 1080 pages) |
+| HALOT copy | **Text-layer edition only** (CD-ROM layout, 3537 pages, sha256 `7ba7a134…c964`). The scanned edition is dropped for good. References are HALOT entry number + page/position in this file (no printed-book page numbers) |
+| BDAG copy | `BDAG.pdf` (text layer, 1080 pages, sha256 `4daf02c8…dd95`) |
+| In-app links | Tapping a word opens the owner's PDF at the exact entry (page + y), highlighted; cross-references inside HALOT (→) and BDAG (s.) are tappable and jump to the target entry |
 
 ## Sources (open)
 
@@ -40,12 +41,13 @@ Agreed with Fady on 2026-11-10.
 
 Note: UBS is share-alike, so the Arabic dictionary derived from it is CC BY-SA as well.
 
-## Known facts from the pilot (Song of Songs)
+## Known facts
 
 - Van Dyke follows English versification. Hebrew Song 7:1 = Van Dyke 6:13, Hebrew 7:n = Van Dyke 7:(n−1). Use TVTMS for every book.
-- HALOT-full printed page = PDF page − 57 up to about PDF page 422, then − 56 (verified on 68 pages). Always store both numbers, measured not computed.
-- HALOT page headers OCR well (`tesseract heb --psm 7` on the top band); a longest-increasing-subsequence pass over header words removes OCR noise and brackets every lemma to 1–3 pages.
-- Song of Songs has 76 rare lemmas; pilot notes are in `content/rare_words/hebrew/song.json`.
+- The text HALOT stores Hebrew in the BibleWorks `Bwhebb` font encoding (visual order, Latin characters). `data-pipeline/bw_decode.py` converts it to Unicode; mapping learned against Strong's headwords, tests in `data-pipeline/tests/`.
+- HALOT index (`content/indexes/halot_index.json`, built by `halot_index.py`): 11,190 entries with page + y; 9,519 OSHB lemma keys, 97% mapped (homonyms resolved by overlap between the lemma's verses and the verses each entry cites); 284 low-confidence and 258 unmatched keys listed for manual fixes in `halot_overrides.json`; 7,143 internal cross-reference links. A few entry numbers are absent from the source file itself (e.g. 3873); their text sits inside the previous entry and `lemma_pos` gives the exact spot.
+- BDAG index (`content/indexes/bdag_index.json`, built by `bdag_index.py`): 8,139 entries; 5,342 of 5,461 MorphGNT lemmas mapped (98%); 119 unmatched.
+- Song of Songs: 76 rare lemmas, every card checked against the text HALOT, in `content/rare_words/hebrew/song.json`.
 
 ## Repository layout
 
@@ -69,11 +71,11 @@ content/
 1. **Texts and alignment** — build `ketaby.db` (SQLite): books, chapters, verses (Van Dyke), Hebrew/Greek words with lemma, Strong's, morphology, sense tags; Van Dyke word ↔ original word links; versification map. Checks: 31,102 Van Dyke verses; word counts equal the sources.
 2. **Transliteration engine** — Hebrew → Arabic, Greek → Arabic ×2. Unit tests with hand-checked samples.
 3. **App v1** — reader, tap a word → panel (original, transliteration, Arabic morphology, short meaning), interlinear view, concordance, search. Fady tests on his phone.
-4. **HALOT/BDAG index + viewer** — lemma → page index for every lemma (Hebrew from HALOT headers, Greek from the BDAG index pages); import screen; in-app PDF viewer that opens on the right page.
+4. **HALOT/BDAG viewer** — indexes are done (see Known facts). Remaining: import screen that checks the sha256, in-app PDF viewer that opens on the exact entry and highlights it, tappable internal cross-references, back to the verse.
 5. **Arabic dictionary** — (a) one-line Arabic gloss for all ~14,000 lemmas; (b) full Arabic entries synthesised from the four open lexicons, in batches.
 6. **Rare-word cards** — HALOT (Hebrew ~3,000) and BDAG (Greek ~2,800, count to be re-verified), book by book, same template as the Song pilot.
 7. **Study notes** — verse/chapter notes on request.
 
 ## Content templates
 
-Rare word (see `content/rare_words/hebrew/song.json`): `strong`, `lemma`, `translit`, `count_in_ot`, `refs_hebrew_numbering`, `song_refs_vandyke` (generalise to `refs_vandyke`), `vandyke_word`, `certainty` (واضح / فيه خلاف / غامض), `note_ar`, `halot{checked,pdf_page,printed_page}`, `sources`.
+Rare word (see `content/rare_words/hebrew/song.json`): `strong`, `lemma`, `translit`, `count_in_ot`, `refs_hebrew_numbering`, `refs_vandyke`, `vandyke_word`, `certainty` (واضح / فيه خلاف / غامض), `note_ar`, `halot{checked, entry, headword, page, y, also?}`, `sources`. Greek cards use `bdag{...}` with the same shape.

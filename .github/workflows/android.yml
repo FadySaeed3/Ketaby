@@ -4,6 +4,8 @@ on:
   push:
     branches: [ main ]
     tags: [ 'v*' ]
+  release:
+    types: [ published ]
   workflow_dispatch:
 
 permissions:
@@ -64,9 +66,9 @@ jobs:
           path: app/build/outputs/apk/debug/*.apk
           retention-days: 30
 
-      # Pushing a tag like v0.1.0 publishes a GitHub Release with the installable APK.
+      # Publishing a release (or pushing a tag like v0.1.0) attaches the installable APK.
       - name: Publish release
-        if: startsWith(github.ref, 'refs/tags/v')
+        if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/v')
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.ref_name }}
@@ -76,12 +78,17 @@ jobs:
           cp app/build/outputs/apk/release/app-release.apk "ketaby-$TAG.apk"
           notes=".github/release-notes/$TAG.md"
           [ -f "$notes" ] || notes=/dev/null
-          gh release create "$TAG" "ketaby-$TAG.apk" --title "كتابي $TAG" --notes-file "$notes"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "ketaby-$TAG.apk" --clobber
+          else
+            gh release create "$TAG" "ketaby-$TAG.apk" --title "كتابي $TAG" --notes-file "$notes"
+          fi
 
   # Installs the APK on an emulator, taps through the main screens, and prints
   # screenshots (base64) and crash logs into the job log for review.
   smoke:
     needs: build
+    if: github.event_name != 'release'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:

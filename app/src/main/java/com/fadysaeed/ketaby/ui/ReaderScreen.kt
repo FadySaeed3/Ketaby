@@ -9,14 +9,24 @@ import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -51,6 +61,7 @@ import androidx.compose.ui.unit.sp
 import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.Book
 import com.fadysaeed.ketaby.data.Db
+import com.fadysaeed.ketaby.data.EVerse
 import com.fadysaeed.ketaby.data.OWord
 import com.fadysaeed.ketaby.data.Token
 import com.fadysaeed.ketaby.data.VerseRow
@@ -58,6 +69,8 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 
 @Composable
 fun scriptureFamily(): FontFamily = if (LocalPrefs.current.scriptureFont == "plex") Plex else Naskh
+
+fun englishName(tr: String) = if (tr == "bsb") "BSB" else "KJV"
 
 /** One verse as flowing Arabic text; every aligned unit is tappable. */
 @Composable
@@ -95,11 +108,89 @@ fun VerseText(
     }
     Text(
         text,
+        modifier = Modifier.fillMaxWidth(),
         style = TextStyle(
             fontFamily = scriptureFamily(), fontSize = size, lineHeight = 1.9.em, color = Ink,
             textDirection = TextDirection.Rtl,
         ),
     )
+}
+
+/** One English verse; the parts tied to original words are tappable. */
+@Composable
+fun EnglishVerseText(
+    number: Int?,
+    verse: EVerse,
+    selected: Int? = null,
+    markedWords: Set<Long> = emptySet(),
+    dim: Boolean = false,
+    onTap: (text: String, words: List<Long>, start: Int) -> Unit,
+) {
+    val prefs = LocalPrefs.current
+    val size = ((if (dim) 16 else 18) * prefs.textScale).sp
+    val text = buildAnnotatedString {
+        if (number != null) {
+            withStyle(SpanStyle(color = Gold, fontSize = size * 0.7f, fontWeight = FontWeight.SemiBold)) { append("$number") }
+            append(" ")
+        }
+        var pos = 0
+        for (sp in verse.spans) {
+            if (sp.start < pos || sp.end > verse.text.length) continue
+            append(verse.text.substring(pos, sp.start))
+            val piece = verse.text.substring(sp.start, sp.end)
+            val style = when {
+                sp.start == selected -> SpanStyle(color = Color.Black, background = Gold)
+                sp.words.any { it in markedWords } -> SpanStyle(color = Teal, fontWeight = FontWeight.Bold)
+                else -> SpanStyle()
+            }
+            val link = LinkAnnotation.Clickable(
+                tag = "e${sp.start}",
+                styles = TextLinkStyles(style = style, pressedStyle = SpanStyle(background = Teal.copy(alpha = 0.35f))),
+                linkInteractionListener = { onTap(piece, sp.words, sp.start) },
+            )
+            withLink(link) { append(piece) }
+            pos = sp.end
+        }
+        append(verse.text.substring(pos))
+    }
+    Text(
+        text,
+        modifier = Modifier.fillMaxWidth(),
+        style = TextStyle(
+            fontFamily = FontFamily.Serif, fontSize = size, lineHeight = 1.55.em,
+            color = if (dim) Ink.copy(alpha = 0.78f) else Ink, textDirection = TextDirection.Ltr,
+        ),
+    )
+}
+
+@Composable
+private fun MenuItem(label: String, checked: Boolean, onClick: () -> Unit) {
+    DropdownMenuItem(
+        text = { Text(label, color = if (checked) Gold else Ink) },
+        leadingIcon = { if (checked) Icon(Icons.Filled.Check, null, tint = Gold) else Spacer(Modifier.padding(12.dp)) },
+        onClick = onClick,
+    )
+}
+
+@Composable
+private fun ViewMenu() {
+    val prefs = LocalPrefs.current
+    var open by remember { mutableStateOf(false) }
+    IconButton(onClick = { open = true }) { Icon(Icons.Filled.MoreVert, t("طريقة العرض", "طريقة العرض", "View"), tint = Ink) }
+    DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+        val item: @Composable (String, Boolean, () -> Unit) -> Unit = { label, checked, onClick ->
+            MenuItem(label, checked) { onClick(); open = false }
+        }
+        val en = englishName(prefs.english)
+        item(t("فاندايك بس", "فاندايك فقط", "Van Dyke only"), prefs.readerMode == 0) { prefs.putReaderMode(0) }
+        item(t("فاندايك وتحته $en", "فاندايك وتحته $en", "Van Dyke with $en"), prefs.readerMode == 1) { prefs.putReaderMode(1) }
+        item(t("$en بس", "$en فقط", "$en only"), prefs.readerMode == 2) { prefs.putReaderMode(2) }
+        HorizontalDivider(color = Line)
+        item("KJV", prefs.english == "kjv") { prefs.putEnglish("kjv") }
+        item("BSB", prefs.english == "bsb") { prefs.putEnglish("bsb") }
+        HorizontalDivider(color = Line)
+        item(t("بين السطور (الأصل)", "بين السطور (النص الأصلي)", "Interlinear (original)"), prefs.interlinear) { prefs.putInterlinear(!prefs.interlinear) }
+    }
 }
 
 @Composable
@@ -112,7 +203,12 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
         val vs = verses
         value = if (prefs.interlinear && !vs.isNullOrEmpty()) Db.chapterWords(vs.first().id, vs.last().id) else emptyMap()
     }
+    val english by produceState<Map<Long, EVerse>>(emptyMap(), verses, prefs.readerMode, prefs.english) {
+        val vs = verses
+        value = if (prefs.readerMode != 0 && !vs.isNullOrEmpty()) Db.englishRange(prefs.english, vs.first().id, vs.last().id) else emptyMap()
+    }
     var selected by remember(screen) { mutableStateOf<Long?>(null) }
+    var selectedEn by remember(screen) { mutableStateOf<Pair<Long, Int>?>(null) }
 
     val startIndex = remember(screen) {
         when {
@@ -152,10 +248,8 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
                 onBack = { nav.pop() },
                 onTitle = { nav.push(Screen.Chapters(screen.book)) },
             ) {
-                TextButton(onClick = { prefs.putInterlinear(!prefs.interlinear) }) {
-                    Text("بين السطور", color = if (prefs.interlinear) Teal else Muted, fontSize = 13.sp)
-                }
                 SearchSettingsActions(nav)
+                ViewMenu()
             }
         },
         bottomBar = {
@@ -163,8 +257,13 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
                 Modifier.fillMaxWidth().background(Color.Black).navigationBarsPadding().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
             ) {
-                TextButton(onClick = { go(-1) }) { Text("→ الإصحاح اللي فات", color = Muted) }
-                TextButton(onClick = { go(1) }) { Text("الإصحاح الجاي ←", color = Gold) }
+                val rtl = !ArText.english
+                TextButton(onClick = { go(-1) }) {
+                    Text(if (rtl) t("→ الإصحاح اللي فات", "→ الأصحاح السابق", "") else "← Previous chapter", color = Muted)
+                }
+                TextButton(onClick = { go(1) }) {
+                    Text(if (rtl) t("الإصحاح الجاي ←", "الأصحاح التالي ←", "") else "Next chapter →", color = Gold)
+                }
             }
         },
     ) { pad ->
@@ -173,21 +272,36 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
             Box(Modifier.padding(pad).fillMaxSize())
             return@Scaffold
         }
+        val mode = prefs.readerMode
         LazyColumn(
             state = listState,
             contentPadding = PaddingValues(horizontal = 18.dp, vertical = 12.dp),
-            verticalArrangement = Arrangement.spacedBy(if (prefs.interlinear) 18.dp else 6.dp),
+            verticalArrangement = Arrangement.spacedBy(if (prefs.interlinear || mode == 1) 16.dp else 6.dp),
             modifier = Modifier.padding(pad).fillMaxSize(),
         ) {
             itemsIndexed(vs, key = { _, v -> v.id }) { _, v ->
                 Column {
-                    VerseText(v.v, v.tokens, selected = selected) { t ->
-                        selected = t.id
-                        openSheet(SheetRequest(t.text, t.id))
+                    if (mode != 2) {
+                        VerseText(v.v, v.tokens, selected = selected) { tk ->
+                            selected = tk.id; selectedEn = null
+                            openSheet(SheetRequest(tk.text, tk.id))
+                        }
+                    }
+                    val ev = english[v.id]
+                    if (mode != 0 && ev != null) {
+                        if (mode == 1) Spacer(Modifier.height(4.dp))
+                        EnglishVerseText(
+                            if (mode == 2) v.v else null, ev,
+                            selected = selectedEn?.takeIf { it.first == v.id }?.second,
+                            dim = mode == 1,
+                        ) { piece, ids, start ->
+                            selectedEn = v.id to start; selected = null
+                            openSheet(SheetRequest(piece, null, ids, headerIsEnglish = true))
+                        }
                     }
                     if (prefs.interlinear) {
                         val ws = words[v.id].orEmpty()
-                        if (ws.isNotEmpty()) Interlinear(v, ws) { w -> openSheet(SheetRequest(null, null, listOf(w.id))) }
+                        if (ws.isNotEmpty()) Interlinear(ws) { w -> openSheet(SheetRequest(null, null, listOf(w.id))) }
                     }
                 }
             }
@@ -197,7 +311,7 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun Interlinear(verse: VerseRow, words: List<OWord>, onWord: (OWord) -> Unit) {
+fun Interlinear(words: List<OWord>, onWord: (OWord) -> Unit) {
     val prefs = LocalPrefs.current
     val greek = words.first().lang == "grc"
     val first = words.first()
@@ -205,10 +319,12 @@ fun Interlinear(verse: VerseRow, words: List<OWord>, onWord: (OWord) -> Unit) {
         Modifier.fillMaxWidth().padding(top = 8.dp).clip(RoundedCornerShape(12.dp)).background(Panel).padding(10.dp),
     ) {
         val ref = "${ArText.num(first.oc)}:${ArText.num(first.ov)}"
-        Text(
-            (if (greek) "اليوناني" else if (first.lang == "arc") "الآرامي" else "العبري") + " · $ref",
-            color = Muted, fontSize = 11.sp,
-        )
+        val label = when {
+            greek -> t("اليوناني", "اليونانية", "Greek")
+            first.lang == "arc" -> t("الآرامي", "الآرامية", "Aramaic")
+            else -> t("العبري", "العبرية", "Hebrew")
+        }
+        Text("$label · $ref", color = Muted, fontSize = 11.sp)
         CompositionLocalProvider(LocalLayoutDirection provides if (greek) LayoutDirection.Ltr else LayoutDirection.Rtl) {
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
@@ -241,9 +357,9 @@ private fun WordCell(w: OWord, greekMode: Int, cantillation: Boolean, scale: Flo
             2 -> listOfNotNull(w.tr2)
             else -> listOfNotNull(w.tr, w.tr2).distinct()
         }
-        for (t in trs) {
+        for (tx in trs) {
             CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                Text(t, fontFamily = Plex, fontSize = (13 * scale).sp, color = Teal)
+                Text(tx, fontFamily = Plex, fontSize = (13 * scale).sp, color = Teal)
             }
         }
         if (!w.gloss.isNullOrBlank()) {

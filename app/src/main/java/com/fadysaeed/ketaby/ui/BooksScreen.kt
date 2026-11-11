@@ -61,7 +61,7 @@ fun KTopBar(
         },
         navigationIcon = {
             if (onBack != null) IconButton(onClick = onBack) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "رجوع", tint = Ink)
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = t("رجوع", "رجوع", "Back"), tint = Ink)
             }
         },
         actions = { actions() },
@@ -71,8 +71,8 @@ fun KTopBar(
 
 @Composable
 fun SearchSettingsActions(nav: Nav) {
-    IconButton(onClick = { nav.push(Screen.Search) }) { Icon(Icons.Filled.Search, "بحث", tint = Ink) }
-    IconButton(onClick = { nav.push(Screen.Settings) }) { Icon(Icons.Filled.Settings, "الإعدادات", tint = Ink) }
+    IconButton(onClick = { nav.push(Screen.Search) }) { Icon(Icons.Filled.Search, t("بحث", "بحث", "Search"), tint = Ink) }
+    IconButton(onClick = { nav.push(Screen.Settings) }) { Icon(Icons.Filled.Settings, t("الإعدادات", "الإعدادات", "Settings"), tint = Ink) }
 }
 
 @Composable
@@ -81,7 +81,7 @@ fun BooksScreen(nav: Nav) {
     val books by produceState<List<Book>>(emptyList()) { value = Db.books() }
     Scaffold(
         containerColor = Color.Black,
-        topBar = { KTopBar("كتابي", onBack = null) { SearchSettingsActions(nav) } },
+        topBar = { KTopBar(t("كتابي", "كتابي", "Ketaby"), onBack = null) { SearchSettingsActions(nav) } },
     ) { pad ->
         LazyVerticalGrid(
             columns = GridCells.Adaptive(150.dp),
@@ -98,15 +98,15 @@ fun BooksScreen(nav: Nav) {
                         .clickable { nav.push(Screen.Reader(last.id, prefs.lastChapter, 0)) }
                         .padding(16.dp),
                 ) {
-                    Text("كمّل من آخر مكان", color = Muted, fontSize = 13.sp)
+                    Text(t("كمّل من آخر مكان", "تابع من حيث توقفت", "Continue reading"), color = Muted, fontSize = 13.sp)
                     Text("${last.name} ${ArText.num(prefs.lastChapter)}", color = Gold, fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
                 }
             }
-            for ((label, t) in listOf("العهد القديم" to "OT", "العهد الجديد" to "NT")) {
+            for ((label, tst) in listOf(t("العهد القديم", "العهد القديم", "Old Testament") to "OT", t("العهد الجديد", "العهد الجديد", "New Testament") to "NT")) {
                 item(span = { GridItemSpan(maxLineSpan) }) {
                     Text(label, color = Teal, fontSize = 16.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(top = 10.dp))
                 }
-                items(books.filter { it.testament == t }, key = { it.id }) { b ->
+                items(books.filter { it.testament == tst }, key = { it.id }) { b ->
                     Row(
                         Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(Panel)
                             .clickable {

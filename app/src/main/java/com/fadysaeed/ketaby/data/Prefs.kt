@@ -19,6 +19,14 @@ class Prefs(ctx: Context) {
     /** "naskh" or "plex" */
     var scriptureFont by mutableStateOf(sp.getString("scriptureFont", "naskh") ?: "naskh"); private set
     var interlinear by mutableStateOf(sp.getBoolean("interlinear", false)); private set
+    /** interface language: "eg" (Egyptian), "msa" (Modern Standard Arabic), "en" */
+    var uiLang by mutableStateOf(sp.getString("uiLang", "eg") ?: "eg"); private set
+    /** explanation language: "eg", "msa", "en" or "all" */
+    var explainLang by mutableStateOf(sp.getString("explainLang", "eg") ?: "eg"); private set
+    /** English Bible: "kjv" or "bsb" */
+    var english by mutableStateOf(sp.getString("english", "kjv") ?: "kjv"); private set
+    /** 0 = Van Dyke only, 1 = Van Dyke + English, 2 = English only */
+    var readerMode by mutableIntStateOf(sp.getInt("readerMode", 0)); private set
 
     var lastBook by mutableIntStateOf(sp.getInt("lastBook", 1)); private set
     var lastChapter by mutableIntStateOf(sp.getInt("lastChapter", 1)); private set
@@ -30,6 +38,10 @@ class Prefs(ctx: Context) {
     fun putHarakat(v: Boolean) { harakat = v; sp.edit().putBoolean("harakat", v).apply() }
     fun putScriptureFont(v: String) { scriptureFont = v; sp.edit().putString("scriptureFont", v).apply() }
     fun putInterlinear(v: Boolean) { interlinear = v; sp.edit().putBoolean("interlinear", v).apply() }
+    fun putUiLang(v: String) { uiLang = v; sp.edit().putString("uiLang", v).apply() }
+    fun putExplainLang(v: String) { explainLang = v; sp.edit().putString("explainLang", v).apply() }
+    fun putEnglish(v: String) { english = v; sp.edit().putString("english", v).apply() }
+    fun putReaderMode(v: Int) { readerMode = v; sp.edit().putInt("readerMode", v).apply() }
 
     fun savePosition(book: Int, ch: Int, verseIndex: Int) {
         lastBook = book; lastChapter = ch; lastVerseIndex = verseIndex

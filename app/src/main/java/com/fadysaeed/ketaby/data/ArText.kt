@@ -1,6 +1,10 @@
 package com.fadysaeed.ketaby.data
 
 object ArText {
+    /** Set from the interface language: English UI uses Latin digits and English book names. */
+    @Volatile var english = false
+    /** "eg" | "msa" | "en" — interface language, mirrored here for non-Compose helpers. */
+    @Volatile var ui = "eg"
     private val harakat = Regex("[\\u064B-\\u065F\\u0670\\u0640]")
     private val cantillation = Regex("[\\u0591-\\u05AF\\u05BD]")
 
@@ -24,13 +28,16 @@ object ArText {
     }
 
     private const val DIGITS = "٠١٢٣٤٥٦٧٨٩"
-    fun num(n: Int): String = n.toString().map { if (it in '0'..'9') DIGITS[it - '0'] else it }.joinToString("")
-    fun num(s: String): String = s.map { if (it in '0'..'9') DIGITS[it - '0'] else it }.joinToString("")
+    fun num(n: Int): String = num(n.toString())
+    fun num(s: String): String = if (english) s else s.map { if (it in '0'..'9') DIGITS[it - '0'] else it }.joinToString("")
 
-    fun times(n: Int): String = when {
-        n == 1 -> "مرة واحدة"
-        n == 2 -> "مرتين"
-        n in 3..10 -> "${num(n)} مرات"
-        else -> "${num(n)} مرة"
+    fun times(n: Int): String = when (ui) {
+        "en" -> if (n == 1) "once" else if (n == 2) "twice" else "$n times"
+        "msa" -> when {
+            n == 1 -> "مرة واحدة"; n == 2 -> "مرتين"; n in 3..10 -> "${num(n)} مرات"; else -> "${num(n)} مرة"
+        }
+        else -> when {
+            n == 1 -> "مرة واحدة"; n == 2 -> "مرتين"; n in 3..10 -> "${num(n)} مرات"; else -> "${num(n)} مرة"
+        }
     }
 }

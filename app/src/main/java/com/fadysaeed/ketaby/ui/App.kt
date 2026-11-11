@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -29,6 +30,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.Db
 import com.fadysaeed.ketaby.data.Prefs
 
@@ -43,7 +45,7 @@ sealed interface Screen {
 }
 
 /** What the word panel shows: the words aligned to one Arabic unit, or explicit original words. */
-data class SheetRequest(val arabic: String?, val tokenId: Long?, val wordIds: List<Long> = emptyList())
+data class SheetRequest(val header: String?, val tokenId: Long?, val wordIds: List<Long> = emptyList(), val headerIsEnglish: Boolean = false)
 
 class Nav(start: List<Screen>) {
     val stack = mutableStateListOf<Screen>().apply { addAll(start) }
@@ -51,9 +53,10 @@ class Nav(start: List<Screen>) {
     fun push(s: Screen) { stack.add(s) }
     fun replace(s: Screen) { stack[stack.lastIndex] = s }
     fun pop() { if (stack.size > 1) stack.removeAt(stack.lastIndex) }
-    /** Go to a screen already in the stack (or push it). */
-    fun home() { while (stack.size > 1) stack.removeAt(stack.lastIndex) }
 }
+
+/** Interface text in the chosen language: Egyptian, Modern Standard Arabic, or English. */
+fun t(eg: String, msa: String, en: String): String = when (ArText.ui) { "msa" -> msa; "en" -> en; else -> eg }
 
 @Composable
 fun App() {
@@ -62,6 +65,7 @@ fun App() {
     var ready by remember { mutableStateOf(false) }
     var progress by remember { mutableFloatStateOf(0f) }
     var failure by remember { mutableStateOf<String?>(null) }
+    val nav = remember { Nav(listOf(Screen.Books, Screen.Reader(prefs.lastBook, prefs.lastChapter, 0))) }
 
     LaunchedEffect(Unit) {
         try {
@@ -72,9 +76,18 @@ fun App() {
         }
     }
 
-    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl, LocalPrefs provides prefs) {
-        KetabyTheme {
-            if (!ready) Splash(progress, failure) else Main(prefs)
+    val lang = prefs.uiLang
+    ArText.ui = lang
+    ArText.english = lang == "en"
+    // Rebuild the whole interface when its language changes (navigation state is kept).
+    key(lang) {
+        CompositionLocalProvider(
+            LocalLayoutDirection provides if (lang == "en") LayoutDirection.Ltr else LayoutDirection.Rtl,
+            LocalPrefs provides prefs,
+        ) {
+            KetabyTheme {
+                if (!ready) Splash(progress, failure) else Main(prefs, nav)
+            }
         }
     }
 }
@@ -86,13 +99,13 @@ private fun Splash(progress: Float, failure: String?) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text("كتابي", color = Gold, fontSize = 44.sp, fontWeight = FontWeight.Bold)
+        Text(t("كتابي", "كتابي", "Ketaby"), color = Gold, fontSize = 44.sp, fontWeight = FontWeight.Bold)
         Spacer(Modifier.height(24.dp))
         if (failure != null) {
-            Text("حصلت مشكلة وإحنا بنجهز الكتاب:", color = Rose)
+            Text(t("حصلت مشكلة وإحنا بنجهز الكتاب:", "حدثت مشكلة أثناء تجهيز الكتاب:", "Something went wrong while preparing the Bible:"), color = Rose)
             Text(failure, color = Muted, fontSize = 12.sp)
         } else {
-            Text("بنجهز الكتاب على الموبايل أول مرة بس…", color = Teal)
+            Text(t("بنجهز الكتاب على الموبايل أول مرة بس…", "يجري تجهيز الكتاب على الجهاز للمرة الأولى فقط…", "Preparing the Bible on this phone (first run only)…"), color = Teal)
             Spacer(Modifier.height(16.dp))
             LinearProgressIndicator(progress = { progress }, modifier = Modifier.fillMaxWidth(), color = Gold, trackColor = PanelHi)
         }
@@ -100,10 +113,7 @@ private fun Splash(progress: Float, failure: String?) {
 }
 
 @Composable
-private fun Main(prefs: Prefs) {
-    val nav = remember {
-        Nav(listOf(Screen.Books, Screen.Reader(prefs.lastBook, prefs.lastChapter, 0)))
-    }
+private fun Main(prefs: Prefs, nav: Nav) {
     var sheet by remember { mutableStateOf<SheetRequest?>(null) }
 
     BackHandler(enabled = nav.stack.size > 1) { nav.pop() }

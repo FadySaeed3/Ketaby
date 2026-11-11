@@ -40,7 +40,7 @@ pat, where = sys.argv[1], sys.argv[2]
 xml = open('u.xml', encoding='utf-8').read()
 for node in re.findall(r'<node [^>]*>', xml):
     a = dict(re.findall(r'([\w-]+)="([^"]*)"', node))
-    t = a.get('text') or a.get('content-desc') or ''
+    t = (a.get('text') or a.get('content-desc') or '').replace('&#10;', ' ')
     b = re.match(r'\[(\d+),(\d+)\]\[(\d+),(\d+)\]', a.get('bounds', ''))
     if not b:
         continue
@@ -48,6 +48,8 @@ for node in re.findall(r'<node [^>]*>', xml):
     if re.search(pat, t):
         if where == 'firstword':
             print(x2 - 140, y1 + 40)
+        elif where == 'leftword':
+            print(x1 + 160, y1 + 30)
         else:
             print((x1 + x2) // 2, (y1 + y2) // 2)
         break
@@ -64,23 +66,62 @@ shot 2_word_sheet
 tap_text 'كل المواضع' center
 shot 3_concordance
 adb shell input keyevent KEYCODE_BACK; sleep 2
-tap_text 'بين السطور' center
-sleep 3
-shot 4_interlinear
-tap_text 'بين السطور' center
-tap_text 'الإصحاح الجاي' center
-shot 5_next_chapter
 
-# Greek: search a Strong's number, open its concordance, then a verse in interlinear view
-tap_text '^بحث$' center
-adb shell input text G3056; adb shell input keyevent KEYCODE_ENTER; sleep 4
-shot 6_search
-tap_text 'λόγος' center
-shot 7_greek_concordance
-tap_text 'متى ' center
+# Van Dyke with KJV underneath, then tap an English word
+tap_text '^طريقة العرض$' center
+tap_text '^فاندايك وتحته KJV$' center
+sleep 2
+shot 4_parallel_kjv
+tap_text '^In the beginning' leftword
+sleep 2
+shot 5_english_word
+adb shell input keyevent KEYCODE_BACK; sleep 2
+
+# switch to BSB and the interlinear view
+tap_text '^طريقة العرض$' center
+tap_text '^BSB$' center
+tap_text '^طريقة العرض$' center
 tap_text 'بين السطور' center
 sleep 3
-shot 8_greek_interlinear
+shot 6_bsb_interlinear
+
+# English interface and explanations in all three languages
+tap_text '^الإعدادات$' center
+tap_text '^English$' center
+sleep 2
+tap_text '^All three$' center
+shot 7_settings_english
+adb shell input keyevent KEYCODE_BACK; sleep 2
+shot 8_reader_english_ui
+
+# Greek: search a Strong's number, open its concordance, then a verse
+tap_text '^Search$' center
+adb shell input text G3056; adb shell input keyevent KEYCODE_ENTER; sleep 4
+shot 9_search
+tap_text 'λόγος' center
+shot 10_greek_concordance
+tap_text '^Matthew ' center
+sleep 3
+shot 11_matthew
+
+# a rare-word card in three languages: search H5390, open Song 1:2 from the concordance
+adb shell input keyevent KEYCODE_BACK; sleep 1
+adb shell input keyevent KEYCODE_BACK; sleep 1
+adb shell input keyevent KEYCODE_BACK; sleep 1
+tap_text '^Search$' center
+adb shell input text H5390; adb shell input keyevent KEYCODE_ENTER; sleep 4
+tap_text 'נְשִׁיקָה' center
+tap_text 'kisses' center
+sleep 3
+adb shell uiautomator dump /sdcard/u.xml >/dev/null; adb pull /sdcard/u.xml u.xml >/dev/null
+echo "=====NODES"; python3 -c "
+import re;x=open('u.xml',encoding='utf-8').read()
+for n in re.findall(r'<node [^>]*>',x)[:80]:
+    a=dict(re.findall(r'([\w-]+)=\"([^\"]*)\"',n)); print(repr((a.get('text') or a.get('content-desc') or '')[:50]), a.get('class'), a.get('clickable'), a.get('bounds'))
+"
+tap_text '^kisses$' center
+sleep 3
+shot 12_card_three_languages
 
 echo "=====LOGCAT"
 adb logcat -d -s AndroidRuntime:E $PKG:* System.err:W | tail -200

@@ -8,7 +8,9 @@ import kotlinx.coroutines.withContext
 import org.json.JSONObject
 import java.io.File
 
-data class Book(val id: Int, val name: String, val testament: String, val chapters: Int)
+data class Book(val id: Int, val nameAr: String, val testament: String, val chapters: Int, val nameEn: String) {
+    val name: String get() = if (ArText.english) nameEn else nameAr
+}
 
 data class Token(val id: Long, val text: String, val linked: Boolean)
 
@@ -25,12 +27,24 @@ data class OWord(
     val editions: String?, val vdVerse: Long?, val lemma: Lemma?,
 )
 
+/** A text in the three explanation languages: Egyptian Arabic, Modern Standard Arabic, English. */
+data class Tri(val eg: String?, val msa: String?, val en: String?) {
+    fun get(lang: String): String? = when (lang) { "msa" -> msa ?: eg; "en" -> en ?: eg; else -> eg }
+}
+
 data class Card(
-    val strong: String, val certainty: String?, val note: String, val vandykeWord: String?,
+    val strong: String, val certainty: Tri?, val notes: Tri, val vandykeWord: String?,
     val refsVandyke: List<String>, val halotChecked: Boolean, val halotEntry: String?, val halotPage: Int?,
 )
 
-data class ConcHit(val verseId: Long, val book: Int, val bookName: String, val ch: Int, val v: Int, val tokens: List<Token>)
+/** An English verse: its text and the character ranges tied to original words. */
+data class Span(val start: Int, val end: Int, val words: List<Long>)
+data class EVerse(val verseId: Long, val text: String, val spans: List<Span>)
+
+data class ConcHit(
+    val verseId: Long, val book: Int, val bookName: String, val ch: Int, val v: Int, val tokens: List<Token>,
+    val english: EVerse? = null,
+)
 
 data class SearchHit(val verseId: Long, val book: Int, val bookName: String, val ch: Int, val v: Int, val text: String)
 
@@ -90,8 +104,8 @@ object Db {
     private fun Cursor.longOrNull(i: Int): Long? = if (isNull(i)) null else getLong(i)
 
     suspend fun books(): List<Book> = withContext(Dispatchers.IO) {
-        bookCache ?: query("SELECT id, name_ar, testament, chapters FROM books ORDER BY id") {
-            Book(it.getInt(0), it.getString(1), it.getString(2), it.getInt(3))
+        bookCache ?: query("SELECT id, name_ar, testament, chapters, name_en FROM books ORDER BY id") {
+            Book(it.getInt(0), it.getString(1), it.getString(2), it.getInt(3), it.str(4) ?: it.getString(1))
         }.also { bookCache = it }
     }
 
@@ -174,6 +188,12 @@ object Db {
         return m.groupValues[1] + m.groupValues[2]
     }
 
+    private fun tri(o: JSONObject?, legacy: String?): Tri? {
+        if (o == null) return legacy?.takeIf { it.isNotBlank() }?.let { Tri(it, null, null) }
+        fun g(k: String) = o.optString(k).ifBlank { null }
+        return Tri(g("eg"), g("msa"), g("en"))
+    }
+
     suspend fun card(dstrong: String): Card? = withContext(Dispatchers.IO) {
         query("SELECT json FROM cards WHERE strong=?", arrayOf(plainStrong(dstrong))) { it.getString(0) }.firstOrNull()?.let { js ->
             val o = JSONObject(js)
@@ -181,8 +201,8 @@ object Db {
             val h = o.optJSONObject("halot")
             Card(
                 strong = o.optString("strong"),
-                certainty = o.optString("certainty").ifBlank { null },
-                note = o.optString("note_ar"),
+                certainty = tri(o.optJSONObject("certainty"), o.optString("certainty")),
+                notes = tri(o.optJSONObject("notes"), o.optString("note_ar")) ?: Tri("", null, null),
                 vandykeWord = o.optString("vandyke_word").ifBlank { null },
                 refsVandyke = if (refs == null) emptyList() else List(refs.length()) { refs.optString(it) },
                 halotChecked = h?.optBoolean("checked") ?: false,
@@ -192,8 +212,50 @@ object Db {
         }
     }
 
+    // ------------------------------------------------------------ English (KJV / BSB)
+    private fun parseSpans(s: String?): List<Span> {
+        if (s.isNullOrEmpty()) return emptyList()
+        return s.split(';').mapNotNull { part ->
+            val f = part.split(',')
+            if (f.size < 3) null else Span(f[0].toInt(), f[1].toInt(), f[2].split('.').map { it.toLong() })
+        }
+    }
+
+    suspend fun englishRange(tr: String, firstVerse: Long, lastVerse: Long): Map<Long, EVerse> = withContext(Dispatchers.IO) {
+        query(
+            "SELECT verse_id, text, spans FROM everses WHERE tr=? AND verse_id BETWEEN ? AND ?",
+            arrayOf(tr, "$firstVerse", "$lastVerse"),
+        ) { EVerse(it.getLong(0), it.getString(1), parseSpans(it.str(2))) }.associateBy { it.verseId }
+    }
+
+    suspend fun englishVerses(tr: String, ids: Collection<Long>): Map<Long, EVerse> = withContext(Dispatchers.IO) {
+        if (ids.isEmpty()) return@withContext emptyMap()
+        query(
+            "SELECT verse_id, text, spans FROM everses WHERE tr=? AND verse_id IN (${ids.joinToString(",")})", arrayOf(tr),
+        ) { EVerse(it.getLong(0), it.getString(1), parseSpans(it.str(2))) }.associateBy { it.verseId }
+    }
+
+    suspend fun wordIdsForLemma(dstrong: String): Set<Long> = withContext(Dispatchers.IO) {
+        query("SELECT id FROM owords WHERE dstrong=?", arrayOf(dstrong)) { it.getLong(0) }.toSet()
+    }
+
+    /** English search (case and punctuation ignored); every word of the query must appear. */
+    suspend fun searchEnglish(tr: String, q: String, limit: Int = 500): Pair<List<SearchHit>, Int> = withContext(Dispatchers.IO) {
+        val words = q.lowercase().replace(Regex("[^a-z0-9 ]+"), " ").split(' ').filter { it.isNotBlank() }
+        if (words.isEmpty()) return@withContext Pair(emptyList(), 0)
+        val where = words.joinToString(" AND ") { "e.plain LIKE ?" }
+        val args = (listOf(tr) + words.map { "%$it%" }).toTypedArray()
+        val total = query("SELECT COUNT(*) FROM everses e WHERE e.tr=? AND $where", args) { it.getInt(0) }.first()
+        val hits = query(
+            "SELECT v.id, v.book, b.name_ar, b.name_en, v.ch, v.v, e.text FROM everses e JOIN verses v ON v.id=e.verse_id " +
+                "JOIN books b ON b.id=v.book WHERE e.tr=? AND $where ORDER BY v.id LIMIT $limit",
+            args,
+        ) { SearchHit(it.getLong(0), it.getInt(1), if (ArText.english) it.getString(3) else it.getString(2), it.getInt(4), it.getInt(5), it.getString(6)) }
+        Pair(hits, total)
+    }
+
     /** Every Van Dyke verse where the lemma occurs, with the aligned Arabic units marked. */
-    suspend fun concordance(dstrong: String, limit: Int = 3000): Pair<List<ConcHit>, Set<Long>> = withContext(Dispatchers.IO) {
+    suspend fun concordance(dstrong: String, englishTr: String? = null, limit: Int = 3000): Pair<List<ConcHit>, Set<Long>> = withContext(Dispatchers.IO) {
         val verseIds = query(
             "SELECT DISTINCT vd_verse FROM owords WHERE dstrong=? AND vd_verse IS NOT NULL ORDER BY vd_verse LIMIT $limit",
             arrayOf(dstrong),
@@ -204,15 +266,18 @@ object Db {
         ) { it.getLong(0) }.toSet()
         val idList = verseIds.joinToString(",")
         val head = HashMap<Long, ConcHit>()
-        query("SELECT v.id, v.book, b.name_ar, v.ch, v.v FROM verses v JOIN books b ON b.id=v.book WHERE v.id IN ($idList)") {
-            head[it.getLong(0)] = ConcHit(it.getLong(0), it.getInt(1), it.getString(2), it.getInt(3), it.getInt(4), emptyList())
+        query("SELECT v.id, v.book, b.name_ar, v.ch, v.v, b.name_en FROM verses v JOIN books b ON b.id=v.book WHERE v.id IN ($idList)") {
+            head[it.getLong(0)] = ConcHit(
+                it.getLong(0), it.getInt(1), if (ArText.english) it.getString(5) else it.getString(2), it.getInt(3), it.getInt(4), emptyList(),
+            )
         }
         val toks = HashMap<Long, MutableList<Token>>()
         query("SELECT verse_id, id, text, strongs FROM tokens WHERE verse_id IN ($idList) ORDER BY verse_id, idx") {
             toks.getOrPut(it.getLong(0)) { ArrayList() }.add(Token(it.getLong(1), it.getString(2), !it.isNull(3) && it.getString(3) != "-"))
         }
+        val eng = if (englishTr != null) englishVerses(englishTr, verseIds) else emptyMap()
         val hits = verseIds.mapNotNull { id ->
-            head[id]?.copy(tokens = toks[id] ?: emptyList())
+            head[id]?.copy(tokens = toks[id] ?: emptyList(), english = eng[id])
         }
         Pair(hits, marked)
     }
@@ -227,9 +292,9 @@ object Db {
         if (words.isEmpty()) return@withContext emptyList()
         val where = words.joinToString(" AND ") { "v.plain LIKE ?" }
         query(
-            "SELECT v.id, v.book, b.name_ar, v.ch, v.v, v.text FROM verses v JOIN books b ON b.id=v.book WHERE $where ORDER BY v.id LIMIT $limit",
+            "SELECT v.id, v.book, b.name_ar, v.ch, v.v, v.text, b.name_en FROM verses v JOIN books b ON b.id=v.book WHERE $where ORDER BY v.id LIMIT $limit",
             words.map { "%$it%" }.toTypedArray(),
-        ) { SearchHit(it.getLong(0), it.getInt(1), it.getString(2), it.getInt(3), it.getInt(4), it.getString(5)) }
+        ) { SearchHit(it.getLong(0), it.getInt(1), if (ArText.english) it.getString(6) else it.getString(2), it.getInt(3), it.getInt(4), it.getString(5)) }
     }
 
     suspend fun countArabic(q: String): Int = withContext(Dispatchers.IO) {

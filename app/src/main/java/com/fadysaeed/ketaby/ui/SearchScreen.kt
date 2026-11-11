@@ -46,9 +46,13 @@ import com.fadysaeed.ketaby.data.Db
 import com.fadysaeed.ketaby.data.Lemma
 import com.fadysaeed.ketaby.data.SearchHit
 import kotlinx.coroutines.launch
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.style.TextDirection
 
 private val strongRe = Regex("^\\s*([HhGg])\\s*0*(\\d{1,4})([A-Za-z]?)\\s*$")
 private val arabicRe = Regex("[\\u0621-\\u064A]")
+private val latinRe = Regex("^[A-Za-z0-9 ,.;:'\"!?-]+$")
 
 /** Lemmas matching a Strong's number, a Hebrew/Greek word, an English gloss or an Arabic transliteration. */
 private fun matchLemmas(all: List<Lemma>, q: String): List<Lemma> {
@@ -75,6 +79,8 @@ fun SearchScreen(nav: Nav) {
     var query by rememberSaveable { mutableStateOf("") }
     var tab by rememberSaveable { mutableIntStateOf(0) }
     var verses by remember { mutableStateOf<List<SearchHit>?>(null) }
+    var versesEnglish by remember { mutableStateOf(false) }
+    val prefs = LocalPrefs.current
     var total by remember { mutableIntStateOf(0) }
     var lemmas by remember { mutableStateOf<List<Lemma>?>(null) }
     val scope = rememberCoroutineScope()
@@ -86,13 +92,20 @@ fun SearchScreen(nav: Nav) {
         scope.launch {
             val arabic = arabicRe.containsMatchIn(q)
             lemmas = matchLemmas(Db.allLemmas(), q)
-            if (arabic) {
-                verses = Db.searchArabic(q)
-                total = Db.countArabic(q)
-                tab = 0
-            } else {
-                verses = emptyList(); total = 0
-                tab = 1
+            when {
+                arabic -> {
+                    verses = Db.searchArabic(q); total = Db.countArabic(q); versesEnglish = false
+                    tab = 0
+                }
+                latinRe.matches(q) && strongRe.find(q) == null -> {
+                    val (hits, n) = Db.searchEnglish(prefs.english, q)
+                    verses = hits; total = n; versesEnglish = true
+                    tab = if (n > 0) 0 else 1
+                }
+                else -> {
+                    verses = emptyList(); total = 0
+                    tab = 1
+                }
             }
         }
     }
@@ -101,14 +114,14 @@ fun SearchScreen(nav: Nav) {
 
     Scaffold(
         containerColor = Color.Black,
-        topBar = { KTopBar("بحث", onBack = { nav.pop() }) },
+        topBar = { KTopBar(t("بحث", "بحث", "Search"), onBack = { nav.pop() }) },
     ) { pad ->
         Column(Modifier.padding(pad).fillMaxSize()) {
             OutlinedTextField(
                 value = query,
                 onValueChange = { query = it },
                 singleLine = true,
-                placeholder = { Text("كلمة عربي، أو H430، أو λόγος", color = Muted) },
+                placeholder = { Text(t("كلمة عربي أو إنجليزي، أو H430، أو λόγος", "كلمة عربية أو إنجليزية، أو H430، أو λόγος", "Arabic or English word, H430, or λόγος"), color = Muted) },
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                 keyboardActions = KeyboardActions(onSearch = { run() }),
                 colors = OutlinedTextFieldDefaults.colors(
@@ -119,10 +132,10 @@ fun SearchScreen(nav: Nav) {
             )
             TabRow(selectedTabIndex = tab, containerColor = Color.Black, contentColor = Gold) {
                 Tab(selected = tab == 0, onClick = { tab = 0 }, text = {
-                    Text("الآيات" + (verses?.let { " (${ArText.num(total)})" } ?: ""))
+                    Text(t("الآيات", "الآيات", "Verses") + (verses?.let { " (${ArText.num(total)})" } ?: ""))
                 })
                 Tab(selected = tab == 1, onClick = { tab = 1 }, text = {
-                    Text("الكلمات الأصلية" + (lemmas?.let { " (${ArText.num(it.size)})" } ?: ""))
+                    Text(t("الكلمات الأصلية", "الكلمات الأصلية", "Original words") + (lemmas?.let { " (${ArText.num(it.size)})" } ?: ""))
                 })
             }
             LazyColumn(
@@ -132,9 +145,25 @@ fun SearchScreen(nav: Nav) {
             ) {
                 if (tab == 0) {
                     val vs = verses
-                    if (vs != null && vs.isEmpty()) item { Text("مفيش آيات؛ البحث بالعربي بيدوّر في نص فاندايك من غير تشكيل.", color = Muted) }
+                    if (vs != null && vs.isEmpty()) item {
+                        Text(
+                            t(
+                                "مفيش آيات؛ البحث بالعربي بيدوّر في فاندايك من غير تشكيل، وبالإنجليزي في ${englishName(prefs.english)}.",
+                                "لا توجد آيات؛ البحث بالعربية في فاندايك دون تشكيل، وبالإنجليزية في ${englishName(prefs.english)}.",
+                                "No verses. Arabic searches Van Dyke (without vowels); English searches ${englishName(prefs.english)}.",
+                            ),
+                            color = Muted,
+                        )
+                    }
                     if (vs != null && total > vs.size) item {
-                        Text("بنعرض أول ${ArText.num(vs.size)} آية؛ ضيّق البحث بكلمة زيادة.", color = Muted, fontSize = 12.sp)
+                        Text(
+                            t(
+                                "بنعرض أول ${ArText.num(vs.size)} آية؛ ضيّق البحث بكلمة زيادة.",
+                                "تُعرض أول ${ArText.num(vs.size)} آية؛ أضف كلمة لتضييق البحث.",
+                                "Showing the first ${vs.size} verses; add a word to narrow the search.",
+                            ),
+                            color = Muted, fontSize = 12.sp,
+                        )
                     }
                     items(vs.orEmpty(), key = { it.verseId }) { h ->
                         Column(
@@ -142,12 +171,22 @@ fun SearchScreen(nav: Nav) {
                                 .clickable { nav.push(Screen.Reader(h.book, h.ch, h.v)) }.padding(12.dp),
                         ) {
                             Text("${h.bookName} ${ArText.num(h.ch)}:${ArText.num(h.v)}", color = Gold, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
-                            Text(h.text, fontFamily = scriptureFamily(), fontSize = 18.sp, color = Ink, lineHeight = 32.sp)
+                            if (versesEnglish) {
+                                Text(
+                                    h.text, fontFamily = FontFamily.Serif, fontSize = 17.sp, color = Ink, lineHeight = 26.sp,
+                                    modifier = Modifier.fillMaxWidth(), style = TextStyle(textDirection = TextDirection.Ltr),
+                                )
+                            } else {
+                                Text(
+                                    h.text, fontFamily = scriptureFamily(), fontSize = 18.sp, color = Ink, lineHeight = 32.sp,
+                                    modifier = Modifier.fillMaxWidth(), style = TextStyle(textDirection = TextDirection.Rtl),
+                                )
+                            }
                         }
                     }
                 } else {
                     val ls = lemmas
-                    if (ls != null && ls.isEmpty()) item { Text("مفيش كلمات مطابقة.", color = Muted) }
+                    if (ls != null && ls.isEmpty()) item { Text(t("مفيش كلمات مطابقة.", "لا توجد كلمات مطابقة.", "No matching words."), color = Muted) }
                     items(ls.orEmpty(), key = { it.dstrong }) { l ->
                         val greek = l.lang == "grc"
                         Row(
@@ -160,7 +199,7 @@ fun SearchScreen(nav: Nav) {
                             Column(Modifier.weight(1f)) {
                                 Text(
                                     if (greek) listOfNotNull(l.tr, l.tr2).distinct().joinToString(" / ") else (l.tr ?: ""),
-                                    color = Teal, fontSize = 15.sp,
+                                    color = Teal, fontSize = 15.sp, style = TextStyle(textDirection = TextDirection.Rtl),
                                 )
                                 Text((l.gloss ?: "") + " · " + l.dstrong, color = Muted, fontSize = 12.sp, maxLines = 1)
                             }

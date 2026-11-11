@@ -31,14 +31,19 @@ import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.ConcHit
 import com.fadysaeed.ketaby.data.Db
 import com.fadysaeed.ketaby.data.Lemma
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextDirection
 
 @Composable
 fun ConcordanceScreen(nav: Nav, dstrong: String) {
     val lemma by produceState<Lemma?>(null, dstrong) { value = Db.lemma(dstrong) }
-    val result by produceState<Pair<List<ConcHit>, Set<Long>>?>(null, dstrong) { value = Db.concordance(dstrong) }
+    val prefs = LocalPrefs.current
+    val englishTr = if (prefs.readerMode != 0) prefs.english else null
+    val result by produceState<Pair<List<ConcHit>, Set<Long>>?>(null, dstrong, englishTr) { value = Db.concordance(dstrong, englishTr) }
+    val lemmaWords by produceState<Set<Long>>(emptySet(), dstrong) { value = Db.wordIdsForLemma(dstrong) }
     Scaffold(
         containerColor = Color.Black,
-        topBar = { KTopBar("كل المواضع", onBack = { nav.pop() }) { SearchSettingsActions(nav) } },
+        topBar = { KTopBar(t("كل المواضع", "كل المواضع", "All occurrences"), onBack = { nav.pop() }) { SearchSettingsActions(nav) } },
     ) { pad ->
         val r = result
         LazyColumn(
@@ -56,24 +61,29 @@ fun ConcordanceScreen(nav: Nav, dstrong: String) {
                             Spacer(Modifier.width(12.dp))
                             Text(
                                 if (greek) listOfNotNull(l.tr, l.tr2).distinct().joinToString(" / ") else (l.tr ?: ""),
-                                color = Teal, fontSize = 16.sp,
+                                color = Teal, fontSize = 16.sp, style = TextStyle(textDirection = TextDirection.Rtl),
                             )
                         }
-                        if (!l.gloss.isNullOrBlank()) Text(l.gloss, color = Muted, fontSize = 13.sp)
+                        if (!l.gloss.isNullOrBlank()) Text(l.gloss, color = Muted, fontSize = 13.sp, style = TextStyle(textDirection = TextDirection.Ltr))
                         val shown = r?.first?.size
                         Text(
-                            "اتذكرت ${ArText.times(l.count)}" + (shown?.let { " في ${ArText.num(it)} آية في فاندايك" } ?: ""),
+                            t("اتذكرت", "وردت", "Occurs") + " ${ArText.times(l.count)}" +
+                                (shown?.let { t(" في ${ArText.num(it)} آية في فاندايك", " في ${ArText.num(it)} آية في فاندايك", " in $it Van Dyke verses") } ?: ""),
                             color = Ink, fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp),
                         )
                         if (greek) Text(
-                            "العدد بيشمل كل النسخ اليوناني، ومنها كلمات النص المستلم اللي مش في النص النقدي.",
+                            t(
+                                "العدد بيشمل كل النسخ اليوناني، ومنها كلمات النص المستلم اللي مش في النص النقدي.",
+                                "يشمل العدد كل النسخ اليونانية، ومنها كلمات النص المستلم غير الموجودة في النص النقدي.",
+                                "The count covers all Greek editions, including Textus Receptus words absent from the critical text.",
+                            ),
                             color = Muted, fontSize = 11.sp,
                         )
                     }
                 }
             }
             if (r == null) {
-                item { Box(Modifier.fillMaxWidth().padding(24.dp)) { Text("بندوّر…", color = Muted) } }
+                item { Box(Modifier.fillMaxWidth().padding(24.dp)) { Text(t("بندوّر…", "جارٍ البحث…", "Searching…"), color = Muted) } }
             } else {
                 items(r.first, key = { it.verseId }) { hit ->
                     Column(
@@ -85,7 +95,14 @@ fun ConcordanceScreen(nav: Nav, dstrong: String) {
                             "${hit.bookName} ${ArText.num(hit.ch)}:${ArText.num(hit.v)}",
                             color = Gold, fontSize = 13.sp, fontWeight = FontWeight.SemiBold,
                         )
-                        VerseText(null, hit.tokens, marked = r.second) { nav.push(Screen.Reader(hit.book, hit.ch, hit.v)) }
+                        if (prefs.readerMode != 2) {
+                            VerseText(null, hit.tokens, marked = r.second) { nav.push(Screen.Reader(hit.book, hit.ch, hit.v)) }
+                        }
+                        hit.english?.let { ev ->
+                            EnglishVerseText(null, ev, markedWords = lemmaWords, dim = prefs.readerMode == 1) { _, _, _ ->
+                                nav.push(Screen.Reader(hit.book, hit.ch, hit.v))
+                            }
+                        }
                     }
                 }
             }

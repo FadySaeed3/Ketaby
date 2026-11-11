@@ -10,6 +10,9 @@ Tables
                                                         original words (TAHOT/TAGNT), oc/ov = original numbering
   links(token_id, oword_id)                             Arabic unit -> original word(s)
   lemmas(dstrong, lang, lemma, tr, tr2, gloss, count, halot, halot_page, halot_y, bdag, bdag_page, bdag_y)
+  everses(tr, verse_id, text, spans, plain)             English verse (tr = 'kjv' | 'bsb') on Van Dyke verse ids;
+                                                        spans = "start,end,oword.oword;..." (character offsets
+                                                        of the parts of `text` tied to original words)
   meta(key, value)
 
 Usage: python3 build_db.py out.db
@@ -18,11 +21,13 @@ import glob, json, os, re, sqlite3, sys, unicodedata, collections, html
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from books import BOOKS, STEP2ID, OSIS2ID
 from translit import hebrew_to_arabic, greek_academic, greek_modern
+import english
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DL = os.path.join(HERE, 'downloads', 'STEPBible-Data')
 ARA = os.path.join(DL, 'Tagged-Bibles', 'Arabic Bibles')
 TA = os.path.join(DL, 'Translators Amalgamated OT+NT')
+ENG = os.path.join(HERE, 'downloads', 'english')
 IDX = os.path.join(HERE, '..', 'content', 'indexes')
 
 REF = re.compile(r'((?:[1-3][A-Z][a-z]|[A-Z][a-z]{2}))\.(\d+)\.(\d+)(?:[({](\d+)\.(\d+)[)}])?#(\d+)=(\S*)')
@@ -32,7 +37,7 @@ def schema(db):
     db.executescript('''
     PRAGMA journal_mode=OFF; PRAGMA synchronous=OFF;
     CREATE TABLE meta(key TEXT PRIMARY KEY, value TEXT);
-    CREATE TABLE books(id INTEGER PRIMARY KEY, code TEXT, osis TEXT, name_ar TEXT, testament TEXT, chapters INTEGER);
+    CREATE TABLE books(id INTEGER PRIMARY KEY, code TEXT, osis TEXT, name_ar TEXT, testament TEXT, chapters INTEGER, name_en TEXT);
     CREATE TABLE verses(id INTEGER PRIMARY KEY, book INTEGER, ch INTEGER, v INTEGER, text TEXT, plain TEXT);
     CREATE TABLE cards(strong TEXT, kind TEXT, json TEXT);
     CREATE TABLE tokens(id INTEGER PRIMARY KEY, verse_id INTEGER, idx INTEGER, text TEXT, strongs TEXT);
@@ -40,6 +45,7 @@ def schema(db):
         wno INTEGER, text TEXT, tr TEXT, tr2 TEXT, gloss TEXT, dstrong TEXT, dstrongs TEXT, grammar TEXT, editions TEXT,
         vd_verse INTEGER);
     CREATE TABLE links(token_id INTEGER, oword_id INTEGER);
+    CREATE TABLE everses(tr TEXT, verse_id INTEGER, text TEXT, spans TEXT, plain TEXT, PRIMARY KEY(tr, verse_id)) WITHOUT ROWID;
     CREATE TABLE lemmas(dstrong TEXT PRIMARY KEY, lang TEXT, lemma TEXT, tr TEXT, tr2 TEXT, gloss TEXT, count INTEGER,
         halot TEXT, halot_page INTEGER, halot_y REAL, bdag TEXT, bdag_page INTEGER, bdag_y REAL);
     ''')
@@ -50,6 +56,44 @@ def plain_ar(s):
     s = re.sub(r'[\u064b-\u065f\u0670\u0640]', '', s)
     s = re.sub('[أإآٱ]', 'ا', s).replace('ى', 'ي').replace('ة', 'ه')
     return re.sub(r'[^\u0621-\u064a ]', ' ', s)
+
+
+def load_english(db):
+    """KJV and BSB, each segment linked to the original words of the same Van Dyke verse."""
+    vid = {(b, c, v): i for i, b, c, v in db.execute('SELECT id, book, ch, v FROM verses')}
+    ow = collections.defaultdict(list)
+    for row in db.execute('SELECT vd_verse, id, lang, dstrong, dstrongs, editions FROM owords '
+                          'WHERE vd_verse IS NOT NULL ORDER BY id'):
+        ow[row[0]].append(row[1:])
+    stats = {}
+    for tr, loader, path, ed in (('kjv', english.load_kjv, os.path.join(ENG, 'eng-kjv_usfm.zip'), 'K'),
+                                 ('bsb', english.load_bsb, os.path.join(ENG, 'bsb_tables.tsv.gz'), 'N')):
+        verses = loader(path)
+        rows = []
+        missing = 0
+        seg_linked = seg_tagged = 0
+        for key in sorted(verses):
+            v = vid.get(key)
+            if v is None:
+                missing += 1
+                continue
+            segs = verses[key]
+            links = english.link_verse(segs, ow.get(v, []), ed)
+            pos = 0
+            spans = []
+            for (t, st), ids in zip(segs, links):
+                if ids:
+                    spans.append('%d,%d,%s' % (pos, pos + len(t), '.'.join(map(str, ids))))
+                if st:
+                    seg_tagged += 1
+                    seg_linked += 1 if ids else 0
+                pos += len(t)
+            text = ''.join(t for t, _ in segs)
+            rows.append((tr, v, text, ';'.join(spans), english.plain_en(text)))
+        db.executemany('INSERT INTO everses VALUES (?,?,?,?,?)', rows)
+        stats[tr] = {'verses': len(rows), 'not_in_van_dyke': missing, 'tagged_segments': seg_tagged,
+                     'linked_segments': seg_linked}
+    return stats
 
 
 def load_cards(db):
@@ -238,11 +282,13 @@ def main(out):
     lstats = load_links(db, vid, key2id)
     hfile, bfile = load_lemmas(db, lem, count)
     ncards = load_cards(db)
+    estats = load_english(db)
     chap = collections.Counter()
     for b, c in db.execute('SELECT book, MAX(ch) FROM verses GROUP BY book'):
         chap[b] = c
-    db.executemany('INSERT INTO books VALUES (?,?,?,?,?,?)',
-                   [(i + 1, s, o, n, t, chap[i + 1]) for i, (s, o, n, t) in enumerate(BOOKS)])
+    en_names = [('Psalms' if n == 'Psalm' else n) for n in english.BSB_BOOKS]
+    db.executemany('INSERT INTO books VALUES (?,?,?,?,?,?,?)',
+                   [(i + 1, s, o, n, t, chap[i + 1], en_names[i]) for i, (s, o, n, t) in enumerate(BOOKS)])
     db.executescript('''
     CREATE INDEX i_verses ON verses(book, ch, v);
     CREATE INDEX i_cards ON cards(strong);
@@ -255,7 +301,8 @@ def main(out):
     meta = {
         'built_from': 'STEPBible-Data 5de0a47 (AraSVD 7.0.1, TAHOT, TAGNT, Translation Tags)',
         'halot_sha256': hfile['sha256'], 'bdag_sha256': bfile['sha256'],
-        'licence': 'Texts and tags CC BY / CC BY-SA 4.0 (STEPBible.org, Arabic Bible Outreach Ministry)',
+        'licence': 'Texts and tags CC BY / CC BY-SA 4.0 (STEPBible.org, Arabic Bible Outreach Ministry); '
+                   'KJV (eBible.org, public domain outside the UK); BSB and its translation tables (public domain)',
     }
     db.executemany('INSERT INTO meta VALUES (?,?)', meta.items())
     db.commit()
@@ -273,6 +320,7 @@ def main(out):
         'lemmas_with_halot': q("SELECT COUNT(*) FROM lemmas WHERE halot IS NOT NULL"),
         'lemmas_with_bdag': q("SELECT COUNT(*) FROM lemmas WHERE bdag IS NOT NULL"),
         **{'links_' + k: v for k, v in lstats.items()},
+        **{tr + '_' + k: v for tr, d in estats.items() for k, v in d.items()},
     }
     db.execute('VACUUM')
     db.close()
@@ -281,6 +329,7 @@ def main(out):
         f.write(str(os.path.getsize(out)))
     print(json.dumps(checks, ensure_ascii=False, indent=1))
     assert checks['verses'] == 31102, 'Van Dyke must have 31,102 verses'
+    assert checks['kjv_verses'] > 31000 and checks['bsb_verses'] > 30900, 'English Bibles incomplete'
     return checks
 
 

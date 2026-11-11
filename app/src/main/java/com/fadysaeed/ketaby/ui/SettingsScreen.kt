@@ -28,6 +28,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.fadysaeed.ketaby.data.EVerse
+import com.fadysaeed.ketaby.data.Span
 import com.fadysaeed.ketaby.data.Token
 
 @Composable
@@ -64,38 +66,98 @@ private fun Toggle(label: String, hint: String?, value: Boolean, onChange: (Bool
 @Composable
 fun SettingsScreen(nav: Nav) {
     val p = LocalPrefs.current
-    Scaffold(containerColor = Color.Black, topBar = { KTopBar("الإعدادات", onBack = { nav.pop() }) }) { pad ->
+    Scaffold(containerColor = Color.Black, topBar = { KTopBar(t("الإعدادات", "الإعدادات", "Settings"), onBack = { nav.pop() }) }) { pad ->
         Column(Modifier.padding(pad).fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp)) {
-            Section("حجم الخط") {
+            Section(t("لغة التطبيق", "لغة الواجهة", "App language")) {
+                Choice("مصري", p.uiLang == "eg") { p.putUiLang("eg") }
+                Choice("العربية الفصحى", p.uiLang == "msa") { p.putUiLang("msa") }
+                Choice("English", p.uiLang == "en") { p.putUiLang("en") }
+            }
+            Section(t("لغة الشرح", "لغة الشروح", "Explanation language")) {
+                Text(
+                    t(
+                        "دي اللغة اللي هتظهر بيها كروت الكلمات النادرة والتحليل والقاموس.",
+                        "هي لغة كروت الكلمات النادرة والتحليل الصرفي والمعجم.",
+                        "Used for rare-word notes, parsing and the dictionary.",
+                    ),
+                    color = Muted, fontSize = 12.sp,
+                )
+                Choice("مصري", p.explainLang == "eg") { p.putExplainLang("eg") }
+                Choice("العربية الفصحى", p.explainLang == "msa") { p.putExplainLang("msa") }
+                Choice("English", p.explainLang == "en") { p.putExplainLang("en") }
+                Choice(t("التلاتة ورا بعض", "الثلاث معًا", "All three"), p.explainLang == "all") { p.putExplainLang("all") }
+            }
+            Section(t("الترجمة الإنجليزي", "الترجمة الإنجليزية", "English Bible")) {
+                Choice(t("KJV · الملك جيمس (١٦١١)", "KJV · ترجمة الملك جيمس (١٦١١)", "KJV · King James Version (1611)"), p.english == "kjv") { p.putEnglish("kjv") }
+                Choice(t("BSB · بيريان الحديثة (٢٠٢٢)", "BSB · ترجمة بيريان الحديثة (٢٠٢٢)", "BSB · Berean Standard Bible (2022)"), p.english == "bsb") { p.putEnglish("bsb") }
+                Spacer(Modifier.height(6.dp))
+                Choice(t("فاندايك بس", "فاندايك فقط", "Van Dyke only"), p.readerMode == 0) { p.putReaderMode(0) }
+                Choice(t("فاندايك وتحته الإنجليزي", "فاندايك وتحته الإنجليزية", "Van Dyke with English"), p.readerMode == 1) { p.putReaderMode(1) }
+                Choice(t("الإنجليزي بس", "الإنجليزية فقط", "English only"), p.readerMode == 2) { p.putReaderMode(2) }
+                Text(
+                    t(
+                        "الـ KJV والفاندايك الاتنين من النص المستلم، والـ BSB من النص النقدي الحديث، فهتلاقي فرق في كام آية زي يوحنا الأولى ٥:٧.",
+                        "ترجمتا KJV وفاندايك عن النص المستلم، وBSB عن النص النقدي الحديث، فتختلف في آيات قليلة مثل يوحنا الأولى ٥:٧.",
+                        "KJV and Van Dyke follow the Textus Receptus; BSB follows the modern critical text, so a few verses differ (e.g. 1 John 5:7).",
+                    ),
+                    color = Muted, fontSize = 12.sp,
+                )
+            }
+            Section(t("حجم الخط", "حجم الخط", "Text size")) {
                 Slider(
                     value = p.textScale, onValueChange = { p.putTextScale(it) }, valueRange = 0.8f..1.7f, steps = 8,
                     colors = SliderDefaults.colors(thumbColor = Gold, activeTrackColor = Gold),
                 )
                 VerseText(1, listOf(Token(-1, "فِي الْبَدْءِ كَانَ الْكَلِمَةُ، وَالْكَلِمَةُ كَانَ عِنْدَ اللهِ.", false))) {}
+                val en = "In the beginning was the Word, and the Word was with God."
+                EnglishVerseText(1, EVerse(-1, en, emptyList<Span>())) { _, _, _ -> }
             }
-            Section("خط الكتاب") {
-                Choice("نسخ (كلاسيكي)", p.scriptureFont == "naskh") { p.putScriptureFont("naskh") }
-                Choice("بلكس (حديث)", p.scriptureFont == "plex") { p.putScriptureFont("plex") }
+            Section(t("خط الكتاب", "خط النص", "Arabic Bible font")) {
+                Choice(t("نسخ (كلاسيكي)", "نسخ (كلاسيكي)", "Naskh (classic)"), p.scriptureFont == "naskh") { p.putScriptureFont("naskh") }
+                Choice(t("بلكس (حديث)", "بلكس (حديث)", "Plex (modern)"), p.scriptureFont == "plex") { p.putScriptureFont("plex") }
             }
-            Section("العربي") {
-                Toggle("التشكيل", "إظهار الحركات في نص فاندايك", p.harakat) { p.putHarakat(it) }
+            Section(t("العربي", "العربية", "Arabic")) {
+                Toggle(t("التشكيل", "التشكيل", "Vowel marks"), t("إظهار الحركات في نص فاندايك", "إظهار الحركات في نص فاندايك", "Show harakat in Van Dyke"), p.harakat) { p.putHarakat(it) }
             }
-            Section("العبري") {
-                Toggle("علامات الترنيم", "علامات التنغيم (الطعاميم) فوق وتحت الحروف؛ النقط بتفضل ظاهرة دايمًا", p.cantillation) { p.putCantillation(it) }
+            Section(t("العبري", "العبرية", "Hebrew")) {
+                Toggle(
+                    t("علامات الترنيم", "علامات الترنيم", "Cantillation marks"),
+                    t(
+                        "علامات التنغيم (الطعاميم) فوق وتحت الحروف؛ النقط بتفضل ظاهرة دايمًا",
+                        "علامات التنغيم (الطعاميم) فوق الحروف وتحتها؛ تبقى الحركات ظاهرة دائمًا",
+                        "Accents above and below the letters; vowel points always stay",
+                    ),
+                    p.cantillation,
+                ) { p.putCantillation(it) }
             }
-            Section("نطق اليوناني") {
-                Choice("الاتنين جنب بعض", p.greekMode == 0) { p.putGreekMode(0) }
-                Choice("الأكاديمي بس (إيراسموس)", p.greekMode == 1) { p.putGreekMode(1) }
-                Choice("الحديث بس (زي الكنيسة)", p.greekMode == 2) { p.putGreekMode(2) }
+            Section(t("نطق اليوناني", "نطق اليونانية", "Greek reading")) {
+                Choice(t("الاتنين جنب بعض", "الاثنان معًا", "Both"), p.greekMode == 0) { p.putGreekMode(0) }
+                Choice(t("الأكاديمي بس (إيراسموس)", "الأكاديمي فقط (إيراسموس)", "Academic only (Erasmian)"), p.greekMode == 1) { p.putGreekMode(1) }
+                Choice(t("الحديث بس (زي الكنيسة)", "الحديث فقط (كما في الكنيسة)", "Modern only (as in church)"), p.greekMode == 2) { p.putGreekMode(2) }
             }
-            Section("المصادر") {
-                Text(
-                    "نص فاندايك المشكَّل والمربوط بأرقام سترونج: سامي عبد الملك وArabic Bible Outreach Ministry، رخصة CC BY-SA 4.0.\n\n" +
-                        "النص العبري واليوناني والتحليل والربط بين العربي والأصل: STEPBible.org (Tyndale House)، رخصة CC BY 4.0.\n\n" +
-                        "المعاني الإنجليزي اللي في اللوحة مؤقتة من STEPBible لحد ما القاموس العربي يخلص.\n\n" +
-                        "كروت الكلمات النادرة مكتوبة بالعربي بعد مراجعة هالوت، ومكتوب على كل كارت اتراجع ولا لأ. التطبيق مفيهوش أي نص من هالوت أو باور.\n\n" +
-                        "الخطوط: IBM Plex Sans Arabic وNoto Naskh Arabic وNoto Serif Hebrew وNoto Serif، رخصة OFL.",
-                    color = Ink, fontSize = 13.sp, lineHeight = 22.sp,
+            Section(t("المصادر", "المصادر", "Sources")) {
+                ExplainText(
+                    t(
+                        "نص فاندايك المشكَّل والمربوط بأرقام سترونج: سامي عبد الملك وArabic Bible Outreach Ministry، رخصة CC BY-SA 4.0.\n\n" +
+                            "النص العبري واليوناني والتحليل والربط بين العربي والأصل: STEPBible.org (Tyndale House)، رخصة CC BY 4.0.\n\n" +
+                            "الـ KJV بأرقام سترونج من eBible.org، والـ BSB وجداول ربطها بالأصل من Berean Bible، والاتنين ملكية عامة.\n\n" +
+                            "المعاني الإنجليزي اللي في اللوحة مؤقتة من STEPBible لحد ما القاموس يخلص.\n\n" +
+                            "كروت الكلمات النادرة مكتوبة بعد مراجعة هالوت، ومكتوب على كل كارت اتراجع ولا لأ. التطبيق مفيهوش أي نص من هالوت أو باور.\n\n" +
+                            "الخطوط: IBM Plex Sans Arabic وNoto Naskh Arabic وNoto Serif Hebrew وNoto Serif، رخصة OFL.",
+                        "نص فاندايك المشكّل والمرتبط بأرقام سترونج: سامي عبد الملك وArabic Bible Outreach Ministry، برخصة CC BY-SA 4.0.\n\n" +
+                            "النص العبري واليوناني والتحليل الصرفي والربط بين العربية والأصل: STEPBible.org (Tyndale House)، برخصة CC BY 4.0.\n\n" +
+                            "ترجمة KJV بأرقام سترونج من eBible.org، وترجمة BSB وجداول ربطها بالأصل من Berean Bible، وكلتاهما ملكية عامة.\n\n" +
+                            "المعاني الإنجليزية في اللوحة مؤقتة من STEPBible إلى أن يكتمل المعجم.\n\n" +
+                            "كُتبت كروت الكلمات النادرة بعد مراجعة HALOT، ويُذكر على كل كارت هل رُوجع أم لا. لا يحتوي التطبيق على أي نص من HALOT أو BDAG.\n\n" +
+                            "الخطوط: IBM Plex Sans Arabic وNoto Naskh Arabic وNoto Serif Hebrew وNoto Serif، برخصة OFL.",
+                        "Van Dyke text with vowels and Strong's tagging: Sami Abdel Malik and Arabic Bible Outreach Ministry, CC BY-SA 4.0.\n\n" +
+                            "Hebrew and Greek texts, morphology and the Arabic-to-original alignment: STEPBible.org (Tyndale House), CC BY 4.0.\n\n" +
+                            "KJV with Strong's numbers from eBible.org; BSB and its translation tables from the Berean Bible; both public domain.\n\n" +
+                            "English meanings in the word panel are temporary STEPBible glosses until the dictionary is finished.\n\n" +
+                            "Rare-word notes were written after checking HALOT, and each note says whether it was checked. The app contains no text from HALOT or BDAG.\n\n" +
+                            "Fonts: IBM Plex Sans Arabic, Noto Naskh Arabic, Noto Serif Hebrew and Noto Serif, OFL.",
+                    ),
+                    if (com.fadysaeed.ketaby.data.ArText.english) "en" else "ar", size = 13,
                 )
             }
         }

@@ -176,6 +176,20 @@ shot 17_greek_open_lexicons
 adb shell input swipe 540 2000 540 700 400; sleep 2
 shot 18_greek_open_lexicons_more
 
+# concordance -> verse: which verses are on screen after opening each hit (Van Dyke + BSB + interlinear at this point)
+adb logcat -c
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong conc:G3056
+sleep 10
+shot 19_concordance_logos
+for ref in 'Matthew 5:37$' 'Matthew 7:28$' 'Matthew 8:8$'; do
+  tap_text "^$ref" center
+  sleep 6
+  shot "20_open_${ref//[^0-9]/_}"
+  adb shell input keyevent KEYCODE_BACK; sleep 3
+done
+echo "=====READER LOG"
+adb logcat -d -s KetabyReader:D | tail -80
+
 echo "=====LOGCAT"
 adb logcat -d -s AndroidRuntime:E $PKG:* System.err:W | tail -200
 adb shell pidof $PKG && echo "APP ALIVE" || echo "APP DEAD"

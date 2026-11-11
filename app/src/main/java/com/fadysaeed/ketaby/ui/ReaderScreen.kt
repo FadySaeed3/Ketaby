@@ -232,6 +232,15 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
             .collect { prefs.savePosition(screen.book, screen.ch, it) }
     }
     LaunchedEffect(screen) { prefs.savePosition(screen.book, screen.ch, startIndex) }
+    // diagnostics for the smoke test: which verses are on screen right after opening at a verse
+    LaunchedEffect(screen, verses) {
+        val vs = verses ?: return@LaunchedEffect
+        if (screen.verse <= 0) return@LaunchedEffect
+        val t0 = System.currentTimeMillis()
+        snapshotFlow { listState.layoutInfo.visibleItemsInfo.map { vs.getOrNull(it.index)?.v } }
+            .distinctUntilChanged()
+            .collect { if (System.currentTimeMillis() - t0 < 10_000) android.util.Log.d("KetabyReader", "target=${screen.verse} t=${System.currentTimeMillis() - t0} visible=$it") }
+    }
     LaunchedEffect(screen.book, screen.ch) { prefs.pushRecent(screen.book, screen.ch) }
 
     fun go(delta: Int) {

@@ -124,7 +124,10 @@ private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
     var sheet by remember { mutableStateOf<SheetRequest?>(null) }
     LaunchedEffect(sheetStrong) {
         val lexStart = sheetStrong?.let { Regex("lex:(halot|bdag):(\\d+)").matchEntire(it) }
-        if (lexStart != null) {
+        if (sheetStrong?.startsWith("conc:") == true) {
+            // "conc:G3056" opens the concordance of a lemma (emulator smoke test)
+            nav.push(Screen.Concordance(sheetStrong.removePrefix("conc:")))
+        } else if (lexStart != null) {
             // "lex:halot:1200" opens the lexicon viewer on a page (emulator smoke test)
             nav.push(Screen.Lex(lexStart.groupValues[1], lexStart.groupValues[2].toInt(), 120f, null))
         } else if (sheetStrong != null) {

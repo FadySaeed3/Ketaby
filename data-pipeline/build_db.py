@@ -129,15 +129,21 @@ def load_dict(db):
 
 
 def load_renderings(db):
-    """For every lemma, the Arabic words Van Dyke uses for it (from the alignment), most frequent first."""
+    """For every lemma, the Arabic words Van Dyke uses for it (from the alignment), most frequent first.
+    Counted on the search form (no harakat, unified letters) but shown as Van Dyke spells it."""
     c = collections.defaultdict(collections.Counter)
+    shown = collections.defaultdict(collections.Counter)
     for ds, text in db.execute('SELECT o.dstrong, t.text FROM links k JOIN owords o ON o.id=k.oword_id '
                                'JOIN tokens t ON t.id=k.token_id WHERE o.dstrong IS NOT NULL'):
         w = plain_ar(text).strip()
         if w:
-            c[ds][re.sub(r'\s+', ' ', w)] += 1
+            key = re.sub(r'\s+', ' ', w)
+            c[ds][key] += 1
+            bare = re.sub(r'[\u064b-\u065f\u0670\u0640]', '', text)
+            shown[key][re.sub(r'\s+', ' ', re.sub(r'[^\u0621-\u064a ]', ' ', bare)).strip()] += 1
     db.executemany('INSERT INTO rend VALUES (?,?)',
-                   [(ds, json.dumps(cnt.most_common(12), ensure_ascii=False)) for ds, cnt in c.items()])
+                   [(ds, json.dumps([(shown[k].most_common(1)[0][0], n) for k, n in cnt.most_common(12)],
+                                    ensure_ascii=False)) for ds, cnt in c.items()])
     return len(c)
 
 

@@ -154,6 +154,15 @@ adb shell input swipe 540 2000 540 900 400; sleep 2
 tap_text '^Open in HALOT$' center
 sleep 5
 shot 14_halot_viewer
+# the viewer opened directly on a page, then zoomed twice with the top-bar + (animated transform)
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong lex:halot:1200
+sleep 10
+shot 14a_viewer_page
+tap_text '^\+$' center
+sleep 2
+tap_text '^\+$' center
+sleep 4
+shot 14b_viewer_zoomed
 tap_text '^Home$' center
 sleep 2
 shot 15_home_english

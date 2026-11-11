@@ -123,7 +123,13 @@ private fun Splash(progress: Float, failure: String?) {
 private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
     var sheet by remember { mutableStateOf<SheetRequest?>(null) }
     LaunchedEffect(sheetStrong) {
-        if (sheetStrong != null) Db.firstWordOfLemma(sheetStrong)?.let { sheet = SheetRequest(null, null, listOf(it)) }
+        val lexStart = sheetStrong?.let { Regex("lex:(halot|bdag):(\\d+)").matchEntire(it) }
+        if (lexStart != null) {
+            // "lex:halot:1200" opens the lexicon viewer on a page (emulator smoke test)
+            nav.push(Screen.Lex(lexStart.groupValues[1], lexStart.groupValues[2].toInt(), 120f, null))
+        } else if (sheetStrong != null) {
+            Db.firstWordOfLemma(sheetStrong)?.let { sheet = SheetRequest(null, null, listOf(it)) }
+        }
     }
 
     BackHandler(enabled = nav.stack.size > 1) { nav.pop() }

@@ -73,13 +73,13 @@ adb shell input keyevent KEYCODE_BACK; sleep 2
 # navigation: book -> chapter -> verse picker, then a typed reference, then a swipe
 tap_text 'الأسفار والإصحاحات' center
 shot 3a_picker_books
-tap_text '^رومية' center
+tap_text '^التكوين$' center
 shot 3b_picker_chapters
-tap_text '^٨$' center
+tap_text '^٣$' center
 shot 3c_picker_verses
-tap_text '^٢٨$' center
+tap_text '^١٥$' center
 sleep 2
-shot 3d_romans_8_28
+shot 3d_genesis_3_15
 tap_text '^بحث$' center
 adb shell input text 'John%s3:16'; adb shell input keyevent KEYCODE_ENTER; sleep 4
 shot 3e_reference_search
@@ -89,10 +89,10 @@ shot 3f_john_3_16
 adb shell input swipe 200 1200 900 1200 300
 sleep 3
 shot 3g_after_swipe
-adb shell input keyevent KEYCODE_BACK; sleep 1
-adb shell input keyevent KEYCODE_BACK; sleep 1
 adb shell input keyevent KEYCODE_BACK; sleep 2
 shot 3h_after_back
+adb shell input keyevent KEYCODE_BACK; sleep 2
+shot 3i_after_back2
 
 # Van Dyke with KJV underneath, then tap an English word
 tap_text '^طريقة العرض$' center

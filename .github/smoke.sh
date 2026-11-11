@@ -4,6 +4,9 @@ set -x
 mkdir -p shots
 PKG=com.fadysaeed.ketaby
 adb install -r apk/*.apk
+# the emulator's launcher keeps raising "isn't responding" dialogs that block taps; switch it off
+adb shell pm disable-user --user 0 com.google.android.apps.nexuslauncher || true
+adb shell settings put global hide_error_dialogs 1 || true
 adb logcat -c
 adb shell am start -n $PKG/.MainActivity
 sleep 75

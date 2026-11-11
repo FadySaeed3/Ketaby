@@ -201,9 +201,6 @@ private fun ViewMenu(onHome: () -> Unit) {
     }
 }
 
-/** Smoke test only: turn off the re-scroll to compare with the old behaviour. */
-object ReaderDebug { var noRescroll = false }
-
 @Composable
 fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> Unit) {
     val prefs = LocalPrefs.current
@@ -241,7 +238,7 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
     }
     LaunchedEffect(screen, verses, english, words) {
         val vs = verses ?: return@LaunchedEffect
-        if (screen.verse > 0 && !touched && !ReaderDebug.noRescroll && screen.verse <= vs.size) listState.scrollToItem(screen.verse - 1)
+        if (screen.verse > 0 && !touched && screen.verse <= vs.size) listState.scrollToItem(screen.verse - 1)
     }
 
     LaunchedEffect(screen) {

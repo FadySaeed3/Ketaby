@@ -189,8 +189,8 @@ for ref in 'Matthew 7:24$' 'Matthew 7:26$'; do
   adb shell input keyevent KEYCODE_BACK; sleep 3
   shot "20b_back_${ref//[^0-9]/_}"
 done
-# a verse near the end of a chapter, with the English line under each verse: old behaviour, then the fix
-for spot in 40:7:28:nofix 40:7:28 40:5:47:nofix 40:5:47; do
+# a verse near the end of a chapter, with the English line under each verse: the verse must stay on screen
+for spot in 40:7:28 40:5:47; do
   adb shell am start -S -n $PKG/.MainActivity --es sheetStrong read:$spot
   sleep 10
   shot "21_read_${spot//:/_}"

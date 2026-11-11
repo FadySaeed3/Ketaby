@@ -124,11 +124,10 @@ private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
     var sheet by remember { mutableStateOf<SheetRequest?>(null) }
     LaunchedEffect(sheetStrong) {
         val lexStart = sheetStrong?.let { Regex("lex:(halot|bdag):(\\d+)").matchEntire(it) }
-        val readAt = sheetStrong?.let { Regex("read:(\\d+):(\\d+):(\\d+)(:nofix)?").matchEntire(it) }
+        val readAt = sheetStrong?.let { Regex("read:(\\d+):(\\d+):(\\d+)").matchEntire(it) }
         if (readAt != null) {
             // "read:40:7:28" opens the reader at a verse (emulator smoke test)
-            val (b, c, v, nofix) = readAt.destructured
-            ReaderDebug.noRescroll = nofix.isNotEmpty()
+            val (b, c, v) = readAt.destructured
             nav.push(Screen.Reader(b.toInt(), c.toInt(), v.toInt()))
         } else if (sheetStrong?.startsWith("conc:") == true) {
             // "conc:G3056" opens the concordance of a lemma (emulator smoke test)

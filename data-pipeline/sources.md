@@ -6,10 +6,14 @@
 | STEPBible-Data: Translation Tags for Arabic SVD (Arabic unit → original word numbers) | same folder | same | CC BY-SA 4.0 |
 | STEPBible-Data: TAHOT (Leningrad-based Hebrew OT with extended Strong's, morphology, glosses) | `Translators Amalgamated OT+NT/` | same | CC BY 4.0 |
 | STEPBible-Data: TAGNT (Greek NT, all major editions marked) | same folder | same | CC BY 4.0 |
+| KJV with Strong's numbers (eBible.org `eng-kjv_usfm.zip`) | `downloads/english/` | sha256 `941ef56e…8133` | Public domain (outside the UK) |
+| Berean Standard Bible translation tables (`bsb_tables.tsv`, every English phrase tied to its Hebrew/Greek word and Strong's number) | `downloads/english/` (stored gzipped) | sha256 of the tsv `aa2a9a0f…3c60` | Public domain since 30 April 2023 |
 | OpenScriptures morphhb + HebrewLexicon (Strong's) | used only by `halot_index.py` | — | CC BY 4.0 / PD |
 | MorphGNT SBLGNT | used only by `bdag_index.py` | — | CC BY-SA |
 | UBS open dictionaries | Phase 5 | — | CC BY-SA 4.0 |
 | Moulton & Milligan | Phase 5, scan from Fady | — | PD |
+
+The two English files come from their publishers; if a publisher changes or removes a file, `fetch_sources.py` falls back to the identical copy on this repo's `source-mirror` branch (commit `67c15e0`).
 
 Attribution required in the app's About screen: STEPBible.org (Tyndale House Cambridge), Arabic Bible Outreach Ministry, Sami Abdel Malik.
 Note: Sami Abdel Malik is also working on an Arabic translation of BDB (per his GitHub profile) — worth checking before Phase 5.

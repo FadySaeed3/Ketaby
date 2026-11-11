@@ -1,0 +1,31 @@
+name: Probe sources
+on:
+  push:
+    branches: [ probe-sources ]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download candidate sources
+        run: |
+          mkdir -p mirror && cd mirror
+          for u in \
+            https://ebible.org/Scriptures/eng-kjv2006_usfm.zip \
+            https://ebible.org/Scriptures/engkjv_usfm.zip \
+            https://ebible.org/Scriptures/eng-kjv_usfm.zip \
+            https://bereanbible.com/bsb_tables.tsv \
+            https://bereanbible.com/bsb_usfm.zip ; do
+            f=$(basename "$u")
+            if curl -sSfL --retry 3 -o "$f" "$u"; then echo "OK $u $(stat -c %s "$f") $(sha256sum "$f" | cut -c1-64)"; else echo "FAIL $u"; rm -f "$f"; fi
+          done
+          [ -f bsb_tables.tsv ] && gzip -9 bsb_tables.tsv
+          ls -la
+      - name: Push to orphan branch source-mirror
+        run: |
+          cd mirror
+          git init -q -b source-mirror
+          git config user.name ci; git config user.email ci@example.invalid
+          git add -A && git commit -qm "Mirror of public-domain sources (temporary, for pipeline development)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" source-mirror

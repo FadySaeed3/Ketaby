@@ -4,6 +4,8 @@
   ubs   UBS Dictionary of Biblical Hebrew / of the Greek NT (CC BY-SA 4.0), keyed by plain Strong's
   lsj   Liddell-Scott-Jones for NT words (STEPBible TFLSJ, CC BY 4.0), keyed by extended Strong's
   tbes  STEPBible brief lexicons TBESH / TBESG (CC BY 4.0), keyed by extended Strong's
+  mm    Moulton & Milligan, Vocabulary of the Greek Testament (1930, public domain; OCR of the
+        Internet Archive scan, see mm_extract.py), keyed by dStrong through the Greek lemma
 
 Keys: plain Strong's are written "H430" / "G3056"; extended ones as in STEPBible ("H0430G", "G3056").
 """
@@ -122,7 +124,30 @@ def load_step_tab(paths, col_def):
     return out
 
 
-def load_all(stepbible_dir, hebrew_lexicon_dir, ubs_dir):
+# ---------------------------------------------------------------- Moulton & Milligan
+def load_mm(path, greek_lemmas):
+    """greek_lemmas: [(dstrong, lemma)]. Entries carry a normalized lemma key "k"."""
+    import gzip
+    from mm_extract import norm
+    by_key = {}
+    for ds, lemma in greek_lemmas:
+        by_key.setdefault(norm(lemma), []).append((ds, lemma))
+    texts = {}
+    for e in json.load(gzip.open(path, 'rt', encoding='utf-8')):
+        head, body = e.get('h'), e['t']
+        if head and body.startswith(head):
+            body = body[len(head):]
+        elif not head:                      # the heading was misread as Latin letters: drop it
+            body = re.sub(r'^[|\s]*[^\s.,]+', '', body, count=1)
+        texts.setdefault(e['k'], []).append((head, html.escape(body.lstrip(' .,|')) + f'<br><i>scan p. {e["p"]}</i>'))
+    out = []
+    for k, parts in texts.items():
+        for ds, lemma in by_key.get(k, []):
+            out.append((ds, 'mm', '<br><br>'.join(f'<b>{html.escape(h or lemma)}</b> {b}' for h, b in parts)))
+    return out
+
+
+def load_all(stepbible_dir, hebrew_lexicon_dir, ubs_dir, mm_path=None, greek_lemmas=()):
     lexd = os.path.join(stepbible_dir, 'Lexicons')
     tbes = glob.glob(os.path.join(lexd, 'TBES*.txt'))
     lsj = glob.glob(os.path.join(lexd, 'TFLSJ*.txt'))
@@ -137,4 +162,6 @@ def load_all(stepbible_dir, hebrew_lexicon_dir, ubs_dir):
         rows.append((k, 'lsj', v))
     for k, v in load_step_tab(tbes, 7).items():
         rows.append((k, 'tbes', v))
+    if mm_path and os.path.exists(mm_path):
+        rows += load_mm(mm_path, greek_lemmas)
     return rows

@@ -10,8 +10,10 @@
 | Berean Standard Bible translation tables (`bsb_tables.tsv`, every English phrase tied to its Hebrew/Greek word and Strong's number) | `downloads/english/` (stored gzipped) | sha256 of the tsv `aa2a9a0f…3c60` | Public domain since 30 April 2023 |
 | OpenScriptures morphhb + HebrewLexicon (Strong's) | used only by `halot_index.py` | — | CC BY 4.0 / PD |
 | MorphGNT SBLGNT | used only by `bdag_index.py` | — | CC BY-SA |
-| UBS open dictionaries | Phase 5 | — | CC BY-SA 4.0 |
-| Moulton & Milligan | Phase 5, scan from Fady | — | PD |
+| OpenScriptures HebrewLexicon: BDB (`BrownDriverBriggs.xml`) + `LexicalIndex.xml` (Strong's → BDB) | `downloads/HebrewLexicon/` | commit `21c9add13bc7…` | BDB text PD, markup CC BY 4.0 |
+| UBS Dictionary of Biblical Hebrew v0.9.4 + Dictionary of the Greek NT v1.1 (ubsicap/ubs-open-license) | `downloads/ubs-open-license/` | commit `a15a96cf…` | CC BY-SA 4.0 |
+| STEPBible-Data Lexicons: TFLSJ (LSJ for NT words), TBESH / TBESG (brief lexicons; TBESG is Abbott-Smith based) | `downloads/STEPBible-Data/Lexicons/` | same STEPBible commit | CC BY 4.0 |
+| Moulton & Milligan, *The Vocabulary of the Greek Testament* (Hodder & Stoughton 1930): Internet Archive `vocabularyofgree00mouluoft` (University of Toronto copy, OCR text layer) | extracted once by `mm_extract.py` into `content/lexicons/mm.json.gz` (4,320 entries, 4,302 of 5,377 NT lemmas) | scan sha256 `2e12eeca…6d67` | Public domain |
 
 The two English files come from their publishers; if a publisher changes or removes a file, `fetch_sources.py` falls back to the identical copy on this repo's `source-mirror` branch (commit `67c15e0`).
 

@@ -69,7 +69,7 @@ private fun srcName(src: String, greek: Boolean) = when (src) {
     "bdb" -> "BDB · Brown-Driver-Briggs"
     "ubs" -> if (greek) "UBS · Dictionary of the Greek NT" else "UBS · Dictionary of Biblical Hebrew"
     "lsj" -> "LSJ · Liddell-Scott-Jones"
-    "mm" -> "Moulton & Milligan"
+    "mm" -> "Moulton & Milligan · " + t("نص ممسوح، ممكن فيه أخطاء قراءة", "نص ممسوح ضوئيًا وقد يحتوي أخطاء", "scanned text, may have OCR slips")
     else -> if (greek) "Abbott-Smith (STEPBible)" else "STEPBible · brief lexicon"
 }
 

@@ -332,7 +332,9 @@ def main(out):
     ndict = load_dict(db)
     nrend = load_renderings(db)
     db.executemany('INSERT INTO lexdefs VALUES (?,?,?)', open_lexicons.load_all(
-        DL, os.path.join(HERE, 'downloads', 'HebrewLexicon'), os.path.join(HERE, 'downloads', 'ubs-open-license')))
+        DL, os.path.join(HERE, 'downloads', 'HebrewLexicon'), os.path.join(HERE, 'downloads', 'ubs-open-license'),
+        os.path.join(HERE, '..', 'content', 'lexicons', 'mm.json.gz'),
+        db.execute("SELECT dstrong, lemma FROM lemmas WHERE dstrong LIKE 'G%'").fetchall()))
     chap = collections.Counter()
     for b, c in db.execute('SELECT book, MAX(ch) FROM verses GROUP BY book'):
         chap[b] = c

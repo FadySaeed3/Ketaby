@@ -158,6 +158,15 @@ tap_text '^Home$' center
 sleep 2
 shot 15_home_english
 
+# a common Greek word: Van Dyke renderings and the open lexicons (UBS, Moulton & Milligan, LSJ...)
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong G0026
+sleep 10
+shot 16_greek_word_sheet
+adb shell input swipe 540 2000 540 700 400; sleep 2
+shot 17_greek_open_lexicons
+adb shell input swipe 540 2000 540 700 400; sleep 2
+shot 18_greek_open_lexicons_more
+
 echo "=====LOGCAT"
 adb logcat -d -s AndroidRuntime:E $PKG:* System.err:W | tail -200
 adb shell pidof $PKG && echo "APP ALIVE" || echo "APP DEAD"

@@ -128,7 +128,7 @@ object Db {
         ) { Triple(it.getString(0), it.getString(1), keys.indexOf(it.getString(2))) }
         // the most specific key wins for each source
         rows.groupBy { it.first }.map { (src, l) -> OpenLex(src, l.minBy { it.third }.second) }
-            .sortedBy { listOf("bdb", "ubs", "lsj", "tbes").indexOf(it.src) }
+            .sortedBy { listOf("bdb", "ubs", "mm", "lsj", "tbes").indexOf(it.src) }
     }
 
     suspend fun dictEntry(dstrong: String): DictEntry? = withContext(Dispatchers.IO) {

@@ -40,6 +40,9 @@ import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.Card
 import com.fadysaeed.ketaby.data.Db
 import com.fadysaeed.ketaby.data.Lexicons
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.foundation.horizontalScroll
+import kotlinx.coroutines.launch
 import com.fadysaeed.ketaby.data.OWord
 import com.fadysaeed.ketaby.data.Tri
 import com.fadysaeed.ketaby.morph.Morph
@@ -242,11 +245,11 @@ private fun WordBlock(w: OWord, card: Card?, onConcordance: (String) -> Unit, on
         val ds = w.dstrong
         if (ds != null) {
             Spacer(Modifier.height(12.dp))
+            val lex = if (greek) Lexicons.BDAG else Lexicons.HALOT
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 OutlinedButton(onClick = { onConcordance(ds) }) {
                     Text(t("كل المواضع", "كل المواضع", "All occurrences") + (l?.let { " (${ArText.num(it.count)})" } ?: ""), color = Gold)
                 }
-                val lex = if (greek) Lexicons.BDAG else Lexicons.HALOT
                 val page = if (greek) l?.bdagPage else l?.halotPage
                 val y = if (greek) l?.bdagY else l?.halotY
                 val n = if (greek) l?.bdagN else l?.halotN
@@ -255,6 +258,25 @@ private fun WordBlock(w: OWord, card: Card?, onConcordance: (String) -> Unit, on
                         if (greek) t("افتح في باور", "افتح في BDAG", "Open in BDAG") else t("افتح في هالوت", "افتح في HALOT", "Open in HALOT"),
                         color = if (page != null) Gold else Line,
                     )
+                }
+            }
+            val all = (if (greek) l?.bdagAll else l?.halotAll).orEmpty()
+            if (all.size > 1) {
+                val scope = rememberCoroutineScope()
+                Text(
+                    t(
+                        "${Lexicons.name(lex)} فيه أكتر من مدخل بنفس الشكل، والفهرس مش متأكد أنهي فيهم المقصود هنا. اختار:",
+                        "في ${Lexicons.name(lex)} أكثر من مدخل بالشكل نفسه، والفهرس غير متأكد أيها المقصود هنا. اختر:",
+                        "${Lexicons.name(lex)} has more than one entry with this form and the index is not sure which is meant here. Choose:",
+                    ),
+                    color = Muted, fontSize = 12.sp, modifier = Modifier.padding(top = 6.dp),
+                )
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
+                    all.take(8).forEachIndexed { i, n ->
+                        TextButton(onClick = {
+                            scope.launch { Db.entryPos(lex, n)?.let { p -> onOpenLex(lex, p.page, p.y, n) } }
+                        }) { Text(t("مدخل", "مدخل", "Entry") + " " + ArText.num(i + 1), color = Gold, fontSize = 13.sp) }
+                    }
                 }
             }
             if ((if (greek) l?.bdagPage else l?.halotPage) == null) Text(

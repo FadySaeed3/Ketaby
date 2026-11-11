@@ -183,6 +183,56 @@ def match_lemmas(lemrefs, headinfo, heads, spans, by_cons, by_loose, by_stem, by
     return lemmas, stats, low, pos
 
 
+def line_start_fallback(trefs, theads, lemmas_d, heads, spans):
+    """Headwords the entry detector missed (mostly compound names such as Kiriath-jearim, whose words come
+    out reversed from the visual-order font): look for the word(s) at the start of a line, in the part of
+    the alphabet where the lemma belongs. Stores (entry number, [page, y]) for the caller."""
+    import bisect
+    lines = collections.defaultdict(list)
+    for p, bb, f, sz, t in spans:
+        lines[(p, round(bb[1]))].append((bb[0], bb[1], f, t))
+    starts = collections.defaultdict(list)
+    for (p, _), ss in lines.items():
+        ss.sort()
+        if ss[0][0] > 110:
+            continue
+        words = [consonants(decode_hebrew(t)) for x, y, f, t in ss if f == 'Bwhebb' and t.strip()][:4]
+        words = [w for w in words if w]
+        for k in range(1, len(words) + 1):
+            for key in {''.join(words[:k]), ''.join(reversed(words[:k]))}:
+                starts[key].append((p, round(ss[0][1], 1)))
+    keys = [(h['page'], h['y']) for h in heads]
+    found = 0
+    for key in trefs:
+        if key in lemmas_d or key not in theads:
+            continue
+        head, aram = theads[key]
+        if not re.search(r'[\s\u05be]', head.strip()):
+            continue   # single words found this way are too often mentions inside other entries
+        target = consonants(head)
+        cands = starts.get(target)
+        if not target or not cands:
+            continue
+        # where entries with the same first letters sit (robust to the few mis-decoded headwords)
+        seq = [h for h in heads if h['aram'] == aram]
+        inside = []
+        for L in range(min(len(target), 4), 0, -1):
+            pages = sorted(h['page'] for h in seq if consonants(h['he']).startswith(target[:L]))
+            if len(pages) < 3:
+                continue
+            lo, hi = pages[len(pages) // 10] - 1, pages[(len(pages) * 9) // 10] + 1
+            inside = [c for c in cands if lo <= c[0] <= hi]
+            if inside:
+                break
+        if not inside:
+            continue
+        p, y = inside[0]
+        n = heads[max(bisect.bisect_right(keys, (p, y + 0.5)) - 1, 0)]['n']
+        lemmas_d[key] = (n, [p, y])
+        found += 1
+    return found
+
+
 def tahot_lemmas(tahot_dir):
     """STEPBible TAHOT: extended Strong's (main lemma) -> refs (Hebrew numbering), head, aramaic flag."""
     from books import STEP2OSIS
@@ -220,10 +270,12 @@ def main(pdf, wlc_dir, strong_xml, out_path, tahot_dir=None):
     by_loose = collections.defaultdict(list)   # without matres lectionis (ו/י)
     by_letter = collections.defaultdict(list)
     loose = lambda c: c.replace('ו', '').replace('י', '')
-    stem = lambda c: loose(re.sub(r'(ות|ים|ה|ת)$', '', c)) if len(c) > 3 else loose(c)
+    stem = lambda c: loose(re.sub(r'(ות|ימ|ים|ה|ת)$', '', c)) if len(c) > 3 else loose(c)  # consonants() writes final mem as מ
     by_stem = collections.defaultdict(list)
     for h in heads:
         forms = set(re.split(r' / | ', h['he'])) | set(h['he'].split(' / '))
+        # compound names come out of the visual-order font with their words reversed
+        forms |= {' '.join(reversed(alt.split(' '))) for alt in h['he'].split(' / ') if ' ' in alt}
         for form in forms:
             c = consonants(form)
             if c:
@@ -246,6 +298,13 @@ def main(pdf, wlc_dir, strong_xml, out_path, tahot_dir=None):
         trefs, theads = tahot_lemmas(tahot_dir)
         lemmas_d, stats_d, low_d, pos_d = match_lemmas(trefs, lambda k: theads.get(k), heads, spans,
                                                        by_cons, by_loose, by_stem, by_letter, loose, stem)
+    if tahot_dir:
+        found = line_start_fallback(trefs, theads, lemmas_d, heads, spans)
+        stats_d['line_start'] = found
+        stats_d['unmatched'] = stats_d.get('unmatched', 0) - found
+        for k in list(lemmas_d):
+            if isinstance(lemmas_d[k], tuple):
+                lemmas_d[k], pos_d[k] = [lemmas_d[k][0]], lemmas_d[k][1]
     ov_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'halot_overrides.json')
     if os.path.exists(ov_path):
         for k, v in json.load(open(ov_path, encoding='utf-8')).items():

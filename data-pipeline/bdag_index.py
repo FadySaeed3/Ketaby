@@ -24,6 +24,17 @@ def strip_accents(s):
     return unicodedata.normalize('NFC', ''.join(c for c in d if not unicodedata.combining(c))).lower()
 
 
+def more_variants(vs):
+    """Dictionary-form differences between STEPBible/MorphGNT and BDAG (active vs deponent, -ύω vs -υμι, ...)."""
+    out = set()
+    for v in vs:
+        out |= {re.sub(r'ομαι$', 'ω', v), re.sub(r'αμαι$', 'ημι', v), re.sub(r'ω$', 'ομαι', v),
+                re.sub(r'ύω$', 'υμι', v), re.sub(r'υω$', 'υμι', v), re.sub(r'ω$', 'ομι', v),
+                re.sub(r'έω$', 'έομαι', v), re.sub(r'άω$', 'άομαι', v), re.sub(r'ω$', 'ως', v), re.sub(r'ος$', 'οι', v),
+                re.sub(r'ός$', 'όν', v), re.sub(r'ος$', 'ον', v)}
+    return out
+
+
 def clean(s):
     s = unicodedata.normalize('NFC', s.strip().strip(',').strip())
     return re.sub(r'^[\d\s]+|[\d\s*†]+$', '', s)
@@ -52,8 +63,18 @@ def main(pdf, gnt_dir, out_path, tagnt_dir=None):
     by_loose = collections.defaultdict(list)
     for e in entries:
         head = e['lemma'].split(',')[0].strip()
-        by_exact[head].append(e['id'])
-        by_loose[strip_accents(head)].append(e['id'])
+        # "Βηθσαϊδά(ν)", "Ἰωάννης (Ἰωάνης)": index the forms with and without the bracketed part
+        forms = {head, re.sub(r'\s*\([^)]*\)', '', head).strip(), re.sub(r'\(([^)]*)\)', r'\1', head).strip(),
+                 head.split()[0] if head.split() else head}
+        forms |= set(re.findall(r'\(([^)]{3,})\)', head))
+        for alt in head.split('/'):           # "οὕτω/οὕτως", "παρίστημι/παριστάνω"
+            alt = alt.strip()
+            forms |= {alt, re.sub(r'\s*\([^)]*\)', '', alt).strip(), re.sub(r'\(([^)]*)\)', r'\1', alt).strip()}
+        for fm in {f for f in forms if f}:
+            if e['id'] not in by_exact[fm]:
+                by_exact[fm].append(e['id'])
+            if e['id'] not in by_loose[strip_accents(fm)]:
+                by_loose[strip_accents(fm)].append(e['id'])
     gnt = collections.Counter()
     for f in glob.glob(os.path.join(gnt_dir, '*-morphgnt.txt')):
         for line in open(f, encoding='utf-8'):
@@ -68,7 +89,7 @@ def main(pdf, gnt_dir, out_path, tagnt_dir=None):
             lemmas[lem] = by_loose[strip_accents(lem)]; stats['loose'] += 1
         else:
             variants = {re.sub(r'\((\w)\)', '', lem), re.sub(r'\((\w)\)', r'\1', lem)}
-            variants |= {re.sub(r'ομαι$', 'ω', v) for v in variants} | {re.sub(r'αμαι$', 'ημι', v) for v in variants}
+            variants |= more_variants(variants)
             hit = next((by_loose[strip_accents(v)] for v in variants if strip_accents(v) in by_loose), None)
             if hit:
                 lemmas[lem] = hit; stats['variant'] += 1
@@ -96,7 +117,7 @@ def main(pdf, gnt_dir, out_path, tagnt_dir=None):
             if not hit:
                 for fm in fl:
                     variants = {re.sub(r'\((\w)\)', '', fm), re.sub(r'\((\w)\)', r'\1', fm)}
-                    variants |= {re.sub(r'ομαι$', 'ω', v) for v in variants} | {re.sub(r'αμαι$', 'ημι', v) for v in variants}
+                    variants |= more_variants(variants)
                     hit = next((by_loose[strip_accents(v)] for v in variants if strip_accents(v) in by_loose), None)
                     if hit:
                         break
@@ -104,6 +125,14 @@ def main(pdf, gnt_dir, out_path, tagnt_dir=None):
                 lemmas_d[key] = hit; stats_d['matched'] += 1
             else:
                 stats_d['unmatched'] += 1
+    ov_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bdag_overrides.json')
+    if tagnt_dir and os.path.exists(ov_path):
+        for k, v in json.load(open(ov_path, encoding='utf-8')).items():
+            if not k.startswith('_'):
+                if k not in lemmas_d:
+                    stats_d['unmatched'] -= 1
+                lemmas_d[k] = v
+                stats_d['manual'] += 1
     # "s. <lemma>" cross references
     links = []
     for i, (p, bb, f, sz, t) in enumerate(spans[:-1]):

@@ -20,6 +20,8 @@ data class Lemma(
     val dstrong: String, val lang: String, val lemma: String, val tr: String?, val tr2: String?,
     val gloss: String?, val count: Int, val halotPage: Int?, val bdagPage: Int?,
     val halotN: Int? = null, val halotY: Float? = null, val bdagN: Int? = null, val bdagY: Float? = null,
+    /** More than one entry when the index could not tell homonyms apart (the reader picks). */
+    val halotAll: List<Int> = emptyList(), val bdagAll: List<Int> = emptyList(),
 )
 
 /** Where an entry sits in the owner's HALOT or BDAG PDF (1-based page, y in PDF points from the top). */
@@ -109,6 +111,7 @@ object Db {
     private fun Cursor.intOrNull(i: Int): Int? = if (isNull(i)) null else getInt(i)
     private fun Cursor.longOrNull(i: Int): Long? = if (isNull(i)) null else getLong(i)
     private fun Cursor.floatOrNull(i: Int): Float? = if (isNull(i)) null else getFloat(i)
+    private fun allN(json: String?): List<Int> = json?.let { j -> Regex("\\d+").findAll(j).mapNotNull { it.value.toIntOrNull() }.toList() } ?: emptyList()
     private fun firstN(json: String?): Int? = json?.let { Regex("\\d+").find(it)?.value?.toIntOrNull() }
 
     // ------------------------------------------------------------ HALOT / BDAG positions
@@ -176,6 +179,7 @@ object Db {
         val lemma = if (c.isNull(13)) null else Lemma(
             c.getString(13), c.getString(14), c.str(15) ?: "", c.str(16), c.str(17), c.str(18), c.getInt(19),
             c.intOrNull(20), c.intOrNull(21), firstN(c.str(22)), c.floatOrNull(23), firstN(c.str(24)), c.floatOrNull(25),
+            allN(c.str(22)), allN(c.str(24)),
         )
         return OWord(
             c.getLong(0), c.getString(1), c.getInt(2), c.getInt(3), c.getInt(4), c.str(5) ?: "", c.str(6), c.str(7),
@@ -219,6 +223,7 @@ object Db {
             Lemma(
                 it.getString(0), it.getString(1), it.str(2) ?: "", it.str(3), it.str(4), it.str(5), it.getInt(6), it.intOrNull(7), it.intOrNull(8),
                 firstN(it.str(9)), it.floatOrNull(10), firstN(it.str(11)), it.floatOrNull(12),
+                allN(it.str(9)), allN(it.str(11)),
             )
         }.firstOrNull()
     }
@@ -228,6 +233,7 @@ object Db {
             Lemma(
                 it.getString(0), it.getString(1), it.str(2) ?: "", it.str(3), it.str(4), it.str(5), it.getInt(6), it.intOrNull(7), it.intOrNull(8),
                 firstN(it.str(9)), it.floatOrNull(10), firstN(it.str(11)), it.floatOrNull(12),
+                allN(it.str(9)), allN(it.str(11)),
             )
         }.also { lemmaCache = it }
     }

@@ -44,6 +44,9 @@ sealed interface Screen {
     data object Settings : Screen
     /** book → chapter → verse picker, opened from the reader */
     data class Picker(val book: Int?, val ch: Int?) : Screen
+    data object Lexicons : Screen
+    /** The owner's HALOT/BDAG PDF opened on an entry (1-based page, y in PDF points). */
+    data class Lex(val lex: String, val page: Int, val y: Float, val n: Int?) : Screen
 }
 
 /** What the word panel shows: the words aligned to one Arabic unit, or explicit original words. */
@@ -127,13 +130,15 @@ private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
 
     val openSheet: (SheetRequest) -> Unit = { sheet = it }
     when (val s = nav.top) {
-        is Screen.Books -> BooksScreen(nav)
+        is Screen.Books -> HomeScreen(nav)
         is Screen.Chapters -> ChaptersScreen(nav, s.book)
         is Screen.Reader -> ReaderScreen(nav, s, openSheet)
         is Screen.Concordance -> ConcordanceScreen(nav, s.dstrong)
         is Screen.Search -> SearchScreen(nav)
         is Screen.Settings -> SettingsScreen(nav)
         is Screen.Picker -> PickerScreen(nav, s.book, s.ch)
+        is Screen.Lexicons -> LexiconsScreen(nav)
+        is Screen.Lex -> LexViewerScreen(nav, s)
     }
 
     sheet?.let { req ->
@@ -141,6 +146,7 @@ private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
             req = req,
             onDismiss = { sheet = null },
             onConcordance = { ds -> sheet = null; nav.push(Screen.Concordance(ds)) },
+            onOpenLex = { lex, page, y, n -> sheet = null; nav.push(Screen.Lex(lex, page, y, n)) },
         )
     }
 }

@@ -232,6 +232,7 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
             .collect { prefs.savePosition(screen.book, screen.ch, it) }
     }
     LaunchedEffect(screen) { prefs.savePosition(screen.book, screen.ch, startIndex) }
+    LaunchedEffect(screen.book, screen.ch) { prefs.pushRecent(screen.book, screen.ch) }
 
     fun go(delta: Int) {
         val b = book ?: return

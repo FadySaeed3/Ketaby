@@ -185,7 +185,7 @@ fun SearchScreen(nav: Nav) {
 
     Scaffold(
         containerColor = Color.Black,
-        topBar = { KTopBar(t("بحث", "بحث", "Search"), onBack = { nav.pop() }) },
+        topBar = { KTopBar(t("بحث", "بحث", "Search"), onBack = { nav.pop() }) { HomeAction(nav) } },
     ) { pad ->
         Column(Modifier.padding(pad).fillMaxSize()) {
             OutlinedTextField(

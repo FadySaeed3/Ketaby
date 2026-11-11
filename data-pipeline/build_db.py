@@ -13,6 +13,8 @@ Tables
   everses(tr, verse_id, text, spans, plain)             English verse (tr = 'kjv' | 'bsb') on Van Dyke verse ids;
                                                         spans = "start,end,oword.oword;..." (character offsets
                                                         of the parts of `text` tied to original words)
+  lex_entries(lex, n, label, page, y)                   HALOT/BDAG entry positions in the owner's PDF (1-based page, y from top)
+  lex_links(lex, page, x0, y0, x1, y1, to_n)            cross-reference hot spots inside the PDFs
   meta(key, value)
 
 Usage: python3 build_db.py out.db
@@ -45,6 +47,8 @@ def schema(db):
         wno INTEGER, text TEXT, tr TEXT, tr2 TEXT, gloss TEXT, dstrong TEXT, dstrongs TEXT, grammar TEXT, editions TEXT,
         vd_verse INTEGER);
     CREATE TABLE links(token_id INTEGER, oword_id INTEGER);
+    CREATE TABLE lex_entries(lex TEXT, n INTEGER, label TEXT, page INTEGER, y REAL, PRIMARY KEY(lex, n)) WITHOUT ROWID;
+    CREATE TABLE lex_links(lex TEXT, page INTEGER, x0 REAL, y0 REAL, x1 REAL, y1 REAL, to_n INTEGER);
     CREATE TABLE everses(tr TEXT, verse_id INTEGER, text TEXT, spans TEXT, plain TEXT, PRIMARY KEY(tr, verse_id)) WITHOUT ROWID;
     CREATE TABLE lemmas(dstrong TEXT PRIMARY KEY, lang TEXT, lemma TEXT, tr TEXT, tr2 TEXT, gloss TEXT, count INTEGER,
         halot TEXT, halot_page INTEGER, halot_y REAL, bdag TEXT, bdag_page INTEGER, bdag_y REAL);
@@ -94,6 +98,20 @@ def load_english(db):
         stats[tr] = {'verses': len(rows), 'not_in_van_dyke': missing, 'tagged_segments': seg_tagged,
                      'linked_segments': seg_linked}
     return stats
+
+
+def load_lex_index(db):
+    """Entry positions and cross-reference links from the committed page indexes (no lexicon text)."""
+    idx = os.path.join(HERE, '..', 'content', 'indexes')
+    info = {}
+    for lex, fname, key, label in (('halot', 'halot_index.json', 'n', 'he'), ('bdag', 'bdag_index.json', 'id', 'lemma')):
+        d = json.load(open(os.path.join(idx, fname), encoding='utf-8'))
+        db.executemany('INSERT OR IGNORE INTO lex_entries VALUES (?,?,?,?,?)',
+                       [(lex, e[key], e[label], e['page'], e['y']) for e in d['entries']])
+        db.executemany('INSERT INTO lex_links VALUES (?,?,?,?,?,?,?)',
+                       [(lex, l['p'], *l['r'], l['to']) for l in d.get('links', [])])
+        info[lex] = d['file']
+    return info
 
 
 def load_cards(db):
@@ -283,6 +301,7 @@ def main(out):
     hfile, bfile = load_lemmas(db, lem, count)
     ncards = load_cards(db)
     estats = load_english(db)
+    lexinfo = load_lex_index(db)
     chap = collections.Counter()
     for b, c in db.execute('SELECT book, MAX(ch) FROM verses GROUP BY book'):
         chap[b] = c
@@ -291,6 +310,8 @@ def main(out):
                    [(i + 1, s, o, n, t, chap[i + 1], en_names[i]) for i, (s, o, n, t) in enumerate(BOOKS)])
     db.executescript('''
     CREATE INDEX i_verses ON verses(book, ch, v);
+    CREATE INDEX i_lex_links ON lex_links(lex, page);
+    CREATE INDEX i_lex_pos ON lex_entries(lex, page, y);
     CREATE INDEX i_cards ON cards(strong);
     CREATE INDEX i_tokens ON tokens(verse_id);
     CREATE INDEX i_owords_v ON owords(vd_verse);
@@ -301,6 +322,7 @@ def main(out):
     meta = {
         'built_from': 'STEPBible-Data 5de0a47 (AraSVD 7.0.1, TAHOT, TAGNT, Translation Tags)',
         'halot_sha256': hfile['sha256'], 'bdag_sha256': bfile['sha256'],
+        'halot_pages': str(lexinfo['halot']['pages']), 'bdag_pages': str(lexinfo['bdag']['pages']),
         'licence': 'Texts and tags CC BY / CC BY-SA 4.0 (STEPBible.org, Arabic Bible Outreach Ministry); '
                    'KJV (eBible.org, public domain outside the UK); BSB and its translation tables (public domain)',
     }
@@ -317,6 +339,8 @@ def main(out):
         'units_linked': q('SELECT COUNT(DISTINCT token_id) FROM links'),
         'lemmas': q('SELECT COUNT(*) FROM lemmas'),
         'cards': q('SELECT COUNT(*) FROM cards'),
+        'lex_entries': q('SELECT COUNT(*) FROM lex_entries'),
+        'lex_links': q('SELECT COUNT(*) FROM lex_links'),
         'lemmas_with_halot': q("SELECT COUNT(*) FROM lemmas WHERE halot IS NOT NULL"),
         'lemmas_with_bdag': q("SELECT COUNT(*) FROM lemmas WHERE bdag IS NOT NULL"),
         **{'links_' + k: v for k, v in lstats.items()},

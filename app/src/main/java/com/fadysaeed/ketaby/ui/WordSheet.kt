@@ -17,6 +17,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -38,6 +39,7 @@ import androidx.compose.ui.unit.sp
 import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.Card
 import com.fadysaeed.ketaby.data.Db
+import com.fadysaeed.ketaby.data.Lexicons
 import com.fadysaeed.ketaby.data.OWord
 import com.fadysaeed.ketaby.data.Tri
 import com.fadysaeed.ketaby.morph.Morph
@@ -70,7 +72,10 @@ fun ExplainText(text: String, lang: String, size: Int = 15, color: Color = Ink) 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WordSheet(req: SheetRequest, onDismiss: () -> Unit, onConcordance: (String) -> Unit) {
+fun WordSheet(
+    req: SheetRequest, onDismiss: () -> Unit, onConcordance: (String) -> Unit,
+    onOpenLex: (lex: String, page: Int, y: Float, n: Int?) -> Unit,
+) {
     val state = rememberModalBottomSheetState(skipPartiallyExpanded = false)
     val data by produceState<SheetData?>(null, req) {
         val ws = if (req.tokenId != null) Db.wordsForToken(req.tokenId) else Db.wordsById(req.wordIds)
@@ -115,7 +120,7 @@ fun WordSheet(req: SheetRequest, onDismiss: () -> Unit, onConcordance: (String) 
                     )
                     else -> d.words.forEachIndexed { i, w ->
                         if (i > 0) Spacer(Modifier.height(12.dp))
-                        WordBlock(w, w.dstrong?.let { d.cards[it] }, onConcordance)
+                        WordBlock(w, w.dstrong?.let { d.cards[it] }, onConcordance, onOpenLex)
                     }
                 }
                 Spacer(Modifier.height(24.dp))
@@ -149,7 +154,7 @@ private fun TriBlock(tri: Tri, size: Int = 15) {
 }
 
 @Composable
-private fun WordBlock(w: OWord, card: Card?, onConcordance: (String) -> Unit) {
+private fun WordBlock(w: OWord, card: Card?, onConcordance: (String) -> Unit, onOpenLex: (String, Int, Float, Int?) -> Unit) {
     val prefs = LocalPrefs.current
     val greek = w.lang == "grc"
     val langName = when (w.lang) {
@@ -226,6 +231,11 @@ private fun WordBlock(w: OWord, card: Card?, onConcordance: (String) -> Unit) {
                         (card.halotEntry?.let { t("، مدخل ${ArText.num(it)}", "، المدخل ${ArText.num(it)}", ", entry $it") } ?: "")
                 } else t("لسه متراجعتش على هالوت", "لم تُراجع على HALOT بعد", "Not yet checked against HALOT")
                 Text(src, color = Muted, fontSize = 12.sp, modifier = Modifier.padding(top = 6.dp))
+                card.halotPage?.let { pg ->
+                    TextButton(onClick = { onOpenLex(Lexicons.HALOT, pg, card.halotY ?: 0f, card.halotEntry?.toIntOrNull()) }) {
+                        Text(t("افتح المدخل ده في هالوت ←", "افتح هذا المدخل في HALOT ←", "Open this entry in HALOT →"), color = Gold, fontSize = 13.sp)
+                    }
+                }
             }
         }
 
@@ -236,16 +246,19 @@ private fun WordBlock(w: OWord, card: Card?, onConcordance: (String) -> Unit) {
                 OutlinedButton(onClick = { onConcordance(ds) }) {
                     Text(t("كل المواضع", "كل المواضع", "All occurrences") + (l?.let { " (${ArText.num(it.count)})" } ?: ""), color = Gold)
                 }
-                val hasLex = if (greek) l?.bdagPage != null else l?.halotPage != null
-                OutlinedButton(onClick = {}, enabled = false) {
+                val lex = if (greek) Lexicons.BDAG else Lexicons.HALOT
+                val page = if (greek) l?.bdagPage else l?.halotPage
+                val y = if (greek) l?.bdagY else l?.halotY
+                val n = if (greek) l?.bdagN else l?.halotN
+                OutlinedButton(onClick = { if (page != null) onOpenLex(lex, page, y ?: 0f, n) }, enabled = page != null) {
                     Text(
                         if (greek) t("افتح في باور", "افتح في BDAG", "Open in BDAG") else t("افتح في هالوت", "افتح في HALOT", "Open in HALOT"),
-                        color = if (hasLex) Muted else Line,
+                        color = if (page != null) Gold else Line,
                     )
                 }
             }
-            Text(
-                t("زرار القاموس هيشتغل لما تضيف ملفاتك في المرحلة الجاية.", "سيعمل زر المعجم بعد إضافة ملفاتك في المرحلة القادمة.", "The lexicon button will work once you add your files in the next phase."),
+            if ((if (greek) l?.bdagPage else l?.halotPage) == null) Text(
+                t("الكلمة دي لسه مش مربوطة بمدخل في القاموس.", "لم تُربط هذه الكلمة بمدخل في المعجم بعد.", "This word is not linked to a lexicon entry yet."),
                 color = Muted, fontSize = 11.sp,
             )
         }

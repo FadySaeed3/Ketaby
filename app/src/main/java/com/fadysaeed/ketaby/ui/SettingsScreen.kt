@@ -66,8 +66,15 @@ private fun Toggle(label: String, hint: String?, value: Boolean, onChange: (Bool
 @Composable
 fun SettingsScreen(nav: Nav) {
     val p = LocalPrefs.current
-    Scaffold(containerColor = Color.Black, topBar = { KTopBar(t("الإعدادات", "الإعدادات", "Settings"), onBack = { nav.pop() }) }) { pad ->
+    Scaffold(containerColor = Color.Black, topBar = { KTopBar(t("الإعدادات", "الإعدادات", "Settings"), onBack = { nav.pop() }) { HomeAction(nav) } }) { pad ->
         Column(Modifier.padding(pad).fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp)) {
+            Section(t("قواميسك (هالوت وباور)", "معاجمك (HALOT وBDAG)", "Your lexicons (HALOT & BDAG)")) {
+                Text(
+                    t("ضيف ملفاتك أو بدّلها", "أضف ملفاتك أو استبدلها", "Add or replace your PDF files") + " ←",
+                    color = Gold, fontSize = 15.sp,
+                    modifier = Modifier.fillMaxWidth().clickable { nav.push(Screen.Lexicons) }.padding(vertical = 6.dp),
+                )
+            }
             Section(t("لغة التطبيق", "لغة الواجهة", "App language")) {
                 Choice("مصري", p.uiLang == "eg") { p.putUiLang("eg") }
                 Choice("العربية الفصحى", p.uiLang == "msa") { p.putUiLang("msa") }

@@ -77,7 +77,7 @@ fun PickerScreen(nav: Nav, startBook: Int?, startChapter: Int?) {
                     bookId != null -> bookId = null
                     else -> nav.pop()
                 }
-            })
+            }) { HomeAction(nav) }
         },
     ) { pad ->
         val b = book

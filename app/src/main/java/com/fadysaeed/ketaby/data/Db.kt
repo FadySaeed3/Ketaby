@@ -19,7 +19,12 @@ data class VerseRow(val id: Long, val v: Int, val text: String, val tokens: List
 data class Lemma(
     val dstrong: String, val lang: String, val lemma: String, val tr: String?, val tr2: String?,
     val gloss: String?, val count: Int, val halotPage: Int?, val bdagPage: Int?,
+    val halotN: Int? = null, val halotY: Float? = null, val bdagN: Int? = null, val bdagY: Float? = null,
 )
+
+/** Where an entry sits in the owner's HALOT or BDAG PDF (1-based page, y in PDF points from the top). */
+data class LexPos(val lex: String, val page: Int, val y: Float, val n: Int?)
+data class LexLink(val x0: Float, val y0: Float, val x1: Float, val y1: Float, val to: Int)
 
 data class OWord(
     val id: Long, val lang: String, val book: Int, val oc: Int, val ov: Int, val text: String,
@@ -35,6 +40,7 @@ data class Tri(val eg: String?, val msa: String?, val en: String?) {
 data class Card(
     val strong: String, val certainty: Tri?, val notes: Tri, val vandykeWord: String?,
     val refsVandyke: List<String>, val halotChecked: Boolean, val halotEntry: String?, val halotPage: Int?,
+    val halotY: Float? = null,
 )
 
 /** An English verse: its text and the character ranges tied to original words. */
@@ -102,6 +108,40 @@ object Db {
     private fun Cursor.str(i: Int): String? = if (isNull(i)) null else getString(i)
     private fun Cursor.intOrNull(i: Int): Int? = if (isNull(i)) null else getInt(i)
     private fun Cursor.longOrNull(i: Int): Long? = if (isNull(i)) null else getLong(i)
+    private fun Cursor.floatOrNull(i: Int): Float? = if (isNull(i)) null else getFloat(i)
+    private fun firstN(json: String?): Int? = json?.let { Regex("\\d+").find(it)?.value?.toIntOrNull() }
+
+    // ------------------------------------------------------------ HALOT / BDAG positions
+    suspend fun meta(key: String): String? = withContext(Dispatchers.IO) {
+        query("SELECT value FROM meta WHERE key=?", arrayOf(key)) { it.str(0) }.firstOrNull()
+    }
+
+    suspend fun entryPos(lex: String, n: Int): LexPos? = withContext(Dispatchers.IO) {
+        query("SELECT page, y FROM lex_entries WHERE lex=? AND n=?", arrayOf(lex, "$n")) { LexPos(lex, it.getInt(0), it.getFloat(1), n) }.firstOrNull()
+    }
+
+    suspend fun entryLabel(lex: String, n: Int): String? = withContext(Dispatchers.IO) {
+        query("SELECT label FROM lex_entries WHERE lex=? AND n=?", arrayOf(lex, "$n")) { it.str(0) }.firstOrNull()
+    }
+
+    /** The first entry that starts after (page, y): where the highlighted entry ends. */
+    suspend fun nextEntry(lex: String, page: Int, y: Float): LexPos? = withContext(Dispatchers.IO) {
+        query(
+            "SELECT page, y, n FROM lex_entries WHERE lex=? AND (page>? OR (page=? AND y>?)) ORDER BY page, y LIMIT 1",
+            arrayOf(lex, "$page", "$page", "${y + 1f}"),
+        ) { LexPos(lex, it.getInt(0), it.getFloat(1), it.getInt(2)) }.firstOrNull()
+    }
+
+    suspend fun linksOnPage(lex: String, page: Int): List<LexLink> = withContext(Dispatchers.IO) {
+        query("SELECT x0, y0, x1, y1, to_n FROM lex_links WHERE lex=? AND page=?", arrayOf(lex, "$page")) {
+            LexLink(it.getFloat(0), it.getFloat(1), it.getFloat(2), it.getFloat(3), it.getInt(4))
+        }
+    }
+
+    /** First words of a verse, for the "continue reading" card. */
+    suspend fun verseSnippet(book: Int, ch: Int, index: Int): String? = withContext(Dispatchers.IO) {
+        query("SELECT text FROM verses WHERE book=? AND ch=? ORDER BY v LIMIT 1 OFFSET ?", arrayOf("$book", "$ch", "${index.coerceAtLeast(0)}")) { it.str(0) }.firstOrNull()
+    }
 
     suspend fun books(): List<Book> = withContext(Dispatchers.IO) {
         bookCache ?: query("SELECT id, name_ar, testament, chapters, name_en FROM books ORDER BY id") {
@@ -130,12 +170,12 @@ object Db {
 
     private const val OWORD_COLS =
         "o.id, o.lang, o.book, o.oc, o.ov, o.text, o.tr, o.tr2, o.gloss, o.dstrong, o.grammar, o.editions, o.vd_verse, " +
-            "l.dstrong, l.lang, l.lemma, l.tr, l.tr2, l.gloss, l.count, l.halot_page, l.bdag_page"
+            "l.dstrong, l.lang, l.lemma, l.tr, l.tr2, l.gloss, l.count, l.halot_page, l.bdag_page, l.halot, l.halot_y, l.bdag, l.bdag_y"
 
     private fun oword(c: Cursor): OWord {
         val lemma = if (c.isNull(13)) null else Lemma(
             c.getString(13), c.getString(14), c.str(15) ?: "", c.str(16), c.str(17), c.str(18), c.getInt(19),
-            c.intOrNull(20), c.intOrNull(21),
+            c.intOrNull(20), c.intOrNull(21), firstN(c.str(22)), c.floatOrNull(23), firstN(c.str(24)), c.floatOrNull(25),
         )
         return OWord(
             c.getLong(0), c.getString(1), c.getInt(2), c.getInt(3), c.getInt(4), c.str(5) ?: "", c.str(6), c.str(7),
@@ -175,14 +215,20 @@ object Db {
     }
 
     suspend fun lemma(dstrong: String): Lemma? = withContext(Dispatchers.IO) {
-        query("SELECT dstrong, lang, lemma, tr, tr2, gloss, count, halot_page, bdag_page FROM lemmas WHERE dstrong=?", arrayOf(dstrong)) {
-            Lemma(it.getString(0), it.getString(1), it.str(2) ?: "", it.str(3), it.str(4), it.str(5), it.getInt(6), it.intOrNull(7), it.intOrNull(8))
+        query("SELECT dstrong, lang, lemma, tr, tr2, gloss, count, halot_page, bdag_page, halot, halot_y, bdag, bdag_y FROM lemmas WHERE dstrong=?", arrayOf(dstrong)) {
+            Lemma(
+                it.getString(0), it.getString(1), it.str(2) ?: "", it.str(3), it.str(4), it.str(5), it.getInt(6), it.intOrNull(7), it.intOrNull(8),
+                firstN(it.str(9)), it.floatOrNull(10), firstN(it.str(11)), it.floatOrNull(12),
+            )
         }.firstOrNull()
     }
 
     suspend fun allLemmas(): List<Lemma> = withContext(Dispatchers.IO) {
-        lemmaCache ?: query("SELECT dstrong, lang, lemma, tr, tr2, gloss, count, halot_page, bdag_page FROM lemmas ORDER BY count DESC") {
-            Lemma(it.getString(0), it.getString(1), it.str(2) ?: "", it.str(3), it.str(4), it.str(5), it.getInt(6), it.intOrNull(7), it.intOrNull(8))
+        lemmaCache ?: query("SELECT dstrong, lang, lemma, tr, tr2, gloss, count, halot_page, bdag_page, halot, halot_y, bdag, bdag_y FROM lemmas ORDER BY count DESC") {
+            Lemma(
+                it.getString(0), it.getString(1), it.str(2) ?: "", it.str(3), it.str(4), it.str(5), it.getInt(6), it.intOrNull(7), it.intOrNull(8),
+                firstN(it.str(9)), it.floatOrNull(10), firstN(it.str(11)), it.floatOrNull(12),
+            )
         }.also { lemmaCache = it }
     }
 
@@ -212,6 +258,7 @@ object Db {
                 halotChecked = h?.optBoolean("checked") ?: false,
                 halotEntry = h?.opt("entry")?.toString(),
                 halotPage = h?.optInt("page")?.takeIf { it > 0 },
+                halotY = h?.optDouble("y")?.takeIf { !it.isNaN() }?.toFloat(),
             )
         }
     }

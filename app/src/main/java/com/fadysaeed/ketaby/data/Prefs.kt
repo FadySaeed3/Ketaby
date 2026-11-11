@@ -43,6 +43,19 @@ class Prefs(ctx: Context) {
     fun putEnglish(v: String) { english = v; sp.edit().putString("english", v).apply() }
     fun putReaderMode(v: Int) { readerMode = v; sp.edit().putInt("readerMode", v).apply() }
 
+    /** Recently opened chapters, newest first: "book:ch,book:ch,…" */
+    var recent by mutableStateOf(sp.getString("recent", "") ?: ""); private set
+
+    fun recentList(): List<Pair<Int, Int>> = recent.split(',').mapNotNull { e ->
+        val p = e.split(':'); if (p.size == 2) (p[0].toIntOrNull() ?: return@mapNotNull null) to (p[1].toIntOrNull() ?: return@mapNotNull null) else null
+    }
+
+    fun pushRecent(book: Int, ch: Int) {
+        val l = (listOf(book to ch) + recentList().filter { it != book to ch }).take(8)
+        recent = l.joinToString(",") { "${it.first}:${it.second}" }
+        sp.edit().putString("recent", recent).apply()
+    }
+
     fun savePosition(book: Int, ch: Int, verseIndex: Int) {
         lastBook = book; lastChapter = ch; lastVerseIndex = verseIndex
         sp.edit().putInt("lastBook", book).putInt("lastChapter", ch).putInt("lastVerseIndex", verseIndex).apply()

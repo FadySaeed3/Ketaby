@@ -63,6 +63,10 @@ PY
 }
 
 shot 1_reader
+adb shell input keyevent KEYCODE_BACK; sleep 2
+shot 1b_home
+tap_text 'كمّل من آخر مكان' center
+sleep 2
 tap_text '^١ ' firstword
 sleep 3
 shot 2_word_sheet
@@ -136,9 +140,20 @@ adb shell am start -S -n $PKG/.MainActivity --es sheetStrong H5390
 sleep 4
 sleep 6
 shot 12_card_three_languages
-adb shell input swipe 540 1900 540 600 400
+
+# HALOT viewer with a stand-in PDF (same page count and size as the real one; the real file never leaves the phone)
+python3 .github/fake_lexicon.py halot 3537 612 792 fake_halot.pdf
+adb push fake_halot.pdf /data/local/tmp/fake_halot.pdf
+adb shell run-as $PKG mkdir -p files/lex
+adb shell "cat /data/local/tmp/fake_halot.pdf | run-as $PKG sh -c 'cat > files/lex/halot.pdf'"
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong H5390
+sleep 8
+tap_text '^Open in HALOT$' center
+sleep 5
+shot 14_halot_viewer
+tap_text '^Home$' center
 sleep 2
-shot 13_card_scrolled
+shot 15_home_english
 
 echo "=====LOGCAT"
 adb logcat -d -s AndroidRuntime:E $PKG:* System.err:W | tail -200

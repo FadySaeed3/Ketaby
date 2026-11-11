@@ -66,6 +66,11 @@ import com.fadysaeed.ketaby.data.OWord
 import com.fadysaeed.ketaby.data.Token
 import com.fadysaeed.ketaby.data.VerseRow
 import kotlinx.coroutines.flow.distinctUntilChanged
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.filled.Menu
+import androidx.compose.ui.input.pointer.pointerInput
+import kotlin.math.abs
 
 @Composable
 fun scriptureFamily(): FontFamily = if (LocalPrefs.current.scriptureFont == "plex") Plex else Naskh
@@ -173,7 +178,7 @@ private fun MenuItem(label: String, checked: Boolean, onClick: () -> Unit) {
 }
 
 @Composable
-private fun ViewMenu() {
+private fun ViewMenu(onHome: () -> Unit) {
     val prefs = LocalPrefs.current
     var open by remember { mutableStateOf(false) }
     IconButton(onClick = { open = true }) { Icon(Icons.Filled.MoreVert, t("طريقة العرض", "طريقة العرض", "View"), tint = Ink) }
@@ -188,6 +193,8 @@ private fun ViewMenu() {
         HorizontalDivider(color = Line)
         item("KJV", prefs.english == "kjv") { prefs.putEnglish("kjv") }
         item("BSB", prefs.english == "bsb") { prefs.putEnglish("bsb") }
+        HorizontalDivider(color = Line)
+        item(t("الصفحة الرئيسية (الأسفار)", "الصفحة الرئيسية (الأسفار)", "Home (books)"), false) { onHome() }
         HorizontalDivider(color = Line)
         item(t("بين السطور (الأصل)", "بين السطور (النص الأصلي)", "Interlinear (original)"), prefs.interlinear) { prefs.putInterlinear(!prefs.interlinear) }
     }
@@ -244,12 +251,12 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
         containerColor = Color.Black,
         topBar = {
             KTopBar(
-                title = if (book == null) "" else "${book.name} ${ArText.num(screen.ch)}",
+                title = if (book == null) "" else "${book.name} ${ArText.num(screen.ch)} ▾",
                 onBack = { nav.pop() },
-                onTitle = { nav.push(Screen.Chapters(screen.book)) },
+                onTitle = { nav.push(Screen.Picker(screen.book, screen.ch)) },
             ) {
                 SearchSettingsActions(nav)
-                ViewMenu()
+                ViewMenu { nav.home() }
             }
         },
         bottomBar = {
@@ -259,10 +266,18 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
             ) {
                 val rtl = !ArText.english
                 TextButton(onClick = { go(-1) }) {
-                    Text(if (rtl) t("→ الإصحاح اللي فات", "→ الأصحاح السابق", "") else "← Previous chapter", color = Muted)
+                    Text(if (rtl) t("→ اللي فات", "→ السابق", "") else "← Previous", color = Muted)
+                }
+                TextButton(
+                    onClick = { nav.push(Screen.Picker(screen.book, screen.ch)) },
+                    modifier = Modifier.clip(RoundedCornerShape(20.dp)).background(Panel),
+                ) {
+                    Icon(Icons.Filled.Menu, null, tint = Teal)
+                    Spacer(Modifier.width(6.dp))
+                    Text(t("الأسفار والإصحاحات", "الأسفار والأصحاحات", "Books & chapters"), color = Teal)
                 }
                 TextButton(onClick = { go(1) }) {
-                    Text(if (rtl) t("الإصحاح الجاي ←", "الأصحاح التالي ←", "") else "Next chapter →", color = Gold)
+                    Text(if (rtl) t("الجاي ←", "التالي ←", "") else "Next →", color = Gold)
                 }
             }
         },
@@ -277,10 +292,26 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
             state = listState,
             contentPadding = PaddingValues(horizontal = 18.dp, vertical = 12.dp),
             verticalArrangement = Arrangement.spacedBy(if (prefs.interlinear || mode == 1) 16.dp else 6.dp),
-            modifier = Modifier.padding(pad).fillMaxSize(),
+            modifier = Modifier.padding(pad).fillMaxSize().pointerInput(screen, book) {
+                // swipe sideways to change chapter (in Arabic the next chapter comes from the left)
+                var dx = 0f
+                detectHorizontalDragGestures(
+                    onDragStart = { dx = 0f },
+                    onDragEnd = {
+                        if (abs(dx) > 160f) {
+                            val forward = if (ArText.english) dx < 0 else dx > 0
+                            go(if (forward) 1 else -1)
+                        }
+                    },
+                ) { _, amount -> dx += amount }
+            },
         ) {
             itemsIndexed(vs, key = { _, v -> v.id }) { _, v ->
-                Column {
+                val target = screen.verse > 1 && v.v == screen.verse
+                Column(
+                    if (target) Modifier.clip(RoundedCornerShape(10.dp)).background(Panel).padding(horizontal = 8.dp, vertical = 4.dp)
+                    else Modifier,
+                ) {
                     if (mode != 2) {
                         VerseText(v.v, v.tokens, selected = selected) { tk ->
                             selected = tk.id; selectedEn = null

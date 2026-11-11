@@ -46,6 +46,9 @@ import com.fadysaeed.ketaby.data.Db
 import com.fadysaeed.ketaby.data.Lemma
 import com.fadysaeed.ketaby.data.SearchHit
 import kotlinx.coroutines.launch
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.border
+import com.fadysaeed.ketaby.data.Book
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextDirection
@@ -53,6 +56,61 @@ import androidx.compose.ui.text.style.TextDirection
 private val strongRe = Regex("^\\s*([HhGg])\\s*0*(\\d{1,4})([A-Za-z]?)\\s*$")
 private val arabicRe = Regex("[\\u0621-\\u064A]")
 private val latinRe = Regex("^[A-Za-z0-9 ,.;:'\"!?-]+$")
+
+/** A passage the query may refer to, e.g. "يوحنا 3:16", "1 كورنثوس 13", "John 3:16". */
+data class RefHit(val book: Book, val ch: Int, val v: Int?)
+
+private fun asciiDigits(s: String) = s.map { c -> if (c in '٠'..'٩') ('0' + (c - '٠')) else c }.joinToString("")
+
+private val ordinalWords = mapOf(
+    "الاول" to 1, "الاولي" to 1, "الثاني" to 2, "الثانيه" to 2, "الثالث" to 3, "الثالثه" to 3,
+)
+
+/** (ordinal, base) for a book name: "كورنثوس الأولى" -> (1, "كورنثوس"), "1 Corinthians" -> (1, "corinthians"). */
+private fun bookKeys(b: Book): List<Pair<Int?, String>> {
+    val out = mutableListOf<Pair<Int?, String>>()
+    val ar = ArText.plainArabic(b.nameAr).removePrefix("سفر ").trim()
+    val parts = ar.split(' ')
+    val ord = ordinalWords[parts.last()]
+    val base = if (ord != null) parts.dropLast(1).joinToString("") else ar.replace(" ", "")
+    out += ord to base
+    if (base.startsWith("ال")) out += ord to base.removePrefix("ال")
+    val en = b.nameEn.lowercase()
+    val m = Regex("^([123]) (.*)$").find(en)
+    if (m != null) out += m.groupValues[1].toInt() to m.groupValues[2].replace(" ", "")
+    else out += null to en.replace(" ", "")
+    return out
+}
+
+suspend fun findRefs(q: String, books: List<Book>): List<RefHit> {
+    val s = asciiDigits(q).trim()
+    val m = Regex("^(.*?)\\s*(\\d+)(?:\\s*[:：.,،]\\s*(\\d+))?\\s*$").find(s)
+    var name = (m?.groupValues?.get(1) ?: s).trim()
+    val ch = m?.groupValues?.get(2)?.toIntOrNull()
+    val v = m?.groupValues?.get(3)?.toIntOrNull()
+    if (m != null && name.isEmpty()) return emptyList()
+    // an ordinal written as a digit or a word: "1 كورنثوس", "كورنثوس الأولى", "1 Cor"
+    var ord: Int? = null
+    Regex("^([123])\\s*(.+)$").find(name)?.let { ord = it.groupValues[1].toInt(); name = it.groupValues[2] }
+    val arabic = Regex("[\\u0621-\\u064A]").containsMatchIn(name)
+    var key = if (arabic) ArText.plainArabic(name).removePrefix("سفر ") else name.lowercase().replace(Regex("[^a-z ]"), "")
+    if (arabic) {
+        val words = key.split(' ').filter { it.isNotEmpty() }
+        words.lastOrNull()?.let { ordinalWords[it] }?.let { if (words.size > 1) { ord = it; key = words.dropLast(1).joinToString("") } }
+    }
+    key = key.replace(" ", "")
+    if (key.length < 2) return emptyList()
+    val hits = mutableListOf<RefHit>()
+    for (b in books) {
+        val ok = bookKeys(b).any { (o, base) -> base.startsWith(key) && (ord == null || o == ord) }
+        if (!ok) continue
+        val c = ch ?: 1
+        if (c > b.chapters) continue
+        if (v != null && v > Db.verseCount(b.id, c)) continue
+        hits += RefHit(b, c, if (ch == null) null else v)
+    }
+    return if (ch == null && hits.size > 6) emptyList() else hits.take(8)
+}
 
 /** Lemmas matching a Strong's number, a Hebrew/Greek word, an English gloss or an Arabic transliteration. */
 private fun matchLemmas(all: List<Lemma>, q: String): List<Lemma> {
@@ -83,6 +141,7 @@ fun SearchScreen(nav: Nav) {
     val prefs = LocalPrefs.current
     var total by remember { mutableIntStateOf(0) }
     var lemmas by remember { mutableStateOf<List<Lemma>?>(null) }
+    var refs by remember { mutableStateOf<List<RefHit>>(emptyList()) }
     val scope = rememberCoroutineScope()
     val focus = remember { FocusRequester() }
 
@@ -90,6 +149,7 @@ fun SearchScreen(nav: Nav) {
         val q = query.trim()
         if (q.isEmpty()) return
         scope.launch {
+            refs = findRefs(q, Db.books())
             val arabic = arabicRe.containsMatchIn(q)
             lemmas = matchLemmas(Db.allLemmas(), q)
             when {
@@ -121,7 +181,7 @@ fun SearchScreen(nav: Nav) {
                 value = query,
                 onValueChange = { query = it },
                 singleLine = true,
-                placeholder = { Text(t("كلمة عربي أو إنجليزي، أو H430، أو λόγος", "كلمة عربية أو إنجليزية، أو H430، أو λόγος", "Arabic or English word, H430, or λόγος"), color = Muted) },
+                placeholder = { Text(t("كلمة، أو شاهد زي يوحنا 3:16، أو H430", "كلمة، أو شاهد مثل يوحنا 3:16، أو H430", "A word, a reference like John 3:16, or H430"), color = Muted) },
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                 keyboardActions = KeyboardActions(onSearch = { run() }),
                 colors = OutlinedTextFieldDefaults.colors(
@@ -143,6 +203,20 @@ fun SearchScreen(nav: Nav) {
                 verticalArrangement = Arrangement.spacedBy(10.dp),
                 modifier = Modifier.fillMaxSize(),
             ) {
+                if (refs.isNotEmpty()) items(refs, key = { "ref${it.book.id}:${it.ch}:${it.v}" }) { r ->
+                    Row(
+                        Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp))
+                            .border(BorderStroke(1.dp, Gold.copy(alpha = 0.6f)), RoundedCornerShape(12.dp))
+                            .clickable { nav.push(Screen.Reader(r.book.id, r.ch, r.v ?: 1)) }.padding(14.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(t("افتح ", "افتح ", "Open "), color = Muted, fontSize = 14.sp)
+                        Text(
+                            "${r.book.name} ${ArText.num(r.ch)}" + (r.v?.let { ":" + ArText.num(it) } ?: ""),
+                            color = Gold, fontSize = 17.sp, fontWeight = FontWeight.SemiBold,
+                        )
+                    }
+                }
                 if (tab == 0) {
                     val vs = verses
                     if (vs != null && vs.isEmpty()) item {

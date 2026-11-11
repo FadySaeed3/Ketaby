@@ -42,6 +42,8 @@ sealed interface Screen {
     data class Concordance(val dstrong: String) : Screen
     data object Search : Screen
     data object Settings : Screen
+    /** book → chapter → verse picker, opened from the reader */
+    data class Picker(val book: Int?, val ch: Int?) : Screen
 }
 
 /** What the word panel shows: the words aligned to one Arabic unit, or explicit original words. */
@@ -53,6 +55,8 @@ class Nav(start: List<Screen>) {
     fun push(s: Screen) { stack.add(s) }
     fun replace(s: Screen) { stack[stack.lastIndex] = s }
     fun pop() { if (stack.size > 1) stack.removeAt(stack.lastIndex) }
+    /** Back to the books list (the home screen). */
+    fun home() { while (stack.size > 1) stack.removeAt(stack.lastIndex) }
 }
 
 /** Interface text in the chosen language: Egyptian, Modern Standard Arabic, or English. */
@@ -129,6 +133,7 @@ private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
         is Screen.Concordance -> ConcordanceScreen(nav, s.dstrong)
         is Screen.Search -> SearchScreen(nav)
         is Screen.Settings -> SettingsScreen(nav)
+        is Screen.Picker -> PickerScreen(nav, s.book, s.ch)
     }
 
     sheet?.let { req ->

@@ -109,6 +109,10 @@ object Db {
         }.also { bookCache = it }
     }
 
+    suspend fun verseCount(book: Int, ch: Int): Int = withContext(Dispatchers.IO) {
+        query("SELECT MAX(v) FROM verses WHERE book=? AND ch=?", arrayOf("$book", "$ch")) { if (it.isNull(0)) 0 else it.getInt(0) }.first()
+    }
+
     suspend fun chapter(book: Int, ch: Int): List<VerseRow> = withContext(Dispatchers.IO) {
         val verses = query("SELECT id, v, text FROM verses WHERE book=? AND ch=? ORDER BY v", arrayOf("$book", "$ch")) {
             Triple(it.getLong(0), it.getInt(1), it.getString(2))

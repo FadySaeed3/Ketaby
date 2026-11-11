@@ -70,6 +70,30 @@ tap_text 'كل المواضع' center
 shot 3_concordance
 adb shell input keyevent KEYCODE_BACK; sleep 2
 
+# navigation: book -> chapter -> verse picker, then a typed reference, then a swipe
+tap_text 'الأسفار والإصحاحات' center
+shot 3a_picker_books
+tap_text '^رومية' center
+shot 3b_picker_chapters
+tap_text '^٨$' center
+shot 3c_picker_verses
+tap_text '^٢٨$' center
+sleep 2
+shot 3d_romans_8_28
+tap_text '^بحث$' center
+adb shell input text 'John%s3:16'; adb shell input keyevent KEYCODE_ENTER; sleep 4
+shot 3e_reference_search
+tap_text 'يوحنا ٣:١٦' center
+sleep 2
+shot 3f_john_3_16
+adb shell input swipe 200 1200 900 1200 300
+sleep 3
+shot 3g_after_swipe
+adb shell input keyevent KEYCODE_BACK; sleep 1
+adb shell input keyevent KEYCODE_BACK; sleep 1
+adb shell input keyevent KEYCODE_BACK; sleep 2
+shot 3h_after_back
+
 # Van Dyke with KJV underneath, then tap an English word
 tap_text '^طريقة العرض$' center
 tap_text '^فاندايك وتحته KJV$' center

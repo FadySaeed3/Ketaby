@@ -65,6 +65,7 @@ PY
 shot 1_reader
 adb shell input keyevent KEYCODE_BACK; sleep 2
 shot 1b_home
+sleep 1
 tap_text 'كمّل من آخر مكان' center
 sleep 2
 tap_text '^١ ' firstword
@@ -148,6 +149,8 @@ adb shell run-as $PKG mkdir -p files/lex
 adb shell "cat /data/local/tmp/fake_halot.pdf | run-as $PKG sh -c 'cat > files/lex/halot.pdf'"
 adb shell am start -S -n $PKG/.MainActivity --es sheetStrong H5390
 sleep 8
+adb shell input swipe 540 2000 540 700 400; sleep 2
+adb shell input swipe 540 2000 540 900 400; sleep 2
 tap_text '^Open in HALOT$' center
 sleep 5
 shot 14_halot_viewer

@@ -47,6 +47,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -141,8 +142,9 @@ fun HomeScreen(nav: Nav) {
             item {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(Modifier.size(58.dp).clip(CircleShape).background(Color.Black)) {
-                        Image(painterResource(R.drawable.ic_launcher_background), null, Modifier.fillMaxSize())
-                        Image(painterResource(R.drawable.ic_launcher_foreground), null, Modifier.fillMaxSize())
+                        // the icon's visible circle is the middle 72 of its 108 units
+                        Image(painterResource(R.drawable.ic_launcher_background), null, Modifier.fillMaxSize().scale(1.5f))
+                        Image(painterResource(R.drawable.ic_launcher_foreground), null, Modifier.fillMaxSize().scale(1.5f))
                     }
                     Spacer(Modifier.width(12.dp))
                     Row(

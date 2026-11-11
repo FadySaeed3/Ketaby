@@ -28,7 +28,8 @@ data class Lemma(
 data class OpenLex(val src: String, val html: String)
 
 /** Claude's dictionary entry for a lemma: short meaning and full explanation, each in eg / msa / en. */
-data class DictEntry(val gloss: Tri, val entry: Tri)
+/** Claude's dictionary entry; [checked] = compared with HALOT (Hebrew) or BDAG (Greek). */
+data class DictEntry(val gloss: Tri, val entry: Tri, val checked: Boolean = false)
 
 /** Where an entry sits in the owner's HALOT or BDAG PDF (1-based page, y in PDF points from the top). */
 data class LexPos(val lex: String, val page: Int, val y: Float, val n: Int?)
@@ -140,6 +141,7 @@ object Db {
             DictEntry(
                 tri(o.optJSONObject("gloss"), null) ?: Tri(null, null, null),
                 tri(o.optJSONObject("entry"), null) ?: Tri(null, null, null),
+                o.optBoolean("halot_checked", false) || o.optBoolean("bdag_checked", false),
             )
         }
     }

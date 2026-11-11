@@ -73,11 +73,24 @@ private fun langLabel(l: String) = when (l) {
 @Composable
 fun ExplainText(text: String, lang: String, size: Int = 15, color: Color = Ink) {
     Text(
-        text, color = color, fontSize = size.sp, lineHeight = (size * 1.75).sp,
+        boldMarks(text), color = color, fontSize = size.sp, lineHeight = (size * 1.75).sp,
         fontFamily = if (lang == "en") FontFamily.Serif else Plex,
         modifier = Modifier.fillMaxWidth(),
         style = TextStyle(textDirection = if (lang == "en") TextDirection.Ltr else TextDirection.Rtl),
     )
+}
+
+/** "**a lead-in:** text" -> the lead-in in gold semibold (dictionary entries use it for section names). */
+fun boldMarks(s: String): androidx.compose.ui.text.AnnotatedString = androidx.compose.ui.text.buildAnnotatedString {
+    val parts = s.split("**")
+    parts.forEachIndexed { i, p ->
+        if (i % 2 == 1 && i < parts.size - 1) {
+            pushStyle(androidx.compose.ui.text.SpanStyle(fontWeight = FontWeight.SemiBold, color = Gold)); append(p); pop()
+        } else {
+            if (i % 2 == 1) append("**")
+            append(p)
+        }
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -219,7 +232,7 @@ private fun WordBlock(w: OWord, card: Card?, extra: Extra?, onConcordance: (Stri
                 val lt = if (greek) listOfNotNull(l.tr, l.tr2).distinct().joinToString(" / ") else (l.tr ?: "")
                 Text(lt, color = Teal, fontSize = 15.sp, style = TextStyle(textDirection = TextDirection.Rtl))
             }
-            if (!l.gloss.isNullOrBlank()) Label(t("المعنى الأساسي (إنجليزي مؤقتًا)", "المعنى الأساسي (بالإنجليزية مؤقتًا)", "Basic meaning"), l.gloss, ltr = true)
+            if (!l.gloss.isNullOrBlank() && extra?.dict == null) Label(t("المعنى الأساسي (إنجليزي مؤقتًا)", "المعنى الأساسي (بالإنجليزية مؤقتًا)", "Basic meaning"), l.gloss, ltr = true)
             Label(t("اتذكرت في الكتاب", "عدد مرات ورودها", "Occurs"), ArText.times(l.count))
             Label(t("رقم سترونج", "رقم سترونج", "Strong's number"), l.dstrong, ltr = true)
         }
@@ -237,6 +250,12 @@ private fun WordBlock(w: OWord, card: Card?, extra: Extra?, onConcordance: (Stri
                     )
                     if (full) TriBlock(de.entry)
                 }
+                val lexName = if (greek) "BDAG" else "HALOT"
+                Text(
+                    if (de.checked) t("شرح Claude، واتراجع على $lexName", "شرح Claude، رُوجع على $lexName", "Claude's entry, checked against $lexName")
+                    else t("شرح Claude من القواميس المفتوحة، لسه متراجعش على $lexName", "شرح Claude من المعاجم المفتوحة، لم يُراجع على $lexName بعد", "Claude's entry from the open lexicons, not yet checked against $lexName"),
+                    color = Muted, fontSize = 11.sp, modifier = Modifier.padding(top = 8.dp),
+                )
             }
         }
         extra?.let { RenderingsRow(it.rend) }

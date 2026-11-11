@@ -193,6 +193,7 @@ def load_verses(db):
 def load_owords(db, vid):
     rows, key2id, lem = [], {}, {}
     count = collections.Counter()
+    votes = collections.defaultdict(collections.Counter)
     oid = 0
     # Hebrew / Aramaic
     for f in sorted(glob.glob(os.path.join(TA, 'TAHOT*.txt'))):
@@ -217,11 +218,10 @@ def load_owords(db, vid):
             key2id[('H', book, oc, ov, wno)] = oid
             if ds:
                 count[ds] += 1
-                if ds not in lem:
-                    ex = re.search(r'\{' + re.escape(ds) + r'=([^=]*)=([^}]*)\}', p[11])
-                    if ex:
-                        gloss = ex.group(2).lstrip(': ').split('»')[0]
-                        lem[ds] = (lang, ex.group(1).split(',')[0].strip(), gloss)
+                ex = re.search(r'\{' + re.escape(ds) + r'=([^=]*)=([^}]*)\}', p[11])
+                if ex:
+                    gloss = ex.group(2).lstrip(': ').split('»')[0]
+                    votes[ds][(lang, ex.group(1).split(',')[0].strip(), gloss)] += 1
     # Greek
     for f in sorted(glob.glob(os.path.join(TA, 'TAGNT*.txt'))):
         for line in open(f, encoding='utf-8'):
@@ -248,9 +248,12 @@ def load_owords(db, vid):
             key2id[('G', book, ch, v, wno)] = oid
             if ds:
                 count[ds] += 1
-                if ds not in lem and '=' in dfg:
+                if '=' in dfg:
                     form, gloss = dfg.split('=', 1)
-                    lem[ds] = ('grc', unicodedata.normalize('NFC', form.split(',')[0].strip()), gloss.strip())
+                    votes[ds][('grc', unicodedata.normalize('NFC', form.split(',')[0].strip()), gloss.strip())] += 1
+    # the dictionary form most occurrences give (the first one is sometimes a related word, e.g. G1473)
+    for ds, c in votes.items():
+        lem[ds] = c.most_common(1)[0][0]
     db.executemany('INSERT INTO owords VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', rows)
     return key2id, lem, count
 

@@ -107,24 +107,13 @@ tap_text '^Matthew ' center
 sleep 3
 shot 11_matthew
 
-# a rare-word card in three languages: search H5390, open Song 1:2 from the concordance
-adb shell input keyevent KEYCODE_BACK; sleep 1
-adb shell input keyevent KEYCODE_BACK; sleep 1
-adb shell input keyevent KEYCODE_BACK; sleep 1
-tap_text '^Search$' center
-adb shell input text H5390; adb shell input keyevent KEYCODE_ENTER; sleep 4
-tap_text 'נְשִׁיקָה' center
-tap_text 'kisses' center
-sleep 3
-adb shell uiautomator dump /sdcard/u.xml >/dev/null; adb pull /sdcard/u.xml u.xml >/dev/null
-echo "=====NODES"; python3 -c "
-import re;x=open('u.xml',encoding='utf-8').read()
-for n in re.findall(r'<node [^>]*>',x)[:80]:
-    a=dict(re.findall(r'([\w-]+)=\"([^\"]*)\"',n)); print(repr((a.get('text') or a.get('content-desc') or '')[:50]), a.get('class'), a.get('clickable'), a.get('bounds'))
-"
-tap_text '^kisses$' center
-sleep 3
+# a rare-word card in three languages (the app opens the word panel for H5390 when started with this extra)
+adb shell am start -n $PKG/.MainActivity --es sheetStrong H5390
+sleep 6
 shot 12_card_three_languages
+adb shell input swipe 540 1900 540 600 400
+sleep 2
+shot 13_card_scrolled
 
 echo "=====LOGCAT"
 adb logcat -d -s AndroidRuntime:E $PKG:* System.err:W | tail -200

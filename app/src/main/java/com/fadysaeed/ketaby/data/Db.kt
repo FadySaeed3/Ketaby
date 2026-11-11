@@ -235,6 +235,10 @@ object Db {
         ) { EVerse(it.getLong(0), it.getString(1), parseSpans(it.str(2))) }.associateBy { it.verseId }
     }
 
+    suspend fun firstWordOfLemma(dstrong: String): Long? = withContext(Dispatchers.IO) {
+        query("SELECT id FROM owords WHERE dstrong=? OR dstrong LIKE ? ORDER BY id LIMIT 1", arrayOf(dstrong, "$dstrong%")) { it.getLong(0) }.firstOrNull()
+    }
+
     suspend fun wordIdsForLemma(dstrong: String): Set<Long> = withContext(Dispatchers.IO) {
         query("SELECT id FROM owords WHERE dstrong=?", arrayOf(dstrong)) { it.getLong(0) }.toSet()
     }

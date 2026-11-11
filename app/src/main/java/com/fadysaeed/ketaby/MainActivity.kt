@@ -15,6 +15,8 @@ class MainActivity : ComponentActivity() {
             navigationBarStyle = SystemBarStyle.dark(Color.TRANSPARENT),
         )
         super.onCreate(savedInstanceState)
-        setContent { App() }
+        // "sheetStrong" opens the word panel for a lemma on start (used by the emulator smoke test)
+        val sheetStrong = intent?.getStringExtra("sheetStrong")
+        setContent { App(sheetStrong) }
     }
 }

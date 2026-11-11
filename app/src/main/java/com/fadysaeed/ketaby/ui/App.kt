@@ -59,7 +59,7 @@ class Nav(start: List<Screen>) {
 fun t(eg: String, msa: String, en: String): String = when (ArText.ui) { "msa" -> msa; "en" -> en; else -> eg }
 
 @Composable
-fun App() {
+fun App(sheetStrong: String? = null) {
     val ctx = LocalContext.current
     val prefs = remember { Prefs(ctx.applicationContext) }
     var ready by remember { mutableStateOf(false) }
@@ -86,7 +86,7 @@ fun App() {
             LocalPrefs provides prefs,
         ) {
             KetabyTheme {
-                if (!ready) Splash(progress, failure) else Main(prefs, nav)
+                if (!ready) Splash(progress, failure) else Main(prefs, nav, sheetStrong)
             }
         }
     }
@@ -113,8 +113,11 @@ private fun Splash(progress: Float, failure: String?) {
 }
 
 @Composable
-private fun Main(prefs: Prefs, nav: Nav) {
+private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
     var sheet by remember { mutableStateOf<SheetRequest?>(null) }
+    LaunchedEffect(sheetStrong) {
+        if (sheetStrong != null) Db.firstWordOfLemma(sheetStrong)?.let { sheet = SheetRequest(null, null, listOf(it)) }
+    }
 
     BackHandler(enabled = nav.stack.size > 1) { nav.pop() }
 

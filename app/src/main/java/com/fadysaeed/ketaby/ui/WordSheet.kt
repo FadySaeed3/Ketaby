@@ -160,7 +160,7 @@ private fun WordBlock(w: OWord, card: Card?, onConcordance: (String) -> Unit) {
     ) {
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxWidth()) {
             Text(
-                if (greek || prefs.cantillation) w.text else ArText.stripCantillation(w.text),
+                (if (greek || prefs.cantillation) w.text else ArText.stripCantillation(w.text)).replace("¶", ""),
                 fontFamily = if (greek) GreekFont else HebrewFont, fontSize = 34.sp, color = Gold,
             )
             Text("$langName · ${ArText.num(w.oc)}:${ArText.num(w.ov)}", color = Muted, fontSize = 12.sp)

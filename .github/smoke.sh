@@ -108,7 +108,8 @@ sleep 3
 shot 11_matthew
 
 # a rare-word card in three languages (the app opens the word panel for H5390 when started with this extra)
-adb shell am start -n $PKG/.MainActivity --es sheetStrong H5390
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong H5390
+sleep 4
 sleep 6
 shot 12_card_three_languages
 adb shell input swipe 540 1900 540 600 400

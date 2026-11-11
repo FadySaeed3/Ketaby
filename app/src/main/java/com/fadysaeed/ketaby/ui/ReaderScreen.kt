@@ -341,7 +341,7 @@ fun Interlinear(words: List<OWord>, onWord: (OWord) -> Unit) {
 private fun WordCell(w: OWord, greekMode: Int, cantillation: Boolean, scale: Float, onClick: () -> Unit) {
     val greek = w.lang == "grc"
     val inMain = !greek || (w.editions?.contains('N') ?: true)
-    val original = if (greek || cantillation) w.text else ArText.stripCantillation(w.text)
+    val original = (if (greek || cantillation) w.text else ArText.stripCantillation(w.text)).replace("¶", "")
     Column(
         Modifier.clip(RoundedCornerShape(8.dp)).clickable { onClick() }.background(Color.Black).padding(horizontal = 8.dp, vertical = 6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,

@@ -33,6 +33,12 @@ import com.fadysaeed.ketaby.data.Db
 import com.fadysaeed.ketaby.data.Lemma
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextDirection
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
+
+/** Where each concordance list was left, so going back from a verse returns to the same spot. */
+object ConcScroll { val saved = HashMap<String, Pair<Int, Int>>() }
 
 @Composable
 fun ConcordanceScreen(nav: Nav, dstrong: String) {
@@ -41,12 +47,22 @@ fun ConcordanceScreen(nav: Nav, dstrong: String) {
     val englishTr = if (prefs.readerMode != 0) prefs.english else null
     val result by produceState<Pair<List<ConcHit>, Set<Long>>?>(null, dstrong, englishTr) { value = Db.concordance(dstrong, englishTr) }
     val lemmaWords by produceState<Set<Long>>(emptySet(), dstrong) { value = Db.wordIdsForLemma(dstrong) }
+    // keep the place in the list when coming back from a verse
+    val listState = rememberLazyListState()
+    LaunchedEffect(result) {
+        val saved = ConcScroll.saved[dstrong]
+        if (result != null && saved != null) listState.scrollToItem(saved.first, saved.second)
+    }
+    DisposableEffect(dstrong) {
+        onDispose { ConcScroll.saved[dstrong] = listState.firstVisibleItemIndex to listState.firstVisibleItemScrollOffset }
+    }
     Scaffold(
         containerColor = Color.Black,
         topBar = { KTopBar(t("كل المواضع", "كل المواضع", "All occurrences"), onBack = { nav.pop() }) { SearchSettingsActions(nav) } },
     ) { pad ->
         val r = result
         LazyColumn(
+            state = listState,
             contentPadding = PaddingValues(16.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
             modifier = Modifier.padding(pad).fillMaxSize(),

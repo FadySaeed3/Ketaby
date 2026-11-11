@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.interaction.DragInteraction
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -200,6 +201,9 @@ private fun ViewMenu(onHome: () -> Unit) {
     }
 }
 
+/** Smoke test only: turn off the re-scroll to compare with the old behaviour. */
+object ReaderDebug { var noRescroll = false }
+
 @Composable
 fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> Unit) {
     val prefs = LocalPrefs.current
@@ -225,6 +229,20 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
         }
     }
     val listState = remember(screen) { LazyListState(startIndex) }
+
+    // Opening at a verse (from the concordance, search or the picker): the English lines and the
+    // interlinear arrive after the Arabic text and make every verse taller. Near the end of a chapter
+    // the list cannot put the verse at the top, so it settles on an earlier verse, and once the
+    // verses grow that earlier verse stays put and pushes the target off the screen. So jump to the
+    // verse again each time the content grows, until the reader touches the list.
+    var touched by remember(screen) { mutableStateOf(false) }
+    LaunchedEffect(screen) {
+        listState.interactionSource.interactions.collect { if (it is DragInteraction.Start) touched = true }
+    }
+    LaunchedEffect(screen, verses, english, words) {
+        val vs = verses ?: return@LaunchedEffect
+        if (screen.verse > 0 && !touched && !ReaderDebug.noRescroll && screen.verse <= vs.size) listState.scrollToItem(screen.verse - 1)
+    }
 
     LaunchedEffect(screen) {
         snapshotFlow { listState.firstVisibleItemIndex }

@@ -181,11 +181,19 @@ adb logcat -c
 adb shell am start -S -n $PKG/.MainActivity --es sheetStrong conc:G3056
 sleep 10
 shot 19_concordance_logos
-for ref in 'Matthew 5:37$' 'Matthew 7:28$' 'Matthew 8:8$'; do
+adb shell input swipe 540 1900 540 700 400; sleep 2
+for ref in 'Matthew 7:24$' 'Matthew 7:26$'; do
   tap_text "^$ref" center
   sleep 6
   shot "20_open_${ref//[^0-9]/_}"
   adb shell input keyevent KEYCODE_BACK; sleep 3
+  shot "20b_back_${ref//[^0-9]/_}"
+done
+# a verse near the end of a chapter, with the English line under each verse: old behaviour, then the fix
+for spot in 40:7:28:nofix 40:7:28 40:5:47:nofix 40:5:47; do
+  adb shell am start -S -n $PKG/.MainActivity --es sheetStrong read:$spot
+  sleep 10
+  shot "21_read_${spot//:/_}"
 done
 echo "=====READER LOG"
 adb logcat -d -s KetabyReader:D | tail -80

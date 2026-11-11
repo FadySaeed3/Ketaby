@@ -58,6 +58,13 @@ import com.fadysaeed.ketaby.data.Lexicons
 import com.fadysaeed.ketaby.data.PdfDoc
 import com.fadysaeed.ketaby.data.PdfDocs
 import kotlinx.coroutines.launch
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.gestures.calculateCentroid
+import androidx.compose.foundation.gestures.calculateZoom
+import androidx.compose.ui.graphics.TransformOrigin
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.input.pointer.PointerEventPass
 
 /** Light pages shown as light text on black (AMOLED); off = the PDF as printed. */
 private val invert = ColorFilter.colorMatrix(
@@ -125,31 +132,84 @@ fun LexViewerScreen(nav: Nav, s: Screen.Lex) {
     }
 }
 
+/** Render width is capped (memory); beyond it the page is drawn scaled up. */
+private const val MAX_RENDER_ZOOM = 2.5f
+
 @Composable
-private fun PdfPages(nav: Nav, s: Screen.Lex, doc: PdfDoc, end: LexPos?, zoom: Float, night: Boolean, modifier: Modifier) {
+private fun PdfPages(nav: Nav, s: Screen.Lex, doc: PdfDoc, end: LexPos?, zoomIn: Float, night: Boolean, modifier: Modifier) {
     val density = LocalDensity.current
     val scope = rememberCoroutineScope()
+    var zoom by ViewerPrefs.zoom
+    var gesture by remember { mutableFloatStateOf(1f) }
+    var focus by remember { mutableStateOf(Offset.Zero) }
     BoxWithConstraints(modifier.fillMaxSize()) {
-        val widthPx = with(density) { (maxWidth * zoom).roundToPx() }
+        val viewW = constraints.maxWidth.toFloat()
+        val viewH = constraints.maxHeight.toFloat()
+        val widthPx = (viewW * zoom).toInt()
+        val renderPx = (viewW * minOf(zoom, MAX_RENDER_ZOOM)).toInt()
         val scale = widthPx / doc.pageW
         val pageHeightPx = (doc.pageH * scale).toInt()
         val pageWdp = with(density) { widthPx.toDp() }
         val pageHdp = with(density) { pageHeightPx.toDp() }
         val firstIndex = (s.page - 1).coerceIn(0, doc.pageCount - 1)
-        val listState = remember(s, zoom) {
+        val listState = remember(s) {
             LazyListState(firstIndex, ((s.y * scale) - with(density) { 72.dp.toPx() }).toInt().coerceAtLeast(0))
         }
         val hScroll = rememberScrollState()
+
+        // two fingers: zoom around the point between them; one finger keeps scrolling the pages
+        val pinch = Modifier.pointerInput(Unit) {
+            awaitEachGesture {
+                awaitFirstDown(requireUnconsumed = false)
+                var zoomed = false
+                do {
+                    val event = awaitPointerEvent(PointerEventPass.Initial)
+                    if (event.changes.count { it.pressed } >= 2) {
+                        val z = event.calculateZoom()
+                        if (z != 1f) {
+                            gesture = (gesture * z).coerceIn(1f / zoom, 4f / zoom)
+                            focus = event.calculateCentroid(useCurrent = true)
+                            zoomed = true
+                        }
+                        event.changes.forEach { it.consume() }
+                    }
+                } while (event.changes.any { it.pressed })
+                if (zoomed) {
+                    val old = zoom
+                    val new = (old * gesture).coerceIn(1f, 4f)
+                    val ratio = new / old
+                    val idx = listState.firstVisibleItemIndex
+                    val off = listState.firstVisibleItemScrollOffset
+                    val hx = hScroll.value
+                    zoom = new
+                    gesture = 1f
+                    scope.launch {
+                        listState.scrollToItem(idx, ((off + focus.y) * ratio - focus.y).toInt().coerceAtLeast(0))
+                        hScroll.scrollTo(((hx + focus.x) * ratio - focus.x).toInt().coerceAtLeast(0))
+                    }
+                }
+            }
+        }
+        Box(
+            Modifier.fillMaxSize().then(pinch).graphicsLayer {
+                scaleX = gesture; scaleY = gesture
+                transformOrigin = TransformOrigin(
+                    if (viewW > 0) focus.x / viewW else 0.5f, if (viewH > 0) focus.y / viewH else 0.5f,
+                )
+            },
+        ) {
         Box(Modifier.fillMaxSize().horizontalScroll(hScroll, enabled = zoom > 1f)) {
             LazyColumn(state = listState, modifier = Modifier.width(pageWdp).fillMaxSize()) {
                 items(doc.pageCount) { i ->
                     val pageNo = i + 1
-                    val bmp by produceState<Bitmap?>(null, i, widthPx) { value = doc.render(i, widthPx) }
+                    val bmp by produceState<Bitmap?>(null, i, renderPx) { value = doc.render(i, renderPx) }
                     val links by produceState<List<LexLink>>(emptyList(), i) { value = Db.linksOnPage(s.lex, pageNo) }
                     Box(
                         Modifier.width(pageWdp).height(pageHdp).background(if (night) Color.Black else Color.White)
                             .pointerInput(i, scale, links) {
-                                detectTapGestures { off ->
+                                detectTapGestures(
+                                    onDoubleTap = { zoom = if (zoom < 1.9f) 2f else 1f },
+                                ) { off ->
                                     val x = off.x / scale; val y = off.y / scale
                                     val hit = links.firstOrNull { x in (it.x0 - 3)..(it.x1 + 3) && y in (it.y0 - 3)..(it.y1 + 3) }
                                     if (hit != null) scope.launch {
@@ -189,6 +249,7 @@ private fun PdfPages(nav: Nav, s: Screen.Lex, doc: PdfDoc, end: LexPos?, zoom: F
                     Box(Modifier.fillMaxWidth().height(6.dp).background(Color.Black))
                 }
             }
+        }
         }
     }
 }

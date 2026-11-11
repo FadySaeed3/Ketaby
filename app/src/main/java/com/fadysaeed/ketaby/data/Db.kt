@@ -24,6 +24,12 @@ data class Lemma(
     val halotAll: List<Int> = emptyList(), val bdagAll: List<Int> = emptyList(),
 )
 
+/** One open-lexicon entry (light HTML: <b>, <i>, <br>). */
+data class OpenLex(val src: String, val html: String)
+
+/** Claude's dictionary entry for a lemma: short meaning and full explanation, each in eg / msa / en. */
+data class DictEntry(val gloss: Tri, val entry: Tri)
+
 /** Where an entry sits in the owner's HALOT or BDAG PDF (1-based page, y in PDF points from the top). */
 data class LexPos(val lex: String, val page: Int, val y: Float, val n: Int?)
 data class LexLink(val x0: Float, val y0: Float, val x1: Float, val y1: Float, val to: Int)
@@ -113,6 +119,38 @@ object Db {
     private fun Cursor.floatOrNull(i: Int): Float? = if (isNull(i)) null else getFloat(i)
     private fun allN(json: String?): List<Int> = json?.let { j -> Regex("\\d+").findAll(j).mapNotNull { it.value.toIntOrNull() }.toList() } ?: emptyList()
     private fun firstN(json: String?): Int? = json?.let { Regex("\\d+").find(it)?.value?.toIntOrNull() }
+
+    // ------------------------------------------------------------ open lexicons and the Arabic dictionary
+    suspend fun openLexicons(dstrong: String): List<OpenLex> = withContext(Dispatchers.IO) {
+        val keys = listOf(dstrong, dstrong.replace(Regex("[A-Za-z]$"), ""), plainStrong(dstrong)).distinct()
+        val rows = query(
+            "SELECT src, html, key FROM lexdefs WHERE key IN (${keys.joinToString(",") { "?" }})", keys.toTypedArray(),
+        ) { Triple(it.getString(0), it.getString(1), keys.indexOf(it.getString(2))) }
+        // the most specific key wins for each source
+        rows.groupBy { it.first }.map { (src, l) -> OpenLex(src, l.minBy { it.third }.second) }
+            .sortedBy { listOf("bdb", "ubs", "lsj", "tbes").indexOf(it.src) }
+    }
+
+    suspend fun dictEntry(dstrong: String): DictEntry? = withContext(Dispatchers.IO) {
+        val keys = listOf(dstrong, plainStrong(dstrong)).distinct()
+        query("SELECT json FROM dict WHERE dstrong IN (${keys.joinToString(",") { "?" }}) ORDER BY length(dstrong) DESC", keys.toTypedArray()) {
+            it.getString(0)
+        }.firstOrNull()?.let { js ->
+            val o = JSONObject(js)
+            DictEntry(
+                tri(o.optJSONObject("gloss"), null) ?: Tri(null, null, null),
+                tri(o.optJSONObject("entry"), null) ?: Tri(null, null, null),
+            )
+        }
+    }
+
+    /** How Van Dyke renders a lemma: Arabic words (without vowels) and how often. */
+    suspend fun renderings(dstrong: String): List<Pair<String, Int>> = withContext(Dispatchers.IO) {
+        query("SELECT json FROM rend WHERE dstrong=?", arrayOf(dstrong)) { it.getString(0) }.firstOrNull()?.let { js ->
+            val a = org.json.JSONArray(js)
+            List(a.length()) { i -> a.getJSONArray(i).let { x -> x.getString(0) to x.getInt(1) } }
+        } ?: emptyList()
+    }
 
     // ------------------------------------------------------------ HALOT / BDAG positions
     suspend fun meta(key: String): String? = withContext(Dispatchers.IO) {

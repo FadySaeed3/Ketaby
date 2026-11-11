@@ -101,7 +101,7 @@ class PdfDoc(file: File) : Closeable {
         p.close()
     }
 
-    private val cache = object : LruCache<String, Bitmap>(48 * 1024 * 1024) {
+    private val cache = object : LruCache<String, Bitmap>(128 * 1024 * 1024) {
         override fun sizeOf(key: String, value: Bitmap) = value.byteCount
     }
 

@@ -40,6 +40,12 @@ import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.Card
 import com.fadysaeed.ketaby.data.Db
 import com.fadysaeed.ketaby.data.Lexicons
+import com.fadysaeed.ketaby.data.OpenLex
+import com.fadysaeed.ketaby.data.DictEntry
+import androidx.compose.foundation.clickable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.foundation.horizontalScroll
 import kotlinx.coroutines.launch
@@ -47,7 +53,8 @@ import com.fadysaeed.ketaby.data.OWord
 import com.fadysaeed.ketaby.data.Tri
 import com.fadysaeed.ketaby.morph.Morph
 
-private data class SheetData(val words: List<OWord>, val cards: Map<String, Card>)
+private data class Extra(val open: List<OpenLex>, val dict: DictEntry?, val rend: List<Pair<String, Int>>)
+private data class SheetData(val words: List<OWord>, val cards: Map<String, Card>, val extra: Map<String, Extra>)
 
 /** Languages to show explanations in, from the "explanation language" setting. */
 @Composable
@@ -83,11 +90,13 @@ fun WordSheet(
     val data by produceState<SheetData?>(null, req) {
         val ws = if (req.tokenId != null) Db.wordsForToken(req.tokenId) else Db.wordsById(req.wordIds)
         val cards = HashMap<String, Card>()
+        val extra = HashMap<String, Extra>()
         for (w in ws) {
             val ds = w.dstrong ?: continue
             Db.card(ds)?.let { cards[ds] = it }
+            if (ds !in extra) extra[ds] = Extra(Db.openLexicons(ds), Db.dictEntry(ds), Db.renderings(ds))
         }
-        value = SheetData(ws, cards)
+        value = SheetData(ws, cards, extra)
     }
     val dir = if (ArText.english) LayoutDirection.Ltr else LayoutDirection.Rtl
     ModalBottomSheet(onDismissRequest = onDismiss, sheetState = state, containerColor = Panel) {
@@ -123,7 +132,7 @@ fun WordSheet(
                     )
                     else -> d.words.forEachIndexed { i, w ->
                         if (i > 0) Spacer(Modifier.height(12.dp))
-                        WordBlock(w, w.dstrong?.let { d.cards[it] }, onConcordance, onOpenLex)
+                        WordBlock(w, w.dstrong?.let { d.cards[it] }, w.dstrong?.let { d.extra[it] }, onConcordance, onOpenLex)
                     }
                 }
                 Spacer(Modifier.height(24.dp))
@@ -157,7 +166,7 @@ private fun TriBlock(tri: Tri, size: Int = 15) {
 }
 
 @Composable
-private fun WordBlock(w: OWord, card: Card?, onConcordance: (String) -> Unit, onOpenLex: (String, Int, Float, Int?) -> Unit) {
+private fun WordBlock(w: OWord, card: Card?, extra: Extra?, onConcordance: (String) -> Unit, onOpenLex: (String, Int, Float, Int?) -> Unit) {
     val prefs = LocalPrefs.current
     val greek = w.lang == "grc"
     val langName = when (w.lang) {
@@ -214,6 +223,24 @@ private fun WordBlock(w: OWord, card: Card?, onConcordance: (String) -> Unit, on
             Label(t("اتذكرت في الكتاب", "عدد مرات ورودها", "Occurs"), ArText.times(l.count))
             Label(t("رقم سترونج", "رقم سترونج", "Strong's number"), l.dstrong, ltr = true)
         }
+
+        extra?.dict?.let { de ->
+            Spacer(Modifier.height(10.dp))
+            Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(PanelHi).padding(12.dp)) {
+                Text(t("المعنى", "المعنى", "Meaning"), color = Gold, fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
+                TriBlock(de.gloss, size = 16)
+                if (de.entry.eg != null || de.entry.msa != null || de.entry.en != null) {
+                    var full by remember(de) { mutableStateOf(false) }
+                    Text(
+                        if (full) t("اقفل الشرح ▴", "إخفاء الشرح ▴", "Hide explanation ▴") else t("الشرح الكامل ▾", "الشرح الكامل ▾", "Full explanation ▾"),
+                        color = Teal, fontSize = 13.sp, modifier = Modifier.padding(top = 8.dp).clickable { full = !full },
+                    )
+                    if (full) TriBlock(de.entry)
+                }
+            }
+        }
+        extra?.let { RenderingsRow(it.rend) }
+        extra?.let { OpenLexiconList(it.open, greek) }
 
         if (card != null) {
             Spacer(Modifier.height(10.dp))

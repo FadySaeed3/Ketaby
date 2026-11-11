@@ -13,7 +13,20 @@ SOURCES = [
         'name': 'STEPBible-Data',
         'url': 'https://github.com/STEPBible/STEPBible-Data.git',
         'commit': '5de0a47f35f0fc13dfe1430d104e5db8a4285f9c',
-        'paths': ['/Tagged-Bibles/Arabic Bibles/*', '/Translators Amalgamated OT+NT/*'],
+        'paths': ['/Tagged-Bibles/Arabic Bibles/*', '/Translators Amalgamated OT+NT/*', '/Lexicons/*'],
+    },
+    {
+        'name': 'HebrewLexicon',     # OpenScriptures BDB + lexical index (CC BY 4.0; BDB text public domain)
+        'url': 'https://github.com/openscriptures/HebrewLexicon.git',
+        'commit': '21c9add13bc727d3a951361778e97e3ff7afd1ce',
+        'paths': ['/BrownDriverBriggs.xml', '/LexicalIndex.xml', '/readme.md'],
+    },
+    {
+        'name': 'ubs-open-license',  # UBS Dictionary of Biblical Hebrew / Greek NT (CC BY-SA 4.0)
+        'url': 'https://github.com/ubsicap/ubs-open-license.git',
+        'commit': 'a15a96cfaa4ca18a6c0339016645ba1e534db3c8',
+        'paths': ['/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-en.JSON',
+                  '/dictionaries/greek/JSON/UBSGreekNTDic-v1.1-en.JSON', '/LICENSE.md'],
     },
 ]
 

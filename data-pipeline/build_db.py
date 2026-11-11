@@ -24,6 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from books import BOOKS, STEP2ID, OSIS2ID
 from translit import hebrew_to_arabic, greek_academic, greek_modern
 import english
+import open_lexicons
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DL = os.path.join(HERE, 'downloads', 'STEPBible-Data')
@@ -47,6 +48,9 @@ def schema(db):
         wno INTEGER, text TEXT, tr TEXT, tr2 TEXT, gloss TEXT, dstrong TEXT, dstrongs TEXT, grammar TEXT, editions TEXT,
         vd_verse INTEGER);
     CREATE TABLE links(token_id INTEGER, oword_id INTEGER);
+    CREATE TABLE lexdefs(key TEXT, src TEXT, html TEXT);
+    CREATE TABLE dict(dstrong TEXT PRIMARY KEY, json TEXT);
+    CREATE TABLE rend(dstrong TEXT PRIMARY KEY, json TEXT);
     CREATE TABLE lex_entries(lex TEXT, n INTEGER, label TEXT, page INTEGER, y REAL, PRIMARY KEY(lex, n)) WITHOUT ROWID;
     CREATE TABLE lex_links(lex TEXT, page INTEGER, x0 REAL, y0 REAL, x1 REAL, y1 REAL, to_n INTEGER);
     CREATE TABLE everses(tr TEXT, verse_id INTEGER, text TEXT, spans TEXT, plain TEXT, PRIMARY KEY(tr, verse_id)) WITHOUT ROWID;
@@ -112,6 +116,29 @@ def load_lex_index(db):
                        [(lex, l['p'], *l['r'], l['to']) for l in d.get('links', [])])
         info[lex] = d['file']
     return info
+
+
+def load_dict(db):
+    """Claude's dictionary entries (content/dictionary/*/*.json, lists under "words")."""
+    n = 0
+    for f in sorted(glob.glob(os.path.join(HERE, '..', 'content', 'dictionary', '*', '*.json'))):
+        for w in json.load(open(f, encoding='utf-8')).get('words', []):
+            db.execute('INSERT OR REPLACE INTO dict VALUES (?,?)', (w['dstrong'], json.dumps(w, ensure_ascii=False)))
+            n += 1
+    return n
+
+
+def load_renderings(db):
+    """For every lemma, the Arabic words Van Dyke uses for it (from the alignment), most frequent first."""
+    c = collections.defaultdict(collections.Counter)
+    for ds, text in db.execute('SELECT o.dstrong, t.text FROM links k JOIN owords o ON o.id=k.oword_id '
+                               'JOIN tokens t ON t.id=k.token_id WHERE o.dstrong IS NOT NULL'):
+        w = plain_ar(text).strip()
+        if w:
+            c[ds][re.sub(r'\s+', ' ', w)] += 1
+    db.executemany('INSERT INTO rend VALUES (?,?)',
+                   [(ds, json.dumps(cnt.most_common(12), ensure_ascii=False)) for ds, cnt in c.items()])
+    return len(c)
 
 
 def load_cards(db):
@@ -302,6 +329,10 @@ def main(out):
     ncards = load_cards(db)
     estats = load_english(db)
     lexinfo = load_lex_index(db)
+    ndict = load_dict(db)
+    nrend = load_renderings(db)
+    db.executemany('INSERT INTO lexdefs VALUES (?,?,?)', open_lexicons.load_all(
+        DL, os.path.join(HERE, 'downloads', 'HebrewLexicon'), os.path.join(HERE, 'downloads', 'ubs-open-license')))
     chap = collections.Counter()
     for b, c in db.execute('SELECT book, MAX(ch) FROM verses GROUP BY book'):
         chap[b] = c
@@ -311,6 +342,7 @@ def main(out):
     db.executescript('''
     CREATE INDEX i_verses ON verses(book, ch, v);
     CREATE INDEX i_lex_links ON lex_links(lex, page);
+    CREATE INDEX i_lexdefs ON lexdefs(key);
     CREATE INDEX i_lex_pos ON lex_entries(lex, page, y);
     CREATE INDEX i_cards ON cards(strong);
     CREATE INDEX i_tokens ON tokens(verse_id);
@@ -341,6 +373,8 @@ def main(out):
         'cards': q('SELECT COUNT(*) FROM cards'),
         'lex_entries': q('SELECT COUNT(*) FROM lex_entries'),
         'lex_links': q('SELECT COUNT(*) FROM lex_links'),
+        'dict_entries': ndict, 'renderings': nrend,
+        **{'open_' + s_: n_ for s_, n_ in db.execute('SELECT src, COUNT(*) FROM lexdefs GROUP BY src')},
         'lemmas_with_halot': q("SELECT COUNT(*) FROM lemmas WHERE halot IS NOT NULL"),
         'lemmas_with_bdag': q("SELECT COUNT(*) FROM lemmas WHERE bdag IS NOT NULL"),
         **{'links_' + k: v for k, v in lstats.items()},

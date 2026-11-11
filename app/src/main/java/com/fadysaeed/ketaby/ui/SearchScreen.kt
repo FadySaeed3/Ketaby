@@ -132,16 +132,27 @@ private fun matchLemmas(all: List<Lemma>, q: String): List<Lemma> {
     return hits.take(300)
 }
 
+/** The last search stays on screen when you come back to it from a verse. */
+private object SearchMemory {
+    val query = mutableStateOf("")
+    val tab = mutableIntStateOf(0)
+    val verses = mutableStateOf<List<SearchHit>?>(null)
+    val versesEnglish = mutableStateOf(false)
+    val total = mutableIntStateOf(0)
+    val lemmas = mutableStateOf<List<Lemma>?>(null)
+    val refs = mutableStateOf<List<RefHit>>(emptyList())
+}
+
 @Composable
 fun SearchScreen(nav: Nav) {
-    var query by rememberSaveable { mutableStateOf("") }
-    var tab by rememberSaveable { mutableIntStateOf(0) }
-    var verses by remember { mutableStateOf<List<SearchHit>?>(null) }
-    var versesEnglish by remember { mutableStateOf(false) }
+    var query by SearchMemory.query
+    var tab by SearchMemory.tab
+    var verses by SearchMemory.verses
+    var versesEnglish by SearchMemory.versesEnglish
     val prefs = LocalPrefs.current
-    var total by remember { mutableIntStateOf(0) }
-    var lemmas by remember { mutableStateOf<List<Lemma>?>(null) }
-    var refs by remember { mutableStateOf<List<RefHit>>(emptyList()) }
+    var total by SearchMemory.total
+    var lemmas by SearchMemory.lemmas
+    var refs by SearchMemory.refs
     val scope = rememberCoroutineScope()
     val focus = remember { FocusRequester() }
 
@@ -170,7 +181,7 @@ fun SearchScreen(nav: Nav) {
         }
     }
 
-    LaunchedEffect(Unit) { focus.requestFocus() }
+    LaunchedEffect(Unit) { if (query.isEmpty()) focus.requestFocus() }
 
     Scaffold(
         containerColor = Color.Black,

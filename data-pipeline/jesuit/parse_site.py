@@ -12,7 +12,8 @@ MARK = re.compile(r'<a id="trigger(\d+)"[^>]*>\s*\(?\d+\)?\s*</a>')
 
 
 def text_of(frag):
-    frag = MARK.sub(lambda m: '⁣[[n%s]]' % m.group(1), frag)
+    frag = MARK.sub('', frag)                       # the site's own few note links: the notes come from the print
+    frag = re.sub(r'\[/?cm_tooltip[^\]]*\]', '', frag)  # leftover glossary shortcodes
     frag = re.sub(r'<br\s*/?>', '\n', frag)
     t = html.unescape(TAG.sub('', frag))
     t = t.replace('\xa0', ' ')
@@ -29,6 +30,12 @@ def parse_book(path):
     if len(cnt) > 1 and 'luke' in cnt and not os.path.basename(path).startswith('book_luke'):
         del cnt['luke']
     prefix = cnt.most_common(1)[0][0]
+    # the last chapter runs into the page's closing sections (donation buttons, footer): cut there
+    last = [m.start() for m in re.finditer(r'<div id="%s-chap\d+"' % prefix, body)][-1]
+    ends = [i for i in (body.find('<div class="et_pb_section ', last), body.find('<!-- .entry-content -->', last),
+                        body.find('<footer', last)) if i > 0]
+    if ends:
+        body = body[:min(ends)]
     parts = re.split(r'<div id="%s-chap(\d+)"' % prefix, body)
     intro_html = parts[0]
     intro = [{'tag': t, 'text': text_of(x)} for t, a, x in BLOCK.findall(intro_html) if text_of(x)]
@@ -109,6 +116,10 @@ def fixups(books):
         if x['k'] == 'v' and x['v'] == 27 and '٣٨' in x['text']:
             a, b = x['text'].split('٣٨', 1)
             x['text'] = a.strip(); it.insert(k + 1, {'k': 'v', 'v': 28, 'text': b.strip(), 'p': False}); break
+    # Matthew 1:18: a glossary link glued to the next word («المسيحفكان»)
+    for x in chap('matt', 1):
+        if x['k'] == 'v' and x['v'] == 18:
+            x['text'] = x['text'].replace('المسيحفكانَ', 'المسيح فكانَ')
     # 1 Kings 7: the site numbers 7:50-51 as 51-52
     for x in chap('1kings', 7):
         if x['k'] == 'v' and x['v'] > 50:

@@ -79,6 +79,7 @@ adb shell input keyevent KEYCODE_BACK; sleep 2
 tap_text 'الأسفار والإصحاحات' center
 shot 3a_picker_books
 tap_text '^التكوين$' center
+sleep 2
 shot 3b_picker_chapters
 tap_text '^٣$' center
 shot 3c_picker_verses
@@ -210,6 +211,7 @@ adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jesuit
 sleep 10
 shot 23_jesuit_books
 tap_text '^التكوين$' center
+sleep 2
 shot 23b_jesuit_chapters
 adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jread:1:1:3
 sleep 10
@@ -217,14 +219,19 @@ shot 24_jesuit_reader
 tap_text 'Van Dyke|^فاندايك$' center
 sleep 4
 shot 25_vd_from_jesuit
-tap_text '^طريقة العرض$' center
-tap_text 'اليسوعية تحت كل آية' center
+tap_text '^(View|طريقة العرض)$' center
+tap_text '(Jesuit under each verse|اليسوعية تحت كل آية)' center
 sleep 4
 shot 26_vd_with_jesuit_under
 adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jread:1:1:0
 sleep 8
-tap_text 'مقدمة السفر' center
+tap_text '^(Introduction|مقدمة السفر)$' center
 shot 27_jesuit_intro
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong read:1:2:1
+sleep 10
+shot 28_vd_gen2_under
+tap_text '^(View|طريقة العرض)$' center
+shot 29_vd_menu_with_jesuit
 
 echo "=====READER LOG"
 adb logcat -d -s KetabyReader:D | tail -80

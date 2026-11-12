@@ -232,6 +232,12 @@ sleep 10
 shot 28_vd_gen2_under
 tap_text '^(View|طريقة العرض)$' center
 shot 29_vd_menu_with_jesuit
+# margin references of Genesis 1:1 in the fake package: tap the verse number (top right of the first paragraph)
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jread:1:1:0
+sleep 8
+adb shell input tap 1020 483
+sleep 3
+shot 30_jesuit_margin_sheet
 
 echo "=====READER LOG"
 adb logcat -d -s KetabyReader:D | tail -80

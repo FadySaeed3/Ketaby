@@ -13,7 +13,7 @@ Tables in the package:
   jitems(book, ch, seq, kind, lvl, v, sub, para, text)                  kind 'h' heading / 'v' verse; text has
                                                                         note markers as U+E000 n U+E001
   jnotes(book, ch, n, text)                                             footnotes, numbered per chapter
-  jmargin(book, ch, v, sub, refs)                                       margin cross-references
+  jmargin(book, ch, v, sub, refs, links)                                margin cross-references; links = JSON [start, end, book, ch, v]
   jmap(vd_book, vd_ch, vd_v, book, ch, v, sub)                          which Jesuit verses sit under a Van Dyke verse
 """
 import glob, json, os, re, sqlite3, sys, collections, datetime
@@ -33,6 +33,56 @@ jer lam ezek dan hos joel amos obad jonah mic nah hab zeph hag zech mal matt mac
 phil col 1thess 2thess 1tim 2tim titus philem heb james 1pet 2pet 1john 2john 3john jude rev""".split()
 DEUTERO = {'tob', 'jth', '1macc', '2macc', 'wisdofsol', 'sir', 'bar'}
 assert len(ORDER) == 73 and len(SHORT) == 73 and len(VD_ORDER) == 66
+
+# The edition's own book abbreviations (front matter table «الترتيب الأبجدي لأسفار الكتاب المقدس»).
+ABBR = {
+    'أح': 'lev', '١ اخ': '1chron', '٢ اخ': '2chron', 'ار': 'jer', 'اس': 'est', 'اش': 'isa', 'اف': 'eph', 'اي': 'job',
+    'با': 'bar', '١ بط': '1pet', '٢ بط': '2pet', 'تث': 'deut', '١ تس': '1thess', '٢ تس': '2thess', 'تك': 'gen',
+    'جا': 'eccles', 'حب': 'hab', 'حج': 'hag', 'حز': 'ezek', 'حك': 'wisdofsol', 'خر': 'ex', 'دا': 'dan', 'را': 'ruth',
+    'رسل': 'acts', 'روم': 'rom', 'رؤ': 'rev', 'زك': 'zech', 'سي': 'sir', 'صف': 'zeph', '١ صم': '1sam', '٢ صم': '2sam',
+    'طو': 'tob', 'طي': 'titus', '١ طيم': '1tim', '٢ طيم': '2tim', 'عا': 'amos', 'عب': 'heb', 'عد': 'num', 'عز': 'ezra',
+    'عو': 'obad', 'غل': 'gal', 'ف': 'philem', 'فل': 'phil', 'قض': 'judg', '١ قور': '1cor', '٢ قور': '2cor', 'قول': 'col',
+    'لو': 'luke', 'متى': 'matt', 'مثل': 'prov', 'مر': 'mac', 'مرا': 'lam', 'مز': 'ps', '١ مك': '1macc', '٢ مك': '2macc',
+    '١ مل': '1kings', '٢ مل': '2kings', 'ملا': 'mal', 'مي': 'mic', 'نح': 'neh', 'نحو': 'nah', 'نش': 'song', 'هو': 'hos',
+    'يش': 'josh', 'يع': 'james', 'يو': 'john', '١ يو': '1john', '٢ يو': '2john', '٣ يو': '3john', 'يوء': 'joel',
+    'يون': 'jonah', 'يه': 'jth', 'يهو': 'jude',
+}
+# spelling variants seen in the scans / readings
+ABBR.update({'اح': 'lev', 'أي': 'job', 'إر': 'jer', 'إش': 'isa', 'أف': 'eph', '١ أخ': '1chron', '٢ أخ': '2chron', 'سير': 'sir'})
+AR_DIG = str.maketrans('٠١٢٣٤٥٦٧٨٩', '0123456789')
+_ABBR_RE = '|'.join(sorted(map(re.escape, ABBR), key=len, reverse=True))
+_REF = re.compile(r'(?:(?P<abbr>' + _ABBR_RE + r')\s+)?(?P<nums>[٠-٩]+(?:\s*/\s*[٠-٩]+)?(?:\s*[-–]\s*[٠-٩]*(?:/[٠-٩]+)?)?\s*[+ت]?)')
+
+
+def ref_links(text, book_slug):
+    """Spans of a margin reference group that can open a passage: [start, end, book_id, ch, v]."""
+    out = []
+    for part in re.finditer(r'[^؛]+', text):
+        cur = book_slug                     # a reference without a book name is in the current book
+        last_ch = None
+        seg, base = part.group(0), part.start()
+        pos = 0
+        while True:
+            m = _REF.search(seg, pos)
+            if not m:
+                break
+            pos = m.end()
+            if m.group('abbr'):
+                cur = ABBR[m.group('abbr')]
+            nums = m.group('nums')
+            first = re.match(r'([٠-٩]+)(?:\s*/\s*([٠-٩]+))?', nums)
+            a = int(first.group(1).translate(AR_DIG))
+            if first.group(2):
+                ch, v = a, int(first.group(2).translate(AR_DIG)); last_ch = ch
+            elif last_ch is not None and not m.group('abbr'):
+                ch, v = last_ch, a          # «يو ١/١-٣ و١٤»: a verse of the same chapter
+            else:
+                ch, v = a, 1                # «مز ٨»: a whole chapter
+            end = m.start() + len(m.group(0).rstrip())
+            if cur in ORDER:
+                out.append([base + m.start(), base + end, ORDER.index(cur) + 1, ch, v])
+    return out
+
 
 DIA = re.compile('[ً-ْٰـۡ]')
 MARK_L, MARK_R = '', ''
@@ -133,7 +183,7 @@ def main(parsed, notes_dir, vd_db, out):
       CREATE TABLE jintro(book INTEGER, seq INTEGER, tag TEXT, text TEXT);
       CREATE TABLE jitems(book INTEGER, ch INTEGER, seq INTEGER, kind TEXT, lvl TEXT, v INTEGER, sub TEXT, para INTEGER, text TEXT);
       CREATE TABLE jnotes(book INTEGER, ch INTEGER, n INTEGER, text TEXT);
-      CREATE TABLE jmargin(book INTEGER, ch INTEGER, v INTEGER, sub TEXT, refs TEXT);
+      CREATE TABLE jmargin(book INTEGER, ch INTEGER, v INTEGER, sub TEXT, refs TEXT, links TEXT);
       CREATE TABLE jmap(vd_book INTEGER, vd_ch INTEGER, vd_v INTEGER, book INTEGER, ch INTEGER, v INTEGER, sub TEXT);
     """)
     vdb = sqlite3.connect(vd_db)
@@ -194,8 +244,11 @@ def main(parsed, notes_dir, vd_db, out):
             stats.append((slug, len(js), same))
     for (b, ch, n), text in notes.items():
         db.execute('INSERT INTO jnotes VALUES(?,?,?,?)', (ORDER.index(b) + 1, ch, n, text))
+    nlinks = 0
     for b, ch, v, sub, refs in margin:
-        db.execute('INSERT INTO jmargin VALUES(?,?,?,?,?)', (ORDER.index(b) + 1, ch, v, sub, refs))
+        links = ref_links(refs, b)
+        nlinks += len(links)
+        db.execute('INSERT INTO jmargin VALUES(?,?,?,?,?,?)', (ORDER.index(b) + 1, ch, v, sub, refs, json.dumps(links)))
     db.executescript("""
       CREATE INDEX ji ON jitems(book, ch, seq); CREATE INDEX jn ON jnotes(book, ch); CREATE INDEX jm ON jmargin(book, ch);
       CREATE INDEX jmv ON jmap(vd_book, vd_ch); CREATE INDEX jmj ON jmap(book, ch); CREATE INDEX jin ON jintro(book);
@@ -204,7 +257,7 @@ def main(parsed, notes_dir, vd_db, out):
                  'notes': str(len(notes))}.items():
         db.execute('INSERT INTO meta VALUES(?,?)', (k, v))
     db.commit(); db.execute('VACUUM'); db.close()
-    print(f'markers placed {placed}, missed {missed}; notes {len(notes)}; margin groups {len(margin)}')
+    print(f'markers placed {placed}, missed {missed}; notes {len(notes)}; margin groups {len(margin)}, links {nlinks}')
     worst = sorted(stats, key=lambda s: s[2] / max(1, s[1]))[:12]
     print('verse map, same reference share (lowest):', ', '.join(f'{s}:{d}/{n}' for s, n, d in worst))
     print('size', os.path.getsize(out) // 1024, 'KB')

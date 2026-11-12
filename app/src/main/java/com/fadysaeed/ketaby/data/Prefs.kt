@@ -43,6 +43,12 @@ class Prefs(ctx: Context) {
     fun putUiLang(v: String) { uiLang = v; sp.edit().putString("uiLang", v).apply() }
     fun putExplainLang(v: String) { explainLang = v; sp.edit().putString("explainLang", v).apply() }
     fun putEnglish(v: String) { english = v; sp.edit().putString("english", v).apply() }
+    /** Last place read in the Jesuit translation: "book:ch:v:short name", empty if none. */
+    var jesuitPos by mutableStateOf(sp.getString("jesuitPos", "") ?: ""); private set
+    fun putJesuitPos(book: Int, ch: Int, v: Int, short: String) {
+        val s = "$book:$ch:$v:$short"
+        if (s != jesuitPos) { jesuitPos = s; sp.edit().putString("jesuitPos", s).apply() }
+    }
     fun putJesuitUnder(v: Boolean) { jesuitUnder = v; sp.edit().putBoolean("jesuitUnder", v).apply() }
     fun putReaderMode(v: Int) { readerMode = v; sp.edit().putInt("readerMode", v).apply() }
 

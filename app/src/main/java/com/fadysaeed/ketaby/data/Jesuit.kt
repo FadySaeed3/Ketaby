@@ -19,6 +19,12 @@ data class JItem(val kind: Char, val lvl: String?, val v: Int, val sub: String, 
     val label: String get() = ArText.num(v) + sub
 }
 
+/** A tappable reference inside a margin group: characters [start, end) open book/ch/v. */
+data class JLink(val start: Int, val end: Int, val book: Int, val ch: Int, val v: Int)
+
+/** One margin reference group as printed, with the parts that open a passage. */
+data class JMargin(val refs: String, val links: List<JLink>)
+
 /** A Jesuit verse shown under a Van Dyke verse. */
 data class JUnder(val book: Int, val ch: Int, val v: Int, val sub: String, val text: String)
 
@@ -56,7 +62,20 @@ object Jesuit {
     private fun closeDb() {
         try { db?.close() } catch (_: Exception) {}
         db = null
+        hasLinks = null
     }
+
+    /** Packages built before v0.5.1 have no `links` column in jmargin. */
+    private var hasLinks: Boolean? = null
+
+    private fun linksColumn(ctx: Context): Boolean = hasLinks ?: run {
+        val d = db(ctx) ?: return false
+        d.rawQuery("PRAGMA table_info(jmargin)", null).use { c -> var f = false; while (c.moveToNext()) if (c.getString(1) == "links") f = true; f }
+            .also { hasLinks = it }
+    }
+
+    /** The text without the note markers. */
+    fun plain(text: String): String = text.replace(Regex("\uE000\\d+\uE001"), "")
 
     /** Copies the chosen package in. Returns null when it worked, or a short reason when the file is not a Jesuit package. */
     suspend fun import(ctx: Context, uri: Uri, progress: (Float) -> Unit): String? = withContext(Dispatchers.IO) {
@@ -139,10 +158,19 @@ object Jesuit {
     }
 
     /** Margin cross-references of a chapter, keyed by verse label (v + sub). */
-    suspend fun margin(ctx: Context, book: Int, ch: Int): Map<String, List<String>> = withContext(Dispatchers.IO) {
-        q(ctx, "SELECT v, sub, refs FROM jmargin WHERE book=? AND ch=?", arrayOf("$book", "$ch")) { c ->
-            "${c.getInt(0)}${c.getString(1) ?: ""}" to c.getString(2)
+    suspend fun margin(ctx: Context, book: Int, ch: Int): Map<String, List<JMargin>> = withContext(Dispatchers.IO) {
+        val links = linksColumn(ctx)
+        q(ctx, "SELECT v, sub, refs" + (if (links) ", links" else "") + " FROM jmargin WHERE book=? AND ch=?", arrayOf("$book", "$ch")) { c ->
+            val ls = if (links && !c.isNull(3)) parseLinks(c.getString(3)) else emptyList()
+            "${c.getInt(0)}${c.getString(1) ?: ""}" to JMargin(c.getString(2), ls)
         }.groupBy({ it.first }, { it.second })
+    }
+
+    private fun parseLinks(json: String): List<JLink> = try {
+        val a = org.json.JSONArray(json)
+        (0 until a.length()).map { i -> val e = a.getJSONArray(i); JLink(e.getInt(0), e.getInt(1), e.getInt(2), e.getInt(3), e.getInt(4)) }
+    } catch (e: Exception) {
+        emptyList()
     }
 
     suspend fun intro(ctx: Context, book: Int): List<Pair<String, String>> = withContext(Dispatchers.IO) {

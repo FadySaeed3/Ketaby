@@ -17,7 +17,7 @@ db.executescript("""
   CREATE TABLE jintro(book INTEGER, seq INTEGER, tag TEXT, text TEXT);
   CREATE TABLE jitems(book INTEGER, ch INTEGER, seq INTEGER, kind TEXT, lvl TEXT, v INTEGER, sub TEXT, para INTEGER, text TEXT);
   CREATE TABLE jnotes(book INTEGER, ch INTEGER, n INTEGER, text TEXT);
-  CREATE TABLE jmargin(book INTEGER, ch INTEGER, v INTEGER, sub TEXT, refs TEXT);
+  CREATE TABLE jmargin(book INTEGER, ch INTEGER, v INTEGER, sub TEXT, refs TEXT, links TEXT);
   CREATE TABLE jmap(vd_book INTEGER, vd_ch INTEGER, vd_v INTEGER, book INTEGER, ch INTEGER, v INTEGER, sub TEXT);
 """)
 for k, v in {'format': '1', 'kind': 'jesuit', 'name': 'نسخة تجريبية', 'notes': '2'}.items():
@@ -43,7 +43,7 @@ for ch, seq, kind, lvl, v, sub, para, text in rows:
 db.execute("INSERT INTO jitems VALUES(2,1,0,'v',NULL,1,'',1,'جملة تجريبية في أول متى.')")
 db.execute("INSERT INTO jnotes VALUES(1,1,1,'حاشية تجريبية على العنوان.')")
 db.execute("INSERT INTO jnotes VALUES(1,1,2,'حاشية تجريبية على الآية الأولى.')")
-db.execute("INSERT INTO jmargin VALUES(1,1,1,'','مز ٨ ؛ يو ١/١-٣')")
+db.execute("INSERT INTO jmargin VALUES(1,1,1,'','مز ٨ ؛ متى ١/١','[[0,4,1,2,1],[7,14,2,1,1]]')")
 for v in range(1, 6):
     db.execute('INSERT INTO jmap VALUES(1,1,?,1,1,?,\'\')', (v, v))
 for v in range(1, 4):

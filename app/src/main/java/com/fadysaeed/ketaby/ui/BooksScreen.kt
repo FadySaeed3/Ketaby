@@ -209,12 +209,19 @@ fun HomeScreen(nav: Nav) {
             item {
                 @Suppress("UNUSED_VARIABLE") val jv = Jesuit.version.intValue
                 val jReady = Jesuit.has(ctx)
-                Row {
+                val pos = prefs.jesuitPos.split(':').takeIf { it.size == 4 }
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                     Tool(
                         Modifier.weight(1f), t("الترجمة اليسوعية", "الترجمة اليسوعية", "Jesuit translation"),
-                        if (jReady) t("بمقدماتها وحواشيها", "بمقدماتها وحواشيها", "with introductions and notes") else t("ضيف ملف اليسوعية", "أضف ملف اليسوعية", "Add the Jesuit file"),
+                        if (jReady) t("الأسفار والمقدمات", "الأسفار والمقدمات", "Books and introductions") else t("ضيف ملف اليسوعية", "أضف ملف اليسوعية", "Add the Jesuit file"),
                         if (jReady) Teal else Gold,
                     ) { nav.push(if (jReady) Screen.JBooks else Screen.JesuitSetup) }
+                    if (jReady && pos != null) {
+                        Tool(
+                            Modifier.weight(1f), t("كمّل في اليسوعية", "تابع في اليسوعية", "Continue in the Jesuit"),
+                            pos[3] + " " + ArText.num(pos[1].toInt()) + ":" + ArText.num(pos[2].toInt()), Gold,
+                        ) { nav.push(Screen.JReader(pos[0].toInt(), pos[1].toInt(), pos[2].toInt())) }
+                    }
                 }
             }
             // ---- books, grouped

@@ -51,6 +51,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
+import kotlinx.coroutines.flow.distinctUntilChanged
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -75,13 +77,17 @@ import androidx.compose.ui.unit.sp
 import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.JBook
 import com.fadysaeed.ketaby.data.JItem
+import com.fadysaeed.ketaby.data.JLink
+import com.fadysaeed.ketaby.data.JMargin
 import com.fadysaeed.ketaby.data.JUnder
 import com.fadysaeed.ketaby.data.Jesuit
 import kotlinx.coroutines.launch
 import kotlin.math.abs
 
-/** A note or a set of margin references shown in the bottom panel. */
-data class JNote(val title: String, val body: String)
+/** A note or a set of margin references shown in the bottom panel; [context] = the verse or heading it belongs to. */
+data class JNote(val title: String, val body: String, val context: String? = null, val links: List<JLink> = emptyList(), val legend: Boolean = false)
+
+private val NOT_YET get() = t("لسه ماقريناش الحاشية دي من الكتاب المطبوع.", "لم تُنقل هذه الحاشية من الطبعة الورقية بعد.", "This note has not been added yet.")
 
 /**
  * Appends Jesuit text, turning the U+E000 n U+E001 markers into small tappable note numbers.
@@ -117,16 +123,50 @@ fun AnnotatedString.Builder.appendJesuit(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun JNoteSheet(note: JNote, onDismiss: () -> Unit) {
+fun JNoteSheet(note: JNote, onOpen: ((Int, Int, Int) -> Unit)? = null, onDismiss: () -> Unit) {
     val state = rememberModalBottomSheetState(skipPartiallyExpanded = false)
+    val prefs = LocalPrefs.current
     ModalBottomSheet(onDismissRequest = onDismiss, sheetState = state, containerColor = Panel) {
         Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal = 18.dp).padding(bottom = 28.dp)) {
             Text(note.title, color = Gold, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
+            note.context?.let { c ->
+                Spacer(Modifier.height(6.dp))
+                Text(
+                    if (prefs.harakat) c else ArText.stripHarakat(c), color = Muted, fontSize = 15.sp, lineHeight = 26.sp, fontFamily = scriptureFamily(),
+                    modifier = Modifier.fillMaxWidth(), style = TextStyle(textDirection = TextDirection.Rtl),
+                )
+            }
             Spacer(Modifier.height(8.dp))
+            val body = buildAnnotatedString {
+                append(note.body)
+                if (onOpen != null) for (l in note.links) {
+                    if (l.start < 0 || l.end > note.body.length || l.start >= l.end) continue
+                    addLink(
+                        LinkAnnotation.Clickable(
+                            tag = "r${l.start}",
+                            styles = TextLinkStyles(style = SpanStyle(color = Teal), pressedStyle = SpanStyle(background = Teal.copy(alpha = 0.35f))),
+                            linkInteractionListener = { onOpen(l.book, l.ch, l.v) },
+                        ),
+                        l.start, l.end,
+                    )
+                }
+            }
             Text(
-                note.body, color = Ink, fontSize = 16.sp, lineHeight = 29.sp, fontFamily = Plex,
-                modifier = Modifier.fillMaxWidth(), style = TextStyle(textDirection = TextDirection.Rtl),
+                body, color = Ink, fontSize = if (note.links.isEmpty()) 16.sp else 18.sp, lineHeight = if (note.links.isEmpty()) 29.sp else 34.sp,
+                fontFamily = Plex, modifier = Modifier.fillMaxWidth(), style = TextStyle(textDirection = TextDirection.Rtl),
             )
+            if (note.legend) {
+                Spacer(Modifier.height(12.dp))
+                Text(
+                    t(
+                        "دوس على أي شاهد يفتحلك مكانه. علامة + بعد الشاهد معناها إن عنده حاشية أساسية أو مجموعة شواهد تساعدك تفهم النص، وحرف «ت» معناه الآية دي واللي بعدها.",
+                        "اضغط أي شاهد لفتح موضعه. علامة + بعد الشاهد تعني أن عنده حاشية أساسية أو مجموعة شواهد تعين على فهم النص، وحرف «ت» يعني الآية المذكورة وما يليها.",
+                        "Tap a reference to open it. A + after a reference marks a key note or a set of helpful references there; «ت» means that verse and the ones after it.",
+                    ),
+                    color = Muted, fontSize = 13.sp, lineHeight = 22.sp, modifier = Modifier.fillMaxWidth(),
+                    style = TextStyle(textDirection = if (ArText.english) TextDirection.Ltr else TextDirection.Rtl),
+                )
+            }
         }
     }
 }
@@ -331,7 +371,7 @@ fun JReaderScreen(nav: Nav, s: Screen.JReader) {
     val book = books.firstOrNull { it.id == s.book }
     val items by produceState<List<JItem>?>(null, s.book, s.ch) { value = Jesuit.chapter(ctx, s.book, s.ch) }
     val notes by produceState<Map<String, String>>(emptyMap(), s.book, s.ch) { value = Jesuit.notes(ctx, listOf(s.book to s.ch)) }
-    val margin by produceState<Map<String, List<String>>>(emptyMap(), s.book, s.ch) { value = Jesuit.margin(ctx, s.book, s.ch) }
+    val margin by produceState<Map<String, List<JMargin>>>(emptyMap(), s.book, s.ch) { value = Jesuit.margin(ctx, s.book, s.ch) }
     var shown by remember { mutableStateOf<JNote?>(null) }
     val scope = rememberCoroutineScope()
     val bl = remember(items) { items?.let { blocks(it) } }
@@ -344,6 +384,15 @@ fun JReaderScreen(nav: Nav, s: Screen.JReader) {
         if (s.verse <= 1 || touched) return@LaunchedEffect
         val idx = b.indexOfFirst { it is JBlock.Para && it.verses.any { v -> v.v == s.verse } }
         if (idx >= 0) listState.scrollToItem(idx)
+    }
+    // remember where the reader is, for the "continue" card on the home screen
+    LaunchedEffect(s, bl, book) {
+        val b = bl ?: return@LaunchedEffect
+        val name = book?.short ?: return@LaunchedEffect
+        snapshotFlow { listState.firstVisibleItemIndex }.distinctUntilChanged().collect { i ->
+            val v = (b.drop(i).firstOrNull { it is JBlock.Para } as? JBlock.Para)?.verses?.firstOrNull()?.v ?: 1
+            prefs.putJesuitPos(s.book, s.ch, v, name)
+        }
     }
 
     fun go(delta: Int) {
@@ -413,7 +462,7 @@ fun JReaderScreen(nav: Nav, s: Screen.JReader) {
                         val big = blk.lvl.startsWith("h1")
                         val text = buildAnnotatedString {
                             appendJesuit(blk.text, prefs.harakat, 18.sp, { n -> "${s.book}:${s.ch}:$n" }) { n, key ->
-                                shown = JNote(noteTitle(n), notes[key] ?: t("الحاشية دي لسه مااتقرتش من الكتاب.", "لم تُنقل هذه الحاشية بعد.", "This note has not been added yet."))
+                                shown = JNote(noteTitle(n), notes[key] ?: NOT_YET, Jesuit.plain(blk.text))
                             }
                         }
                         Text(
@@ -434,14 +483,25 @@ fun JReaderScreen(nav: Nav, s: Screen.JReader) {
                                         tag = "m${v.v}${v.sub}",
                                         styles = TextLinkStyles(style = numStyle.copy(background = Teal.copy(alpha = 0.18f))),
                                         linkInteractionListener = {
-                                            shown = JNote(t("شواهد الآية", "شواهد الآية", "References for verse") + " " + v.label, refs.joinToString("\n"))
+                                            var off = 0
+                                            val body = StringBuilder()
+                                            val links = ArrayList<JLink>()
+                                            for (g in refs) {
+                                                if (body.isNotEmpty()) { body.append("\n"); off = body.length }
+                                                body.append(g.refs)
+                                                g.links.forEach { links.add(it.copy(start = it.start + off, end = it.end + off)) }
+                                            }
+                                            shown = JNote(
+                                                t("شواهد الآية", "شواهد الآية", "References for verse") + " " + v.label, body.toString(),
+                                                Jesuit.plain(v.text).replace('\n', ' '), links, legend = true,
+                                            )
                                         },
                                     )
                                     withLink(link) { append(v.label) }
                                 } else withStyle(numStyle) { append(v.label) }
                                 append(" ")
                                 appendJesuit(v.text, prefs.harakat, size, { n -> "${s.book}:${s.ch}:$n" }) { n, key ->
-                                    shown = JNote(noteTitle(n), notes[key] ?: t("الحاشية دي لسه مااتقرتش من الكتاب.", "لم تُنقل هذه الحاشية بعد.", "This note has not been added yet."))
+                                    shown = JNote(noteTitle(n) + " · " + v.label, notes[key] ?: NOT_YET, Jesuit.plain(v.text).replace('\n', ' '))
                                 }
                             }
                         }
@@ -458,7 +518,7 @@ fun JReaderScreen(nav: Nav, s: Screen.JReader) {
             }
         }
     }
-    shown?.let { JNoteSheet(it) { shown = null } }
+    shown?.let { JNoteSheet(it, onOpen = { b, c, v -> shown = null; nav.push(Screen.JReader(b, c, v)) }) { shown = null } }
 }
 
 // ------------------------------------------------------------------ under Van Dyke
@@ -476,7 +536,7 @@ fun JesuitUnder(list: List<JUnder>, notes: Map<String, String>, onNote: (JNote) 
             }
             append(" ")
             appendJesuit(j.text, prefs.harakat, size, { n -> "${j.book}:${j.ch}:$n" }) { n, key ->
-                onNote(JNote(noteTitle(n), notes[key] ?: t("الحاشية دي لسه مااتقرتش من الكتاب.", "لم تُنقل هذه الحاشية بعد.", "This note has not been added yet.")))
+                onNote(JNote(noteTitle(n), notes[key] ?: NOT_YET, Jesuit.plain(j.text).replace('\n', ' ')))
             }
         }
     }

@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.Db
+import com.fadysaeed.ketaby.data.Jesuit
 import com.fadysaeed.ketaby.data.Prefs
 
 sealed interface Screen {
@@ -47,6 +48,11 @@ sealed interface Screen {
     data object Lexicons : Screen
     /** The owner's HALOT/BDAG PDF opened on an entry (1-based page, y in PDF points). */
     data class Lex(val lex: String, val page: Int, val y: Float, val n: Int?) : Screen
+    /** Jesuit translation: import screen, books, reader (book = Jesuit book id), book introduction. */
+    data object JesuitSetup : Screen
+    data object JBooks : Screen
+    data class JReader(val book: Int, val ch: Int, val verse: Int = 0) : Screen
+    data class JIntro(val book: Int) : Screen
 }
 
 /** What the word panel shows: the words aligned to one Arabic unit, or explicit original words. */
@@ -121,6 +127,7 @@ private fun Splash(progress: Float, failure: String?) {
 
 @Composable
 private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
+    val ctxMain = LocalContext.current
     var sheet by remember { mutableStateOf<SheetRequest?>(null) }
     LaunchedEffect(sheetStrong) {
         val lexStart = sheetStrong?.let { Regex("lex:(halot|bdag):(\\d+)").matchEntire(it) }
@@ -129,6 +136,13 @@ private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
             // "read:40:7:28" opens the reader at a verse (emulator smoke test)
             val (b, c, v) = readAt.destructured
             nav.push(Screen.Reader(b.toInt(), c.toInt(), v.toInt()))
+        } else if (sheetStrong?.startsWith("jread:") == true) {
+            // "jread:1:1:3" opens the Jesuit reader (emulator smoke test)
+            val p = sheetStrong.removePrefix("jread:").split(':').map { it.toInt() }
+            nav.push(Screen.JReader(p[0], p[1], p[2]))
+        } else if (sheetStrong == "jesuit") {
+            // "jesuit" opens the Jesuit translation screen (emulator smoke test)
+            nav.push(if (Jesuit.has(ctxMain)) Screen.JBooks else Screen.JesuitSetup)
         } else if (sheetStrong?.startsWith("conc:") == true) {
             // "conc:G3056" opens the concordance of a lemma (emulator smoke test)
             nav.push(Screen.Concordance(sheetStrong.removePrefix("conc:")))
@@ -153,6 +167,10 @@ private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
         is Screen.Picker -> PickerScreen(nav, s.book, s.ch)
         is Screen.Lexicons -> LexiconsScreen(nav)
         is Screen.Lex -> LexViewerScreen(nav, s)
+        is Screen.JesuitSetup -> JesuitSetupScreen(nav)
+        is Screen.JBooks -> if (Jesuit.version.intValue >= 0 && Jesuit.has(ctxMain)) JBooksScreen(nav) else JesuitSetupScreen(nav)
+        is Screen.JReader -> JReaderScreen(nav, s)
+        is Screen.JIntro -> JIntroScreen(nav, s.book)
     }
 
     sheet?.let { req ->

@@ -27,6 +27,8 @@ class Prefs(ctx: Context) {
     var english by mutableStateOf(sp.getString("english", "kjv") ?: "kjv"); private set
     /** 0 = Van Dyke only, 1 = Van Dyke + English, 2 = English only */
     var readerMode by mutableIntStateOf(sp.getInt("readerMode", 0)); private set
+    /** show the imported Jesuit translation under every Van Dyke verse */
+    var jesuitUnder by mutableStateOf(sp.getBoolean("jesuitUnder", false)); private set
 
     var lastBook by mutableIntStateOf(sp.getInt("lastBook", 1)); private set
     var lastChapter by mutableIntStateOf(sp.getInt("lastChapter", 1)); private set
@@ -41,6 +43,7 @@ class Prefs(ctx: Context) {
     fun putUiLang(v: String) { uiLang = v; sp.edit().putString("uiLang", v).apply() }
     fun putExplainLang(v: String) { explainLang = v; sp.edit().putString("explainLang", v).apply() }
     fun putEnglish(v: String) { english = v; sp.edit().putString("english", v).apply() }
+    fun putJesuitUnder(v: Boolean) { jesuitUnder = v; sp.edit().putBoolean("jesuitUnder", v).apply() }
     fun putReaderMode(v: Int) { readerMode = v; sp.edit().putInt("readerMode", v).apply() }
 
     /** Recently opened chapters, newest first: "book:ch,book:ch,…" */

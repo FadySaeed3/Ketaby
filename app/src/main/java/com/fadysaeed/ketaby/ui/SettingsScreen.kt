@@ -75,6 +75,13 @@ fun SettingsScreen(nav: Nav) {
                     modifier = Modifier.fillMaxWidth().clickable { nav.push(Screen.Lexicons) }.padding(vertical = 6.dp),
                 )
             }
+            Section(t("الترجمة اليسوعية", "الترجمة اليسوعية", "Jesuit translation")) {
+                Text(
+                    t("ضيف ملف اليسوعية أو بدّله", "أضف ملف اليسوعية أو استبدله", "Add or replace the Jesuit file") + " ←",
+                    color = Gold, fontSize = 15.sp,
+                    modifier = Modifier.fillMaxWidth().clickable { nav.push(Screen.JesuitSetup) }.padding(vertical = 6.dp),
+                )
+            }
             Section(t("لغة التطبيق", "لغة الواجهة", "App language")) {
                 Choice("مصري", p.uiLang == "eg") { p.putUiLang("eg") }
                 Choice("العربية الفصحى", p.uiLang == "msa") { p.putUiLang("msa") }

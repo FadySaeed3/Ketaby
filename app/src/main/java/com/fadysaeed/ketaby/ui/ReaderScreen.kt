@@ -38,6 +38,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.platform.LocalContext
+import kotlinx.coroutines.launch
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
@@ -63,6 +66,8 @@ import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.Book
 import com.fadysaeed.ketaby.data.Db
 import com.fadysaeed.ketaby.data.EVerse
+import com.fadysaeed.ketaby.data.JUnder
+import com.fadysaeed.ketaby.data.Jesuit
 import com.fadysaeed.ketaby.data.OWord
 import com.fadysaeed.ketaby.data.Token
 import com.fadysaeed.ketaby.data.VerseRow
@@ -179,7 +184,7 @@ private fun MenuItem(label: String, checked: Boolean, onClick: () -> Unit) {
 }
 
 @Composable
-private fun ViewMenu(onHome: () -> Unit) {
+private fun ViewMenu(hasJesuit: Boolean, onJesuit: () -> Unit, onHome: () -> Unit) {
     val prefs = LocalPrefs.current
     var open by remember { mutableStateOf(false) }
     IconButton(onClick = { open = true }) { Icon(Icons.Filled.MoreVert, t("طريقة العرض", "طريقة العرض", "View"), tint = Ink) }
@@ -194,6 +199,13 @@ private fun ViewMenu(onHome: () -> Unit) {
         HorizontalDivider(color = Line)
         item("KJV", prefs.english == "kjv") { prefs.putEnglish("kjv") }
         item("BSB", prefs.english == "bsb") { prefs.putEnglish("bsb") }
+        HorizontalDivider(color = Line)
+        if (hasJesuit) {
+            item(t("اليسوعية تحت كل آية", "اليسوعية تحت كل آية", "Jesuit under each verse"), prefs.jesuitUnder) { prefs.putJesuitUnder(!prefs.jesuitUnder) }
+            item(t("افتح الحتة دي في اليسوعية", "افتح هذا الموضع في اليسوعية", "Open this passage in the Jesuit"), false) { onJesuit() }
+        } else {
+            item(t("ضيف الترجمة اليسوعية", "أضف الترجمة اليسوعية", "Add the Jesuit translation"), false) { onJesuit() }
+        }
         HorizontalDivider(color = Line)
         item(t("الصفحة الرئيسية (الأسفار)", "الصفحة الرئيسية (الأسفار)", "Home (books)"), false) { onHome() }
         HorizontalDivider(color = Line)
@@ -215,6 +227,17 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
         val vs = verses
         value = if (prefs.readerMode != 0 && !vs.isNullOrEmpty()) Db.englishRange(prefs.english, vs.first().id, vs.last().id) else emptyMap()
     }
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
+    @Suppress("UNUSED_VARIABLE") val jver = Jesuit.version.intValue
+    val hasJesuit = Jesuit.has(ctx)
+    val jUnder by produceState<Map<Int, List<JUnder>>>(emptyMap(), screen.book, screen.ch, prefs.jesuitUnder, jver) {
+        value = if (prefs.jesuitUnder && hasJesuit) Jesuit.underVd(ctx, screen.book, screen.ch) else emptyMap()
+    }
+    val jNotes by produceState<Map<String, String>>(emptyMap(), jUnder) {
+        value = if (jUnder.isEmpty()) emptyMap() else Jesuit.notes(ctx, jUnder.values.flatten().map { it.book to it.ch })
+    }
+    var jShown by remember { mutableStateOf<JNote?>(null) }
     var selected by remember(screen) { mutableStateOf<Long?>(null) }
     var selectedEn by remember(screen) { mutableStateOf<Pair<Long, Int>?>(null) }
 
@@ -236,7 +259,7 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
     LaunchedEffect(screen) {
         listState.interactionSource.interactions.collect { if (it is DragInteraction.Start) touched = true }
     }
-    LaunchedEffect(screen, verses, english, words) {
+    LaunchedEffect(screen, verses, english, words, jUnder) {
         val vs = verses ?: return@LaunchedEffect
         if (screen.verse > 0 && !touched && screen.verse <= vs.size) listState.scrollToItem(screen.verse - 1)
     }
@@ -281,7 +304,14 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
                 onTitle = { nav.push(Screen.Picker(screen.book, screen.ch)) },
             ) {
                 SearchSettingsActions(nav)
-                ViewMenu { nav.home() }
+                ViewMenu(hasJesuit, onJesuit = {
+                    if (!hasJesuit) nav.push(Screen.JesuitSetup)
+                    else scope.launch {
+                        val v = verses?.getOrNull(listState.firstVisibleItemIndex)?.v ?: 1
+                        val at = Jesuit.fromVd(ctx, screen.book, screen.ch, v)
+                        if (at != null) nav.push(Screen.JReader(at.first, at.second, at.third))
+                    }
+                }) { nav.home() }
             }
         },
         bottomBar = {
@@ -316,7 +346,7 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
         LazyColumn(
             state = listState,
             contentPadding = PaddingValues(horizontal = 18.dp, vertical = 12.dp),
-            verticalArrangement = Arrangement.spacedBy(if (prefs.interlinear || mode == 1) 16.dp else 6.dp),
+            verticalArrangement = Arrangement.spacedBy(if (prefs.interlinear || mode == 1 || jUnder.isNotEmpty()) 16.dp else 6.dp),
             modifier = Modifier.padding(pad).fillMaxSize().pointerInput(screen, book) {
                 // swipe sideways to change chapter (in Arabic the next chapter comes from the left)
                 var dx = 0f
@@ -355,6 +385,11 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
                             openSheet(SheetRequest(piece, null, ids, headerIsEnglish = true))
                         }
                     }
+                    val jl = jUnder[v.v]
+                    if (jl != null) {
+                        Spacer(Modifier.height(4.dp))
+                        JesuitUnder(jl, jNotes) { jShown = it }
+                    }
                     if (prefs.interlinear) {
                         val ws = words[v.id].orEmpty()
                         if (ws.isNotEmpty()) Interlinear(ws) { w -> openSheet(SheetRequest(null, null, listOf(w.id))) }
@@ -363,6 +398,7 @@ fun ReaderScreen(nav: Nav, screen: Screen.Reader, openSheet: (SheetRequest) -> U
             }
         }
     }
+    jShown?.let { JNoteSheet(it) { jShown = null } }
 }
 
 @OptIn(ExperimentalLayoutApi::class)

@@ -62,6 +62,7 @@ import com.fadysaeed.ketaby.R
 import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.Book
 import com.fadysaeed.ketaby.data.Db
+import com.fadysaeed.ketaby.data.Jesuit
 import com.fadysaeed.ketaby.data.Lexicons
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -203,6 +204,17 @@ fun HomeScreen(nav: Nav) {
                     Tool(Modifier.weight(1f), t("روح لشاهد", "انتقل إلى شاهد", "Go to passage"), t("سفر، إصحاح، آية", "سفر، أصحاح، آية", "Book, chapter, verse"), Teal) {
                         nav.push(Screen.Picker(prefs.lastBook, prefs.lastChapter))
                     }
+                }
+            }
+            item {
+                @Suppress("UNUSED_VARIABLE") val jv = Jesuit.version.intValue
+                val jReady = Jesuit.has(ctx)
+                Row {
+                    Tool(
+                        Modifier.weight(1f), t("الترجمة اليسوعية", "الترجمة اليسوعية", "Jesuit translation"),
+                        if (jReady) t("بمقدماتها وحواشيها", "بمقدماتها وحواشيها", "with introductions and notes") else t("ضيف ملف اليسوعية", "أضف ملف اليسوعية", "Add the Jesuit file"),
+                        if (jReady) Teal else Gold,
+                    ) { nav.push(if (jReady) Screen.JBooks else Screen.JesuitSetup) }
                 }
             }
             // ---- books, grouped

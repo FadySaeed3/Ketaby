@@ -195,6 +195,37 @@ for spot in 40:7:28 40:5:47; do
   sleep 10
   shot "21_read_${spot//:/_}"
 done
+# Jesuit translation: first without a package (the import screen), then with a tiny fake package
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jesuit
+sleep 10
+shot 22_jesuit_setup
+python3 .github/jesuit_fixture.py fx.ketaby
+adb push fx.ketaby /data/local/tmp/fx.ketaby
+adb shell chmod 644 /data/local/tmp/fx.ketaby
+adb shell run-as $PKG mkdir -p files/tr
+adb shell run-as $PKG cp /data/local/tmp/fx.ketaby files/tr/jesuit.ketaby || \
+  adb shell "run-as $PKG sh -c 'cat > files/tr/jesuit.ketaby'" < fx.ketaby
+adb shell run-as $PKG ls -l files/tr
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jesuit
+sleep 10
+shot 23_jesuit_books
+tap_text '^التكوين$' center
+shot 23b_jesuit_chapters
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jread:1:1:3
+sleep 10
+shot 24_jesuit_reader
+tap_text 'Van Dyke|^فاندايك$' center
+sleep 4
+shot 25_vd_from_jesuit
+tap_text '^طريقة العرض$' center
+tap_text 'اليسوعية تحت كل آية' center
+sleep 4
+shot 26_vd_with_jesuit_under
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jread:1:1:0
+sleep 8
+tap_text 'مقدمة السفر' center
+shot 27_jesuit_intro
+
 echo "=====READER LOG"
 adb logcat -d -s KetabyReader:D | tail -80
 

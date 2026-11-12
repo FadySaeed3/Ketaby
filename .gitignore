@@ -35,3 +35,9 @@ captures/
 # built database asset (CI builds it)
 app/src/main/assets/ketaby.db
 app/src/main/assets/ketaby.db.len
+
+# --- Jesuit translation (copyrighted): never commit ---
+*.ketaby
+jesuit_html*/
+jesuit_html*.zip
+**/jesuit_private/

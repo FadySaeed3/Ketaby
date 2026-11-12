@@ -172,7 +172,16 @@ def main(parsed, notes_dir, vd_db, out):
             for m in p.get('markers', []):
                 marks[(b, m['ch'])].append(m)
             for g in p.get('margin', []):
-                margin.append((b, g['ch'], g.get('v'), g.get('sub', ''), g['refs']))
+                v, sub = g.get('v'), g.get('sub', '')
+                if v is None and g.get('heading'):
+                    # parallels printed beside a section heading belong to the first verse under it
+                    items = next((c['items'] for c in J[b]['chapters'] if c['n'] == g['ch']), [])
+                    hk = next((k for k, x in enumerate(items) if x['k'] == 'h' and DIA.sub('', g['heading']) in DIA.sub('', x['text'])), None)
+                    nxt = next((x for x in items[hk + 1:] if x['k'] == 'v'), None) if hk is not None else None
+                    if nxt is None:
+                        print('margin heading not found', b, g['ch'], g['heading']); continue
+                    v, sub = nxt['v'], nxt.get('sub', '')
+                margin.append((b, g['ch'], v, sub, g['refs']))
 
     if os.path.exists(out):
         os.remove(out)
@@ -211,13 +220,27 @@ def main(parsed, notes_dir, vd_db, out):
                     if tgt is not None:
                         tgt['text'] += tag; placed += 1
                     else:
-                        missed += 1
+                        missed += 1; print('  heading marker not placed:', slug, c['n'], m)
                     continue
                 tgt = next((x for x in items if x['k'] == 'v' and x['v'] == m['v'] and x.get('sub', '') == m.get('sub', '')), None)
-                if tgt is None or m['before'] not in tgt['text']:
-                    missed += 1
+                if tgt is not None and m['before'] not in tgt['text']:
+                    # same letters, different diacritics or diacritic order: find it without them
+                    inmark = set()
+                    for mm in re.finditer(MARK_L + r'\d+' + MARK_R, tgt['text']):
+                        inmark.update(range(mm.start(), mm.end()))
+                    keep = [k for k, ch_ in enumerate(tgt['text']) if not DIA.match(ch_) and k not in inmark]
+                    bare = ''.join(tgt['text'][k] for k in keep)
+                    want = DIA.sub('', m['before'])
+                    if want and bare.count(want) >= 1:
+                        e = bare.index(want) + len(want) - 1
+                        end = keep[e] + 1
+                        while end < len(tgt['text']) and DIA.match(tgt['text'][end]):
+                            end += 1
+                        m = dict(m, before=tgt['text'][keep[bare.index(want)]:end], _end=end)
+                if tgt is None or ('_end' not in m and m['before'] not in tgt['text']):
+                    missed += 1; print('  marker not placed:', slug, c['n'], m)
                     continue
-                pos = tgt['text'].index(m['before']) + len(m['before'])
+                pos = m['_end'] if '_end' in m else tgt['text'].index(m['before']) + len(m['before'])
                 # a second marker with the same anchor goes after the next occurrence
                 while tgt['text'][pos:pos + 1] == MARK_L:
                     nxt = tgt['text'].find(m['before'], pos)
@@ -245,8 +268,12 @@ def main(parsed, notes_dir, vd_db, out):
     for (b, ch, n), text in notes.items():
         db.execute('INSERT INTO jnotes VALUES(?,?,?,?)', (ORDER.index(b) + 1, ch, n, text))
     nlinks = 0
+    verses = {(ORDER.index(slug) + 1, c['n'], x['v']) for slug in ORDER for c in J[slug]['chapters'] for x in c['items'] if x['k'] == 'v'}
+    bad = []
     for b, ch, v, sub, refs in margin:
         links = ref_links(refs, b)
+        bad += [(b, ch, v, refs[l[0]:l[1]]) for l in links if (l[2], l[3], l[4]) not in verses]
+        links = [l for l in links if (l[2], l[3], l[4]) in verses]   # a misprinted reference stays as text
         nlinks += len(links)
         db.execute('INSERT INTO jmargin VALUES(?,?,?,?,?,?)', (ORDER.index(b) + 1, ch, v, sub, refs, json.dumps(links)))
     db.executescript("""
@@ -258,6 +285,8 @@ def main(parsed, notes_dir, vd_db, out):
         db.execute('INSERT INTO meta VALUES(?,?)', (k, v))
     db.commit(); db.execute('VACUUM'); db.close()
     print(f'markers placed {placed}, missed {missed}; notes {len(notes)}; margin groups {len(margin)}, links {nlinks}')
+    for x in bad:
+        print('  reference not found, left as text:', *x)
     worst = sorted(stats, key=lambda s: s[2] / max(1, s[1]))[:12]
     print('verse map, same reference share (lowest):', ', '.join(f'{s}:{d}/{n}' for s, n, d in worst))
     print('size', os.path.getsize(out) // 1024, 'KB')

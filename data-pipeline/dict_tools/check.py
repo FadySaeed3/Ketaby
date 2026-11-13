@@ -98,6 +98,8 @@ for path in args:
         leak = [w for w in (r'الباك\b', r'الداتا', r'\bpack\b', r'dataset', r'مشيت ورا')
                 if any(re.search(w, e['entry'][k]) for k in ('eg', 'msa', 'en'))]
         if leak: probs.append('talks about the pack/itself: ' + ' '.join(leak))
+        odd = set(re.findall(r'[\u0400-\u04ff\u0530-\u058f\u0e00-\u0e7f\u3040-\u30ff\u4e00-\u9fff\uac00-\ud7af]', ' '.join(e['entry'].values()) + ' '.join(e['gloss'].values())))
+        if odd: probs.append('stray script: ' + ''.join(sorted(odd)))
         pas = [w for w in PASS.findall(re.sub(r'«[^»]*»', ' ', eg)) if w.lstrip('وفب') not in OK and w not in OK
                and not any(st in w for st in OK_STEMS)]
         if pas: probs.append('check: ' + ' '.join(pas))

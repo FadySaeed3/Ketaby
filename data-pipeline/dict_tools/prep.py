@@ -91,9 +91,12 @@ def tier(count, k):
 
 
 def occurrences(ds, count):
-    rows = DB.execute("select o.id, o.text, v.book, v.ch, v.v, v.text, o.editions from owords o join verses v on v.id = o.vd_verse "
-                      "where o.dstrong = ? or o.dstrongs like ? order by o.id", (ds, '%' + ds + '%')).fetchall()
-    rows = [r for r in rows if r[1]]
+    # glob, not like: like ignores case, and H5838x (lowercase sense letter) is a different number from H5838X
+    rows = DB.execute("select o.id, o.text, v.book, v.ch, v.v, v.text, o.editions, o.dstrong, o.dstrongs from owords o "
+                      "join verses v on v.id = o.vd_verse where o.dstrong = ? or o.dstrongs glob ? order by o.id",
+                      (ds, '*' + ds + '*')).fetchall()
+    whole = re.compile(re.escape(ds) + r'(?![A-Za-z0-9])')
+    rows = [r[:7] for r in rows if r[1] and (r[7] == ds or whole.search(r[8] or ''))]
     want = len(rows) if len(rows) <= 12 else (22 if count >= 50 else 14)
     if len(rows) > want:
         step = len(rows) / want

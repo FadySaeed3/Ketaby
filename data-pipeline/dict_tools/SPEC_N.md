@@ -41,7 +41,7 @@ follow the defs and the verses, keep the pack's lemma string, and say so briefly
 `based_on` lists the open lexicons you actually used (keys present in `defs`).
 
 ## Shape
-- eg: `**مين ده:** ...` (or `**فين ده:**` for a place, `**مين دول:**` for a people) \n `**أهم المواضع:** ...` \n `**في فاندايك:** ...`
+- eg: `**مين ده:** ...` for a man, `**مين دي:**` for a woman, `**فين ده:**` for a place, `**مين دول:**` for a people \n `**أهم المواضع:** ...` \n `**في فاندايك:** ...`
 - `eg` length: 25–100 words (well-known people near the top, obscure names in genealogies near the bottom).
 - `msa` and `en`: one or two sentences in one section (`**المعنى:**` / `**Meaning:**`): who/what, and 1–2 refs. 12–50 words.
 
@@ -50,7 +50,7 @@ follow the defs and the verses, keep the pack's lemma string, and say so briefly
 {"dstrong": "H7354", "lemma": "רָחֵל",
  "gloss": {"eg": "راحيل", "msa": "راحيل", "en": "Rachel"},
  "entry": {
-  "eg": "**مين ده:** راحيل بنت لابان وأخت ليئة، الزوجة اللي يعقوب حبها أكتر، وأم يوسف وبنيامين. اسمها معناه غالبًا «نعجة».\n**أهم المواضع:** تكوين ٢٩: ٣٠ «وأحب أيضا راحيل أكثر من ليئة»؛ تكوين ٣٥: ١٩ ماتت وهي بتولد بنيامين «ودفنت في طريق أفراتة، التي هي بيت لحم»؛ إرميا ٣١: ١٥ «راحيل تبكي على أولادها»، واللي متى بيقتبسها بعدين عن أطفال بيت لحم.\n**في فاندايك:** «راحيل».",
+  "eg": "**مين دي:** راحيل بنت لابان وأخت ليئة، الزوجة اللي يعقوب حبها أكتر، وأم يوسف وبنيامين. اسمها معناه غالبًا «نعجة».\n**أهم المواضع:** تكوين ٢٩: ٣٠ «وأحب أيضا راحيل أكثر من ليئة»؛ تكوين ٣٥: ١٩ ماتت وهي بتولد بنيامين «ودفنت في طريق أفراتة، التي هي بيت لحم»؛ إرميا ٣١: ١٥ «راحيل تبكي على أولادها»، واللي متى بيقتبسها بعدين عن أطفال بيت لحم.\n**في فاندايك:** «راحيل».",
   "msa": "**المعنى:** راحيل ابنة لابان وزوجة يعقوب المحبوبة وأم يوسف وبنيامين (تكوين ٢٩: ٣٠؛ ٣٥: ١٩)، ويبكيها إرميا ٣١: ١٥ على أولادها.",
   "en": "**Meaning:** Rachel, Laban's daughter, Jacob's favoured wife and mother of Joseph and Benjamin (Gen 29:30; 35:19); Jer 31:15 pictures her weeping for her children."},
  "based_on": ["bdb", "ubs", "tbes"], "halot_checked": false, "tier": "N"}

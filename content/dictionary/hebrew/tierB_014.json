@@ -1,0 +1,844 @@
+{
+  "batch": 1,
+  "about": "Tier B: words used 10-49 times, single sense number (written with Sonnet), set 14",
+  "words": [
+    {
+      "dstrong": "H2689",
+      "lemma": "חֲצֹצְרָה",
+      "gloss": {
+        "eg": "بوق، بوق من فضة",
+        "msa": "بوق، بوق من فضة",
+        "en": "trumpet"
+      },
+      "entry": {
+        "eg": "**المعنى:** «حَصُوصِرَا» هي البوق المعدني المستقيم، وهو غير القرن (الشوفار). الأرجح إن اسمها تقليد لصوت النفخ فيها. الكهنة هم اللي كانوا بينفخوا فيها للنداء وللحرب وللعبادة.\n**الاستخدامات والأمثلة:** ١) للنداء والترحيل: عدد ١٠: ٢ «اصنع لك بوقين من فضة. مسحولين تعملهما، فيكونان لك لمناداة الجماعة ولارتحال المحلات»، البوق إشارة بتجمّع الشعب وبتحركه. ٢) في الحرب: عدد ١٠: ٩ «تهتفون بالأبواق، فتذكرون أمام الرب إلهكم، وتخلصون من أعدائكم»، النفخ هنا زي صلاة بصوت عالي بتفكّر ربنا بشعبه. ٣) في التسبيح: مزمور ٩٨: ٦ «بالأبواق وصوت الصور اهتفوا قدام الملك الرب!»، البوق بيجي جنب القرن في الهتاف للملك. ٤) في تنصيب الملك: ٢ ملوك ١١: ١٤ «والرؤساء ونافخو الأبواق بجانب الملك، وكل شعب الأرض يفرحون ويضربون بالأبواق»، الأبواق جزء من حفلة التنصيب.\n**في فاندايك:** «الأبواق» و«بوق» و«المبوقون».\n**ملاحظة:** الكلمة جاية جمع في أغلب الأمثلة دي، لأنهم كانوا بينفخوا بزوج أبواق أو بجماعة، زي البوقين الفضة في عدد ١٠.",
+        "msa": "**المعنى:** «حَصُوصِرَا» هي البوق المعدني المستقيم، وهو غير القرن (الشوفار). والأرجح أن اسمها محاكاة لصوت النفخ فيها، وكان الكهنة ينفخون فيها للنداء والحرب والعبادة.\n**الاستعمالات والأمثلة:** ١) للنداء والترحيل: عدد ١٠: ٢ «اصنع لك بوقين من فضة. مسحولين تعملهما، فيكونان لك لمناداة الجماعة ولارتحال المحلات»، فالبوق إشارة تجمع الشعب وتحركه. ٢) في الحرب: عدد ١٠: ٩ «تهتفون بالأبواق، فتذكرون أمام الرب إلهكم، وتخلصون من أعدائكم»، فالنفخ هنا صلاة بصوت عالٍ تذكّر الله بشعبه. ٣) في التسبيح: مزمور ٩٨: ٦ «بالأبواق وصوت الصور اهتفوا قدام الملك الرب!»، فالبوق يقترن بالقرن في الهتاف للملك. ٤) في تنصيب الملك: ٢ ملوك ١١: ١٤ «والرؤساء ونافخو الأبواق بجانب الملك، وكل شعب الأرض يفرحون ويضربون بالأبواق»، فالأبواق جزء من احتفال التنصيب.\n**في فاندايك:** «الأبواق» و«بوق» و«المبوقون».\n**ملاحظة:** ترد الكلمة جمعًا في أغلب هذه الأمثلة، لأن النفخ كان يتم بزوج من الأبواق أو بجماعة، كالبوقين الفضيين في عدد ١٠.",
+        "en": "**Meaning:** chatsotsera is the straight metal trumpet, distinct from the curved ram's horn (shofar). Its name probably imitates the sound of blowing it, and the priests blew it for summoning, for war and for worship.\n**Uses and examples:** 1) summoning and breaking camp: Num 10:2 \"Make thee two trumpets of silver\", the signal that gathered the people and set them moving. 2) in war: Num 10:9 \"ye shall blow an alarm with the trumpets; and ye shall be remembered before the LORD your God\", the blast works as a loud prayer. 3) in praise: Ps 98:6 \"With trumpets and sound of cornet make a joyful noise before the LORD, the King\", the trumpet sits beside the horn in the shout for the king. 4) at a enthronement: 2 Kings 11:14 \"the princes and the trumpeters by the king, and all the people of the land rejoiced, and blew with trumpets\", trumpets belong to the enthronement ceremony.\n**In Van Dyke:** «الأبواق», «بوق» and «المبوقون».\n**Note:** in these examples the word is mostly plural, because trumpets were blown in pairs or by a group, like the two silver trumpets of Num 10."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H3259",
+      "lemma": "יָעַד",
+      "gloss": {
+        "eg": "حدّد ميعاد، اجتمع بميعاد، خطب",
+        "msa": "حدّد موعدًا، التقى بموعد، خطب",
+        "en": "to appoint, to meet by appointment, to betroth"
+      },
+      "entry": {
+        "eg": "**المعنى:** «يَاعَد» معناها يحدد حاجة أو ميعاد ومكان، ومنها اللقاء على ميعاد: لما اتنين يحددوا مكان ووقت يلتقوا فيه. الكلمة قريبة من «موعيد» (ميعاد، اجتماع) في «خيمة الاجتماع».\n**الاستخدامات والأمثلة:** ١) ربنا بيحدد مكان لقاء: خروج ٢٥: ٢٢ «وأنا أجتمع بك هناك وأتكلم معك»، ربنا بيقابل موسى فوق الغطاء. ٢) اجتماع بإشارة: عدد ١٠: ٤ «وإذا ضربوا بواحد يجتمع إليك الرؤساء»، الناس بتجتمع لما تسمع النفير. ٣) وعد بين اتنين: عاموس ٣: ٣ «هل يسير اثنان معا إن لم يتواعدا؟»، مفيش سفر مع بعض من غير ميعاد متفق عليه. ٤) خطبة الجارية: خروج ٢١: ٨ «سيدها الذي خطبها لنفسه»، السيد حدد إنها تكون زوجته.\n**في فاندايك:** «اجتمع» و«يتواعدا» و«خطبها» و«يحاكمني».\n**ملاحظة:** في إرميا ٥٠: ٤٤ فاندايك ترجم «ومن يحاكمني؟»، وترجمات زي الملك جيمس بتقول «من يحدد لي ميعاد؟»، يعني مين يقدر يستدعيني ويقف قدامي.",
+        "msa": "**المعنى:** «يَاعَد» تعني تعيين أمر أو موعد ومكان، ومنها «التقى بموعد» حين يتفق اثنان على اللقاء. وهي قريبة من «موعيد» (الموعد والاجتماع) في «خيمة الاجتماع».\n**الاستعمالات والأمثلة:** ١) الله يعيّن مكان اللقاء: خروج ٢٥: ٢٢ «وأنا أجتمع بك هناك وأتكلم معك»، فالله يلقى موسى فوق الغطاء. ٢) اجتماع بإشارة: عدد ١٠: ٤ «وإذا ضربوا بواحد يجتمع إليك الرؤساء»، فالناس يجتمعون عند سماع النفير. ٣) وعد اثنين: عاموس ٣: ٣ «هل يسير اثنان معا إن لم يتواعدا؟»، فلا سير معًا بغير موعد متفق عليه. ٤) خطبة الأمة: خروج ٢١: ٨ «سيدها الذي خطبها لنفسه»، أي أن السيد خصّصها لنفسه زوجة.\n**في فاندايك:** «اجتمع» و«يتواعدا» و«خطبها» و«يحاكمني».\n**ملاحظة:** في إرميا ٥٠: ٤٤ ترجم فاندايك «ومن يحاكمني؟»، وترجمات مثل الملك جيمس تقول «من يحدد لي موعدًا؟»، أي من يملك أن يستدعيني فيقف أمامي.",
+        "en": "**Meaning:** yaad means to fix something, a time or a place, and so \"to meet by appointment\" when two parties agree to meet. It is close to moed (appointed time, meeting) in \"tent of meeting\".\n**Uses and examples:** 1) God fixes the meeting place: Exod 25:22 \"And there I will meet with thee, and I will commune with thee\", God meets Moses above the mercy seat. 2) assembling at a signal: Num 10:4 \"the princes, which are heads of the thousands of Israel, shall gather themselves unto thee\", people gather at the trumpet call. 3) agreement between two: Amos 3:3 \"Can two walk together, except they be agreed?\", no travelling together without an appointed meeting. 4) betrothing a slave girl: Exod 21:8 \"who hath betrothed her to himself\", the master set her aside for himself.\n**In Van Dyke:** «اجتمع», «يتواعدا», «خطبها» and «يحاكمني».\n**Note:** in Jer 50:44 Van Dyke has «ومن يحاكمني؟»; the King James reads \"who will appoint me the time?\", that is, who can summon me?"
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H3341",
+      "lemma": "יָצַת",
+      "gloss": {
+        "eg": "أشعل، أحرق، أضرم",
+        "msa": "أشعل، أحرق، أضرم",
+        "en": "to kindle, to set on fire"
+      },
+      "entry": {
+        "eg": "**المعنى:** «يَاصَت» معناها يشعل نار أو يولّع في حاجة، وبتيجي كمان بمعنى «تتحرق» لما الأرض أو المدينة تخرب بالنار. أغلب استخدامها في الأنبياء، وفي كلام عن الدينونة.\n**الاستخدامات والأمثلة:** ١) نار الدينونة: إرميا ١٧: ٢٧ «فإني أشعل نارا في أبوابها فتأكل قصور أورشليم ولا تنطفئ»، ربنا بيهدد أورشليم لو ما حفظوش السبت. ٢) حرق مدينة في الحرب: يشوع ٨: ١٩ «وأسرعوا وأحرقوا المدينة بالنار»، الكمين بيولّع في مدينة عاي. ٣) النار على الأسوار: عاموس ١: ١٤ «فأضرم نارا على سور ربة فتأكل قصورها»، النار بتبدأ من السور وتوصل للقصور. ٤) البلد اللي خربت: إرميا ٩: ١٢ «لماذا بادت الأرض واحترقت كبرية بلا عابر؟»، الأرض نفسها حرقتها النار وبقت خالية.\n**في فاندايك:** «أشعل» و«أحرق» و«تحرق» و«أضرم».\n**ملاحظة:** في إشعياء ٩: ١٨ المعنى مجازي: الشر نفسه بيولّع في الغابة «وتشعل غاب الوعر»، يعني الفجور بينتشر زي حريق.",
+        "msa": "**المعنى:** «يَاصَت» تعني إشعال النار وإحراق الشيء، وترد كذلك بمعنى «احترق» حين تخرب الأرض أو المدينة بالنار. وأكثر استعمالها في الأنبياء في كلام الدينونة.\n**الاستعمالات والأمثلة:** ١) نار الدينونة: إرميا ١٧: ٢٧ «فإني أشعل نارا في أبوابها فتأكل قصور أورشليم ولا تنطفئ»، فالله يهدد أورشليم إن لم تحفظ السبت. ٢) إحراق مدينة في الحرب: يشوع ٨: ١٩ «وأسرعوا وأحرقوا المدينة بالنار»، فالكمين يشعل النار في مدينة عاي. ٣) النار في الأسوار: عاموس ١: ١٤ «فأضرم نارا على سور ربة فتأكل قصورها»، فالنار تبدأ من السور وتبلغ القصور. ٤) الأرض الخربة: إرميا ٩: ١٢ «لماذا بادت الأرض واحترقت كبرية بلا عابر؟»، فالأرض نفسها احترقت وصارت خالية.\n**في فاندايك:** «أشعل» و«أحرق» و«تحرق» و«أضرم».\n**ملاحظة:** في إشعياء ٩: ١٨ المعنى مجازي: الشر نفسه يشعل الغابة «وتشعل غاب الوعر»، أي أن الفجور ينتشر كالحريق.",
+        "en": "**Meaning:** yatsat means to kindle a fire or set something alight, and also \"to burn\" when a land or city is left ruined by fire. It is used mostly in the Prophets, in speech about judgment.\n**Uses and examples:** 1) fire of judgment: Jer 17:27 \"then will I kindle a fire in the gates thereof, and it shall devour the palaces of Jerusalem\", God threatens Jerusalem if the Sabbath is not kept. 2) burning a city in war: Josh 8:19 \"and they entered into the city, and took it, and hasted and set the city on fire\", the ambush torches Ai. 3) fire on walls: Amos 1:14 \"But I will kindle a fire in the wall of Rabbah\", the fire starts at the wall and reaches the palaces. 4) a ruined land: Jer 9:12 \"Why doth the land perish and is burned up like a wilderness, that none passeth through?\", the land itself is burnt and empty.\n**In Van Dyke:** «أشعل», «أحرق», «تحرق» and «أضرم».\n**Note:** in Isa 9:18 the sense is figurative: wickedness itself sets the forest alight, so that evil spreads like a fire."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H3801",
+      "lemma": "כֻּתֹּ֫נֶת",
+      "gloss": {
+        "eg": "قميص، ثوب، جلباب",
+        "msa": "قميص، ثوب",
+        "en": "tunic, shirt"
+      },
+      "entry": {
+        "eg": "**المعنى:** «كُتُّونِت» هي القميص الطويل اللي الواحد بيلبسه على الجلد تحت باقي الهدوم، وغالبًا من كتان. اللبس ده لبسه الناس العاديين وكمان الكهنة.\n**الاستخدامات والأمثلة:** ١) أول لبس: تكوين ٣: ٢١ «وصنع الرب الإله لآدم وامرأته أقمصة من جلد وألبسهما»، ربنا بنفسه لبّس آدم وحواء. ٢) قميص يوسف: تكوين ٣٧: ٣٢ «وأرسلوا القميص الملون وأحضروه إلى أبيهم»، القميص هو الدليل اللي استعملوه علشان يخدعوا أبوهم. ٣) لبس الكهنة: خروج ٢٩: ٥ «وتلبس هارون القميص وجبة الرداء والرداء والصدرة»، القميص أول قطعة بيلبسوها لهارون. ٤) لبس عادي في الشعر: نشيد الأنشاد ٥: ٣ «قد خلعت ثوبي، فكيف ألبسه؟»، العروس بتقول إنها خلعت ثوبها وما تحبش تلبسه تاني.\n**في فاندايك:** «القميص» و«أقمصة» و«ثوب».\n**ملاحظة:** وصف القميص بـ«الملون» في قصة يوسف مختلف عليه بين العلماء: فيه رأي إنه قميص طويل بكم، وفيه رأي إنه مزخرف.",
+        "msa": "**المعنى:** «كُتُّونِت» هي القميص الطويل الذي يلبس على الجلد تحت سائر الثياب، وغالبًا من الكتان. وقد لبسه عامة الناس والكهنة.\n**الاستعمالات والأمثلة:** ١) أول لباس: تكوين ٣: ٢١ «وصنع الرب الإله لآدم وامرأته أقمصة من جلد وألبسهما»، فالله نفسه ألبس آدم وامرأته. ٢) قميص يوسف: تكوين ٣٧: ٣٢ «وأرسلوا القميص الملون وأحضروه إلى أبيهم»، فالقميص دليل استعملوه لخداع أبيهم. ٣) لباس الكهنة: خروج ٢٩: ٥ «وتلبس هارون القميص وجبة الرداء والرداء والصدرة»، فالقميص أول قطعة تلبس لهارون. ٤) لباس يومي في الشعر: نشيد الأنشاد ٥: ٣ «قد خلعت ثوبي، فكيف ألبسه؟»، فالعروس تتعلل بأنها خلعت ثوبها.\n**في فاندايك:** «القميص» و«أقمصة» و«ثوب».\n**ملاحظة:** وصف قميص يوسف بـ«الملون» مختلف فيه بين العلماء: فمنهم من يراه قميصًا طويل الكمين، ومنهم من يراه مزخرفًا.",
+        "en": "**Meaning:** kuttoneth is the long shirt worn next to the skin under other clothes, often of linen. Ordinary people wore it, and so did the priests.\n**Uses and examples:** 1) the first clothing: Gen 3:21 \"Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them\", God himself clothes them. 2) Joseph's coat: Gen 37:32 \"And they sent the coat of many colours, and they brought it to their father\", the coat is the evidence used to deceive Jacob. 3) priestly dress: Exod 29:5 \"put upon Aaron the coat\", the tunic is the first garment put on Aaron. 4) everyday clothing in poetry: Song 5:3 \"I have put off my coat; how shall I put it on?\", the bride makes her excuse that she has already undressed.\n**In Van Dyke:** «القميص», «أقمصة» and «ثوب».\n**Note:** what the \"many colours\" of Joseph's coat means is debated: some take it as a long-sleeved tunic, others as an ornamented one."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H3836",
+      "lemma": "לָבָן",
+      "gloss": {
+        "eg": "أبيض، بياض",
+        "msa": "أبيض، بياض",
+        "en": "white"
+      },
+      "entry": {
+        "eg": "**المعنى:** «لَاڤَان» هي «أبيض»، لون المنّ والغنم والحاجات النضيفة، وكمان لون اللمعة في الجلد في أحكام الجذام. منها اسم «لابان» (اللي معناه «الأبيض») وفيه رأي إن «لبنان» من نفس الجذر.\n**الاستخدامات والأمثلة:** ١) لون المنّ: خروج ١٦: ٣١ «وهو كبزر الكزبرة، أبيض، وطعمه كرقاق بعسل»، اللون هو أول وصف للمنّ. ٢) لون الأغصان اللي قشّرها يعقوب: تكوين ٣٠: ٣٧ «وقشر فيها خطوطا بيضا، كاشطا عن البياض الذي على القضبان»، البياض اللي ظهر تحت القشر. ٣) علامة مرض: لاويين ١٣: ٤ «لكن إن كانت الضربة لمعة بيضاء في جلد جسده»، الكاهن بيراقب البقعة البيضاء. ٤) البياض الكامل طهارة: لاويين ١٣: ١٣ «كله قد ابيض. إنه طاهر»، لما البرص يغطي الجسم كله يحكم الكاهن بطهارته.\n**في فاندايك:** «أبيض» و«بيضاء» و«بياض» و«ابيض».\n**ملاحظة:** كتير من مرات الكلمة في لاويين ١٣ عن علامات الجلد، فالمعنى فيها طبي وطقسي، مش جمالي.",
+        "msa": "**المعنى:** «لَاڤَان» تعني «أبيض»، لون المنّ والغنم والأشياء النظيفة، وكذلك لون اللمعة في الجلد في أحكام البرص. ومنها اسم «لابان» («الأبيض»)، وهناك رأي بأن «لبنان» من الجذر نفسه.\n**الاستعمالات والأمثلة:** ١) لون المنّ: خروج ١٦: ٣١ «وهو كبزر الكزبرة، أبيض، وطعمه كرقاق بعسل»، فاللون أول أوصاف المنّ. ٢) لون الأغصان التي قشّرها يعقوب: تكوين ٣٠: ٣٧ «وقشر فيها خطوطا بيضا، كاشطا عن البياض الذي على القضبان»، فالبياض يظهر تحت القشر. ٣) علامة مرض: لاويين ١٣: ٤ «لكن إن كانت الضربة لمعة بيضاء في جلد جسده»، فالكاهن يفحص البقعة البيضاء. ٤) البياض الكامل طهارة: لاويين ١٣: ١٣ «كله قد ابيض. إنه طاهر»، فإذا غطى البرص الجسم كله حكم الكاهن بطهارته.\n**في فاندايك:** «أبيض» و«بيضاء» و«بياض» و«ابيض».\n**ملاحظة:** كثير من مرات الكلمة في لاويين ١٣ عن علامات الجلد، فمعناها طبي وطقسي لا جمالي.",
+        "en": "**Meaning:** lavan is \"white\", the colour of manna, of sheep and of clean things, and also of the bright patch on the skin in the laws about skin disease. The name Laban (\"the white one\") comes from it, and some think Lebanon comes from the same root.\n**Uses and examples:** 1) the colour of manna: Exod 16:31 \"and it was like coriander seed, white; and the taste of it was like wafers made with honey\", white is the first thing said about manna. 2) the rods Jacob peeled: Gen 30:37 \"pilled white strakes in them, and made the white appear which was in the rods\", the white shows under the bark. 3) a sign of disease: Lev 13:4 \"If the bright spot be white in the skin of his flesh\", the priest examines the white patch. 4) full whiteness means clean: Lev 13:13 \"it is all turned white: he is clean\", when the disease covers the whole body the priest declares him clean.\n**In Van Dyke:** «أبيض», «بيضاء», «بياض» and «ابيض».\n**Note:** many of the occurrences are in Lev 13 on skin signs, so the sense there is medical and ritual, not aesthetic."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H4296",
+      "lemma": "מִטָּה",
+      "gloss": {
+        "eg": "سرير، فراش، نعش",
+        "msa": "سرير، فراش، نعش",
+        "en": "bed, couch, bier"
+      },
+      "entry": {
+        "eg": "**المعنى:** «مِطَّا» هي السرير أو الفراش، المكان اللي الواحد بينام أو بيرتاح عليه. وممكن تكون النعش اللي بيشيلوا عليه الميت في الجنازة، لأنه سرير محمول.\n**الاستخدامات والأمثلة:** ١) سرير الموت: تكوين ٤٩: ٣٣ «ضم رجليه إلى السرير، وأسلم الروح وانضم إلى قومه»، يعقوب بيموت على سريره. ٢) سرير المرض: ٢ ملوك ١: ٤ «إن السرير الذي صعدت عليه لا تنزل عنه بل موتا تموت»، الملك أخزيا مريض وماله مفر. ٣) فراش حيلة: ١ صموئيل ١٩: ١٣ «فأخذت ميكال الترافيم ووضعته في الفراش»، ميكال بتخبي داود وتحط صنم مكانه. ٤) النعش: ٢ صموئيل ٣: ٣١ «وكان داود الملك يمشي وراء النعش»، داود بيمشي في جنازة أبنير.\n**في فاندايك:** «السرير» و«الفراش» و«النعش» و«أسرة».\n**ملاحظة:** في تكوين ٤٧: ٣١ «سجد إسرائيل على رأس السرير»، ورسالة عبرانيين ١١: ٢١ بتقول «على رأس عصاه»، لأن الحروف العبرية نفسها ممكن الواحد يقراها «سرير» أو «عصا».",
+        "msa": "**المعنى:** «مِطَّا» هي السرير أو الفراش، موضع الاضطجاع والراحة. وقد تكون النعش الذي يحمل عليه الميت في الجنازة، فهو سرير محمول.\n**الاستعمالات والأمثلة:** ١) سرير الموت: تكوين ٤٩: ٣٣ «ضم رجليه إلى السرير، وأسلم الروح وانضم إلى قومه»، فيعقوب يموت على سريره. ٢) سرير المرض: ٢ ملوك ١: ٤ «إن السرير الذي صعدت عليه لا تنزل عنه بل موتا تموت»، فالملك أخزيا مريض لا مفر له. ٣) فراش الحيلة: ١ صموئيل ١٩: ١٣ «فأخذت ميكال الترافيم ووضعته في الفراش»، فميكال تخفي داود وتضع صنمًا مكانه. ٤) النعش: ٢ صموئيل ٣: ٣١ «وكان داود الملك يمشي وراء النعش»، فداود يسير في جنازة أبنير.\n**في فاندايك:** «السرير» و«الفراش» و«النعش» و«أسرة».\n**ملاحظة:** في تكوين ٤٧: ٣١ «سجد إسرائيل على رأس السرير»، وتقول رسالة عبرانيين ١١: ٢١ «على رأس عصاه»، لأن الحروف العبرية نفسها يمكن قراءتها «سرير» أو «عصا».",
+        "en": "**Meaning:** mittah is a bed or couch, the place where one lies down and rests. It can also be a bier on which the dead are carried, a portable bed.\n**Uses and examples:** 1) deathbed: Gen 49:33 \"he gathered up his feet into the bed, and yielded up the ghost, and was gathered unto his people\", Jacob dies in his bed. 2) sickbed: 2 Kings 1:4 \"Thou shalt not come down from that bed on which thou art gone up, but shalt surely die\", King Ahaziah is ill with no way out. 3) a bed used as a trick: 1 Sam 19:13 \"And Michal took an image, and laid it in the bed\", Michal hides David and puts an idol in his place. 4) bier: 2 Sam 3:31 \"And king David himself followed the bier\", David walks in Abner's funeral.\n**In Van Dyke:** «السرير», «الفراش», «النعش» and «أسرة».\n**Note:** in Gen 47:31 \"Israel bowed himself upon the bed's head\", while Heb 11:21 says \"upon the top of his staff\", because the same Hebrew consonants can be read as \"bed\" or \"staff\"."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H4513",
+      "lemma": "מָנַע",
+      "gloss": {
+        "eg": "منع، حبس، امتنع",
+        "msa": "منع، حبس، امتنع",
+        "en": "to withhold, to hold back"
+      },
+      "entry": {
+        "eg": "**المعنى:** «مَانَع» معناها يمنع حاجة عن حد أو يحبسها عنه، سواء كانت خير أو شر. وغالبًا بتيجي معاها «عن»: يمنع الشيء عن فلان.\n**الاستخدامات والأمثلة:** ١) ربنا بيمنع: تكوين ٣٠: ٢ «ألعلي مكان الله الذي منع عنك ثمرة البطن؟»، يعقوب بيرد على راحيل وبيقول إن ربنا هو اللي منع عنها الخلفة. ٢) ربنا ما يمنعش: مزمور ٢١: ٢ «شهوة قلبه أعطيته، وملتمس شفتيه لم تمنعه»، الملك بيشكر على إن ربنا ما حرمهوش من طلبه. ٣) احتكار القمح: أمثال ١١: ٢٦ «محتكر الحنطة يلعنه الشعب»، اللي بيحبس القمح عن الناس بيلعنوه. ٤) الامتناع عن طريق الشر: أمثال ١: ١٥ «امنع رجلك عن مسالكهم»، الأب بينصح ابنه يبعد عن طريق الأشرار.\n**في فاندايك:** «منع» و«امتنع» و«حبس» و«محتكر».\n**ملاحظة:** في إرميا ٣: ٣ «فامتنع الغيث» ربنا نفسه حبس المطر، وده بيوريك إن الكلمة بتشمل منع الخير من السما.",
+        "msa": "**المعنى:** «مَانَع» تعني منع شيء عن أحد أو حبسه عنه، خيرًا كان أو شرًّا. وتأتي غالبًا مع «عن»: منع الشيء عن فلان.\n**الاستعمالات والأمثلة:** ١) الله يمنع: تكوين ٣٠: ٢ «ألعلي مكان الله الذي منع عنك ثمرة البطن؟»، فيعقوب يردّ على راحيل بأن الله هو الذي منع عنها الإنجاب. ٢) الله لا يمنع: مزمور ٢١: ٢ «شهوة قلبه أعطيته، وملتمس شفتيه لم تمنعه»، فالملك يشكر لأن الله لم يحرمه طلبه. ٣) احتكار القمح: أمثال ١١: ٢٦ «محتكر الحنطة يلعنه الشعب»، فمن يحبس القمح عن الناس يلعنونه. ٤) الامتناع عن طريق الشر: أمثال ١: ١٥ «امنع رجلك عن مسالكهم»، فالأب ينصح ابنه بالابتعاد عن طريق الأشرار.\n**في فاندايك:** «منع» و«امتنع» و«حبس» و«محتكر».\n**ملاحظة:** في إرميا ٣: ٣ «فامتنع الغيث» أي حُبس المطر نفسه، فتشمل الكلمة حجب الخير من السماء.",
+        "en": "**Meaning:** manah means to hold something back from someone, good or bad. It usually goes with \"from\": to withhold a thing from a person.\n**Uses and examples:** 1) God withholds: Gen 30:2 \"Am I in God's stead, who hath withheld from thee the fruit of the womb?\", Jacob answers Rachel that God is the one who has kept her from having children. 2) God does not withhold: Ps 21:2 \"Thou hast given him his heart's desire, and hast not withholden the request of his lips\", the king thanks God for not denying his request. 3) hoarding grain: Prov 11:26 \"He that withholdeth corn, the people shall curse him\", whoever holds grain back from people is cursed. 4) holding back from evil: Prov 1:15 \"refrain thy foot from their path\", a father urges his son to stay away from the way of the wicked.\n**In Van Dyke:** «منع», «امتنع», «حبس» and «محتكر».\n**Note:** in Jer 3:3 \"Therefore the showers have been withholden\" the rain itself is held back, so the word also covers blessings kept from heaven."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5079",
+      "lemma": "נִדָּה",
+      "gloss": {
+        "eg": "نجاسة، طمث",
+        "msa": "نجاسة، طمث",
+        "en": "impurity, menstrual impurity"
+      },
+      "entry": {
+        "eg": "**المعنى:** «نِدَّا» هي النجاسة الطقسية، وأشهر استخدام ليها نجاسة المرأة وقت الحيض (الطمث). الأرجح إنها من جذر معناه الإبعاد، لأن النجس بيبعدوه عن الجماعة والمقدس. وبتيجي كمان مجازًا للحاجة البشعة.\n**الاستخدامات والأمثلة:** ١) نجاسة الحيض: لاويين ١٥: ١٩ «فسبعة أيام تكون في طمثها. وكل من مسها يكون نجسا إلى المساء»، النجاسة بتعدي بالمس لحد المغرب. ٢) ماء التطهير: عدد ١٩: ١٣ «لأن ماء النجاسة لم يرش عليها تكون نجسة»، الاسم هنا ماء بيزيل النجاسة، والترجمات الإنجليزية بتقول «ماء الفصل». ٣) محرمات الزواج: لاويين ٢٠: ٢١ «وإذا أخذ رجل امرأة أخيه، فذلك نجاسة»، الكلمة هنا حكم أخلاقي على فعل ممنوع. ٤) الذهب اللي بقى نجاسة: حزقيال ٧: ١٩ «وذهبهم يكون لنجاسة»، الفضة والذهب هيبقوا حاجة مقرفة يوم غضب الرب.\n**في فاندايك:** «طمثها» و«النجاسة» و«نجاسة».\n**ملاحظة:** الكلمة طقسية مش أخلاقية في لاويين ١٥، أما في حزقيال فبقت وصف لحاجة مقرفة.",
+        "msa": "**المعنى:** «نِدَّا» هي النجاسة الطقسية، وأشهر استعمالاتها نجاسة المرأة في أيام الحيض (الطمث). والأرجح أنها من جذر بمعنى الإبعاد، فالنجس يُبعد عن الجماعة والمقدس. وترد مجازًا للأمر البغيض.\n**الاستعمالات والأمثلة:** ١) نجاسة الحيض: لاويين ١٥: ١٩ «فسبعة أيام تكون في طمثها. وكل من مسها يكون نجسا إلى المساء»، فالنجاسة تنتقل بالمسّ حتى المساء. ٢) ماء التطهير: عدد ١٩: ١٣ «لأن ماء النجاسة لم يرش عليها تكون نجسة»، فالاسم هنا لماء يزيل النجاسة، والترجمات الإنجليزية تقول «ماء الفصل». ٣) محرمات الزواج: لاويين ٢٠: ٢١ «وإذا أخذ رجل امرأة أخيه، فذلك نجاسة»، فالكلمة حكم أخلاقي على فعل ممنوع. ٤) الذهب الذي صار نجاسة: حزقيال ٧: ١٩ «وذهبهم يكون لنجاسة»، فالفضة والذهب يصيران شيئًا مقرفًا يوم غضب الرب.\n**في فاندايك:** «طمثها» و«النجاسة» و«نجاسة».\n**ملاحظة:** الكلمة طقسية لا أخلاقية في لاويين ١٥، وفي حزقيال صارت وصفًا لشيء مقرف.",
+        "en": "**Meaning:** niddah is ritual impurity, most often a woman's impurity during her period. It probably comes from a root meaning \"to drive away\", since the unclean person is kept apart from the community and from holy things. It is also used figuratively of something loathsome.\n**Uses and examples:** 1) menstrual impurity: Lev 15:19 \"seven days she shall be put apart: and whosoever toucheth her shall be unclean until the even\", the impurity passes by touch until evening. 2) water of cleansing: Num 19:13 \"because the water of separation was not sprinkled upon him, he shall be unclean\", the name here is for the water that removes impurity, which the KJV calls the water of separation. 3) forbidden marriage: Lev 20:21 \"it is an unclean thing\", the word is a moral verdict on a forbidden act. 4) gold turned filthy: Ezek 7:19, their gold becomes a loathsome thing, so gold and silver become loathsome on the day of the LORD's wrath.\n**In Van Dyke:** «طمثها», «النجاسة» and «نجاسة».\n**Note:** the word is ritual rather than moral in Lev 15, while in Ezekiel it has become a description of something loathsome."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6224",
+      "lemma": "עֲשִׂירִי",
+      "gloss": {
+        "eg": "العاشر، عُشر",
+        "msa": "العاشر، عُشر",
+        "en": "tenth, a tenth part"
+      },
+      "entry": {
+        "eg": "**المعنى:** «عَسِيرِي» هي «العاشر» في الترتيب، من «عَسَر» (عشرة). وبتيجي كمان بمعنى جزء من عشرة: «عُشر»، خصوصًا عُشر الإيفة في التقدمات.\n**الاستخدامات والأمثلة:** ١) الشهر العاشر: تكوين ٨: ٥ «وكانت المياه تنقص نقصا متواليا إلى الشهر العاشر»، في الشهر ده ظهرت رؤوس الجبال بعد الطوفان. ٢) عُشر مكيال: خروج ١٦: ٣٦ «وأما العمر فهو عشر الإيفة»، الكلمة هنا بتحدد مقدار المنّ اليومي. ٣) الجيل العاشر: تثنية ٢٣: ٣ «حتى الجيل العاشر لا يدخل منهم أحد في جماعة الرب»، مدة طويلة جدًا للمنع. ٤) صوم الشهر العاشر: زكريا ٨: ١٩ «وصوم العاشر يكون لبيت يهوذا ابتهاجا وفرحا»، صوم هيبقى فرح.\n**في فاندايك:** «العاشر» و«عشر» و«العاشرة».\n**ملاحظة:** «عشر الإيفة» معناها جزء من عشرة مش «عشرة»، والترجمة بتفرق حسب السياق.",
+        "msa": "**المعنى:** «عَسِيرِي» هي «العاشر» في الترتيب، من «عَسَر» (عشرة). وترد كذلك بمعنى جزء من عشرة أي «عُشر»، ولا سيما عشر الإيفة في التقدمات.\n**الاستعمالات والأمثلة:** ١) الشهر العاشر: تكوين ٨: ٥ «وكانت المياه تنقص نقصا متواليا إلى الشهر العاشر»، ففيه ظهرت رؤوس الجبال بعد الطوفان. ٢) عشر مكيال: خروج ١٦: ٣٦ «وأما العمر فهو عشر الإيفة»، فالكلمة تحدد مقدار المنّ اليومي. ٣) الجيل العاشر: تثنية ٢٣: ٣ «حتى الجيل العاشر لا يدخل منهم أحد في جماعة الرب»، وهي مدة طويلة جدًا للمنع. ٤) صوم الشهر العاشر: زكريا ٨: ١٩ «وصوم العاشر يكون لبيت يهوذا ابتهاجا وفرحا»، فالصوم يتحول فرحًا.\n**في فاندايك:** «العاشر» و«عشر» و«العاشرة».\n**ملاحظة:** «عشر الإيفة» تعني جزءًا من عشرة لا «عشرة»، والترجمة تتبع السياق.",
+        "en": "**Meaning:** asiri is \"tenth\" in order, from asar (ten). It also means a tenth part, especially the tenth of an ephah in offerings.\n**Uses and examples:** 1) the tenth month: Gen 8:5 \"And the waters decreased continually until the tenth month\", in that month the mountain tops appeared after the flood. 2) a tenth of a measure: Exod 16:36 \"Now an omer is the tenth part of an ephah\", the word fixes the size of the daily manna. 3) the tenth generation: Deut 23:3 \"even to their tenth generation shall they not enter into the congregation of the LORD for ever\", an exceptionally long exclusion. 4) the fast of the tenth month: Zech 8:19 \"the fast of the tenth, shall be to the house of Judah joy and gladness\", a fast turns into joy.\n**In Van Dyke:** «العاشر», «عشر» and «العاشرة».\n**Note:** \"a tenth of the ephah\" means one part in ten, not \"ten\", and the translation follows the context."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6260",
+      "lemma": "עַתּוּד",
+      "gloss": {
+        "eg": "تيس، فحل الغنم",
+        "msa": "تيس، فحل الماعز",
+        "en": "he-goat"
+      },
+      "entry": {
+        "eg": "**المعنى:** «عَتُّود» هو التيس الذكر من الماعز، اللي بيقود القطيع. الكلمة قريبة من «عَتود» في العربي، يعني الجدي الذكر. وأكتر استخدامها في الذبائح.\n**الاستخدامات والأمثلة:** ١) تقدمات الخيمة: عدد ٧: ١٧ «ولذبيحة السلامة ثوران وخمسة كباش وخمسة تيوس وخمسة خراف حولية»، كل رئيس سبط قدّم نفس العدد. ٢) ذبائح من غير قلب: إشعياء ١: ١١ «وبدم عجول وخرفان وتيوس ما أسر»، ربنا بيرفض ذبايح من غير توبة. ٣) ذبح عظيم: إشعياء ٣٤: ٦ «بدم خراف وتيوس، بشحم كلى كباش»، الذبح عن دينونة أدوم. ٤) الحلم في الغنم: تكوين ٣١: ١٠ «وإذا الفحول الصاعدة على الغنم مخططة ورقطاء ومنمرة»، يعقوب بيحكي حلمه عن التيوس.\n**في فاندايك:** «تيوس» و«أعتدة» و«الفحول».\n**ملاحظة:** الكلمة بتجي مجازًا بمعنى «القادة»، وفاندايك ترجمها في إشعياء ١٤: ٩ «عظماء الأرض»، لأن التيس هو اللي بيمشي قدام القطيع.",
+        "msa": "**المعنى:** «عَتُّود» هو ذكر الماعز الذي يقود القطيع. والكلمة قريبة من «عَتود» في العربية أي الجدي الذكر. وأكثر استعمالها في الذبائح.\n**الاستعمالات والأمثلة:** ١) تقدمات الخيمة: عدد ٧: ١٧ «ولذبيحة السلامة ثوران وخمسة كباش وخمسة تيوس وخمسة خراف حولية»، فكل رئيس سبط قدّم العدد نفسه. ٢) ذبائح بلا قلب: إشعياء ١: ١١ «وبدم عجول وخرفان وتيوس ما أسر»، فالله يرفض الذبائح بلا توبة. ٣) ذبح عظيم: إشعياء ٣٤: ٦ «بدم خراف وتيوس، بشحم كلى كباش»، وهو ذبح في دينونة أدوم. ٤) الحلم في الغنم: تكوين ٣١: ١٠ «وإذا الفحول الصاعدة على الغنم مخططة ورقطاء ومنمرة»، فيعقوب يروي حلمه عن التيوس.\n**في فاندايك:** «تيوس» و«أعتدة» و«الفحول».\n**ملاحظة:** ترد الكلمة مجازًا بمعنى «القادة»، وترجمها فاندايك في إشعياء ١٤: ٩ «عظماء الأرض»، لأن التيس يتقدم القطيع.",
+        "en": "**Meaning:** attud is the male goat that leads the flock. It is close to Arabic atud, a young male goat. Its commonest use is in sacrifices.\n**Uses and examples:** 1) the tabernacle gifts: Num 7:17 \"two oxen, five rams, five he goats, five lambs of the first year\", each tribal leader brought the same offering. 2) sacrifices without heart: Isa 1:11 \"I delight not in the blood of bullocks, or of lambs, or of he goats\", God rejects offerings without repentance. 3) a great slaughter: Isa 34:6 \"with the blood of lambs and goats, with the fat of the kidneys of rams\", the slaughter stands for judgment on Edom. 4) a dream among the flock: Gen 31:10 \"the rams which leaped upon the cattle were ringstraked, speckled, and grisled\", Jacob tells his dream of the he-goats.\n**In Van Dyke:** «تيوس», «أعتدة» and «الفحول».\n**Note:** the word is also used figuratively for leaders, and Van Dyke renders it «عظماء الأرض» in Isa 14:9 (\"chief ones\"), because the he-goat walks ahead of the flock."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6509",
+      "lemma": "פָּרָה",
+      "gloss": {
+        "eg": "أثمر، أنتج، كثّر نسل",
+        "msa": "أثمر، أنجب، أنتج",
+        "en": "to be fruitful, to bear fruit"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پَارَا» معناها يثمر: النبات بيطلّع ثمر، والإنسان والحيوان بيخلّفوا ويكثروا. وفي الصيغة السببية: ربنا «يثمّر» حد، يعني يديله نسل وبركة. الكلمة جاية من نفس الجذر اللي منه اسم «أفرايم».\n**الاستخدامات والأمثلة:** ١) بركة الخليقة: تكوين ١: ٢٢ «أثمري واكثري واملإي المياه في البحار»، أول بركة ربنا للحيوانات. ٢) وعد لإسماعيل: تكوين ١٧: ٢٠ «ها أنا أباركه وأثمره وأكثره كثيرا جدا»، ربنا بيوعد بنسل كتير. ٣) اسم أفرايم: تكوين ٤١: ٥٢ «لأن الله جعلني مثمرا في أرض مذلتي»، يوسف سمّى ابنه على الثمر اللي ربنا أعطاه له في الغربة. ٤) صورة الشجرة: تكوين ٤٩: ٢٢ «يوسف، غصن شجرة مثمرة»، يعقوب بيوصف ابنه بشجرة قريبة من الميّه.\n**في فاندايك:** «أثمر» و«مثمر» و«أثمروا».\n**ملاحظة:** الأمر «أثمروا واكثروا» (تكوين ٩: ٧) تكرار لبركة الخليقة بعد الطوفان.",
+        "msa": "**المعنى:** «پَارَا» تعني أثمر: يثمر النبات، ويُنجب الإنسان والحيوان ويكثران. وفي الصيغة السببية يجعل الله أحدًا مثمرًا، أي يمنحه نسلًا وبركة. وهي من الجذر نفسه الذي منه اسم «أفرايم».\n**الاستعمالات والأمثلة:** ١) بركة الخليقة: تكوين ١: ٢٢ «أثمري واكثري واملإي المياه في البحار»، وهي أول بركة للحيوانات. ٢) وعد لإسماعيل: تكوين ١٧: ٢٠ «ها أنا أباركه وأثمره وأكثره كثيرا جدا»، فالله يعد بنسل كثير. ٣) اسم أفرايم: تكوين ٤١: ٥٢ «لأن الله جعلني مثمرا في أرض مذلتي»، فيوسف سمّى ابنه على الثمر الذي منحه الله إياه في الغربة. ٤) صورة الشجرة: تكوين ٤٩: ٢٢ «يوسف، غصن شجرة مثمرة»، فيعقوب يصف ابنه بشجرة قرب الماء.\n**في فاندايك:** «أثمر» و«مثمر» و«أثمروا».\n**ملاحظة:** الأمر «أثمروا واكثروا» (تكوين ٩: ٧) تكرار لبركة الخليقة بعد الطوفان.",
+        "en": "**Meaning:** para means to bear fruit: plants yield fruit, and people and animals have offspring and multiply. In the causative form God makes someone fruitful, that is, gives them descendants and blessing. It comes from the same root as the name Ephraim.\n**Uses and examples:** 1) the blessing of creation: Gen 1:22 \"Be fruitful, and multiply, and fill the waters in the seas\", the first blessing on animals. 2) a promise to Ishmael: Gen 17:20 \"I have blessed him, and will make him fruitful, and will multiply him exceedingly\", God promises many descendants. 3) the name Ephraim: Gen 41:52 \"God hath caused me to be fruitful in the land of my affliction\", Joseph names his son after the fruitfulness God gave him in exile. 4) the tree image: Gen 49:22 \"Joseph is a fruitful bough\", Jacob describes his son as a tree by a well.\n**In Van Dyke:** «أثمر», «مثمر» and «أثمروا».\n**Note:** the command \"be fruitful and multiply\" in Gen 9:7 repeats the blessing of creation after the flood."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H7151",
+      "lemma": "קִרְיָה",
+      "gloss": {
+        "eg": "قرية، مدينة",
+        "msa": "قرية، مدينة",
+        "en": "town, city"
+      },
+      "entry": {
+        "eg": "**المعنى:** «قِرْيَا» هي القرية أو المدينة، وهي نفس كلمة «قرية» في العربي. أكتر استخدامها في الشعر والنبوات، وبتيجي في أسماء أماكن كتير زي «قرية يعاريم».\n**الاستخدامات والأمثلة:** ١) مدينة عدو: عدد ٢١: ٢٨ «لأن نارا خرجت من حشبون، لهيبا من قرية سيحون»، الشعر هنا بيحكي عن نار الحرب. ٢) المدينة الأمينة: إشعياء ١: ٢٦ «تدعين مدينة العدل، القرية الأمينة»، القرية والمدينة هنا بيتكلموا عن أورشليم بعد ما ربنا يطهرها. ٣) خراب المدينة: إشعياء ٢٤: ١٠ «دمرت قرية الخراب. أغلق كل بيت عن الدخول»، مدينة فاضية وكل بيت مقفول. ٤) الغنى حصن: أمثال ١٠: ١٥ «ثروة الغني مدينته الحصينة»، الفلوس عند صاحبها زي سور المدينة.\n**في فاندايك:** «قرية» و«مدينة».\n**ملاحظة:** فاندايك مش بيفرّق هنا بين «قرية» و«مدينة»، والعبري نفسه بيستعمل الكلمة للمدينة الكبيرة كمان، زي مدينة أورشليم.",
+        "msa": "**المعنى:** «قِرْيَا» هي القرية أو المدينة، وهي الكلمة العربية «قرية» نفسها. وأكثر استعمالها في الشعر والنبوات، وترد في أسماء أماكن كثيرة مثل «قرية يعاريم».\n**الاستعمالات والأمثلة:** ١) مدينة عدو: عدد ٢١: ٢٨ «لأن نارا خرجت من حشبون، لهيبا من قرية سيحون»، فالشعر يصف نار الحرب. ٢) المدينة الأمينة: إشعياء ١: ٢٦ «تدعين مدينة العدل، القرية الأمينة»، فالقرية والمدينة هنا تصفان أورشليم بعد تطهير الله لها. ٣) خراب المدينة: إشعياء ٢٤: ١٠ «دمرت قرية الخراب. أغلق كل بيت عن الدخول»، مدينة خالية وكل بيت مغلق. ٤) الغنى حصن: أمثال ١٠: ١٥ «ثروة الغني مدينته الحصينة»، فالمال عند صاحبه كسور المدينة.\n**في فاندايك:** «قرية» و«مدينة».\n**ملاحظة:** لا يفرّق فاندايك هنا بين «قرية» و«مدينة»، والعبرية نفسها تستعمل الكلمة للمدينة الكبيرة أيضًا، كأورشليم.",
+        "en": "**Meaning:** qiryah is a town or city, the same word as Arabic qarya. It is used mostly in poetry and prophecy, and appears in many place names such as Kiriath-jearim.\n**Uses and examples:** 1) an enemy city: Num 21:28 \"For there is a fire gone out of Heshbon, a flame from the city of Sihon\", the poem describes the fire of war. 2) the faithful city: Isa 1:26 \"thou shalt be called, The city of righteousness, the faithful city\", city and town here describe Jerusalem after God has purified it. 3) a ruined city: Isa 24:10 \"The city of confusion is broken down: every house is shut up\", an empty city with every house shut. 4) wealth as a fortress: Prov 10:15 \"The rich man's wealth is his strong city\", money is to its owner like a city wall.\n**In Van Dyke:** «قرية» and «مدينة».\n**Note:** Van Dyke does not distinguish between \"village\" and \"city\" here, and the Hebrew itself uses the word for a large city too, such as Jerusalem."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H8071",
+      "lemma": "שִׂמְלָה",
+      "gloss": {
+        "eg": "رداء، ثوب، ثياب",
+        "msa": "رداء، ثوب، ثياب",
+        "en": "mantle, garment, clothes"
+      },
+      "entry": {
+        "eg": "**المعنى:** «سِمْلَا» هي الثوب الخارجي، قطعة قماش مربعة يلفها الواحد على جسمه، وبتغطيه بالليل زي البطانية. وفي الجمع بتبقى «هدوم» بشكل عام.\n**الاستخدامات والأمثلة:** ١) رداء بيستر: تكوين ٩: ٢٣ «فأخذ سام ويافث الرداء ووضعاه على أكتافهما»، الاتنين بيغطوا أبوهم نوح. ٢) حزن: تكوين ٣٧: ٣٤ «فمزق يعقوب ثيابه، ووضع مسحا على حقويه»، تمزيق الهدوم علامة الحزن الشديد. ٣) غطاء الفقير: خروج ٢٢: ٢٧ «لأنه وحده غطاؤه، هو ثوبه لجلده، في ماذا ينام؟»، ثوب الفقير هو بطانيته، وربنا بيسمع صراخه. ٤) رعاية الغريب: تثنية ١٠: ١٨ «والمحب الغريب ليعطيه طعاما ولباسا»، ربنا بيهتم بالغريب ويديله الأكل واللبس.\n**في فاندايك:** «ثياب» و«ثوب» و«الرداء».\n**ملاحظة:** في خروج ٢٢ الثوب كان رهن ممكن الدائن ياخده من الفقير، والشريعة بتحمي الفقير علشان ما يبقاش من غير غطا بالليل.",
+        "msa": "**المعنى:** «سِمْلَا» هي الثوب الخارجي، قطعة قماش مربعة يلفّها المرء على جسمه، وتغطيه ليلًا كاللحاف. وفي الجمع تعني الثياب عمومًا.\n**الاستعمالات والأمثلة:** ١) رداء يستر: تكوين ٩: ٢٣ «فأخذ سام ويافث الرداء ووضعاه على أكتافهما»، فيغطيان أباهما نوحًا. ٢) حزن: تكوين ٣٧: ٣٤ «فمزق يعقوب ثيابه، ووضع مسحا على حقويه»، فتمزيق الثياب علامة الحزن الشديد. ٣) غطاء الفقير: خروج ٢٢: ٢٧ «لأنه وحده غطاؤه، هو ثوبه لجلده، في ماذا ينام؟»، فثوب الفقير لحافه، والله يسمع صراخه. ٤) رعاية الغريب: تثنية ١٠: ١٨ «والمحب الغريب ليعطيه طعاما ولباسا»، فالله يعتني بالغريب ويعطيه طعامًا وكساءً.\n**في فاندايك:** «ثياب» و«ثوب» و«الرداء».\n**ملاحظة:** في خروج ٢٢ كان الثوب رهنًا يؤخذ من الفقير، فتحميه الشريعة كي لا يبقى بلا غطاء ليلًا.",
+        "en": "**Meaning:** simlah is the outer garment, a square piece of cloth wrapped around the body that also serves as a blanket at night. In the plural it means clothes in general.\n**Uses and examples:** 1) a cloak that covers: Gen 9:23 \"And Shem and Japheth took a garment, and laid it upon both their shoulders\", the two cover their father Noah. 2) grief: Gen 37:34 \"And Jacob rent his clothes, and put sackcloth upon his loins\", tearing clothes is a sign of deep grief. 3) the poor man's cover: Exod 22:27 \"for that is his covering only, it is his raiment for his skin: wherein shall he sleep?\", a poor man's cloak is his blanket, and God hears his cry. 4) care for the stranger: Deut 10:18 \"and loveth the stranger, in giving him food and raiment\", God provides the stranger with food and clothing.\n**In Van Dyke:** «ثياب», «ثوب» and «الرداء».\n**Note:** in Exod 22 the cloak could be taken as a pledge from a poor man, and the law protects him so that he is not left without cover at night."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H1310",
+      "lemma": "בָּשַׁל",
+      "gloss": {
+        "eg": "طبخ، سلق، نضج",
+        "msa": "طبخ، سلق، نضج",
+        "en": "to boil, to cook, to ripen"
+      },
+      "entry": {
+        "eg": "**المعنى:** «بَاشَل» معناها يطبخ أو يسلق، وبتيجي كمان بمعنى «ينضج» لما الثمر يستوي. المطبوخ هنا غالبًا لحم أو عجين في القدر أو على النار.\n**الاستخدامات والأمثلة:** ١) نضج العنب: تكوين ٤٠: ١٠ «وأنضجت عناقيدها عنبا»، حلم رئيس السقاة بالكرمة. ٢) ممنوع الطبخ: خروج ٢٣: ١٩ «لا تطبخ جديا بلبن أمه»، منع من الشريعة. ٣) طبخ المنّ: عدد ١١: ٨ «ثم يطحنونه بالرحى أو يدقونه في الهاون ويطبخونه في القدور»، بني إسرائيل بيحضّروا المنّ زي العجين. ٤) نضج الحصاد: يوئيل ٣: ١٣ «أرسلوا المنجل لأن الحصيد قد نضج»، النضج هنا صورة لوقت الدينونة.\n**في فاندايك:** «تطبخ» و«طبخ» و«أنضج» و«نضج».\n**ملاحظة:** من «لا تطبخ جديا بلبن أمه» أخد التقليد اليهودي منع خلط اللحم باللبن في الأكل.",
+        "msa": "**المعنى:** «بَاشَل» تعني طبخ الشيء أو سلقه، وتأتي بمعنى «نضج» حين يستوي الثمر. والمطبوخ غالبًا لحم أو عجين في القدر أو على النار.\n**الاستعمالات والأمثلة:** ١) نضج العنب: تكوين ٤٠: ١٠ «وأنضجت عناقيدها عنبا»، في حلم رئيس السقاة بالكرمة. ٢) النهي عن الطبخ: خروج ٢٣: ١٩ «لا تطبخ جديا بلبن أمه»، وهو نهي من الشريعة. ٣) طبخ المنّ: عدد ١١: ٨ «ثم يطحنونه بالرحى أو يدقونه في الهاون ويطبخونه في القدور»، فيُعدّ بنو إسرائيل المنّ كالعجين. ٤) نضج الحصاد: يوئيل ٣: ١٣ «أرسلوا المنجل لأن الحصيد قد نضج»، فالنضج صورة لوقت الدينونة.\n**في فاندايك:** «تطبخ» و«طبخ» و«أنضج» و«نضج».\n**ملاحظة:** من النهي عن طبخ الجدي بلبن أمه أخذ التقليد اليهودي منع خلط اللحم باللبن في الطعام.",
+        "en": "**Meaning:** bashal means to cook or boil, and also \"to ripen\" when fruit becomes ready. What is cooked is usually meat or dough, in a pot or on a fire.\n**Uses and examples:** 1) ripening grapes: Gen 40:10 \"and the clusters thereof brought forth ripe grapes\", in the cupbearer's dream of the vine. 2) a ban on cooking: Exod 23:19 \"Thou shalt not seethe a kid in his mother's milk\", a command of the law. 3) cooking manna: Num 11:8, the people grind it in a mill or pound it in a mortar, then cook it in pots; Van Dyke has them cook it in pots. 4) ripe harvest: Joel 3:13 \"Put ye in the sickle, for the harvest is ripe\", ripeness is a picture of the time of judgment.\n**In Van Dyke:** «تطبخ», «طبخ», «أنضج» and «نضج».\n**Note:** from the ban on seething a kid in its mother's milk the Jewish tradition derived the rule against mixing meat and dairy."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H2498",
+      "lemma": "חָלַף",
+      "gloss": {
+        "eg": "مرّ، اجتاز، غيّر، أبدل",
+        "msa": "مرّ، اجتاز، غيّر، أبدل",
+        "en": "to pass on, to change, to pierce"
+      },
+      "entry": {
+        "eg": "**المعنى:** «حَالَف» أصلها «يعدّي ويتحرك»، ومنها طريقين: يعدّي (فوق، يمر، يزول، يخترق) أو يبدّل (يغيّر حاجة بحاجة). الاتنين مرتبطين: اللي بيعدّي بيسيب مكانه لغيره.\n**الاستخدامات والأمثلة:** ١) المرور: أيوب ٩: ١١ «هوذا يمر علي ولا أراه، ويجتاز فلا أشعر به»، ربنا بيعدّي قدام أيوب ومش بيشوفه. ٢) تبديل الهدوم: تكوين ٣٥: ٢ «اعزلوا الآلهة الغريبة التي بينكم وتطهروا وأبدلوا ثيابكم»، يعقوب بيجهّز بيته للعبادة. ٣) تجديد القوة: إشعياء ٤٠: ٣١ «وأما منتظرو الرب فيجددون قوة»، الواحد بيبدّل ضعفه بقوة. ٤) الاختراق: أيوب ٢٠: ٢٤ «يفر من سلاح حديد. تخرقه قوس نحاس»، السهم بيعدّي في الجسم.\n**في فاندايك:** «يغير» و«أبدل» و«يجتاز» و«يتعدى».\n**ملاحظة:** الكلمة في أيوب ٢٠: ٢٤ بمعنى الاختراق على الأرجح، وده معنى أقل شيوعًا من التغيير والمرور.",
+        "msa": "**المعنى:** «حَالَف» أصلها العبور والحركة، ومنها اتجاهان: العبور (المرور والزوال والاختراق) أو التبديل (تغيير شيء بشيء). والاتجاهان مرتبطان، فمن يعبر يترك مكانه لغيره.\n**الاستعمالات والأمثلة:** ١) المرور: أيوب ٩: ١١ «هوذا يمر علي ولا أراه، ويجتاز فلا أشعر به»، فالله يمرّ أمام أيوب ولا يراه. ٢) تبديل الثياب: تكوين ٣٥: ٢ «اعزلوا الآلهة الغريبة التي بينكم وتطهروا وأبدلوا ثيابكم»، فيعقوب يهيّئ بيته للعبادة. ٣) تجديد القوة: إشعياء ٤٠: ٣١ «وأما منتظرو الرب فيجددون قوة»، فيستبدل المرء ضعفه بقوة. ٤) الاختراق: أيوب ٢٠: ٢٤ «يفر من سلاح حديد. تخرقه قوس نحاس»، فالسهم يخترق الجسد.\n**في فاندايك:** «يغير» و«أبدل» و«يجتاز» و«يتعدى».\n**ملاحظة:** الأرجح أن الكلمة في أيوب ٢٠: ٢٤ بمعنى الاختراق، وهو أقل شيوعًا من التغيير والمرور.",
+        "en": "**Meaning:** chalaf basically means to pass on and move, with two branches: to pass (go by, vanish, pierce through) and to exchange (change one thing for another). The two are linked, since what passes on leaves its place to another.\n**Uses and examples:** 1) passing by: Job 9:11 \"Lo, he goeth by me, and I see him not: he passeth on also, but I perceive him not\", God passes before Job without being seen. 2) changing clothes: Gen 35:2 \"Put away the strange gods that are among you, and be clean, and change your garments\", Jacob prepares his household for worship. 3) renewing strength: Isa 40:31 \"they that wait upon the LORD shall renew their strength\", one exchanges weakness for strength. 4) piercing: Job 20:24 \"He shall flee from the iron weapon, and the bow of steel shall strike him through\", the arrow passes through the body.\n**In Van Dyke:** «يغير», «أبدل», «يجتاز» and «يتعدى».\n**Note:** in Job 20:24 the sense is probably \"pierce\", which is less common than \"change\" and \"pass\"."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H2820",
+      "lemma": "חָשַׂךְ",
+      "gloss": {
+        "eg": "أمسك، منع، أشفق على",
+        "msa": "أمسك، منع، أبقى",
+        "en": "to withhold, to restrain, to spare"
+      },
+      "entry": {
+        "eg": "**المعنى:** «حَاسَخ» معناها يمسك عن حاجة ويمنعها أو يوفّرها، سواء من نفسه (يمتنع) أو عن غيره (يحميه). فيها فكرة الكبح والتحكم، وغالبًا بتيجي مع «عن».\n**الاستخدامات والأمثلة:** ١) ربنا بيحمي: تكوين ٢٠: ٦ «أمسكتك عن أن تخطئ إلي»، ربنا بيمنع أبيمالك من الخطية. ٢) إبراهيم ما بخلش: تكوين ٢٢: ١٦ «ولم تمسك ابنك وحيدك»، إبراهيم ما حجزش ابنه عن ربنا. ٣) ما تمسكش صوتك: إشعياء ٥٨: ١ «ناد بصوت عال. لا تمسك. ارفع صوتك كبوق»، النبي لازم يكمل الكلام من غير تراجع. ٤) كبح التأديب: أمثال ١٣: ٢٤ «من يمنع عصاه يمقت ابنه»، اللي بيحجز التأديب عن ابنه ما بيحبوش.\n**في فاندايك:** «أمسك» و«منع» و«امتنع» و«الضابط».\n**ملاحظة:** في أيوب ٢١: ٣٠ «يمسك الشرير» معناها إن ربنا بيحتفظ بيه ويأجّل عنه العقاب لحد يوم البوار، يعني الإمساك هنا ادخار.",
+        "msa": "**المعنى:** «حَاسَخ» تعني الإمساك عن شيء ومنعه أو ادخاره، سواء عن النفس (الامتناع) أو عن الغير (حمايته). ففيها معنى الكبح والتحكم، وتأتي غالبًا مع «عن».\n**الاستعمالات والأمثلة:** ١) الله يحمي: تكوين ٢٠: ٦ «أمسكتك عن أن تخطئ إلي»، فالله يمنع أبيمالك من الخطية. ٢) إبراهيم لم يبخل: تكوين ٢٢: ١٦ «ولم تمسك ابنك وحيدك»، فإبراهيم لم يحبس ابنه عن الله. ٣) لا تمسك صوتك: إشعياء ٥٨: ١ «ناد بصوت عال. لا تمسك. ارفع صوتك كبوق»، فعلى النبي أن يمضي بلا تراجع. ٤) كبح التأديب: أمثال ١٣: ٢٤ «من يمنع عصاه يمقت ابنه»، فمن يحجب التأديب عن ابنه لا يحبه.\n**في فاندايك:** «أمسك» و«منع» و«امتنع» و«الضابط».\n**ملاحظة:** في أيوب ٢١: ٣٠ «يمسك الشرير» أي يُحتفظ به وتؤجَّل عنه العقوبة إلى يوم البوار، فالإمساك هنا ادخار.",
+        "en": "**Meaning:** chasakh means to hold back, to restrain or to keep back, whether from oneself (refrain) or for another (protect). It carries the sense of restraint and control, and usually goes with \"from\".\n**Uses and examples:** 1) God protects: Gen 20:6 \"for I also withheld thee from sinning against me\", God keeps Abimelech from sin. 2) Abraham did not hold back: Gen 22:16 \"and hast not withheld thy son, thine only son\", Abraham did not keep his son from God. 3) do not hold back your voice: Isa 58:1 \"Cry aloud, spare not, lift up thy voice like a trumpet\", the prophet must go on without retreating. 4) restraining discipline: Prov 13:24 \"He that spareth his rod hateth his son\", whoever holds back correction from his son does not love him.\n**In Van Dyke:** «أمسك», «منع», «امتنع» and «الضابط».\n**Note:** in Job 21:30 Van Dyke's «يمسك الشرير» means the wicked is kept back, with punishment reserved until the day of destruction, so the holding is a reserving."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H2942",
+      "lemma": "טְעֵם",
+      "gloss": {
+        "eg": "أمر، قرار، اعتبار، عقل",
+        "msa": "أمر، قرار، اعتبار، عقل",
+        "en": "decree, command, discretion"
+      },
+      "entry": {
+        "eg": "**المعنى:** «طِعِيم» كلمة آرامية، يقابلها في العبري «طَعَم» (الذوق). من الذوق جت فكرة التمييز والحكم، فبقت تدل على العقل والاعتبار، وعلى القرار الرسمي أو الأمر الصادر من الملك.\n**الاستخدامات والأمثلة:** ١) تمييز وعقل: دانيال ٢: ١٤ «حينئذ أجاب دانيآل بحكمة وعقل لأريوخ»، دانيال بيتكلم بتعقل مع رئيس الحرس. ٢) اعتبار واحترام: دانيال ٣: ١٢ «هؤلاء الرجال لم يجعلوا لك أيها الملك اعتبارا»، الاتهام إنهم ما اعتبروش الملك. ٣) أمر ملكي: عزرا ٥: ١٣ «أصدر كورش الملك أمرا ببناء بيت الله هذا»، قرار كورش بإعادة بناء الهيكل. ٤) وظيفة: عزرا ٤: ٨ «رحوم صاحب القضاء وشمشاي الكاتب»، «صاحب القضاء» لقب موظف كبير بيصدر الأوامر.\n**في فاندايك:** «أمر» و«اعتبارا» و«صاحب القضاء» و«عقل».\n**ملاحظة:** الكلمة موجودة بس في الأجزاء الآرامية من دانيال وعزرا، والمعنى بيتغير حسب مين بيتكلم: الملك بيصدر «أمر»، والمتهم بيتكلم عن «اعتبار».",
+        "msa": "**المعنى:** «طِعِيم» كلمة آرامية يقابلها في العبرية «طَعَم» (الذوق). ومن الذوق جاءت فكرة التمييز والحكم، فدلّت على العقل والاعتبار، وعلى القرار الرسمي والأمر الصادر من الملك.\n**الاستعمالات والأمثلة:** ١) تمييز وعقل: دانيال ٢: ١٤ «حينئذ أجاب دانيآل بحكمة وعقل لأريوخ»، فدانيال يخاطب رئيس الحرس بتعقل. ٢) اعتبار وتوقير: دانيال ٣: ١٢ «هؤلاء الرجال لم يجعلوا لك أيها الملك اعتبارا»، فالتهمة أنهم لم يعتبروا الملك. ٣) أمر ملكي: عزرا ٥: ١٣ «أصدر كورش الملك أمرا ببناء بيت الله هذا»، وهو قرار كورش بإعادة بناء الهيكل. ٤) منصب: عزرا ٤: ٨ «رحوم صاحب القضاء وشمشاي الكاتب»، و«صاحب القضاء» لقب موظف كبير يصدر الأوامر.\n**في فاندايك:** «أمر» و«اعتبارا» و«صاحب القضاء» و«عقل».\n**ملاحظة:** الكلمة لا ترد إلا في الأجزاء الآرامية من دانيال وعزرا، ويتغير معناها بحسب المتكلم: الملك يصدر «أمرًا»، والمتهِم يتحدث عن «اعتبار».",
+        "en": "**Meaning:** taem is an Aramaic word matching Hebrew taam (taste). From taste came the idea of discernment and judgment, so it covers good sense and regard, and also an official decision or a command issued by the king.\n**Uses and examples:** 1) discernment: Dan 2:14 \"Daniel answered with counsel and wisdom to Arioch\", Daniel speaks with good sense to the captain of the guard. 2) regard: Dan 3:12 \"these men, O king, have not regarded thee\", the charge is that they gave the king no regard. 3) a royal decree: Ezra 5:13 \"Cyrus the king made a decree to build this house of God\", Cyrus's decision to rebuild the temple. 4) an office: Ezra 4:8 \"Rehum the chancellor and Shimshai the scribe\"; \"chancellor\" is a high official who issues orders.\n**In Van Dyke:** «أمر», «اعتبارا», «صاحب القضاء» and «عقل».\n**Note:** the word occurs only in the Aramaic parts of Daniel and Ezra, and its sense shifts with the speaker: the king issues a \"decree\", the accuser speaks of \"regard\"."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H3052",
+      "lemma": "יְהַב",
+      "gloss": {
+        "eg": "أعطى (آرامي)",
+        "msa": "أعطى (بالآرامية)",
+        "en": "to give (Aramaic)"
+      },
+      "entry": {
+        "eg": "**المعنى:** «يِهَڤ» هي «أعطى» بالآرامي، يقابلها في العبري «نَتَن». موجودة بس في الأجزاء الآرامية من دانيال وعزرا، وبتيجي عن عطية ربنا أو الملك، وكمان عن دفع جزية أو تسليم حد لغيره.\n**الاستخدامات والأمثلة:** ١) ربنا بيعطي الحكمة: دانيال ٢: ٢١ «يعطي الحكماء حكمة، ويعلم العارفين فهما»، ربنا هو مصدر الحكمة. ٢) ربنا بيعطي الملك: دانيال ٢: ٣٧ «لأن إله السماوات أعطاك مملكة واقتدارا وسلطانا وفخرا»، دانيال بيفكر نبوخذنصر إن مملكته هدية. ٣) السلطان لابن الإنسان: دانيال ٧: ١٤ «فأعطي سلطانا ومجدا وملكوتا لتتعبد له كل الشعوب»، الشخص اللي زي ابن إنسان بياخد السلطان من ربنا. ٤) تسليم ناس لحد: دانيال ٧: ٢٥ «ويسلمون ليده إلى زمان وأزمنة ونصف زمان»، القديسين يقعوا في إيد القرن الصغير مدة محددة.\n**في فاندايك:** «أعطى» و«يعطي» و«دفع» و«يسلم».\n**ملاحظة:** في دانيال ٧: ١٤ الفعل جاي من غير ما يذكر مين اللي أعطى، والمعنى إن ربنا هو اللي أعطى.",
+        "msa": "**المعنى:** «يِهَڤ» هي «أعطى» بالآرامية، ويقابلها في العبرية «نَتَن». وهي في الأجزاء الآرامية من دانيال وعزرا فقط، وتقال عن عطية الله أو الملك، وعن دفع الجزية وتسليم أحد إلى آخر.\n**الاستعمالات والأمثلة:** ١) الله يعطي الحكمة: دانيال ٢: ٢١ «يعطي الحكماء حكمة، ويعلم العارفين فهما»، فالله مصدر الحكمة. ٢) الله يعطي الملك: دانيال ٢: ٣٧ «لأن إله السماوات أعطاك مملكة واقتدارا وسلطانا وفخرا»، فدانيال يذكّر نبوخذنصر بأن مملكته هبة. ٣) السلطان لابن الإنسان: دانيال ٧: ١٤ «فأعطي سلطانا ومجدا وملكوتا لتتعبد له كل الشعوب»، فيتسلم السلطان من الله. ٤) تسليم أناس إلى أحد: دانيال ٧: ٢٥ «ويسلمون ليده إلى زمان وأزمنة ونصف زمان»، فيُسلَّم القديسون ليد القرن الصغير.\n**في فاندايك:** «أعطى» و«يعطي» و«دفع» و«يسلم».\n**ملاحظة:** في دانيال ٧: ١٤ جاء الفعل مبنيًّا للمجهول، والمعنى أن الله هو الذي أعطى.",
+        "en": "**Meaning:** yehav is Aramaic \"to give\", matching Hebrew natan. It occurs only in the Aramaic parts of Daniel and Ezra, and is said of gifts from God or the king, and also of paying tribute or handing someone over to another.\n**Uses and examples:** 1) God gives wisdom: Dan 2:21 \"he giveth wisdom unto the wise, and knowledge to them that know understanding\", God is the source of wisdom. 2) God gives the kingdom: Dan 2:37 \"the God of heaven hath given thee a kingdom, power, and strength, and glory\", Daniel reminds Nebuchadnezzar that his kingdom is a gift. 3) authority to the Son of Man: Dan 7:14 \"And there was given him dominion, and glory, and a kingdom\", the authority comes to him from God. 4) people handed over: Dan 7:25 \"and they shall be given into his hand until a time and times and the dividing of time\", the holy ones are handed to the little horn.\n**In Van Dyke:** «أعطى», «يعطي», «دفع» and «يسلم».\n**Note:** in Dan 7:14 the verb is in the passive, with no giver named, and the sense is that God is the one who gives."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H3411",
+      "lemma": "יַרְכָה",
+      "gloss": {
+        "eg": "جانب، مؤخر، أقاصي",
+        "msa": "جانب، مؤخر، أقاصي",
+        "en": "flank, side, far part"
+      },
+      "entry": {
+        "eg": "**المعنى:** «يَرْخَا» هي الجانب أو الطرف البعيد من حاجة، زي مؤخر الخيمة أو أعماق الجب أو أقاصي الأرض. الأرجح إنها مأخوذة من «يَرِك» (الفخذ)، يعني الجنب أو الخلف. وبتتقال في الأغلب عن المكان.\n**الاستخدامات والأمثلة:** ١) مؤخر المسكن: خروج ٢٦: ٢٣ «وتصنع لوحين لزاويتي المسكن في المؤخر»، الجهة الخلفية من الخيمة. ٢) أقاصي الأرض: إرميا ٦: ٢٢ «هوذا شعب قادم من أرض الشمال، وأمة عظيمة تقوم من أقاصي الأرض»، العدو جاي من آخر الدنيا. ٣) أعماق الهاوية: إشعياء ١٤: ١٥ «لكنك انحدرت إلى الهاوية، إلى أسافل الجب»، ملك بابل بيهبط لأبعد نقطة. ٤) جنب البيت: مزمور ١٢٨: ٣ «امرأتك مثل كرمة مثمرة في جوانب بيتك»، الجنب الداخلي للبيت.\n**في فاندايك:** «أقاصي» و«المؤخر» و«جوانب» و«أسافل».\n**ملاحظة:** الكلمة بتتغير بين «الأقصى البعيد» و«الجنب القريب»، والسياق هو اللي يحدد.",
+        "msa": "**المعنى:** «يَرْخَا» هي الجانب أو الطرف القصيّ من الشيء، كمؤخر الخيمة وأعماق الجب وأقاصي الأرض. والأرجح أنها مشتقة من «يَرِك» (الفخذ)، أي الجنب أو الخلف. وتقال في الغالب عن المكان.\n**الاستعمالات والأمثلة:** ١) مؤخر المسكن: خروج ٢٦: ٢٣ «وتصنع لوحين لزاويتي المسكن في المؤخر»، أي الجهة الخلفية من الخيمة. ٢) أقاصي الأرض: إرميا ٦: ٢٢ «هوذا شعب قادم من أرض الشمال، وأمة عظيمة تقوم من أقاصي الأرض»، فالعدو يأتي من آخر الدنيا. ٣) أعماق الهاوية: إشعياء ١٤: ١٥ «لكنك انحدرت إلى الهاوية، إلى أسافل الجب»، فملك بابل ينزل إلى أبعد نقطة. ٤) جانب البيت: مزمور ١٢٨: ٣ «امرأتك مثل كرمة مثمرة في جوانب بيتك»، أي الجانب الداخلي من البيت.\n**في فاندايك:** «أقاصي» و«المؤخر» و«جوانب» و«أسافل».\n**ملاحظة:** تتراوح الكلمة بين «الأقصى البعيد» و«الجنب القريب»، ويحدد السياق أيهما المقصود.",
+        "en": "**Meaning:** yarkah is the side or far end of something, such as the rear of a tent, the depths of a pit or the ends of the earth. It probably comes from yarekh (thigh), that is, the side or the back. It is used mostly of place.\n**Uses and examples:** 1) the rear of the tabernacle: Exod 26:23, two boards for the corners at the back of the tent. 2) the ends of the earth: Jer 6:22 \"a people cometh from the north country, and a great nation shall be raised from the sides of the earth\", the enemy comes from the far end of the world. 3) the depths of the pit: Isa 14:15 \"Yet thou shalt be brought down to hell, to the sides of the pit\", the king of Babylon falls to the lowest point. 4) the side of a house: Ps 128:3 \"Thy wife shall be as a fruitful vine by the sides of thine house\", the inner side of the house.\n**In Van Dyke:** «أقاصي», «المؤخر», «جوانب» and «أسافل».\n**Note:** the word ranges between \"far extremity\" and \"near side\", and the context decides which is meant."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H3887",
+      "lemma": "לִיץ",
+      "gloss": {
+        "eg": "استهزأ، المستهزئ، ترجمان",
+        "msa": "استهزأ، المستهزئ، ترجمان",
+        "en": "to mock, scoffer, interpreter"
+      },
+      "entry": {
+        "eg": "**المعنى:** «لِيص» معناها يسخر ويستهزئ. والاسم «المستهزئ» نموذج معروف في سفر الأمثال: شخص متكبر بيتريق على الحكمة والنصيحة. وبتيجي كمان في كام موضع بمعنى الواسطة اللي بتنقل الكلام، «الترجمان» أو «الوسيط»، ومعناها الأصلي ممكن يكون «اللي بيتكلم نيابة عن غيره».\n**الاستخدامات والأمثلة:** ١) المستهزئ ما بيلاقيش الحكمة: أمثال ١٤: ٦ «المستهزئ يطلب الحكمة ولا يجدها»، لأنه بيطلبها بغرور. ٢) تأديبه خسارة: أمثال ٩: ٧ «من يوبخ مستهزئا يكسب لنفسه هوانا»، النصيحة له ترجع على صاحبها. ٣) ربنا بيرد: أمثال ٣: ٣٤ «كما أنه يستهزئ بالمستهزئين، هكذا يعطي نعمة للمتواضعين»، ربنا بيقابل السخرية بالسخرية. ٤) ترجمان: تكوين ٤٢: ٢٣ «لأن الترجمان كان بينهم»، يوسف بيكلم إخواته عن طريق مترجم.\n**في فاندايك:** «المستهزئ» و«يستهزئ» و«الترجمان» و«وسيط».\n**ملاحظة:** في أيوب ٣٣: ٢٣ «وسيط واحد من ألف» نفس الكلمة بمعنى الملاك الوسيط، فالمعنيين (السخرية والوساطة) مختلفين عن بعض.",
+        "msa": "**المعنى:** «لِيص» تعني السخرية والاستهزاء. والاسم «المستهزئ» نموذج معروف في سفر الأمثال: متكبر يسخر من الحكمة والنصيحة. وترد أيضًا في مواضع قليلة بمعنى الواسطة الذي ينقل الكلام، «الترجمان» أو «الوسيط»، وقد يكون أصل المعنى «من يتكلم نيابة عن غيره».\n**الاستعمالات والأمثلة:** ١) المستهزئ لا يجد الحكمة: أمثال ١٤: ٦ «المستهزئ يطلب الحكمة ولا يجدها»، لأنه يطلبها بغرور. ٢) توبيخه خسارة: أمثال ٩: ٧ «من يوبخ مستهزئا يكسب لنفسه هوانا»، فنصيحته ترتد على صاحبها. ٣) الله يجازي: أمثال ٣: ٣٤ «كما أنه يستهزئ بالمستهزئين، هكذا يعطي نعمة للمتواضعين»، فالله يقابل السخرية بمثلها. ٤) ترجمان: تكوين ٤٢: ٢٣ «لأن الترجمان كان بينهم»، فيوسف يكلّم إخوته بواسطة مترجم.\n**في فاندايك:** «المستهزئ» و«يستهزئ» و«الترجمان» و«وسيط».\n**ملاحظة:** في أيوب ٣٣: ٢٣ «وسيط واحد من ألف» الكلمة نفسها بمعنى الملاك المتوسط، فالمعنيان (السخرية والوساطة) متباعدان.",
+        "en": "**Meaning:** lits means to scorn and mock. The noun \"scoffer\" is a well-known figure in Proverbs: an arrogant person who sneers at wisdom and advice. In a few places the word also means a go-between who passes on speech, an \"interpreter\" or \"mediator\", and the original idea may be \"one who speaks on behalf of another\".\n**Uses and examples:** 1) the scoffer does not find wisdom: Prov 14:6 \"A scorner seeketh wisdom, and findeth it not\", because he seeks it with pride. 2) rebuking him costs you: Prov 9:7 \"He that reproveth a scorner getteth to himself shame\", the advice turns back on the giver. 3) God answers in kind: Prov 3:34 \"Surely he scorneth the scorners: but he giveth grace unto the lowly\", God meets scorn with scorn. 4) interpreter: Gen 42:23 \"for he spake unto them by an interpreter\", Joseph speaks to his brothers through an interpreter.\n**In Van Dyke:** «المستهزئ», «يستهزئ», «الترجمان» and «وسيط».\n**Note:** in Job 33:23 \"an interpreter, one among a thousand\" the same word means the angel who intercedes, so scorn and mediation are quite different senses."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H4487",
+      "lemma": "מָנָה",
+      "gloss": {
+        "eg": "عدّ، أحصى، عيّن، أعدّ",
+        "msa": "عدّ، أحصى، عيّن، أعدّ",
+        "en": "to count, to appoint, to assign"
+      },
+      "entry": {
+        "eg": "**المعنى:** «مَانَا» معناها يعدّ ويحصي، وطلعت منها فكرة التعيين: اللي بيحسب نصيب حد بيحدده له. فتيجي بمعنى «يعيّن» أو «يخصّص» وفي سفر يونان بمعنى «يجهّز» كأن ربنا حدد الحاجة سلفًا.\n**الاستخدامات والأمثلة:** ١) عدّ ما لا يُعدّ: تكوين ١٣: ١٦ «حتى إذا استطاع أحد أن يعد تراب الأرض فنسلك أيضا يعد»، ربنا بيوعد إبراهيم بنسل كتير زي التراب. ٢) الإحصاء: ٢ صموئيل ٢٤: ١ «امض وأحص إسرائيل ويهوذا»، أمر داود بعدّ الشعب. ٣) تخصيص نصيب: دانيال ١: ٥ «وعين لهم الملك وظيفة كل يوم بيومه من أطايب الملك»، الملك بيحدد لهم حصة يومية من أكله. ٤) ربنا يجهّز: يونان ٤: ٦ «فأعد الرب الإله يقطينة فارتفعت فوق يونان»، ربنا هو اللي رتب الشجرة علشان تضلل على يونان.\n**في فاندايك:** «يعد» و«يحصي» و«عين» و«أعد».\n**ملاحظة:** في يونان ٤: ٨ كمان «أعد ريحا شرقية حارة»، يعني ربنا بيرتب حتى الريح والنبات علشان يعلّم يونان.",
+        "msa": "**المعنى:** «مَانَا» تعني العدّ والإحصاء، ومنها تتطور فكرة التعيين: فمن يحسب نصيب أحد يحدده له. فتأتي بمعنى «عيّن» أو «خصّص»، وفي سفر يونان بمعنى «أعدّ»، كأن الله قدّر الشيء سلفًا.\n**الاستعمالات والأمثلة:** ١) عدّ ما لا يُعدّ: تكوين ١٣: ١٦ «حتى إذا استطاع أحد أن يعد تراب الأرض فنسلك أيضا يعد»، فالله يعد إبراهيم بنسل كالتراب. ٢) الإحصاء: ٢ صموئيل ٢٤: ١ «امض وأحص إسرائيل ويهوذا»، وهو أمر داود بعدّ الشعب. ٣) تخصيص نصيب: دانيال ١: ٥ «وعين لهم الملك وظيفة كل يوم بيومه من أطايب الملك»، فالملك يحدد لهم حصة يومية من طعامه. ٤) الله يعدّ: يونان ٤: ٦ «فأعد الرب الإله يقطينة فارتفعت فوق يونان»، فالله هو الذي رتّب الشجرة لتظلل يونان.\n**في فاندايك:** «يعد» و«يحصي» و«عين» و«أعد».\n**ملاحظة:** في يونان ٤: ٨ أيضًا «أعد ريحا شرقية حارة»، أي أن الله يرتب حتى الريح والنبات ليعلّم يونان.",
+        "en": "**Meaning:** manah means to count and number, and from it grew the idea of assigning: whoever reckons someone's share fixes it for them. So it also means \"to appoint\" or \"to assign\", and in Jonah \"to prepare\", as if God had ordained the thing beforehand.\n**Uses and examples:** 1) counting the uncountable: Gen 13:16 \"so that if a man can number the dust of the earth, then shall thy seed also be numbered\", God promises Abraham descendants like dust. 2) a census: 2 Sam 24:1 \"Go, number Israel and Judah\", David's order to count the people. 3) assigning a portion: Dan 1:5 \"And the king appointed them a daily provision of the king's meat\", the king fixes a daily share of his food. 4) God prepares: Jonah 4:6 \"And the LORD God prepared a gourd, and made it to come up over Jonah\", God arranged the plant to shade Jonah.\n**In Van Dyke:** «يعد», «يحصي», «عين» and «أعد».\n**Note:** Jonah 4:8 also has \"God prepared a vehement east wind\", so God arranges even the wind and the plant to teach Jonah."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H4598",
+      "lemma": "מְעִיל",
+      "gloss": {
+        "eg": "جبة، رداء",
+        "msa": "جبة، رداء",
+        "en": "robe, outer robe"
+      },
+      "entry": {
+        "eg": "**المعنى:** «مِعِيل» هي الجبة، ثوب خارجي طويل بيلبسه الكاهن أو النبي أو الملك أو الغني، فوق القميص. وهي علامة مقام، وتمزيقها علامة حزن أو خسارة.\n**الاستخدامات والأمثلة:** ١) جبة الكاهن: خروج ٢٨: ٣٤ «جلجل ذهب ورمانة، جلجل ذهب ورمانة، على أذيال الجبة حواليها»، جبة هارون كان عليها جلاجل ورمان. ٢) تمزيق الجبة: ١ صموئيل ١٥: ٢٧ «فأمسك بذيل جبته فانمزق»، صموئيل بيلف علشان يمشي وشاول بيمسك جبته. ٣) طرف الجبة: ١ صموئيل ٢٤: ١١ «انظر أيضا طرف جبتك بيدي»، داود بيثبت لشاول إنه قدر يقتله وما عملش. ٤) ربنا يلبس الغيرة: إشعياء ٥٩: ١٧ «واكتسى بالغيرة كرداء»، صورة ربنا كمحارب لابس غيرته زي رداء.\n**في فاندايك:** «الجبة» و«جبة» و«رداء».\n**ملاحظة:** في ١ صموئيل ١٥ بعد تمزيق الجبة يقول صموئيل إن ربنا مزق المملكة عن شاول، فالجبة الممزقة بقت علامة.",
+        "msa": "**المعنى:** «مِعِيل» هي الجبة، ثوب خارجي طويل يلبسه الكاهن أو النبي أو الملك أو الغني فوق القميص. وهي علامة مقام، وتمزيقها علامة حزن أو خسارة.\n**الاستعمالات والأمثلة:** ١) جبة الكاهن: خروج ٢٨: ٣٤ «جلجل ذهب ورمانة، جلجل ذهب ورمانة، على أذيال الجبة حواليها»، فجبة هارون عليها جلاجل ورمّان. ٢) تمزيق الجبة: ١ صموئيل ١٥: ٢٧ «فأمسك بذيل جبته فانمزق»، فصموئيل يدور ليمضي وشاول يمسك جبته. ٣) طرف الجبة: ١ صموئيل ٢٤: ١١ «انظر أيضا طرف جبتك بيدي»، فداود يثبت لشاول أنه قدر على قتله ولم يفعل. ٤) الله يلبس الغيرة: إشعياء ٥٩: ١٧ «واكتسى بالغيرة كرداء»، صورة الله محاربًا يلبس غيرته كرداء.\n**في فاندايك:** «الجبة» و«جبة» و«رداء».\n**ملاحظة:** في ١ صموئيل ١٥ يقول صموئيل بعد تمزيق الجبة إن الله مزّق المملكة عن شاول، فصارت الجبة الممزقة علامة.",
+        "en": "**Meaning:** meil is the robe, a long outer garment worn over the tunic by a priest, prophet, king or rich man. It marks standing, and tearing it marks grief or loss.\n**Uses and examples:** 1) the priest's robe: Exod 28:34 \"A golden bell and a pomegranate, a golden bell and a pomegranate, upon the hem of the robe round about\", Aaron's robe carried bells and pomegranates. 2) a torn robe: 1 Sam 15:27 \"he laid hold upon the skirt of his mantle, and it rent\", Samuel turns to go and Saul grabs his robe. 3) the corner of a robe: 1 Sam 24:11 \"see the skirt of thy robe in my hand\", David proves he could have killed Saul and did not. 4) God wears zeal: Isa 59:17 \"and was clad with zeal as a cloke\", God as a warrior dressed in zeal like a cloak.\n**In Van Dyke:** «الجبة», «جبة» and «رداء».\n**Note:** in 1 Sam 15 after the robe tears Samuel says that God has torn the kingdom from Saul, so the torn robe became a sign."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H4604",
+      "lemma": "מַ֫עַל",
+      "gloss": {
+        "eg": "خيانة، غدر، عصيان للرب",
+        "msa": "خيانة، غدر، عصيان للرب",
+        "en": "unfaithfulness, treachery"
+      },
+      "entry": {
+        "eg": "**المعنى:** «مَعَل» هي الخيانة أو الغدر، وغالبًا خيانة العهد مع ربنا، زي زوجة بتخون جوزها، أو واحد بياخد حاجة من المقدسات. وبتيجي كتير مع الفعل «خان»: «خان خيانة».\n**الاستخدامات والأمثلة:** ١) خيانة في المقدسات: لاويين ٥: ١٥ «إذا خان أحد خيانة وأخطأ سهوا في أقداس الرب»، حتى لو سهوًا لازم ذبيحة. ٢) خيانة زوجية: عدد ٥: ١٢ «إذا زاغت امرأة رجل وخانته خيانة»، الكلمة هنا بتتكلم عن خيانة العلاقة. ٣) خيانة العهد: يشوع ٢٢: ١٦ «ما هذه الخيانة التي خنتم بها إله إسرائيل»، الأسباط بتتهم إخواتها إنهم بنوا مذبح. ٤) السبي بسبب الخيانة: ١ أخبار ٩: ١ «وسبي يهوذا إلى بابل لأجل خيانتهم»، الخيانة هي سبب السبي.\n**في فاندايك:** «خيانة» و«الخيانة».\n**ملاحظة:** فاندايك بيكرر «خان خيانة» (عدد ٥: ١٢، حزقيال ١٥: ٨) علشان يحافظ على تكرار الجذر في العبري.",
+        "msa": "**المعنى:** «مَعَل» هي الخيانة أو الغدر، وغالبًا خيانة العهد مع الله، كزوجة تخون زوجها أو من يتعدى على المقدسات. وترد كثيرًا مع الفعل «خان»: «خان خيانة».\n**الاستعمالات والأمثلة:** ١) خيانة في المقدسات: لاويين ٥: ١٥ «إذا خان أحد خيانة وأخطأ سهوا في أقداس الرب»، فحتى السهو يستوجب ذبيحة. ٢) خيانة زوجية: عدد ٥: ١٢ «إذا زاغت امرأة رجل وخانته خيانة»، فالكلمة تصف خيانة العلاقة. ٣) خيانة العهد: يشوع ٢٢: ١٦ «ما هذه الخيانة التي خنتم بها إله إسرائيل»، فالأسباط تتهم إخوتها ببناء مذبح. ٤) السبي بسبب الخيانة: ١ أخبار ٩: ١ «وسبي يهوذا إلى بابل لأجل خيانتهم»، فالخيانة سبب السبي.\n**في فاندايك:** «خيانة» و«الخيانة».\n**ملاحظة:** يكرر فاندايك «خان خيانة» (عدد ٥: ١٢، حزقيال ١٥: ٨) محافظةً على تكرار الجذر في العبرية.",
+        "en": "**Meaning:** maal is unfaithfulness or treachery, most often betraying the covenant with God, like a wife who betrays her husband or someone who violates holy things. It often goes with the verb \"to act faithlessly\": \"to commit a trespass\".\n**Uses and examples:** 1) trespass on holy things: Lev 5:15 \"If a soul commit a trespass, and sin through ignorance, in the holy things of the LORD\", even an accident needs an offering. 2) marital unfaithfulness: Num 5:12 \"If any man's wife go aside, and commit a trespass against him\", the word describes betrayal of the relationship. 3) breaking the covenant: Josh 22:16 \"What trespass is this that ye have committed against the God of Israel\", the tribes accuse their brothers of building an altar. 4) exile for treachery: 1 Chr 9:1 \"who were carried away to Babylon for their transgression\", unfaithfulness is the cause of exile.\n**In Van Dyke:** «خيانة» and «الخيانة».\n**Note:** Van Dyke repeats \"he acted treacherously a treachery\" (Num 5:12, Ezek 15:8) to keep the doubled root of the Hebrew."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5074",
+      "lemma": "נָדַד",
+      "gloss": {
+        "eg": "هرب، تاه، طار",
+        "msa": "هرب، تاه، طار",
+        "en": "to flee, to wander, to flutter"
+      },
+      "entry": {
+        "eg": "**المعنى:** «نَادَد» معناها يهرب أو يضيع ويشرد أو يرفرف ويتحرك من غير استقرار، زي الطير. فيها فكرة الابتعاد والتشرد، وبتتقال عن الناس والنوم والحلم كمان.\n**الاستخدامات والأمثلة:** ١) النوم بيهرب: تكوين ٣١: ٤٠ «وطار نومي من عيني»، يعقوب بيشتكي من السهر في خدمة لابان. ٢) هروب وراحة: مزمور ٥٥: ٧ «هأنذا كنت أبعد هاربا، وأبيت في البرية»، الكاتب بيتمنى يهرب من الأذى. ٣) التائه: أيوب ١٥: ٢٣ «تائه هو لأجل الخبز حيثما يجده»، الشرير بيلف يدوّر على لقمة. ٤) هروب من الخراب: ناحوم ٣: ٧ «ويكون كل من يراك يهرب منك»، كل واحد بيهرب من نينوى بعد خرابها.\n**في فاندايك:** «هرب» و«تائه» و«طار» و«يهرب».\n**ملاحظة:** الفكرة الأصلية حركة سريعة من غير ثبات، زي رفرفة جناح الطير، وده اللي بيجمع بين الهروب والشرود.",
+        "msa": "**المعنى:** «نَادَد» تعني الهرب أو التيه أو الرفرفة والحركة بلا استقرار كالطير. ففيها معنى الابتعاد والتشرد، وتقال عن الناس والنوم والحلم أيضًا.\n**الاستعمالات والأمثلة:** ١) النوم يهرب: تكوين ٣١: ٤٠ «وطار نومي من عيني»، فيعقوب يشكو السهر في خدمة لابان. ٢) هروب وراحة: مزمور ٥٥: ٧ «هأنذا كنت أبعد هاربا، وأبيت في البرية»، فالكاتب يتمنى الفرار من الأذى. ٣) التائه: أيوب ١٥: ٢٣ «تائه هو لأجل الخبز حيثما يجده»، فالشرير يضل بحثًا عن لقمة. ٤) هروب من الخراب: ناحوم ٣: ٧ «ويكون كل من يراك يهرب منك»، فكل من يرى نينوى بعد خرابها يفرّ منها.\n**في فاندايك:** «هرب» و«تائه» و«طار» و«يهرب».\n**ملاحظة:** الفكرة الأصلية حركة سريعة بلا ثبات كرفرفة جناح الطير، وتجمع بين الهروب والتيه.",
+        "en": "**Meaning:** nadad means to flee, to wander or to flutter, to move without settling, like a bird. It carries the idea of moving far off and of homelessness, and is said of people and also of sleep and dreams.\n**Uses and examples:** 1) sleep flees: Gen 31:40 \"and my sleep departed from mine eyes\", Jacob complains of the sleepless years in Laban's service. 2) flight for rest: Ps 55:7 \"Lo, then would I wander far off, and remain in the wilderness\", the writer longs to escape harm. 3) the wanderer: Job 15:23 \"He wandereth abroad for bread, saying, Where is it?\", the wicked man wanders looking for a crust. 4) fleeing ruin: Nah 3:7 \"all they that look upon thee shall flee from thee\", everyone runs from Nineveh after its fall.\n**In Van Dyke:** «هرب», «تائه», «طار» and «يهرب».\n**Note:** the root idea is quick unsettled movement, like a bird's flutter, which joins fleeing and wandering."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5648",
+      "lemma": "עֲבַד",
+      "gloss": {
+        "eg": "صنع، عمل، فعل (آرامي)",
+        "msa": "صنع، عمل، فعل (آرامي)",
+        "en": "to make, to do (Aramaic)"
+      },
+      "entry": {
+        "eg": "**المعنى:** «عَڤَد» هي «صنع» و«عمل» بالآرامي، يقابلها في العبري «عَسَا». موجودة في الأجزاء الآرامية من دانيال وعزرا وفي آية واحدة في إرميا. ما تلخبطهاش بـ«عَڤَد» العبري اللي معناها «خدم».\n**الاستخدامات والأمثلة:** ١) الخلق: إرميا ١٠: ١١ «الآلهة التي لم تصنع السماوات والأرض تبيد من الأرض»، الآية الوحيدة بالآرامي في إرميا، وبتفرق بين ربنا الخالق والأصنام. ٢) صنع تمثال: دانيال ٣: ١ «نبوخذنصر الملك صنع تمثالا من ذهب طوله ستون ذراعا»، الملك بيعمل صنم ضخم. ٣) ربنا يفعل ما يشاء: دانيال ٤: ٣٥ «وهو يفعل كما يشاء في جند السماء وسكان الأرض»، ربنا ما حدش يحاسبه. ٤) بريء من الذنب: دانيال ٦: ٢٢ «لم أفعل ذنبا»، دانيال بيقول للملك إنه ما عملش حاجة غلط.\n**في فاندايك:** «صنع» و«يعمل» و«يفعل» و«أفعل».\n**ملاحظة:** في دانيال ٣: ٢٩ فاندايك ترجمها «يصيرون إربا إربا»، يعني الفعل هنا بمعنى «يتحول إلى».",
+        "msa": "**المعنى:** «عَڤَد» هي «صنع» و«عمل» بالآرامية، ويقابلها في العبرية «عَسَا». وهي في الأجزاء الآرامية من دانيال وعزرا وفي آية واحدة من إرميا. ولا تختلط بـ«عَڤَد» العبرية التي بمعنى «خدم».\n**الاستعمالات والأمثلة:** ١) الخلق: إرميا ١٠: ١١ «الآلهة التي لم تصنع السماوات والأرض تبيد من الأرض»، وهي الآية الآرامية الوحيدة في إرميا، وتفرّق بين الله الخالق والأصنام. ٢) صنع تمثال: دانيال ٣: ١ «نبوخذنصر الملك صنع تمثالا من ذهب طوله ستون ذراعا»، فالملك يصنع صنمًا ضخمًا. ٣) الله يفعل ما يشاء: دانيال ٤: ٣٥ «وهو يفعل كما يشاء في جند السماء وسكان الأرض»، فلا أحد يحاسبه. ٤) براءة من الذنب: دانيال ٦: ٢٢ «لم أفعل ذنبا»، فدانيال يخبر الملك بأنه لم يفعل سوءًا.\n**في فاندايك:** «صنع» و«يعمل» و«يفعل» و«أفعل».\n**ملاحظة:** وترد كذلك بمعنى «يصير» في دانيال ٣: ٢٩ («يصيرون إربا إربا»)، أي أن الفعل بمعنى «يتحول إلى».",
+        "en": "**Meaning:** avad is Aramaic \"to make\" and \"to do\", matching Hebrew asah. It occurs in the Aramaic parts of Daniel and Ezra and in one verse of Jeremiah. It should not be confused with Hebrew avad, \"to serve\".\n**Uses and examples:** 1) creation: Jer 10:11 \"The gods that have not made the heavens and the earth, even they shall perish from the earth\", the only Aramaic verse in Jeremiah, setting the Creator against idols. 2) making an image: Dan 3:1 \"Nebuchadnezzar the king made an image of gold, whose height was threescore cubits\", the king builds a huge statue. 3) God does as he wills: Dan 4:35 \"he doeth according to his will in the army of heaven\", no one holds him to account. 4) innocence: Dan 6:22 \"also before thee, O king, have I done no hurt\", Daniel tells the king he has done nothing wrong.\n**In Van Dyke:** «صنع», «يعمل», «يفعل» and «أفعل».\n**Note:** the verb also means \"to become\" in Dan 3:29 (\"they shall be made into pieces\" in Van Dyke's «يصيرون إربا إربا»), so it can mean \"turn into\"."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5956",
+      "lemma": "עָלַם",
+      "gloss": {
+        "eg": "أخفى، ستر، تغاضى",
+        "msa": "أخفى، ستر، تغاضى",
+        "en": "to hide, to conceal, to ignore"
+      },
+      "entry": {
+        "eg": "**المعنى:** «عَالَم» معناها يخفي أو يستر حاجة، وبتيجي في تعبير «يخفي عينيه»: يغمض عينه ويعمل نفسه ما شافش. وكمان لما ربنا «يستر» عينه أو أذنه عن حد، يعني بيرفض يسمع أو يتحرك.\n**الاستخدامات والأمثلة:** ١) أمر مخفي: لاويين ٤: ١٣ «وأخفي أمر عن أعين المجمع»، الجماعة أخطأت وهي ما تعرفش. ٢) إغماض العين: لاويين ٢٠: ٤ «وإن غمض شعب الأرض أعينهم عن ذلك الإنسان»، الناس بيغمضوا عينهم عن واحد قدّم ولاده للصنم. ٣) ربنا بيستر عينه: إشعياء ١: ١٥ «فحين تبسطون أيديكم أستر عيني عنكم»، ربنا يرفض صلاتهم لأن إيديهم ملآنة دم. ٤) صلاة المحتاج: مزمور ٥٥: ١ «اصغ يا الله إلى صلاتي، ولا تتغاض عن تضرعي»، الكاتب بيرجو ربنا ما يهملش دعاه.\n**في فاندايك:** «أخفى» و«غمض» و«تتغاضى» و«تستر».\n**ملاحظة:** في تثنية ٢٢: ٣ «لا يحل لك أن تتغاضى» معناها إنك ما تعملش نفسك مش شايف حمار أخوك الضايع وتسيبه.",
+        "msa": "**المعنى:** «عَالَم» تعني الإخفاء والستر، وترد في تعبير «يخفي عينيه»: أي يتغاضى ويتظاهر بعدم الرؤية. وإذا «ستر» الله عينه أو أذنه عن أحد فمعناه أنه يرفض الاستماع أو التدخل.\n**الاستعمالات والأمثلة:** ١) أمر مخفي: لاويين ٤: ١٣ «وأخفي أمر عن أعين المجمع»، فالجماعة أخطأت دون علم. ٢) إغماض العين: لاويين ٢٠: ٤ «وإن غمض شعب الأرض أعينهم عن ذلك الإنسان»، فالناس يتغاضون عمّن قدّم أولاده للصنم. ٣) الله يستر عينه: إشعياء ١: ١٥ «فحين تبسطون أيديكم أستر عيني عنكم»، فالله يرفض صلاتهم لأن أيديهم ملآنة دمًا. ٤) صلاة المحتاج: مزمور ٥٥: ١ «اصغ يا الله إلى صلاتي، ولا تتغاض عن تضرعي»، فالكاتب يرجو الله ألا يتجاهل دعاءه.\n**في فاندايك:** «أخفى» و«غمض» و«تتغاضى» و«تستر».\n**ملاحظة:** في تثنية ٢٢: ٣ «لا يحل لك أن تتغاضى» أي ألا تتظاهر بأنك لم ترَ حمار أخيك الضال فتتركه.",
+        "en": "**Meaning:** alam means to hide or conceal, and appears in the phrase \"to hide one's eyes\", meaning to look the other way and pretend not to see. When God \"hides\" his eye or ear from someone, he refuses to listen or step in.\n**Uses and examples:** 1) a hidden matter: Lev 4:13 \"and the thing be hid from the eyes of the assembly\", the community has sinned without knowing it. 2) closing the eyes: Lev 20:4 \"And if the people of the land do any ways hide their eyes from the man\", people look away from one who gave his children to an idol. 3) God hides his eye: Isa 1:15 \"I will hide mine eyes from you\", God refuses their prayer because their hands are full of blood. 4) the needy one's prayer: Ps 55:1 \"hide not thyself from my supplication\", the writer asks God not to ignore his plea.\n**In Van Dyke:** «أخفى», «غمض», «تتغاضى» and «تستر».\n**Note:** in Deut 22:3 \"thou mayest not hide thyself\" means you must not pretend not to see your brother's lost donkey and leave it."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6346",
+      "lemma": "פֶּחָה",
+      "gloss": {
+        "eg": "والي، حاكم ولاية",
+        "msa": "والٍ، حاكم ولاية",
+        "en": "governor"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پِحَا» هي لقب الوالي، الحاكم اللي بيعيّنه ملك أجنبي (أشوري أو فارسي) على إقليم. الأرجح إن الكلمة جاية من لغة آشور القديمة. وبتيجي في الأخبار عن زربابل ونحميا وولاة عبر النهر.\n**الاستخدامات والأمثلة:** ١) والي يهوذا: حجي ١: ١٤ «ونبه الرب روح زربابل بن شألتيئيل والي يهوذا»، زربابل كان واليًا من الفرس على يهوذا. ٢) والي صالح: نحميا ٥: ١٥ «ولكن الولاة الأولون الذين قبلي ثقلوا على الشعب»، نحميا بيقارن نفسه بمن سبقوه من الولاة الظالمين. ٣) والي صغير: ٢ ملوك ١٨: ٢٤ «فكيف ترد وجه وال واحد من عبيد سيدي الصغار»، رئيس السقاة الأشوري بيحتقر حزقيا. ٤) ولاة عبر النهر: عزرا ٨: ٣٦ «وأعطوا أوامر الملك لمرازبة الملك وولاة عبر النهر»، حكام الإقليم الغربي للإمبراطورية.\n**في فاندايك:** «ولاة» و«والي» و«وال».\n**ملاحظة:** في إشعياء ٣٦: ٩ نفس عبارة الرسول الأشوري، فالنص مكرر بين الكتابين.",
+        "msa": "**المعنى:** «پِحَا» لقب الوالي، وهو الحاكم الذي يعيّنه ملك أجنبي (أشوري أو فارسي) على إقليم. والأرجح أن الكلمة من أصل أشوري قديم. وترد في أخبار زربابل ونحميا وولاة عبر النهر.\n**الاستعمالات والأمثلة:** ١) والي يهوذا: حجي ١: ١٤ «ونبه الرب روح زربابل بن شألتيئيل والي يهوذا»، فكان زربابل واليًا فارسيًّا على يهوذا. ٢) والٍ صالح: نحميا ٥: ١٥ «ولكن الولاة الأولون الذين قبلي ثقلوا على الشعب»، فنحميا يقارن نفسه بمن سبقه من الولاة الظالمين. ٣) والٍ صغير: ٢ ملوك ١٨: ٢٤ «فكيف ترد وجه وال واحد من عبيد سيدي الصغار»، فرئيس السقاة الأشوري يحتقر حزقيا. ٤) ولاة عبر النهر: عزرا ٨: ٣٦ «وأعطوا أوامر الملك لمرازبة الملك وولاة عبر النهر»، أي حكام الإقليم الغربي للإمبراطورية.\n**في فاندايك:** «ولاة» و«والي» و«وال».\n**ملاحظة:** في إشعياء ٣٦: ٩ العبارة نفسها على لسان الرسول الأشوري، فالنص مكرر بين السفرين.",
+        "en": "**Meaning:** pechah is the title of a governor, a ruler appointed by a foreign king (Assyrian or Persian) over a province. It most likely comes from an ancient Assyrian word. It appears in the accounts of Zerubbabel, Nehemiah and the governors beyond the River.\n**Uses and examples:** 1) governor of Judah: Hag 1:14 \"And the LORD stirred up the spirit of Zerubbabel the son of Shealtiel, governor of Judah\", Zerubbabel was the Persian governor of Judah. 2) a good governor: Neh 5:15 \"But the former governors that were before me were chargeable unto the people\", Nehemiah contrasts himself with the governors before him. 3) a small governor: 2 Kings 18:24 \"How then wilt thou turn away the face of one captain of the least of my master's servants\", the Assyrian field commander scorns Hezekiah. 4) governors beyond the River: Ezra 8:36 \"they delivered the king's commissions unto the king's lieutenants, and to the governors on this side the river\".\n**In Van Dyke:** «ولاة», «والي» and «وال».\n**Note:** Isa 36:9 has the same sentence of the Assyrian envoy, so the text is repeated between the two books."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6413",
+      "lemma": "פְּלֵיטָה",
+      "gloss": {
+        "eg": "نجاة، ناجٍ، بقية ناجية",
+        "msa": "نجاة، ناجٍ، بقية ناجية",
+        "en": "escape, survivor, remnant"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پِلِيطَا» هي النجاة، أو الشخص أو الجماعة اللي نجت من خطر أو كارثة. من نفس جذر «پَلَط» (ينجو). في أغلب المرات بتبقى «البقية الناجية» بعد الحرب أو الدينونة.\n**الاستخدامات والأمثلة:** ١) نجاة نصف المعسكر: تكوين ٣٢: ٨ «إن جاء عيسو إلى الجيش الواحد وضربه، يكون الجيش الباقي ناجيا»، يعقوب بيقسم أهله علشان يضمن إن حد ينجو. ٢) لا نجاة: ٢ صموئيل ١٥: ١٤ «قوموا بنا نهرب، لأنه ليس لنا نجاة من وجه أبشالوم»، داود بيهرب من أورشليم. ٣) البقية الناجية: إشعياء ٣٧: ٣١ «ويعود الناجون من بيت يهوذا الباقون يتأصلون إلى أسفل»، الناجون زي نبات بيزرع جذوره من تاني. ٤) نجاة في صهيون: عوبديا ١: ١٧ «وأما جبل صهيون فتكون عليه نجاة»، ربنا بيجعل صهيون ملجأ.\n**في فاندايك:** «نجاة» و«الناجون» و«ناجيا».\n**ملاحظة:** في سفر إشعياء الكلمة بتتكرر مع «البقية»، وهي أساس فكرة «البقية الأمينة» اللي ربنا بينقذها.",
+        "msa": "**المعنى:** «پِلِيطَا» هي النجاة، أو الشخص أو الجماعة التي نجت من خطر أو كارثة. وهي من جذر «پَلَط» (نجا). وهي في أغلب المواضع «البقية الناجية» بعد الحرب أو الدينونة.\n**الاستعمالات والأمثلة:** ١) نجاة نصف المعسكر: تكوين ٣٢: ٨ «إن جاء عيسو إلى الجيش الواحد وضربه، يكون الجيش الباقي ناجيا»، فيعقوب يقسم أهله ليضمن نجاة بعضهم. ٢) لا نجاة: ٢ صموئيل ١٥: ١٤ «قوموا بنا نهرب، لأنه ليس لنا نجاة من وجه أبشالوم»، فداود يفرّ من أورشليم. ٣) البقية الناجية: إشعياء ٣٧: ٣١ «ويعود الناجون من بيت يهوذا الباقون يتأصلون إلى أسفل»، فالناجون كنبات يضرب جذوره من جديد. ٤) نجاة في صهيون: عوبديا ١: ١٧ «وأما جبل صهيون فتكون عليه نجاة»، فالله يجعل صهيون ملجأ.\n**في فاندايك:** «نجاة» و«الناجون» و«ناجيا».\n**ملاحظة:** في سفر إشعياء ترد الكلمة مع «البقية»، وهي أساس فكرة «البقية الأمينة» التي ينقذها الله.",
+        "en": "**Meaning:** peletah is escape, or the person or group that has escaped a danger or disaster. It comes from the root palat (to escape). In most places it is \"the escaped remnant\" after war or judgment.\n**Uses and examples:** 1) half the camp escapes: Gen 32:8 \"If Esau come to the one company, and smite it, then the other company which is left shall escape\", Jacob splits his household so that some will survive. 2) no escape: 2 Sam 15:14 \"Arise, and let us flee; for we shall not else escape from Absalom\", David flees Jerusalem. 3) the surviving remnant: Isa 37:31 \"And the remnant that is escaped of the house of Judah shall again take root downward, and bear fruit upward\", survivors take root again like a plant. 4) escape on Zion: Obad 1:17 \"But upon mount Zion shall be deliverance\", God makes Zion a refuge.\n**In Van Dyke:** «نجاة», «الناجون» and «ناجيا».\n**Note:** in Isaiah the word is joined with \"the remnant\", the basis of the idea of a faithful remnant whom God saves."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H7185",
+      "lemma": "קָשָׁה",
+      "gloss": {
+        "eg": "قسّى، صلّب، صعّب",
+        "msa": "قسّى، صلّب، صعّب",
+        "en": "to be hard, to harden, to be difficult"
+      },
+      "entry": {
+        "eg": "**المعنى:** «قَاشَا» معناها يكون صلب أو قاسي أو صعب. بتتقال عن القلب والرقبة (العناد)، وعن الغضب والعمل الشاق، وعن الولادة العسرة. وفي الصيغة السببية: يقسّي أو يصعّب.\n**الاستخدامات والأمثلة:** ١) ولادة عسرة: تكوين ٣٥: ١٦ «ولدت راحيل وتعسرت ولادتها»، راحيل بتعاني في الطلق. ٢) قسوة فرعون: خروج ١٣: ١٥ «وكان لما تقسى فرعون عن إطلاقنا»، عناده قبل آخر ضربة. ٣) تقسية القلب: مزمور ٩٥: ٨ «فلا تقسوا قلوبكم، كما في مريبة»، تحذير من تكرار عناد الجيل الأول في البرية. ٤) عناد الرقبة: إرميا ٧: ٢٦ «بل صلبوا رقابهم. أساءوا أكثر من آبائهم»، الرقبة الصلبة صورة العصيان.\n**في فاندايك:** «قسى» و«صلب» و«تعسرت» و«صعب».\n**ملاحظة:** في ٢ ملوك ٢: ١٠ «صعبت السؤال» الكلمة بمعنى «صعب» مش «قاسي»: إليشع طلب حاجة مش سهلة.",
+        "msa": "**المعنى:** «قَاشَا» تعني أن يكون الشيء صلبًا أو قاسيًا أو صعبًا. وتقال عن القلب والرقبة (العناد)، وعن الغضب والعمل الشاق، وعن الولادة العسيرة. وفي الصيغة السببية: يقسّي أو يصعّب.\n**الاستعمالات والأمثلة:** ١) ولادة عسيرة: تكوين ٣٥: ١٦ «ولدت راحيل وتعسرت ولادتها»، فراحيل تعاني في المخاض. ٢) قسوة فرعون: خروج ١٣: ١٥ «وكان لما تقسى فرعون عن إطلاقنا»، أي عناده قبل الضربة الأخيرة. ٣) تقسية القلب: مزمور ٩٥: ٨ «فلا تقسوا قلوبكم، كما في مريبة»، تحذير من تكرار عناد الجيل الأول في البرية. ٤) عناد الرقبة: إرميا ٧: ٢٦ «بل صلبوا رقابهم. أساءوا أكثر من آبائهم»، فالرقبة الصلبة صورة العصيان.\n**في فاندايك:** «قسى» و«صلب» و«تعسرت» و«صعب».\n**ملاحظة:** في ٢ ملوك ٢: ١٠ «صعبت السؤال» الكلمة بمعنى «صعب» لا «قاسٍ»: فإليشع طلب أمرًا عسيرًا.",
+        "en": "**Meaning:** qashah means to be hard, severe or difficult. It is said of the heart and the neck (stubbornness), of anger and heavy work, and of a hard labour in childbirth. In the causative form it means to harden or to make difficult.\n**Uses and examples:** 1) a hard labour: Gen 35:16 \"Rachel travailed, and she had hard labour\", Rachel suffers in childbirth. 2) Pharaoh's hardness: Exod 13:15 \"when Pharaoh would hardly let us go\", his stubbornness before the last plague. 3) hardening the heart: Ps 95:8 \"Harden not your heart, as in the provocation\", a warning not to repeat the stubbornness of the first generation in the wilderness. 4) a stiff neck: Jer 7:26 \"but hardened their neck: they did worse than their fathers\", the stiff neck is a picture of rebellion.\n**In Van Dyke:** «قسى», «صلب», «تعسرت» and «صعب».\n**Note:** in 2 Kings 2:10 \"Thou hast asked a hard thing\" the word means \"difficult\", not \"cruel\": Elisha asked for something not easy."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H7399",
+      "lemma": "רְכוּשׁ",
+      "gloss": {
+        "eg": "ممتلكات، أموال، أملاك",
+        "msa": "ممتلكات، أموال، أملاك",
+        "en": "property, goods"
+      },
+      "entry": {
+        "eg": "**المعنى:** «رِخُوش» هي الممتلكات والأموال اللي الواحد جمعها واقتناها، غنم وبقر وفلوس وأمتعة. جاية من فعل «اقتنى». وكتير بتتقال عن غنايم الحرب.\n**الاستخدامات والأمثلة:** ١) أملاك أبرام: تكوين ١٢: ٥ «وكل مقتنياتهما التي اقتنيا والنفوس التي امتلكا في حاران»، أبرام بيسافر بكل اللي معاه. ٢) الغنيمة: تكوين ١٤: ٢١ «أعطني النفوس، وأما الأملاك فخذها لنفسك»، ملك سدوم بيطلب شعبه ويسيب لأبرام الغنايم. ٣) نهب الأعداء: ٢ أخبار ٢٠: ٢٥ «فوجدوا بينهم أموالا وجثثا وأمتعة ثمينة بكثرة»، يهوشافاط بياخد غنايم من الأعداء اللي قتلوا بعض. ٤) بركة ربنا: ٢ أخبار ٣٢: ٢٩ «لأن الله أعطاه أموالا كثيرة جدا»، ربنا باركه بالغنى.\n**في فاندايك:** «الأموال» و«أملاك» و«مقتنيات» و«أمتعة».\n**ملاحظة:** الكلمة بتشمل المواشي كمان، زي ما بتشوف في تكوين ٣١: ١٨ و٤٦: ٦، مش بس الفلوس.",
+        "msa": "**المعنى:** «رِخُوش» هي الممتلكات والأموال التي جمعها المرء واقتناها، من غنم وبقر ونقود وأمتعة. وهي من فعل «اقتنى». وكثيرًا ما تقال عن غنائم الحرب.\n**الاستعمالات والأمثلة:** ١) أملاك أبرام: تكوين ١٢: ٥ «وكل مقتنياتهما التي اقتنيا والنفوس التي امتلكا في حاران»، فأبرام يرحل بكل ما معه. ٢) الغنيمة: تكوين ١٤: ٢١ «أعطني النفوس، وأما الأملاك فخذها لنفسك»، فملك سدوم يطلب شعبه ويترك لأبرام الغنائم. ٣) نهب الأعداء: ٢ أخبار ٢٠: ٢٥ «فوجدوا بينهم أموالا وجثثا وأمتعة ثمينة بكثرة»، فيهوشافاط يأخذ غنائم من أعداء قتل بعضهم بعضًا. ٤) بركة الله: ٢ أخبار ٣٢: ٢٩ «لأن الله أعطاه أموالا كثيرة جدا»، فحزقيا بورك بالغنى.\n**في فاندايك:** «الأموال» و«أملاك» و«مقتنيات» و«أمتعة».\n**ملاحظة:** الكلمة تشمل المواشي أيضًا، كما في تكوين ٣١: ١٨ و٤٦: ٦، لا النقود وحدها.",
+        "en": "**Meaning:** rekhush is the property and goods a person has gathered and acquired: sheep, cattle, money and belongings. It comes from the verb \"to acquire\", and is often said of the spoils of war.\n**Uses and examples:** 1) Abram's goods: Gen 12:5 \"and all their substance that they had gathered, and the souls that they had gotten in Haran\", Abram travels with everything he has. 2) spoil: Gen 14:21 \"Give me the persons, and take the goods to thyself\", the king of Sodom asks for his people and leaves the goods to Abram. 3) plunder: 2 Chr 20:25 \"they found among them in abundance both riches with the dead bodies, and precious jewels\", Jehoshaphat takes spoil from enemies who killed each other. 4) God's blessing: 2 Chr 32:29 \"for God had given him substance very much\", Hezekiah was blessed with wealth.\n**In Van Dyke:** «الأموال», «أملاك», «مقتنيات» and «أمتعة».\n**Note:** the word includes livestock too, as in Gen 31:18 and 46:6, not only money."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H7848",
+      "lemma": "שִׁטָּה",
+      "gloss": {
+        "eg": "سنط، خشب السنط",
+        "msa": "سنط، خشب السنط",
+        "en": "acacia"
+      },
+      "entry": {
+        "eg": "**المعنى:** «شِطَّا» هي شجرة السنط (الأكاسيا)، شجرة صحراوية خشبها صلب وبيقاوم الزمن. أغلب استخدامها في وصف بناء الخيمة وأثاثها، فهي «خشب السنط».\n**الاستخدامات والأمثلة:** ١) تابوت العهد: خروج ٣٧: ١ «وصنع بصلئيل التابوت من خشب السنط، طوله ذراعان ونصف»، صنعوا التابوت من السنط وغطّوه بالدهب. ٢) عصي الحمل: خروج ٢٥: ١٣ «وتصنع عصوين من خشب السنط وتغشيهما بذهب»، العصيّين اللي بيشيلوا بيهم الأثاث المقدس. ٣) مذبح المحرقة: خروج ٢٧: ٦ «وتصنع عصوين للمذبح، عصوين من خشب السنط وتغشيهما بنحاس»، نفس الخشب بس بيغطّوه بنحاس. ٤) تقدمة الشعب: خروج ٣٥: ٢٤ «وكل من وجد عنده خشب سنط لصنعة ما من العمل جاء به»، الناس بتجيب السنط تبرعًا.\n**في فاندايك:** «السنط» و«سنط».\n**ملاحظة:** الكلمة مش بس في الخيمة: إشعياء ٤١: ١٩ «أجعل في البرية الأرز والسنط والآس»، السنط شجر بيزرعه ربنا في الصحراء.",
+        "msa": "**المعنى:** «شِطَّا» هي شجرة السنط (الأكاسيا)، شجرة صحراوية خشبها صلب يقاوم الزمن. وأكثر استعمالها في وصف بناء الخيمة وأثاثها، فهي «خشب السنط».\n**الاستعمالات والأمثلة:** ١) تابوت العهد: خروج ٣٧: ١ «وصنع بصلئيل التابوت من خشب السنط، طوله ذراعان ونصف»، فصنع التابوت من السنط وغُشّي بالذهب. ٢) عصيّ الحمل: خروج ٢٥: ١٣ «وتصنع عصوين من خشب السنط وتغشيهما بذهب»، وهما العصوان اللذان يُحمل بهما الأثاث المقدس. ٣) مذبح المحرقة: خروج ٢٧: ٦ «وتصنع عصوين للمذبح، عصوين من خشب السنط وتغشيهما بنحاس»، فالخشب نفسه لكن يغشى بالنحاس. ٤) تقدمة الشعب: خروج ٣٥: ٢٤ «وكل من وجد عنده خشب سنط لصنعة ما من العمل جاء به»، فالناس يقدمون السنط تبرعًا.\n**في فاندايك:** «السنط» و«سنط».\n**ملاحظة:** لا تقتصر الكلمة على الخيمة: إشعياء ٤١: ١٩ «أجعل في البرية الأرز والسنط والآس»، فالسنط شجر يغرسه الله في الصحراء.",
+        "en": "**Meaning:** shittah is the acacia tree, a desert tree with hard, durable wood. It is used mostly in describing the building of the tabernacle and its furniture, as \"acacia wood\".\n**Uses and examples:** 1) the ark of the covenant: Exod 37:1 \"And Bezaleel made the ark of shittim wood: two cubits and a half was the length of it\", the ark was made of acacia and overlaid with gold. 2) carrying poles: Exod 25:13 \"And thou shalt make staves of shittim wood, and overlay them with gold\", the poles that carry the holy furniture. 3) the altar of burnt offering: Exod 27:6 \"And thou shalt make staves for the altar, staves of shittim wood, and overlay them with brass\", the same wood overlaid with bronze. 4) the people's gift: Exod 35:24 \"and every man, with whom was found shittim wood for any work of the service, brought it\", the people bring acacia as a donation.\n**In Van Dyke:** «السنط» and «سنط».\n**Note:** the word is not limited to the tabernacle: Isa 41:19 \"I will plant in the wilderness the cedar, the shittah tree, and the myrtle\", God plants acacia in the desert."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H7939",
+      "lemma": "שָׂכָר",
+      "gloss": {
+        "eg": "أجرة، أجر، جزاء",
+        "msa": "أجرة، أجر، جزاء",
+        "en": "wages, hire, reward"
+      },
+      "entry": {
+        "eg": "**المعنى:** «سَاخَار» هي الأجرة اللي بياخدها العامل على شغله، وبتتوسع لتبقى الجزاء أو الثواب. فهي الأجر بمعناه العادي، وفي نفس الوقت اللي ربنا بيكافئ بيه.\n**الاستخدامات والأمثلة:** ١) الأجر الإلهي: تكوين ١٥: ١ «لا تخف يا أبرام. أنا ترس لك. أجرك كثير جدا»، ربنا بيطمّن إبراهيم. ٢) أجرة الراعي: تكوين ٣٠: ٢٨ «عين لي أجرتك فأعطيك»، لابان بيقول ليعقوب يحدد أجره. ٣) أجرة مدفوعة بالفضة: زكريا ١١: ١٢ «فوزنوا أجرتي ثلاثين من الفضة»، قدّروا أجرة الراعي اللي رفضوه بسعر رخيص. ٤) ظلم الأجير: ملاخي ٣: ٥ «وعلى السالبين أجرة الأجير»، ربنا بيعد بالحكم على اللي بيسرقوا أجر العامل.\n**في فاندايك:** «أجرة» و«أجر» و«جزاء».\n**ملاحظة:** في إشعياء ٤٠: ١٠ «هوذا أجرته معه» الكلمة بمعنى الجزاء اللي ربنا بيجيبه معاه، مش أجرة عامل.",
+        "msa": "**المعنى:** «سَاخَار» هي الأجرة التي يتقاضاها العامل على عمله، وتتسع لتصير الجزاء أو الثواب. فهي الأجر بمعناه العادي، وهي في الوقت نفسه ما يكافئ الله به.\n**الاستعمالات والأمثلة:** ١) الأجر الإلهي: تكوين ١٥: ١ «لا تخف يا أبرام. أنا ترس لك. أجرك كثير جدا»، فالله يطمئن إبراهيم. ٢) أجرة الراعي: تكوين ٣٠: ٢٨ «عين لي أجرتك فأعطيك»، فلابان يطلب من يعقوب أن يحدد أجره. ٣) أجرة بالفضة: زكريا ١١: ١٢ «فوزنوا أجرتي ثلاثين من الفضة»، فأجرة الراعي المرفوض تقدّر بثمن بخس. ٤) ظلم الأجير: ملاخي ٣: ٥ «وعلى السالبين أجرة الأجير»، فالله يعد بالقضاء على من يسلبون أجر العامل.\n**في فاندايك:** «أجرة» و«أجر» و«جزاء».\n**ملاحظة:** في إشعياء ٤٠: ١٠ «هوذا أجرته معه» الكلمة بمعنى الجزاء الذي يأتي به الله لا أجرة عامل.",
+        "en": "**Meaning:** sakhar is the wages a worker receives for his work, and it widens to mean reward or recompense. So it is wages in the ordinary sense, and also what God gives as a reward.\n**Uses and examples:** 1) God's reward: Gen 15:1 \"Fear not, Abram: I am thy shield, and thy exceeding great reward\", God reassures Abraham. 2) a shepherd's wages: Gen 30:28 \"Appoint me thy wages, and I will give it\", Laban tells Jacob to name his pay. 3) wages in silver: Zech 11:12 \"So they weighed for my price thirty pieces of silver\", the rejected shepherd's pay is fixed at a low price. 4) wronging the hireling: Mal 3:5 \"and against those that oppress the hireling in his wages\", God promises judgment on those who rob a worker of his pay.\n**In Van Dyke:** «أجرة», «أجر» and «جزاء».\n**Note:** in Isa 40:10 \"his reward is with him\" the word means the recompense God brings, not a worker's pay."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H8003",
+      "lemma": "שָׁלֵם",
+      "gloss": {
+        "eg": "كامل، سليم، صحيح، مسالم",
+        "msa": "كامل، سليم، صحيح، مسالم",
+        "en": "complete, whole, at peace"
+      },
+      "entry": {
+        "eg": "**المعنى:** «شَالِيم» معناها كامل وسليم من غير نقص، وبتتقال عن القلب والوزن والأجر والحقيقة. من نفس جذر «شَلُوم» (سلام) وبالعربي «سَلِم»: السلامة والكمال. وبتيجي كمان بمعنى «مسالم».\n**الاستخدامات والأمثلة:** ١) ذنب لسه ما اكتملش: تكوين ١٥: ١٦ «لأن ذنب الأموريين ليس إلى الآن كاملا»، ربنا بيصبر على الأموريين لحد ما تكمل خطيتهم. ٢) وزن صحيح: تثنية ٢٥: ١٥ «وزن صحيح وحق يكون لك، ومكيال صحيح وحق»، الأمانة في البيع. ٣) قلب كامل: ١ ملوك ٨: ٦١ «فليكن قلبكم كاملا لدى الرب إلهنا»، سليمان بيطلب ولاء كامل. ٤) مسالمون: تكوين ٣٤: ٢١ «هؤلاء القوم مسالمون لنا»، أهل شكيم عاوزين يعيشوا جنب بني يعقوب.\n**في فاندايك:** «كاملا» و«صحيح» و«سليم» و«مسالمون».\n**ملاحظة:** في ١ ملوك ١٥: ٣ «ولم يكن قلبه كاملا مع الرب»، الكمال مش معناه من غير غلط، لكن ولاء بلا انقسام.",
+        "msa": "**المعنى:** «شَالِيم» تعني الكامل السليم بلا نقص، وتقال عن القلب والوزن والأجر والحق. وهي من جذر «شَلُوم» (سلام)، وفي العربية «سَلِم»: السلامة والكمال. وترد كذلك بمعنى «مسالم».\n**الاستعمالات والأمثلة:** ١) ذنب لم يكتمل: تكوين ١٥: ١٦ «لأن ذنب الأموريين ليس إلى الآن كاملا»، فالله يصبر على الأموريين حتى تكتمل خطيتهم. ٢) وزن صحيح: تثنية ٢٥: ١٥ «وزن صحيح وحق يكون لك، ومكيال صحيح وحق»، أي الأمانة في البيع. ٣) قلب كامل: ١ ملوك ٨: ٦١ «فليكن قلبكم كاملا لدى الرب إلهنا»، فسليمان يطلب ولاءً كاملًا. ٤) مسالمون: تكوين ٣٤: ٢١ «هؤلاء القوم مسالمون لنا»، فأهل شكيم يريدون التعايش مع بني يعقوب.\n**في فاندايك:** «كاملا» و«صحيح» و«سليم» و«مسالمون».\n**ملاحظة:** في ١ ملوك ١٥: ٣ «ولم يكن قلبه كاملا مع الرب»، فالكمال ليس انعدام الخطأ بل ولاء غير منقسم.",
+        "en": "**Meaning:** shalem means complete and sound, without lack, and is said of a heart, a weight, a reward and the truth. It comes from the same root as shalom (peace) and Arabic salima: soundness and completeness. It also means \"at peace\".\n**Uses and examples:** 1) a sin not yet complete: Gen 15:16 \"for the iniquity of the Amorites is not yet full\", God is patient with the Amorites until their sin is complete. 2) a just weight: Deut 25:15 \"But thou shalt have a perfect and just weight, a perfect and just measure shalt thou have\", honesty in trade. 3) a whole heart: 1 Kings 8:61 \"Let your heart therefore be perfect with the LORD our God\", Solomon asks for undivided loyalty. 4) peaceable: Gen 34:21 \"These men are peaceable with us\", the men of Shechem want to live alongside Jacob's sons.\n**In Van Dyke:** «كاملا», «صحيح», «سليم» and «مسالمون».\n**Note:** in 1 Kings 15:3 \"his heart was not perfect with the LORD\", wholeness does not mean no mistakes but undivided loyalty."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H8066",
+      "lemma": "שְׁמִינִי",
+      "gloss": {
+        "eg": "الثامن",
+        "msa": "الثامن",
+        "en": "eighth"
+      },
+      "entry": {
+        "eg": "**المعنى:** «شِمِينِي» هي «الثامن» في الترتيب، من «شَمُونِه» (ثمانية). بتتقال عن اليوم أو الشهر أو السنة أو الدور. أكتر استخدامها في الشريعة: اليوم الثامن بعد أسبوع كامل.\n**الاستخدامات والأمثلة:** ١) اليوم الثامن للختان: لاويين ١٢: ٣ «وفي اليوم الثامن يختن لحم غرلته»، بيختنوا الطفل بعد سبعة أيام. ٢) عيد اليوم الثامن: لاويين ٢٣: ٣٦ «في اليوم الثامن يكون لكم محفل مقدس»، يوم اجتماع بعد أسبوع العيد. ٣) الشهر الثامن: ١ ملوك ٦: ٣٨ «في شهر بول، وهو الشهر الثامن، أكمل البيت»، بناء الهيكل بيخلص. ٤) السنة الثامنة: لاويين ٢٥: ٢٢ «فتزرعون السنة الثامنة وتأكلون من الغلة العتيقة»، وعد من ربنا بالمحصول بعد سنة الراحة.\n**في فاندايك:** «الثامن» و«الثامنة».\n**ملاحظة:** «اليوم الثامن» في الشريعة هو اليوم اللي بعد أسبوع كامل، يعني بداية جديدة: ختان وتطهير وتقدمة الأبكار.",
+        "msa": "**المعنى:** «شِمِينِي» هي «الثامن» في الترتيب، من «شَمُونِه» (ثمانية). وتقال عن اليوم أو الشهر أو السنة أو الدور. وأكثر استعمالها في الشريعة: اليوم الثامن بعد أسبوع كامل.\n**الاستعمالات والأمثلة:** ١) اليوم الثامن للختان: لاويين ١٢: ٣ «وفي اليوم الثامن يختن لحم غرلته»، فيُختن الطفل بعد سبعة أيام. ٢) عيد اليوم الثامن: لاويين ٢٣: ٣٦ «في اليوم الثامن يكون لكم محفل مقدس»، وهو يوم اجتماع بعد أسبوع العيد. ٣) الشهر الثامن: ١ ملوك ٦: ٣٨ «في شهر بول، وهو الشهر الثامن، أكمل البيت»، فينتهي بناء الهيكل. ٤) السنة الثامنة: لاويين ٢٥: ٢٢ «فتزرعون السنة الثامنة وتأكلون من الغلة العتيقة»، وهو وعد الله بالمحصول بعد سنة الراحة.\n**في فاندايك:** «الثامن» و«الثامنة».\n**ملاحظة:** «اليوم الثامن» في الشريعة هو اليوم التالي لأسبوع كامل، أي بداية جديدة: الختان والتطهير وتقدمة الأبكار.",
+        "en": "**Meaning:** shemini is \"eighth\" in order, from shemoneh (eight). It is said of a day, month, year or turn. It is used mostly in the Law: the eighth day after a full week.\n**Uses and examples:** 1) the eighth day for circumcision: Lev 12:3 \"And in the eighth day the flesh of his foreskin shall be circumcised\", the boy is circumcised after seven days. 2) the feast of the eighth day: Lev 23:36 \"on the eighth day shall be an holy convocation unto you\", a day of assembly after the week of the feast. 3) the eighth month: 1 Kings 6:38 \"in the month Bul, which is the eighth month, was the house finished\", the temple is completed. 4) the eighth year: Lev 25:22 \"And ye shall sow the eighth year, and eat yet of old fruit\", God's promise of a harvest after the year of rest.\n**In Van Dyke:** «الثامن» and «الثامنة».\n**Note:** the \"eighth day\" in the Law is the day after a full week, a new beginning: circumcision, purification and the offering of the firstborn."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H8181",
+      "lemma": "שֵׂעָר",
+      "gloss": {
+        "eg": "شعر",
+        "msa": "شعر",
+        "en": "hair"
+      },
+      "entry": {
+        "eg": "**المعنى:** «سِيعَار» هي الشعر، شعر الرأس والجسم وشعر الحيوان. وبتيجي في مواضع كتير عن التشبيه والجمال، وفي أحكام الجلد في الشريعة، وفي نذر النذير.\n**الاستخدامات والأمثلة:** ١) شعر عيسو: تكوين ٢٥: ٢٥ «فخرج ألأول أحمر، كله كفروة شعر»، عيسو بيطلع كأنه لابس فروة. ٢) شعر النذير: عدد ٦: ٥ «ويربي خصل شعر رأسه»، النذير مش بيحلق شعره طول مدة نذره. ٣) حلاقة الطهارة: لاويين ١٤: ٩ «وفي اليوم السابع يحلق كل شعره: رأسه ولحيته وحواجب عينيه»، الأبرص بعد الشفاء بيحلق جسمه كله. ٤) جمال الحبيبة: نشيد الأنشاد ٤: ١ «شعرك كقطيع معز رابض على جبل جلعاد»، تشبيه شعر العروس بقطيع ماعز أسود على الجبل.\n**في فاندايك:** «شعر» و«شعرك» و«شعرها» و«خصل».\n**ملاحظة:** في لاويين ١٣ لون الشعر في الجلد المصاب بيحدد حكم الكاهن، فالشعر هنا أداة تشخيص طقسي.",
+        "msa": "**المعنى:** «سِيعَار» هي الشعر، شعر الرأس والجسم وشعر الحيوان. وترد في التشبيه والجمال، وفي أحكام الجلد في الشريعة، وفي نذر النذير.\n**الاستعمالات والأمثلة:** ١) شعر عيسو: تكوين ٢٥: ٢٥ «فخرج ألأول أحمر، كله كفروة شعر»، فيولد عيسو كأنه لابس فروة. ٢) شعر النذير: عدد ٦: ٥ «ويربي خصل شعر رأسه»، فالنذير لا يحلق شعره طوال مدة نذره. ٣) حلاقة الطهارة: لاويين ١٤: ٩ «وفي اليوم السابع يحلق كل شعره: رأسه ولحيته وحواجب عينيه»، فالأبرص بعد الشفاء يحلق جسمه كله. ٤) جمال الحبيبة: نشيد الأنشاد ٤: ١ «شعرك كقطيع معز رابض على جبل جلعاد»، تشبيه لشعر العروس بقطيع ماعز أسود على الجبل.\n**في فاندايك:** «شعر» و«شعرك» و«شعرها» و«خصل».\n**ملاحظة:** في لاويين ١٣ يحدد لون الشعر في الجلد المصاب حكم الكاهن، فالشعر أداة تشخيص طقسي.",
+        "en": "**Meaning:** sear is hair: hair of the head and body, and an animal's coat. It appears in comparison and beauty, in the laws about skin disease, and in the Nazirite vow.\n**Uses and examples:** 1) Esau's hair: Gen 25:25 \"And the first came out red, all over like an hairy garment\", Esau is born as if wearing a fur. 2) the Nazirite's hair: Num 6:5 \"and shall let the locks of the hair of his head grow\", a Nazirite does not cut his hair during his vow. 3) shaving for purification: Lev 14:9 \"it shall be on the seventh day, that he shall shave all his hair off his head and his beard and his eyebrows\", the cleansed leper shaves his whole body. 4) a lover's beauty: Song 4:1 \"thy hair is as a flock of goats, that appear from mount Gilead\", the bride's hair compared to black goats on the mountain.\n**In Van Dyke:** «شعر», «شعرك», «شعرها» and «خصل».\n**Note:** in Lev 13 the colour of hair in the affected skin decides the priest's ruling, so hair serves as a ritual diagnostic sign."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H8251",
+      "lemma": "שִׁקּוּץ",
+      "gloss": {
+        "eg": "رجس، مكروه، صنم نجس",
+        "msa": "رجس، مكروه، صنم نجس",
+        "en": "abomination, detestable thing"
+      },
+      "entry": {
+        "eg": "**المعنى:** «شِقُّوص» هي الحاجة المقرفة اللي ربنا بيكرهها، وأغلب ما بتيجي بتدل على الأصنام وعبادتها وكل اللي مرتبط بيها. فاندايك بيترجمها «رجس» و«مكروه».\n**الاستخدامات والأمثلة:** ١) الأصنام: تثنية ٢٩: ١٧ «ورأيتم أرجاسهم وأصنامهم التي عندهم من خشب وحجر وفضة وذهب»، الكلمة جنب «الأصنام» وبتوصفها. ٢) إله الأمم: ١ ملوك ١١: ٧ «لكموش رجس الموآبيين... ولمولك رجس بني عمون»، سليمان بنى مرتفعات لآلهة الأمم. ٣) الرجس المخرب: دانيال ١١: ٣١ «وتجعل الرجس المخرب»، تدنيس الهيكل في زمن الاضطهاد. ٤) أكل ممنوع: زكريا ٩: ٧ «ورجسه من بين أسنانه»، ربنا بيطهّر الفلسطيني من الأكل المنجس.\n**في فاندايك:** «رجس» و«مكرهاتهم» و«أرجاسهم» و«رجاسة».\n**ملاحظة:** عبارة «الرجس المخرب» في دانيال هي اللي أخدت منها الأناجيل عبارة «رجسة الخراب» في متى ٢٤: ١٥ ومرقس ١٣: ١٤.",
+        "msa": "**المعنى:** «شِقُّوص» هي الشيء المقرف الذي يكرهه الله، وأكثر ما تدل على الأصنام وعبادتها وما يتصل بها. ويترجمها فاندايك «رجس» و«مكروه».\n**الاستعمالات والأمثلة:** ١) الأصنام: تثنية ٢٩: ١٧ «ورأيتم أرجاسهم وأصنامهم التي عندهم من خشب وحجر وفضة وذهب»، فالكلمة تأتي إلى جانب «الأصنام» وتصفها. ٢) آلهة الأمم: ١ ملوك ١١: ٧ «لكموش رجس الموآبيين... ولمولك رجس بني عمون»، فسليمان بنى مرتفعات لآلهة الأمم. ٣) الرجس المخرب: دانيال ١١: ٣١ «وتجعل الرجس المخرب»، أي تدنيس الهيكل زمن الاضطهاد. ٤) طعام ممنوع: زكريا ٩: ٧ «ورجسه من بين أسنانه»، فالله يطهّر الفلسطيني من الطعام المنجس.\n**في فاندايك:** «رجس» و«مكرهاتهم» و«أرجاسهم» و«رجاسة».\n**ملاحظة:** عبارة «الرجس المخرب» في دانيال هي التي أخذت منها الأناجيل عبارة «رجسة الخراب» في متى ٢٤: ١٥ ومرقس ١٣: ١٤.",
+        "en": "**Meaning:** shiqquts is a loathsome thing that God hates, and it mostly refers to idols, idol worship and whatever goes with it. Van Dyke renders it \"abomination\" or \"detestable thing\".\n**Uses and examples:** 1) idols: Deut 29:17 \"And ye have seen their abominations, and their idols, wood and stone, silver and gold, which were among them\", the word sits beside \"idols\" and describes them. 2) gods of the nations: 1 Kings 11:7 \"Chemosh, the abomination of Moab ... and for Molech, the abomination of the children of Ammon\", Solomon builds high places for the gods of the nations. 3) the desolating abomination: Dan 11:31 \"and they shall place the abomination that maketh desolate\", the defiling of the temple under persecution. 4) forbidden food: Zech 9:7 \"and his abominations from between his teeth\", God cleanses the Philistine of defiled food.\n**In Van Dyke:** «رجس», «مكرهاتهم», «أرجاسهم» and «رجاسة».\n**Note:** the phrase in Daniel is the source of \"the abomination of desolation\" in Matt 24:15 and Mark 13:14."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H8300",
+      "lemma": "שָׂרִיד",
+      "gloss": {
+        "eg": "ناجٍ، باقٍ، بقية، شارد",
+        "msa": "ناجٍ، باقٍ، بقية",
+        "en": "survivor, remnant"
+      },
+      "entry": {
+        "eg": "**المعنى:** «سَارِيد» هو اللي فضل بعد هزيمة أو كارثة: الناجي أو الباقي. فاندايك بيترجمها كتير «شارد» (بمعنى اللي نجا وهرب)، مش «تايه». وبتتقال كمان «بقية» في الكلام عن اللي بيحفظهم ربنا.\n**الاستخدامات والأمثلة:** ١) ما فضلش حد: عدد ٢١: ٣٥ «فضربوه وبنيه وجميع قومه حتى لم يبق له شارد»، هزيمة عوج ملك باشان كاملة. ٢) بقية صغيرة: إشعياء ١: ٩ «لولا أن رب الجنود أبقى لنا بقية صغيرة، لصرنا مثل سدوم»، لولا الناجين كانوا اختفوا من الوجود زي سدوم. ٣) ناجون بالدعاء: يوئيل ٢: ٣٢ «وبين الباقين من يدعوه الرب»، الباقين هما اللي ربنا بيدعيهم. ٤) هلاك كامل: عوبديا ١: ١٨ «ولا يكون باق من بيت عيسو»، دينونة ما تسيبش حد.\n**في فاندايك:** «شارد» و«بقية» و«باق».\n**ملاحظة:** في الرسالة إلى رومية ٩: ٢٩ بولس بيقتبس إشعياء ١: ٩ علشان يتكلم عن البقية الأمينة من إسرائيل.",
+        "msa": "**المعنى:** «سَارِيد» هو من بقي بعد هزيمة أو كارثة: الناجي أو الباقي. ويترجمها فاندايك كثيرًا «شارد» (بمعنى من نجا وفرّ) لا «تائه». وتقال أيضًا «بقية» فيمن يحفظهم الله.\n**الاستعمالات والأمثلة:** ١) لم يبق أحد: عدد ٢١: ٣٥ «فضربوه وبنيه وجميع قومه حتى لم يبق له شارد»، فهزيمة عوج ملك باشان كاملة. ٢) بقية صغيرة: إشعياء ١: ٩ «لولا أن رب الجنود أبقى لنا بقية صغيرة، لصرنا مثل سدوم»، فلولا الناجين لزالوا كسدوم. ٣) ناجون بالدعاء: يوئيل ٢: ٣٢ «وبين الباقين من يدعوه الرب»، فالباقون هم من يدعوهم الله. ٤) هلاك كامل: عوبديا ١: ١٨ «ولا يكون باق من بيت عيسو»، فالدينونة لا تُبقي أحدًا.\n**في فاندايك:** «شارد» و«بقية» و«باق».\n**ملاحظة:** في رومية ٩: ٢٩ يقتبس بولس إشعياء ١: ٩ للحديث عن البقية الأمينة من إسرائيل.",
+        "en": "**Meaning:** sarid is one who remains after a defeat or disaster: a survivor or one left over. Van Dyke often renders it «شارد» (here meaning one who escaped), not \"a wanderer\". It is also rendered \"remnant\" of those whom God preserves.\n**Uses and examples:** 1) no one left: Num 21:35, they struck Og and his sons and all his people until no survivor was left to him; the defeat of the king of Bashan is complete. 2) a small remnant: Isa 1:9 \"Except the LORD of hosts had left unto us a very small remnant, we should have been as Sodom\", without the survivors they would have been wiped out like Sodom. 3) survivors who are called: Joel 2:32 \"and in the remnant whom the LORD shall call\", the remnant are those God calls. 4) total ruin: Obad 1:18 \"there shall not be any remaining of the house of Esau\", a judgment that spares no one.\n**In Van Dyke:** «شارد», «بقية» and «باق».\n**Note:** in Rom 9:29 Paul quotes Isa 1:9 to speak of the faithful remnant of Israel."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H8345",
+      "lemma": "שִׁשִּׁי",
+      "gloss": {
+        "eg": "السادس، سُدس",
+        "msa": "السادس، سُدس",
+        "en": "sixth"
+      },
+      "entry": {
+        "eg": "**المعنى:** «شِشِّي» هي «السادس» في الترتيب، من «شِش» (ستة). بتتقال عن اليوم والشهر والسنة، وبتيجي كمان بمعنى «سُدس»: جزء من ستة، خصوصًا في مقادير التقدمات.\n**الاستخدامات والأمثلة:** ١) اليوم السادس للخلق: تكوين ١: ٣١ «وكان مساء وكان صباح يوما سادسا»، اليوم اللي خلق فيه ربنا الإنسان. ٢) اليوم السادس للمنّ: خروج ١٦: ٥ «ويكون في اليوم السادس أنهم يهيئون ما يجيئون به فيكون ضعف ما يلتقطونه»، في اليوم قبل السبت بيلموا ضعف المنّ. ٣) السنة السادسة: لاويين ٢٥: ٢١ «فإني آمر ببركتي لكم في السنة السادسة، فتعمل غلة لثلاث سنين»، ربنا بيوعد بمحصول يكفي ثلاث سنين. ٤) سدس مقدار: حزقيال ٤٥: ١٣ «سدس الإيفة من حومر الحنطة»، الكلمة هنا جزء من ستة.\n**في فاندايك:** «السادس» و«السادسة» و«سدس».\n**ملاحظة:** اليوم السادس بيتكرر كيوم قبل الراحة: في تكوين ١ وفي المنّ في خروج ١٦.",
+        "msa": "**المعنى:** «شِشِّي» هي «السادس» في الترتيب، من «شِش» (ستة). وتقال عن اليوم والشهر والسنة، وترد بمعنى «سدس»: جزء من ستة، ولا سيما في مقادير التقدمات.\n**الاستعمالات والأمثلة:** ١) اليوم السادس للخلق: تكوين ١: ٣١ «وكان مساء وكان صباح يوما سادسا»، وهو اليوم الذي خُلق فيه الإنسان. ٢) اليوم السادس للمنّ: خروج ١٦: ٥ «ويكون في اليوم السادس أنهم يهيئون ما يجيئون به فيكون ضعف ما يلتقطونه»، ففي اليوم السابق للسبت يجمعون ضعف المنّ. ٣) السنة السادسة: لاويين ٢٥: ٢١ «فإني آمر ببركتي لكم في السنة السادسة، فتعمل غلة لثلاث سنين»، فيعد الله بمحصول يكفي ثلاث سنين. ٤) سدس مقدار: حزقيال ٤٥: ١٣ «سدس الإيفة من حومر الحنطة»، فالكلمة هنا جزء من ستة.\n**في فاندايك:** «السادس» و«السادسة» و«سدس».\n**ملاحظة:** اليوم السادس يتكرر بوصفه اليوم السابق للراحة: في تكوين ١ وفي المنّ في خروج ١٦.",
+        "en": "**Meaning:** shishshi is \"sixth\" in order, from shesh (six). It is said of a day, month or year, and also means \"a sixth part\", especially in the measures of offerings.\n**Uses and examples:** 1) the sixth day of creation: Gen 1:31 \"And the evening and the morning were the sixth day\", the day on which man was created. 2) the sixth day and manna: Exod 16:5 \"on the sixth day they shall prepare that which they bring in; and it shall be twice as much as they gather daily\", on the day before the Sabbath they gather a double portion. 3) the sixth year: Lev 25:21 \"Then I will command my blessing upon you in the sixth year, and it shall bring forth fruit for three years\", God promises a harvest to last three years. 4) a sixth of a measure: Ezek 45:13 \"The sixth part of an ephah of an homer of wheat\", the word here means one part in six.\n**In Van Dyke:** «السادس», «السادسة» and «سدس».\n**Note:** the sixth day comes up repeatedly as the day before rest: in Gen 1 and in the manna of Exod 16."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H8392",
+      "lemma": "תֵּבָה",
+      "gloss": {
+        "eg": "فلك، سفط",
+        "msa": "فلك، سفط",
+        "en": "ark, chest"
+      },
+      "entry": {
+        "eg": "**المعنى:** «تِيڤَا» هي الفلك، يعني صندوق كبير أو سفينة من غير شراع. أشهر مرة هي فلك نوح، وكمان السفط اللي حطوا فيه موسى الطفل في النهر.\n**الاستخدامات والأمثلة:** ١) أمر ربنا لنوح: تكوين ٦: ١٤ «اصنع لنفسك فلكا من خشب جفر»، البناء بيبدأ بأمر ربنا. ٢) الدخول: تكوين ٧: ٧ «فدخل نوح وبنوه وامرأته ونساء بنيه معه إلى الفلك من وجه مياه الطوفان»، العيلة بتحتمي من الطوفان. ٣) الاستقرار: تكوين ٨: ٤ «واستقر الفلك في الشهر السابع، في اليوم السابع عشر من الشهر، على جبال أراراط»، الفلك بيهدى. ٤) الخروج: تكوين ٨: ١٦ «اخرج من الفلك أنت وامرأتك وبنوك»، ربنا بيدي الأمر بالخروج.\n**في فاندايك:** «الفلك» و«فلكا» و«سفطا».\n**ملاحظة:** في خروج ٢: ٣ نفس الكلمة بتتقال عن «سفط من البردي» حطّوا فيه موسى، وهي غير «تابوت العهد» اللي له كلمة تانية.",
+        "msa": "**المعنى:** «تِيڤَا» هي الفلك، أي صندوق كبير أو سفينة بلا شراع. وأشهر استعمالها فلك نوح، وكذلك السفط الذي وُضع فيه موسى الطفل في النهر.\n**الاستعمالات والأمثلة:** ١) أمر الله لنوح: تكوين ٦: ١٤ «اصنع لنفسك فلكا من خشب جفر»، فالبناء يبدأ بأمر الله. ٢) الدخول: تكوين ٧: ٧ «فدخل نوح وبنوه وامرأته ونساء بنيه معه إلى الفلك من وجه مياه الطوفان»، فالعائلة تحتمي من الطوفان. ٣) الاستقرار: تكوين ٨: ٤ «واستقر الفلك في الشهر السابع، في اليوم السابع عشر من الشهر، على جبال أراراط»، فالفلك يهدأ. ٤) الخروج: تكوين ٨: ١٦ «اخرج من الفلك أنت وامرأتك وبنوك»، فالله يأمر بالخروج.\n**في فاندايك:** «الفلك» و«فلكا» و«سفطا».\n**ملاحظة:** في خروج ٢: ٣ تقال الكلمة نفسها عن «سفط من البردي» وُضع فيه موسى، وهي غير «تابوت العهد» الذي له كلمة أخرى.",
+        "en": "**Meaning:** tevah is an ark: a large chest or a boat without sails. It is best known as Noah's ark, and also the basket in which the baby Moses was placed on the river.\n**Uses and examples:** 1) God's command to Noah: Gen 6:14 \"Make thee an ark of gopher wood\", the building begins with God's command. 2) going in: Gen 7:7 \"And Noah went in, and his sons, and his wife, and his sons' wives with him, into the ark, because of the waters of the flood\", the family takes shelter from the flood. 3) coming to rest: Gen 8:4 \"And the ark rested in the seventh month, on the seventeenth day of the month, upon the mountains of Ararat\", the ark settles. 4) going out: Gen 8:16 \"Go forth of the ark, thou, and thy wife, and thy sons\", God gives the order to leave.\n**In Van Dyke:** «الفلك», «فلكا» and «سفطا».\n**Note:** in Exod 2:3 the same word is used for the \"ark of bulrushes\" in which Moses was placed, and it is different from the \"ark of the covenant\", which has another Hebrew word."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H0117",
+      "lemma": "אַדִּיר",
+      "gloss": {
+        "eg": "عظيم، قدير، أمجد، شريف",
+        "msa": "عظيم، قدير، أمجد، شريف",
+        "en": "majestic, mighty, noble"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أَدِّير» معناها عظيم أو قدير أو ممجد، بتتقال عن ربنا وعن المياه والأشجار والقادة والأشراف. فاندايك بيترجمها بحسب السياق: «أمجد» و«أقدر» و«عظماء» و«رؤساء».\n**الاستخدامات والأمثلة:** ١) اسم ربنا: مزمور ٨: ٩ «أيها الرب سيدنا، ما أمجد اسمك في كل الأرض!»، كل الأرض بتشهد لعظمة اسمه. ٢) قدرة ربنا: مزمور ٩٣: ٤ «من أصوات مياه كثيرة، من غمار أمواج البحر، الرب في العلى أقدر»، ربنا أقدر من البحر. ٣) مياه عظيمة: خروج ١٥: ١٠ «غاصوا كالرصاص في مياه غامرة»، المصريين بيغرقوا في بحر عميق. ٤) رؤساء القطيع: إرميا ٢٥: ٣٤ «ولولوا أيها الرعاة واصرخوا، وتمرغوا يا رؤساء الغنم»، ربنا بيحاسب قادة الشعب.\n**في فاندايك:** «أمجد» و«أقدر» و«العظماء» و«رؤساء».\n**ملاحظة:** الكلمة بتتقال عن حاجات كبيرة وقوية بالمعنى المادي والمعنوي، فالمعنى الأصلي «قوي وشريف».",
+        "msa": "**المعنى:** «أَدِّير» تعني عظيم أو قدير أو ممجّد، وتقال عن الله والمياه والأشجار والقادة والأشراف. ويترجمها فاندايك بحسب السياق: «أمجد» و«أقدر» و«عظماء» و«رؤساء».\n**الاستعمالات والأمثلة:** ١) اسم الله: مزمور ٨: ٩ «أيها الرب سيدنا، ما أمجد اسمك في كل الأرض!»، فكل الأرض تشهد لعظمة اسمه. ٢) قدرة الله: مزمور ٩٣: ٤ «من أصوات مياه كثيرة، من غمار أمواج البحر، الرب في العلى أقدر»، فالله أقدر من البحر. ٣) مياه عظيمة: خروج ١٥: ١٠ «غاصوا كالرصاص في مياه غامرة»، فالمصريون يغرقون في بحر عميق. ٤) رؤساء القطيع: إرميا ٢٥: ٣٤ «ولولوا أيها الرعاة واصرخوا، وتمرغوا يا رؤساء الغنم»، فقادة الشعب يحاسَبون.\n**في فاندايك:** «أمجد» و«أقدر» و«العظماء» و«رؤساء».\n**ملاحظة:** تقال الكلمة عن الأمور الكبيرة القوية مادّيًّا ومعنويًّا، فمعناها الأصلي «قوي وشريف».",
+        "en": "**Meaning:** addir means great, mighty or glorious, and is said of God, of waters, of trees, of leaders and of nobles. Van Dyke renders it according to context: «أمجد», «أقدر», «عظماء» and «رؤساء».\n**Uses and examples:** 1) God's name: Ps 8:9 \"O LORD our Lord, how excellent is thy name in all the earth!\", all the earth bears witness to the greatness of his name. 2) God's power: Ps 93:4 \"The LORD on high is mightier than the noise of many waters, yea, than the mighty waves of the sea\", God is mightier than the sea. 3) mighty waters: Exod 15:10 \"they sank as lead in the mighty waters\", the Egyptians drown in the deep sea. 4) leaders of the flock: Jer 25:34 \"Howl, ye shepherds, and cry; and wallow yourselves in the ashes, ye principal of the flock\", the leaders of the people are called to account.\n**In Van Dyke:** «أمجد», «أقدر», «العظماء» and «رؤساء».\n**Note:** the word is said of things large and strong in both the physical and the moral sense, so the root idea is \"strong and noble\"."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    }
+  ]
+}

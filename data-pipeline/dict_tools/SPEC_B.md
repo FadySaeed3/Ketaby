@@ -3,6 +3,12 @@
 Read `SPEC.md` first: its **Accuracy rules**, **Entry format** (JSON fields) and **Egyptian Arabic rules** all apply.
 This file changes only the length and the shape of the entry.
 
+**Saving effort (read this):** build the output with a small script that loads the pack and copies `dstrong` and `lemma`
+from it (typed Hebrew can look identical but store its vowel marks in another order). Take examples from the pack's
+occurrences; look up an extra verse with `ex.py` only for a famous verse the pack lacks, at most one per entry.
+`check.py` checks every reference written before «في فاندايك» (Meaning section included), so a verse that carries a
+different sense number belongs in the Note, named with its number. Words inside «Van Dyke quotes» are not passive-scanned.
+
 ## Your data pack
 Your task gives a pack file made by `prep.py`: for each lemma its gloss, count, sense numbers, Van Dyke renderings with
 counts, open-lexicon definitions (`defs`), and up to 14 occurrences spread over the Bible, each with the Arabic reference
@@ -23,7 +29,8 @@ follow the defs and the verses, keep the pack's lemma string, and say so briefly
     and one sentence on what it shows. Pick examples that show different uses, and well-known verses when they exist.
   - In Van Dyke: the main renderings from `renderings`.
   - Note: only when there is something worth saying (a sense split, a wordplay, a related more common word, a translation
-    point). If there is nothing, leave the Note section out entirely (then the entry has 3 sections).
+    point). If there is nothing, leave the Note section out entirely (then the entry has 3 sections); do not write a Note just to
+    fill the shape. Aim at 120–170 words.
 - `eg` length: 110–200 words.
 - `msa` and `en`: the same content and sections, same length range.
 

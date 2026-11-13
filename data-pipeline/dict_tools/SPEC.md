@@ -8,6 +8,12 @@ You are writing a set of these entries. Quality bar: the existing entries in
 **Before writing, read at least three entries there in full** (e.g. H3820A, H7725G, H0518A for Hebrew; G4100, G3686, G2309 for Greek)
 and match their length, structure, tone and density. Do not modify those files or anything in the repo.
 
+**Saving effort (read this):** build the output with a small script that loads the pack and copies `dstrong` and `lemma`
+from it (typed Hebrew can look identical but store its vowel marks in another order). Take examples from the pack's
+occurrences; look up an extra verse with `ex.py` only for a famous verse the pack lacks, at most one per entry.
+`check.py` checks every reference written before «في فاندايك» (Meaning section included), so a verse that carries a
+different sense number belongs in the Note, named with its number. Words inside «Van Dyke quotes» are not passive-scanned.
+
 ## Tools (run from `/home/claude/ketaby/data-pipeline/dict_tools`)
 - `python3 ex.py BASE "Book ch:v" "Book ch:v" ...` where BASE is the Strong's number WITHOUT the sense letter (H5221, G3551).
   First line(s): every sense number of BASE with its gloss and count. Then each verse in Van Dyke, followed by the list of

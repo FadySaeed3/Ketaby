@@ -3,6 +3,12 @@
 Read `SPEC.md` first: its **Accuracy rules**, **Entry format** (JSON fields) and **Egyptian Arabic rules** all apply.
 This file changes only the length and the shape.
 
+**Saving effort (read this):** build the output with a small script that loads the pack and copies `dstrong` and `lemma`
+from it (typed Hebrew can look identical but store its vowel marks in another order). Take examples from the pack's
+occurrences; look up an extra verse with `ex.py` only for a famous verse the pack lacks, at most one per entry.
+`check.py` checks every reference written before «في فاندايك» (Meaning section included), so a verse that carries a
+different sense number belongs in the Note, named with its number. Words inside «Van Dyke quotes» are not passive-scanned.
+
 ## Your data pack
 Your task gives a pack file made by `prep.py`. For these words the pack lists **every occurrence** (ref, Van Dyke verse
 `vd`, the Van Dyke word aligned to this lemma `ar`, the Hebrew/Greek form `orig`), plus the open-lexicon definitions

@@ -2,6 +2,12 @@
 
 Read `SPEC.md` first: its **Accuracy rules**, **Entry format** (JSON fields) and **Egyptian Arabic rules** all apply.
 
+**Saving effort (read this):** build the output with a small script that loads the pack and copies `dstrong` and `lemma`
+from it (typed Hebrew can look identical but store its vowel marks in another order). Take examples from the pack's
+occurrences; look up an extra verse with `ex.py` only for a famous verse the pack lacks, at most one per entry.
+`check.py` checks every reference written before «في فاندايك» (Meaning section included), so a verse that carries a
+different sense number belongs in the Note, named with its number. Words inside «Van Dyke quotes» are not passive-scanned.
+
 ## Your data pack
 Your task gives a pack made by `prep.py`. For names, the open-lexicon definitions (`defs`, especially `tbes` and `ubs`)
 give who the person is or where the place is, family links («son of: ...», «father of: ...»), the first mention, other

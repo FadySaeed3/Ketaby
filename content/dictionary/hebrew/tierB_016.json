@@ -1,0 +1,529 @@
+{
+  "batch": 1,
+  "about": "Tier B: words used 10-49 times, several sense numbers (written with Opus), set 16",
+  "words": [
+    {
+      "dstrong": "H0996H",
+      "lemma": "בַּ֫יִן",
+      "gloss": {
+        "eg": "وسط، بين (مجموعة)",
+        "msa": "وسط، بين (جماعة)",
+        "en": "among, in the midst of"
+      },
+      "entry": {
+        "eg": "**المعنى:** «بَيِن» هي نفس «بين» العربي. المعنى العام «بين طرفين» زي «بيني وبينك» ليه رقم تاني (H0996G)، والرقم ده لما الكلمة تعني «وسط»: حد أو حاجة في وسط مجموعة كبيرة، مش بين اتنين.\n**الاستخدامات والأمثلة:** ١) الحبيبة وسط البنات: نشيد الأنشاد ٢: ٢ «كالسوسنة بين الشوك كذلك حبيبتي بين البنات»، الكلمة مرتين، والحبيب شايف حبيبته زهرة وسط شوك. ٢) غربة وسط الأمم: مراثي ١: ٣ «هي تسكن بين الأمم. لا تجد راحة»، يهوذا في السبي عايشة وسط شعوب غريبة. ٣) وسط العجل: حزقيال ١٠: ٢ «ادخل بين البكرات تحت الكروب ... من بين الكروبيم»، الكلمة مرتين، والراجل اللابس الكتان داخل وسط عجل المركبة ياخد جمر. ٤) لمّ الشعب: حزقيال ٣٧: ٢١ «هأنذا آخذ بني إسرائيل من بين الأمم»، «من بين» هنا معناها «من وسط»، وربنا بيوعد يرجّعهم أرضهم.\n**في فاندايك:** «بين» و«من بين» و«بينهم» و«بين أنفسنا».\n**ملاحظة:** الحد بين الرقمين مش دايمًا واضح: في زكريا ١: ١٠ «الرجل الواقف بين الآس» الكلمة بالرقم ده، وفي زكريا ١: ٨ نفس الوصف برقم «بين» العادي (H0996G)، والمعنى واحد.",
+        "msa": "**المعنى:** «بَيِن» هي «بين» العربية نفسها. والمعنى العام «بين طرفين» مثل «بيني وبينك» له رقم آخر (H0996G)، أما هذا الرقم فحين تعني الكلمة «وسط»: شخص أو شيء في وسط جماعة كبيرة، لا بين اثنين.\n**الاستعمالات والأمثلة:** ١) الحبيبة وسط البنات: نشيد الأنشاد ٢: ٢ «كالسوسنة بين الشوك كذلك حبيبتي بين البنات»، والكلمة مرتان، فالحبيب يرى حبيبته زهرة وسط الشوك. ٢) الغربة بين الأمم: مراثي ١: ٣ «هي تسكن بين الأمم. لا تجد راحة»، فيهوذا في السبي تعيش وسط شعوب غريبة. ٣) وسط العجلات: حزقيال ١٠: ٢ «ادخل بين البكرات تحت الكروب ... من بين الكروبيم»، والكلمة مرتان، إذ يدخل الرجل اللابس الكتان وسط عجلات المركبة ليأخذ جمرًا. ٤) جمع الشعب: حزقيال ٣٧: ٢١ «هأنذا آخذ بني إسرائيل من بين الأمم»، و«من بين» هنا بمعنى «من وسط»، والله يعد بإعادتهم إلى أرضهم.\n**في فاندايك:** «بين» و«من بين» و«بينهم» و«بين أنفسنا».\n**ملاحظة:** الحد بين الرقمين ليس حادًا دائمًا: ففي زكريا ١: ١٠ «الرجل الواقف بين الآس» الكلمة بهذا الرقم، وفي زكريا ١: ٨ الوصف نفسه برقم «بين» العادي (H0996G)، والمعنى واحد.",
+        "en": "**Meaning:** bayin is the same word as Arabic «بين». The general sense \"between two parties\", as in \"between me and you\", has its own number (H0996G); this number covers \"among, in the midst of\": someone or something in the middle of a larger group, not between two.\n**Uses and examples:** 1) the beloved among the girls: Song 2:2 \"as a lily among thorns, so is my love among the daughters\", the word twice: he sees her as a flower among thorns. 2) exile among the nations: Lam 1:3 \"she dwells among the nations, she finds no rest\": Judah in captivity lives among foreign peoples. 3) among the wheels: Ezek 10:2 \"go in among the wheels underneath the cherub ... from among the cherubim\", the word twice: the man in linen goes in among the chariot's wheels to take coals. 4) gathering the people: Ezek 37:21 \"I will take the children of Israel from among the nations\": \"from among\" means \"from the midst of\", and God promises to bring them home.\n**In Van Dyke:** «بين», «من بين», «بينهم» and «بين أنفسنا».\n**Note:** the line between the two numbers is not sharp: in Zech 1:10 \"the man who stood among the myrtle trees\" the word carries this number, while in Zech 1:8 the same description carries the ordinary \"between\" number (H0996G), with the same meaning."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H1697L",
+      "lemma": "דָּבָר",
+      "gloss": {
+        "eg": "قضية، دعوى، تهمة",
+        "msa": "قضية، دعوى، تهمة",
+        "en": "case, lawsuit, charge"
+      },
+      "entry": {
+        "eg": "**المعنى:** «داڤار» معناها الأساسي «كلمة» (H1697G) و«أمر، حاجة» (H1697I)، والرقم ده لما «الأمر» يبقى قضية قدام القاضي: خناقة بين اتنين، أو تهمة، أو مسألة محتاجة حكم. وفاندايك أغلب الوقت بيقولها «دعوى» أو «أمر».\n**الاستخدامات والأمثلة:** ١) موسى قاضي الشعب: خروج ١٨: ١٦ «إذا كان لهم دعوى يأتون إلي فأقضي بين الرجل وصاحبه»، موسى بيشرح لحماه ليه الناس واقفين قدامه طول اليوم. ٢) قضية أمانة: خروج ٢٢: ٩ «في كل دعوى جناية، من جهة ثور أو حمار أو شاة»، لو حاجة ضاعت من عند اللي شايلها أمانة، الاتنين يروحوا للحكم، واللي يطلع غلطان يعوّض الضعف. ٣) تهمة ملفقة: تثنية ٢٢: ١٤ «ونسب إليها أسباب كلام»، راجل بيلفق تهمة لمراته علشان يخلص منها. ٤) أبشالوم بيسرق القلوب: ٢ صموئيل ١٥: ٣ «انظر. أمورك صالحة ومستقيمة»، بيقول لكل صاحب قضية إن الحق معاه، والعيب في الملك.\n**في فاندايك:** «دعوى» و«الدعاوي» و«أمر» و«الأمر» و«كلام».\n**ملاحظة:** فكرة المحكمة الأعلى موجودة من الأول: في تثنية ١: ١٧ موسى قال للقضاة «والأمر الذي يعسر عليكم تقدمونه إلي لأسمعه».",
+        "msa": "**المعنى:** «داڤار» معناها الأساسي «كلمة» (H1697G) و«أمر، شيء» (H1697I)، وهذا الرقم حين يصير «الأمر» قضية أمام القاضي: نزاعًا بين اثنين، أو تهمة، أو مسألة تحتاج إلى حكم. ويترجمها فاندايك غالبًا «دعوى» أو «أمر».\n**الاستعمالات والأمثلة:** ١) موسى قاضيًا للشعب: خروج ١٨: ١٦ «إذا كان لهم دعوى يأتون إلي فأقضي بين الرجل وصاحبه»، يشرح موسى لحميه سبب وقوف الشعب أمامه طوال اليوم. ٢) قضية الوديعة: خروج ٢٢: ٩ «في كل دعوى جناية، من جهة ثور أو حمار أو شاة»، فإن ضاعت الوديعة تقدم الطرفان للحكم، ومن ثبت ذنبه عوّض ضعفين. ٣) تهمة ملفقة: تثنية ٢٢: ١٤ «ونسب إليها أسباب كلام»، رجل يلفق لامرأته تهمة ليتخلص منها. ٤) أبشالوم يسرق القلوب: ٢ صموئيل ١٥: ٣ «انظر. أمورك صالحة ومستقيمة»، يقول لكل صاحب قضية إن الحق معه وإن التقصير من الملك.\n**في فاندايك:** «دعوى» و«الدعاوي» و«أمر» و«الأمر» و«كلام».\n**ملاحظة:** فكرة المحكمة الأعلى قديمة: ففي تثنية ١: ١٧ قال موسى للقضاة «والأمر الذي يعسر عليكم تقدمونه إلي لأسمعه».",
+        "en": "**Meaning:** davar basically means \"word\" (H1697G) and \"matter, thing\" (H1697I); this number is used when the \"matter\" is a case before a judge: a dispute, a charge, or a question that needs a ruling. Van Dyke usually renders it «دعوى» or «أمر».\n**Uses and examples:** 1) Moses as judge: Exod 18:16 \"when they have a matter, they come to me, and I judge between a man and his neighbor\": Moses explains to his father-in-law why people stand before him all day. 2) a case of trust: Exod 22:9 \"for every kind of trespass, whether for ox, for donkey, for sheep\": if something entrusted goes missing, both parties come for judgment and the guilty one repays double. 3) a false charge: Deut 22:14 \"and brings shameful charges against her\": a man invents an accusation to be rid of his wife. 4) Absalom stealing hearts: 2 Sam 15:3 \"see, your claims are good and right\": he tells every plaintiff he is in the right and blames the king.\n**In Van Dyke:** «دعوى», «الدعاوي», «أمر», «الأمر» and «كلام».\n**Note:** the idea of a higher court is there from the start: in Deut 1:17 Moses tells the judges \"the case that is too hard for you, bring to me, and I will hear it\"."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H2803J",
+      "lemma": "חָשַׁב",
+      "gloss": {
+        "eg": "حسب، ظن، اعتبر",
+        "msa": "حسب، ظنّ، عدّ",
+        "en": "regard as, think, consider"
+      },
+      "entry": {
+        "eg": "**المعنى:** «حاشَڤ» فعل التفكير والحساب، والرقم ده لما الحساب يبقى حكم في الدماغ: تبص لحد أو لحاجة وتشوفها كذا، صح كان الحكم ولا غلط. وللفعل أرقام تانية: «حسب لحد أو عليه» زي البر (H2803H)، والتدبير (H2803I)، والصنعة الفنية (H2803G).\n**الاستخدامات والأمثلة:** ١) حكم من المنظر: تكوين ٣٨: ١٥ «فنظرها يهوذا وحسبها زانية، لأنها كانت قد غطت وجهها»، يهوذا ما عرفش إنها ثامار مرات ابنه. ٢) أيوب والعداوة: أيوب ١٣: ٢٤ «لماذا تحجب وجهك، وتحسبني عدوا لك؟»، أيوب مش فاهم ليه ربنا بيعامله كأنه خصم. ٣) الإنسان قيمته إيه: إشعياء ٢: ٢٢ «كفوا عن الإنسان الذي في أنفه نسمة، لأنه ماذا يحسب؟»، يعني الإنسان ما يستاهلش تعتمد عليه. ٤) عبد الرب في عين الناس: إشعياء ٥٣: ٤ «ونحن حسبناه مصابا مضروبا من الله ومذلولا»، الناس شافوا آلامه عقاب من ربنا، وهو كان شايل أوجاعهم.\n**في فاندايك:** «يحسب» و«تحسب» و«حسبها» و«تحسبني» و«تفكرت».\n**ملاحظة:** في إشعياء ٥٣: ٣ «محتقر فلم نعتد به» نفس الفعل برقم H2803H، فالآيتين ورا بعض فيهم الفعل برقمين.",
+        "msa": "**المعنى:** «حاشَڤ» فعل التفكير والحساب، وهذا الرقم حين يكون الحساب حكمًا في الذهن: أن تنظر إلى شخص أو شيء فتعدّه كذا، صوابًا كان الحكم أو خطأ. وللفعل أرقام أخرى: الحسبان لأحد أو عليه كالبر (H2803H)، والتدبير (H2803I)، والصنعة الفنية (H2803G).\n**الاستعمالات والأمثلة:** ١) حكم من المظهر: تكوين ٣٨: ١٥ «فنظرها يهوذا وحسبها زانية، لأنها كانت قد غطت وجهها»، ولم يعرف أنها ثامار كنته. ٢) أيوب والعداوة: أيوب ١٣: ٢٤ «لماذا تحجب وجهك، وتحسبني عدوا لك؟»، لا يفهم أيوب لماذا يعامله الله كخصم. ٣) قيمة الإنسان: إشعياء ٢: ٢٢ «كفوا عن الإنسان الذي في أنفه نسمة، لأنه ماذا يحسب؟»، أي أن الإنسان لا يستحق الاتكال عليه. ٤) عبد الرب في أعين الناس: إشعياء ٥٣: ٤ «ونحن حسبناه مصابا مضروبا من الله ومذلولا»، ظن الناس آلامه عقابًا من الله، وهو كان يحمل أوجاعهم.\n**في فاندايك:** «يحسب» و«تحسب» و«حسبها» و«تحسبني» و«تفكرت».\n**ملاحظة:** في إشعياء ٥٣: ٣ «محتقر فلم نعتد به» الفعل نفسه برقم H2803H، فالآيتان المتتاليتان تحملان الفعل برقمين.",
+        "en": "**Meaning:** chashav is the verb of thinking and reckoning; this number covers reckoning as a judgment in the mind: looking at someone or something and taking it to be such, rightly or wrongly. Other numbers cover reckoning to someone's account, such as righteousness (H2803H), devising (H2803I) and artistic design (H2803G).\n**Uses and examples:** 1) judging by appearance: Gen 38:15 \"when Judah saw her, he thought she was a prostitute, for she had covered her face\": he did not know she was Tamar. 2) Job and enmity: Job 13:24 \"why do you hide your face and count me as your enemy?\": Job cannot understand why God treats him as an opponent. 3) what man is worth: Isa 2:22 \"stop regarding man, in whose nostrils is breath, for of what account is he?\": a human is not worth relying on. 4) the servant in people's eyes: Isa 53:4 \"yet we esteemed him stricken, smitten by God, and afflicted\": people took his suffering for God's punishment, while he carried their pains.\n**In Van Dyke:** «يحسب», «تحسب», «حسبها», «تحسبني» and «تفكرت».\n**Note:** in Isa 53:3 \"despised, and we esteemed him not\" the same verb carries H2803H, so two consecutive verses use it under two numbers."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H3176H",
+      "lemma": "יָחַל",
+      "gloss": {
+        "eg": "رجا، انتظر بأمل",
+        "msa": "رجا، انتظر بثقة",
+        "en": "hope, wait for"
+      },
+      "entry": {
+        "eg": "**المعنى:** «ياحَل» فعل معناه تستنى وانت عندك أمل، يعني الانتظار هنا مش وقت بيعدي وخلاص، ده ثقة إن اللي مستنيه جاي. الرقم ده لمعنى «رجا، اتكل واستنى»، أما الانتظار لمدة معيّنة فليه رقم تاني (H3176G).\n**الاستخدامات والأمثلة:** ١) يا نفسي استني: مزمور ٤٢: ١١ «ترجي الله، لأني بعد أحمده»، المرنم بيقول لنفسه المكسورة تستنى ربنا، والقرار راجع في ٤٢: ٥ و٤٣: ٥. ٢) نصيبي هو الرب: مراثي ٣: ٢٤ «نصيبي هو الرب، قالت نفسي، من أجل ذلك أرجوه»، وسط خراب أورشليم الكاتب لسه بيستنى ربنا. ٣) انتظار الكلمة: مزمور ١١٩: ٧٤ «متقوك يرونني فيفرحون، لأني انتظرت كلامك». ٤) الجزائر مستنية: إشعياء ٤٢: ٤ «وتنتظر الجزائر شريعته»، ومتى ١٢: ٢١ بيقتبسها «وعلى اسمه يكون رجاء الأمم».\n**في فاندايك:** «انتظرت» و«ترجي» و«ليرج» و«وتنتظر» و«أرجوه».\n**ملاحظة:** في أيوب ١٣: ١٥ «هوذا يقتلني. لا أنتظر شيئا» المكتوب في العبري «لا» (לא)، والقراءة اللي التقليد اليهودي بيقراها «له» (לו). فاندايك ماشي ورا المكتوب، والملك جيمس ورا القراءة: «ولو قتلني، هفضل أرجوه». ونوح لما «لبث» سبعة أيام في تكوين ٨: ١٢ الفعل برقم H3176G.",
+        "msa": "**المعنى:** «ياحَل» فعل يعني الانتظار المصحوب بالأمل، فليس الانتظار هنا مرور وقت فحسب، بل ثقة بأن المنتظَر آتٍ. وهذا الرقم لمعنى «رجا، اتكل وانتظر»، أما الانتظار مدة معيّنة فله رقم آخر (H3176G).\n**الاستعمالات والأمثلة:** ١) مخاطبة النفس: مزمور ٤٢: ١١ «ترجي الله، لأني بعد أحمده»، يدعو المرنم نفسه المنحنية إلى انتظار الله، وتتكرر اللازمة في ٤٢: ٥ و٤٣: ٥. ٢) الرب نصيبي: مراثي ٣: ٢٤ «نصيبي هو الرب، قالت نفسي، من أجل ذلك أرجوه»، فوسط خراب أورشليم ما زال الكاتب يرجو الله. ٣) انتظار الكلمة: مزمور ١١٩: ٧٤ «متقوك يرونني فيفرحون، لأني انتظرت كلامك». ٤) انتظار الجزائر: إشعياء ٤٢: ٤ «وتنتظر الجزائر شريعته»، ويقتبسها متى ١٢: ٢١ «وعلى اسمه يكون رجاء الأمم».\n**في فاندايك:** «انتظرت» و«ترجي» و«ليرج» و«وتنتظر» و«أرجوه».\n**ملاحظة:** في أيوب ١٣: ١٥ «هوذا يقتلني. لا أنتظر شيئا» المكتوب في العبرية «لا» (לא)، والقراءة التقليدية اليهودية «له» (לו). يتبع فاندايك المكتوب، ويتبع الملك جيمس القراءة: «وإن قتلني فإياه أرجو». أما نوح حين «لبث» سبعة أيام في تكوين ٨: ١٢ فالفعل برقم H3176G.",
+        "en": "**Meaning:** yachal means to wait with hope: not time simply passing, but confidence that what is awaited will come. This number covers \"hope, wait for, trust\"; waiting out a set period has another number (H3176G).\n**Uses and examples:** 1) speaking to one's soul: Ps 42:11 \"hope in God, for I shall yet praise him\": the psalmist tells his downcast soul to wait for God, a refrain repeated in 42:5 and 43:5. 2) the Lord is my portion: Lam 3:24 \"the Lord is my portion, says my soul, therefore I will hope in him\": amid Jerusalem's ruin the poet still waits for God. 3) waiting for the word: Ps 119:74 \"those who fear you shall see me and rejoice, because I have hoped in your word\". 4) the coastlands wait: Isa 42:4 \"and the coastlands wait for his law\", which Matt 12:21 quotes as \"in his name the Gentiles will hope\".\n**In Van Dyke:** «انتظرت», «ترجي», «ليرج», «وتنتظر» and «أرجوه».\n**Note:** in Job 13:15 «هوذا يقتلني. لا أنتظر شيئا» the written Hebrew has \"not\" (לא), while the traditional Jewish reading is \"for him\" (לו). Van Dyke follows the written text; the King James follows the reading: \"though he slay me, yet will I trust in him\". Noah's waiting seven days in Gen 8:12 carries H3176G."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H4541A",
+      "lemma": "מַסֵּכָה",
+      "gloss": {
+        "eg": "تمثال مسبوك، سكيب",
+        "msa": "تمثال مسبوك، سكيب",
+        "en": "molten image, cast idol; libation"
+      },
+      "entry": {
+        "eg": "**المعنى:** «مَسِّيخا» من فعل معناه «صب» أو «سبك»، فالكلمة معناها الحاجة المصبوبة: تمثال من معدن دايب صبّوه في قالب، وأشهرها العجل الدهب. وفي موضع على الأقل معناها السكيب. وفيه كلمة بنفس الحروف معناها «غطا» ليها رقم تاني (H4541B).\n**الاستخدامات والأمثلة:** ١) العجل الدهب: خروج ٣٢: ٤ «وصنعه عجلا مسبوكا»، هارون صب دهب الشعب وعمل منه العجل. ٢) لعنة في السر: تثنية ٢٧: ١٥ «ملعون الإنسان الذي يصنع تمثالا منحوتا أو مسبوكا»، المنحوت بالأزميل، والمسبوك بالصب في قالب، والاتنين ممنوعين. ٣) صنم في بيت ميخا: قضاة ١٧: ٤ «فعملها تمثالا منحوتا وتمثالا مسبوكا»، أم ميخا بتعمل صنم فضة وهي فاكرة إنها بتكرّم الرب. ٤) سكيب من غير روح ربنا: إشعياء ٣٠: ١ «ويسكبون سكيبا وليس بروحي»، الأرجح إنه السكيب اللي بيصبوه وهم بيقطعوا عهد، وفيه رأي إنها التحالف نفسه، والكلام عن تحالف يهوذا مع مصر.\n**في فاندايك:** «مسبوكا» و«تماثيل مسبوكة» و«المسبوكات» و«تمثالا مسبوكا».\n**ملاحظة:** الكلمة برقم H4541B في إشعياء ٢٥: ٧ «والغطاء المغطى به على كل الأمم»، والأرجح إنها من جذر تاني معناه «نسج».",
+        "msa": "**المعنى:** «مَسِّيخا» من فعل بمعنى «صبّ» أو «سبك»، فهي الشيء المصبوب: تمثال من معدن مذاب صُبّ في قالب، وأشهرها العجل الذهبي. وفي موضع على الأقل تعني السكيب. وثمة كلمة بالحروف نفسها بمعنى «غطاء» لها رقم آخر (H4541B).\n**الاستعمالات والأمثلة:** ١) العجل الذهبي: خروج ٣٢: ٤ «وصنعه عجلا مسبوكا»، صبّ هارون ذهب الشعب وصنع منه العجل. ٢) لعنة على العبادة الخفية: تثنية ٢٧: ١٥ «ملعون الإنسان الذي يصنع تمثالا منحوتا أو مسبوكا»، فالمنحوت بالإزميل والمسبوك بالصب في قالب، وكلاهما محرّم. ٣) صنم في بيت ميخا: قضاة ١٧: ٤ «فعملها تمثالا منحوتا وتمثالا مسبوكا»، تصنع أم ميخا صنمًا من الفضة ظانّة أنها تكرم الرب. ٤) سكيب بلا روح الله: إشعياء ٣٠: ١ «ويسكبون سكيبا وليس بروحي»، والأرجح أنه سكيب يرافق قطع العهد، وثمة رأي أنها التحالف نفسه، والسياق تحالف يهوذا مع مصر.\n**في فاندايك:** «مسبوكا» و«تماثيل مسبوكة» و«المسبوكات» و«تمثالا مسبوكا».\n**ملاحظة:** الكلمة برقم H4541B في إشعياء ٢٥: ٧ «والغطاء المغطى به على كل الأمم»، والأرجح أنها من جذر آخر بمعنى «نسج».",
+        "en": "**Meaning:** massekhah comes from a verb meaning \"to pour, to cast\", so it is something poured: an image of molten metal cast in a mould, most famously the golden calf. In at least one place it means a libation. A word with the same letters meaning \"covering\" has another number (H4541B).\n**Uses and examples:** 1) the golden calf: Exod 32:4 \"and made it a molten calf\": Aaron cast the people's gold into the calf. 2) a curse on secret worship: Deut 27:15 \"cursed is the man who makes a carved or molten image\": one shaped with a chisel, the other cast in a mould, and both forbidden. 3) an idol in Micah's house: Judg 17:4 \"who made it into a carved image and a molten image\": Micah's mother has a silver idol made, thinking she honours the Lord. 4) a libation without God's Spirit: Isa 30:1 \"who pour out a libation, but not of my Spirit\": most likely the libation poured when making a covenant, though some take it as the alliance itself; the context is Judah's pact with Egypt.\n**In Van Dyke:** «مسبوكا», «تماثيل مسبوكة», «المسبوكات» and «تمثالا مسبوكا».\n**Note:** the word carries H4541B in Isa 25:7 \"the covering that is cast over all peoples\"; it most likely comes from another root meaning \"to weave\"."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5307I",
+      "lemma": "נָפַל",
+      "gloss": {
+        "eg": "ألقى القرعة، قسم بالقرعة، وقع نصيبًا",
+        "msa": "ألقى القرعة، قسم بالقرعة، وقع نصيبًا",
+        "en": "cast lots, allot, fall as a lot"
+      },
+      "entry": {
+        "eg": "**المعنى:** «نافَل» فعل معناه «وقع» (H5307G)، والرقم ده لاستخدامه مع القرعة والنصيب. بصيغة «هِپّيل» معناه «وقّع القرعة» يعني رماها، أو قسم حاجة بالقرعة، وبالصيغة العادية القرعة «بتقع» على حد، أو الأرض «بتقع» نصيب لحد.\n**الاستخدامات والأمثلة:** ١) القرعة على يونان: يونان ١: ٧ «هلم نلقي قرعا ... فألقوا قرعا، فوقعت القرعة على يونان»، الفعل في الآية تلات مرات: البحارة رموا القرعة، والقرعة وقعت على يونان. ٢) تقسيم الهدوم: مزمور ٢٢: ١٨ «يقسمون ثيابي بينهم، وعلى لباسي يقترعون»، ويوحنا ١٩: ٢٤ بيقول إن العساكر عملوا كده عند الصليب. ٣) الأرض نصيب: عدد ٣٤: ٢ «هذه هي الأرض التي تقع لكم نصيبا»، ربنا بيرسم حدود أرض كنعان قبل ما الشعب يدخلها. ٤) قرعة هامان: أستير ٣: ٧ «كانوا يلقون فورا، أي قرعة، أمام هامان»، و«فور» دي هي اللي طلع منها اسم عيد «الفوريم».\n**في فاندايك:** «ألقوا» و«ألقى» و«تقع» و«اقسمها بالقرعة» و«يقاسمونكم».\n**ملاحظة:** في أمثال ١٦: ٣٣ «القرعة تلقى في الحضن، ومن الرب كل حكمها» الفعل العبري مختلف، مش «نافَل».",
+        "msa": "**المعنى:** «نافَل» فعل بمعنى «وقع» (H5307G)، وهذا الرقم لاستعماله مع القرعة والنصيب. فبصيغة «هِپّيل» يعني «أوقع القرعة» أي ألقاها، أو قسم شيئًا بالقرعة، وبالصيغة البسيطة «تقع» القرعة على أحد، أو «تقع» الأرض نصيبًا لأحد.\n**الاستعمالات والأمثلة:** ١) القرعة على يونان: يونان ١: ٧ «هلم نلقي قرعا ... فألقوا قرعا، فوقعت القرعة على يونان»، والفعل في الآية ثلاث مرات: ألقى البحارة القرعة، فوقعت على يونان. ٢) اقتسام الثياب: مزمور ٢٢: ١٨ «يقسمون ثيابي بينهم، وعلى لباسي يقترعون»، ويذكر يوحنا ١٩: ٢٤ أن الجنود فعلوا ذلك عند الصليب. ٣) الأرض نصيبًا: عدد ٣٤: ٢ «هذه هي الأرض التي تقع لكم نصيبا»، يرسم الله حدود كنعان قبل دخول الشعب إليها. ٤) قرعة هامان: أستير ٣: ٧ «كانوا يلقون فورا، أي قرعة، أمام هامان»، ومن «فور» جاء اسم عيد «الفوريم».\n**في فاندايك:** «ألقوا» و«ألقى» و«تقع» و«اقسمها بالقرعة» و«يقاسمونكم».\n**ملاحظة:** في أمثال ١٦: ٣٣ «القرعة تلقى في الحضن، ومن الرب كل حكمها» الفعل العبري مختلف، وليس «نافَل».",
+        "en": "**Meaning:** naphal means \"to fall\" (H5307G); this number covers its use with lots and shares. In the hiphil stem it means \"to make the lot fall\", that is, to cast lots or divide by lot; in the simple stem the lot \"falls\" on someone, or land \"falls\" to someone as a share.\n**Uses and examples:** 1) the lot falls on Jonah: Jonah 1:7 \"come, let us cast lots ... so they cast lots, and the lot fell on Jonah\", the verb three times: the sailors cast the lot and it fell on Jonah. 2) dividing the clothes: Ps 22:18 \"they divide my garments among them, and for my clothing they cast lots\"; John 19:24 says the soldiers did this at the cross. 3) the land as a share: Num 34:2 \"this is the land that shall fall to you for an inheritance\": God draws the borders of Canaan. 4) Haman's lot: Esth 3:7 \"they cast Pur, that is, the lot, before Haman\", and \"Pur\" gave the feast of Purim its name.\n**In Van Dyke:** «ألقوا», «ألقى», «تقع», «اقسمها بالقرعة» and «يقاسمونكم».\n**Note:** in Prov 16:33 \"the lot is cast into the lap, but its every decision is from the Lord\" the Hebrew verb is a different one, not naphal."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5375P",
+      "lemma": "נָשָׂא",
+      "gloss": {
+        "eg": "رفع إيده (يحلف)، أقسم",
+        "msa": "رفع يده (قسمًا)، أقسم",
+        "en": "lift the hand (in an oath), swear"
+      },
+      "entry": {
+        "eg": "**المعنى:** ده نفس فعل «ناسا» يعني «رفع» (H5375G)، بس الرقم ده لرفع الإيد، وأغلبه في تعبير «رفعت يدي» على لسان ربنا، يعني «حلفت»، زي ما الإنسان كان بيرفع إيده وهو بيحلف. وساعات رفع الإيد بيبقى للبركة. أما «رفع الذنب» بمعنى غفر فرقمه H5375I.\n**الاستخدامات والأمثلة:** ١) قسم الأرض: خروج ٦: ٨ «وأدخلكم إلى الأرض التي رفعت يدي أن أعطيها لإبراهيم وإسحاق ويعقوب»، الأرض وعد ربنا حلف عليه. ٢) ربنا بيحلف بنفسه: تثنية ٣٢: ٤٠ «إني أرفع إلى السماء يدي وأقول: حي أنا إلى الأبد»، مفيش حد أعظم منه يحلف بيه. ٣) تاريخ من الأقسام: حزقيال ٢٠: ٢٣ «ورفعت أيضا يدي لهم في البرية لأفرقهم في الأمم»، حزقيال بيحكي تاريخ الشعب بالتعبير ده. ٤) إيد البركة: لاويين ٩: ٢٢ «ثم رفع هارون يده نحو الشعب وباركهم»، بعد ما خلّص الذبايح.\n**في فاندايك:** «رفعت» و«ورفعت» و«ارفع» و«أرفع».\n**ملاحظة:** في تكوين ١٤: ٢٢ أبرام قال «رفعت يدي إلى الرب الإله العلي»، بس الفعل العبري هناك فعل تاني مش «ناسا». وعبرانيين ٦: ١٣ بيقول إن ربنا «إذ لم يكن له أعظم يقسم به، أقسم بنفسه».",
+        "msa": "**المعنى:** هذا هو الفعل «ناسا» بمعنى «رفع» (H5375G)، لكن هذا الرقم لرفع اليد، وأغلبه في عبارة «رفعت يدي» على لسان الله، أي «أقسمت»، كما كان الإنسان يرفع يده عند القسم. وقد يكون رفع اليد للبركة. أما «رفع الذنب» بمعنى الغفران فرقمه H5375I.\n**الاستعمالات والأمثلة:** ١) القسم بالأرض: خروج ٦: ٨ «وأدخلكم إلى الأرض التي رفعت يدي أن أعطيها لإبراهيم وإسحاق ويعقوب»، فالأرض وعد أقسم الله عليه. ٢) الله يقسم بذاته: تثنية ٣٢: ٤٠ «إني أرفع إلى السماء يدي وأقول: حي أنا إلى الأبد»، إذ لا أعظم منه يُقسم به. ٣) تاريخ من الأقسام: حزقيال ٢٠: ٢٣ «ورفعت أيضا يدي لهم في البرية لأفرقهم في الأمم»، يروي حزقيال تاريخ الشعب بهذه العبارة. ٤) يد البركة: لاويين ٩: ٢٢ «ثم رفع هارون يده نحو الشعب وباركهم»، بعد فراغه من الذبائح.\n**في فاندايك:** «رفعت» و«ورفعت» و«ارفع» و«أرفع».\n**ملاحظة:** في تكوين ١٤: ٢٢ قال أبرام «رفعت يدي إلى الرب الإله العلي»، لكن الفعل العبري هناك فعل آخر غير «ناسا». ويقول عبرانيين ٦: ١٣ إن الله «إذ لم يكن له أعظم يقسم به، أقسم بنفسه».",
+        "en": "**Meaning:** this is the verb nasa \"to raise\" (H5375G), but this number covers lifting the hand, mostly in God's phrase \"I lifted my hand\", meaning \"I swore\", as people raised a hand when taking an oath. Sometimes the raised hand blesses. Lifting guilt, meaning forgiving, is H5375I.\n**Uses and examples:** 1) the oath of the land: Exod 6:8 \"I will bring you into the land which I swore to give to Abraham, Isaac and Jacob\": the land is a promise God swore. 2) God swears by himself: Deut 32:40 \"for I lift up my hand to heaven and say, as I live forever\": there is no one greater to swear by. 3) a history of oaths: Ezek 20:23 \"I swore to them in the wilderness that I would scatter them among the nations\": Ezekiel tells Israel's story with this phrase. 4) the hand of blessing: Lev 9:22 \"then Aaron lifted his hand toward the people and blessed them\", after offering the sacrifices.\n**In Van Dyke:** «رفعت», «ورفعت», «ارفع» and «أرفع».\n**Note:** in Gen 14:22 Abram says \"I have lifted my hand to the Lord, God Most High\", but the Hebrew verb there is a different one, not nasa. Heb 6:13 says God, \"since he had no one greater to swear by, swore by himself\"."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5414M",
+      "lemma": "נָתַן",
+      "gloss": {
+        "eg": "إدّى صوته، صرخ، زأر، رعد",
+        "msa": "أطلق صوته، صرخ، زأر، أرعد",
+        "en": "give voice, cry out, roar, thunder"
+      },
+      "entry": {
+        "eg": "**المعنى:** ده نفس فعل «ناتان» اللي معناه «أعطى» (H5414G)، بس الرقم ده لتعبير «إدّى صوته»: يعني صرخ، أو عيّط بصوت عالي، أو زأر، أو رعد. الفاعل ممكن يكون إنسان أو أسد أو ربنا نفسه، وفاندايك ساعات بيسيبها حرفي «أعطى صوته» وساعات بيقول «أطلق صوته».\n**الاستخدامات والأمثلة:** ١) يوسف بيعيّط: تكوين ٤٥: ٢ «فأطلق صوته بالبكاء، فسمع المصريون وسمع بيت فرعون»، يوسف ما قدرش يمسك نفسه لما عرّف إخوته بنفسه. ٢) الأسد ما بيزأرش من غير سبب: عاموس ٣: ٤ «هل يعطي شبل الأسد زئيره من خدره إن لم يخطف؟»، عاموس بيقول إن النبي بيتكلم علشان ربنا اتكلم. ٣) ربنا بيزأر: يوئيل ٣: ١٦ «ومن أورشليم يعطي صوته، فترجف السماء والأرض»، صوت ربنا هنا رعد بيهز الكون. ٤) الأرض بتدوب: مزمور ٤٦: ٦ «عجت الأمم. تزعزعت الممالك. أعطى صوته، ذابت الأرض»، كلمة واحدة من ربنا بتسكّت هيصة الأمم.\n**في فاندايك:** «أعطى» و«يعطي» و«أطلق» و«أطلقوا».\n**ملاحظة:** في خروج ٩: ٢٣ «فأعطى الرب رعودا وبردا» العبري حرفيًا «إدّى أصوات»، لأن الرعد في العبري اسمه «أصوات» (قولوت).",
+        "msa": "**المعنى:** هذا هو الفعل «ناتان» بمعنى «أعطى» (H5414G)، لكن هذا الرقم لعبارة «أعطى صوته»: أي صرخ، أو بكى بصوت عالٍ، أو زأر، أو أرعد. والفاعل قد يكون إنسانًا أو أسدًا أو الله نفسه، ويترجمها فاندايك أحيانًا حرفيًا «أعطى صوته» وأحيانًا «أطلق صوته».\n**الاستعمالات والأمثلة:** ١) بكاء يوسف: تكوين ٤٥: ٢ «فأطلق صوته بالبكاء، فسمع المصريون وسمع بيت فرعون»، لم يتمالك يوسف نفسه حين كشف هويته لإخوته. ٢) الأسد لا يزأر بلا سبب: عاموس ٣: ٤ «هل يعطي شبل الأسد زئيره من خدره إن لم يخطف؟»، فالنبي يتكلم لأن الله تكلم. ٣) زئير الرب: يوئيل ٣: ١٦ «ومن أورشليم يعطي صوته، فترجف السماء والأرض»، صوت الله هنا رعد يهز الكون. ٤) ذوبان الأرض: مزمور ٤٦: ٦ «عجت الأمم. تزعزعت الممالك. أعطى صوته، ذابت الأرض»، كلمة واحدة من الله تُسكت ضجيج الأمم.\n**في فاندايك:** «أعطى» و«يعطي» و«أطلق» و«أطلقوا».\n**ملاحظة:** في خروج ٩: ٢٣ «فأعطى الرب رعودا وبردا» العبرية حرفيًا «أعطى أصواتًا»، لأن الرعد في العبرية يُسمّى «أصواتًا» (قولوت).",
+        "en": "**Meaning:** this is the verb natan \"to give\" (H5414G), but this number covers the idiom \"to give one's voice\": to cry out, weep aloud, roar or thunder. The subject may be a person, a lion or God himself; Van Dyke sometimes keeps the literal «أعطى صوته» and sometimes says «أطلق صوته».\n**Uses and examples:** 1) Joseph weeps: Gen 45:2 \"and he wept aloud, so that the Egyptians heard it, and the household of Pharaoh heard it\": Joseph could not hold back as he made himself known to his brothers. 2) no roar without cause: Amos 3:4 \"does a young lion cry out from his den if he has caught nothing?\": the prophet speaks because God has spoken. 3) the Lord roars: Joel 3:16 \"and utters his voice from Jerusalem, and the heavens and the earth shake\": God's voice is thunder that shakes the world. 4) the earth melts: Ps 46:6 \"the nations raged, the kingdoms tottered; he uttered his voice, the earth melted\": one word from God silences the uproar of nations.\n**In Van Dyke:** «أعطى», «يعطي», «أطلق» and «أطلقوا».\n**Note:** in Exod 9:23 \"the Lord sent thunder and hail\" the Hebrew literally says \"gave voices\", because thunder in Hebrew is called \"voices\" (qolot)."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6438H",
+      "lemma": "פִּנָּה",
+      "gloss": {
+        "eg": "زاوية، ركن؛ حجر الزاوية؛ كبار الشعب",
+        "msa": "زاوية، ركن؛ حجر الزاوية؛ وجوه القوم",
+        "en": "corner; cornerstone; chiefs"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پِنّا» معناها «زاوية» أو «ركن»: ركن بيت، أو مذبح، أو شارع. ومنها «حجر الزاوية» اللي البنا كله واقف عليه، وبالمجاز الكبار اللي الشعب مسنود عليهم. أما «باب الزاوية» في سور أورشليم فليه رقم تاني (H6438G).\n**الاستخدامات والأمثلة:** ١) الحجر المرفوض: مزمور ١١٨: ٢٢ «الحجر الذي رفضه البناؤون قد صار رأس الزاوية»، ويسوع قالها عن نفسه في متى ٢١: ٤٢. ٢) حجر في صهيون: إشعياء ٢٨: ١٦ «هأنذا أؤسس في صهيون حجرا، حجر امتحان، حجر زاوية كريما»، و١ بطرس ٢: ٦ بيقتبسها عن المسيح. ٣) ركن السطح: أمثال ٢١: ٩ «السكنى في زاوية السطح، خير من امرأة مخاصمة وبيت مشترك»، القعدة في ركن ضيق فوق السطح أحسن من بيت كله خناق. ٤) أركان الشعب: قضاة ٢٠: ٢ «ووقف وجوه جميع الشعب»، العبري حرفيًا «زوايا الشعب»، يعني الكبار اللي الشعب مسنود عليهم.\n**في فاندايك:** «زاوية» و«زوايا» و«وجوه» و«العطفة» و«الزاوية».\n**ملاحظة:** في صفنيا ٣: ٦ «خربت شرفاتهم» فاندايك ترجم «زواياهم» بـ«شرفاتهم»، والأرجح إن المقصود الأبراج اللي على أركان الأسوار.",
+        "msa": "**المعنى:** «پِنّا» تعني «زاوية» أو «ركن»: ركن بيت أو مذبح أو شارع. ومنها «حجر الزاوية» الذي يستند إليه البناء كله، ومجازًا الوجهاء الذين يستند إليهم الشعب. أما «باب الزاوية» في سور أورشليم فله رقم آخر (H6438G).\n**الاستعمالات والأمثلة:** ١) الحجر المرفوض: مزمور ١١٨: ٢٢ «الحجر الذي رفضه البناؤون قد صار رأس الزاوية»، وقالها يسوع عن نفسه في متى ٢١: ٤٢. ٢) حجر في صهيون: إشعياء ٢٨: ١٦ «هأنذا أؤسس في صهيون حجرا، حجر امتحان، حجر زاوية كريما»، ويقتبسها ١ بطرس ٢: ٦ عن المسيح. ٣) ركن السطح: أمثال ٢١: ٩ «السكنى في زاوية السطح، خير من امرأة مخاصمة وبيت مشترك»، فالجلوس في ركن ضيق على السطح خير من بيت كله شجار. ٤) أركان الشعب: قضاة ٢٠: ٢ «ووقف وجوه جميع الشعب»، والعبرية حرفيًا «زوايا الشعب»، أي الوجهاء الذين يستند إليهم.\n**في فاندايك:** «زاوية» و«زوايا» و«وجوه» و«العطفة» و«الزاوية».\n**ملاحظة:** في صفنيا ٣: ٦ «خربت شرفاتهم» ترجم فاندايك «زواياهم» بـ«شرفاتهم»، والأرجح أن المقصود الأبراج القائمة على أركان الأسوار.",
+        "en": "**Meaning:** pinnah means \"corner\": the corner of a house, an altar or a street. From it comes the \"cornerstone\" on which the whole building rests, and figuratively the leaders on whom the people rest. The \"Corner Gate\" in Jerusalem's wall has another number (H6438G).\n**Uses and examples:** 1) the rejected stone: Ps 118:22 \"the stone that the builders rejected has become the head of the corner\", which Jesus applies to himself in Matt 21:42. 2) a stone in Zion: Isa 28:16 \"behold, I lay in Zion a stone, a tested stone, a precious cornerstone\", quoted of Christ in 1 Pet 2:6. 3) the corner of the roof: Prov 21:9 \"it is better to live in a corner of the housetop than in a house shared with a quarrelsome wife\": a cramped corner on the roof beats a house full of strife. 4) the corners of the people: Judg 20:2 \"and the chiefs of all the people took their stand\": the Hebrew literally says \"the corners of the people\", the leaders who hold them up.\n**In Van Dyke:** «زاوية», «زوايا», «وجوه», «العطفة» and «الزاوية».\n**Note:** in Zeph 3:6 «خربت شرفاتهم» Van Dyke renders \"their corners\" as \"their battlements\", most likely the towers on the corners of city walls."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6887D",
+      "lemma": "צָרַר",
+      "gloss": {
+        "eg": "ضايق، عادى؛ مضايق، عدو",
+        "msa": "ضايق، عادى؛ مضايِق، عدو",
+        "en": "show hostility, vex; adversary, foe"
+      },
+      "entry": {
+        "eg": "**المعنى:** «صارَر» فعل معناه الأصلي «ربط، ضيّق» (H6887B)، والرقم ده لمعنى العداوة: يضايق حد ويقف ضده. وأغلب مواضعه اسم الفاعل «صورير» يعني «المضايق» أو «العدو»، زي «مضايقي» في المزامير. وكتير من العلما بيربطوا الجذر ده بـ«ضرّ» العربي.\n**الاستخدامات والأمثلة:** ١) مائدة قدام الأعداء: مزمور ٢٣: ٥ «ترتب قدامي مائدة تجاه مضايقي»، ربنا بيكرم المرنم والأعداء واقفين يتفرجوا. ٢) ربنا في صف شعبه: خروج ٢٣: ٢٢ «أعادي أعداءك، وأضايق مضايقيك»، اللي يضايق الشعب هيلاقي ربنا قصاده. ٣) كيد مديان: عدد ٢٥: ١٨ «لأنهم ضايقوكم بمكايدهم»، المديانيين ما حاربوش بالسيف، دول وقّعوا الشعب في عبادة بعل فغور. ٤) نهاية الخصومة: إشعياء ١١: ١٣ «أفرايم لا يحسد يهوذا، ويهوذا لا يضايق أفرايم»، في أيام المسيا العداوة القديمة بين المملكتين بتخلص.\n**في فاندايك:** «مضايقي» و«عدو» و«أضدادك» و«ضايقوا».\n**ملاحظة:** في خروج ٢٣: ٢٢ الفعل «وأضايق» من جذر تاني قريب في النطق (H6696)، فالعبري بيلعب على الصوت، وفاندايك حافظ على اللعبة. وفي لاويين ١٨: ١٨ «للضر» الجذر برقم H6887E، عن الست اللي تبقى ضرّة أختها.",
+        "msa": "**المعنى:** «صارَر» فعل معناه الأصلي «ربط، ضيّق» (H6887B)، وهذا الرقم لمعنى العداوة: أن يضايق أحدًا ويقف ضده. وأغلب مواضعه اسم الفاعل «صورير» أي «المضايِق» أو «العدو»، مثل «مضايقي» في المزامير. ويربط كثير من العلماء هذا الجذر بالعربية «ضرّ».\n**الاستعمالات والأمثلة:** ١) مائدة أمام الأعداء: مزمور ٢٣: ٥ «ترتب قدامي مائدة تجاه مضايقي»، يكرم الله المرنم على مرأى من أعدائه. ٢) الله في صف شعبه: خروج ٢٣: ٢٢ «أعادي أعداءك، وأضايق مضايقيك»، فمن يضايق الشعب يجد الله في مواجهته. ٣) كيد مديان: عدد ٢٥: ١٨ «لأنهم ضايقوكم بمكايدهم»، لم يحارب المديانيون بالسيف، بل أوقعوا الشعب في عبادة بعل فغور. ٤) نهاية الخصومة: إشعياء ١١: ١٣ «أفرايم لا يحسد يهوذا، ويهوذا لا يضايق أفرايم»، ففي أيام المسيا تنتهي العداوة القديمة بين المملكتين.\n**في فاندايك:** «مضايقي» و«عدو» و«أضدادك» و«ضايقوا».\n**ملاحظة:** في خروج ٢٣: ٢٢ الفعل «وأضايق» من جذر آخر قريب في النطق (H6696)، فالعبرية تلعب على الجرس، وقد حافظ فاندايك على ذلك. وفي لاويين ١٨: ١٨ «للضر» الجذر برقم H6887E، عن المرأة التي تصير ضرّة لأختها.",
+        "en": "**Meaning:** tsarar basically means \"to bind, to make narrow\" (H6887B); this number covers hostility: to harass someone and stand against them. Most of its occurrences are the participle tsorer, \"adversary, foe\", as in \"my enemies\" in the Psalms. Many scholars connect the root with Arabic «ضرّ» \"to harm\".\n**Uses and examples:** 1) a table before enemies: Ps 23:5 \"you prepare a table before me in the presence of my enemies\": God honours the psalmist while his foes look on. 2) God on his people's side: Exod 23:22 \"I will be an enemy to your enemies and an adversary to your adversaries\": whoever harasses Israel meets God. 3) Midian's schemes: Num 25:18 \"for they have harassed you with their wiles\": Midian fought not with the sword but by luring Israel into the worship of Baal of Peor. 4) the end of rivalry: Isa 11:13 \"Ephraim shall not be jealous of Judah, and Judah shall not harass Ephraim\": in the messianic age the old feud between the kingdoms ends.\n**In Van Dyke:** «مضايقي», «عدو», «أضدادك» and «ضايقوا».\n**Note:** in Exod 23:22 the verb \"I will be an adversary\" comes from another, similar-sounding root (H6696), so the Hebrew plays on sound, and Van Dyke keeps the play: «وأضايق مضايقيك». In Lev 18:18 «للضر» the root carries H6887E, about a woman made a rival wife to her sister."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6924B",
+      "lemma": "קֵ֫דֶם",
+      "gloss": {
+        "eg": "ناحية الشرق، شرقًا",
+        "msa": "نحو الشرق، شرقًا",
+        "en": "eastward, toward the east"
+      },
+      "entry": {
+        "eg": "**المعنى:** «قيدِم» معناها الأصلي «اللي قدّام»، ومنها «الشرق»، لأن العبراني كان بيوجّه نفسه ناحية شروق الشمس. الرقم ده للشكل «قيدْما» يعني «ناحية الشرق» أو «شرقًا». أما «مِقِّدِم» يعني «من الشرق، في الشرق» فليه رقم تاني (H6924G)، والزمن القديم ليه رقم (H6924H).\n**الاستخدامات والأمثلة:** ١) أرض من كل ناحية: تكوين ١٣: ١٤ «ارفع عينيك وانظر ... شمالا وجنوبا وشرقا وغربا»، بعد ما لوط فارقه، ربنا وعد أبرام بكل اللي عينه شايفاه. ٢) يهوذا في المقدمة: عدد ٢: ٣ «فالنازلون إلى الشرق، نحو الشروق، راية محلة يهوذا»، يعني قدام باب الخيمة. ٣) ضهرهم للهيكل: حزقيال ٨: ١٦ «ظهورهم نحو هيكل الرب ووجوههم نحو الشرق، وهم ساجدون للشمس نحو الشرق»، الكلمة مرتين، والسجود هنا للشمس مش لربنا. ٤) حدود الأرض: يشوع ١٥: ٥ «وتخم الشرق بحر الملح إلى طرف الأردن»، حدود يهوذا الشرقية هي البحر الميت.\n**في فاندايك:** «إلى الشرق» و«الشرق» و«شرقا» و«نحو الشرق».\n**ملاحظة:** في تكوين ٢٥: ٦ «وصرفهم عن إسحاق ابنه شرقا إلى أرض المشرق» الكلمة مرتين برقمين: «شرقا» بالرقم ده، و«أرض المشرق» برقم H6924G. وبنفس المنطق «اليمين» في العبري بيعني «الجنوب»، لأن اللي وشه للشرق يمينه للجنوب.",
+        "msa": "**المعنى:** «قيدِم» معناها الأصلي «ما هو أمام»، ومنها «الشرق»، لأن العبراني كان يتوجّه نحو شروق الشمس. وهذا الرقم للصيغة «قيدْما» أي «نحو الشرق» أو «شرقًا». أما «مِقِّدِم» أي «من الشرق، في الشرق» فله رقم آخر (H6924G)، وللزمن القديم رقم (H6924H).\n**الاستعمالات والأمثلة:** ١) أرض في كل اتجاه: تكوين ١٣: ١٤ «ارفع عينيك وانظر ... شمالا وجنوبا وشرقا وغربا»، فبعد أن فارقه لوط وعد الله أبرام بكل ما تراه عيناه. ٢) يهوذا في المقدمة: عدد ٢: ٣ «فالنازلون إلى الشرق، نحو الشروق، راية محلة يهوذا»، أي أمام باب الخيمة. ٣) ظهورهم للهيكل: حزقيال ٨: ١٦ «ظهورهم نحو هيكل الرب ووجوههم نحو الشرق، وهم ساجدون للشمس نحو الشرق»، والكلمة مرتان، والسجود هنا للشمس لا لله. ٤) تخوم الأرض: يشوع ١٥: ٥ «وتخم الشرق بحر الملح إلى طرف الأردن»، فتخم يهوذا الشرقي هو البحر الميت.\n**في فاندايك:** «إلى الشرق» و«الشرق» و«شرقا» و«نحو الشرق».\n**ملاحظة:** في تكوين ٢٥: ٦ «وصرفهم عن إسحاق ابنه شرقا إلى أرض المشرق» الكلمة مرتان برقمين: «شرقا» بهذا الرقم، و«أرض المشرق» برقم H6924G. وبالمنطق نفسه تعني «اليمين» في العبرية «الجنوب»، لأن من يتجه شرقًا يكون الجنوب عن يمينه.",
+        "en": "**Meaning:** qedem basically means \"what is in front\", hence \"east\", because a Hebrew speaker oriented himself toward sunrise. This number covers the form qedmah, \"eastward, toward the east\". Miqqedem, \"from the east, in the east\", has another number (H6924G), and ancient time has H6924H.\n**Uses and examples:** 1) land in every direction: Gen 13:14 \"lift up your eyes and look ... northward and southward and eastward and westward\": after Lot left, God promised Abram all he could see. 2) Judah in front: Num 2:3 \"those to camp on the east side toward the sunrise shall be of the standard of the camp of Judah\", facing the tent's entrance. 3) backs to the temple: Ezek 8:16 \"their backs toward the temple of the Lord and their faces toward the east, worshiping the sun toward the east\", the word twice: worship turned to the sun, not to God. 4) the border: Josh 15:5 \"and the east border was the Salt Sea, to the mouth of the Jordan\": Judah's eastern edge is the Dead Sea.\n**In Van Dyke:** «إلى الشرق», «الشرق», «شرقا» and «نحو الشرق».\n**Note:** in Gen 25:6 \"he sent them away from his son Isaac, eastward to the east country\" the word appears twice under two numbers: \"eastward\" here and \"the east country\" under H6924G. By the same logic \"right hand\" in Hebrew means \"south\", since facing east puts the south on one's right."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6942H",
+      "lemma": "קָדַשׁ",
+      "gloss": {
+        "eg": "كرّس، قدّس (حاجة لربنا)",
+        "msa": "كرّس، قدّس (شيئًا للرب)",
+        "en": "dedicate, consecrate (to the Lord)"
+      },
+      "entry": {
+        "eg": "**المعنى:** «قادَش» فعل «قدّس» (H6942G)، والرقم ده لما الإنسان «يقدّس» حاجة لربنا، يعني يكرّسها ويديها له: بكر، أو بيت، أو حقل، أو غنايم حرب، فتبقى ملك بيت الرب مش ملكه هو. وأغلبه بصيغة «هِقديش».\n**الاستخدامات والأمثلة:** ١) البكر لربنا: خروج ١٣: ٢ «قدس لي كل بكر ... إنه لي»، ربنا بيطالب بالبكر لأنه نجّاه ليلة الفصح. ٢) بيت للرب: لاويين ٢٧: ١٤ «وإذا قدس إنسان بيته قدسا للرب، يقومه الكاهن جيدا أم رديئا»، الكاهن بيحدد قيمته، واللي عايز يرجّعه يدفع التمن وخُمسه زيادة. ٣) غنايم داود: ٢ صموئيل ٨: ١١ «وهذه أيضا قدسها الملك داود للرب مع الفضة والذهب الذي قدسه»، الفعل مرتين، وداود بيحوّش الغنايم لبيت الرب. ٤) تقديس بالمقلوب: قضاة ١٧: ٣ «تقديسا قدست الفضة للرب ... لعمل تمثال منحوت وتمثال مسبوك»، الأم بتكرّس الفضة «للرب» علشان تعمل بيها صنم.\n**في فاندايك:** «قدس» و«قدسها» و«قدسه» و«تقدسه».\n**ملاحظة:** في مرقس ٧: ١١ يسوع بينتقد اللي يقول على ماله «قربان» يعني مكرّس لربنا، علشان يهرب من إعالة أبوه وأمه. الكلمة هناك غير «قادَش»، بس الفكرة نفسها.",
+        "msa": "**المعنى:** «قادَش» فعل «قدّس» (H6942G)، وهذا الرقم حين «يقدّس» الإنسان شيئًا للرب، أي يكرّسه ويهبه له: بكرًا أو بيتًا أو حقلًا أو غنائم حرب، فيصير ملكًا لبيت الرب لا له. وأغلبه بصيغة «هِقديش».\n**الاستعمالات والأمثلة:** ١) البكر للرب: خروج ١٣: ٢ «قدس لي كل بكر ... إنه لي»، يطالب الله بالبكر لأنه نجّاه ليلة الفصح. ٢) بيت للرب: لاويين ٢٧: ١٤ «وإذا قدس إنسان بيته قدسا للرب، يقومه الكاهن جيدا أم رديئا»، يحدد الكاهن قيمته، ومن أراد استرداده دفع الثمن وخُمسه زيادة. ٣) غنائم داود: ٢ صموئيل ٨: ١١ «وهذه أيضا قدسها الملك داود للرب مع الفضة والذهب الذي قدسه»، والفعل مرتان، إذ يدّخر داود الغنائم لبيت الرب. ٤) تقديس معكوس: قضاة ١٧: ٣ «تقديسا قدست الفضة للرب ... لعمل تمثال منحوت وتمثال مسبوك»، تكرّس الأم الفضة «للرب» لتصنع بها صنمًا.\n**في فاندايك:** «قدس» و«قدسها» و«قدسه» و«تقدسه».\n**ملاحظة:** في مرقس ٧: ١١ ينتقد يسوع من يقول عن ماله «قربان» أي مكرّس لله، ليتهرب من إعالة أبيه وأمه. والكلمة هناك غير «قادَش»، لكن الفكرة واحدة.",
+        "en": "**Meaning:** qadash is the verb \"to sanctify\" (H6942G); this number covers a person \"consecrating\" something to the Lord, that is, dedicating and handing it over: a firstborn, a house, a field or spoils of war, which then belongs to the sanctuary, not to him. It is mostly in the hiphil form hiqdish.\n**Uses and examples:** 1) the firstborn is the Lord's: Exod 13:2 \"consecrate to me all the firstborn ... it is mine\": God claims the firstborn he spared on Passover night. 2) a house for the Lord: Lev 27:14 \"when a man dedicates his house to be holy to the Lord, the priest shall value it as either good or bad\"; to redeem it he pays the value plus a fifth. 3) David's spoils: 2 Sam 8:11 \"these also King David dedicated to the Lord, together with the silver and gold that he dedicated\", the verb twice. 4) dedication turned upside down: Judg 17:3 \"I wholly dedicate the silver to the Lord ... to make a carved image and a molten image\": the mother devotes silver \"to the Lord\" to make an idol.\n**In Van Dyke:** «قدس», «قدسها», «قدسه» and «تقدسه».\n**Note:** in Mark 7:11 Jesus criticizes those who call their goods \"Corban\", dedicated to God, to escape supporting their parents. The word there is not qadash, but the idea is the same."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6966I",
+      "lemma": "קוּם",
+      "gloss": {
+        "eg": "أقام، نصب، ثبّت (آرامي)",
+        "msa": "أقام، نصب، ثبّت (آرامي)",
+        "en": "set up, establish, appoint (Aramaic)"
+      },
+      "entry": {
+        "eg": "**المعنى:** «قُوم» كلمة آرامية معناها «قام» (H6966G)، والرقم ده لصيغتها اللي معناها «أقام، نصب، ثبّت»: ينصب تمثال، أو يولّي حد على مملكة، أو يثبّت أمر أو مملكة. كل مواضعه في الأجزاء الآرامية من دانيال.\n**الاستخدامات والأمثلة:** ١) ربنا بيعيّن الملوك: دانيال ٢: ٢١ «يعزل ملوكا وينصب ملوكا»، دانيال بيسبّح ربنا بعد ما كشف له الحلم. ٢) مملكة ما تقعش: دانيال ٢: ٤٤ «يقيم إله السماوات مملكة لن تنقرض أبدا ... وهي تثبت إلى الأبد»، الكلمة مرتين: ربنا بيقيمها، وهي ثابتة للأبد، بعكس ممالك التمثال. ٣) تمثال الدهب: دانيال ٣: ١ «صنع تمثالا من ذهب ... ونصبه في بقعة دورا»، والتعبير «الذي نصبه» بيتكرر في الإصحاح كتير، وفيه دارسين شايفين فيه سخرية من تمثال إيد إنسان نصبته. ٤) قانون ثابت: دانيال ٦: ٨ «فثبت الآن النهي أيها الملك، وأمض الكتابة»، فخ الوزرا لدانيال.\n**في فاندايك:** «نصبه» و«وينصب» و«نصبت» و«يقيم» و«تثبت».\n**ملاحظة:** نبوخذنصر نصب تمثاله، بس في دانيال ٤: ١٧ الرسالة إن «العلي متسلط في مملكة الناس، فيعطيها من يشاء، وينصب عليها أدنى الناس»، بنفس الفعل.",
+        "msa": "**المعنى:** «قُوم» كلمة آرامية بمعنى «قام» (H6966G)، وهذا الرقم لصيغتها التي تعني «أقام، نصب، ثبّت»: نصب تمثالًا، أو ولّى أحدًا على مملكة، أو ثبّت أمرًا أو مملكة. وكل مواضعه في الأجزاء الآرامية من دانيال.\n**الاستعمالات والأمثلة:** ١) الله يقيم الملوك: دانيال ٢: ٢١ «يعزل ملوكا وينصب ملوكا»، يسبّح دانيال الله بعد أن كشف له الحلم. ٢) مملكة لا تزول: دانيال ٢: ٤٤ «يقيم إله السماوات مملكة لن تنقرض أبدا ... وهي تثبت إلى الأبد»، والكلمة مرتان: الله يقيمها، وهي ثابتة إلى الأبد، بخلاف ممالك التمثال. ٣) تمثال الذهب: دانيال ٣: ١ «صنع تمثالا من ذهب ... ونصبه في بقعة دورا»، وتتكرر عبارة «الذي نصبه» في الأصحاح كثيرًا، ويرى فيها بعض الدارسين سخرية من تمثال نصبته يد إنسان. ٤) قانون ثابت: دانيال ٦: ٨ «فثبت الآن النهي أيها الملك، وأمض الكتابة»، فخ الوزراء لدانيال.\n**في فاندايك:** «نصبه» و«وينصب» و«نصبت» و«يقيم» و«تثبت».\n**ملاحظة:** نصب نبوخذنصر تمثاله، لكن رسالة دانيال ٤: ١٧ أن «العلي متسلط في مملكة الناس، فيعطيها من يشاء، وينصب عليها أدنى الناس»، بالفعل نفسه.",
+        "en": "**Meaning:** qum is Aramaic for \"to rise\" (H6966G); this number covers its causative use, \"to set up, establish, appoint\": to erect a statue, to set someone over a kingdom, or to confirm a decree or a kingdom. All its occurrences are in the Aramaic parts of Daniel.\n**Uses and examples:** 1) God appoints kings: Dan 2:21 \"he removes kings and sets up kings\": Daniel praises God after the dream is revealed to him. 2) a kingdom that will not fall: Dan 2:44 \"the God of heaven will set up a kingdom that shall never be destroyed ... and it shall stand forever\", the word twice: God sets it up and it stands, unlike the kingdoms of the statue. 3) the golden image: Dan 3:1 \"made an image of gold ... he set it up on the plain of Dura\": the phrase \"which he had set up\" recurs through the chapter, and some scholars hear mockery in it. 4) a fixed law: Dan 6:8 \"now, O king, establish the injunction and sign the document\": the officials' trap for Daniel.\n**In Van Dyke:** «نصبه», «وينصب», «نصبت», «يقيم» and «تثبت».\n**Note:** Nebuchadnezzar set up his statue, but the message of Dan 4:17 is that \"the Most High rules the kingdom of men, gives it to whom he will, and sets over it the lowliest of men\", with the same verb."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H7723G",
+      "lemma": "שָׁוְא",
+      "gloss": {
+        "eg": "كدب، زور، باطل",
+        "msa": "كذب، زور، باطل",
+        "en": "falsehood, lie, deceit"
+      },
+      "entry": {
+        "eg": "**المعنى:** «شَو» معناها الفراغ والحاجة اللي مالهاش أساس، والرقم ده لما الفراغ ده يبقى كدب: شهادة زور، أو خبر كداب، أو رؤيا كدابة من نبي ربنا ما بعتوش. أما «باطل» بمعنى عبث ومن غير فايدة فليه رقم تاني (H7723H).\n**الاستخدامات والأمثلة:** ١) شهادة زور: تثنية ٥: ٢٠ «ولا تشهد على قريبك شهادة زور»، الوصية التاسعة زي ما موسى عادها في تثنية. ٢) إشاعة كدابة: خروج ٢٣: ١ «لا تقبل خبرا كاذبا، ولا تضع يدك مع المنافق لتكون شاهد ظلم»، الكدب بيبدأ لما تصدّق الخبر وتنقله. ٣) أنبيا كدابين: حزقيال ١٣: ٦ «رأوا باطلا وعرافة كاذبة. القائلون: وحي الرب، والرب لم يرسلهم»، بيقولوا «ربنا قال» وهو ما قالش. ٤) نبوات فاضية: مراثي ٢: ١٤ «أنبياؤك رأوا لك كذبا وباطلا»، الكلمة مرتين في الآية، وأنبيا أورشليم طمّنوها بدل ما يكشفوا خطيتها.\n**في فاندايك:** «باطلة» و«باطلا» و«بالباطل» و«بالكذب» و«كاذبا» و«زور».\n**ملاحظة:** في خروج ٢٠: ١٦ نفس الوصية «شهادة زور» بكلمة تانية «شِقِر» (كدب)، أما تثنية ٥: ٢٠ فبيقول «شَو». ووصية «لا تنطق باسم الرب إلهك باطلا» في خروج ٢٠: ٧ فيها «شَو» مرتين، بس برقم H7723H.",
+        "msa": "**المعنى:** «شَو» تعني الفراغ وما لا أساس له، وهذا الرقم حين يكون هذا الفراغ كذبًا: شهادة زور، أو خبرًا كاذبًا، أو رؤيا كاذبة من نبي لم يرسله الله. أما «الباطل» بمعنى العبث وعدم النفع فله رقم آخر (H7723H).\n**الاستعمالات والأمثلة:** ١) شهادة الزور: تثنية ٥: ٢٠ «ولا تشهد على قريبك شهادة زور»، الوصية التاسعة كما أعادها موسى في التثنية. ٢) الإشاعة الكاذبة: خروج ٢٣: ١ «لا تقبل خبرا كاذبا، ولا تضع يدك مع المنافق لتكون شاهد ظلم»، فالكذب يبدأ بتصديق الخبر ونقله. ٣) أنبياء كذبة: حزقيال ١٣: ٦ «رأوا باطلا وعرافة كاذبة. القائلون: وحي الرب، والرب لم يرسلهم»، يقولون «قال الرب» وهو لم يقل. ٤) نبوات فارغة: مراثي ٢: ١٤ «أنبياؤك رأوا لك كذبا وباطلا»، والكلمة مرتان في الآية، إذ طمأن أنبياء أورشليم المدينة بدل كشف خطيتها.\n**في فاندايك:** «باطلة» و«باطلا» و«بالباطل» و«بالكذب» و«كاذبا» و«زور».\n**ملاحظة:** في خروج ٢٠: ١٦ الوصية نفسها «شهادة زور» بكلمة أخرى «شِقِر» (كذب)، أما تثنية ٥: ٢٠ فتقول «شَو». ووصية «لا تنطق باسم الرب إلهك باطلا» في خروج ٢٠: ٧ فيها «شَو» مرتان، لكن برقم H7723H.",
+        "en": "**Meaning:** shav means emptiness, something with no substance; this number covers that emptiness when it is a lie: false testimony, a false report, or a false vision from a prophet God did not send. \"Vanity\" in the sense of futility has another number (H7723H).\n**Uses and examples:** 1) false witness: Deut 5:20 \"neither shall you bear false witness against your neighbor\", the ninth commandment as Moses restates it. 2) a false rumour: Exod 23:1 \"you shall not spread a false report; you shall not join hands with a wicked man to be a malicious witness\": lying starts with believing and passing on a report. 3) lying prophets: Ezek 13:6 \"they have seen false visions and lying divinations; they say, the Lord says, but the Lord has not sent them\": they claim God spoke when he did not. 4) empty oracles: Lam 2:14 \"your prophets have seen for you false and deceptive visions\", the word twice: Jerusalem's prophets soothed her instead of exposing her sin.\n**In Van Dyke:** «باطلة», «باطلا», «بالباطل», «بالكذب», «كاذبا» and «زور».\n**Note:** in Exod 20:16 the same commandment uses another word, sheqer (\"lie\"), while Deut 5:20 says shav. The commandment \"you shall not take the name of the Lord your God in vain\" in Exod 20:7 has shav twice, but under H7723H."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H7760L",
+      "lemma": "שׂוּם",
+      "gloss": {
+        "eg": "عيّن، ولّى، جعل (حد على حاجة)",
+        "msa": "عيّن، ولّى، أقام",
+        "en": "appoint, set over, install"
+      },
+      "entry": {
+        "eg": "**المعنى:** «سوم» فعل معناه «حط» (H7760H) أو «جعل» (H7760A)، والرقم ده لما «تحط» حد في منصب: تعيّنه ملك أو رئيس أو مسؤول على ناس أو على شغل. وأغلبه في تعبير «جعله على» أو «جعل عليهم»، وكمان لما ربنا «يحط» حد للحكم أو يحط حد للبحر.\n**الاستخدامات والأمثلة:** ١) رؤسا تسخير: خروج ١: ١١ «فجعلوا عليهم رؤساء تسخير لكي يذلوهم بأثقالهم»، فرعون حط على الشعب ناس تكسر ضهرهم بالشغل. ٢) شروط الملك: تثنية ١٧: ١٥ «فإنك تجعل عليك ملكا الذي يختاره الرب إلهك»، الفعل في الآية تلات مرات، والملك لازم يبقى من الإخوة مش غريب. ٣) عايزين ملك: ١ صموئيل ٨: ٥ «فالآن اجعل لنا ملكا يقضي لنا كسائر الشعوب»، الشيوخ بيطلبوا من صموئيل ملك علشان يبقوا زي الأمم. ٤) قائد شاب: ١ صموئيل ١٨: ٥ «فجعله شاول على رجال الحرب»، شاول بيعيّن داود قائد، والشعب كله بيحبه.\n**في فاندايك:** «فجعله» و«وعينت» و«أجعل» و«تجعل» و«وأقام».\n**ملاحظة:** في تثنية ١٧: ١٤ «أجعل علي ملكا كجميع الأمم الذين حولي» نفس كلام الشيوخ في ١ صموئيل ٨: ٥ تقريبًا، كأن التثنية شايفة الطلب ده جاي من بدري.",
+        "msa": "**المعنى:** «سوم» فعل بمعنى «وضع» (H7760H) أو «جعل» (H7760A)، وهذا الرقم حين «يضع» أحدٌ أحدًا في منصب: يعيّنه ملكًا أو رئيسًا أو مسؤولًا على قوم أو عمل. وأغلبه في عبارة «جعله على» أو «جعل عليهم»، وكذلك حين «يضع» الله أحدًا للحكم أو يضع للبحر حدًّا.\n**الاستعمالات والأمثلة:** ١) رؤساء التسخير: خروج ١: ١١ «فجعلوا عليهم رؤساء تسخير لكي يذلوهم بأثقالهم»، أقام فرعون على الشعب من يسحقهم بالعمل. ٢) شروط الملك: تثنية ١٧: ١٥ «فإنك تجعل عليك ملكا الذي يختاره الرب إلهك»، والفعل في الآية ثلاث مرات، والملك يجب أن يكون من الإخوة لا غريبًا. ٣) طلب ملك: ١ صموئيل ٨: ٥ «فالآن اجعل لنا ملكا يقضي لنا كسائر الشعوب»، يطلب الشيوخ من صموئيل ملكًا ليكونوا كالأمم. ٤) قائد شاب: ١ صموئيل ١٨: ٥ «فجعله شاول على رجال الحرب»، يعيّن شاول داود قائدًا فيحبه الشعب كله.\n**في فاندايك:** «فجعله» و«وعينت» و«أجعل» و«تجعل» و«وأقام».\n**ملاحظة:** في تثنية ١٧: ١٤ «أجعل علي ملكا كجميع الأمم الذين حولي» تكاد تطابق كلام الشيوخ في ١ صموئيل ٨: ٥، كأن التثنية ترى هذا الطلب آتيًا من بعيد.",
+        "en": "**Meaning:** sum means \"to put\" (H7760H) or \"to make\" (H7760A); this number covers \"putting\" someone into an office: appointing a king, a chief or an officer over people or work. It is mostly in the phrase \"set him over\" or \"set over them\", and also when God \"sets\" someone for judgment or sets a limit for the sea.\n**Uses and examples:** 1) taskmasters: Exod 1:11 \"they set taskmasters over them to afflict them with heavy burdens\": Pharaoh puts men over Israel to crush them with labour. 2) the king's conditions: Deut 17:15 \"you may indeed set a king over you whom the Lord your God will choose\", the verb three times: the king must be a brother, not a foreigner. 3) give us a king: 1 Sam 8:5 \"now appoint for us a king to judge us like all the nations\": the elders ask Samuel for a king to be like other peoples. 4) a young commander: 1 Sam 18:5 \"and Saul set him over the men of war\": Saul makes David a commander, and all the people love him.\n**In Van Dyke:** «فجعله», «وعينت», «أجعل», «تجعل» and «وأقام».\n**Note:** Deut 17:14 \"I will set a king over me, like all the nations around me\" almost matches the elders' words in 1 Sam 8:5, as if Deuteronomy saw that request coming long before."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H8179H",
+      "lemma": "שַׁ֫עַר",
+      "gloss": {
+        "eg": "مدينة، بلد (حرفيًا: أبواب)",
+        "msa": "مدينة، بلدة (حرفيًا: أبواب)",
+        "en": "town, city (lit. gates)"
+      },
+      "entry": {
+        "eg": "**المعنى:** «شَعَر» معناها «باب، بوابة» (H8179G)، والرقم ده لما «أبوابك» يبقى معناها «مدنك» أو «بلدك»: البوابة كانت قلب المدينة، فالكلمة بقت تعني المدينة كلها. وأغلب مواضعه في سفر التثنية في تعبير «الذي في أبوابك» يعني «اللي ساكن في بلدك».\n**الاستخدامات والأمثلة:** ١) الفرحة للكل: تثنية ١٦: ١٤ «وتفرح في عيدك أنت وابنك وابنتك ... واللاوي والغريب واليتيم والأرملة الذين في أبوابك»، العيد مش للعيلة بس، ده لكل ضعيف ساكن في البلد. ٢) الفقير جارك: تثنية ١٥: ٧ «إن كان فيك فقير، أحد من إخوتك في أحد أبوابك ... فلا تقس قلبك»، الفقير ده ساكن معاك في نفس المدينة. ٣) قضاة في كل بلد: تثنية ١٦: ١٨ «قضاة وعرفاء تجعل لك في جميع أبوابك»، كل مدينة ليها قضاتها. ٤) البلد كلها عارفة: راعوث ٣: ١١ «لأن جميع أبواب شعبي تعلم أنك امرأة فاضلة»، بوعز بيطمّن راعوث إن بيت لحم كلها عارفة قيمتها.\n**في فاندايك:** «في أبوابك» و«أبوابك» و«في أبوابكم».\n**ملاحظة:** الحد بين الرقمين مش حاد: «نزيلك الذي في أبوابك» في وصية السبت (خروج ٢٠: ١٠ وتثنية ٥: ١٤) برقم «باب» العادي (H8179G)، والمعنى برضه «بلدك».",
+        "msa": "**المعنى:** «شَعَر» تعني «باب، بوابة» (H8179G)، وهذا الرقم حين تعني «أبوابك» «مدنك» أو «بلدتك»: فالبوابة قلب المدينة، فصارت الكلمة تدل على المدينة كلها. وأغلب مواضعه في سفر التثنية في عبارة «الذي في أبوابك» أي «الساكن في بلدتك».\n**الاستعمالات والأمثلة:** ١) الفرح للجميع: تثنية ١٦: ١٤ «وتفرح في عيدك أنت وابنك وابنتك ... واللاوي والغريب واليتيم والأرملة الذين في أبوابك»، فالعيد ليس للأسرة وحدها بل لكل ضعيف في البلدة. ٢) الفقير جارك: تثنية ١٥: ٧ «إن كان فيك فقير، أحد من إخوتك في أحد أبوابك ... فلا تقس قلبك»، فالفقير يسكن معك في المدينة نفسها. ٣) قضاة في كل مدينة: تثنية ١٦: ١٨ «قضاة وعرفاء تجعل لك في جميع أبوابك»، لكل مدينة قضاتها. ٤) البلدة كلها تعلم: راعوث ٣: ١١ «لأن جميع أبواب شعبي تعلم أنك امرأة فاضلة»، يطمئن بوعز راعوث بأن بيت لحم كلها تعرف قدرها.\n**في فاندايك:** «في أبوابك» و«أبوابك» و«في أبوابكم».\n**ملاحظة:** الحد بين الرقمين ليس حادًا: «نزيلك الذي في أبوابك» في وصية السبت (خروج ٢٠: ١٠ وتثنية ٥: ١٤) برقم «باب» العادي (H8179G)، والمعنى أيضًا «بلدتك».",
+        "en": "**Meaning:** sha'ar means \"gate\" (H8179G); this number covers \"your gates\" in the sense of \"your towns\": the gate was the heart of a city, so the word came to stand for the whole town. Most occurrences are in Deuteronomy, in the phrase \"who is within your gates\", meaning \"who lives in your town\".\n**Uses and examples:** 1) joy for all: Deut 16:14 \"you shall rejoice in your feast, you and your son and your daughter ... the Levite, the sojourner, the fatherless and the widow who are within your towns\": the feast is not for the family alone but for every vulnerable neighbour. 2) the poor are your neighbours: Deut 15:7 \"if among you one of your brothers should become poor, in any of your towns ... you shall not harden your heart\": the poor man lives in your own town. 3) judges in every town: Deut 16:18 \"you shall appoint judges and officers in all your towns\": each town has its own court. 4) the whole town knows: Ruth 3:11 \"for all my fellow townsmen know that you are a worthy woman\": Boaz assures Ruth that all Bethlehem knows her worth.\n**In Van Dyke:** «في أبوابك», «أبوابك» and «في أبوابكم».\n**Note:** the line between the two numbers is not sharp: \"your sojourner who is within your gates\" in the Sabbath commandment (Exod 20:10 and Deut 5:14) carries the ordinary \"gate\" number (H8179G), though it also means \"your town\"."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H1004O",
+      "lemma": "בַּ֫יִת",
+      "gloss": {
+        "eg": "جوه، من جوه، داخل",
+        "msa": "داخل، من الداخل",
+        "en": "inside, within, on the inside"
+      },
+      "entry": {
+        "eg": "**المعنى:** «بَيِت» معناها «بيت» (H1004B)، والرقم ده لما الكلمة تبقى ظرف معناه «جوه» أو «من جوه»، زي ما بنقول «جوّه البيت». أغلبه في التعبير «مِبَّيِت» يعني «من جوه»، وكتير جنبه «ومن خارج»، وكمان في «مِبّيت لَپّاروخِت» يعني «جوه الحجاب».\n**الاستخدامات والأمثلة:** ١) جوه وبره: تكوين ٦: ١٤ «وتطليه من داخل ومن خارج بالقار»، الفلك لازم يبقى محمي من الميه من الناحيتين. ٢) دهب من جوه: خروج ٢٥: ١١ «وتغشيه بذهب نقي. من داخل ومن خارج تغشيه»، تابوت العهد مغشّي دهب حتى من جوه، في الحتة اللي محدش هيشوفها. ٣) جوه الحجاب: لاويين ١٦: ٢ «أن لا يدخل كل وقت إلى القدس داخل الحجاب»، هارون نفسه ما يدخلش قدس الأقداس غير في يوم الكفارة. ٤) الموت من كل ناحية: حزقيال ٧: ١٥ «السيف من خارج، والوبأ والجوع من داخل»، اللي بره السور يموت بالسيف، واللي جوه يموت بالجوع والوبا.\n**في فاندايك:** «من داخل» و«إلى داخل» و«داخل» و«ومن داخل».\n**ملاحظة:** عبرانيين ٦: ١٩ بياخد صورة لاويين ١٦ وبيقول إن الرجا «تدخل إلى ما داخل الحجاب»، يعني المسيح دخل المكان اللي هارون كان بيدخله مرة واحدة في السنة.",
+        "msa": "**المعنى:** «بَيِت» تعني «بيت» (H1004B)، وهذا الرقم حين تصير الكلمة ظرفًا بمعنى «داخل» أو «من الداخل». وأغلبه في عبارة «مِبَّيِت» أي «من داخل»، وكثيرًا ما يقابلها «ومن خارج»، وكذلك في «مِبّيت لَپّاروخِت» أي «داخل الحجاب».\n**الاستعمالات والأمثلة:** ١) داخلًا وخارجًا: تكوين ٦: ١٤ «وتطليه من داخل ومن خارج بالقار»، فالفلك يجب أن يُحمى من الماء من الجهتين. ٢) ذهب من الداخل: خروج ٢٥: ١١ «وتغشيه بذهب نقي. من داخل ومن خارج تغشيه»، فتابوت العهد مغشّى بالذهب حتى من الداخل حيث لا يراه أحد. ٣) داخل الحجاب: لاويين ١٦: ٢ «أن لا يدخل كل وقت إلى القدس داخل الحجاب»، فهارون نفسه لا يدخل قدس الأقداس إلا في يوم الكفارة. ٤) الموت من كل جهة: حزقيال ٧: ١٥ «السيف من خارج، والوبأ والجوع من داخل»، من خارج السور يموت بالسيف، ومن داخله بالجوع والوباء.\n**في فاندايك:** «من داخل» و«إلى داخل» و«داخل» و«ومن داخل».\n**ملاحظة:** يأخذ عبرانيين ٦: ١٩ صورة لاويين ١٦ فيقول إن الرجاء «تدخل إلى ما داخل الحجاب»، أي أن المسيح دخل المكان الذي كان هارون يدخله مرة واحدة في السنة.",
+        "en": "**Meaning:** bayit means \"house\" (H1004B); this number covers its use as an adverb meaning \"inside, within\". It is mostly in the phrase mibbayit, \"on the inside\", often paired with \"and on the outside\", and also in mibbet lapparokhet, \"inside the veil\".\n**Uses and examples:** 1) inside and out: Gen 6:14 \"and cover it inside and out with pitch\": the ark must be sealed against water on both sides. 2) gold within: Exod 25:11 \"you shall overlay it with pure gold, inside and outside\": the ark of the covenant is gilded even inside, where no one will see. 3) inside the veil: Lev 16:2 \"that he not come at any time into the Holy Place inside the veil\": even Aaron enters the Most Holy Place only on the Day of Atonement. 4) death on every side: Ezek 7:15 \"the sword is without; pestilence and famine are within\": those outside the wall die by the sword, those inside by famine and plague.\n**In Van Dyke:** «من داخل», «إلى داخل», «داخل» and «ومن داخل».\n**Note:** Heb 6:19 takes up the picture of Lev 16, saying our hope \"enters into the inner place behind the curtain\": Christ has entered the place Aaron entered once a year."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H4888A",
+      "lemma": "מִשְׁחָה",
+      "gloss": {
+        "eg": "مسحة، دهن المسحة",
+        "msa": "مسحة، دهن المسحة",
+        "en": "anointing, anointing oil"
+      },
+      "entry": {
+        "eg": "**المعنى:** «مِشحا» معناها «المسحة»، من الفعل «ماشَح» يعني «مسح» بالزيت، ومن نفس الجذر «ماشيَح» يعني «الممسوح» أو «المسيح». وأغلب مواضعها في تعبير «دهن المسحة»: الزيت المقدس اللي بيمسحوا بيه الكهنة والمسكن وأدواته. ونفس الحروف بمعنى «النصيب المكرّس» ليها رقم تاني (H4888B).\n**الاستخدامات والأمثلة:** ١) تركيبة مقدسة: خروج ٣٠: ٢٥ «وتصنعه دهنا مقدسا للمسحة. عطر عطارة صنعة العطار»، الكلمة مرتين في الآية، وممنوع حد يعمل التركيبة دي لنفسه. ٢) مسح هارون: لاويين ٨: ١٢ «وصب من دهن المسحة على رأس هارون ومسحه لتقديسه»، موسى بيكرّس أخوه رئيس كهنة. ٣) كهنوت دايم: خروج ٤٠: ١٥ «ويكون ذلك لتصير لهم مسحتهم كهنوتا أبديا في أجيالهم»، المسحة مش لهارون بس، دي لنسله كله. ٤) تقدمة الشعب: خروج ٢٥: ٦ «وزيت للمنارة وأطياب لدهن المسحة وللبخور العطر»، الشعب بيقدّم الأطياب اللي هيعملوا منها الدهن.\n**في فاندايك:** «المسحة» و«للمسحة» و«مسحه» و«مسحتهم».\n**ملاحظة:** في لاويين ٧: ٣٥ «تلك مسحة هارون ومسحة بنيه من وقائد الرب» فيه رأي إن الكلمة هنا معناها «النصيب» اللي الكهنة بياخدوه من الذبايح، زي «حق المسحة» في عدد ١٨: ٨ اللي برقم H4888B.",
+        "msa": "**المعنى:** «مِشحا» تعني «المسحة»، من الفعل «ماشَح» أي «مسح» بالزيت، ومن الجذر نفسه «ماشيَح» أي «الممسوح» أو «المسيح». وأغلب مواضعها في عبارة «دهن المسحة»: الزيت المقدس الذي يُمسح به الكهنة والمسكن وأدواته. والحروف نفسها بمعنى «النصيب المكرّس» لها رقم آخر (H4888B).\n**الاستعمالات والأمثلة:** ١) تركيبة مقدسة: خروج ٣٠: ٢٥ «وتصنعه دهنا مقدسا للمسحة. عطر عطارة صنعة العطار»، والكلمة مرتان في الآية، ويُحظر على أي أحد أن يصنع هذه التركيبة لنفسه. ٢) مسح هارون: لاويين ٨: ١٢ «وصب من دهن المسحة على رأس هارون ومسحه لتقديسه»، يكرّس موسى أخاه رئيسًا للكهنة. ٣) كهنوت دائم: خروج ٤٠: ١٥ «ويكون ذلك لتصير لهم مسحتهم كهنوتا أبديا في أجيالهم»، فالمسحة ليست لهارون وحده بل لنسله كله. ٤) تقدمة الشعب: خروج ٢٥: ٦ «وزيت للمنارة وأطياب لدهن المسحة وللبخور العطر»، يقدّم الشعب الأطياب التي يُصنع منها الدهن.\n**في فاندايك:** «المسحة» و«للمسحة» و«مسحه» و«مسحتهم».\n**ملاحظة:** في لاويين ٧: ٣٥ «تلك مسحة هارون ومسحة بنيه من وقائد الرب» يرى بعضهم أن الكلمة تعني «النصيب» الذي يأخذه الكهنة من الذبائح، مثل «حق المسحة» في عدد ١٨: ٨ الذي برقم H4888B.",
+        "en": "**Meaning:** mishchah means \"anointing\", from the verb mashach, \"to anoint with oil\"; from the same root comes mashiach, \"anointed one, Messiah\". Most occurrences are in the phrase \"anointing oil\", the holy oil used to anoint the priests, the tabernacle and its furnishings. The same letters meaning \"consecrated portion\" have another number (H4888B).\n**Uses and examples:** 1) a holy blend: Exod 30:25 \"you shall make of these a sacred anointing oil, blended as by the perfumer\", the word twice: no one may make this blend for himself. 2) Aaron anointed: Lev 8:12 \"he poured some of the anointing oil on Aaron's head and anointed him to consecrate him\": Moses consecrates his brother as high priest. 3) a lasting priesthood: Exod 40:15 \"their anointing shall admit them to a perpetual priesthood throughout their generations\": the anointing is for Aaron's line, not Aaron alone. 4) the people's offering: Exod 25:6 \"oil for the lamps, spices for the anointing oil and for the fragrant incense\": the people bring the spices for the oil.\n**In Van Dyke:** «المسحة», «للمسحة», «مسحه» and «مسحتهم».\n**Note:** in Lev 7:35 \"this is the anointing portion of Aaron and of his sons from the Lord's food offerings\" some take the word to mean the priests' \"portion\" of the sacrifices, like \"the portion\" in Num 18:8, which carries H4888B."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5375I",
+      "lemma": "נָשָׂא",
+      "gloss": {
+        "eg": "غفر، صفح، شال الذنب عن",
+        "msa": "غفر، صفح، رفع الذنب",
+        "en": "forgive, pardon, take away guilt"
+      },
+      "entry": {
+        "eg": "**المعنى:** ده نفس فعل «ناسا» يعني «رفع، شال» (H5375G وH5375H)، بس الرقم ده لما حد «يشيل» الذنب عن حد تاني: يعني يغفر أو يصفح، كأن الخطية حِمل تقيل وربنا بيشيله من على ضهر صاحبه. وعكسه «حمل الذنب» يعني الخاطي يشيل عقابه بنفسه (H5375J)، أما رفع الإيد للحلفان فرقمه H5375P.\n**الاستخدامات والأمثلة:** ١) إخوة يوسف: تكوين ٥٠: ١٧ «اصفح عن ذنب إخوتك وخطيتهم»، الفعل مرتين في الآية، الإخوة خايفين من انتقامه بعد موت أبوهم. ٢) اسم ربنا: خروج ٣٤: ٧ «غافر الإثم والمعصية والخطية»، ربنا بيعلن صفاته لموسى. ٣) الحِمل راح: مزمور ٣٢: ٥ «وأنت رفعت أثام خطيتي»، هنا فاندايك حافظ على صورة الفعل: المرنم اعترف، وربنا شال الذنب. ٤) مين زيك: ميخا ٧: ١٨ «من هو إله مثلك غافر الإثم وصافح عن الذنب»، وكتير من الدارسين بيشوفوا السؤال ده لعب على اسم «ميخا» نفسه، ومعناه «مين زي يهوه؟».\n**في فاندايك:** «غفرت» و«اصفح» و«غافر» و«تغفر» و«يغفر».\n**ملاحظة:** في هوشع ١: ٦ فاندايك ترجم «بل أنزعهم نزعا»، والعبري فيه الفعل ده مكرر للتأكيد، وفيه ترجمات حديثة بتفهمه «ولا هغفر لهم أبدًا»، مكمّلة للنفي في أول الآية.",
+        "msa": "**المعنى:** هذا هو الفعل «ناسا» بمعنى «رفع، حمل» (H5375G وH5375H)، لكن هذا الرقم حين يرفع أحدٌ الذنب عن غيره: أي يغفر أو يصفح، كأن الخطية حِمل ثقيل يرفعه الله عن كاهل صاحبه. وعكسه «حمل الذنب» أي أن يتحمل الخاطئ عقابه (H5375J)، أما رفع اليد للقسم فرقمه H5375P.\n**الاستعمالات والأمثلة:** ١) إخوة يوسف: تكوين ٥٠: ١٧ «اصفح عن ذنب إخوتك وخطيتهم»، والفعل مرتان في الآية، إذ خاف الإخوة انتقام يوسف بعد موت أبيهم. ٢) اسم الله: خروج ٣٤: ٧ «غافر الإثم والمعصية والخطية»، يعلن الله صفاته لموسى. ٣) رفع الحِمل: مزمور ٣٢: ٥ «وأنت رفعت أثام خطيتي»، وهنا حافظ فاندايك على صورة الفعل: اعترف المرنم فرفع الله ذنبه. ٤) من مثلك: ميخا ٧: ١٨ «من هو إله مثلك غافر الإثم وصافح عن الذنب»، ويرى كثير من الدارسين في السؤال تلاعبًا باسم «ميخا» نفسه، ومعناه «من مثل يهوه؟».\n**في فاندايك:** «غفرت» و«اصفح» و«غافر» و«تغفر» و«يغفر».\n**ملاحظة:** في هوشع ١: ٦ ترجم فاندايك «بل أنزعهم نزعا»، والعبرية تكرر الفعل للتوكيد، وتفهمه ترجمات حديثة كثيرة «ولن أغفر لهم البتة»، استكمالًا للنفي في أول الآية.",
+        "en": "**Meaning:** this is the verb nasa \"to lift, carry\" (H5375G, H5375H), but this number covers lifting guilt off someone else: forgiving or pardoning, as if sin were a heavy load that God lifts from the sinner's back. Its opposite, \"bearing guilt\", meaning to carry one's own punishment, is H5375J; lifting the hand in an oath is H5375P.\n**Uses and examples:** 1) Joseph's brothers: Gen 50:17 \"please forgive the transgression of your brothers and their sin\", the verb twice: the brothers fear revenge after their father's death. 2) God's name: Exod 34:7 \"forgiving iniquity and transgression and sin\": God proclaims his character to Moses. 3) the load lifted: Ps 32:5 \"and you forgave the iniquity of my sin\": Van Dyke keeps the verb's image «رفعت»: the psalmist confessed, and God took the guilt away. 4) who is like you: Mic 7:18 \"who is a God like you, pardoning iniquity and passing over transgression\": many scholars see a play on Micah's own name, \"who is like the Lord?\".\n**In Van Dyke:** «غفرت», «اصفح», «غافر», «تغفر» and «يغفر».\n**Note:** in Hos 1:6 Van Dyke has «بل أنزعهم نزعا» (\"I will utterly take them away\"); the Hebrew doubles this verb for emphasis, and many modern versions read it as \"that I should ever forgive them\", continuing the negative at the start of the verse."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5414Q",
+      "lemma": "נָתַן",
+      "gloss": {
+        "eg": "يا ريت، يا ليت",
+        "msa": "يا ليت، ليت",
+        "en": "oh that, if only, would that"
+      },
+      "entry": {
+        "eg": "**المعنى:** ده نفس فعل «ناتان» يعني «أعطى» (H5414G)، بس الرقم ده للتعبير «مي يِتِّين»، حرفيًا «مين يدّي؟»، وده أسلوب العبري علشان يقول «يا ريت». فاندايك أغلب الوقت بيترجمه «يا ليت»، وساعات بيسيبه حرفي زي أيوب ٢٣: ٣ «من يعطيني أن أجده».\n**الاستخدامات والأمثلة:** ١) حنين لقدور مصر: خروج ١٦: ٣ «ليتنا متنا بيد الرب في أرض مصر»، الشعب جعان في البرية فبيتمنى أيام العبودية. ٢) رعب من غير راحة: تثنية ٢٨: ٦٧ «في الصباح تقول: يا ليته المساء، وفي المساء تقول: يا ليته الصباح»، التعبير مرتين، وده خوف ما بيخلصش. ٣) داود وأبشالوم: ٢ صموئيل ١٨: ٣٣ «يا ليتني مت عوضا عنك! يا أبشالوم ابني، يا ابني»، أب بيتمنى يموت بدل ابنه اللي قام عليه. ٤) شهادة تفضل: أيوب ١٩: ٢٣ «ليت كلماتي الآن تكتب. يا ليتها رسمت في سفر»، التعبير مرتين، وأيوب عايز كلامه يفضل شاهد بعد موته.\n**في فاندايك:** «يا ليت» و«ليت» و«يا ليته» و«يا ليتني» و«ليتنا».\n**ملاحظة:** في عدد ١١: ٢٩ «يا ليت كل شعب الرب كانوا أنبياء» نفس التعبير، بس الفعل هناك برقم «حط، جعل» (H5414H).",
+        "msa": "**المعنى:** هذا هو الفعل «ناتان» بمعنى «أعطى» (H5414G)، لكن هذا الرقم لعبارة «مي يِتِّين»، حرفيًا «من يعطي؟»، وهي طريقة العبرية في التمني بمعنى «يا ليت». ويترجمها فاندايك غالبًا «يا ليت»، وأحيانًا حرفيًا كما في أيوب ٢٣: ٣ «من يعطيني أن أجده».\n**الاستعمالات والأمثلة:** ١) الحنين إلى قدور مصر: خروج ١٦: ٣ «ليتنا متنا بيد الرب في أرض مصر»، جاع الشعب في البرية فتمنى أيام العبودية. ٢) رعب بلا راحة: تثنية ٢٨: ٦٧ «في الصباح تقول: يا ليته المساء، وفي المساء تقول: يا ليته الصباح»، والعبارة مرتان، وهو خوف لا ينقطع. ٣) داود وأبشالوم: ٢ صموئيل ١٨: ٣٣ «يا ليتني مت عوضا عنك! يا أبشالوم ابني، يا ابني»، أب يتمنى الموت بدل ابنه الذي ثار عليه. ٤) شهادة باقية: أيوب ١٩: ٢٣ «ليت كلماتي الآن تكتب. يا ليتها رسمت في سفر»، والعبارة مرتان، إذ يريد أيوب أن يبقى كلامه شاهدًا بعد موته.\n**في فاندايك:** «يا ليت» و«ليت» و«يا ليته» و«يا ليتني» و«ليتنا».\n**ملاحظة:** في عدد ١١: ٢٩ «يا ليت كل شعب الرب كانوا أنبياء» العبارة نفسها، لكن الفعل هناك برقم «وضع، جعل» (H5414H).",
+        "en": "**Meaning:** this is the verb natan \"to give\" (H5414G), but this number covers the phrase mi yitten, literally \"who will give?\", the Hebrew way of saying \"if only, would that\". Van Dyke usually renders it «يا ليت», and sometimes keeps it literal, as in Job 23:3 «من يعطيني أن أجده» (\"oh that I knew where I might find him\").\n**Uses and examples:** 1) longing for Egypt's pots: Exod 16:3 \"would that we had died by the hand of the Lord in the land of Egypt\": hungry in the desert, the people wish for slavery. 2) terror without rest: Deut 28:67 \"in the morning you shall say, if only it were evening, and at evening, if only it were morning\", the phrase twice: fear without end. 3) David and Absalom: 2 Sam 18:33 \"would that I had died instead of you, O Absalom, my son, my son\": a father wishing to die in place of the son who rebelled. 4) a lasting witness: Job 19:23 \"oh that my words were written, oh that they were inscribed in a book\", the phrase twice: Job wants his words to testify after his death.\n**In Van Dyke:** «يا ليت», «ليت», «يا ليته», «يا ليتني» and «ليتنا».\n**Note:** in Num 11:29 \"would that all the Lord's people were prophets\" the same phrase appears, but the verb there carries the \"put, set\" number (H5414H)."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5592B",
+      "lemma": "סַף",
+      "gloss": {
+        "eg": "عتبة، أعتاب؛ حارس الباب",
+        "msa": "عتبة، أعتاب؛ حارس الباب",
+        "en": "threshold, sill; doorkeeper"
+      },
+      "entry": {
+        "eg": "**المعنى:** «سَف» معناها «عتبة» الباب: الحجر أو الخشبة اللي في الأرض عند المدخل. ونفس الحروف بمعنى «طست، كأس» ليها رقم تاني (H5592A). وفي تعبير «حارس السَّف» (فاندايك: «حارس الباب») كانت وظيفة كبيرة في الهيكل، شغلها كهنة ولاويين.\n**الاستخدامات والأمثلة:** ١) العتبات اهتزت: إشعياء ٦: ٤ «فاهتزت أساسات العتب من صوت الصارخ، وامتلأ البيت دخانا»، صوت السرافيم هز الهيكل لحد أساس العتبات. ٢) إيدين على العتبة: قضاة ١٩: ٢٧ «وإذا بالمرأة سريته ساقطة على باب البيت، ويداها على العتبة»، الست وصلت لحد باب البيت ووقعت عليه، وده من أبشع مشاهد سفر القضاة. ٣) حراس الباب: ٢ ملوك ٢٥: ١٨ «وأخذ رئيس الشرط سرايا الكاهن الرئيس، وصفنيا الكاهن الثاني، وحارسي الباب الثلاثة»، البابليين أخدوهم مع رئيس الكهنة، فدول كانوا من كبار الهيكل. ٤) عتبة جنب عتبة: حزقيال ٤٣: ٨ «بجعلهم عتبتهم لدى عتبتي»، الملوك بنوا قصرهم لازق في بيت ربنا، فنجسوا اسمه.\n**في فاندايك:** «الباب» و«العتبة» و«للأبواب» و«الأعتاب».\n**ملاحظة:** عتبة داجون في ١ صموئيل ٥: ٥ و«العتبة» في صفنيا ١: ٩ كلمة تانية «مِفتان».",
+        "msa": "**المعنى:** «سَف» تعني «عتبة» الباب: الحجر أو الخشبة على الأرض عند المدخل. والحروف نفسها بمعنى «طست، كأس» لها رقم آخر (H5592A). وفي عبارة «حارس السَّف» (فاندايك: «حارس الباب») كانت وظيفة رفيعة في الهيكل تولاها كهنة ولاويون.\n**الاستعمالات والأمثلة:** ١) اهتزاز الأعتاب: إشعياء ٦: ٤ «فاهتزت أساسات العتب من صوت الصارخ، وامتلأ البيت دخانا»، هزّ صوت السرافيم الهيكل حتى أساسات العتبات. ٢) يدان على العتبة: قضاة ١٩: ٢٧ «وإذا بالمرأة سريته ساقطة على باب البيت، ويداها على العتبة»، بلغت المرأة باب البيت وسقطت عنده، وهو من أبشع مشاهد سفر القضاة. ٣) حراس الباب: ٢ ملوك ٢٥: ١٨ «وأخذ رئيس الشرط سرايا الكاهن الرئيس، وصفنيا الكاهن الثاني، وحارسي الباب الثلاثة»، أخذهم البابليون مع رئيس الكهنة، فهم من كبار الهيكل. ٤) عتبة بجوار عتبة: حزقيال ٤٣: ٨ «بجعلهم عتبتهم لدى عتبتي»، بنى الملوك قصرهم ملاصقًا لبيت الرب فنجّسوا اسمه.\n**في فاندايك:** «الباب» و«العتبة» و«للأبواب» و«الأعتاب».\n**ملاحظة:** عتبة داجون في ١ صموئيل ٥: ٥ و«العتبة» في صفنيا ١: ٩ كلمة أخرى هي «مِفتان».",
+        "en": "**Meaning:** saph means the \"threshold\" of a door: the stone or beam on the ground at the entrance. The same letters meaning \"basin, cup\" have another number (H5592A). \"Keeper of the threshold\" (Van Dyke «حارس الباب») was a senior temple office held by priests and Levites.\n**Uses and examples:** 1) shaking thresholds: Isa 6:4 \"the foundations of the thresholds shook at the voice of him who called, and the house was filled with smoke\": the seraphim's cry shakes the temple to its thresholds. 2) hands on the threshold: Judg 19:27 \"there was his concubine lying at the door of the house, with her hands on the threshold\": she reached the door and fell there, one of the darkest scenes in Judges. 3) the keepers: 2 Kgs 25:18 \"the captain of the guard took Seraiah the chief priest, Zephaniah the second priest, and the three keepers of the threshold\": taken with the high priest, they were among the temple's leaders. 4) threshold by threshold: Ezek 43:8 \"by setting their threshold by my threshold\": the kings built their palace against God's house and defiled his name.\n**In Van Dyke:** «الباب», «العتبة», «للأبواب» and «الأعتاب».\n**Note:** Dagon's threshold in 1 Sam 5:5 and \"the threshold\" in Zeph 1:9 are another word, miftan."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5656G",
+      "lemma": "עֲבֹדָה",
+      "gloss": {
+        "eg": "خدمة، عبودية، سخرة",
+        "msa": "خدمة، عبودية، سخرة",
+        "en": "service, servitude, bondage"
+      },
+      "entry": {
+        "eg": "**المعنى:** «عَڤوداه» من جذر «ع ب د» زي «عبد» و«عبادة» في العربي، ومعناها «شغل، خدمة». الرقم ده للخدمة اللي بيعملها عبد أو أجير أو شعب خاضع لسيد: شغل يعقوب عند لابان، والعبودية في مصر، والخضوع لملوك غريبة. أما خدمة بيت الرب فرقمها H5656H، والشغل العادي H5656I.\n**الاستخدامات والأمثلة:** ١) سبع سنين كمان: تكوين ٢٩: ٢٧ «بالخدمة التي تخدمني أيضا سبع سنين أخر»، لابان بيطلب من يعقوب يشتغل سبع سنين تانيين علشان راحيل. ٢) صرخة العبيد: خروج ٢: ٢٣ «وتنهد بنو إسرائيل من العبودية وصرخوا»، الكلمة مرتين في الآية، والصرخة وصلت لربنا. ٣) وعد الخلاص: خروج ٦: ٦ «وأنقذكم من عبوديتهم وأخلصكم بذراع ممدودة»، ربنا بيوعد يطلّعهم من تحت إيد المصريين. ٤) يجربوا الفرق: ٢ أخبار ١٢: ٨ «لكنهم يكونون له عبيدا ويعلمون خدمتي وخدمة ممالك الأراضي»، ربنا ساب يهوذا لشيشق ملك مصر علشان يعرفوا الفرق بين خدمته وخدمة الملوك.\n**في فاندايك:** «العبودية» و«الخدمة» و«خدمتي» و«من عبودية».\n**ملاحظة:** في خروج ١٢: ٢٦ «ما هذه الخدمة لكم؟» عن طقس الفصح، الكلمة برضه بالرقم ده مع إن المعنى عبادة: نفس الكلمة اللي وصفت عبودية مصر بقت اسم الاحتفال بالخروج منها.",
+        "msa": "**المعنى:** «عَڤوداه» من جذر «ع ب د» كـ«عبد» و«عبادة» في العربية، ومعناها «عمل، خدمة». وهذا الرقم للخدمة التي يؤديها عبد أو أجير أو شعب خاضع لسيد: عمل يعقوب عند لابان، والعبودية في مصر، والخضوع لملوك غرباء. أما خدمة بيت الرب فرقمها H5656H، والعمل العادي H5656I.\n**الاستعمالات والأمثلة:** ١) سبع سنين أخرى: تكوين ٢٩: ٢٧ «بالخدمة التي تخدمني أيضا سبع سنين أخر»، يطلب لابان من يعقوب أن يعمل سبع سنين أخرى لأجل راحيل. ٢) صرخة العبيد: خروج ٢: ٢٣ «وتنهد بنو إسرائيل من العبودية وصرخوا»، والكلمة مرتان في الآية، وقد بلغ صراخهم إلى الله. ٣) وعد الخلاص: خروج ٦: ٦ «وأنقذكم من عبوديتهم وأخلصكم بذراع ممدودة»، يعد الله بإخراجهم من تحت يد المصريين. ٤) ليعرفوا الفرق: ٢ أخبار ١٢: ٨ «لكنهم يكونون له عبيدا ويعلمون خدمتي وخدمة ممالك الأراضي»، ترك الله يهوذا لشيشق ملك مصر ليعرفوا الفرق بين خدمته وخدمة الملوك.\n**في فاندايك:** «العبودية» و«الخدمة» و«خدمتي» و«من عبودية».\n**ملاحظة:** في خروج ١٢: ٢٦ «ما هذه الخدمة لكم؟» عن طقس الفصح، الكلمة أيضًا بهذا الرقم مع أن المعنى عبادة: فالكلمة التي وصفت عبودية مصر صارت اسم الاحتفال بالخروج منها.",
+        "en": "**Meaning:** avodah comes from the root ‘-b-d, like Arabic «عبد» and «عبادة», and means \"work, service\". This number covers service rendered by a slave, a hired man or a subject people to a master: Jacob's work for Laban, slavery in Egypt, subjection to foreign kings. Service of the Lord's house is H5656H, and ordinary work H5656I.\n**Uses and examples:** 1) seven more years: Gen 29:27 \"for the service that you will serve me another seven years\": Laban asks Jacob to work seven more years for Rachel. 2) the slaves' cry: Exod 2:23 \"the people of Israel groaned because of their slavery and cried out\", the word twice: their cry reached God. 3) the promise of rescue: Exod 6:6 \"I will deliver you from slavery to them, and I will redeem you with an outstretched arm\": God promises to bring them out from under Egypt. 4) learning the difference: 2 Chr 12:8 \"they shall be servants to him, that they may know my service and the service of the kingdoms of the countries\": God left Judah to Shishak of Egypt so they would learn the difference.\n**In Van Dyke:** «العبودية», «الخدمة», «خدمتي» and «من عبودية».\n**Note:** in Exod 12:26 \"what do you mean by this service?\" about the Passover rite, the word also carries this number although the meaning is worship: the word that described slavery in Egypt became the name of the feast of leaving it."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5774A",
+      "lemma": "עוּף",
+      "gloss": {
+        "eg": "طار، رفرف",
+        "msa": "طار، رفرف",
+        "en": "fly, fly away, hover"
+      },
+      "entry": {
+        "eg": "**المعنى:** «عوف» فعل معناه «طار»، ومنه «عوف» يعني «طير» (H5775). بيوصف الطيور، والسرافيم، والكروب اللي ربنا راكب عليه، وبالمجاز الحاجات اللي بتعدي بسرعة زي العمر والحلم. وفيه كلمة نادرة بنفس الحروف معناها «ضلمة» ليها رقم تاني (H5774B).\n**الاستخدامات والأمثلة:** ١) أول طير: تكوين ١: ٢٠ «وليطر طير فوق الأرض على وجه جلد السماء»، العبري بيحط الاسم والفعل من نفس الجذر جنب بعض: «عوف يِعوفِف». ٢) سيرافيم طاير: إشعياء ٦: ٦ «فطار إلي واحد من السرافيم وبيده جمرة»، الجمرة لمست شفايف إشعياء علشان تشيل إثمه. ٣) ربنا بيرفرف: إشعياء ٣١: ٥ «كطيور مرفة هكذا يحامي رب الجنود عن أورشليم»، ربنا زي الطير اللي بيرفرف فوق عشه. ٤) العمر بيطير: مزمور ٩٠: ١٠ «أيام سنينا هي سبعون سنة ... لأنها تقرض سريعا فنطير»، حياة الإنسان بتعدي كأنها طارت.\n**في فاندايك:** «يطير» و«وطار» و«تطير» و«ويطيرون».\n**ملاحظة:** في إشعياء ١٤: ٢٩ «ثعبانا مسما طيارا» الكلمة بتوصف «ساراف» طاير، ودي نفس كلمة «السرافيم» في إشعياء ٦، والأرجح إن أصل معناها «المحرق».",
+        "msa": "**المعنى:** «عوف» فعل بمعنى «طار»، ومنه «عوف» أي «طير» (H5775). يصف الطيور والسرافيم والكروب الذي يركبه الله، ومجازًا ما يمضي سريعًا كالعمر والحلم. وثمة كلمة نادرة بالحروف نفسها بمعنى «ظلمة» لها رقم آخر (H5774B).\n**الاستعمالات والأمثلة:** ١) أول الطير: تكوين ١: ٢٠ «وليطر طير فوق الأرض على وجه جلد السماء»، تضع العبرية الاسم والفعل من الجذر نفسه متجاورين: «عوف يِعوفِف». ٢) سرافيم طائر: إشعياء ٦: ٦ «فطار إلي واحد من السرافيم وبيده جمرة»، لمست الجمرة شفتي إشعياء لتنزع إثمه. ٣) الرب يرفرف: إشعياء ٣١: ٥ «كطيور مرفة هكذا يحامي رب الجنود عن أورشليم»، فالله كطائر يرفرف فوق عشه. ٤) العمر يطير: مزمور ٩٠: ١٠ «أيام سنينا هي سبعون سنة ... لأنها تقرض سريعا فنطير»، تمضي حياة الإنسان كأنها طارت.\n**في فاندايك:** «يطير» و«وطار» و«تطير» و«ويطيرون».\n**ملاحظة:** في إشعياء ١٤: ٢٩ «ثعبانا مسما طيارا» تصف الكلمة «سارافًا» طائرًا، وهي كلمة «السرافيم» نفسها في إشعياء ٦، والأرجح أن أصل معناها «المحرق».",
+        "en": "**Meaning:** uph is the verb \"to fly\"; from it comes oph, \"birds\" (H5775). It describes birds, seraphim, the cherub God rides, and figuratively things that pass quickly, like life or a dream. A rare word with the same letters meaning \"darkness\" has another number (H5774B).\n**Uses and examples:** 1) the first birds: Gen 1:20 \"and let birds fly above the earth across the expanse of the heavens\": the Hebrew sets noun and verb of the same root side by side, oph ye'opheph. 2) a flying seraph: Isa 6:6 \"then one of the seraphim flew to me, having in his hand a burning coal\": the coal touched Isaiah's lips to take away his guilt. 3) the Lord hovers: Isa 31:5 \"like birds hovering, so the Lord of hosts will protect Jerusalem\": God is like a bird hovering over its nest. 4) life flies: Ps 90:10 \"the years of our life are seventy ... they are soon gone, and we fly away\": a human life passes as if it had flown.\n**In Van Dyke:** «يطير», «وطار», «تطير» and «ويطيرون».\n**Note:** in Isa 14:29 \"a flying fiery serpent\" the word describes a flying saraph, the same word as the seraphim of Isa 6, most likely meaning \"burning one\" at root."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H5945B",
+      "lemma": "עֶלְיוֹן",
+      "gloss": {
+        "eg": "العلي (لقب لربنا)",
+        "msa": "العلي (لقب لله)",
+        "en": "the Most High"
+      },
+      "entry": {
+        "eg": "**المعنى:** «عِليون» صفة معناها «الأعلى» (H5945A)، والرقم ده لما تبقى لقب لربنا: «العلي»، اللي فوق كل الآلهة والملوك. أغلبه في الشعر، وبالذات المزامير، وكتير بييجي موازي لـ«الرب» أو «الله» في نفس البيت.\n**الاستخدامات والأمثلة:** ١) الساكن في ستره: مزمور ٩١: ١ «الساكن في ستر العلي، في ظل القدير يبيت»، «العلي» و«القدير» لقبين جنب بعض لربنا الحامي. ٢) نبي غريب: عدد ٢٤: ١٦ «وحي الذي يسمع أقوال الله ويعرف معرفة العلي»، بلعام مش من إسرائيل، ومع كده بيستخدم اللقب ده. ٣) الطمع في مكانه: إشعياء ١٤: ١٤ «أصعد فوق مرتفعات السحاب. أصير مثل العلي»، ملك بابل عايز يبقى زي العلي، فنزل للهاوية. ٤) بنو العلي: مزمور ٨٢: ٦ «أنا قلت: إنكم آلهة وبنو العلي كلكم»، ويسوع اقتبسها في يوحنا ١٠: ٣٤.\n**في فاندايك:** «العلي» و«والعلي» و«أيها العلي».\n**ملاحظة:** في تثنية ٣٢: ٨ «حسب عدد بني إسرائيل» ده المكتوب في النص الماسوري، أما مخطوطة من قمران والسبعينية فبيقروا «بني الله» أو «ملايكة الله». و«الله العلي» في قصة ملكي صادق (تكوين ١٤: ١٨) برقم H5945H.",
+        "msa": "**المعنى:** «عِليون» صفة بمعنى «الأعلى» (H5945A)، وهذا الرقم حين تصير لقبًا لله: «العلي»، الذي فوق كل الآلهة والملوك. وأغلبه في الشعر، ولا سيما المزامير، وكثيرًا ما يوازي «الرب» أو «الله» في البيت نفسه.\n**الاستعمالات والأمثلة:** ١) الساكن في ستره: مزمور ٩١: ١ «الساكن في ستر العلي، في ظل القدير يبيت»، «العلي» و«القدير» لقبان متوازيان لله الحامي. ٢) نبي غريب: عدد ٢٤: ١٦ «وحي الذي يسمع أقوال الله ويعرف معرفة العلي»، فبلعام ليس من إسرائيل ومع ذلك يستعمل اللقب. ٣) الطمع في مكانه: إشعياء ١٤: ١٤ «أصعد فوق مرتفعات السحاب. أصير مثل العلي»، أراد ملك بابل أن يصير كالعلي فهبط إلى الهاوية. ٤) بنو العلي: مزمور ٨٢: ٦ «أنا قلت: إنكم آلهة وبنو العلي كلكم»، واقتبسها يسوع في يوحنا ١٠: ٣٤.\n**في فاندايك:** «العلي» و«والعلي» و«أيها العلي».\n**ملاحظة:** في تثنية ٣٢: ٨ «حسب عدد بني إسرائيل» هو المكتوب في النص الماسوري، أما مخطوطة من قمران والسبعينية فتقرآن «بني الله» أو «ملائكة الله». و«الله العلي» في قصة ملكي صادق (تكوين ١٤: ١٨) برقم H5945H.",
+        "en": "**Meaning:** elyon is an adjective meaning \"upper, highest\" (H5945A); this number covers its use as a title of God, \"the Most High\", above all gods and kings. It is mostly in poetry, especially the Psalms, often parallel to \"the Lord\" or \"God\" in the same line.\n**Uses and examples:** 1) dwelling in his shelter: Ps 91:1 \"he who dwells in the shelter of the Most High will abide in the shadow of the Almighty\": two parallel titles for God the protector. 2) a foreign prophet: Num 24:16 \"the oracle of him who hears the words of God, and knows the knowledge of the Most High\": Balaam is not an Israelite, yet he uses the title. 3) grasping at God's place: Isa 14:14 \"I will ascend above the heights of the clouds; I will make myself like the Most High\": the king of Babylon wanted to be like the Most High and was brought down to Sheol. 4) sons of the Most High: Ps 82:6 \"I said, you are gods, sons of the Most High, all of you\", quoted by Jesus in John 10:34.\n**In Van Dyke:** «العلي», «والعلي» and «أيها العلي».\n**Note:** in Deut 32:8 \"according to the number of the sons of Israel\" is the Masoretic reading, while a Qumran manuscript and the Septuagint read \"sons of God\" or \"angels of God\". \"God Most High\" in the Melchizedek story (Gen 14:18) carries H5945H."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "H6341A",
+      "lemma": "פַּח",
+      "gloss": {
+        "eg": "فخ، شَرَك",
+        "msa": "فخ، شَرَك",
+        "en": "snare, trap"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پَح» معناها «فخ»، وأصلًا فخ العصافير: مصيدة بتقفل على الطير لما يلمسها. وبالمجاز أي مكيدة أو مصيبة بتمسك الإنسان فجأة. ونفس الحروف بمعنى «صفيحة معدن» ليها رقم تاني (H6341B).\n**الاستخدامات والأمثلة:** ١) مفيش حاجة صدفة: عاموس ٣: ٥ «هل يسقط عصفور في فخ الأرض وليس له شرك؟ هل يرفع فخ عن الأرض وهو لم يمسك شيئا؟»، الكلمة مرتين، والفخ ما بيقفلش على الفاضي، والضربة اللي جاية على إسرائيل كمان ليها سبب. ٢) العصفورة فلتت: مزمور ١٢٤: ٧ «انفلتت أنفسنا مثل العصفور من فخ الصيادين. الفخ انكسر، ونحن انفلتنا»، الكلمة مرتين، والشعب بيشكر ربنا اللي كسر الفخ. ٣) فخ الصياد: مزمور ٩١: ٣ «لأنه ينجيك من فخ الصياد ومن الوبإ الخطر»، ربنا بيحمي اللي ساكن في ستره من المكايد المستخبية. ٤) ربنا نفسه فخ: إشعياء ٨: ١٤ «ويكون مقدسا ... وفخا وشركا لسكان أورشليم»، اللي يرفض يعتمد على ربنا، ربنا نفسه يبقى له عثرة.\n**في فاندايك:** «فخا» و«الفخ» و«فخ» و«فخاخا».\n**ملاحظة:** في إشعياء ٢٤: ١٧ «عليك رعب وحفرة وفخ يا ساكن الأرض» العبري بيلعب بالصوت: «پَحَد وپَحَت وپَح»، تلات كلمات رنّتهم واحدة، وإرميا ٤٨: ٤٣ بيكرر نفس الجملة عن موآب.",
+        "msa": "**المعنى:** «پَح» تعني «فخ»، وأصلًا فخ العصافير: مصيدة تنطبق على الطائر إذا لمسها. ومجازًا كل مكيدة أو مصيبة تمسك الإنسان فجأة. والحروف نفسها بمعنى «صفيحة معدنية» لها رقم آخر (H6341B).\n**الاستعمالات والأمثلة:** ١) لا شيء صدفة: عاموس ٣: ٥ «هل يسقط عصفور في فخ الأرض وليس له شرك؟ هل يرفع فخ عن الأرض وهو لم يمسك شيئا؟»، والكلمة مرتان، فالفخ لا ينطبق دون أن يمسك شيئًا، وكذلك الضربة الآتية على إسرائيل لها سبب. ٢) نجاة العصفور: مزمور ١٢٤: ٧ «انفلتت أنفسنا مثل العصفور من فخ الصيادين. الفخ انكسر، ونحن انفلتنا»، والكلمة مرتان، والشعب يشكر الله الذي كسر الفخ. ٣) فخ الصياد: مزمور ٩١: ٣ «لأنه ينجيك من فخ الصياد ومن الوبإ الخطر»، يحمي الله الساكن في ستره من المكايد الخفية. ٤) الرب نفسه فخ: إشعياء ٨: ١٤ «ويكون مقدسا ... وفخا وشركا لسكان أورشليم»، فمن يرفض الاتكال على الله يصير الله نفسه عثرة له.\n**في فاندايك:** «فخا» و«الفخ» و«فخ» و«فخاخا».\n**ملاحظة:** في إشعياء ٢٤: ١٧ «عليك رعب وحفرة وفخ يا ساكن الأرض» تلعب العبرية بالجرس: «پَحَد وپَحَت وپَح»، ثلاث كلمات متقاربة الرنين، ويكرر إرميا ٤٨: ٤٣ الجملة نفسها عن موآب.",
+        "en": "**Meaning:** pach means \"snare\", originally a bird trap that snaps shut; figuratively, any plot or disaster that catches a person suddenly. The same letters meaning \"metal plate\" have another number (H6341B).\n**Uses and examples:** 1) nothing by chance: Amos 3:5 \"does a bird fall in a snare on the earth when there is no trap for it? Does a snare spring up from the ground when it has taken nothing?\", the word twice: no trap springs for nothing, nor does the blow coming on Israel. 2) the bird escaped: Ps 124:7 \"we have escaped like a bird from the snare of the fowlers; the snare is broken, and we have escaped\", the word twice: the people thank God who broke it. 3) the fowler's snare: Ps 91:3 \"for he will deliver you from the snare of the fowler and from the deadly pestilence\": God guards his own from hidden plots. 4) God himself a snare: Isa 8:14 \"and he will become a sanctuary ... a trap and a snare to the inhabitants of Jerusalem\": to those who will not trust him, God himself becomes a stumbling block.\n**In Van Dyke:** «فخا», «الفخ», «فخ» and «فخاخا».\n**Note:** in Isa 24:17 \"terror and the pit and the snare are upon you, O inhabitant of the earth\" the Hebrew plays on sound: pachad, pachat, pach, three words that ring alike; Jer 48:43 repeats the line against Moab."
+      },
+      "based_on": [
+        "bdb",
+        "ubs",
+        "tbes"
+      ],
+      "halot_checked": false,
+      "tier": "B"
+    }
+  ]
+}

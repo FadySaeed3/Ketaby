@@ -14,7 +14,8 @@ senses (all sense numbers of the same base with gloss/count), renderings (Van Dy
 counts), defs (open lexicons: bdb/ubs/tbes for Hebrew, ubs/tbes/lsj/mm for Greek; trimmed), and occurrences:
 all of them when count <= 12, otherwise an evenly spread sample. Each occurrence: ref (Arabic, as it must be
 written in entries), ref_en, vd (Van Dyke verse, no diacritics), ar (the Van Dyke word(s) aligned to it),
-orig (the Hebrew/Greek form).
+orig (the Hebrew/Greek form), editions (STEPBible's edition letters: for Hebrew L = in the Leningrad text,
+X = a word scholars supply that is not in it; for Greek, which printed texts have the word, e.g. K = Received Text only).
 """
 import collections, glob, html, json, os, re, sqlite3, sys
 
@@ -89,7 +90,7 @@ def tier(count, k):
 
 
 def occurrences(ds, count):
-    rows = DB.execute("select o.id, o.text, v.book, v.ch, v.v, v.text from owords o join verses v on v.id = o.vd_verse "
+    rows = DB.execute("select o.id, o.text, v.book, v.ch, v.v, v.text, o.editions from owords o join verses v on v.id = o.vd_verse "
                       "where o.dstrong = ? or o.dstrongs like ? order by o.id", (ds, '%' + ds + '%')).fetchall()
     rows = [r for r in rows if r[1]]
     want = len(rows) if len(rows) <= 12 else (22 if count >= 50 else 14)
@@ -97,11 +98,11 @@ def occurrences(ds, count):
         step = len(rows) / want
         rows = [rows[int(i * step)] for i in range(want)]
     out = []
-    for oid, orig, b, c, v, vt in rows:
+    for oid, orig, b, c, v, vt, ed in rows:
         ar = ' '.join(t for (t,) in DB.execute('select t.text from links k join tokens t on t.id = k.token_id '
                                                'where k.oword_id = ? order by t.idx', (oid,)))
         out.append({'ref': f'{NAMES[b - 1]} {str(c).translate(AR)}: {str(v).translate(AR)}', 'ref_en': f'{CODES[b]} {c}:{v}',
-                    'vd': DIA.sub('', vt), 'ar': DIA.sub('', ar), 'orig': orig})
+                    'vd': DIA.sub('', vt), 'ar': DIA.sub('', ar), 'orig': orig, 'editions': ed})
     return out
 
 

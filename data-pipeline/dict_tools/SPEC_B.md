@@ -9,6 +9,8 @@ occurrences; look up an extra verse with `ex.py` only for a famous verse the pac
 `check.py` checks every reference written before «في فاندايك» (Meaning section included), so a verse that carries a
 different sense number belongs in the Note, named with its number. References to the other Testament (a NT verse
 quoting a Hebrew word, an OT verse behind a Greek word) are not checked and may be given anywhere. Words inside «Van Dyke quotes» are not passive-scanned.
+Each occurrence has `editions`: a Hebrew word marked only X is not in the Hebrew text (a scholarly supplement), and a
+Greek word with K or k alone is only in the Received Text; do not build an example on such a word without saying so.
 Other agents work in parallel: keep your scripts in your own folder, `<output folder>/work_<output name>/`.
 
 ## Your data pack

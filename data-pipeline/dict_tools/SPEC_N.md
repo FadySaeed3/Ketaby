@@ -10,6 +10,8 @@ different sense number belongs in the Note, named with its number. References to
 quoting a Hebrew word, an OT verse behind a Greek word) are not checked and may be given anywhere. Words inside «Van Dyke quotes» are not passive-scanned.
 Each occurrence has `editions`: a Hebrew word marked only X is not in the Hebrew text (a scholarly supplement), and a
 Greek word with K or k alone is only in the Received Text; do not build an example on such a word without saying so.
+Never mention the pack, the data, the tags or yourself in an entry (no «الباك», «مشيت ورا القاموس», "the pack's gloss"):
+the reader sees only the dictionary. Say «القواميس بتقول ...» or «ترجمات زي الملك جيمس ...» instead.
 Other agents work in parallel: keep your scripts in your own folder, `<output folder>/work_<output name>/`.
 
 ## Your data pack

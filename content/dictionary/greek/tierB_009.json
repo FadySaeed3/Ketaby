@@ -1,0 +1,796 @@
+{
+  "batch": 1,
+  "about": "Tier B: words used 10-49 times, single sense number (written with Sonnet), set 9",
+  "words": [
+    {
+      "dstrong": "G4972",
+      "lemma": "σφραγίζω",
+      "gloss": {
+        "eg": "يختم، يقفل بختم",
+        "msa": "يختم، يوثّق بالختم",
+        "en": "to seal"
+      },
+      "entry": {
+        "eg": "**المعنى:** «سفراجيزو» يعني يختم: يحط الختم على حاجة علشان يقفلها أو يأمّنها أو يعلّم إنها ملك حد. جاية من «سفراجيس» اللي هي الختم، وبتتحرك بين الإخفاء والملكية والتأكيد.\n**الاستخدامات والأمثلة:** ١) الإخفاء: رؤيا ١٠: ٤ «اختم على ما تكلمت به الرعود السبعة ولا تكتبه»، صوت من السما بيقول ليوحنا يسيب كلام الرعود سر. ٢) الملكية والضمان: ٢ كورنثوس ١: ٢٢ «الذي ختمنا أيضا، وأعطى عربون الروح في قلوبنا»، ربنا حط علامته على المؤمنين وادّاهم الروح ضمان. ٣) الختم لحد يوم معين: أفسس ٤: ٣٠ «الذي به ختمتم ليوم الفداء»، الروح القدس هو الختم اللي بيحمي المؤمن لحد اليوم ده. ٤) علامة الحماية: رؤيا ٧: ٤ «وسمعت عدد المختومين مئة وأربعة وأربعين ألفا»، ناس ربنا معلّمهم قبل الضربات.\n**في فاندايك:** «مختوم» و«ختم» و«ختمنا».\n**ملاحظة:** في رومية ١٥: ٢٨ «وختمت لهم هذا الثمر» بولس بيتكلم عن جمع التبرعات لأورشليم، والأرجح إنه يقصد يسلّمها لهم بأمان وتأكيد، وفيه اختلاف في تفسير الصورة بالظبط.",
+        "msa": "**المعنى:** «سفراجيزو» تعني يختم: يضع الختم على شيء ليغلقه أو يؤمّنه أو يعلن أنه ملك لأحد. وهي من «سفراجيس» أي الختم، وتتنقّل بين الإخفاء والملكية والتوثيق.\n**الاستعمالات والأمثلة:** ١) الإخفاء: رؤيا ١٠: ٤ «اختم على ما تكلمت به الرعود السبعة ولا تكتبه»، فصوت من السماء يأمر يوحنا أن يُبقي كلام الرعود سرًّا. ٢) الملكية والضمان: ٢ كورنثوس ١: ٢٢ «الذي ختمنا أيضا، وأعطى عربون الروح في قلوبنا»، فالله وضع علامته على المؤمنين ومنحهم الروح ضمانًا. ٣) الختم إلى يوم معلوم: أفسس ٤: ٣٠ «الذي به ختمتم ليوم الفداء»، فالروح القدس هو الختم الذي يحفظ المؤمن إلى ذلك اليوم. ٤) علامة الحماية: رؤيا ٧: ٤ «وسمعت عدد المختومين مئة وأربعة وأربعين ألفا»، أناس وسمهم الله قبل الضربات.\n**في فاندايك:** «مختوم» و«ختم» و«ختمنا».\n**ملاحظة:** في رومية ١٥: ٢٨ «وختمت لهم هذا الثمر» يتحدث بولس عن جمع العطايا لأورشليم، والأرجح أنه يعني تسليمها لهم بأمان وتوكيد، وفي تفسير الصورة اختلاف.",
+        "en": "**Meaning:** sphragizo means to seal: to put a seal on something in order to close it, secure it or mark it as someone's property. It comes from sphragis, the seal or signet, and ranges over concealing, ownership and confirming.\n**Uses and examples:** 1) concealing: Rev 10:4 \"Seal up those things which the seven thunders uttered, and write them not\", a voice from heaven tells John to keep the thunders secret. 2) ownership and guarantee: 2 Cor 1:22 \"Who hath also sealed us, and given the earnest of the Spirit in our hearts\", God has put his mark on believers and given the Spirit as a pledge. 3) sealed until a day: Eph 4:30 sealed unto the day of redemption, the Holy Spirit is the seal that keeps the believer until then. 4) a mark of protection: Rev 7:4 the number of those sealed, 144,000, people God marks before the plagues.\n**In Van Dyke:** «مختوم», «ختم» and «ختمنا».\n**Note:** in Rom 15:28 Paul speaks of having \"sealed\" this fruit to the Jerusalem church, probably meaning delivering the collection safely and officially; the exact picture is debated."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G5368",
+      "lemma": "φιλέω",
+      "gloss": {
+        "eg": "يحب، يقبّل",
+        "msa": "يحب، يقبّل",
+        "en": "to love, to kiss"
+      },
+      "entry": {
+        "eg": "**المعنى:** «فيليو» يعني يحب حب صداقة وودّ وعِشرة، جاية من «فيلوس» اللي هو الصديق. وكمان معناها يحب الحاجة ويفضّلها، ويقبّل في موضع واحد مشهور. وهي أقرب جيران لـ«أغاپاو» في العهد الجديد، والفرق بينهم مش حاد في كل مكان.\n**الاستخدامات والأمثلة:** ١) محبة الأقارب: متى ١٠: ٣٧ «من أحب أبا أو أما أكثر مني فلا يستحقني»، الحب هنا حب العيلة الطبيعي. ٢) محبة الآب للابن: يوحنا ٥: ٢٠ «لأن الآب يحب الابن ويريه جميع ما هو يعمله»، حب قريب فيه عِشرة وكشف. ٣) محبة الصديق: يوحنا ١١: ٣٦ «انظروا كيف كان يحبه!»، اليهود بيقولوا كده وهم شايفين دموع يسوع على لعازر. ٤) يحب الحاجة: متى ٢٣: ٦ «ويحبون المتكأ الأول في الولائم»، حب المظاهر. ٥) التقبيل: متى ٢٦: ٤٨ «الذي أقبله هو هو. أمسكوه»، علامة يهوذا.\n**في فاندايك:** «يحب» و«أحب» و«أقبله».\n**ملاحظة:** في ١ كورنثوس ١٦: ٢٢ «إن كان أحد لا يحب الرب يسوع المسيح فليكن أناثيما!» استخدم بولس الفعل ده بالذات علشان يتكلم عن ولاء شخصي للرب.",
+        "msa": "**المعنى:** «فيليو» تعني يحب محبة ودّ وصداقة وألفة، وهي من «فيلوس» أي الصديق. وتأتي أيضًا بمعنى يستحسن الشيء ويفضّله، وبمعنى يقبّل في موضع مشهور. وهي أقرب الأفعال إلى «أغاپاو» في العهد الجديد، والفرق بينهما ليس حادًّا في كل موضع.\n**الاستعمالات والأمثلة:** ١) محبة الأقارب: متى ١٠: ٣٧ «من أحب أبا أو أما أكثر مني فلا يستحقني»، فالمقصود المحبة الطبيعية في الأسرة. ٢) محبة الآب للابن: يوحنا ٥: ٢٠ «لأن الآب يحب الابن ويريه جميع ما هو يعمله»، محبة قريبة فيها عشرة وإطلاع. ٣) محبة الصديق: يوحنا ١١: ٣٦ «انظروا كيف كان يحبه!»، قالها اليهود وهم يرون دموع يسوع على لعازر. ٤) استحسان الشيء: متى ٢٣: ٦ «ويحبون المتكأ الأول في الولائم»، حبّ المظاهر. ٥) التقبيل: متى ٢٦: ٤٨ «الذي أقبله هو هو. أمسكوه»، علامة يهوذا.\n**في فاندايك:** «يحب» و«أحب» و«أقبله».\n**ملاحظة:** في ١ كورنثوس ١٦: ٢٢ «إن كان أحد لا يحب الرب يسوع المسيح فليكن أناثيما!» اختار بولس هذا الفعل ليتحدث عن ولاء شخصي للرب.",
+        "en": "**Meaning:** phileo means to love with affection, friendship and closeness; it comes from philos, a friend. It can also mean to like or favour something, and in one famous scene to kiss. It is the nearest neighbour of agapao in the New Testament, and the two are not sharply separated everywhere.\n**Uses and examples:** 1) family love: Matt 10:37 \"He that loveth father or mother more than me is not worthy of me\", natural family affection. 2) the Father's love: John 5:20 \"For the Father loveth the Son, and sheweth him all things that himself doeth\", a close love that shares everything. 3) a friend's love: John 11:36 \"Behold how he loved him!\", said by the Jews as they saw Jesus weep over Lazarus. 4) liking something: Matt 23:6 they love the best places at feasts, a love of show. 5) kissing: Matt 26:48 \"Whomsoever I shall kiss, that same is he: hold him fast\", Judas's signal.\n**In Van Dyke:** «يحب», «أحب» and «أقبله».\n**Note:** in 1 Cor 16:22 Paul uses this verb in \"if any man love not the Lord Jesus Christ\", which puts the stress on personal loyalty to the Lord."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0189",
+      "lemma": "ἀκοή",
+      "gloss": {
+        "eg": "سمع، خبر، مسامع",
+        "msa": "سمع، خبر، آذان",
+        "en": "hearing, report"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أكوي» جاية من «أكوو» (يسمع)، وتدور حوالين السمع بتلات أشكال: حاسة السمع، والودن نفسها، والحاجة اللي بنسمعها يعني الخبر أو الرسالة. وفاندايك بيترجمها حسب السياق: «سمع» و«خبر» و«مسامع».\n**الاستخدامات والأمثلة:** ١) حاسة السمع: ١ كورنثوس ١٢: ١٧ «لو كان كل الجسد عينا، فأين السمع؟»، بولس بيشبّه الكنيسة بالجسد. ٢) الودن: أعمال ١٧: ٢٠ «لأنك تأتي إلى مسامعنا بأمور غريبة»، أهل أثينا بيستغربوا كلام بولس. ٣) الخبر والشهرة: متى ٤: ٢٤ «فذاع خبره في جميع سورية»، سمعة يسوع انتشرت قبل ما يوصل. ٤) الرسالة المسموعة: رومية ١٠: ١٧ «إذا الإيمان بالخبر، والخبر بكلمة الله»، الإيمان بييجي من رسالة بنسمعها. ٥) تعبير عبري: أعمال ٢٨: ٢٦ «ستسمعون سمعا ولا تفهمون»، السمع هنا تكرار للتأكيد على طريقة العبرية.\n**في فاندايك:** «خبر» و«سمع» و«مسامع».\n**ملاحظة:** في غلاطية ٣: ٥ «بخبر الإيمان» ممكن نفهمها «بسماع مقرون بالإيمان» أو «برسالة الإيمان»، والاتنين وارد.",
+        "msa": "**المعنى:** «أكوي» من «أكوو» أي يسمع، وتدور حول السمع في ثلاثة وجوه: حاسة السمع، والأذن نفسها، وما يُسمع أي الخبر أو الرسالة. ويترجمها فاندايك بحسب السياق: «سمع» و«خبر» و«مسامع».\n**الاستعمالات والأمثلة:** ١) حاسة السمع: ١ كورنثوس ١٢: ١٧ «لو كان كل الجسد عينا، فأين السمع؟»، يشبّه بولس الكنيسة بالجسد. ٢) الأذن: أعمال ١٧: ٢٠ «لأنك تأتي إلى مسامعنا بأمور غريبة»، أهل أثينا يستغربون كلام بولس. ٣) الخبر والذيوع: متى ٤: ٢٤ «فذاع خبره في جميع سورية»، سبقت سمعة يسوع وصوله. ٤) الرسالة المسموعة: رومية ١٠: ١٧ «إذا الإيمان بالخبر، والخبر بكلمة الله»، فالإيمان يأتي من رسالة تُسمع. ٥) تعبير عبري: أعمال ٢٨: ٢٦ «ستسمعون سمعا ولا تفهمون»، والسمع هنا تكرار للتوكيد على أسلوب العبرية.\n**في فاندايك:** «خبر» و«سمع» و«مسامع».\n**ملاحظة:** في غلاطية ٣: ٥ «بخبر الإيمان» يحتمل «بسماع مقرون بالإيمان» أو «برسالة الإيمان»، والاحتمالان واردان.",
+        "en": "**Meaning:** akoe comes from akouo, to hear, and covers three things: the sense of hearing, the ear itself, and what is heard, that is a report or message. Van Dyke renders it by context: «سمع», «خبر» and «مسامع».\n**Uses and examples:** 1) the sense: 1 Cor 12:17 \"If the whole body were an eye, where were the hearing?\", Paul's picture of the church as a body. 2) the ear: Acts 17:20 \"thou bringest certain strange things to our ears\", the Athenians surprised by Paul. 3) a report: Matt 4:24 his fame went throughout all Syria, news of Jesus ran ahead of him. 4) the message heard: Rom 10:17 \"So then faith cometh by hearing, and hearing by the word of God\", faith comes from a message that is heard. 5) a Hebrew idiom: Acts 28:26 \"Hearing ye shall hear, and shall not understand\", the repeated word adds emphasis, as in Hebrew.\n**In Van Dyke:** «خبر», «سمع» and «مسامع».\n**Note:** in Gal 3:5 \"the hearing of faith\" can be read as hearing joined with faith or as the message of faith; both readings are possible."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0337",
+      "lemma": "ἀναιρέω",
+      "gloss": {
+        "eg": "يقتل، يتخذ",
+        "msa": "يقتل، يتّخذ",
+        "en": "to kill, to take up"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أنايريو» أصلها «يرفع» أو «ياخد»، وفي العهد الجديد معناها الغالب «يقتل»، يعني يشيل حد من الدنيا. وكلها تقريبًا في أعمال الرسل، ودايمًا بتتكلم عن قتل عنيف أو قتل بقرار.\n**الاستخدامات والأمثلة:** ١) قتل بالسيف: أعمال ١٢: ٢ «فقتل يعقوب أخا يوحنا بالسيف»، هيرودس بيقتل واحد من الرسل. ٢) مؤامرة: أعمال ٩: ٢٣ «تشاور اليهود ليقتلوه»، اليهود بيخططوا ضد شاول بعد إيمانه. ٣) إتهام بالقتل: أعمال ٢: ٢٣ «وبأيدي أثمة صلبتموه وقتلتموه»، بطرس بيواجه الناس بقتل يسوع. ٤) يقتل نفسه: أعمال ١٦: ٢٧ «وكان مزمعا أن يقتل نفسه»، حارس السجن فاكر إن المسجونين هربوا. ٥) المعنى الأصلي «يرفع ويتبنّى»: أعمال ٧: ٢١ «اتخذته ابنة فرعون وربته لنفسها ابنا»، موسى الرضيع.\n**في فاندايك:** «يقتل» و«قتل» و«اتخذ».\n**ملاحظة:** معنى «اتخذ» في أعمال ٧: ٢١ هو الأصل: الفعل معناه «يرفع من على الأرض»، وبعدين بقى بمعنى «يرفع من الوجود» يعني يقتل.",
+        "msa": "**المعنى:** «أنايريو» أصلها «يرفع» أو «يأخذ»، وفي العهد الجديد غالب معناها «يقتل» أي يزيل إنسانًا من الوجود. وتكاد تنحصر في أعمال الرسل، وتتحدث دائمًا عن قتل عنيف أو بقرار.\n**الاستعمالات والأمثلة:** ١) القتل بالسيف: أعمال ١٢: ٢ «فقتل يعقوب أخا يوحنا بالسيف»، هيرودس يقتل أحد الرسل. ٢) مؤامرة: أعمال ٩: ٢٣ «تشاور اليهود ليقتلوه»، اليهود يدبّرون ضد شاول بعد إيمانه. ٣) اتهام بالقتل: أعمال ٢: ٢٣ «وبأيدي أثمة صلبتموه وقتلتموه»، بطرس يواجه الناس بقتل يسوع. ٤) قتل النفس: أعمال ١٦: ٢٧ «وكان مزمعا أن يقتل نفسه»، حارس السجن ظنّ أن المسجونين هربوا. ٥) المعنى الأصلي «يرفع ويتبنّى»: أعمال ٧: ٢١ «اتخذته ابنة فرعون وربته لنفسها ابنا»، موسى الرضيع.\n**في فاندايك:** «يقتل» و«قتل» و«اتخذ».\n**ملاحظة:** معنى «اتخذ» في أعمال ٧: ٢١ هو الأصل: الفعل معناه «يرفع من الأرض»، ثم صار «يرفع من الوجود» أي يقتل.",
+        "en": "**Meaning:** anaireo originally means to take up or pick up, and in the New Testament it usually means to kill, to remove someone from life. It occurs mostly in Acts and always speaks of violent or deliberate killing.\n**Uses and examples:** 1) killing by the sword: Acts 12:2 \"And he killed James the brother of John with the sword\", Herod puts one of the apostles to death. 2) a plot: Acts 9:23 the Jews took counsel to kill him, a plan against Saul after his conversion. 3) the charge of murder: Acts 2:23 \"ye have taken, and by wicked hands have crucified and slain\", Peter confronts the crowd with Jesus' death. 4) killing oneself: Acts 16:27 he would have killed himself, the jailer thinking the prisoners had escaped. 5) the original sense, to pick up and adopt: Acts 7:21 Pharaoh's daughter took him up and brought him up as her own son, the infant Moses.\n**In Van Dyke:** «يقتل», «قتل» and «اتخذ».\n**Note:** the sense in Acts 7:21 is the root meaning: the verb means to lift from the ground, and from that it came to mean to lift out of existence, that is to kill."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0792",
+      "lemma": "ἀστήρ",
+      "gloss": {
+        "eg": "نجم، كوكب",
+        "msa": "نجم، كوكب",
+        "en": "star"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أستير» هي النجم أو الكوكب، ومنها جت كلمة «أستروناوت» و«أستروغرافيا» في الإنجليزي. اليوناني مفيهوش فرق بين «نجم» و«كوكب»، علشان كده فاندايك بيستخدم الاتنين حسب الجملة.\n**الاستخدامات والأمثلة:** ١) نجم المجوس: متى ٢: ٢ «فإننا رأينا نجمه في المشرق وأتينا لنسجد له»، العلامة اللي قادت المجوس. ٢) تفاوت المجد: ١ كورنثوس ١٥: ٤١ «لأن نجما يمتاز عن نجم في المجد»، بولس بيشبّه تفاوت القيامة بتفاوت النجوم. ٣) رمز للملائكة: رؤيا ١: ٢٠ «السبعة الكواكب هي ملائكة السبع الكنائس»، يسوع بيفسّر الرمز بنفسه. ٤) لقب للمسيح: رؤيا ٢٢: ١٦ «كوكب الصبح المنير»، يسوع بيسمي نفسه كده. ٥) علامة النهاية: رؤيا ٦: ١٣ «ونجوم السماء سقطت إلى الأرض»، من علامات الختم السادس.\n**في فاندايك:** «نجم» و«كوكب» و«نجوم».\n**ملاحظة:** في يهوذا ١: ١٣ «نجوم تائهة» الصفة اليونانية هي أصل كلمة «بلانيت» يعني «كوكب سيّار»، فالمعنى نجوم بتضل عن مسارها.",
+        "msa": "**المعنى:** «أستير» هي النجم أو الكوكب، ومنها الإنجليزية «astronaut» و«astronomy». لا يفرّق اليوناني بين «نجم» و«كوكب»، ولذلك يستعمل فاندايك اللفظين بحسب الجملة.\n**الاستعمالات والأمثلة:** ١) نجم المجوس: متى ٢: ٢ «فإننا رأينا نجمه في المشرق وأتينا لنسجد له»، العلامة التي قادت المجوس. ٢) تفاوت المجد: ١ كورنثوس ١٥: ٤١ «لأن نجما يمتاز عن نجم في المجد»، يشبّه بولس تفاوت القيامة بتفاوت النجوم. ٣) رمز للملائكة: رؤيا ١: ٢٠ «السبعة الكواكب هي ملائكة السبع الكنائس»، ويفسّر يسوع الرمز بنفسه. ٤) لقب للمسيح: رؤيا ٢٢: ١٦ «كوكب الصبح المنير»، يسمّي يسوع نفسه بذلك. ٥) علامة النهاية: رؤيا ٦: ١٣ «ونجوم السماء سقطت إلى الأرض»، من علامات الختم السادس.\n**في فاندايك:** «نجم» و«كوكب» و«نجوم».\n**ملاحظة:** في يهوذا ١: ١٣ «نجوم تائهة» الصفة اليونانية هي أصل كلمة «بلانيت»، أي الجرم السيّار، فالمعنى نجوم تضلّ عن مسارها.",
+        "en": "**Meaning:** aster is a star, and gives English words like astronomy and astronaut. Greek does not separate a star from a planet here, so Van Dyke uses both «نجم» and «كوكب» according to the sentence.\n**Uses and examples:** 1) the Magi's star: Matt 2:2 \"we have seen his star in the east, and are come to worship him\", the sign that led the wise men. 2) differing glory: 1 Cor 15:41 \"for one star differeth from another star in glory\", Paul compares the different glory of the resurrection to the stars. 3) a symbol of angels: Rev 1:20 \"the seven stars are the angels of the seven churches\", Jesus explains the symbol himself. 4) a title of Christ: Rev 22:16 \"the bright and morning star\", Jesus names himself so. 5) a sign of the end: Rev 6:13 \"the stars of heaven fell unto the earth\", one of the signs at the sixth seal.\n**In Van Dyke:** «نجم», «كوكب» and «نجوم».\n**Note:** in Jude 13 \"wandering stars\", the Greek adjective is the source of our word planet, so the picture is of stars that stray from their course."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G1588",
+      "lemma": "ἐκλεκτός",
+      "gloss": {
+        "eg": "مختار، منتخَب",
+        "msa": "مختار، منتقى",
+        "en": "chosen, elect"
+      },
+      "entry": {
+        "eg": "**المعنى:** «إكليكتوس» يعني المختار: اللي وقع عليه الاختيار من وسط ناس تانيين. جاية من فعل معناه «يختار من بين»، وبتقع على المؤمنين وعلى الملائكة وعلى المسيح نفسه، وساعات بمعنى «ممتاز وعزيز».\n**الاستخدامات والأمثلة:** ١) مختاري الله: رومية ٨: ٣٣ «من سيشتكي على مختاري الله؟ الله هو الذي يبرر»، المؤمنين في أمان قدام أي اتهام. ٢) الجمع في آخر الزمان: متى ٢٤: ٣١ «فيجمعون مختاريه من الأربع الرياح»، الملائكة بتلمّ شعب ربنا. ٣) المسيح الحجر: ١ بطرس ٢: ٦ «حجر زاوية مختارا كريما»، المسيح هو المختار عند الله. ٤) الملائكة: ١ تيموثاوس ٥: ٢١ «والملائكة المختارين»، حتى الملايكة ربنا بيسمّيهم كده. ٥) شخص عزيز: رومية ١٦: ١٣ «سلموا على روفس المختار في الرب»، هنا الأرجح «ممتاز» أو «عزيز».\n**في فاندايك:** «مختار» و«المختارين» و«مختاريه».\n**ملاحظة:** في ٢ يوحنا ١: ١ «كيرية المختارة» ممكن تكون سيدة بعينها أو كنيسة محلية، والعلما مختلفين.",
+        "msa": "**المعنى:** «إكليكتوس» تعني المختار: من وقع عليه الاختيار من بين آخرين. وهي من فعل معناه «يختار من بين»، وتقع على المؤمنين وعلى الملائكة وعلى المسيح، وأحيانًا بمعنى «ممتاز عزيز».\n**الاستعمالات والأمثلة:** ١) مختارو الله: رومية ٨: ٣٣ «من سيشتكي على مختاري الله؟ الله هو الذي يبرر»، فالمؤمنون في أمان أمام كل اتهام. ٢) الجمع في آخر الزمان: متى ٢٤: ٣١ «فيجمعون مختاريه من الأربع الرياح»، الملائكة تجمع شعب الله. ٣) المسيح الحجر: ١ بطرس ٢: ٦ «حجر زاوية مختارا كريما»، فالمسيح هو المختار عند الله. ٤) الملائكة: ١ تيموثاوس ٥: ٢١ «والملائكة المختارين»، حتى الملائكة توصف بذلك. ٥) شخص عزيز: رومية ١٦: ١٣ «سلموا على روفس المختار في الرب»، والأرجح هنا «ممتاز» أو «عزيز».\n**في فاندايك:** «مختار» و«المختارين» و«مختاريه».\n**ملاحظة:** في ٢ يوحنا ١: ١ «كيرية المختارة» قد تكون سيدة بعينها أو كنيسة محلية، والعلماء مختلفون.",
+        "en": "**Meaning:** eklektos means chosen: picked out from among others. It comes from a verb meaning to choose out, and it is used of believers, of angels and of Christ himself, and sometimes simply of someone choice or dear.\n**Uses and examples:** 1) God's chosen: Rom 8:33 \"Who shall lay any thing to the charge of God's elect? It is God that justifieth\", believers stand safe against any accusation. 2) the gathering at the end: Matt 24:31 \"and they shall gather together his elect from the four winds\", the angels gather God's people. 3) Christ the stone: 1 Pet 2:6 \"a chief corner stone, elect, precious\", Christ is God's chosen one. 4) angels: 1 Tim 5:21 \"the elect angels\", even angels are called this. 5) a dear person: Rom 16:13 \"Salute Rufus chosen in the Lord\", probably meaning outstanding or dear.\n**In Van Dyke:** «مختار», «المختارين» and «مختاريه».\n**Note:** in 2 John 1 \"the elect lady\" may be a particular woman or a local church; scholars differ."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G1992",
+      "lemma": "ἐπιστολή",
+      "gloss": {
+        "eg": "رسالة، خطاب",
+        "msa": "رسالة، خطاب",
+        "en": "letter, epistle"
+      },
+      "entry": {
+        "eg": "**المعنى:** «إپيستولي» هي الرسالة المكتوبة اللي بتتبعت لحد، وجاية من فعل معناه «يبعت». ومنها جت كلمة «Epistle» الإنجليزية، واللي بنسميها «رسائل بولس» في الأصل جمع الكلمة دي.\n**الاستخدامات والأمثلة:** ١) خطابات رسمية: أعمال ٩: ٢ «وطلب منه رسائل إلى دمشق، إلى الجماعات»، شاول بيطلب إذن من رئيس الكهنة. ٢) رسالة كنيسة: أعمال ١٥: ٣٠ «وجمعوا الجمهور ودفعوا الرسالة»، رسالة مجمع أورشليم لأنطاكية. ٣) رسالة بولس: ١ تسالونيكي ٥: ٢٧ «أن تقرأ هذه الرسالة على جميع الإخوة القديسين»، الرسالة لازم حد يقراها قدام الكنيسة كلها. ٤) كاتب الرسالة: رومية ١٦: ٢٢ «أنا ترتيوس كاتب هذه الرسالة»، اللي كتب كلام بولس بإيده. ٥) المؤمنون كرسالة: ٢ كورنثوس ٣: ٣ «أنكم رسالة المسيح»، حياتهم هي الخطاب المقروء. ٦) رسائل مزورة: ٢ تسالونيكي ٢: ٢ «ولا برسالة كأنها منا»، بولس بيحذر من خطاب حد كتبه كدب وقال إنه من بولس.\n**في فاندايك:** «رسالة» و«الرسالة» و«رسائل».",
+        "msa": "**المعنى:** «إپيستولي» هي الرسالة المكتوبة التي تُرسل إلى شخص، من فعل معناه «يرسل». ومنها الإنجليزية «epistle»، و«رسائل بولس» جمع هذه الكلمة في الأصل.\n**الاستعمالات والأمثلة:** ١) خطابات رسمية: أعمال ٩: ٢ «وطلب منه رسائل إلى دمشق، إلى الجماعات»، شاول يطلب تفويضًا من رئيس الكهنة. ٢) رسالة كنيسة: أعمال ١٥: ٣٠ «وجمعوا الجمهور ودفعوا الرسالة»، رسالة مجمع أورشليم إلى أنطاكية. ٣) رسالة بولس: ١ تسالونيكي ٥: ٢٧ «أن تقرأ هذه الرسالة على جميع الإخوة القديسين»، فتُقرأ الرسالة أمام الكنيسة كلها. ٤) كاتب الرسالة: رومية ١٦: ٢٢ «أنا ترتيوس كاتب هذه الرسالة»، من كتب كلام بولس بيده. ٥) المؤمنون رسالة: ٢ كورنثوس ٣: ٣ «أنكم رسالة المسيح»، فحياتهم هي الخطاب المقروء. ٦) رسائل مزوّرة: ٢ تسالونيكي ٢: ٢ «ولا برسالة كأنها منا»، يحذّر بولس من خطاب يُنسب إليه زورًا.\n**في فاندايك:** «رسالة» و«الرسالة» و«رسائل».",
+        "en": "**Meaning:** epistole is a written letter sent to someone, from a verb meaning to send. English epistle comes from it, and what we call Paul's epistles are literally this word.\n**Uses and examples:** 1) official letters: Acts 9:2 letters to Damascus, to the synagogues, Saul asks the high priest for authority. 2) a church letter: Acts 15:30 they delivered the epistle, the Jerusalem council's letter to Antioch. 3) Paul's letter: 1 Thess 5:27 this epistle is to be read to all the holy brethren, read aloud before the whole church. 4) the writer: Rom 16:22 \"I Tertius, who wrote this epistle, salute you in the Lord\", the man who wrote down Paul's words. 5) believers as a letter: 2 Cor 3:3 you are the epistle of Christ, their lives are the letter people read. 6) forged letters: 2 Thess 2:2 nor by letter as from us, Paul warns of a letter wrongly attributed to him.\n**In Van Dyke:** «رسالة», «الرسالة» and «رسائل»."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2641",
+      "lemma": "καταλείπω",
+      "gloss": {
+        "eg": "يترك، يبقي",
+        "msa": "يترك، يُبقي",
+        "en": "to leave behind"
+      },
+      "entry": {
+        "eg": "**المعنى:** «كاتاليپو» يعني يسيب حاجة أو حد وراه: يسيب مكان، أو يهجر طريق، أو يخلّي حاجة باقية. جاية من «ليپو» (يسيب) مع «كاتا» اللي بتقوّي المعنى.\n**الاستخدامات والأمثلة:** ١) يسيب شخص ومكان: أعمال ١٨: ١٩ «فأقبل إلى أفسس وتركهما هناك»، بولس بيسيب أكيلا وبريسكلا في أفسس. ٢) يترك أهله: أفسس ٥: ٣١ «يترك الرجل أباه وأمه ويلتصق بامرأته»، اقتباس من تكوين عن الجواز. ٣) يهجر الطريق: ٢ بطرس ٢: ١٥ «قد تركوا الطريق المستقيم، فضلوا»، المعلمين الكدابين. ٤) يبقي: رومية ١١: ٤ «أبقيت لنفسي سبعة آلاف رجل لم يحنوا ركبة لبعل»، ربنا بيحفظ بقية أمينة. ٥) يهمل: أعمال ٦: ٢ «لا يرضي أن نترك نحن كلمة الله ونخدم موائد»، الرسل مش هيسيبوا الكلمة. ٦) يخلّي وراه: مرقس ١٤: ٥٢ «فترك الإزار وهرب منهم عريانا»، الشاب اللي هرب لما قبضوا على يسوع.\n**في فاندايك:** «يترك» و«ترك» و«أبقيت».",
+        "msa": "**المعنى:** «كاتاليپو» تعني يترك شيئًا أو شخصًا وراءه: يغادر مكانًا، أو يهجر طريقًا، أو يُبقي شيئًا. وهي من «ليپو» (يترك) مع «كاتا» المقوّية للمعنى.\n**الاستعمالات والأمثلة:** ١) ترك شخص ومكان: أعمال ١٨: ١٩ «فأقبل إلى أفسس وتركهما هناك»، يترك بولس أكيلا وبريسكلا في أفسس. ٢) ترك الأهل: أفسس ٥: ٣١ «يترك الرجل أباه وأمه ويلتصق بامرأته»، اقتباس من التكوين عن الزواج. ٣) هجر الطريق: ٢ بطرس ٢: ١٥ «قد تركوا الطريق المستقيم، فضلوا»، المعلمون الكذبة. ٤) الإبقاء: رومية ١١: ٤ «أبقيت لنفسي سبعة آلاف رجل لم يحنوا ركبة لبعل»، فالله يحفظ بقية أمينة. ٥) الإهمال: أعمال ٦: ٢ «لا يرضي أن نترك نحن كلمة الله ونخدم موائد»، فالرسل لا يتركون الكلمة. ٦) ترك الشيء وراءه: مرقس ١٤: ٥٢ «فترك الإزار وهرب منهم عريانا»، الشاب الذي هرب عند القبض على يسوع.\n**في فاندايك:** «يترك» و«ترك» و«أبقيت».",
+        "en": "**Meaning:** katalipo means to leave something or someone behind: to depart from a place, to abandon a road, or to let something remain. It is leipo (to leave) with kata, which strengthens the sense.\n**Uses and examples:** 1) leaving a person in a place: Acts 18:19 he came to Ephesus and left them there, Paul leaves Aquila and Priscilla in Ephesus. 2) leaving one's parents: Eph 5:31 \"For this cause shall a man leave his father and mother, and shall be joined unto his wife\", quoted from Genesis on marriage. 3) abandoning a road: 2 Pet 2:15 \"Which have forsaken the right way, and are gone astray\", false teachers. 4) leaving remaining: Rom 11:4 \"I have reserved to myself seven thousand men\", God keeps a faithful remnant. 5) neglecting: Acts 6:2 it is not reason that we should leave the word of God, and serve tables, the apostles will not drop the word. 6) leaving behind: Mark 14:52 he left the linen cloth, and fled from them naked, the young man who ran when Jesus was seized.\n**In Van Dyke:** «يترك», «ترك» and «أبقى»."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2723",
+      "lemma": "κατηγορέω",
+      "gloss": {
+        "eg": "يشتكي، يتّهم",
+        "msa": "يشتكي، يتهم",
+        "en": "to accuse"
+      },
+      "entry": {
+        "eg": "**المعنى:** «كاتيجوريو» يعني يتهم حد رسميًا، وغالبًا قدام قاضي. جاية من «كاتا» (ضد) و«أغوريو» (يتكلم قدام الناس)، وفاندايك بيترجمها «يشتكي» في الأغلب، فبتلاقيها في الجلسات القضائية في أعمال الرسل والأناجيل.\n**الاستخدامات والأمثلة:** ١) أمام الحاكم: متى ٢٧: ١٢ «وبينما كان رؤساء الكهنة والشيوخ يشتكون عليه لم يجب بشيء»، يسوع ساكت قدام بيلاطس. ٢) اتهام سياسي: لوقا ٢٣: ٢ «وابتدأوا يشتكون عليه قائلين: إننا وجدنا هذا يفسد الأمة»، التهم قدام بيلاطس. ٣) إتهام بولس: أعمال ٢٤: ١٣ «ولا يستطيعون أن يثبتوا ما يشتكون به الآن علي»، بولس بيرد قدام فيلكس. ٤) البحث عن حجة: مرقس ٣: ٢ «فصاروا يراقبونه: هل يشفيه في السبت؟ لكي يشتكوا عليه»، الفريسيين بيدوّروا على تهمة. ٥) الشيطان: رؤيا ١٢: ١٠ «الذي كان يشتكي عليهم أمام إلهنا نهارا وليلا»، إبليس هو المشتكي الدايم على المؤمنين.\n**في فاندايك:** «يشتكي» و«يشتكون» و«يشهدون عليه».\n**ملاحظة:** في مرقس ١٥: ٤ فاندايك بيترجمها «يشهدون عليك» لكن الكلمة نفسها بمعنى «يتهمون».",
+        "msa": "**المعنى:** «كاتيجوريو» تعني يتهم أحدًا اتهامًا رسميًّا، في الغالب أمام قاضٍ. وهي من «كاتا» (ضدّ) و«أغوريو» (يتكلم في الجمع)، ويترجمها فاندايك غالبًا «يشتكي»، فتجدها في المحاكمات في الأناجيل وأعمال الرسل.\n**الاستعمالات والأمثلة:** ١) أمام الوالي: متى ٢٧: ١٢ «وبينما كان رؤساء الكهنة والشيوخ يشتكون عليه لم يجب بشيء»، فيسكت يسوع أمام بيلاطس. ٢) اتهام سياسي: لوقا ٢٣: ٢ «وابتدأوا يشتكون عليه قائلين: إننا وجدنا هذا يفسد الأمة»، التهم أمام بيلاطس. ٣) اتهام بولس: أعمال ٢٤: ١٣ «ولا يستطيعون أن يثبتوا ما يشتكون به الآن علي»، يردّ بولس أمام فيلكس. ٤) البحث عن حجة: مرقس ٣: ٢ «فصاروا يراقبونه: هل يشفيه في السبت؟ لكي يشتكوا عليه»، الفريسيون يبحثون عن تهمة. ٥) الشيطان: رؤيا ١٢: ١٠ «الذي كان يشتكي عليهم أمام إلهنا نهارا وليلا»، فإبليس هو المشتكي الدائم على المؤمنين.\n**في فاندايك:** «يشتكي» و«يشتكون» و«يشهدون عليه».\n**ملاحظة:** في مرقس ١٥: ٤ يترجمها فاندايك «يشهدون عليك»، والكلمة في الأصل بمعنى «يتهمون».",
+        "en": "**Meaning:** kategoreo means to accuse someone formally, usually before a judge. It is kata (against) with agoreuo (to speak in public), and Van Dyke mostly renders it «يشتكي», so it fills the trial scenes in the Gospels and Acts.\n**Uses and examples:** 1) before the governor: Matt 27:12 \"And when he was accused of the chief priests and elders, he answered nothing\", Jesus silent before Pilate. 2) a political charge: Luke 23:2 \"And they began to accuse him, saying, We found this fellow perverting the nation\", the charges before Pilate. 3) the charge against Paul: Acts 24:13 neither can they prove the things whereof they now accuse me, Paul answers before Felix. 4) looking for a charge: Mark 3:2 they watched him, whether he would heal on the sabbath day; that they might accuse him. 5) Satan: Rev 12:10 \"which accused them before our God day and night\", the devil is the constant accuser of believers.\n**In Van Dyke:** «يشتكي», «يشتكون» and «يشهدون عليه».\n**Note:** in Mark 15:4 Van Dyke renders it «يشهدون عليك» (witness against you), although the word itself means to accuse."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G3341",
+      "lemma": "μετάνοια",
+      "gloss": {
+        "eg": "توبة",
+        "msa": "توبة، رجوع",
+        "en": "repentance"
+      },
+      "entry": {
+        "eg": "**المعنى:** «ميتانويا» يعني التوبة: تغيير الفكر والاتجاه. جاية من «ميتا» (تغيير) و«نويو» (يفكر)، يعني حرفيًا «تغيّر العقل»، وهي مش مجرد ندم أو حزن، لكن رجوع كامل عن طريق لطريق.\n**الاستخدامات والأمثلة:** ١) معمودية يوحنا: مرقس ١: ٤ «كان يوحنا يعمد في البرية ويكرز بمعمودية التوبة لمغفرة الخطايا»، التوبة بتسبق الغفران. ٢) هدية من الله: أعمال ٥: ٣١ «ليعطي إسرائيل التوبة وغفران الخطايا»، ربنا نفسه بيدّي التوبة. ٣) لطف الله: رومية ٢: ٤ «لطف الله إنما يقتادك إلى التوبة»، الله بيرجّع الإنسان بلطفه. ٤) حزن صحيح: ٢ كورنثوس ٧: ١٠ «الحزن الذي بحسب مشيئة الله ينشئ توبة لخلاص»، الحزن الحقيقي بيولّد تغيير. ٥) ثمر: أعمال ٢٦: ٢٠ «عاملين أعمالا تليق بالتوبة»، التوبة لازم تبان في الأفعال.\n**في فاندايك:** «التوبة» و«بالتوبة».\n**ملاحظة:** في عبرانيين ١٢: ١٧ عيسو «لم يجد للتوبة مكانا»، والأرجح إنه مقدرش يغيّر قرار أبوه، مش إن الله رفض توبته، والعلما مختلفين في ده.",
+        "msa": "**المعنى:** «ميتانويا» تعني التوبة: تغيير الفكر والوجهة. وهي من «ميتا» (تغيير) و«نويو» (يفكّر)، أي حرفيًّا «تغيّر الذهن»، وليست مجرد ندم أو حزن بل رجوع كامل من طريق إلى طريق.\n**الاستعمالات والأمثلة:** ١) معمودية يوحنا: مرقس ١: ٤ «كان يوحنا يعمد في البرية ويكرز بمعمودية التوبة لمغفرة الخطايا»، فالتوبة تسبق الغفران. ٢) عطية من الله: أعمال ٥: ٣١ «ليعطي إسرائيل التوبة وغفران الخطايا»، فالله نفسه يمنح التوبة. ٣) لطف الله: رومية ٢: ٤ «لطف الله إنما يقتادك إلى التوبة»، فالله يردّ الإنسان بلطفه. ٤) حزن صحيح: ٢ كورنثوس ٧: ١٠ «الحزن الذي بحسب مشيئة الله ينشئ توبة لخلاص»، فالحزن الحقيقي يلد تغييرًا. ٥) ثمر: أعمال ٢٦: ٢٠ «عاملين أعمالا تليق بالتوبة»، فلا بد أن تظهر التوبة في الأفعال.\n**في فاندايك:** «التوبة» و«بالتوبة».\n**ملاحظة:** في عبرانيين ١٢: ١٧ عيسو «لم يجد للتوبة مكانا»، والأرجح أنه لم يستطع تغيير قرار أبيه لا أن الله رفض توبته، وللعلماء خلاف في ذلك.",
+        "en": "**Meaning:** metanoia is repentance: a change of mind and direction. It is meta (change) with noeo (to think), literally a change of mind, and it is more than regret or sorrow: it is a full turn from one way to another.\n**Uses and examples:** 1) John's baptism: Mark 1:4 \"John did baptize in the wilderness, and preach the baptism of repentance for the remission of sins\", repentance comes before forgiveness. 2) a gift from God: Acts 5:31 \"to give repentance to Israel, and forgiveness of sins\", God himself grants repentance. 3) God's kindness: Rom 2:4 \"the goodness of God leadeth thee to repentance\", God brings a person back by his kindness. 4) true sorrow: 2 Cor 7:10 \"godly sorrow worketh repentance to salvation\", real grief produces change. 5) fruit: Acts 26:20 deeds worthy of repentance, repentance must show in actions.\n**In Van Dyke:** «التوبة» and «بالتوبة».\n**Note:** in Heb 12:17 Esau \"found no place of repentance\", most likely meaning he could not change his father's decision rather than that God refused his repentance; scholars differ on this."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G3563",
+      "lemma": "νοῦς",
+      "gloss": {
+        "eg": "ذهن، عقل، فكر",
+        "msa": "ذهن، عقل، فكر",
+        "en": "mind"
+      },
+      "entry": {
+        "eg": "**المعنى:** «نوس» هو الذهن: الجزء اللي بيفكر ويفهم ويقرر. مش مجرد ذكاء، لكن طريقة تفكير الإنسان وحكمه على الأمور. وفاندايك بيترجمها بتلات كلمات حسب الجملة: «ذهن» و«عقل» و«فكر».\n**الاستخدامات والأمثلة:** ١) فكر الرب: ١ كورنثوس ٢: ١٦ «من عرف فكر الرب فيعلمه؟»، وبعدها «وأما نحن فلنا فكر المسيح»، المؤمن بيشارك المسيح في طريقة تفكيره. ٢) الصلاة: ١ كورنثوس ١٤: ١٥ «أصلي بالروح، وأصلي بالذهن أيضا»، بولس عايز الصلاة اللي يفهمها المصلي. ٣) صراع داخلي: رومية ٧: ٢٣ «ناموسا آخر في أعضائي يحارب ناموس ذهني»، العقل بيقاوم ميل الجسد. ٤) ذهن فاسد: رومية ١: ٢٨ «أسلمهم الله إلى ذهن مرفوض»، عقل ما بقاش يميّز الصح. ٥) السلام: فيلبي ٤: ٧ «وسلام الله الذي يفوق كل عقل»، سلام أكبر من تفكير الإنسان.\n**في فاندايك:** «ذهن» و«فكر» و«عقل».\n**ملاحظة:** رومية ١١: ٣٤ و١ كورنثوس ٢: ١٦ بيقتبسوا إشعياء ٤٠: ١٣ اللي فيه «من قاس روح الرب؟»، والترجمة اليونانية القديمة حطت «نوس» مكان كلمة «روح» العبري، وبولس ماشي عليها.",
+        "msa": "**المعنى:** «نوس» هو الذهن: ملكة التفكير والفهم والحكم، لا مجرد الذكاء بل طريقة نظر الإنسان إلى الأمور. ويترجمها فاندايك بثلاث كلمات بحسب السياق: «ذهن» و«عقل» و«فكر».\n**الاستعمالات والأمثلة:** ١) فكر الرب: ١ كورنثوس ٢: ١٦ «من عرف فكر الرب فيعلمه؟»، وبعدها «وأما نحن فلنا فكر المسيح»، فالمؤمن يشارك المسيح في طريقة تفكيره. ٢) الصلاة: ١ كورنثوس ١٤: ١٥ «أصلي بالروح، وأصلي بالذهن أيضا»، فبولس يريد صلاة يفهمها المصلّي. ٣) صراع داخلي: رومية ٧: ٢٣ «ناموسا آخر في أعضائي يحارب ناموس ذهني»، فالعقل يقاوم ميل الجسد. ٤) ذهن فاسد: رومية ١: ٢٨ «أسلمهم الله إلى ذهن مرفوض»، عقل لم يعد يميّز الصواب. ٥) السلام: فيلبي ٤: ٧ «وسلام الله الذي يفوق كل عقل»، سلام يتجاوز تفكير الإنسان.\n**في فاندايك:** «ذهن» و«فكر» و«عقل».\n**ملاحظة:** رومية ١١: ٣٤ و١ كورنثوس ٢: ١٦ يقتبسان إشعياء ٤٠: ١٣، حيث وضعت الترجمة اليونانية القديمة «نوس» في موضع كلمة «روح» العبرية، وتبعها بولس.",
+        "en": "**Meaning:** nous is the mind: the faculty that thinks, understands and decides, not just intelligence but the way a person sizes up things. Van Dyke renders it by context as «ذهن», «عقل» or «فكر».\n**Uses and examples:** 1) the Lord's mind: 1 Cor 2:16 we have the mind of Christ, the believer shares Christ's way of thinking. 2) prayer: 1 Cor 14:15 I will pray with the spirit, and I will pray with the understanding also, Paul wants prayer the one praying can follow. 3) inner conflict: Rom 7:23 another law in my members, warring against the law of my mind. 4) a corrupt mind: Rom 1:28 God gave them over to a reprobate mind, a mind that no longer tells right from wrong. 5) peace: Phil 4:7 the peace of God, which passeth all understanding, peace beyond human reckoning.\n**In Van Dyke:** «ذهن», «فكر» and «عقل».\n**Note:** Rom 11:34 and 1 Cor 2:16 both quote Isa 40:13, where the Septuagint has nous for the Hebrew word for spirit, and Paul follows it."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G3816",
+      "lemma": "παῖς",
+      "gloss": {
+        "eg": "فتى، غلام، ولد",
+        "msa": "فتى، غلام، ولد",
+        "en": "child, boy, servant"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پايس» يعني ولد أو بنت صغيرين، ومنها المعنى كبر لـ«الغلام» اللي بيخدم، ثم «الخادم» عمومًا. فاندايك بيترجمها حسب الجملة: «غلام» و«فتى» و«صبي» و«صبية»، وبتتكرر في وصف يسوع بأنه «فتى» الله.\n**الاستخدامات والأمثلة:** ١) أولاد صغيرين: متى ٢: ١٦ «فأرسل وقتل جميع الصبيان الذين في بيت لحم»، هيرودس وقتل الأطفال. ٢) بنت: لوقا ٨: ٥١ «وأبا الصبية وأمها»، بنت يايرس قبل ما يقيمها يسوع. ٣) غلام عند سيده: متى ٨: ٨ «قل كلمة فقط فيبرأ غلامي»، قائد المئة بيتكلم عن خادمه المريض، وده ممكن يكون عبد أو ابن. ٤) فتى الله: متى ١٢: ١٨ «هوذا فتاي الذي اخترته»، متى بيقتبس إشعياء ٤٢: ١ على يسوع. ٥) نفس اللقب في الكرازة: أعمال ٣: ١٣ «مجد فتاه يسوع»، بطرس بيستخدم لقب الخادم المتألم.\n**في فاندايك:** «فتى» و«غلام» و«صبي».\n**ملاحظة:** في متى ٨: ٨ مفيش حاجة في الكلمة نفسها بتحدد إن الغلام ابن ولا خادم، والسياق هو اللي بيحدد.",
+        "msa": "**المعنى:** «پايس» تعني ولدًا أو بنتًا صغيرين، ثم اتسع معناها إلى «الغلام» الذي يخدم، ثم «الخادم» عمومًا. ويترجمها فاندايك بحسب الجملة: «غلام» و«فتى» و«صبي» و«صبية»، وتتكرر في وصف يسوع بأنه «فتى» الله.\n**الاستعمالات والأمثلة:** ١) أطفال صغار: متى ٢: ١٦ «فأرسل وقتل جميع الصبيان الذين في بيت لحم»، قتل هيرودس للأطفال. ٢) بنت: لوقا ٨: ٥١ «وأبا الصبية وأمها»، ابنة يايرس قبل أن يقيمها يسوع. ٣) غلام عند سيده: متى ٨: ٨ «قل كلمة فقط فيبرأ غلامي»، قائد المئة يتكلم عن خادمه المريض، وقد يكون عبدًا أو ابنًا. ٤) فتى الله: متى ١٢: ١٨ «هوذا فتاي الذي اخترته»، يقتبس متى إشعياء ٤٢: ١ ويطبّقه على يسوع. ٥) اللقب نفسه في الكرازة: أعمال ٣: ١٣ «مجد فتاه يسوع»، يستخدم بطرس لقب الخادم المتألم.\n**في فاندايك:** «فتى» و«غلام» و«صبي».\n**ملاحظة:** في متى ٨: ٨ لا يحدد لفظ الكلمة أن الغلام ابن أو خادم، والسياق هو الفاصل.",
+        "en": "**Meaning:** pais means a young child, boy or girl, and from there a young servant and then a servant in general. Van Dyke renders it by context: «غلام», «فتى», «صبي» or «صبية», and it recurs where Jesus is called God's «فتى», his servant.\n**Uses and examples:** 1) young children: Matt 2:16 Herod slew all the children that were in Bethlehem, the killing of the infants. 2) a girl: Luke 8:51 the father and the mother of the maiden, Jairus's daughter before Jesus raises her. 3) a household servant: Matt 8:8 «قل كلمة فقط فيبرأ غلامي», the centurion speaking of his sick servant, who might be a slave or a son. 4) God's servant: Matt 12:18 Behold my servant, whom I have chosen, Matthew applying Isa 42:1 to Jesus. 5) the same title in preaching: Acts 3:13 God glorified his servant Jesus (the Greek is pais, which the KJV renders Son), Peter using the title of the suffering servant.\n**In Van Dyke:** «فتى», «غلام» and «صبي».\n**Note:** in Matt 8:8 the word itself does not say whether the boy is a son or a servant; the context decides."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G3952",
+      "lemma": "παρουσία",
+      "gloss": {
+        "eg": "مجيء، حضور",
+        "msa": "مجيء، حضور",
+        "en": "coming, presence"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پاروسيا» معناها الحضور: إن حد يكون موجود، أو إنه يوصل ويحضر. جاية من «پاريمي» (يكون حاضر). وبتقع على حضور أي شخص عادي، وأشهر استخدام ليها في العهد الجديد هو مجيء المسيح التاني.\n**الاستخدامات والأمثلة:** ١) وصول إنسان: ١ كورنثوس ١٦: ١٧ «أفرح بمجيء استفاناس وفرتوناتوس وأخائيكوس»، بولس بيفرح بوصول الناس دول. ٢) الحضور مقابل الغياب: فيلبي ٢: ١٢ «ليس كما في حضوري فقط، بل الآن بالأولى جدا في غيابي»، يعني وجوده وسطهم. ٣) مجيء المسيح: ١ تسالونيكي ٣: ١٣ «في مجيء ربنا يسوع المسيح مع جميع قديسيه»، القداسة اللي ربنا بيثبّت بيها القلوب لحد اليوم ده. ٤) مجيء الأثيم: ٢ تسالونيكي ٢: ٩ «الذي مجيئه بعمل الشيطان»، الكلمة نفسها بتوصف ظهور عدو المسيح. ٥) سخرية المستهزئين: ٢ بطرس ٣: ٤ «أين هو موعد مجيئه؟»، اتهام التأخير.\n**في فاندايك:** «مجيء» و«حضور».\n**ملاحظة:** كتير من الدراسات بتقول إن الكلمة كانت تُستخدم في العالم اليوناني لزيارة ملك أو إمبراطور لمدينة، وده بيفسّر ليه اختارها كتّاب العهد الجديد لمجيء المسيح.",
+        "msa": "**المعنى:** «پاروسيا» تعني الحضور: أن يكون أحد موجودًا، أو أن يصل ويحضر. وهي من «پاريمي» (يكون حاضرًا). وتقع على حضور أي شخص عادي، وأشهر استعمال لها في العهد الجديد هو مجيء المسيح الثاني.\n**الاستعمالات والأمثلة:** ١) وصول إنسان: ١ كورنثوس ١٦: ١٧ «أفرح بمجيء استفاناس وفرتوناتوس وأخائيكوس»، يفرح بولس بوصول هؤلاء. ٢) الحضور مقابل الغياب: فيلبي ٢: ١٢ «ليس كما في حضوري فقط، بل الآن بالأولى جدا في غيابي»، أي وجوده بينهم. ٣) مجيء المسيح: ١ تسالونيكي ٣: ١٣ «في مجيء ربنا يسوع المسيح مع جميع قديسيه»، فتثبت القداسة إلى ذلك اليوم. ٤) مجيء الأثيم: ٢ تسالونيكي ٢: ٩ «الذي مجيئه بعمل الشيطان»، فالكلمة نفسها تصف ظهور عدو المسيح. ٥) سخرية المستهزئين: ٢ بطرس ٣: ٤ «أين هو موعد مجيئه؟»، اتهام بالتأخر.\n**في فاندايك:** «مجيء» و«حضور».\n**ملاحظة:** يذكر كثير من الدراسات أن الكلمة كانت تُستعمل في العالم اليوناني لزيارة ملك أو إمبراطور لمدينة، وهذا يفسّر اختيار كتّاب العهد الجديد لها لمجيء المسيح.",
+        "en": "**Meaning:** parousia means presence: someone being there, or arriving and being present. It comes from pareimi, to be present. It can describe anyone's arrival, and its best-known use in the New Testament is the second coming of Christ.\n**Uses and examples:** 1) a person arriving: 1 Cor 16:17 I am glad of the coming of Stephanas and Fortunatus and Achaicus, Paul rejoices at their arrival. 2) presence against absence: Phil 2:12 not as in my presence only, but now much more in my absence, meaning his being among them. 3) the coming of Christ: 1 Thess 3:13 at the coming of our Lord Jesus Christ with all his saints, holiness to be established until that day. 4) the coming of the lawless one: 2 Thess 2:9 whose coming is after the working of Satan, the same word for the arrival of the enemy of Christ. 5) the scoffers: 2 Pet 3:4 Where is the promise of his coming?, the charge of delay.\n**In Van Dyke:** «مجيء» and «حضور».\n**Note:** many studies report that in the Greek world the word was used for the visit of a king or emperor to a city, which may explain why New Testament writers chose it for Christ's coming."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G4130",
+      "lemma": "πλήθω",
+      "gloss": {
+        "eg": "يمتلئ، يملأ، يتم",
+        "msa": "يمتلئ، يملأ، يتم",
+        "en": "to fill, to be fulfilled"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پليثو» يعني يملأ لحد الآخر، وغالبًا بصيغة المجهول بمعنى «امتلأ»، ومنها كمان معنى «تمّ وانتهى» لما الكلام عن زمن. وهي من نفس عيلة «پيمپلي» اللي بتدي نفس المعنى.\n**الاستخدامات والأمثلة:** ١) امتلاء بالروح: أعمال ٢: ٤ «وامتلأ الجميع من الروح القدس»، يوم الخمسين. ٢) امتلاء عاطفي: أعمال ٣: ١٠ «فامتلأوا دهشة وحيرة»، الناس شافوا الأعرج بيمشي. ٣) امتلاء مكان: أعمال ١٩: ٢٩ «فامتلأت المدينة كلها اضطرابا»، شغب أفسس. ٤) ملء إناء: متى ٢٧: ٤٨ «وملأها خلا»، الإسفنجة اللي قدّموها ليسوع على الصليب. ٥) انتهاء مدة: لوقا ٢: ٢١ «ولما تمت ثمانية أيام»، موعد ختان يسوع.\n**في فاندايك:** «امتلأ» و«تمّ» و«ملأ».\n**ملاحظة:** الكلمة نفسها بتقع في أعمال ٤: ٣١ «وامتلأ الجميع من الروح القدس» بعد ما كان ممتلئين في أعمال ٢: ٤، يعني الامتلاء مش مرة واحدة وخلاص.",
+        "msa": "**المعنى:** «پليثو» تعني يملأ حتى النهاية، وغالبًا بصيغة المبني للمجهول بمعنى «امتلأ»، وتأتي أيضًا بمعنى «تمّ وانتهى» حين يكون الكلام عن زمن. وهي من عائلة «پيمپلي» ذات المعنى نفسه.\n**الاستعمالات والأمثلة:** ١) الامتلاء بالروح: أعمال ٢: ٤ «وامتلأ الجميع من الروح القدس»، يوم الخمسين. ٢) امتلاء عاطفي: أعمال ٣: ١٠ «فامتلأوا دهشة وحيرة»، حين رأوا الأعرج يمشي. ٣) امتلاء مكان: أعمال ١٩: ٢٩ «فامتلأت المدينة كلها اضطرابا»، شغب أفسس. ٤) ملء إناء: متى ٢٧: ٤٨ «وملأها خلا»، الإسفنجة التي قُدّمت ليسوع على الصليب. ٥) انقضاء مدة: لوقا ٢: ٢١ «ولما تمت ثمانية أيام»، موعد ختان يسوع.\n**في فاندايك:** «امتلأ» و«تمّ» و«ملأ».\n**ملاحظة:** تأتي الكلمة نفسها في أعمال ٤: ٣١ «وامتلأ الجميع من الروح القدس» بعد أن امتلأوا في أعمال ٢: ٤، فالامتلاء ليس مرة واحدة فحسب.",
+        "en": "**Meaning:** pletho means to fill completely, usually in the passive, to be filled, and it also means to be completed when speaking of time. It belongs to the same family as pimplemi, which has the same range.\n**Uses and examples:** 1) filled with the Spirit: Acts 2:4 and they were all filled with the Holy Ghost, at Pentecost. 2) filled with feeling: Acts 3:10 they were filled with wonder and amazement, when they saw the lame man walking. 3) a place filled: Acts 19:29 the whole city was filled with confusion, the Ephesian riot. 4) filling a vessel: Matt 27:48 and filled it with vinegar, the sponge offered to Jesus on the cross. 5) a period ending: Luke 2:21 when eight days were accomplished, the day of Jesus' circumcision.\n**In Van Dyke:** «امتلأ», «تمّ» and «ملأ».\n**Note:** the same verb is used in Acts 4:31 \"they were all filled with the Holy Ghost\" for people who were already filled in Acts 2:4, so the filling is not a once-only event."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G4337",
+      "lemma": "προσέχω",
+      "gloss": {
+        "eg": "يحترز، يصغي، ينتبه",
+        "msa": "يحترز، يصغي، ينتبه",
+        "en": "to pay attention, to beware"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پروسيخو» يعني يوجّه انتباهه لحاجة: يفتح ودانه ويركز عليها. والأرجح إنها من «يوجّه الذهن نحو». ولو الحاجة خطر بقت «احترس منها»، ولو تعليم بقت «اسمع له واتبعه»، وفاندايك بيقول «احترزوا» و«يصغون».\n**الاستخدامات والأمثلة:** ١) التحذير: متى ٧: ١٥ «احترزوا من الأنبياء الكذبة الذين يأتونكم بثياب الحملان»، يسوع بيحذر من المدّعين. ٢) الإصغاء: أعمال ٨: ٦ «وكان الجموع يصغون بنفس واحدة إلى ما يقوله فيلبس»، الاستماع بتركيز. ٣) الحرص على الرعية: أعمال ٢٠: ٢٨ «احترزوا اذا لأنفسكم ولجميع الرعية»، بولس بيكلم شيوخ أفسس. ٤) الإصغاء لتعليم باطل: ١ تيموثاوس ١: ٤ «ولا يصغوا إلى خرافات وأنساب لا حد لها»، النهي عن الانشغال بالأساطير. ٥) الانتباه لنور: ٢ بطرس ١: ١٩ «التي تفعلون حسنا إن انتبهتم إليها»، الكلمة النبوية كسراج في الظلام.\n**في فاندايك:** «احترزوا» و«يصغون» و«انتبهتم».\n**ملاحظة:** في عبرانيين ٧: ١٣ «لم يلازم أحد منه المذبح» الكلمة بمعنى «يخدم عند» أو «يلازم»، وده استخدام نادر بعيد عن التحذير.",
+        "msa": "**المعنى:** «پروسيخو» تعني يوجّه انتباهه إلى شيء: يصغي إليه ويركّز عليه، والأرجح أنها من «يُقبل بالذهن نحو». فإن كان خطرًا فمعناها «احذر منه»، وإن كان تعليمًا فمعناها «أصغِ إليه واتبعه»، ويقول فاندايك «احترزوا» و«يصغون».\n**الاستعمالات والأمثلة:** ١) التحذير: متى ٧: ١٥ «احترزوا من الأنبياء الكذبة الذين يأتونكم بثياب الحملان»، يحذّر يسوع من المدّعين. ٢) الإصغاء: أعمال ٨: ٦ «وكان الجموع يصغون بنفس واحدة إلى ما يقوله فيلبس»، استماع بتركيز. ٣) الحرص على الرعية: أعمال ٢٠: ٢٨ «احترزوا اذا لأنفسكم ولجميع الرعية»، يخاطب بولس شيوخ أفسس. ٤) الإصغاء لتعليم باطل: ١ تيموثاوس ١: ٤ «ولا يصغوا إلى خرافات وأنساب لا حد لها»، نهي عن الانشغال بالأساطير. ٥) الانتباه إلى نور: ٢ بطرس ١: ١٩ «التي تفعلون حسنا إن انتبهتم إليها»، فالكلمة النبوية كسراج في الظلمة.\n**في فاندايك:** «احترزوا» و«يصغون» و«انتبهتم».\n**ملاحظة:** في عبرانيين ٧: ١٣ «لم يلازم أحد منه المذبح» تأتي بمعنى «يخدم عند» أو «يلازم»، وهو استعمال نادر بعيد عن التحذير.",
+        "en": "**Meaning:** prosecho means to turn one's attention to something: to listen and focus, most likely from holding the mind toward it. If the thing is a danger it means to beware of it, and if it is a teaching it means to give heed and follow. Van Dyke has «احترزوا» and «يصغون».\n**Uses and examples:** 1) warning: Matt 7:15 Beware of false prophets, which come to you in sheep's clothing, Jesus warns against impostors. 2) listening: Acts 8:6 the people with one accord gave heed unto those things which Philip spake, listening with focus. 3) guarding the flock: Acts 20:28 Take heed therefore unto yourselves, and to all the flock, Paul speaking to the Ephesian elders. 4) heeding false teaching: 1 Tim 1:4 neither give heed to fables and endless genealogies, a ban on busying oneself with myths. 5) attending to a light: 2 Pet 1:19 whereunto ye do well that ye take heed, the prophetic word as a lamp in a dark place.\n**In Van Dyke:** «احترزوا», «يصغون» and «انتبهتم».\n**Note:** in Heb 7:13 \"gave attendance at the altar\" the word means to serve at or stay by something, a rare use far from warning."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G4990",
+      "lemma": "σωτήρ",
+      "gloss": {
+        "eg": "مخلّص",
+        "msa": "مخلّص",
+        "en": "savior"
+      },
+      "entry": {
+        "eg": "**المعنى:** «سوتير» هو المخلّص: اللي بينقذ حد من خطر أو هلاك. جاية من «سوزو» (يخلّص). واللقب بيطلقوه على الله وعلى يسوع، وفي العالم اليوناني كانوا بيطلقوه كمان على ملوك وآلهة.\n**الاستخدامات والأمثلة:** ١) يسوع رئيسًا ومخلصًا: أعمال ٥: ٣١ «هذا رفعه الله بيمينه رئيسا ومخلصا»، بطرس قدام المجمع. ٢) الانتظار: فيلبي ٣: ٢٠ «ننتظر مخلصا هو الرب يسوع المسيح»، رجاء المؤمنين في السما. ٣) الله مخلّص: ١ تيموثاوس ٤: ١٠ «الله الحي، الذي هو مخلص جميع الناس، ولا سيما المؤمنين»، لقب للآب. ٤) ظهور اللطف: تيطس ٣: ٤ «حين ظهر لطف مخلصنا الله وإحسانه»، ربنا بيظهر محبته. ٥) لقب كامل: ٢ بطرس ١: ١١ «ربنا ومخلصنا يسوع المسيح»، الصيغة اللي بترجع كتير في الرسالة.\n**في فاندايك:** «مخلص» و«مخلصنا».\n**ملاحظة:** في الرسائل الرعوية (١ تيموثاوس وتيطس) اللقب بيجي على الله الآب وعلى المسيح بالتبادل، وتيطس ٣: ٤ و٦ في جملة واحدة بيقول «مخلصنا الله» ثم «يسوع المسيح مخلصنا».",
+        "msa": "**المعنى:** «سوتير» هو المخلّص: من ينقذ غيره من خطر أو هلاك. وهي من «سوزو» (يخلّص). ويقال اللقب على الله وعلى يسوع، وكان في العالم اليوناني يقال أيضًا على ملوك وآلهة.\n**الاستعمالات والأمثلة:** ١) يسوع رئيسًا ومخلصًا: أعمال ٥: ٣١ «هذا رفعه الله بيمينه رئيسا ومخلصا»، بطرس أمام المجمع. ٢) الانتظار: فيلبي ٣: ٢٠ «ننتظر مخلصا هو الرب يسوع المسيح»، رجاء المؤمنين في السماء. ٣) الله مخلّص: ١ تيموثاوس ٤: ١٠ «الله الحي، الذي هو مخلص جميع الناس، ولا سيما المؤمنين»، لقب للآب. ٤) ظهور اللطف: تيطس ٣: ٤ «حين ظهر لطف مخلصنا الله وإحسانه»، فالله يُظهر محبته. ٥) لقب كامل: ٢ بطرس ١: ١١ «ربنا ومخلصنا يسوع المسيح»، الصيغة التي تتكرر في الرسالة.\n**في فاندايك:** «مخلص» و«مخلصنا».\n**ملاحظة:** في الرسائل الرعوية (١ تيموثاوس وتيطس) يُطلق اللقب على الله الآب وعلى المسيح بالتبادل، وفي تيطس ٣: ٤ و٦ يقول «مخلصنا الله» ثم «يسوع المسيح مخلصنا» في جملة واحدة.",
+        "en": "**Meaning:** soter is a savior: one who rescues others from danger or ruin. It comes from sozo, to save. The title is given to God and to Jesus, and in the Greek world it was also given to kings and gods.\n**Uses and examples:** 1) Jesus as Prince and Savior: Acts 5:31 Him hath God exalted with his right hand to be a Prince and a Saviour, Peter before the council. 2) waiting: Phil 3:20 from whence also we look for the Saviour, the Lord Jesus Christ, the believers' hope in heaven. 3) God as Savior: 1 Tim 4:10 the living God, who is the Saviour of all men, specially of those that believe, a title of the Father. 4) kindness appearing: Titus 3:4 the kindness and love of God our Saviour toward man appeared. 5) the full title: 2 Pet 1:11 our Lord and Saviour Jesus Christ, a formula that recurs in the letter.\n**In Van Dyke:** «مخلص» and «مخلصنا».\n**Note:** in the Pastoral Epistles (1 Timothy and Titus) the title is used of God the Father and of Christ alternately, and Titus 3:4 and 6 say both \"God our Savior\" and \"Jesus Christ our Savior\" within one sentence."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0290",
+      "lemma": "ἀμπελών",
+      "gloss": {
+        "eg": "كرم",
+        "msa": "كرم، بستان عنب",
+        "en": "vineyard"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أمپيلون» هو الكرم: أرض مزروعة عنب، من «أمپيلوس» اللي هي شجرة العنب. وبتظهر في أمثال يسوع كمكان شغل وثمر، وصاحب الكرم فيه بيمثل ربنا.\n**الاستخدامات والأمثلة:** ١) العمل في الكرم: متى ٢٠: ١ «رجلا رب بيت خرج مع الصبح ليستأجر فعلة لكرمه»، مثل العمّال اللي استأجرهم صاحب الكرم في ساعات مختلفة. ٢) طلب الطاعة: متى ٢١: ٢٨ «يا ابني، اذهب اليوم اعمل في كرمي»، مثل الابنين. ٣) المزارعين الأشرار: مرقس ١٢: ١ «إنسان غرس كرما وأحاطه بسياج»، كمل بالكلام عن الكرامين اللي قتلوا الابن. ٤) شجرة بلا ثمر: لوقا ١٣: ٦ «شجرة تين مغروسة في كرمه»، المثل عن الصبر على الشجرة. ٥) مثال عادي: ١ كورنثوس ٩: ٧ «ومن يغرس كرما ومن ثمره لا يأكل؟»، بولس بيستشهد بحق العامل.\n**في فاندايك:** «كرم» و«كرمة».\n**ملاحظة:** في مرقس ١٢: ١ وصف الكرم (سياج ومعصرة وبرج) فيه صدى من أغنية الكرم في إشعياء ٥ اللي فيها الكرم رمز لإسرائيل.",
+        "msa": "**المعنى:** «أمپيلون» هو الكرم: أرض مغروسة بالعنب، من «أمپيلوس» أي شجرة العنب. ويظهر في أمثال يسوع مكانَ عمل وثمر، وصاحب الكرم فيه يمثّل الله.\n**الاستعمالات والأمثلة:** ١) العمل في الكرم: متى ٢٠: ١ «رجلا رب بيت خرج مع الصبح ليستأجر فعلة لكرمه»، مثل العمّال المستأجرين في ساعات مختلفة. ٢) طلب الطاعة: متى ٢١: ٢٨ «يا ابني، اذهب اليوم اعمل في كرمي»، مثل الابنين. ٣) الكرّامون الأشرار: مرقس ١٢: ١ «إنسان غرس كرما وأحاطه بسياج»، ويتبعه الكلام عن الكرّامين الذين قتلوا الابن. ٤) شجرة بلا ثمر: لوقا ١٣: ٦ «شجرة تين مغروسة في كرمه»، المثل عن الصبر على الشجرة. ٥) مثال عادي: ١ كورنثوس ٩: ٧ «ومن يغرس كرما ومن ثمره لا يأكل؟»، يستشهد بولس بحق العامل.\n**في فاندايك:** «كرم» و«كرمة».\n**ملاحظة:** في مرقس ١٢: ١ وصف الكرم (سياج ومعصرة وبرج) فيه صدى من نشيد الكرم في إشعياء ٥ حيث الكرم رمز لإسرائيل.",
+        "en": "**Meaning:** ampelon is a vineyard: land planted with grapevines, from ampelos, the vine. It appears in Jesus' parables as a place of work and fruit, with the owner standing for God.\n**Uses and examples:** 1) working in the vineyard: Matt 20:1 the householder, which went out early in the morning to hire labourers into his vineyard, the parable of workers hired at different hours. 2) asking for obedience: Matt 21:28 Son, go work to day in my vineyard, the parable of the two sons. 3) the wicked tenants: Mark 12:1 A certain man planted a vineyard, and set an hedge about it, followed by the tenants who killed the son. 4) a tree without fruit: Luke 13:6 a fig tree planted in his vineyard, the parable of patience with the tree. 5) an everyday picture: 1 Cor 9:7 who planteth a vineyard, and eateth not of the fruit thereof?, Paul arguing for the worker's right.\n**In Van Dyke:** «كرم» and «كرمة».\n**Note:** in Mark 12:1 the description (hedge, winepress, tower) echoes the song of the vineyard in Isa 5, where the vineyard stands for Israel."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0321",
+      "lemma": "ἀνάγω",
+      "gloss": {
+        "eg": "يقلع، يُصعد، يقدّم",
+        "msa": "يقلع، يصعد، يقدّم",
+        "en": "to lead up, to put to sea"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أناجو» يعني يقود لفوق: يطلّع حد أو حاجة لمكان أعلى. من «أنا» (فوق) و«أجو» (يقود). وأغلب استخدامها في أعمال الرسل لتعبير بحري: «يقلع» يعني السفينة بتفارق الميناء وتطلع للبحر.\n**الاستخدامات والأمثلة:** ١) الإبحار: أعمال ١٦: ١١ «فأقلعنا من ترواس وتوجهنا بالاستقامة إلى ساموثراكي»، بداية الرحلة لأوروبا. ٢) قرار الإبحار: أعمال ٢٧: ١٢ «استقر رأي أكثرهم أن يقلعوا من هناك»، قبل العاصفة. ٣) تطلع بيه فوق: أعمال ٩: ٣٩ «صعدوا به إلى العلية»، بطرس بيوصل لبيت طابيثا وبيطلّعوه للعلية. ٤) تقديم ذبيحة: أعمال ٧: ٤١ «وأصعدوا ذبيحة للصنم»، العجل الذهب. ٥) إقامة من الموت: عبرانيين ١٣: ٢٠ «الذي أقام من الأموات راعي الخراف العظيم»، الله بيرجّع يسوع من الموت.\n**في فاندايك:** «أقلع» و«أصعد» و«أقام».\n**ملاحظة:** معنى «أقلع» في أعمال معناه الحرفي «يُقاد لفوق» نحو البحر المفتوح، وده تعبير كان بحارة اليونان يستخدمونه.",
+        "msa": "**المعنى:** «أناجو» تعني يقود إلى فوق: يصعد بشخص أو شيء إلى موضع أعلى، من «أنا» (فوق) و«أجو» (يقود). وأكثر استعمالها في أعمال الرسل تعبيرًا بحريًّا: «يقلع» أي تفارق السفينة المرفأ وتخرج إلى البحر.\n**الاستعمالات والأمثلة:** ١) الإبحار: أعمال ١٦: ١١ «فأقلعنا من ترواس وتوجهنا بالاستقامة إلى ساموثراكي»، بداية الرحلة إلى أوروبا. ٢) قرار الإبحار: أعمال ٢٧: ١٢ «استقر رأي أكثرهم أن يقلعوا من هناك»، قبل العاصفة. ٣) الصعود بشخص: أعمال ٩: ٣٩ «صعدوا به إلى العلية»، يصعدون ببطرس إلى العلية حيث طابيثا. ٤) تقديم ذبيحة: أعمال ٧: ٤١ «وأصعدوا ذبيحة للصنم»، العجل الذهبي. ٥) الإقامة من الموت: عبرانيين ١٣: ٢٠ «الذي أقام من الأموات راعي الخراف العظيم»، فالله يعيد يسوع من الموت.\n**في فاندايك:** «أقلع» و«أصعد» و«أقام».\n**ملاحظة:** معنى «أقلع» في أعمال حرفيًّا «يُقاد إلى فوق» نحو البحر المفتوح، وهو تعبير بحارة اليونان.",
+        "en": "**Meaning:** anago means to lead up: to bring a person or thing to a higher place, from ana (up) and ago (to lead). Its commonest use, in Acts, is nautical: to put out to sea, as a ship leaves harbour for open water.\n**Uses and examples:** 1) sailing: Acts 16:11 Therefore loosing from Troas, we came with a straight course to Samothracia, the start of the voyage to Europe. 2) the decision to sail: Acts 27:12 the more part advised to depart thence also, before the storm. 3) bringing someone up: Acts 9:39 they brought him into the upper chamber, Peter led up to the room where Tabitha lay. 4) offering: Acts 7:41 and offered sacrifice unto the idol, the golden calf. 5) bringing back from death: Heb 13:20 that brought again from the dead our Lord Jesus, God restoring Jesus from death.\n**In Van Dyke:** «أقلع», «أصعد» and «أقام».\n**Note:** the sailing sense in Acts is literally to be led up toward the open sea, a phrase Greek sailors used."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0571",
+      "lemma": "ἄπιστος",
+      "gloss": {
+        "eg": "غير مؤمن، لا يُصدَّق",
+        "msa": "غير مؤمن، غير مصدَّق",
+        "en": "unbelieving, unbeliever"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أپيستوس» هي «بيستوس» (أمين، مؤمن) وقبلها «أ» اللي بتنفي، يعني اللي مالوش إيمان. وأغلب استخدامها اسم للشخص «غير المؤمن»، وفيه استخدام تاني نادر بمعنى «شيء لا يصدَّق».\n**الاستخدامات والأمثلة:** ١) جواز مختلط: ١ كورنثوس ٧: ١٣ «والمرأة التي لها رجل غير مؤمن، وهو يرتضي أن يسكن معها، فلا تتركه»، بولس بيوصي ما تسيبهوش. ٢) القداسة: ١ كورنثوس ٧: ١٤ «لأن الرجل غير المؤمن مقدس في المرأة»، الطرف المؤمن بيأثر على بيته. ٣) نير مختلف: ٢ كورنثوس ٦: ١٤ «لا تكونوا تحت نير مع غير المؤمنين»، تحذير من شراكة ماتتوافقش. ٤) الألسنة آية: ١ كورنثوس ١٤: ٢٢ «الألسنة آية، لا للمؤمنين، بل لغير المؤمنين»، دور الألسنة. ٥) جيل بلا إيمان: متى ١٧: ١٧ «أيها الجيل غير المؤمن، الملتوي»، يسوع بيوبّخ الناس. ٦) أمر مش مصدّق: أعمال ٢٦: ٨ «لماذا يعد عندكم أمرا لا يصدق إن أقام الله أمواتا؟»، بولس بيسأل أغريباس ليه بيستبعدوا القيامة.\n**في فاندايك:** «غير المؤمن» و«غير المؤمنين».",
+        "msa": "**المعنى:** «أپيستوس» هي «پيستوس» (أمين، مؤمن) مسبوقة بـ«أ» النافية، أي من لا إيمان له. وأكثر استعمالها اسمٌ للشخص «غير المؤمن»، ولها استعمال نادر بمعنى «شيء لا يُصدَّق».\n**الاستعمالات والأمثلة:** ١) زواج مختلط: ١ كورنثوس ٧: ١٣ «والمرأة التي لها رجل غير مؤمن، وهو يرتضي أن يسكن معها، فلا تتركه»، يوصي بولس بألا تتركه. ٢) القداسة: ١ كورنثوس ٧: ١٤ «لأن الرجل غير المؤمن مقدس في المرأة»، فالطرف المؤمن يؤثر في بيته. ٣) نير مختلف: ٢ كورنثوس ٦: ١٤ «لا تكونوا تحت نير مع غير المؤمنين»، تحذير من شراكة غير متوافقة. ٤) الألسنة آية: ١ كورنثوس ١٤: ٢٢ «الألسنة آية، لا للمؤمنين، بل لغير المؤمنين»، دور الألسنة. ٥) جيل بلا إيمان: متى ١٧: ١٧ «أيها الجيل غير المؤمن، الملتوي»، يوبخ يسوع الناس. ٦) أمر لا يُصدَّق: أعمال ٢٦: ٨ «لماذا يعد عندكم أمرا لا يصدق إن أقام الله أمواتا؟»، يسأل بولس أغريباس لماذا يستبعدون القيامة.\n**في فاندايك:** «غير المؤمن» و«غير المؤمنين».",
+        "en": "**Meaning:** apistos is pistos (faithful, believing) with the negative alpha, so someone without faith. It is mostly used as a noun for the unbeliever, and rarely for something unbelievable.\n**Uses and examples:** 1) mixed marriage: 1 Cor 7:13 the woman which hath an husband that believeth not, and if he be pleased to dwell with her, let her not leave him, Paul advises her to stay. 2) holiness: 1 Cor 7:14 the unbelieving husband is sanctified by the wife, the believing partner influences the home. 3) a different yoke: 2 Cor 6:14 Be ye not unequally yoked together with unbelievers, a warning against unsuited partnerships. 4) tongues as a sign: 1 Cor 14:22 tongues are for a sign, not to them that believe, but to them that believe not. 5) a faithless generation: Matt 17:17 O faithless and perverse generation, Jesus rebuking the people. 6) the unbelievable: Acts 26:8 Why should it be thought a thing incredible with you, that God should raise the dead?\n**In Van Dyke:** «غير المؤمن» and «غير المؤمنين»."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0837",
+      "lemma": "αὐξάνω",
+      "gloss": {
+        "eg": "ينمو، ينمّي",
+        "msa": "ينمو، ينمّي",
+        "en": "to grow, to increase"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أوكسانو» يعني ينمو ويكبر ويزيد، وبيجي بمعنى إن الحاجة بتنمو بنفسها، أو إن حد بينمّيها. وبنقولها عن النباتات والأطفال والشعب وكلمة الله والنمو الروحي.\n**الاستخدامات والأمثلة:** ١) نمو النبات: متى ١٣: ٣٢ «ولكن متى نمت فهي أكبر البقول»، حبة الخردل. ٢) نمو طفل: لوقا ١: ٨٠ «أما الصبي فكان ينمو ويتقوى بالروح»، يوحنا المعمدان. ٣) نمو الكلمة: أعمال ٦: ٧ «وكانت كلمة الله تنمو»، الكنيسة بتنتشر. ٤) الله اللي بينمّي: ١ كورنثوس ٣: ٦ «أنا غرست وأبلوس سقى، لكن الله كان ينمي»، النمو هبة من الله. ٥) النمو الروحي: ٢ بطرس ٣: ١٨ «انموا في النعمة وفي معرفة ربنا ومخلصنا يسوع المسيح»، أمر للمؤمنين. ٦) للمؤمن الجديد: ١ بطرس ٢: ٢ «لكي تنموا به»، بطرس بيشبّه المؤمنين بأطفال محتاجين للبن.\n**في فاندايك:** «ينمو» و«ينمي» و«نما».\n**ملاحظة:** الفعل نفسه بيستخدم في أعمال ٧: ١٧ لنمو شعب إسرائيل في مصر، وبولس في أفسس ٢: ٢١ بيشبّه الكنيسة ببناء ينمو.",
+        "msa": "**المعنى:** «أوكسانو» تعني ينمو ويكبر ويزيد، وتأتي لازمة (الشيء ينمو) ومتعدية (أحد ينمّيه). ويقال على النبات والأطفال والشعب وكلمة الله والنمو الروحي.\n**الاستعمالات والأمثلة:** ١) نمو النبات: متى ١٣: ٣٢ «ولكن متى نمت فهي أكبر البقول»، حبة الخردل. ٢) نمو الطفل: لوقا ١: ٨٠ «أما الصبي فكان ينمو ويتقوى بالروح»، يوحنا المعمدان. ٣) نمو الكلمة: أعمال ٦: ٧ «وكانت كلمة الله تنمو»، الكنيسة تنتشر. ٤) الله ينمّي: ١ كورنثوس ٣: ٦ «أنا غرست وأبلوس سقى، لكن الله كان ينمي»، النمو هبة من الله. ٥) النمو الروحي: ٢ بطرس ٣: ١٨ «انموا في النعمة وفي معرفة ربنا ومخلصنا يسوع المسيح»، أمر للمؤمنين. ٦) للمؤمن الجديد: ١ بطرس ٢: ٢ «لكي تنموا به»، يشبّه بطرس المؤمنين بأطفال يحتاجون إلى اللبن.\n**في فاندايك:** «ينمو» و«ينمي» و«نما».\n**ملاحظة:** يُستعمل الفعل نفسه في أعمال ٧: ١٧ لنمو شعب إسرائيل في مصر، ويشبّه بولس في أفسس ٢: ٢١ الكنيسة ببناء ينمو.",
+        "en": "**Meaning:** auxano means to grow, get bigger and increase, both intransitively (something grows) and transitively (someone makes it grow). It is said of plants, children, a people, the word of God and spiritual growth.\n**Uses and examples:** 1) a plant growing: Matt 13:32 but when it is grown, it is the greatest among herbs, the mustard seed. 2) a child growing: Luke 1:80 And the child grew, and waxed strong in spirit, John the Baptist. 3) the word growing: Acts 6:7 And the word of God increased, the church spreading. 4) God giving growth: 1 Cor 3:6 I have planted, Apollos watered; but God gave the increase, growth is God's gift. 5) spiritual growth: 2 Pet 3:18 But grow in grace, and in the knowledge of our Lord and Saviour Jesus Christ, a command to believers. 6) for new believers: 1 Pet 2:2 that ye may grow thereby.\n**In Van Dyke:** «ينمو», «ينمي» and «نما».\n**Note:** the same verb is used in Acts 7:17 for Israel's growth in Egypt, and in Eph 2:21 Paul pictures the church as a building that grows."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G1127",
+      "lemma": "γρηγορέω",
+      "gloss": {
+        "eg": "يسهر، يصحى، يفضل متيقظ",
+        "msa": "يسهر، يتيقظ",
+        "en": "to keep watch"
+      },
+      "entry": {
+        "eg": "**المعنى:** «جريجوريو» يعني يصحى ويفضل صاحي ومنتبه، وبعدين المعنى كبر لـ«التيقظ الروحي». كتير من العلما بيشوفوا إنها مشتقة من فعل «يستيقظ»، ومنها جه اسم «غريغوريوس»، يعني «الساهر». وفاندايك بيترجمها «اسهروا» في الأغلب.\n**الاستخدامات والأمثلة:** ١) السهر الحرفي: متى ٢٦: ٤٠ «أهكذا ما قدرتم أن تسهروا معي ساعة واحدة؟»، يسوع في جثسيماني. ٢) انتظار مجيء الرب: متى ٢٤: ٤٢ «اسهروا إذا لأنكم لا تعلمون في أية ساعة يأتي ربكم»، التيقظ للمجيء. ٣) ثبات في الإيمان: ١ كورنثوس ١٦: ١٣ «اسهروا. اثبتوا في الإيمان. كونوا رجالا. تقووا»، أمر قصير لكنيسة. ٤) تحذير لكنيسة نايمة: رؤيا ٣: ٢ «كن ساهرا وشدد ما بقي»، كنيسة سارديس. ٥) رعاية الكنيسة: أعمال ٢٠: ٣١ «لذلك اسهروا»، بولس بيودّع شيوخ أفسس.\n**في فاندايك:** «اسهروا» و«سهر» و«ساهر».\n**ملاحظة:** في ١ تسالونيكي ٥: ١٠ «حتى إذا سهرنا أو نمنا نحيا جميعا معه» بيستخدم بولس الفعل بمعنى «نكون أحياء»، مقابل «نمنا» بمعنى موتنا، وفي ٥: ٦ بيستخدمه بمعنى اليقظة العادية.",
+        "msa": "**المعنى:** «جريجوريو» تعني يستيقظ ويبقى صاحيًا منتبهًا، ثم اتسع معناها إلى التيقظ الروحي. ويرى كثير من العلماء أنها مشتقة من فعل «استيقظ»، ومنها اسم «غريغوريوس» أي «الساهر». ويترجمها فاندايك غالبًا «اسهروا».\n**الاستعمالات والأمثلة:** ١) السهر الحرفي: متى ٢٦: ٤٠ «أهكذا ما قدرتم أن تسهروا معي ساعة واحدة؟»، يسوع في جثسيماني. ٢) انتظار مجيء الرب: متى ٢٤: ٤٢ «اسهروا إذا لأنكم لا تعلمون في أية ساعة يأتي ربكم»، التيقظ لمجيئه. ٣) الثبات في الإيمان: ١ كورنثوس ١٦: ١٣ «اسهروا. اثبتوا في الإيمان. كونوا رجالا. تقووا»، أمر موجز للكنيسة. ٤) تحذير لكنيسة نائمة: رؤيا ٣: ٢ «كن ساهرا وشدد ما بقي»، كنيسة سارديس. ٥) رعاية الكنيسة: أعمال ٢٠: ٣١ «لذلك اسهروا»، بولس يودّع شيوخ أفسس.\n**في فاندايك:** «اسهروا» و«سهر» و«ساهر».\n**ملاحظة:** في ١ تسالونيكي ٥: ١٠ «حتى إذا سهرنا أو نمنا نحيا جميعا معه» يستعمل بولس الفعل بمعنى «نكون أحياء» مقابل «نمنا» أي متنا، بينما في ٥: ٦ يستعمله بمعنى اليقظة المعتادة.",
+        "en": "**Meaning:** gregoreo means to wake up and stay awake and alert, and then to be spiritually watchful. Many scholars think it was formed from the verb to awake; the name Gregory comes from it and means the watchful one. Van Dyke mostly has «اسهروا».\n**Uses and examples:** 1) literal watching: Matt 26:40 What, could ye not watch with me one hour?, Jesus in Gethsemane. 2) waiting for the Lord's return: Matt 24:42 Watch therefore: for ye know not what hour your Lord doth come. 3) standing firm: 1 Cor 16:13 Watch ye, stand fast in the faith, quit you like men, be strong, a short charge to a church. 4) a warning to a sleeping church: Rev 3:2 Be watchful, and strengthen the things which remain, the church in Sardis. 5) caring for the church: Acts 20:31 Therefore watch, Paul bidding farewell to the Ephesian elders.\n**In Van Dyke:** «اسهروا», «سهر» and «ساهر».\n**Note:** in 1 Thess 5:10 \"whether we wake or sleep\" Paul uses the verb to mean being alive, set against sleeping as dying, while two verses earlier (5:6) it has the ordinary sense of staying alert."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G1360",
+      "lemma": "διότι",
+      "gloss": {
+        "eg": "لأن، ولذلك",
+        "msa": "لأن، ولذلك",
+        "en": "because"
+      },
+      "entry": {
+        "eg": "**المعنى:** «ديوتي» أداة ربط معناها «لأن»: بتدّي سبب لحاجة. مركّبة من «ديا» و«هوتي»، وأحيانًا بتيجي بمعنى «علشان كده». وفاندايك بيترجمها «لأن» و«لأنهم» و«لذلك».\n**الاستخدامات والأمثلة:** ١) سبب لحكم: رومية ١: ٢١ «لأنهم لما عرفوا الله لم يمجدوه أو يشكروه كإله»، سبب غضب الله على الأمم. ٢) سبب تطمين: أعمال ١٨: ١٠ «لأني أنا معك، ولا يقع بك أحد ليؤذيك»، ربنا بيطمّن بولس في كورنثوس. ٣) سبب للصلاة غير المستجابة: يعقوب ٤: ٣ «لأنكم تطلبون رديا لكي تنفقوا في لذاتكم»، ليه الطلب ما بيحصلش. ٤) تعليل بآية: ١ بطرس ١: ٢٤ «كل جسد كعشب، وكل مجد إنسان كزهر عشب»، بيستشهد بإشعياء. ٥) نتيجة: أعمال ١٣: ٣٥ «ولذلك قال أيضا في مزمور آخر»، بولس بيكمّل استشهاده بالمزامير.\n**في فاندايك:** «لأن» و«لأنهم» و«لذلك».\n**ملاحظة:** في عبرانيين ١١: ٥ «ولم يوجد لأن الله نقله» الكلمة بتشرح ليه اختفى أخنوخ، والمعنى «لأن» الصريحة هي الغالبة على الكلمة، ومعنى «لذلك» أقل.",
+        "msa": "**المعنى:** «ديوتي» أداة ربط معناها «لأن»: تعطي سببًا لشيء. وهي مركّبة من «ديا» و«هوتي»، وتأتي أحيانًا بمعنى «لذلك». ويترجمها فاندايك «لأن» و«لأنهم» و«لذلك».\n**الاستعمالات والأمثلة:** ١) سبب لحكم: رومية ١: ٢١ «لأنهم لما عرفوا الله لم يمجدوه أو يشكروه كإله»، سبب غضب الله على الأمم. ٢) سبب للتطمين: أعمال ١٨: ١٠ «لأني أنا معك، ولا يقع بك أحد ليؤذيك»، يطمئن الله بولس في كورنثوس. ٣) سبب لصلاة غير مستجابة: يعقوب ٤: ٣ «لأنكم تطلبون رديا لكي تنفقوا في لذاتكم»، لماذا لا يتحقق الطلب. ٤) تعليل بنص: ١ بطرس ١: ٢٤ «كل جسد كعشب، وكل مجد إنسان كزهر عشب»، استشهاد بإشعياء. ٥) نتيجة: أعمال ١٣: ٣٥ «ولذلك قال أيضا في مزمور آخر»، يتابع بولس استشهاده بالمزامير.\n**في فاندايك:** «لأن» و«لأنهم» و«لذلك».\n**ملاحظة:** في عبرانيين ١١: ٥ «ولم يوجد لأن الله نقله» تشرح الكلمة سبب اختفاء أخنوخ، والغالب على الكلمة معنى «لأن» الصريح ومعنى «لذلك» أقل.",
+        "en": "**Meaning:** dioti is a conjunction meaning because: it gives the reason for something. It is built from dia and hoti, and sometimes it comes out as therefore. Van Dyke renders it «لأن», «لأنهم» or «لذلك».\n**Uses and examples:** 1) the reason for a verdict: Rom 1:21 Because that, when they knew God, they glorified him not as God, neither were thankful, why God's wrath falls on the nations. 2) the reason for reassurance: Acts 18:10 For I am with thee, and no man shall set on thee to hurt thee, God comforting Paul in Corinth. 3) why prayer fails: Jas 4:3 because ye ask amiss, that ye may consume it upon your lusts. 4) backing with Scripture: 1 Pet 1:24 all flesh is as grass, and all the glory of man as the flower of grass, a citation of Isaiah. 5) a result: Acts 13:35 Wherefore he saith also in another psalm, Paul continuing his citation from the Psalms.\n**In Van Dyke:** «لأن», «لأنهم» and «لذلك».\n**Note:** in Heb 11:5 and was not found, because God had translated him, the word explains why Enoch disappeared; the plain sense because is the main one, and therefore is less common."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G1504",
+      "lemma": "εἰκών",
+      "gloss": {
+        "eg": "صورة، شبه",
+        "msa": "صورة، شبه",
+        "en": "image"
+      },
+      "entry": {
+        "eg": "**المعنى:** «إيكون» هي الصورة: حاجة بتمثّل حاجة تانية وبتشبهها، سواء رسم أو تمثال أو شبه حقيقي. ومنها الكلمة الإنجليزي «icon». في العهد الجديد بتتقال على المسيح اللي هو صورة الله، وعلى المؤمنين اللي بيتغيروا على صورته، وعلى صنم الوحش.\n**الاستخدامات والأمثلة:** ١) المسيح صورة الله: ٢ كورنثوس ٤: ٤ «الذي هو صورة الله»، المسيح بيعلن الله على حقيقته. ٢) نصير زيه: رومية ٨: ٢٩ «ليكونوا مشابهين صورة ابنه»، ربنا بيشكّل المؤمنين على مثال المسيح. ٣) الإنسان الجديد: كولوسي ٣: ١٠ «حسب صورة خالقه»، التجديد بيرجّع الإنسان لصورة خالقه. ٤) بين آدمين: ١ كورنثوس ١٥: ٤٩ «وكما لبسنا صورة الترابي، سنلبس أيضا صورة السماوي»، آدم والمسيح. ٥) صنم: رؤيا ١٣: ١٥ «لصورة الوحش»، التمثال اللي بيتكلم.\n**في فاندايك:** «صورة» و«صورته».\n**ملاحظة:** في عبرانيين ١٠: ١ «لا نفس صورة الأشياء» الكلمة معناها الحقيقة الكاملة مقابل «الظل»، يعني الناموس ظل بس، والصورة الكاملة هي المسيح.",
+        "msa": "**المعنى:** «إيكون» هي الصورة: ما يمثّل شيئًا آخر ويشبهه، رسمًا كان أو تمثالًا أو شبهًا حقيقيًّا. ومنها الإنجليزية «icon». وتقال في العهد الجديد على المسيح الذي هو صورة الله، وعلى المؤمنين الذين يتغيّرون إلى صورته، وعلى صنم الوحش.\n**الاستعمالات والأمثلة:** ١) المسيح صورة الله: ٢ كورنثوس ٤: ٤ «الذي هو صورة الله»، فالمسيح يعلن الله على حقيقته. ٢) نصير مثله: رومية ٨: ٢٩ «ليكونوا مشابهين صورة ابنه»، فالله يشكّل المؤمنين على مثال المسيح. ٣) الإنسان الجديد: كولوسي ٣: ١٠ «حسب صورة خالقه»، فالتجديد يعيد الإنسان إلى صورة خالقه. ٤) بين آدمين: ١ كورنثوس ١٥: ٤٩ «وكما لبسنا صورة الترابي، سنلبس أيضا صورة السماوي»، آدم والمسيح. ٥) صنم: رؤيا ١٣: ١٥ «لصورة الوحش»، التمثال الذي يتكلم.\n**في فاندايك:** «صورة» و«صورته».\n**ملاحظة:** في عبرانيين ١٠: ١ «لا نفس صورة الأشياء» تعني الكلمة الحقيقة الكاملة في مقابل «الظل»، أي أن الناموس ظل فقط، والصورة الكاملة هي المسيح.",
+        "en": "**Meaning:** eikon is an image: something that represents and resembles something else, whether a drawing, a statue or a true likeness. English icon comes from it. In the New Testament it is said of Christ as the image of God, of believers being changed into his image, and of the beast's idol.\n**Uses and examples:** 1) Christ, the image of God: 2 Cor 4:4 who is the image of God, Christ shows God as he is. 2) becoming like him: Rom 8:29 to be conformed to the image of his Son, God shaping believers on the pattern of Christ. 3) the new self: Col 3:10 after the image of him that created him, renewal restores a person to the Creator's image. 4) two Adams: 1 Cor 15:49 as we have borne the image of the earthy, we shall also bear the image of the heavenly. 5) an idol: Rev 13:15 the image of the beast, the statue that speaks.\n**In Van Dyke:** «صورة» and «صورته».\n**Note:** in Heb 10:1 not the very image of the things, the word means the full reality as opposed to the shadow, so the law is only a shadow and the full image is Christ."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G1658",
+      "lemma": "ἐλεύθερος",
+      "gloss": {
+        "eg": "حر، حرّة",
+        "msa": "حر، حرّة",
+        "en": "free"
+      },
+      "entry": {
+        "eg": "**المعنى:** «إليوثيروس» يعني الحر: مش عبد ومش مربوط. بتتقال على الإنسان اللي مش مملوك، وعلى المتحرر من التزام أو قانون، وفاندايك بيترجمها «حر» و«أحرار» و«حرة».\n**الاستخدامات والأمثلة:** ١) حر مقابل عبد: غلاطية ٣: ٢٨ «ليس عبد ولا حر»، الفرق بين الناس بيختفي في المسيح. ٢) حرية بتتحول لخدمة: ١ كورنثوس ٩: ١٩ «فإني إذ كنت حرا من الجميع، استعبدت نفسي للجميع لأربح الأكثرين»، بولس بيسيب حقه. ٣) الحرة مقابل الجارية: غلاطية ٤: ٣١ «إذا أيها الإخوة لسنا أولاد جارية بل أولاد الحرة»، ساره وهاجر. ٤) التحرر من الناموس: رومية ٧: ٣ «فهي حرة من الناموس»، الأرملة بتبقى حرة من رابطة الجواز. ٥) حرية مسؤولة: ١ بطرس ٢: ١٦ «كأحرار، وليس كالذين الحرية عندهم سترة للشر»، الحرية مش حجة للشر.\n**في فاندايك:** «حر» و«أحرار» و«حرة».\n**ملاحظة:** في رومية ٦: ٢٠ «كنتم أحرارا من البر» الحرية هنا سخرية: العبد للخطية حر بس من البر.",
+        "msa": "**المعنى:** «إليوثيروس» تعني الحر: ليس عبدًا ولا مقيّدًا. وتقال على الإنسان غير المملوك، وعلى المتحرر من التزام أو شريعة، ويترجمها فاندايك «حر» و«أحرار» و«حرة».\n**الاستعمالات والأمثلة:** ١) حر مقابل عبد: غلاطية ٣: ٢٨ «ليس عبد ولا حر»، فالفوارق بين الناس تزول في المسيح. ٢) حرية تتحول خدمة: ١ كورنثوس ٩: ١٩ «فإني إذ كنت حرا من الجميع، استعبدت نفسي للجميع لأربح الأكثرين»، يتنازل بولس عن حقه. ٣) الحرة مقابل الجارية: غلاطية ٤: ٣١ «إذا أيها الإخوة لسنا أولاد جارية بل أولاد الحرة»، سارة وهاجر. ٤) التحرر من الشريعة: رومية ٧: ٣ «فهي حرة من الناموس»، فالأرملة تتحرر من رباط الزواج. ٥) حرية مسؤولة: ١ بطرس ٢: ١٦ «كأحرار، وليس كالذين الحرية عندهم سترة للشر»، فالحرية ليست ذريعة للشر.\n**في فاندايك:** «حر» و«أحرار» و«حرة».\n**ملاحظة:** في رومية ٦: ٢٠ «كنتم أحرارا من البر» في الحرية هنا مفارقة لاذعة: عبد الخطية حر من البر فقط.",
+        "en": "**Meaning:** eleutheros means free: not a slave, not bound. It is said of a person who is not owned, and of someone released from an obligation or a law. Van Dyke renders it «حر», «أحرار» or «حرة».\n**Uses and examples:** 1) free against slave: Gal 3:28 there is neither bond nor free, social divisions disappear in Christ. 2) freedom turned into service: 1 Cor 9:19 For though I be free from all men, yet have I made myself servant unto all, that I might gain the more, Paul giving up his rights. 3) the free woman against the slave woman: Gal 4:31 we are not children of the bondwoman, but of the free, Sarah and Hagar. 4) freed from the law: Rom 7:3 she is free from that law, the widow released from the marriage bond. 5) responsible freedom: 1 Pet 2:16 as free, and not using your liberty for a cloak of maliciousness, freedom is no excuse for evil.\n**In Van Dyke:** «حر», «أحرار» and «حرة».\n**Note:** in Rom 6:20 \"free from righteousness\" there is bitter irony: the slave of sin is free only from righteousness."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2226",
+      "lemma": "ζῷον",
+      "gloss": {
+        "eg": "حيوان، كائن حي",
+        "msa": "حيوان، كائن حي",
+        "en": "living creature"
+      },
+      "entry": {
+        "eg": "**المعنى:** «زوون» معناها «كائن حي»، وجاية من «زاو» (يحيا)، يعني اللي فيه حياة. بتقع على الحيوان العادي، بس أشهر استخدام ليها في العهد الجديد هو الأربع كائنات الحية اللي حوالين العرش في سفر الرؤيا.\n**الاستخدامات والأمثلة:** ١) كائنات العرش: رؤيا ٤: ٧ «والحيوان الأول شبه أسد، والحيوان الثاني شبه عجل»، أربعة كائنات بأشكال مختلفة. ٢) تسبيح مستمر: رؤيا ٤: ٨ «ولا تزال نهارا وليلا قائلة»، التسبيح اللي ما بيقفش. ٣) سجود أمام الخروف: رؤيا ٥: ٨ «خرت الأربعة الحيوانات والأربعة والعشرون شيخا أمام الخروف»، الكائنات والشيوخ بيسجدوا. ٤) حيوانات الذبائح: عبرانيين ١٣: ١١ «الحيوانات التي يدخل بدمها عن الخطية»، اللي بيحرقوها برا المحلة. ٥) تشبيه بالحيوان: ٢ بطرس ٢: ١٢ «فكحيوانات غير ناطقة»، المعلمين الكدابين.\n**في فاندايك:** «الحيوانات» و«الحيوان».\n**ملاحظة:** فاندايك بيستخدم «حيوان» حتى لكائنات الرؤيا، لكنهم مش حيوانات بالمعنى المعتاد، والكلمة اليونانية معناها حرفيًا «الأحياء».",
+        "msa": "**المعنى:** «زوون» تعني «كائنًا حيًّا»، من «زاو» (يحيا). وتقع على الحيوان العادي، لكن أشهر استعمالها في العهد الجديد هو الكائنات الحية الأربعة حول العرش في سفر الرؤيا.\n**الاستعمالات والأمثلة:** ١) كائنات العرش: رؤيا ٤: ٧ «والحيوان الأول شبه أسد، والحيوان الثاني شبه عجل»، أربعة كائنات بأشكال مختلفة. ٢) تسبيح دائم: رؤيا ٤: ٨ «ولا تزال نهارا وليلا قائلة»، تسبيح لا ينقطع. ٣) سجود أمام الخروف: رؤيا ٥: ٨ «خرت الأربعة الحيوانات والأربعة والعشرون شيخا أمام الخروف»، الكائنات والشيوخ يسجدون. ٤) حيوانات الذبائح: عبرانيين ١٣: ١١ «الحيوانات التي يدخل بدمها عن الخطية»، التي تُحرق خارج المحلة. ٥) تشبيه بالحيوان: ٢ بطرس ٢: ١٢ «فكحيوانات غير ناطقة»، المعلمون الكذبة.\n**في فاندايك:** «الحيوانات» و«الحيوان».\n**ملاحظة:** يستعمل فاندايك «حيوان» حتى لكائنات الرؤيا، وهي ليست حيوانات بالمعنى المعتاد، والكلمة اليونانية تعني حرفيًّا «الأحياء».",
+        "en": "**Meaning:** zoon means a living creature, from zao, to live, so anything that has life. It covers ordinary animals, but its best-known use in the New Testament is the four living creatures around the throne in Revelation.\n**Uses and examples:** 1) creatures of the throne: Rev 4:7 the first beast was like a lion, and the second beast like a calf, four creatures with different forms. 2) unceasing praise: Rev 4:8 they rest not day and night, saying. 3) worship before the Lamb: Rev 5:8 the four beasts and four and twenty elders fell down before the Lamb, the creatures and elders bow. 4) sacrificial animals: Heb 13:11 the bodies of those beasts, whose blood is brought into the sanctuary for sin, burned outside the camp. 5) a comparison: 2 Pet 2:12 as natural brute beasts, the false teachers.\n**In Van Dyke:** «الحيوانات» and «الحيوان».\n**Note:** Van Dyke uses «حيوان» even for the creatures of Revelation, who are not animals in the usual sense; the Greek word literally means the living ones."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2300",
+      "lemma": "θεάομαι",
+      "gloss": {
+        "eg": "ينظر، يشاهد",
+        "msa": "ينظر، يشاهد",
+        "en": "to look at, to behold"
+      },
+      "entry": {
+        "eg": "**المعنى:** «ثياوماي» يعني ينظر بانتباه ويتأمل، أو يشاهد حاجة مهمة أو غريبة بعينه، من الجذر اللي طلع منه «ثياتر» يعني مسرح. وبتقع كمان على «يروح يزور» حد يشوفه. وفاندايك بيترجمها «ينظر» و«يشاهد» و«يرى».\n**الاستخدامات والأمثلة:** ١) نظر متأمل: متى ١١: ٧ «ماذا خرجتم إلى البرية لتنظروا؟»، يسوع بيسأل الناس عن سبب خروجهم لسماع يوحنا. ٢) شهادة العيان: ١ يوحنا ١: ١ «الذي رأيناه بعيوننا، الذي شاهدناه»، الشاهد بيأكد إنه شاف بنفسه. ٣) رؤية المجد: يوحنا ١: ١٤ «ورأينا مجده، مجدا كما لوحيد من الآب»، التلاميذ بيشهدوا على تجسد الكلمة. ٤) نظرة يسوع: لوقا ٥: ٢٧ «فنظر عشارا اسمه لاوي جالسا عند مكان الجباية»، قبل ما يدعوه. ٥) زيارة: رومية ١٥: ٢٤ «لأني أرجو أن أراكم في مروري»، بولس بيخطط يزور روما.\n**في فاندايك:** «نظر» و«رأى» و«شاهد».\n**ملاحظة:** يوحنا بيفضّل الفعل ده لما يتكلم عن الشهادة بالعين، وفي متى ٢٢: ١١ «لينظر المتكئين» معناها يفحصهم.",
+        "msa": "**المعنى:** «ثياوماي» تعني ينظر باهتمام ويتأمل، أو يشاهد أمرًا مهمًّا أو غريبًا بعينه، وهي من الجذر الذي أعطى «ثياتر» أي المسرح. وتأتي أيضًا بمعنى «يزور» ليرى شخصًا. ويترجمها فاندايك «ينظر» و«يشاهد» و«يرى».\n**الاستعمالات والأمثلة:** ١) نظر متأمل: متى ١١: ٧ «ماذا خرجتم إلى البرية لتنظروا؟»، يسأل يسوع الناس عن سبب خروجهم لسماع يوحنا. ٢) شهادة العيان: ١ يوحنا ١: ١ «الذي رأيناه بعيوننا، الذي شاهدناه»، فالشاهد يؤكد أنه رأى بنفسه. ٣) رؤية المجد: يوحنا ١: ١٤ «ورأينا مجده، مجدا كما لوحيد من الآب»، التلاميذ يشهدون على تجسد الكلمة. ٤) نظرة يسوع: لوقا ٥: ٢٧ «فنظر عشارا اسمه لاوي جالسا عند مكان الجباية»، قبل أن يدعوه. ٥) زيارة: رومية ١٥: ٢٤ «لأني أرجو أن أراكم في مروري»، يخطط بولس لزيارة روما.\n**في فاندايك:** «نظر» و«رأى» و«شاهد».\n**ملاحظة:** يفضّل يوحنا هذا الفعل حين يتحدث عن الشهادة بالعين، وفي متى ٢٢: ١١ «لينظر المتكئين» تعني يتفحصهم.",
+        "en": "**Meaning:** theaomai means to look at with attention and take in, to watch something important or unusual with one's eyes, from the same root as theatre. It can also mean to go and see someone. Van Dyke renders it «نظر», «رأى» or «شاهد».\n**Uses and examples:** 1) an attentive look: Matt 11:7 What went ye out into the wilderness to see?, Jesus asking why the crowds went out to hear John. 2) eyewitness testimony: 1 John 1:1 which we have seen with our eyes, which we have looked upon, the witness stressing that he saw for himself. 3) seeing glory: John 1:14 and we beheld his glory, the glory as of the only begotten of the Father, the disciples testifying to the incarnation. 4) Jesus' glance: Luke 5:27 he saw a publican, named Levi, sitting at the receipt of custom, before he called him. 5) a visit: Rom 15:24 I trust to see you in my journey, Paul planning to visit Rome.\n**In Van Dyke:** «نظر», «رأى» and «شاهد».\n**Note:** John prefers this verb when speaking of eyewitness testimony, and in Matt 22:11 \"to see the guests\" it means to inspect them."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2379",
+      "lemma": "θυσιαστήριον",
+      "gloss": {
+        "eg": "مذبح",
+        "msa": "مذبح",
+        "en": "altar"
+      },
+      "entry": {
+        "eg": "**المعنى:** «ثيسياستيريون» هو المذبح: المكان اللي بيقدّموا عليه القربان أو الذبيحة. جاية من «ثيسيا» اللي هي الذبيحة. والمقصود بيها مذبح المحرقة في الهيكل، أو مذبح البخور، أو مذبح الذهب في السما في الرؤيا.\n**الاستخدامات والأمثلة:** ١) قبل التقدمة: متى ٥: ٢٤ «فاترك هناك قربانك قدام المذبح، واذهب أولا اصطلح مع أخيك»، الصلح مع الأخ قبل العبادة. ٢) المذبح أعظم: متى ٢٣: ١٩ «ألقربان أم المذبح الذي يقدس القربان؟»، يسوع بيرد على الكتبة. ٣) إسحاق: يعقوب ٢: ٢١ «إذ قدم إسحاق ابنه على المذبح»، مثال إبراهيم. ٤) الخدمة في الهيكل: ١ كورنثوس ٩: ١٣ «الذين يلازمون المذبح يشاركون المذبح»، الكهنة وأكلهم. ٥) المذبح السماوي: رؤيا ٨: ٣ «مذبح الذهب الذي أمام العرش»، صلوات القديسين.\n**في فاندايك:** «مذبح» و«المذبح».\n**ملاحظة:** العهد الجديد بيستخدم كلمة تانية، «بوموس»، لمذابح الوثنيين، يعني ده اللفظ الخاص بمذبح الله.",
+        "msa": "**المعنى:** «ثيسياستيريون» هو المذبح: الموضع الذي تُقدَّم عليه التقدمة أو الذبيحة. وهو من «ثيسيا» أي الذبيحة. والمقصود به مذبح المحرقة في الهيكل، أو مذبح البخور، أو مذبح الذهب في السماء في الرؤيا.\n**الاستعمالات والأمثلة:** ١) قبل التقدمة: متى ٥: ٢٤ «فاترك هناك قربانك قدام المذبح، واذهب أولا اصطلح مع أخيك»، فالصلح مع الأخ قبل العبادة. ٢) المذبح الأعظم: متى ٢٣: ١٩ «ألقربان أم المذبح الذي يقدس القربان؟»، يردّ يسوع على الكتبة. ٣) إسحاق: يعقوب ٢: ٢١ «إذ قدم إسحاق ابنه على المذبح»، مثال إبراهيم. ٤) الخدمة في الهيكل: ١ كورنثوس ٩: ١٣ «الذين يلازمون المذبح يشاركون المذبح»، الكهنة ونصيبهم. ٥) المذبح السماوي: رؤيا ٨: ٣ «مذبح الذهب الذي أمام العرش»، صلوات القديسين.\n**في فاندايك:** «مذبح» و«المذبح».\n**ملاحظة:** يستعمل العهد الجديد كلمة أخرى، «بوموس»، لمذابح الوثنيين، فهذا اللفظ خاص بمذبح الله.",
+        "en": "**Meaning:** thusiasterion is an altar: the place where an offering or sacrifice is made, from thusia, a sacrifice. It means the altar of burnt offering in the temple, the altar of incense, or the golden altar in heaven in Revelation.\n**Uses and examples:** 1) before the gift: Matt 5:24 Leave there thy gift before the altar, and go thy way; first be reconciled to thy brother, reconciliation before worship. 2) the greater altar: Matt 23:19 the gift, or the altar that sanctifieth the gift?, Jesus answering the scribes. 3) Isaac: Jas 2:21 when he had offered Isaac his son upon the altar, Abraham as an example. 4) temple service: 1 Cor 9:13 they which wait at the altar are partakers with the altar, the priests and their portion. 5) the heavenly altar: Rev 8:3 the golden altar which was before the throne, with the prayers of the saints.\n**In Van Dyke:** «مذبح» and «المذبح».\n**Note:** the New Testament uses another word, bomos, for pagan altars, so this one is reserved for the altar of the true God."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2836",
+      "lemma": "κοιλία",
+      "gloss": {
+        "eg": "بطن، جوف، رحم",
+        "msa": "بطن، جوف، رحم",
+        "en": "belly, womb"
+      },
+      "entry": {
+        "eg": "**المعنى:** «كويليا» هي البطن: التجويف اللي فيه الجهاز الهضمي، وكمان الرحم. وبتقع على الإنسان من جوّه كله. وفاندايك بيقول «بطن» لما بتتعلق بالأم والجنين، و«جوف» لما بتتعلق بالأكل والجهاز الهضمي.\n**الاستخدامات والأمثلة:** ١) رحم الأم: لوقا ١: ٤١ «ارتكض الجنين في بطنها»، يوحنا المعمدان في بطن أليصابات. ٢) من الولادة: أعمال ٣: ٢ «وكان رجل أعرج من بطن أمه يحمل»، معاقة من الولادة. ٣) بطن الحوت: متى ١٢: ٤٠ «كما كان يونان في بطن الحوت»، علامة يونان. ٤) الأكل: ١ كورنثوس ٦: ١٣ «الأطعمة للجوف والجوف للأطعمة»، الجسد مش للزنا. ٥) بطن إله: فيلبي ٣: ١٩ «الذين إلههم بطنهم»، اللي همهم الشهوات. ٦) المرارة من الداخل: رؤيا ١٠: ١٠ «صار جوفي مرا»، يوحنا أكل السفر الصغير.\n**في فاندايك:** «بطن» و«الجوف».\n**ملاحظة:** في متى ١٩: ١٢ «ولدوا هكذا من بطون أمهاتهم» الكلمة بتأكد إن الحالة من الميلاد، زي ما في أعمال ٣: ٢ و١٤: ٨.",
+        "msa": "**المعنى:** «كويليا» هي البطن: التجويف الذي فيه الجهاز الهضمي، وهي أيضًا الرحم. وتقع على باطن الإنسان عمومًا. ويقول فاندايك «بطن» حين يتعلق الأمر بالأم والجنين، و«جوف» حين يتعلق بالطعام والهضم.\n**الاستعمالات والأمثلة:** ١) رحم الأم: لوقا ١: ٤١ «ارتكض الجنين في بطنها»، يوحنا المعمدان في بطن أليصابات. ٢) من الولادة: أعمال ٣: ٢ «وكان رجل أعرج من بطن أمه يحمل»، إعاقة منذ الولادة. ٣) بطن الحوت: متى ١٢: ٤٠ «كما كان يونان في بطن الحوت»، علامة يونان. ٤) الطعام: ١ كورنثوس ٦: ١٣ «الأطعمة للجوف والجوف للأطعمة»، فالجسد ليس للزنا. ٥) بطن إله: فيلبي ٣: ١٩ «الذين إلههم بطنهم»، من همّهم الشهوات. ٦) المرارة من الداخل: رؤيا ١٠: ١٠ «صار جوفي مرا»، أكل يوحنا السفر الصغير.\n**في فاندايك:** «بطن» و«الجوف».\n**ملاحظة:** في متى ١٩: ١٢ «ولدوا هكذا من بطون أمهاتهم» تؤكد الكلمة أن الحالة منذ الولادة، كما في أعمال ٣: ٢ و١٤: ٨.",
+        "en": "**Meaning:** koilia is the belly: the cavity that holds the digestive organs, and also the womb. It can stand for a person's inner being. Van Dyke has «بطن» when it concerns a mother and child, and «جوف» when it concerns food and digestion.\n**Uses and examples:** 1) the mother's womb: Luke 1:41 the babe leaped in her womb, John the Baptist in Elisabeth. 2) from birth: Acts 3:2 a certain man lame from his mother's womb was carried, disabled from birth. 3) the fish's belly: Matt 12:40 as Jonas was three days and three nights in the whale's belly, the sign of Jonah. 4) food: 1 Cor 6:13 meats for the belly, and the belly for meats, the body is not for fornication. 5) a belly for a god: Phil 3:19 whose God is their belly, those ruled by appetite. 6) bitterness within: Rev 10:10 my belly was bitter, John eating the little scroll.\n**In Van Dyke:** «بطن» and «الجوف».\n**Note:** in Matt 19:12 \"from their mother's womb\" the word stresses that the condition is from birth, as in Acts 3:2 and 14:8."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2872",
+      "lemma": "κοπιάω",
+      "gloss": {
+        "eg": "يتعب، يشقى",
+        "msa": "يتعب، يكدّ",
+        "en": "to labor"
+      },
+      "entry": {
+        "eg": "**المعنى:** «كوپياو» يعني يتعب ويشقى في شغل صعب لحد ما يرهق. بتقع على التعب الجسدي، وعلى التعب في الخدمة والكرازة. وفاندايك بيترجمها «تعب» و«يتعب» و«تعبت».\n**الاستخدامات والأمثلة:** ١) تعب الصيد: لوقا ٥: ٥ «قد تعبنا الليل كله ولم نأخذ شيئا»، بطرس قبل المعجزة. ٢) شغل اليد: ١ كورنثوس ٤: ١٢ «ونتعب عاملين بأيدينا»، بولس بيشتغل في الخيمة. ٣) تعب الكرازة: رومية ١٦: ١٢ «التاعبتين في الرب»، بولس بيسلم على تريفينا وتريفوسا. ٤) تعب العطاء: أفسس ٤: ٢٨ «بل بالحري يتعب عاملا الصالح بيديه»، السارق يشتغل علشان يعطي. ٥) تعب الخدمة: ١ تيموثاوس ٥: ١٧ «الذين يتعبون في الكلمة والتعليم»، الشيوخ اللي يستحقوا كرامة مضاعفة. ٦) زنابق: متى ٦: ٢٨ «لا تتعب ولا تغزل».\n**في فاندايك:** «تعب» و«يتعب».\n**ملاحظة:** بولس بيحب الفعل ده لوصف الخدمة، زي في فيلبي ٢: ١٦ «ولا تعبت باطلا»، فالتعب ده تعب له معنى مش مجرد إرهاق.",
+        "msa": "**المعنى:** «كوپياو» تعني يتعب ويشقى في عمل شاق حتى الإرهاق. وتقع على التعب الجسدي، وعلى التعب في الخدمة والكرازة. ويترجمها فاندايك «تعب» و«يتعب» و«تعبت».\n**الاستعمالات والأمثلة:** ١) تعب الصيد: لوقا ٥: ٥ «قد تعبنا الليل كله ولم نأخذ شيئا»، بطرس قبل المعجزة. ٢) عمل اليد: ١ كورنثوس ٤: ١٢ «ونتعب عاملين بأيدينا»، بولس يشتغل في صناعة الخيام. ٣) تعب الكرازة: رومية ١٦: ١٢ «التاعبتين في الرب»، بولس يسلّم على تريفينا وتريفوسا. ٤) تعب العطاء: أفسس ٤: ٢٨ «بل بالحري يتعب عاملا الصالح بيديه»، السارق يعمل ليعطي. ٥) تعب الخدمة: ١ تيموثاوس ٥: ١٧ «الذين يتعبون في الكلمة والتعليم»، الشيوخ المستحقون كرامة مضاعفة. ٦) الزنابق: متى ٦: ٢٨ «لا تتعب ولا تغزل».\n**في فاندايك:** «تعب» و«يتعب».\n**ملاحظة:** يحب بولس هذا الفعل لوصف الخدمة، كما في فيلبي ٢: ١٦ «ولا تعبت باطلا»، فهو تعب له معنى لا مجرد إرهاق.",
+        "en": "**Meaning:** kopiao means to toil and labour at hard work until worn out. It covers physical weariness and also toil in ministry and preaching. Van Dyke renders it «تعب», «يتعب» or «تعبت».\n**Uses and examples:** 1) the fishermen's toil: Luke 5:5 we have toiled all the night, and have taken nothing, Peter before the miracle. 2) manual work: 1 Cor 4:12 labouring, working with our own hands, Paul at his trade. 3) toil in the Lord's work: Rom 16:12 who labour in the Lord, greetings to Tryphena and Tryphosa. 4) working to give: Eph 4:28 let him labour, working with his hands the thing which is good, the thief working in order to give. 5) toil in teaching: 1 Tim 5:17 they who labour in the word and doctrine, elders worthy of double honour. 6) the lilies: Matt 6:28 they toil not, neither do they spin.\n**In Van Dyke:** «تعب» and «يتعب».\n**Note:** Paul likes this verb for ministry, as in Phil 2:16 neither laboured in vain, which is toil with a purpose and not mere exhaustion."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2967",
+      "lemma": "κωλύω",
+      "gloss": {
+        "eg": "يمنع، يحول دون",
+        "msa": "يمنع، يحول دون",
+        "en": "to prevent, to forbid"
+      },
+      "entry": {
+        "eg": "**المعنى:** «كوليو» يعني يمنع ويعطّل: يخلي حاجة ما تحصلش أو يقف في وش حد. بتقع على المنع بكلام أو بقوة، وعلى العائق الخارجي. وفاندايك بيترجمها «يمنع» و«منع» و«مانعين».\n**الاستخدامات والأمثلة:** ١) الأطفال: متى ١٩: ١٤ «دعوا الأولاد يأتون إلي ولا تمنعوهم»، يسوع بيعترض على التلاميذ. ٢) المعمودية: أعمال ٨: ٣٦ «ماذا يمنع أن أعتمد؟»، الخصي الحبشي. ٣) منع إلهي: أعمال ١٦: ٦ «منعهم الروح القدس أن يتكلموا بالكلمة في أسيا»، ربنا بيوجّه الرسل. ٤) منع من السفر: رومية ١: ١٣ «ومنعت حتى الآن»، بولس مش قادر يزور روما. ٥) منع من يخدم باسم يسوع: مرقس ٩: ٣٨ «فمنعناه لأنه ليس يتبعنا»، يوحنا والتلاميذ. ٦) منع الزواج: ١ تيموثاوس ٤: ٣ «مانعين عن الزواج».\n**في فاندايك:** «يمنع» و«منع» و«مانع».\n**ملاحظة:** سؤال الخصي «ماذا يمنع أن أعتمد؟» في أعمال ٨: ٣٦ وسؤال بطرس في أعمال ١٠: ٤٧ فيهم نفس الفعل، وفيه رأي إن ده كان تعبير مألوف في طقس المعمودية.",
+        "msa": "**المعنى:** «كوليو» تعني يمنع ويعطّل: يحول دون وقوع شيء أو يقف في وجه أحد. وتقع على المنع بالقول أو بالقوة وعلى العائق الخارجي. ويترجمها فاندايك «يمنع» و«منع» و«مانعين».\n**الاستعمالات والأمثلة:** ١) الأطفال: متى ١٩: ١٤ «دعوا الأولاد يأتون إلي ولا تمنعوهم»، يعترض يسوع على التلاميذ. ٢) المعمودية: أعمال ٨: ٣٦ «ماذا يمنع أن أعتمد؟»، الخصي الحبشي. ٣) منع إلهي: أعمال ١٦: ٦ «منعهم الروح القدس أن يتكلموا بالكلمة في أسيا»، فالله يوجّه الرسل. ٤) المنع من السفر: رومية ١: ١٣ «ومنعت حتى الآن»، لم يستطع بولس زيارة روما. ٥) منع من يخدم باسم يسوع: مرقس ٩: ٣٨ «فمنعناه لأنه ليس يتبعنا»، يوحنا والتلاميذ. ٦) منع الزواج: ١ تيموثاوس ٤: ٣ «مانعين عن الزواج».\n**في فاندايك:** «يمنع» و«منع» و«مانع».\n**ملاحظة:** سؤال الخصي «ماذا يمنع أن أعتمد؟» في أعمال ٨: ٣٦ وسؤال بطرس في أعمال ١٠: ٤٧ فيهما الفعل نفسه، وفي الدراسات رأي بأنه تعبير مألوف في طقس المعمودية.",
+        "en": "**Meaning:** koluo means to prevent and hinder: to stop something happening or stand in someone's way. It covers stopping by word or by force, and any outside obstacle. Van Dyke renders it «يمنع», «منع» or «مانعين».\n**Uses and examples:** 1) the children: Matt 19:14 Suffer little children, and forbid them not, to come unto me, Jesus objecting to the disciples. 2) baptism: Acts 8:36 what doth hinder me to be baptized?, the Ethiopian eunuch. 3) divine restraint: Acts 16:6 forbidden of the Holy Ghost to preach the word in Asia, God steering the apostles. 4) blocked travel: Rom 1:13 but was let hitherto, Paul unable to visit Rome. 5) forbidding someone working in Jesus' name: Mark 9:38 and we forbad him, because he followeth not us, John and the disciples. 6) forbidding marriage: 1 Tim 4:3 forbidding to marry.\n**In Van Dyke:** «يمنع», «منع» and «مانع».\n**Note:** the eunuch's question in Acts 8:36 and Peter's in Acts 10:47 share this verb, and some scholars see in it a stock phrase of early baptism."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G3403",
+      "lemma": "μιμνήσκω",
+      "gloss": {
+        "eg": "يتذكر، يذكر",
+        "msa": "يتذكر، يذكر",
+        "en": "to remember"
+      },
+      "entry": {
+        "eg": "**المعنى:** «ميمنيسكو» يعني يفتكر، وبيجي كمان بمعنى «يذكر حد عند حد» يعني ما يهملوش. الكتاب بيستخدمه لما حد يرجع لفكرة نسيها، ولما ربنا «يذكر» حد بمعنى إنه يعمل حاجة لأجله. وفاندايك بيقول «تذكر» و«ذكر» و«اذكر».\n**الاستخدامات والأمثلة:** ١) تذكّر فجأة: متى ٥: ٢٣ «وهناك تذكرت أن لأخيك شيئا عليك»، وإنت عند المذبح. ٢) تذكير بكلام قاله: لوقا ٢٤: ٦ «اذكرن كيف كلمكن وهو بعد في الجليل»، الملاكين للنسوة عند القبر. ٣) ربنا يذكر: أعمال ١٠: ٣١ «سمعت صلاتك وذكرت صدقاتك أمام الله»، ربنا بيلتفت لكرنيليوس. ٤) رحمة: لوقا ١: ٥٤ «ليذكر رحمة»، ربنا بيفتكر وعده. ٥) عدم التذكر: عبرانيين ١٠: ١٧ «ولن أذكر خطاياهم وتعدياتهم في ما بعد»، وعد العهد الجديد. ٦) تذكير بالماضي: لوقا ١٦: ٢٥ «اذكر أنك استوفيت خيراتك في حياتك»، إبراهيم للغني.\n**في فاندايك:** «تذكر» و«ذكر» و«اذكر».\n**ملاحظة:** «يذكر» لما الله يكون فاعلها معناها غالبًا إنه يعمل حاجة، مش بس يفتكر، وده بيظهر في أعمال ١٠: ٣١ وعبرانيين ١٠: ١٧.",
+        "msa": "**المعنى:** «ميمنيسكو» تعني يتذكر ويستحضر في الذهن، وتأتي أيضًا بمعنى «يذكر أحدًا» أي لا يهمله. وفي الكتاب تُستعمل حين يعود أحد إلى فكرة نسيها، وحين «يذكر» الله أحدًا فيتحرك لأجله. ويقول فاندايك «تذكر» و«ذكر» و«اذكر».\n**الاستعمالات والأمثلة:** ١) تذكّر مفاجئ: متى ٥: ٢٣ «وهناك تذكرت أن لأخيك شيئا عليك»، وأنت عند المذبح. ٢) تذكير بكلام قيل: لوقا ٢٤: ٦ «اذكرن كيف كلمكن وهو بعد في الجليل»، الملاكان للنسوة عند القبر. ٣) الله يذكر: أعمال ١٠: ٣١ «سمعت صلاتك وذكرت صدقاتك أمام الله»، فالله يلتفت إلى كرنيليوس. ٤) رحمة: لوقا ١: ٥٤ «ليذكر رحمة»، فالله يتذكر وعده. ٥) عدم التذكر: عبرانيين ١٠: ١٧ «ولن أذكر خطاياهم وتعدياتهم في ما بعد»، وعد العهد الجديد. ٦) تذكير بما فات: لوقا ١٦: ٢٥ «اذكر أنك استوفيت خيراتك في حياتك»، إبراهيم للغني.\n**في فاندايك:** «تذكر» و«ذكر» و«اذكر».\n**ملاحظة:** حين يكون الله فاعل «يذكر» فمعناها غالبًا أنه يتحرك ويتصرف لا أنه يتذكر فقط، كما في أعمال ١٠: ٣١ وعبرانيين ١٠: ١٧.",
+        "en": "**Meaning:** mimnesko means to remember and call to mind, and also to mention someone, that is not to neglect them. In Scripture it is used when someone returns to a thought they had forgotten, and when God remembers someone and so acts for them. Van Dyke has «تذكر», «ذكر» and «اذكر».\n**Uses and examples:** 1) a sudden memory: Matt 5:23 and there rememberest that thy brother hath ought against thee, while standing at the altar. 2) recalling words: Luke 24:6 remember how he spake unto you when he was yet in Galilee, the angels to the women at the tomb. 3) God remembering: Acts 10:31 thy prayer is heard, and thine alms are had in remembrance in the sight of God, God turning toward Cornelius. 4) mercy: Luke 1:54 in remembrance of his mercy, God keeping his promise. 5) not remembering: Heb 10:17 and their sins and iniquities will I remember no more, the promise of the new covenant. 6) recalling the past: Luke 16:25 Son, remember that thou in thy lifetime receivedst thy good things, Abraham to the rich man.\n**In Van Dyke:** «تذكر», «ذكر» and «اذكر».\n**Note:** when God is the subject, remembering usually means acting, not just recalling, as in Acts 10:31 and Heb 10:17."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G3983",
+      "lemma": "πεινάω",
+      "gloss": {
+        "eg": "يجوع",
+        "msa": "يجوع",
+        "en": "to hunger"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پيناو» يعني يجوع: يحس بالجوع. بتقع على الجوع الحرفي، وعلى الاشتياق الشديد لحاجة، وفاندايك بيترجمها «جاع» و«يجوع» و«جعت» و«جائع».\n**الاستخدامات والأمثلة:** ١) جوع يسوع: متى ٤: ٢ «فبعد ما صام أربعين نهارا وأربعين ليلة، جاع أخيرا»، قبل التجربة. ٢) جوع الأعداء: رومية ١٢: ٢٠ «فإن جاع عدوك فأطعمه»، الرد على العداوة بالخير. ٣) خدمة الجائعين: متى ٢٥: ٣٥ «لأني جعت فأطعمتموني»، مقياس الدينونة. ٤) خبرة بولس: فيلبي ٤: ١٢ «قد تدربت أن أشبع وأن أجوع»، القناعة في كل حال. ٥) جوع للبر: متى ٥: ٦ «طوبى للجياع والعطاش إلى البر»، الاشتياق لله. ٦) جوع مش في محله: ١ كورنثوس ١١: ٣٤ «إن كان أحد يجوع فليأكل في البيت»، تصحيح لعشاء الرب في كورنثوس.\n**في فاندايك:** «جاع» و«جائع» و«جعت».\n**ملاحظة:** في متى ٥: ٦ السياق بيبين إن الكلمة لما بتقع على «البر» بتبقى اشتياق مش مجرد جوع جسدي.",
+        "msa": "**المعنى:** «پيناو» تعني يجوع: يشعر بالجوع. وتقع على الجوع الحرفي وعلى الشوق الشديد إلى شيء، ويترجمها فاندايك «جاع» و«يجوع» و«جعت» و«جائع».\n**الاستعمالات والأمثلة:** ١) جوع يسوع: متى ٤: ٢ «فبعد ما صام أربعين نهارا وأربعين ليلة، جاع أخيرا»، قبل التجربة. ٢) جوع الأعداء: رومية ١٢: ٢٠ «فإن جاع عدوك فأطعمه»، الردّ على العداوة بالخير. ٣) خدمة الجائعين: متى ٢٥: ٣٥ «لأني جعت فأطعمتموني»، مقياس الدينونة. ٤) خبرة بولس: فيلبي ٤: ١٢ «قد تدربت أن أشبع وأن أجوع»، القناعة في كل حال. ٥) جوع إلى البر: متى ٥: ٦ «طوبى للجياع والعطاش إلى البر»، الشوق إلى الله. ٦) جوع في غير موضعه: ١ كورنثوس ١١: ٣٤ «إن كان أحد يجوع فليأكل في البيت»، تصحيح لعشاء الرب في كورنثوس.\n**في فاندايك:** «جاع» و«جائع» و«جعت».\n**ملاحظة:** في متى ٥: ٦ تدل القرينة على أن الكلمة حين تقع على «البر» تكون شوقًا لا جوعًا جسديًّا فقط.",
+        "en": "**Meaning:** peinao means to be hungry. It covers literal hunger and also an intense longing for something. Van Dyke has «جاع», «يجوع», «جعت» and «جائع».\n**Uses and examples:** 1) Jesus hungry: Matt 4:2 when he had fasted forty days and forty nights, he was afterward an hungred, before the temptation. 2) an enemy hungry: Rom 12:20 if thine enemy hunger, feed him, answering hostility with kindness. 3) feeding the hungry: Matt 25:35 for I was an hungred, and ye gave me meat, the test at the judgment. 4) Paul's experience: Phil 4:12 both to be full and to be hungry, contentment in every state. 5) hunger for righteousness: Matt 5:6 Blessed are they which do hunger and thirst after righteousness, longing for God. 6) hunger in the wrong place: 1 Cor 11:34 if any man hunger, let him eat at home, correcting the Lord's Supper at Corinth.\n**In Van Dyke:** «جاع», «جائع» and «جعت».\n**Note:** in Matt 5:6 the context shows that when the word is applied to righteousness it is a longing, not only a physical hunger."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G4008",
+      "lemma": "πέραν",
+      "gloss": {
+        "eg": "عبر، الجانب الآخر",
+        "msa": "عبر، الجانب الآخر",
+        "en": "other side, beyond"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پيران» يعني «على الجانب التاني»: ظرف أو حرف جر بيحدد المكان اللي ورا حاجة بينها وبينك مسافة أو مية. وفاندايك بيترجمها «عبر» وهي لفظ قديم معناه الجانب الآخر، و«العبر» تعني الشاطئ التاني.\n**الاستخدامات والأمثلة:** ١) عبر الأردن: متى ٤: ١٥ «عبر الأردن، جليل الأمم»، المنطقة اللي ورا الأردن. ٢) عبر البحيرة: مرقس ٤: ٣٥ «لنجتز إلى العبر»، قبل العاصفة. ٣) الشاطئ المقابل: متى ٨: ٢٨ «ولما جاء إلى العبر إلى كورة الجرجسيين»، شفاء المجنونين. ٤) إرسال التلاميذ: متى ١٤: ٢٢ «ويسبقوه إلى العبر حتى يصرف الجموع»، بعد إشباع الجموع. ٥) مكان يوحنا: يوحنا ٣: ٢٦ «الذي كان معك في عبر الأردن»، شهادة يوحنا ليسوع.\n**في فاندايك:** «عبر» و«العبر».\n**ملاحظة:** في متى ١٩: ١ «من عبر الأردن» المقصود الجهة الشرقية للأردن، واللي منها خرج اسم إقليم «پيريا» في التاريخ.",
+        "msa": "**المعنى:** «پيران» تعني «في الجانب الآخر»: ظرف أو حرف جر يحدد الموضع الذي وراء شيء يفصله عنك ماء أو مسافة. ويترجمها فاندايك «عبر»، وهو لفظ قديم بمعنى الجانب الآخر، و«العبر» أي الشاطئ المقابل.\n**الاستعمالات والأمثلة:** ١) عبر الأردن: متى ٤: ١٥ «عبر الأردن، جليل الأمم»، المنطقة التي وراء الأردن. ٢) عبر البحيرة: مرقس ٤: ٣٥ «لنجتز إلى العبر»، قبل العاصفة. ٣) الشاطئ المقابل: متى ٨: ٢٨ «ولما جاء إلى العبر إلى كورة الجرجسيين»، شفاء المجنونين. ٤) إرسال التلاميذ: متى ١٤: ٢٢ «ويسبقوه إلى العبر حتى يصرف الجموع»، بعد إشباع الجموع. ٥) موضع يوحنا: يوحنا ٣: ٢٦ «الذي كان معك في عبر الأردن»، شهادة يوحنا ليسوع.\n**في فاندايك:** «عبر» و«العبر».\n**ملاحظة:** في متى ١٩: ١ «من عبر الأردن» المقصود الجهة الشرقية للأردن، ومنها جاء اسم إقليم «پيريا» في التاريخ.",
+        "en": "**Meaning:** peran means on the other side: an adverb or preposition marking the place across something, such as water or a distance. Van Dyke renders it «عبر», an old word for the far side, and «العبر» for the opposite shore.\n**Uses and examples:** 1) beyond the Jordan: Matt 4:15 beyond Jordan, Galilee of the Gentiles, the region across the river. 2) across the lake: Mark 4:35 Let us pass over unto the other side, before the storm. 3) the opposite shore: Matt 8:28 when he was come to the other side into the country of the Gergesenes, the healing of the two men. 4) sending the disciples ahead: Matt 14:22 and to go before him unto the other side, while he sent the crowds away after the feeding. 5) John's location: John 3:26 he that was with thee beyond Jordan, John's testimony to Jesus.\n**In Van Dyke:** «عبر» and «العبر».\n**Note:** in Matt 19:1 \"beyond Jordan\" means the east side of the river, from which the region later called Perea took its name."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G4016",
+      "lemma": "περιβάλλω",
+      "gloss": {
+        "eg": "يلبس، يكسو",
+        "msa": "يلبس، يكسو",
+        "en": "to put on, to clothe"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پيريباللو» يعني يحط حاجة حوالين حاجة: يلبس هدوم أو يغطي. جاية من «پيري» (حوالين) و«باللو» (يرمي)، والمعنى الحرفي «يرمي حوالين». وفاندايك بيترجمها «لبس» و«كسا» و«تسربل»، والأخيرة بتستخدمها في سفر الرؤيا.\n**الاستخدامات والأمثلة:** ١) الكسوة اليومية: متى ٦: ٣١ «ماذا نلبس؟»، يسوع بيمنع القلق على اللبس. ٢) زنابق الحقل: متى ٦: ٢٩ «ولا سليمان في كل مجده كان يلبس كواحدة منها»، جمال الزنابق أعظم من ملابس الملوك. ٣) كسوة الغريب: متى ٢٥: ٣٨ «أو عريانا فكسوناك؟»، عمل من أعمال الرحمة. ٤) ثياب نصر: رؤيا ٣: ٥ «من يغلب فذلك سيلبس ثيابا بيضا»، وعد لكنيسة سارديس. ٥) تسرّبل بالنور: رؤيا ١٢: ١ «امرأة متسربلة بالشمس»، الآية العظيمة في السما. ٦) الملاك لبطرس: أعمال ١٢: ٨ «البس رداءك واتبعني».\n**في فاندايك:** «لبس» و«كسا» و«متسربل».\n**ملاحظة:** «متسربلا» في رؤيا ١٠: ١ «متسربلا بسحابة» استخدام شعري، والكلمة معناها «لابس» ببساطة.",
+        "msa": "**المعنى:** «پيريباللو» تعني يضع شيئًا حول شيء: يلبس ثوبًا أو يغطّي. وهي من «پيري» (حول) و«باللو» (يلقي)، والمعنى الحرفي «يلقي حول». ويترجمها فاندايك «لبس» و«كسا» و«تسربل»، ويكثر الأخير في الرؤيا.\n**الاستعمالات والأمثلة:** ١) الكسوة اليومية: متى ٦: ٣١ «ماذا نلبس؟»، ينهى يسوع عن القلق على اللباس. ٢) زنابق الحقل: متى ٦: ٢٩ «ولا سليمان في كل مجده كان يلبس كواحدة منها»، جمال الزنابق يفوق ثياب الملوك. ٣) كسوة الغريب: متى ٢٥: ٣٨ «أو عريانا فكسوناك؟»، عمل من أعمال الرحمة. ٤) ثياب النصر: رؤيا ٣: ٥ «من يغلب فذلك سيلبس ثيابا بيضا»، وعد لكنيسة سارديس. ٥) التسربل بالنور: رؤيا ١٢: ١ «امرأة متسربلة بالشمس»، الآية العظيمة في السماء. ٦) أمر الملاك لبطرس: أعمال ١٢: ٨ «البس رداءك واتبعني».\n**في فاندايك:** «لبس» و«كسا» و«متسربل».\n**ملاحظة:** «متسربلا» في رؤيا ١٠: ١ «متسربلا بسحابة» تعبير شاعري، والكلمة بمعنى «لابسًا».",
+        "en": "**Meaning:** periballo means to put something around something: to put on clothes or cover. It is peri (around) with ballo (to throw), literally to throw around. Van Dyke has «لبس», «كسا» and «تسربل», the last common in Revelation.\n**Uses and examples:** 1) everyday clothing: Matt 6:31 wherewithal shall we be clothed?, Jesus forbidding worry about clothes. 2) the lilies: Matt 6:29 even Solomon in all his glory was not arrayed like one of these, a lily's beauty beyond royal robes. 3) clothing a stranger: Matt 25:38 or naked, and clothed thee?, one of the works of mercy. 4) robes of victory: Rev 3:5 He that overcometh, the same shall be clothed in white raiment, a promise to Sardis. 5) clothed with light: Rev 12:1 a woman clothed with the sun, the great sign in heaven. 6) the angel and Peter: Acts 12:8 Cast thy garment about thee, and follow me.\n**In Van Dyke:** «لبس», «كسا» and «متسربل».\n**Note:** in Rev 10:1 clothed with a cloud, «متسربلا» is a literary word that simply means wearing."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G4632",
+      "lemma": "σκεῦος",
+      "gloss": {
+        "eg": "إناء، متاع",
+        "msa": "إناء، متاع",
+        "en": "vessel"
+      },
+      "entry": {
+        "eg": "**المعنى:** «سكيووس» يعني أي أداة أو وعاء أو عدّة: إناء، أو شنطة، أو حتى أدوات سفينة. وكتير بيستخدمه الكتاب مجازًا للإنسان نفسه كإناء بيستخدمه الله. وفاندايك بيقول «إناء» و«آنية» و«أمتعة».\n**الاستخدامات والأمثلة:** ١) إناء مختار: أعمال ٩: ١٥ «لأن هذا لي إناء مختار ليحمل اسمي أمام أمم وملوك»، ربنا بيوصف بولس. ٢) كنز في إناء: ٢ كورنثوس ٤: ٧ «لنا هذا الكنز في أوان خزفية»، ضعف الإنسان وقوة الله. ٣) إناء للكرامة: ٢ تيموثاوس ٢: ٢١ «يكون إناء للكرامة، مقدسا، نافعا للسيد»، المؤمن اللي بينضّف نفسه. ٤) حاجات البيت: مرقس ٣: ٢٧ «وينهب أمتعته»، القوي والبيت. ٥) إناء الغضب: رومية ٩: ٢٢ «آنية غضب مهيأة للهلاك»، تشبيه الفخاري. ٦) المرأة: ١ بطرس ٣: ٧ «مع الإناء النسائي كالأضعف»، الأزواج بيعاملوا زوجاتهم بكرامة.\n**في فاندايك:** «إناء» و«آنية» و«أمتعة».\n**ملاحظة:** في ١ تسالونيكي ٤: ٤ «أن يقتني إناءه بقداسة» مختلف العلما: بعضهم يشوف الإناء هو جسده وبعضهم هو زوجته.",
+        "msa": "**المعنى:** «سكيووس» تعني أي أداة أو وعاء أو متاع: إناء، أو عدّة، أو حتى أدوات سفينة. ويستعملها الكتاب كثيرًا مجازًا للإنسان نفسه إناءً يستعمله الله. ويقول فاندايك «إناء» و«آنية» و«أمتعة».\n**الاستعمالات والأمثلة:** ١) إناء مختار: أعمال ٩: ١٥ «لأن هذا لي إناء مختار ليحمل اسمي أمام أمم وملوك»، يصف الله بولس. ٢) كنز في إناء: ٢ كورنثوس ٤: ٧ «لنا هذا الكنز في أوان خزفية»، ضعف الإنسان وقوة الله. ٣) إناء للكرامة: ٢ تيموثاوس ٢: ٢١ «يكون إناء للكرامة، مقدسا، نافعا للسيد»، المؤمن المتطهّر. ٤) متاع البيت: مرقس ٣: ٢٧ «وينهب أمتعته»، القوي وبيته. ٥) إناء الغضب: رومية ٩: ٢٢ «آنية غضب مهيأة للهلاك»، تشبيه الخزّاف. ٦) المرأة: ١ بطرس ٣: ٧ «مع الإناء النسائي كالأضعف»، فيعامل الأزواج زوجاتهم بكرامة.\n**في فاندايك:** «إناء» و«آنية» و«أمتعة».\n**ملاحظة:** في ١ تسالونيكي ٤: ٤ «أن يقتني إناءه بقداسة» يختلف العلماء: يرى بعضهم أن الإناء جسده، ويرى آخرون أنه زوجته.",
+        "en": "**Meaning:** skeuos means any tool, container or piece of equipment: a vessel, a utensil, or even a ship's gear. Scripture often uses it figuratively for a person as a vessel God uses. Van Dyke has «إناء», «آنية» and «أمتعة».\n**Uses and examples:** 1) a chosen vessel: Acts 9:15 he is a chosen vessel unto me, to bear my name before the Gentiles, and kings, God describing Paul. 2) a treasure in jars: 2 Cor 4:7 we have this treasure in earthen vessels, human weakness and God's power. 3) a vessel for honour: 2 Tim 2:21 a vessel unto honour, sanctified, and meet for the master's use, the believer who cleanses himself. 4) household goods: Mark 3:27 and spoil his goods, the strong man and his house. 5) vessels of wrath: Rom 9:22 vessels of wrath fitted to destruction, the potter's picture. 6) the wife: 1 Pet 3:7 giving honour unto the wife, as unto the weaker vessel.\n**In Van Dyke:** «إناء», «آنية» and «أمتعة».\n**Note:** in 1 Thess 4:4 possess his vessel in sanctification and honour, scholars differ whether the vessel is one's own body or one's wife."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G5048",
+      "lemma": "τελειόω",
+      "gloss": {
+        "eg": "يكمّل، يتمم",
+        "msa": "يكمّل، يتمّم",
+        "en": "to perfect, to complete"
+      },
+      "entry": {
+        "eg": "**المعنى:** «تيليوو» يعني يكمّل ويوصّل الحاجة لهدفها، من «تيلوس» اللي هو الغاية والنهاية. ممكن يبقى «يتمّم» عمل، أو «يكمّل» حد لحد ما يوصل للنضج والتمام. وفاندايك بيترجمها «أكمل» و«أتمم» و«كمل».\n**الاستخدامات والأمثلة:** ١) إنهاء العمل: يوحنا ٤: ٣٤ «وأتمم عمله»، يسوع عن طعامه. ٢) إنهاء السعي: أعمال ٢٠: ٢٤ «حتى أتمم بفرح سعيي»، بولس عن خدمته. ٣) كمال لم يوصله: فيلبي ٣: ١٢ «ليس أني قد نلت أو صرت كاملا»، بولس لسه في الطريق. ٤) كمال بالمسيح: عبرانيين ١٠: ١٤ «لأنه بقربان واحد قد أكمل إلى الأبد المقدسين»، ذبيحة المسيح بتعمل اللي ما عملتوش الذبائح. ٥) ناموس عاجز: عبرانيين ٧: ١٩ «إذ الناموس لم يكمل شيئا»، الناموس ما وصّلش لهدفه. ٦) المحبة: ١ يوحنا ٤: ١٢ «ومحبته قد تكملت فينا»، محبة ربنا بتوصل لتمامها فينا.\n**في فاندايك:** «أكمل» و«أتمم» و«كمل».\n**ملاحظة:** في عبرانيين ٥: ٩ «وإذ كمل» عن المسيح الكلمة معناها إنه وصل للغاية بتمام خدمته، مش إنه كان ناقص.",
+        "msa": "**المعنى:** «تيليوو» تعني يكمّل ويبلغ بالشيء غايته، من «تيلوس» أي الغاية والنهاية. فقد تكون «يتمّم» عملًا، أو «يكمّل» شخصًا حتى النضج. ويترجمها فاندايك «أكمل» و«أتمم» و«كمل».\n**الاستعمالات والأمثلة:** ١) إتمام العمل: يوحنا ٤: ٣٤ «وأتمم عمله»، يسوع عن طعامه. ٢) إتمام السعي: أعمال ٢٠: ٢٤ «حتى أتمم بفرح سعيي»، بولس عن خدمته. ٣) كمال لم يبلغه بعد: فيلبي ٣: ١٢ «ليس أني قد نلت أو صرت كاملا»، فبولس ما زال في الطريق. ٤) كمال بالمسيح: عبرانيين ١٠: ١٤ «لأنه بقربان واحد قد أكمل إلى الأبد المقدسين»، فذبيحة المسيح تفعل ما عجزت عنه الذبائح. ٥) ناموس عاجز: عبرانيين ٧: ١٩ «إذ الناموس لم يكمل شيئا»، لم يبلغ الناموس غايته. ٦) المحبة: ١ يوحنا ٤: ١٢ «ومحبته قد تكملت فينا»، فمحبة الله تبلغ تمامها فينا.\n**في فاندايك:** «أكمل» و«أتمم» و«كمل».\n**ملاحظة:** في عبرانيين ٥: ٩ «وإذ كمل» عن المسيح تعني أنه بلغ الغاية بتمام خدمته، لا أنه كان ناقصًا.",
+        "en": "**Meaning:** teleioo means to complete and bring something to its goal, from telos, the end or purpose. It can mean to finish a task, or to bring a person to maturity. Van Dyke has «أكمل», «أتمم» and «كمل».\n**Uses and examples:** 1) finishing the work: John 4:34 and to finish his work, Jesus about his food. 2) finishing the course: Acts 20:24 so that I might finish my course with joy, Paul on his ministry. 3) perfection not yet reached: Phil 3:12 Not as though I had already attained, either were already perfect, Paul still on the way. 4) perfected in Christ: Heb 10:14 For by one offering he hath perfected for ever them that are sanctified, Christ's sacrifice does what the offerings could not. 5) a powerless law: Heb 7:19 For the law made nothing perfect, the law did not reach its goal. 6) love: 1 John 4:12 and his love is perfected in us, God's love reaching its full measure in us.\n**In Van Dyke:** «أكمل», «أتمم» and «كمل».\n**Note:** in Heb 5:9 being made perfect, said of Christ, means he reached the goal through the completion of his work, not that he was deficient."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G5483",
+      "lemma": "χαρίζω",
+      "gloss": {
+        "eg": "يهب، يسامح",
+        "msa": "يهب، يسامح",
+        "en": "to give graciously, to forgive"
+      },
+      "entry": {
+        "eg": "**المعنى:** «خاريزو» يعني يدي بكرم ومن غير مقابل، وجاية من «خاريس» (النعمة). ومنها يطلع معنى «يسامح» يعني يدي الصفح مجانًا. وفاندايك بيترجمها «وهب» و«سامح» و«غفر».\n**الاستخدامات والأمثلة:** ١) عطاء الله: رومية ٨: ٣٢ «كيف لا يهبنا أيضا معه كل شيء؟»، اللي أعطى ابنه هيمنع إيه؟ ٢) هبة الألم: فيلبي ١: ٢٩ «لأنه قد وهب لكم لأجل المسيح لا أن تؤمنوا به فقط، بل أيضا أن تتألموا لأجله»، حتى الألم نعمة. ٣) هبة وعد: غلاطية ٣: ١٨ «ولكن الله وهبها لإبراهيم بموعد»، الميراث. ٤) المسامحة: أفسس ٤: ٣٢ «كما سامحكم الله أيضا في المسيح»، ربنا هو المثال. ٥) مسامحة الأخ: كولوسي ٣: ١٣ «ومسامحين بعضكم بعضا»، الصفح العملي. ٦) طلب إطلاق: أعمال ٣: ١٤ «وطلبتم أن يوهب لكم رجل قاتل»، باراباس.\n**في فاندايك:** «وهب» و«سامح» و«غفر».\n**ملاحظة:** بولس بيستخدم الكلمة دي للغفران لأنها بتفكّر إن الغفران نعمة مجانية، بخلاف أفعال تانية للغفران.",
+        "msa": "**المعنى:** «خاريزو» تعني يعطي بكرم دون مقابل، من «خاريس» (النعمة). ومنها معنى «يسامح» أي يمنح الصفح مجانًا. ويترجمها فاندايك «وهب» و«سامح» و«غفر».\n**الاستعمالات والأمثلة:** ١) عطاء الله: رومية ٨: ٣٢ «كيف لا يهبنا أيضا معه كل شيء؟»، من أعطى ابنه فماذا يمنع بعد؟ ٢) هبة الألم: فيلبي ١: ٢٩ «لأنه قد وهب لكم لأجل المسيح لا أن تؤمنوا به فقط، بل أيضا أن تتألموا لأجله»، حتى الألم نعمة. ٣) هبة الوعد: غلاطية ٣: ١٨ «ولكن الله وهبها لإبراهيم بموعد»، الميراث. ٤) المسامحة: أفسس ٤: ٣٢ «كما سامحكم الله أيضا في المسيح»، فالله هو المثال. ٥) مسامحة الأخ: كولوسي ٣: ١٣ «ومسامحين بعضكم بعضا»، الصفح العملي. ٦) طلب إطلاق: أعمال ٣: ١٤ «وطلبتم أن يوهب لكم رجل قاتل»، باراباس.\n**في فاندايك:** «وهب» و«سامح» و«غفر».\n**ملاحظة:** يستعمل بولس هذه الكلمة للغفران لأنها تذكّر بأن الغفران نعمة مجانية، بخلاف أفعال أخرى للغفران.",
+        "en": "**Meaning:** charizomai means to give freely and graciously, from charis (grace). From it comes the sense to forgive, to grant pardon freely. Van Dyke has «وهب», «سامح» and «غفر».\n**Uses and examples:** 1) God's giving: Rom 8:32 how shall he not with him also freely give us all things?, the one who gave his Son will withhold nothing. 2) the gift of suffering: Phil 1:29 For unto you it is given in the behalf of Christ, not only to believe on him, but also to suffer for his sake. 3) a gift by promise: Gal 3:18 but God gave it to Abraham by promise, the inheritance. 4) forgiving: Eph 4:32 even as God for Christ's sake hath forgiven you, God is the pattern. 5) forgiving one another: Col 3:13 forgiving one another, practical pardon. 6) granting a release: Acts 3:14 and desired a murderer to be granted unto you, Barabbas.\n**In Van Dyke:** «وهب», «سامح» and «غفر».\n**Note:** Paul uses this word for forgiveness because it recalls that pardon is a free gift, unlike other verbs for forgiving."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G5505",
+      "lemma": "χιλιάς",
+      "gloss": {
+        "eg": "ألف، ألوف",
+        "msa": "ألف، آلاف",
+        "en": "thousand"
+      },
+      "entry": {
+        "eg": "**المعنى:** «خيلياس» اسم معناه «مجموعة من ألف»، يعني ألف واحدة أو ألوف. هي اسم مش صفة عدد، وفاندايك بيترجمها «ألف» و«آلاف» و«ألوف». وبتتكرر في أعداد كبيرة زي ١٤٤ ألف في الرؤيا.\n**الاستخدامات والأمثلة:** ١) عدد المؤمنين: أعمال ٤: ٤ «وصار عدد الرجال نحو خمسة آلاف»، نمو الكنيسة الأولى. ٢) عدد الهالكين: ١ كورنثوس ١٠: ٨ «فسقط في يوم واحد ثلاثة وعشرون ألفا»، تحذير من الزنا. ٣) المختومون: رؤيا ٧: ٤ «مئة وأربعة وأربعين ألفا»، عدد المختومين. ٤) كل سبط: رؤيا ٧: ٥ «من سبط يهوذا اثنا عشر ألف مختوم»، اثنا عشر ألف من كل سبط. ٥) مع الخروف: رؤيا ١٤: ١ «ومعه مئة وأربعة وأربعون ألفا»، على جبل صهيون. ٦) جمع الملائكة: رؤيا ٥: ١١ «ربوات ربوات وألوف ألوف»، عدد لا يُحصى.\n**في فاندايك:** «ألف» و«ألفا» و«آلاف».\n**ملاحظة:** في رؤيا ٥: ١١ «ربوات» ترجمة لكلمة تانية («ميرياس» يعني عشرة آلاف)، فالعبارة بتجمع الكلمتين لتوصل للكثرة بلا حد.",
+        "msa": "**المعنى:** «خيلياس» اسم معناه «مجموعة من ألف»، أي ألف واحد أو ألوف. وهي اسم لا صفة عدد، فيتبعها في فاندايك «ألف» و«آلاف» و«ألوف». وتتكرر في أعداد كبيرة مثل ١٤٤ ألفًا في الرؤيا.\n**الاستعمالات والأمثلة:** ١) عدد المؤمنين: أعمال ٤: ٤ «وصار عدد الرجال نحو خمسة آلاف»، نمو الكنيسة الأولى. ٢) عدد الهالكين: ١ كورنثوس ١٠: ٨ «فسقط في يوم واحد ثلاثة وعشرون ألفا»، تحذير من الزنا. ٣) المختومون: رؤيا ٧: ٤ «مئة وأربعة وأربعين ألفا»، عدد المختومين. ٤) كل سبط: رؤيا ٧: ٥ «من سبط يهوذا اثنا عشر ألف مختوم»، اثنا عشر ألفًا من كل سبط. ٥) مع الخروف: رؤيا ١٤: ١ «ومعه مئة وأربعة وأربعون ألفا»، على جبل صهيون. ٦) جمع الملائكة: رؤيا ٥: ١١ «ربوات ربوات وألوف ألوف»، عدد لا يُحصى.\n**في فاندايك:** «ألف» و«ألفا» و«آلاف».\n**ملاحظة:** في رؤيا ٥: ١١ «ربوات» ترجمة لكلمة أخرى («ميرياس» أي عشرة آلاف)، فالعبارة تجمع اللفظين لتبلغ الكثرة بلا حد.",
+        "en": "**Meaning:** chilias is a noun meaning a group of a thousand: one thousand or thousands. It is a noun, not an adjective of number, so Van Dyke follows it with «ألف», «آلاف» or «ألوف». It appears in large numbers such as the 144,000 of Revelation.\n**Uses and examples:** 1) believers counted: Acts 4:4 the number of the men was about five thousand, growth of the first church. 2) the number who fell: 1 Cor 10:8 and fell in one day three and twenty thousand, a warning against immorality. 3) the sealed: Rev 7:4 an hundred and forty and four thousand, the number of the sealed. 4) each tribe: Rev 7:5 of the tribe of Juda were sealed twelve thousand, twelve thousand from each tribe. 5) with the Lamb: Rev 14:1 and with him an hundred forty and four thousand, on Mount Zion. 6) the angelic host: Rev 5:11 ten thousand times ten thousand, and thousands of thousands, a number beyond counting.\n**In Van Dyke:** «ألف», «ألفا» and «آلاف».\n**Note:** in Rev 5:11 «ربوات» translates a different word (myrias, ten thousand), so the phrase joins both words to reach limitless numbers."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0050",
+      "lemma": "ἀγνοέω",
+      "gloss": {
+        "eg": "يجهل، لا يعرف",
+        "msa": "يجهل، لا يعلم",
+        "en": "to be ignorant"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أجنويو» يعني ما يعرفش أو يجهل، من «أ» النافية و«جنوسيس» (معرفة). بيقع على الجهل بشيء، وعلى الجهل اللي ما يعرفش صاحبه إنه غلط، وعلى الشخص اللي مش معروف. وفاندايك بيقول «يجهل» و«لم يعرف» و«غير معروف».\n**الاستخدامات والأمثلة:** ١) جملة بولس المعتادة: رومية ١١: ٢٥ «فإني لست أريد أيها الإخوة أن تجهلوا هذا السر»، بولس بيبدأ بيها يوصل معلومة مهمة. ٢) سؤال بتنبيه: رومية ٦: ٣ «أم تجهلون أننا كل من اعتمد ليسوع المسيح اعتمدنا لموته؟»، سؤال بيفكّر القارئ بالمعمودية. ٣) جهل بر الله: رومية ١٠: ٣ «لأنهم إذ كانوا يجهلون بر الله»، إسرائيل بيطلب بره بنفسه. ٤) إله مجهول: أعمال ١٧: ٢٣ «فالذي تتقونه وأنتم تجهلونه»، بولس قدام أهل أثينا. ٥) غير معروف: غلاطية ١: ٢٢ «ولكنني كنت غير معروف بالوجه عند كنائس اليهودية»، بولس بعد إيمانه. ٦) جهل يخفف الذنب: ١ تيموثاوس ١: ١٣ «لأني فعلت بجهل في عدم إيمان»، بولس عن اضطهاده.\n**في فاندايك:** «يجهل» و«لم يعرف» و«غير معروف».",
+        "msa": "**المعنى:** «أجنويو» تعني لا يعرف أو يجهل، من «أ» النافية و«جنوسيس» (معرفة). وتقع على الجهل بشيء، وعلى جهل لا يدري صاحبه أنه مخطئ، وعلى من هو غير معروف. ويقول فاندايك «يجهل» و«لم يعرف» و«غير معروف».\n**الاستعمالات والأمثلة:** ١) عبارة بولس المعتادة: رومية ١١: ٢٥ «فإني لست أريد أيها الإخوة أن تجهلوا هذا السر»، يبدأ بها بولس ليوصل معلومة مهمة. ٢) سؤال تنبيه: رومية ٦: ٣ «أم تجهلون أننا كل من اعتمد ليسوع المسيح اعتمدنا لموته؟»، سؤال يذكّر القارئ بالمعمودية. ٣) جهل بر الله: رومية ١٠: ٣ «لأنهم إذ كانوا يجهلون بر الله»، فإسرائيل يطلب برّه بنفسه. ٤) إله مجهول: أعمال ١٧: ٢٣ «فالذي تتقونه وأنتم تجهلونه»، بولس أمام أهل أثينا. ٥) غير معروف: غلاطية ١: ٢٢ «ولكنني كنت غير معروف بالوجه عند كنائس اليهودية»، بولس بعد إيمانه. ٦) جهل يخفف الذنب: ١ تيموثاوس ١: ١٣ «لأني فعلت بجهل في عدم إيمان»، بولس عن اضطهاده.\n**في فاندايك:** «يجهل» و«لم يعرف» و«غير معروف».",
+        "en": "**Meaning:** agnoeo means not to know or to be ignorant, from the negative alpha and gnosis (knowledge). It covers ignorance of something, ignorance the person does not realise is wrong, and being unknown. Van Dyke has «يجهل», «لم يعرف» and «غير معروف».\n**Uses and examples:** 1) Paul's stock phrase: Rom 11:25 For I would not, brethren, that ye should be ignorant of this mystery, how he opens an important point. 2) a prompting question: Rom 6:3 Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death?, reminding readers of baptism. 3) ignorance of God's righteousness: Rom 10:3 For they being ignorant of God's righteousness, Israel seeking its own. 4) the unknown God: Acts 17:23 Whom therefore ye ignorantly worship, Paul before the Athenians. 5) unknown: Gal 1:22 And was unknown by face unto the churches of Judaea, Paul after his conversion. 6) ignorance as mitigation: 1 Tim 1:13 I did it ignorantly in unbelief, Paul on his persecuting.\n**In Van Dyke:** «يجهل», «لم يعرف» and «غير معروف»."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0473",
+      "lemma": "ἀντί",
+      "gloss": {
+        "eg": "بدل، عوض، من أجل",
+        "msa": "بدل، عوض، لأجل",
+        "en": "for, instead of"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أنتي» حرف جر معناه الأصلي «قدّام» و«مقابل»، وبيجي بمعنى «بدل» أو «عوض» أو «في مقابل»، وكمان «علشان» و«بسبب». أشهر استخدامه في عبارة «عين بعين»، ومعناها الأساسي هو التبادل: شيء مكان شيء. وفاندايك بيترجمه «بـ» و«عن» و«عوض» و«من أجل».\n**الاستخدامات والأمثلة:** ١) عين بعين: متى ٥: ٣٨ «عين بعين وسن بسن»، شريعة القصاص. ٢) رد الشر: رومية ١٢: ١٧ «لا تجازوا أحدا عن شر بشر»، النهي عن الانتقام. ٣) فدية: متى ٢٠: ٢٨ «وليبذل نفسه فدية عن كثيرين»، يسوع بيدّي حياته بدل ناس كتير. ٤) خلافة: متى ٢: ٢٢ «يملك على اليهودية عوضا عن هيرودس أبيه»، أرخيلاوس. ٥) بيع بثمن: عبرانيين ١٢: ١٦ «الذي لأجل أكلة واحدة باع بكوريته»، عيسو. ٦) سبب: لوقا ١: ٢٠ «لأنك لم تصدق كلامي»، زكريا.\n**في فاندايك:** «بـ» و«عن» و«عوض» و«من أجل».\n**ملاحظة:** في عبرانيين ١٢: ٢ «من أجل السرور الموضوع أمامه» ممكن نفهمها «بدل السرور» أو «لأجل السرور»، والعلما مختلفين.",
+        "msa": "**المعنى:** «أنتي» حرف جر معناه الأصلي «أمام» و«مقابل»، ويأتي بمعنى «بدل» أو «عوض» أو «في مقابل»، وكذلك «لأجل» و«بسبب». وأشهر استعماله في عبارة «عين بعين»، وجوهر معناه التبادل: شيء مكان شيء. ويترجمه فاندايك «بـ» و«عن» و«عوض» و«من أجل».\n**الاستعمالات والأمثلة:** ١) عين بعين: متى ٥: ٣٨ «عين بعين وسن بسن»، شريعة القصاص. ٢) ردّ الشر: رومية ١٢: ١٧ «لا تجازوا أحدا عن شر بشر»، النهي عن الانتقام. ٣) فدية: متى ٢٠: ٢٨ «وليبذل نفسه فدية عن كثيرين»، يبذل يسوع حياته بدل كثيرين. ٤) خلافة: متى ٢: ٢٢ «يملك على اليهودية عوضا عن هيرودس أبيه»، أرخيلاوس. ٥) بيع بثمن: عبرانيين ١٢: ١٦ «الذي لأجل أكلة واحدة باع بكوريته»، عيسو. ٦) سبب: لوقا ١: ٢٠ «لأنك لم تصدق كلامي»، زكريا.\n**في فاندايك:** «بـ» و«عن» و«عوض» و«من أجل».\n**ملاحظة:** في عبرانيين ١٢: ٢ «من أجل السرور الموضوع أمامه» يحتمل «بدل السرور» أو «لأجل السرور»، والعلماء مختلفون.",
+        "en": "**Meaning:** anti is a preposition whose original sense is opposite, and it comes to mean instead of, in exchange for, and also for the sake of or because. Its best-known use is in the phrase an eye for an eye, and its core idea is exchange: one thing in place of another. Van Dyke renders it «بـ», «عن», «عوض» or «من أجل».\n**Uses and examples:** 1) an eye for an eye: Matt 5:38 an eye for an eye, and a tooth for a tooth, the law of retaliation. 2) repaying evil: Rom 12:17 Recompense to no man evil for evil, a ban on revenge. 3) a ransom: Matt 20:28 and to give his life a ransom for many, Jesus gives his life in the place of many. 4) succession: Matt 2:22 Archelaus did reign in Judaea in the room of his father Herod. 5) a sale: Heb 12:16 who for one morsel of meat sold his birthright, Esau. 6) a reason: Luke 1:20 because thou believest not my words, Zacharias.\n**In Van Dyke:** «بـ», «عن», «عوض» and «من أجل».\n**Note:** in Heb 12:2 for the joy that was set before him can be read as instead of the joy or for the sake of the joy; scholars differ."
+      },
+      "based_on": [
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    }
+  ]
+}

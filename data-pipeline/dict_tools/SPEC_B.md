@@ -9,6 +9,7 @@ occurrences; look up an extra verse with `ex.py` only for a famous verse the pac
 `check.py` checks every reference written before «في فاندايك» (Meaning section included), so a verse that carries a
 different sense number belongs in the Note, named with its number. References to the other Testament (a NT verse
 quoting a Hebrew word, an OT verse behind a Greek word) are not checked and may be given anywhere. Words inside «Van Dyke quotes» are not passive-scanned.
+Other agents work in parallel: keep your scripts in your own folder, `<output folder>/work_<output name>/`.
 
 ## Your data pack
 Your task gives a pack file made by `prep.py`: for each lemma its gloss, count, sense numbers, Van Dyke renderings with

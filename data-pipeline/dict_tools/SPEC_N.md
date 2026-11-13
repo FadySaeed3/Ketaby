@@ -13,6 +13,7 @@ Greek word with K or k alone is only in the Received Text; do not build an examp
 Never mention the pack, the data, the tags or yourself in an entry (no «الباك», «مشيت ورا القاموس», "the pack's gloss"):
 the reader sees only the dictionary. Say «القواميس بتقول ...» or «ترجمات زي الملك جيمس ...» instead.
 In `en`, write references with the usual English abbreviations (John 3:16, 1 Cor 13:4, Ps 23:1), not the pack's `ref_en` codes.
+Arabic transliteration of the lemma: start from the pack's `translit` and keep its letters (ڤ for soft b/v, پ for p, ص for ts, خ for soft k/kh, ث/ذ only where it has them); never make up another scheme (no «بَحَد» for pachad, no «ساق» for saq).
 Other agents work in parallel: keep your scripts in your own folder, `<output folder>/work_<output name>/`.
 
 ## Your data pack

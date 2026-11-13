@@ -18,6 +18,7 @@ Each occurrence has `editions`: a Hebrew word marked only X is not in the Hebrew
 Greek word with K alone is only in the Received Text; do not build an example on such a word without saying so.
 Never mention the pack, the data, the tags or yourself in an entry (no «الباك», «مشيت ورا القاموس», "the pack's gloss"):
 the reader sees only the dictionary. Say «القواميس بتقول ...» or «ترجمات زي الملك جيمس ...» instead.
+Arabic transliteration of the lemma: start from the pack's `translit` and keep its letters (ڤ for soft b/v, پ for p, ص for ts, خ for soft k/kh, ث/ذ only where it has them); never make up another scheme (no «بَحَد» for pachad, no «ساق» for saq).
 Other agents work in parallel: keep your scripts in your own folder, `<output folder>/work_<output name>/`.
 
 ## Tools (run from `/home/claude/ketaby/data-pipeline/dict_tools`)

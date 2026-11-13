@@ -12,6 +12,7 @@ Each occurrence has `editions`: a Hebrew word marked only X is not in the Hebrew
 Greek word with K or k alone is only in the Received Text; do not build an example on such a word without saying so.
 Never mention the pack, the data, the tags or yourself in an entry (no «الباك», «مشيت ورا القاموس», "the pack's gloss"):
 the reader sees only the dictionary. Say «القواميس بتقول ...» or «ترجمات زي الملك جيمس ...» instead.
+In `en`, write references with the usual English abbreviations (John 3:16, 1 Cor 13:4, Ps 23:1), not the pack's `ref_en` codes.
 Other agents work in parallel: keep your scripts in your own folder, `<output folder>/work_<output name>/`.
 
 ## Your data pack

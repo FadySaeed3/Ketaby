@@ -76,7 +76,10 @@ for path in args:
             if not lim[3] <= n <= lim[4]: probs.append(f'{k} words={n}')
         ex = eg.split('**في فاندايك:**')[0]
         for m in REF.finditer(ex):
-            r = verse(book_no(m.group(1)), int(m.group(2).translate(AD)), int(m.group(3).translate(AD)))
+            bk = book_no(m.group(1))
+            if (ds[0] == 'H') == (bk >= 40):    # the other Testament (NT quoting the OT, or the reverse): a cross-reference
+                continue
+            r = verse(bk, int(m.group(2).translate(AD)), int(m.group(3).translate(AD)))
             if r is None: probs.append(f'bad ref {m.group(0)}'); continue
             if not has(ds, r[0]): probs.append(f'no {ds} in {m.group(0)}')
             q = QUOTE.match(ex, m.end())

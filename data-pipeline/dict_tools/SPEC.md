@@ -12,7 +12,8 @@ and match their length, structure, tone and density. Do not modify those files o
 from it (typed Hebrew can look identical but store its vowel marks in another order). Take examples from the pack's
 occurrences; look up an extra verse with `ex.py` only for a famous verse the pack lacks, at most one per entry.
 `check.py` checks every reference written before «في فاندايك» (Meaning section included), so a verse that carries a
-different sense number belongs in the Note, named with its number. Words inside «Van Dyke quotes» are not passive-scanned.
+different sense number belongs in the Note, named with its number. References to the other Testament (a NT verse
+quoting a Hebrew word, an OT verse behind a Greek word) are not checked and may be given anywhere. Words inside «Van Dyke quotes» are not passive-scanned.
 
 ## Tools (run from `/home/claude/ketaby/data-pipeline/dict_tools`)
 - `python3 ex.py BASE "Book ch:v" "Book ch:v" ...` where BASE is the Strong's number WITHOUT the sense letter (H5221, G3551).

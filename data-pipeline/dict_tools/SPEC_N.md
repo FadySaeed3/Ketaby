@@ -42,7 +42,7 @@ follow the defs and the verses, keep the pack's lemma string, and say so briefly
 `based_on` lists the open lexicons you actually used (keys present in `defs`).
 
 ## Shape
-- eg: `**مين ده:** ...` for a man, `**مين دي:**` for a woman, `**فين ده:**` for a place, `**مين دول:**` for a people \n `**أهم المواضع:** ...` \n `**في فاندايك:** ...`
+- eg: `**مين ده:** ...` for a man, `**مين دي:**` for a woman, `**فين ده:**` for a place, `**مين دول:**` for a people, `**إيه ده:**` for anything else (a month, a title, an interjection) \n `**أهم المواضع:** ...` \n `**في فاندايك:** ...`
 - `eg` length: 25–100 words (well-known people near the top, obscure names in genealogies near the bottom).
 - `msa` and `en`: one or two sentences in one section (`**المعنى:**` / `**Meaning:**`): who/what, and 1–2 refs. 12–50 words.
 

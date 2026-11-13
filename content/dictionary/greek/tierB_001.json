@@ -1,0 +1,220 @@
+{
+  "batch": 1,
+  "about": "Tier B (10–49 occurrences), medium entries: first set",
+  "words": [
+    {
+      "dstrong": "G5532",
+      "lemma": "χρεία",
+      "gloss": {
+        "eg": "احتياج، حاجة، لزوم",
+        "msa": "حاجة، احتياج، عوز",
+        "en": "need, necessity"
+      },
+      "entry": {
+        "eg": "**المعنى:** «خريا» يعني الاحتياج: حاجة ناقصة ولازم حد يسدها. جاية من فعل معناه «يعوز». أشهر تعبير بيها «يكون عنده خريا»، وفاندايك بيترجمه «محتاج» أو «ليه حاجة».\n**الاستخدامات والأمثلة:** ١) الاحتياج المادي: أعمال ٢: ٤٥ «ويقسمونها بين الجميع، كما يكون لكل واحد احتياج»، الكنيسة الأولى كانت بتوزع على قد احتياج كل واحد. ٢) «مش محتاج»: لوقا ٥: ٣١ «لا يحتاج الأصحاء إلى طبيب، بل المرضى»، يسوع بيرد على اللي استغربوا إنه بياكل مع الخطاة. ٣) احتياج الرب نفسه: لوقا ١٩: ٣١ «إن الرب محتاج إليه»، عن الجحش اللي هيدخل بيه أورشليم. ٤) اللزوم والمنفعة: ١ كورنثوس ١٢: ٢١ «لا تقدر العين أن تقول لليد: لا حاجة لي إليك!»، بولس بيقول إن كل عضو في الجسد ليه لزمة.\n**في فاندايك:** «حاجة» و«احتياج» و«محتاج» و«يحتاج».\n**ملاحظة:** في أفسس ٤: ٢٩ «حسب الحاجة» يعني الكلام الكويس هو اللي على قد احتياج السامع، مش أي كلام حلو والسلام.",
+        "msa": "**المعنى:** «خريا» تعني الحاجة: نقصًا ينبغي سدّه، وهي من فعل بمعنى «أعوز». وأشهر تعبير بها «تكون له حاجة»، ويترجمه فاندايك «محتاج» أو «له حاجة».\n**الاستعمالات والأمثلة:** ١) الحاجة المادية: أعمال ٢: ٤٥ «ويقسمونها بين الجميع، كما يكون لكل واحد احتياج»، فالكنيسة الأولى وزّعت بحسب حاجة كل فرد. ٢) نفي الحاجة: لوقا ٥: ٣١ «لا يحتاج الأصحاء إلى طبيب، بل المرضى»، ردًّا على من استغربوا أكله مع الخطاة. ٣) حاجة الرب: لوقا ١٩: ٣١ «إن الرب محتاج إليه»، عن الجحش الذي سيدخل به أورشليم. ٤) اللزوم والنفع: ١ كورنثوس ١٢: ٢١ «لا تقدر العين أن تقول لليد: لا حاجة لي إليك!»، فلكل عضو في الجسد نفعه.\n**في فاندايك:** «حاجة» و«احتياج» و«محتاج» و«يحتاج».\n**ملاحظة:** في أفسس ٤: ٢٩ «حسب الحاجة» أي أن الكلام الصالح هو ما يوافق حاجة السامع، لا مجرد كلام حسن.",
+        "en": "**Meaning:** chreia is need: something lacking that ought to be supplied, from a verb meaning \"to lack\". Its most common phrase is \"to have need\", which Van Dyke renders «محتاج» or «له حاجة».\n**Uses and examples:** 1) material need: Acts 2:45 \"distributed them to all, as any had need\": the first church shared according to each one's need. 2) no need: Luke 5:31 \"those who are well have no need of a physician, but those who are sick\", Jesus' answer to those surprised that he ate with sinners. 3) the Lord's need: Luke 19:31 \"the Lord has need of it\", the colt for the entry into Jerusalem. 4) usefulness: 1 Cor 12:21 \"the eye cannot say to the hand, I have no need of you\": every member of the body has its use.\n**In Van Dyke:** «حاجة», «احتياج», «محتاج» and «يحتاج».\n**Note:** in Eph 4:29 \"as fits the need\" means good speech is speech that meets the hearer's need, not merely fine words."
+      },
+      "based_on": [
+        "ubs",
+        "tbes"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0863H",
+      "lemma": "ἀφίημι",
+      "gloss": {
+        "eg": "غفر، سامح",
+        "msa": "غفر، صفح",
+        "en": "to forgive, remit"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أفييمي» أصل معناها «يسيب» أو «يطلق»: يسيب حاجة تمشي من إيده. الفعل ليه تلات أرقام: «ساب/ترك» (G0863G)، و«سمح/خلّى» (G0863I)، والرقم ده (G0863H) للغفران: إنك تسيب الدين أو الخطية وما تطالبش بيها تاني. ومنها الاسم «أفيسيس» (غفران).\n**الاستخدامات والأمثلة:** ١) الصلاة الربانية: متى ٦: ١٢ «واغفر لنا ذنوبنا كما نغفر نحن أيضا للمذنبين إلينا»، الفعل مرتين، وغفران ربنا مربوط بغفراننا لبعض. ٢) سلطان الغفران: لوقا ٥: ٢٤ «لكي تعلموا أن لابن الإنسان سلطانا على الأرض أن يغفر الخطايا»، يسوع بيثبت بالشفا إن عنده الحق ده. ٣) غفران على الصليب: لوقا ٢٣: ٣٤ «يا أبتاه، اغفر لهم، لأنهم لا يعلمون ماذا يفعلون». ٤) وعد للي بيعترف: ١ يوحنا ١: ٩ «إن اعترفنا بخطايانا فهو أمين وعادل، حتى يغفر لنا خطايانا».\n**في فاندايك:** «يغفر» و«مغفورة» و«تغفر» و«اغفر» و«نغفر»، ومرة «تتركوا».\n**ملاحظة:** في متى ١٨: ٣٥ فاندايك ترجمها «إن لم تتركوا من قلوبكم كل واحد لأخيه زلاته»، وده بيوضح المعنى الأصلي: الغفران إنك تسيب الدين اللي ليك عند أخوك، مش بس إنك تنسى.",
+        "msa": "**المعنى:** «أفييمي» أصل معناها «ترك» أو «أطلق»: أن تدع الشيء يمضي من يدك. وللفعل ثلاثة أرقام: «ترك» (G0863G)، و«سمح، دع» (G0863I)، وهذا الرقم (G0863H) للغفران: ترك الدين أو الخطية وعدم المطالبة بها. ومنها الاسم «أفيسيس» (غفران).\n**الاستعمالات والأمثلة:** ١) الصلاة الربانية: متى ٦: ١٢ «واغفر لنا ذنوبنا كما نغفر نحن أيضا للمذنبين إلينا»، والفعل مرتين، وغفران الله مقرون بغفراننا بعضنا لبعض. ٢) سلطان الغفران: لوقا ٥: ٢٤ «لكي تعلموا أن لابن الإنسان سلطانا على الأرض أن يغفر الخطايا»، فيسوع يثبت بالشفاء أن له هذا الحق. ٣) الغفران على الصليب: لوقا ٢٣: ٣٤ «يا أبتاه، اغفر لهم، لأنهم لا يعلمون ماذا يفعلون». ٤) وعد للمعترف: ١ يوحنا ١: ٩ «إن اعترفنا بخطايانا فهو أمين وعادل، حتى يغفر لنا خطايانا».\n**في فاندايك:** «يغفر» و«مغفورة» و«تغفر» و«اغفر» و«نغفر»، ومرة «تتركوا».\n**ملاحظة:** في متى ١٨: ٣٥ ترجمها فاندايك «إن لم تتركوا من قلوبكم كل واحد لأخيه زلاته»، وهذا يوضح المعنى الأصلي: الغفران أن تترك الدين الذي لك على أخيك، لا مجرد أن تنساه.",
+        "en": "**Meaning:** aphiemi basically means \"let go, release\": to let something leave your hand. The verb has three numbers: \"leave\" (G0863G), \"let, permit\" (G0863I), and this one (G0863H) for forgiveness: letting go of a debt or a sin and no longer claiming it. The noun aphesis (\"forgiveness\") comes from it.\n**Uses and examples:** 1) the Lord's Prayer: Matt 6:12 \"forgive us our debts, as we also have forgiven our debtors\", the verb twice, God's forgiveness tied to our forgiving one another. 2) authority to forgive: Luke 5:24 \"that you may know that the Son of Man has authority on earth to forgive sins\": Jesus proves it by the healing. 3) forgiveness from the cross: Luke 23:34 \"Father, forgive them, for they know not what they do\". 4) a promise to those who confess: 1 John 1:9 \"if we confess our sins, he is faithful and just to forgive us our sins\".\n**In Van Dyke:** «يغفر», «مغفورة», «تغفر», «اغفر» and «نغفر», once «تتركوا».\n**Note:** in Matt 18:35 Van Dyke has «إن لم تتركوا من قلوبكم» (\"if you do not let go from your hearts\"), which shows the root idea: forgiving is releasing the debt your brother owes you, not merely forgetting it."
+      },
+      "based_on": [
+        "tbes",
+        "lsj",
+        "mm"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2046",
+      "lemma": "ἔπω",
+      "gloss": {
+        "eg": "قال، اتقال",
+        "msa": "قال، قيل",
+        "en": "to say, speak; it was said"
+      },
+      "entry": {
+        "eg": "**المعنى:** الرقم ده بيجمع صيغ من فعل «قال» في اليوناني جاية من جذر غير الفعل العادي «ليجو» (G3004)، زي «إرّيثي» (اتقال) و«إيريكا» (قلت). علشان كده أغلبه مبني للمجهول «قيل»، وأكتر استخدام ليه في الكلام عن نصوص العهد القديم.\n**الاستخدامات والأمثلة:** ١) تحقيق النبوة: متى ٢: ١٥ «لكي يتم ما قيل من الرب بالنبي القائل: من مصر دعوت ابني»، متى بيربط رجوع العيلة من مصر بنبوة هوشع. ٢) سمعتم إنه اتقال: متى ٥: ٤٣ «سمعتم أنه قيل: تحب قريبك وتبغض عدوك»، يسوع بيبدأ بالمعروف عندهم وبعدين يقول كلامه هو. ٣) كلام الناموس: لوقا ٢: ٢٤ «كما قيل في ناموس الرب: زوج يمام أو فرخي حمام»، تقدمة مريم ويوسف الغلابة. ٤) كلام يسوع نفسه: متى ٢٦: ٧٥ «فتذكر بطرس كلام يسوع الذي قال له»، بطرس افتكر بعد صياح الديك.\n**في فاندايك:** «قيل» و«قال» و«ما قيل» و«وقيل» و«قلت».\n**ملاحظة:** في متى ٥: ٤٣ «تحب قريبك» من لاويين ١٩: ١٨، لكن «وتبغض عدوك» مش مكتوبة في الناموس، والأرجح إنها فهم كان منتشر وقتها. علشان كده «قيل» هنا مش دايمًا اقتباس حرفي، ساعات معناها «اللي اتقال لكم وسمعتوه».",
+        "msa": "**المعنى:** يجمع هذا الرقم صيغًا لفعل «قال» في اليونانية من جذر غير الفعل المعتاد «ليجو» (G3004)، مثل «إرّيثي» (قيل) و«إيريكا» (قلت). ولذلك أكثره مبني للمجهول «قيل»، وأكثر استعماله في الإحالة إلى نصوص العهد القديم.\n**الاستعمالات والأمثلة:** ١) تحقيق النبوة: متى ٢: ١٥ «لكي يتم ما قيل من الرب بالنبي القائل: من مصر دعوت ابني»، يربط متى عودة العائلة من مصر بنبوة هوشع. ٢) سمعتم أنه قيل: متى ٥: ٤٣ «سمعتم أنه قيل: تحب قريبك وتبغض عدوك»، يبدأ يسوع بالمعروف لديهم ثم يقول كلامه. ٣) نص الناموس: لوقا ٢: ٢٤ «كما قيل في ناموس الرب: زوج يمام أو فرخي حمام»، تقدمة مريم ويوسف الفقيرين. ٤) كلام يسوع نفسه: متى ٢٦: ٧٥ «فتذكر بطرس كلام يسوع الذي قال له»، تذكّره بطرس بعد صياح الديك.\n**في فاندايك:** «قيل» و«قال» و«ما قيل» و«وقيل» و«قلت».\n**ملاحظة:** في متى ٥: ٤٣ «تحب قريبك» من لاويين ١٩: ١٨، أما «وتبغض عدوك» فليست مكتوبة في الناموس، والأرجح أنها فهم شائع آنذاك. فـ«قيل» هنا ليست دائمًا اقتباسًا حرفيًّا، بل قد تعني «ما قيل لكم وسمعتموه».",
+        "en": "**Meaning:** this number gathers Greek forms of \"say\" from a different stem than the ordinary lego (G3004), such as errethe (\"it was said\") and eireka (\"I have said\"). So most of its uses are passive, \"it was said\", and it is used above all when citing Old Testament texts.\n**Uses and examples:** 1) fulfilled prophecy: Matt 2:15 \"to fulfil what the Lord had spoken by the prophet: Out of Egypt I called my son\", Matthew linking the family's return from Egypt to Hosea. 2) you have heard that it was said: Matt 5:43 \"you have heard that it was said, You shall love your neighbour and hate your enemy\": Jesus starts from what they knew, then gives his own word. 3) the words of the law: Luke 2:24 \"according to what is said in the Law of the Lord, a pair of turtledoves, or two young pigeons\", the offering of a poor couple. 4) Jesus' own words: Matt 26:75 \"Peter remembered the saying of Jesus\", after the rooster crowed.\n**In Van Dyke:** «قيل», «قال», «ما قيل», «وقيل» and «قلت».\n**Note:** in Matt 5:43 \"love your neighbour\" is from Lev 19:18, but \"hate your enemy\" is not written in the law; it was most likely a common reading of the time. So \"it was said\" here is not always an exact quotation; sometimes it means \"what you have been told and heard\"."
+      },
+      "based_on": [
+        "tbes",
+        "lsj",
+        "mm"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G5590G",
+      "lemma": "ψυχή",
+      "gloss": {
+        "eg": "نفس، ذات، الإنسان من جوه",
+        "msa": "نفس، ذات، كيان الإنسان",
+        "en": "soul, inner self, person"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پسيخي» يعني النفس: الإنسان من جوه بمشاعره وإرادته، وساعات الإنسان كله أو «نفسه». منها الكلمة الإنجليزي «psychology». الكلمة ليها كذا رقم، والرقم ده (G5590G) للنفس كذات وكيان، أما «الحياة» نفسها ففي الأغلب ليها رقم تاني (G5590H).\n**الاستخدامات والأمثلة:** ١) المحبة بالكيان كله: متى ٢٢: ٣٧ «تحب الرب إلهك من كل قلبك، ومن كل نفسك، ومن كل فكرك». ٢) أغلى من الدنيا: متى ١٦: ٢٦ «ماذا ينتفع الإنسان لو ربح العالم كله وخسر نفسه؟»، الكلمة مرتين في الآية. ٣) راحة من جوه: متى ١١: ٢٩ «فتجدوا راحة لنفوسكم»، الراحة اللي يسوع بيوعد بيها في القلب مش في الظروف. ٤) حزن لحد الموت: متى ٢٦: ٣٨ «نفسي حزينة جدا حتى الموت»، يسوع في جثسيماني.\n**في فاندايك:** «النفس» و«نفسه» و«نفسك» و«نفسي» و«نفوسكم».\n**ملاحظة:** وراها كلمة «نيفِش» العبري، اللي برضه بتجمع النفس والحياة والشخص. علشان كده في يوحنا ١٠: ١١ «يبذل نفسه» نفس الكلمة برقم تاني (G5590H)، والمعنى «حياته».",
+        "msa": "**المعنى:** «پسيخي» تعني النفس: الإنسان من الداخل بمشاعره وإرادته، وأحيانًا الإنسان كله أو «ذاته». ومنها الكلمة الإنجليزية «psychology». وللكلمة عدة أرقام، وهذا الرقم (G5590G) للنفس بوصفها ذاتًا وكيانًا، أما «الحياة» نفسها فلها في الأغلب رقم آخر (G5590H).\n**الاستعمالات والأمثلة:** ١) المحبة بالكيان كله: متى ٢٢: ٣٧ «تحب الرب إلهك من كل قلبك، ومن كل نفسك، ومن كل فكرك». ٢) أثمن من العالم: متى ١٦: ٢٦ «ماذا ينتفع الإنسان لو ربح العالم كله وخسر نفسه؟»، والكلمة مرتين في الآية. ٣) راحة داخلية: متى ١١: ٢٩ «فتجدوا راحة لنفوسكم»، فالراحة التي يعد بها يسوع في القلب لا في الظروف. ٤) حزن حتى الموت: متى ٢٦: ٣٨ «نفسي حزينة جدا حتى الموت»، يسوع في جثسيماني.\n**في فاندايك:** «النفس» و«نفسه» و«نفسك» و«نفسي» و«نفوسكم».\n**ملاحظة:** وراءها الكلمة العبرية «نيفِش» التي تجمع النفس والحياة والشخص. ولذلك ففي يوحنا ١٠: ١١ «يبذل نفسه» الكلمة نفسها برقم آخر (G5590H)، والمعنى «حياته».",
+        "en": "**Meaning:** psyche is the soul: the inner person with feelings and will, and sometimes the whole person, the \"self\". English \"psychology\" comes from it. The word has several numbers; this one (G5590G) is the soul as self and inner being, while \"life\" itself mostly has another number (G5590H).\n**Uses and examples:** 1) love with the whole being: Matt 22:37 \"you shall love the Lord your God with all your heart and with all your soul and with all your mind\". 2) worth more than the world: Matt 16:26 \"what will it profit a man if he gains the whole world and forfeits his soul?\", the word twice in the verse. 3) rest within: Matt 11:29 \"you will find rest for your souls\": the rest Jesus promises is in the heart, not in circumstances. 4) sorrow to death: Matt 26:38 \"my soul is very sorrowful, even to death\", Jesus in Gethsemane.\n**In Van Dyke:** «النفس», «نفسه», «نفسك», «نفسي» and «نفوسكم».\n**Note:** behind it stands Hebrew nefesh, which also covers soul, life and person. So in John 10:11 \"lays down his life\" (Van Dyke «يبذل نفسه») the same word has another number (G5590H), meaning \"his life\"."
+      },
+      "based_on": [
+        "ubs",
+        "tbes",
+        "lsj",
+        "mm"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0268",
+      "lemma": "ἁμαρτωλός",
+      "gloss": {
+        "eg": "خاطي، خاطئ",
+        "msa": "خاطئ، أثيم",
+        "en": "sinful; sinner"
+      },
+      "entry": {
+        "eg": "**المعنى:** «هامارتولوس» صفة أو اسم معناه «خاطي»، من فعل «هامارتانو» (أخطأ) والاسم «هامارتيا» (خطية). في الأناجيل «الخطاة» كمان كانت تسمية الفريسيين للناس اللي شايفينهم برا الناموس، وكتير بتيجي جنب «العشارين».\n**الاستخدامات والأمثلة:** ١) على السفرة معاهم: مرقس ٢: ١٥ «كان كثيرون من العشارين والخطاة»، يسوع قاعد ياكل مع الناس اللي المجتمع رافضهم. ٢) جه علشانهم: متى ٩: ١٣ «لأني لم آت لأدعو أبرارا بل خطاة إلى التوبة». ٣) أول الخطاة: ١ تيموثاوس ١: ١٥ «أن المسيح يسوع جاء إلى العالم ليخلص الخطاة الذين أولهم أنا»، بولس بيحط نفسه في أول الطابور. ٤) محبة سابقة: رومية ٥: ٨ «لأنه ونحن بعد خطاة مات المسيح لأجلنا»، المسيح ما استناش لما نتصلح.\n**في فاندايك:** «خطاة» و«الخطاة» و«والخطاة» و«خاطئ» و«خاطئة».\n**ملاحظة:** في لوقا ١٨: ١٣ العشار بيقول «اللهم ارحمني، أنا الخاطئ»، والكلمة في اليوناني بأداة التعريف. كتير من الشراح بيلاحظوا إنه كأنه بيقول «أنا الخاطي» بالذات، مش «واحد من الخطاة وخلاص».",
+        "msa": "**المعنى:** «هامارتولوس» صفة أو اسم بمعنى «خاطئ»، من الفعل «هامارتانو» (أخطأ) والاسم «هامارتيا» (خطية). وفي الأناجيل كانت «الخطاة» أيضًا تسمية الفريسيين لمن يرونهم خارج الناموس، وكثيرًا ما تقترن بـ«العشارين».\n**الاستعمالات والأمثلة:** ١) على المائدة معهم: مرقس ٢: ١٥ «كان كثيرون من العشارين والخطاة»، فيسوع يأكل مع من يرفضهم المجتمع. ٢) جاء من أجلهم: متى ٩: ١٣ «لأني لم آت لأدعو أبرارا بل خطاة إلى التوبة». ٣) أول الخطاة: ١ تيموثاوس ١: ١٥ «أن المسيح يسوع جاء إلى العالم ليخلص الخطاة الذين أولهم أنا»، يضع بولس نفسه في المقدمة. ٤) محبة سابقة: رومية ٥: ٨ «لأنه ونحن بعد خطاة مات المسيح لأجلنا»، فالمسيح لم ينتظر أن نصلح أنفسنا.\n**في فاندايك:** «خطاة» و«الخطاة» و«والخطاة» و«خاطئ» و«خاطئة».\n**ملاحظة:** في لوقا ١٨: ١٣ يقول العشار «اللهم ارحمني، أنا الخاطئ»، والكلمة في اليونانية معرّفة. ويلاحظ كثير من الشرّاح أنه كأنه يقول «أنا الخاطئ» بعينه، لا «واحد من الخطاة» فحسب.",
+        "en": "**Meaning:** hamartolos is an adjective or noun meaning \"sinful, sinner\", from the verb hamartano (\"to sin\") and the noun hamartia (\"sin\"). In the Gospels \"sinners\" was also the Pharisees' label for people they saw as outside the law, often paired with \"tax collectors\".\n**Uses and examples:** 1) at table with them: Mark 2:15 \"many tax collectors and sinners\": Jesus eats with people society rejects. 2) he came for them: Matt 9:13 \"I came not to call the righteous, but sinners to repentance\". 3) the foremost of sinners: 1 Tim 1:15 \"Christ Jesus came into the world to save sinners, of whom I am the foremost\", Paul putting himself at the head of the line. 4) love that comes first: Rom 5:8 \"while we were still sinners, Christ died for us\": Christ did not wait for us to mend ourselves.\n**In Van Dyke:** «خطاة», «الخطاة», «والخطاة», «خاطئ» and «خاطئة».\n**Note:** in Luke 18:13 the tax collector says \"God, be merciful to me, the sinner\", with the article in Greek. Many commentators note that it is as if he says \"the sinner\" in particular, not just \"one sinner among others\"."
+      },
+      "based_on": [
+        "tbes",
+        "lsj",
+        "mm"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G0591",
+      "lemma": "ἀποδίδωμι",
+      "gloss": {
+        "eg": "رجّع، وفّى، جازى",
+        "msa": "ردّ، أوفى، جازى",
+        "en": "to give back, pay, repay"
+      },
+      "entry": {
+        "eg": "**المعنى:** «أپوديدومي» من «أپو» (من، لورا) و«ديدومي» (ادّى)، يعني «يرجّع» أو «يدّي الحق اللي عليه»: يدفع دين، يوفي نذر، يقدم حساب، أو يجازي حد على شغله. ولما تيجي في صيغة «الوسط» (middle) بتبقى «باع».\n**الاستخدامات والأمثلة:** ١) حق قيصر وحق ربنا: متى ٢٢: ٢١ «أعطوا إذا ما لقيصر لقيصر وما لله لله». ٢) سداد الدين: متى ١٨: ٢٦ «يا سيد، تمهل علي فأوفيك الجميع»، العبد بيوعد بحاجة مستحيلة. ٣) ربنا بيجازي: متى ٦: ٦ «فأبوك الذي يرى في الخفاء يجازيك علانية»، المكافأة على الصلاة في السر. ٤) البيع: عبرانيين ١٢: ١٦ «كعيسو، الذي لأجل أكلة واحدة باع بكوريته».\n**في فاندايك:** «يجازي» و«يجازيك» و«أعطوا» و«يوفي» و«توفي» و«فأوفيك».\n**ملاحظة:** في متى ٢٢: ١٧ السؤال كان «أيجوز أن تعطى جزية لقيصر» بفعل «ديدومي» (يدّي)، ويسوع رد في العدد ٢١ بـ«أپوديدومي» (رجّعوا). كتير من الشراح بيشوفوا في ده إن العملة اللي عليها صورة قيصر ترجع له، والإنسان اللي على صورة ربنا يرجع لربنا.",
+        "msa": "**المعنى:** «أپوديدومي» من «أپو» (من، إلى الوراء) و«ديدومي» (أعطى)، أي «ردّ» أو «أدّى ما عليه»: يسدد دينًا، أو يوفي نذرًا، أو يقدم حسابًا، أو يجازي أحدًا على عمله. وفي صيغة «الوسط» (middle) تعني «باع».\n**الاستعمالات والأمثلة:** ١) حق قيصر وحق الله: متى ٢٢: ٢١ «أعطوا إذا ما لقيصر لقيصر وما لله لله». ٢) سداد الدين: متى ١٨: ٢٦ «يا سيد، تمهل علي فأوفيك الجميع»، وعد العبد بأمر مستحيل. ٣) مجازاة الله: متى ٦: ٦ «فأبوك الذي يرى في الخفاء يجازيك علانية»، المكافأة على الصلاة في الخفاء. ٤) البيع: عبرانيين ١٢: ١٦ «كعيسو، الذي لأجل أكلة واحدة باع بكوريته».\n**في فاندايك:** «يجازي» و«يجازيك» و«أعطوا» و«يوفي» و«توفي» و«فأوفيك».\n**ملاحظة:** في متى ٢٢: ١٧ جاء السؤال «أيجوز أن تعطى جزية لقيصر» بالفعل «ديدومي» (أعطى)، فأجاب يسوع في العدد ٢١ بـ«أپوديدومي» (ردّوا). ويرى كثير من الشرّاح في ذلك أن العملة التي تحمل صورة قيصر تُرد إليه، والإنسان الذي على صورة الله يُرد إلى الله.",
+        "en": "**Meaning:** apodidomi is apo (\"from, back\") plus didomi (\"give\"): to give back or render what is due: pay a debt, fulfil a vow, give an account, or repay someone for their deeds. In the middle voice it means \"sell\".\n**Uses and examples:** 1) Caesar's due and God's: Matt 22:21 \"render to Caesar the things that are Caesar's, and to God the things that are God's\". 2) paying a debt: Matt 18:26 \"Master, have patience with me, and I will pay you everything\", a servant promising the impossible. 3) God repays: Matt 6:6 \"your Father who sees in secret will reward you\", the reward for prayer in secret. 4) selling: Heb 12:16 \"like Esau, who sold his birthright for a single meal\".\n**In Van Dyke:** «يجازي», «يجازيك», «أعطوا», «يوفي», «توفي» and «فأوفيك».\n**Note:** in Matt 22:17 the question is \"is it lawful to give tax to Caesar\" with didomi (\"give\"), and in verse 21 Jesus answers with apodidomi (\"give back\"). Many commentators see here the idea that the coin bearing Caesar's image goes back to him, and the person bearing God's image goes back to God."
+      },
+      "based_on": [
+        "tbes",
+        "lsj",
+        "mm"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2094",
+      "lemma": "ἔτος",
+      "gloss": {
+        "eg": "سنة",
+        "msa": "سنة، عام",
+        "en": "year"
+      },
+      "entry": {
+        "eg": "**المعنى:** «إتوس» الكلمة العادية لـ«سنة» في اليوناني، وأغلب مراتها مع رقم: عمر حد، أو مدة حاجة، أو تاريخ حدث. فيه كلمة تانية للسنة «إنيافتوس» (G1763) بس أقل منها بكتير.\n**الاستخدامات والأمثلة:** ١) عمر: لوقا ٢: ٤٢ «ولما كانت له اثنتا عشرة سنة صعدوا إلى أورشليم كعادة العيد»، يسوع الصبي في الهيكل. ٢) مدة: يوحنا ٢: ٢٠ «في ست وأربعين سنة بني هذا الهيكل، أفأنت في ثلاثة أيام تقيمه؟»، اليهود فاهمين كلامه عن الهيكل الحجر. ٣) فرصة سنة كمان: لوقا ١٣: ٨ «يا سيد، اتركها هذه السنة أيضا»، الكرام بيطلب مهلة للتينة. ٤) زمن ربنا: ٢ بطرس ٣: ٨ «أن يوما واحدا عند الرب كألف سنة، وألف سنة كيوم واحد»، ربنا مش بيقيس الوقت زينا.\n**في فاندايك:** «سنة» و«سنين» و«السنة»، ومرة «وسنوك».\n**ملاحظة:** «ألف سنة» بتيجي ست مرات في رؤيا ٢٠: ٢–٧، ومنها التعبير اللاهوتي «الملك الألفي». وفي عبرانيين ١: ١٢ «وسنوك لن تفنى» الكلمة بتوصف أبدية الابن، من مزمور ١٠٢.",
+        "msa": "**المعنى:** «إتوس» الكلمة المعتادة لـ«سنة» في اليونانية، وأكثر ورودها مع عدد: عمر شخص، أو مدة أمر، أو تاريخ حدث. وهناك كلمة أخرى للسنة «إنيافتوس» (G1763) لكنها أقل منها بكثير.\n**الاستعمالات والأمثلة:** ١) العمر: لوقا ٢: ٤٢ «ولما كانت له اثنتا عشرة سنة صعدوا إلى أورشليم كعادة العيد»، يسوع الصبي في الهيكل. ٢) المدة: يوحنا ٢: ٢٠ «في ست وأربعين سنة بني هذا الهيكل، أفأنت في ثلاثة أيام تقيمه؟»، فهم اليهود كلامه عن الهيكل الحجري. ٣) مهلة سنة أخرى: لوقا ١٣: ٨ «يا سيد، اتركها هذه السنة أيضا»، يطلب الكرّام مهلة للتينة. ٤) زمن الله: ٢ بطرس ٣: ٨ «أن يوما واحدا عند الرب كألف سنة، وألف سنة كيوم واحد»، فالله لا يقيس الزمن كما نقيسه.\n**في فاندايك:** «سنة» و«سنين» و«السنة»، ومرة «وسنوك».\n**ملاحظة:** «ألف سنة» ترد ست مرات في رؤيا ٢٠: ٢–٧، ومنها التعبير اللاهوتي «الملك الألفي». وفي عبرانيين ١: ١٢ «وسنوك لن تفنى» تصف الكلمة أبدية الابن، اقتباسًا من مزمور ١٠٢.",
+        "en": "**Meaning:** etos is the ordinary Greek word for \"year\", mostly with a number: someone's age, the length of something, or the date of an event. Another word for year, eniautos (G1763), is much less common.\n**Uses and examples:** 1) age: Luke 2:42 \"when he was twelve years old, they went up according to custom\", the boy Jesus in the temple. 2) duration: John 2:20 \"it has taken forty-six years to build this temple, and will you raise it up in three days?\", the Jews hearing him speak of the stone temple. 3) one more year: Luke 13:8 \"sir, let it alone this year also\", the vinedresser asking time for the fig tree. 4) God's time: 2 Pet 3:8 \"with the Lord one day is as a thousand years, and a thousand years as one day\": God does not measure time as we do.\n**In Van Dyke:** «سنة», «سنين» and «السنة», once «وسنوك».\n**Note:** \"a thousand years\" comes six times in Rev 20:2-7, the source of the theological term \"millennium\". In Heb 1:12 \"your years will have no end\" the word describes the Son's eternity, quoting Psalm 102."
+      },
+      "based_on": [
+        "ubs",
+        "tbes",
+        "lsj",
+        "mm"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G2920",
+      "lemma": "κρίσις",
+      "gloss": {
+        "eg": "حكم، دينونة، عدل",
+        "msa": "دينونة، حكم، قضاء، عدل",
+        "en": "judgment, verdict; justice"
+      },
+      "entry": {
+        "eg": "**المعنى:** «كريسيس» من فعل «كرينو» (فصل، حكم)، يعني الحكم: القرار اللي بيفصل في قضية، وكتير الدينونة ويوم الدين. ومنها الكلمة الإنجليزي «crisis»، اللحظة اللي بتحسم. وساعات معناها العدل والحق زي «ميشپاط» العبري.\n**الاستخدامات والأمثلة:** ١) يوم الدين: متى ١٢: ٣٦ «إن كل كلمة بطالة يتكلم بها الناس سوف يعطون عنها حسابا يوم الدين». ٢) الحكم بيبان دلوقتي: يوحنا ٣: ١٩ «وهذه هي الدينونة: إن النور قد جاء إلى العالم، وأحب الناس الظلمة أكثر من النور»، الحكم بيظهر في اختيار الناس قدام النور. ٣) من غير دينونة: يوحنا ٥: ٢٤ «ولا يأتي إلى دينونة، بل قد انتقل من الموت إلى الحياة». ٤) العدل: متى ٢٣: ٢٣ «وتركتم أثقل الناموس: الحق والرحمة والإيمان»، «الحق» هنا هو العدل مع الناس.\n**في فاندايك:** «الدين» و«دينونة» و«الدينونة» و«الحكم» و«الحق».\n**ملاحظة:** في متى ١٢: ١٨ «فيخبر الأمم بالحق»، متى بيقتبس إشعياء ٤٢: ١، والكلمة العبري هناك «ميشپاط»، علشان كده فاندايك قالها «الحق» مش «الدينونة».",
+        "msa": "**المعنى:** «كريسيس» من الفعل «كرينو» (فصل، حكم)، أي الحكم: القرار الذي يفصل في قضية، وكثيرًا الدينونة ويوم الدين. ومنها الكلمة الإنجليزية «crisis»، أي اللحظة الحاسمة. وأحيانًا تعني العدل والحق مثل «ميشپاط» العبرية.\n**الاستعمالات والأمثلة:** ١) يوم الدين: متى ١٢: ٣٦ «إن كل كلمة بطالة يتكلم بها الناس سوف يعطون عنها حسابا يوم الدين». ٢) الحكم يظهر الآن: يوحنا ٣: ١٩ «وهذه هي الدينونة: إن النور قد جاء إلى العالم، وأحب الناس الظلمة أكثر من النور»، فالحكم يتجلى في موقف الناس من النور. ٣) بلا دينونة: يوحنا ٥: ٢٤ «ولا يأتي إلى دينونة، بل قد انتقل من الموت إلى الحياة». ٤) العدل: متى ٢٣: ٢٣ «وتركتم أثقل الناموس: الحق والرحمة والإيمان»، و«الحق» هنا العدل مع الناس.\n**في فاندايك:** «الدين» و«دينونة» و«الدينونة» و«الحكم» و«الحق».\n**ملاحظة:** في متى ١٢: ١٨ «فيخبر الأمم بالحق» يقتبس متى إشعياء ٤٢: ١، والكلمة العبرية هناك «ميشپاط»، ولذلك ترجمها فاندايك «الحق» لا «الدينونة».",
+        "en": "**Meaning:** krisis, from krino (\"separate, judge\"), is judgment: the decision that settles a case, often divine judgment and the Day of Judgment. English \"crisis\", the decisive moment, comes from it. Sometimes it means justice and right, like Hebrew mishpat.\n**Uses and examples:** 1) the day of judgment: Matt 12:36 \"on the day of judgment people will give account for every careless word they speak\". 2) judgment shown now: John 3:19 \"this is the judgment: the light has come into the world, and people loved the darkness rather than the light\": the verdict appears in how people respond to the light. 3) no judgment: John 5:24 \"he does not come into judgment, but has passed from death to life\". 4) justice: Matt 23:23 \"you have neglected the weightier matters of the law: justice and mercy and faithfulness\", Van Dyke «الحق», meaning fairness toward people.\n**In Van Dyke:** «الدين», «دينونة», «الدينونة», «الحكم» and «الحق».\n**Note:** in Matt 12:18 \"he will proclaim justice to the Gentiles\" Matthew quotes Isa 42:1, where the Hebrew is mishpat; that is why Van Dyke has «الحق» rather than «الدينونة»."
+      },
+      "based_on": [
+        "ubs",
+        "tbes",
+        "lsj",
+        "mm"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G4226",
+      "lemma": "ποῦ",
+      "gloss": {
+        "eg": "فين، لفين",
+        "msa": "أين، إلى أين",
+        "en": "where? whither?"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پو» أداة سؤال معناها «فين؟»، وساعات «لفين؟» مع أفعال الحركة. وكتير بتيجي في سؤال مالوش رد غير «مفيش»، زي «فين الافتخار؟» يعني خلاص راح.\n**الاستخدامات والأمثلة:** ١) سؤال عادي: متى ٢: ٢ «أين هو المولود ملك اليهود؟»، المجوس بيدوروا عليه. ٢) مالوش مكان: متى ٨: ٢٠ «وأما ابن الإنسان فليس له أين يسند رأسه»، يسوع بيقول للي عايز يمشي وراه إن الطريق ده من غير بيت. ٣) لفين؟: يوحنا ٣: ٨ «لكنك لا تعلم من أين تأتي ولا إلى أين تذهب»، الريح زي كل اللي اتولد من الروح. ٤) سؤال انتصار: ١ كورنثوس ١٥: ٥٥ «أين شوكتك يا موت؟ أين غلبتك يا هاوية؟»، الكلمة مرتين، والسؤال معناه إن الموت خسر.\n**في فاندايك:** «أين» و«إلى أين» و«فأين»، ومرة «موضع».\n**ملاحظة:** في متى ٨: ٢٠ فاندايك ماشي ورا اليوناني حرفيًا «ليس له أين يسند رأسه»، والمعنى «ما لوش مكان يسند فيه راسه». وفي لوقا ١٢: ١٧ فاندايك ترجم نفس الكلمة «موضع».",
+        "msa": "**المعنى:** «پو» أداة استفهام بمعنى «أين؟»، وأحيانًا «إلى أين؟» مع أفعال الحركة. وكثيرًا ما ترد في سؤال لا جواب له إلا «لا شيء»، مثل «أين الافتخار؟» أي قد زال.\n**الاستعمالات والأمثلة:** ١) سؤال عادي: متى ٢: ٢ «أين هو المولود ملك اليهود؟»، المجوس يبحثون عنه. ٢) بلا مأوى: متى ٨: ٢٠ «وأما ابن الإنسان فليس له أين يسند رأسه»، يقول يسوع لمن يريد أن يتبعه إن هذا الطريق بلا بيت. ٣) إلى أين؟: يوحنا ٣: ٨ «لكنك لا تعلم من أين تأتي ولا إلى أين تذهب»، الريح مثل كل مولود من الروح. ٤) سؤال الانتصار: ١ كورنثوس ١٥: ٥٥ «أين شوكتك يا موت؟ أين غلبتك يا هاوية؟»، والكلمة مرتين، والسؤال يعني أن الموت قد هُزم.\n**في فاندايك:** «أين» و«إلى أين» و«فأين»، ومرة «موضع».\n**ملاحظة:** في متى ٨: ٢٠ يتبع فاندايك اليونانية حرفيًّا «ليس له أين يسند رأسه»، والمعنى «ليس له موضع يسند فيه رأسه». وفي لوقا ١٢: ١٧ ترجم فاندايك الكلمة نفسها «موضع».",
+        "en": "**Meaning:** pou is the question word \"where?\", and sometimes \"where to?\" with verbs of motion. It often appears in a question whose only answer is \"nowhere\", like \"where is boasting?\", meaning it is gone.\n**Uses and examples:** 1) a plain question: Matt 2:2 \"where is he who has been born king of the Jews?\", the magi searching for him. 2) no place: Matt 8:20 \"the Son of Man has nowhere to lay his head\": Jesus tells a would-be follower that this road has no home. 3) where to?: John 3:8 \"you do not know where it comes from or where it goes\", the wind, like everyone born of the Spirit. 4) a victory question: 1 Cor 15:55 \"O death, where is your sting? O grave, where is your victory?\", the word twice, the question meaning death has lost.\n**In Van Dyke:** «أين», «إلى أين» and «فأين», once «موضع».\n**Note:** in Matt 8:20 Van Dyke follows the Greek literally, «ليس له أين يسند رأسه» (\"he has not where to lay his head\"), meaning he has no place to rest. In Luke 12:17 Van Dyke renders the same word «موضع» (place)."
+      },
+      "based_on": [
+        "ubs",
+        "tbes",
+        "lsj",
+        "mm"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    },
+    {
+      "dstrong": "G4374",
+      "lemma": "προσφέρω",
+      "gloss": {
+        "eg": "قدّم، جاب لحد",
+        "msa": "قدّم، أحضر إلى",
+        "en": "to bring to, offer"
+      },
+      "entry": {
+        "eg": "**المعنى:** «پروسفيرو» من «پروس» (ناحية) و«فيرو» (شال)، يعني يشيل حاجة ويقربها لحد: يجيب عيان ليسوع، أو يقدّم هدية أو ذبيحة لربنا. ومنها الاسم «پروسفورا» (تقدمة)، وده اسم خبز التقدمة في الكنايس اليوناني لحد النهارده. عبرانيين بيستعمل الفعل كتير جدًا عن الكهنوت والذبايح.\n**الاستخدامات والأمثلة:** ١) هدايا المجوس: متى ٢: ١١ «ثم فتحوا كنوزهم وقدموا له هدايا: ذهبا ولبانا ومرا». ٢) جايبين الأطفال: مرقس ١٠: ١٣ «وقدموا إليه أولادا لكي يلمسهم»، والتلاميذ زعقوا للي جابوهم. ٣) الصلح قبل القربان: متى ٥: ٢٣ «فإن قدمت قربانك إلى المذبح، وهناك تذكرت أن لأخيك شيئا عليك»، يسوع بيقول روح صالح أخوك الأول. ٤) الذبيحة الأخيرة: عبرانيين ٩: ١٤ «الذي بروح أزلي قدم نفسه لله بلا عيب»، المسيح هو الكاهن وهو الذبيحة.\n**في فاندايك:** «قدم» و«وقدم» و«يقدم» و«تقدم» و«قدموا».\n**ملاحظة:** في عبرانيين ١١: ١٧ «قدم إبراهيم إسحاق ... قدم الذي قبل المواعيد» الفعل مرتين: الأول في اليوناني بصيغة بتقول إن التقدمة حصلت وخلصت، والتاني بصيغة الماضي المستمر، وكتير من الشراح بيفهموها «كان بيقدّمه»، لأن ربنا وقفه قبل ما يدبح ابنه.",
+        "msa": "**المعنى:** «پروسفيرو» من «پروس» (نحو) و«فيرو» (حمل)، أي حمل الشيء وقرّبه إلى أحد: أحضر مريضًا إلى يسوع، أو قدّم هدية أو ذبيحة لله. ومنها الاسم «پروسفورا» (تقدمة)، وهو اسم خبز التقدمة في الكنائس اليونانية إلى اليوم. وتستعمل الرسالة إلى العبرانيين الفعل كثيرًا جدًّا عن الكهنوت والذبائح.\n**الاستعمالات والأمثلة:** ١) هدايا المجوس: متى ٢: ١١ «ثم فتحوا كنوزهم وقدموا له هدايا: ذهبا ولبانا ومرا». ٢) إحضار الأطفال: مرقس ١٠: ١٣ «وقدموا إليه أولادا لكي يلمسهم»، وانتهر التلاميذ من أحضروهم. ٣) الصلح قبل القربان: متى ٥: ٢٣ «فإن قدمت قربانك إلى المذبح، وهناك تذكرت أن لأخيك شيئا عليك»، فيسوع يطلب مصالحة الأخ أولًا. ٤) الذبيحة الأخيرة: عبرانيين ٩: ١٤ «الذي بروح أزلي قدم نفسه لله بلا عيب»، فالمسيح هو الكاهن والذبيحة معًا.\n**في فاندايك:** «قدم» و«وقدم» و«يقدم» و«تقدم» و«قدموا».\n**ملاحظة:** في عبرانيين ١١: ١٧ «قدم إبراهيم إسحاق ... قدم الذي قبل المواعيد» يرد الفعل مرتين: الأول في اليونانية بصيغة تفيد أن التقدمة تمت، والثاني بصيغة الماضي المستمر، ويفهمه كثير من الشرّاح «كان يقدّمه»، لأن الله أوقفه قبل أن يذبح ابنه.",
+        "en": "**Meaning:** prosphero is pros (\"toward\") plus phero (\"carry\"): to carry something and bring it to someone: bring the sick to Jesus, or offer a gift or sacrifice to God. The noun prosphora (\"offering\") is still the name of the offering bread in Greek churches. Hebrews uses the verb very often for priesthood and sacrifice.\n**Uses and examples:** 1) the magi's gifts: Matt 2:11 \"opening their treasures, they offered him gifts, gold and frankincense and myrrh\". 2) bringing children: Mark 10:13 \"they were bringing children to him that he might touch them\", and the disciples rebuked those who brought them. 3) reconciliation before the offering: Matt 5:23 \"if you are offering your gift at the altar and there remember that your brother has something against you\": Jesus says go and be reconciled first. 4) the final sacrifice: Heb 9:14 \"who through the eternal Spirit offered himself without blemish to God\": Christ is both priest and sacrifice.\n**In Van Dyke:** «قدم», «وقدم», «يقدم», «تقدم» and «قدموا».\n**Note:** in Heb 11:17 \"Abraham offered up Isaac ... was offering up his only son\" the verb comes twice: first in a Greek form saying the offering was done, then in the imperfect, which many commentators read as \"was in the act of offering\", since God stopped him before he killed his son."
+      },
+      "based_on": [
+        "ubs",
+        "tbes",
+        "lsj",
+        "mm"
+      ],
+      "bdag_checked": false,
+      "tier": "B"
+    }
+  ]
+}

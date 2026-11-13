@@ -1,8 +1,14 @@
-"""Review helper for agent-written entries: structure, length, Egyptian passive scan, and
-whether each verse cited in the eg examples section actually carries the entry's dstrong."""
-import json, re, sqlite3, sys
+"""Review helper for agent-written entries.
 
-DB = sqlite3.connect(__import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', 'build', 'ketaby.db'))
+  python3 check.py [--tier A|B|C|N] file.json ...     (default tier A; C covers C and D; each entry's own "tier" wins)
+
+Checks: section count, eg/msa/en length for the tier, Egyptian passive scan, every verse cited before «في فاندايك»
+carries the entry's dstrong, every «quote» right after a reference is really in that Van Dyke verse, count claims for
+rare words, and that the dstrong is not already written in content/dictionary."""
+import glob, json, os, re, sqlite3, sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+DB = sqlite3.connect(os.path.join(HERE, '..', 'build', 'ketaby.db'))
 NAMES = ["تكوين","خروج","لاويين","عدد","تثنية","يشوع","قضاة","راعوث","١ صموئيل","٢ صموئيل","١ ملوك","٢ ملوك",
  "١ أخبار","٢ أخبار","عزرا","نحميا","أستير","أيوب","مزمور","أمثال","جامعة","نشيد الأنشاد","إشعياء","إرميا","مراثي",
  "حزقيال","دانيال","هوشع","يوئيل","عاموس","عوبديا","يونان","ميخا","ناحوم","حبقوق","صفنيا","حجي","زكريا","ملاخي",
@@ -13,34 +19,77 @@ ALIASES = {"المزامير":"مزمور","مزامير":"مزمور","الأم
 AD = str.maketrans('٠١٢٣٤٥٦٧٨٩', '0123456789')
 names = sorted(NAMES + list(ALIASES), key=len, reverse=True)
 REF = re.compile('(' + '|'.join(map(re.escape, names)) + r') ([٠-٩]+): ([٠-٩]+)')
+QUOTE = re.compile(r'\s*«([^»]+)»')
+DIA = re.compile(r'[ً-ٰٟـ]')
+# tier: (eg min, eg max, sections eg, msa/en min words, msa/en max words, msa/en sections)
+LIMITS = {'A': (200, 380, (4,), 150, 470, (4,)), 'B': (100, 215, (3, 4), 90, 240, (3, 4)),
+          'C': (45, 150, (3, 4), 12, 70, (1, 2)), 'D': (30, 120, (3, 4), 12, 70, (1, 2)),
+          'N': (22, 110, (3,), 10, 60, (1, 2))}
 
 def book_no(n):
     n = ALIASES.get(n, n); return NAMES.index(n) + 1
 
-def has(ds, b, c, v):
-    vid = DB.execute("select id from verses where book=? and ch=? and v=?", (b, c, v)).fetchone()
-    if not vid: return None
-    rows = DB.execute("select dstrong, dstrongs from owords where vd_verse=?", (vid[0],)).fetchall()
-    return any(r[0] == ds or (r[1] and ds in r[1].split()) for r in rows)
+def verse(b, c, v):
+    return DB.execute("select id, text from verses where book=? and ch=? and v=?", (b, c, v)).fetchone()
+
+def has(ds, vid):
+    rows = DB.execute("select dstrong, dstrongs from owords where vd_verse=?", (vid,)).fetchall()
+    return any(r[0] == ds or (r[1] and ds in re.findall(r'[HG]\d+[A-Z]?', r[1])) for r in rows)
+
+def norm(s):
+    s = DIA.sub('', s)
+    s = re.sub('[أإآ]', 'ا', s).replace('ى', 'ي').replace('ة', 'ه')
+    return re.sub(r'[^ء-ي ]', ' ', s).split()
 
 PASS = re.compile(r'(?:^|[«\s])((?:و|ف|ب|هي|بي|ي|ت|بت|هت)?(?:ات|مت|يت|تت)[ء-ي]{2,})')
-OK = set("اتولد اتكتب اتقال اتعمل اتكسر اتسرق اتجوز اتصلب يتكلم بيتكلم اتكلم يتكلمون بتتكلم متأكد متبادلة يتعلم بيتعلم متعلم".split())
+OK = set("اتولد اتكتب اتقال اتعمل اتكسر اتسرق اتجوز اتصلب يتكلم بيتكلم اتكلم يتكلمون بتتكلم متأكد متبادلة يتعلم بيتعلم متعلم اتنين اتناشر".split())
 
-for path in sys.argv[1:]:
-    data = json.load(open(path))
+written = {}
+for f in glob.glob(os.path.join(HERE, '..', '..', 'content', 'dictionary', '*', '*.json')):
+    for w in json.load(open(f, encoding='utf-8')).get('words', []):
+        written[w['dstrong']] = os.path.basename(f)
+
+args = sys.argv[1:]
+default_tier = 'A'
+if '--tier' in args:
+    i = args.index('--tier'); default_tier = args[i + 1]; del args[i:i + 2]
+total = 0
+for path in args:
+    data = json.load(open(path, encoding='utf-8'))
     print('==', path, len(data))
     for e in data:
         ds = e['dstrong']; eg = e['entry']['eg']
+        t = e.get('tier', default_tier)
+        lim = LIMITS[t]
         probs = []
+        if ds in written: probs.append(f'already written in {written[ds]}')
         for k in ('eg', 'msa', 'en'):
-            if e['entry'][k].count('**') != 8: probs.append(f'{k} sections={e["entry"][k].count("**")//2}')
+            n = e['entry'][k].count('**') // 2
+            if n not in (lim[2] if k == 'eg' else lim[5]): probs.append(f'{k} sections={n}')
         words = len(eg.split())
-        if not 200 <= words <= 380: probs.append(f'eg words={words}')
+        if not lim[0] <= words <= lim[1]: probs.append(f'eg words={words}')
+        for k in ('msa', 'en'):
+            n = len(e['entry'][k].split())
+            if not lim[3] <= n <= lim[4]: probs.append(f'{k} words={n}')
         ex = eg.split('**في فاندايك:**')[0]
         for m in REF.finditer(ex):
-            r = has(ds, book_no(m.group(1)), int(m.group(2).translate(AD)), int(m.group(3).translate(AD)))
-            if r is False: probs.append(f'no {ds} in {m.group(0)}')
-            if r is None: probs.append(f'bad ref {m.group(0)}')
+            r = verse(book_no(m.group(1)), int(m.group(2).translate(AD)), int(m.group(3).translate(AD)))
+            if r is None: probs.append(f'bad ref {m.group(0)}'); continue
+            if not has(ds, r[0]): probs.append(f'no {ds} in {m.group(0)}')
+            q = QUOTE.match(ex, m.end())
+            if q:
+                vt = ' ' + ' '.join(norm(r[1])) + ' '
+                for part in re.split(r'\.\.\.|…', q.group(1)):
+                    p = ' '.join(norm(part))
+                    if p and ' ' + p + ' ' not in vt: probs.append(f'quote not in {m.group(0)}: «{part.strip()[:40]}»')
+        if t in ('C', 'D'):
+            cnt = DB.execute('select count from lemmas where dstrong=?', (ds,)).fetchone()
+            cnt = cnt[0] if cnt else None
+            m = re.search(r'([٠-٩]+) مر(?:ات|تين)', eg.split('**المواضع')[0].split('**الموضع')[0])
+            said = 1 if 'مرة واحدة' in eg.split('**الموضع')[0] else int(m.group(1).translate(AD)) if m else None
+            if said is not None and cnt is not None and said != cnt: probs.append(f'count says {said}, DB {cnt}')
         pas = [w for w in PASS.findall(eg) if w.lstrip('وفب') not in OK and w not in OK]
         if pas: probs.append('check: ' + ' '.join(pas))
-        print(ds, words, '|', '; '.join(probs) if probs else 'ok')
+        total += bool(probs)
+        print(ds, t, words, '|', '; '.join(probs) if probs else 'ok')
+print('entries with something to look at:', total)

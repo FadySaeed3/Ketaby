@@ -18,6 +18,14 @@ and match their length, structure, tone and density. Do not modify those files o
   Mat Mrk Luk Jhn Act Rom 1Co 2Co Gal Eph Php Col 1Th 2Th 1Ti 2Ti Tit Phm Heb Jas 1Pe 2Pe 1Jn 2Jn 3Jn Jud Rev.
   If a code fails, try a variant.
 
+## Data pack (when your task gives one)
+`prep.py` makes a pack file for your lemmas: gloss, count, all sense numbers of the root, Van Dyke renderings with counts,
+open-lexicon definitions (`defs`) and about 25 occurrences spread over the Bible (`ref` = the Arabic reference to write,
+`vd` = Van Dyke verse, `ar` = the Van Dyke word aligned to this lemma, `orig` = the Hebrew/Greek form).
+Every occurrence in the pack carries this exact dstrong, so you can quote it without checking. Start from the pack;
+use ex.py for any other verse you want (famous verses not in the sample), with the rules below.
+Shorter entries for less frequent words have their own specs: SPEC_B.md (10–49 times), SPEC_C.md (rare), SPEC_N.md (names).
+
 ## Accuracy rules (most important)
 1. Every verse you cite as an example of THIS word must be checked with ex.py and must show THIS exact dstrong (including the sense letter).
    If a famous verse turns out to carry a different sense number or a different word, either leave it out or mention it only in the
@@ -64,6 +72,7 @@ The `eg` text is about 230–320 words. `msa` is the same content in MSA, `en` t
 After writing, scan your `eg` texts for any word starting with ات/يت/تت/بيت/بتت/هيت or متـ and fix any that is an artificial passive or state form.
 
 ## Output
-Write a JSON array of your entries (in the order given) to the output path in your task, UTF-8, `ensure_ascii=False`, indent 2.
-Validate it loads with `json.load`. Do not commit, push or edit repo files.
+Write a JSON array of your entries (in the order given) to the output path in your task, UTF-8, `ensure_ascii=False`, indent 2,
+with `"tier": "A"` on each entry. Validate it with `python3 check.py --tier A <file>` and fix what it reports
+(artificial passives, verses without this dstrong, quotes that are not in the verse, length). Do not commit, push or edit repo files.
 In your final reply list: each dstrong done, any verse you dropped because the tag did not match, and anything you were unsure about.

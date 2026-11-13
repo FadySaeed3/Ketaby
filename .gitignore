@@ -41,3 +41,4 @@ app/src/main/assets/ketaby.db.len
 jesuit_html*/
 jesuit_html*.zip
 **/jesuit_private/
+data-pipeline/dict_tools/reserved.txt

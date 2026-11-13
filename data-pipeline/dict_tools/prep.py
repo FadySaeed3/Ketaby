@@ -1,7 +1,8 @@
 """Data packs for dictionary writers: everything an agent needs about each lemma in one JSON file,
 so it can write without searching verse by verse.
 
-  python3 prep.py next  TIER LANG N [--skip K] [--out pack.json]   pick the next N unwritten lemmas of a tier
+  python3 prep.py next  TIER LANG N [--skip K] [--single|--multi] [--out pack.json]   pick the next N unwritten lemmas of a tier
+                  (--single / --multi: only lemmas whose base has one / several sense numbers; tier B uses Sonnet for single, Opus for multi)
   python3 prep.py words DSTRONG ... [--out pack.json]               a pack for given lemmas
 
 TIER: A (count >= 50), B (10-49), C (2-9), D (1), N (proper names, any count < 50; names with 50+ stay in A).
@@ -128,6 +129,8 @@ def main():
     a = sys.argv[1:]
     out = a[a.index('--out') + 1] if '--out' in a else None
     skip = int(a[a.index('--skip') + 1]) if '--skip' in a else 0
+    only = 'single' if '--single' in a else 'multi' if '--multi' in a else None   # tier B split: one sense number vs several
+    nsenses = collections.Counter(base(d) for (d,) in DB.execute('select dstrong from lemmas where count > 0'))
     if a[0] == 'next':
         t, lang, n = a[1], a[2], int(a[3])
         langs = ('heb', 'arc') if lang == 'heb' else ('grc',)
@@ -142,6 +145,8 @@ def main():
                 continue
             k = kind(ds, defs(ds), gl or '') if (gl or '')[:1].isupper() else 'word'
             if tier(cnt, k) != t:
+                continue
+            if only and (nsenses[base(ds)] > 1) != (only == 'multi'):
                 continue
             if skip:
                 skip -= 1; continue

@@ -13,9 +13,14 @@ facts from memory beyond what is common knowledge about well-known biblical figu
 - Who or what: one or two sentences (person: whose son or daughter, role, period or book; place: region or kind of place;
   people group: whose descendants, where they lived). If the same Hebrew/Greek name belongs to several people under this
   one number, say so briefly («الاسم ده لـ ٣ أشخاص: ...»).
-- Meaning of the name: only if the lexicons give one, and always hedged («اسمه معناه غالبًا ...»).
-- Key places: 1–3 references from the pack, the clearest ones, with a very short quote or context.
+- Meaning of the name: only if the lexicons give one, and hedged («اسمه معناه غالبًا ...»). No hedge when the name is
+  simply an ordinary word (Gibeah = «تل», Satan = «خصم»). Leave out meanings that look like folk etymology.
+- Key places: 1–3 references from the pack (up to 4 for very well-known figures), the clearest ones, with a very short quote or context.
 - Van Dyke spelling: the main form(s) from `renderings` (without prefixes like و/ب/ل when the plain form exists).
+
+- Several sense numbers (`senses`): each item's `sense_refs` shows the first verses of every sister number, so you can
+  tell which person or place this number covers. Name the sister number with its code when it helps («يوحنا المعمدان G2491G»).
+- `based_on`: the open lexicons you actually used (only keys present in `defs`).
 
 ## Shape
 - eg: `**مين ده:** ...` (or `**فين ده:**` for a place, `**مين دول:**` for a people) \n `**أهم المواضع:** ...` \n `**في فاندايك:** ...`

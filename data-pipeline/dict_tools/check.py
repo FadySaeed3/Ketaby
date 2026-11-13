@@ -88,7 +88,7 @@ for path in args:
             m = re.search(r'([٠-٩]+) مر(?:ات|تين)', eg.split('**المواضع')[0].split('**الموضع')[0])
             said = 1 if 'مرة واحدة' in eg.split('**الموضع')[0] else int(m.group(1).translate(AD)) if m else None
             if said is not None and cnt is not None and said != cnt: probs.append(f'count says {said}, DB {cnt}')
-        pas = [w for w in PASS.findall(eg) if w.lstrip('وفب') not in OK and w not in OK]
+        pas = [w for w in PASS.findall(re.sub(r'«[^»]*»', ' ', eg)) if w.lstrip('وفب') not in OK and w not in OK]
         if pas: probs.append('check: ' + ' '.join(pas))
         total += bool(probs)
         print(ds, t, words, '|', '; '.join(probs) if probs else 'ok')

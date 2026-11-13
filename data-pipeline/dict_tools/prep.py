@@ -112,6 +112,11 @@ def item(ds):
     senses = [{'dstrong': a, 'gloss': g, 'count': n} for a, g, n in
               DB.execute('select dstrong, gloss, count from lemmas where dstrong like ? order by dstrong', (base(ds) + '%',))
               if re.fullmatch(base(ds) + '[A-Z]?', a)]
+    if k.startswith('name') and len(senses) > 1:     # which verses each sister number covers, to tell same-name people apart
+        for se in senses:
+            refs = DB.execute("select distinct v.book, v.ch, v.v, v.id from owords o join verses v on v.id = o.vd_verse where o.dstrong = ? "
+                              "order by v.id limit 3", (se["dstrong"],)).fetchall()
+            se['sense_refs'] = [f'{NAMES[b - 1]} {str(c).translate(AR)}: {str(v).translate(AR)}' for b, c, v, _ in refs]
     rend = DB.execute('select json from rend where dstrong = ?', (ds,)).fetchone()
     return {'dstrong': ds, 'lemma': r[2], 'lang': r[1], 'translit': r[3], 'gloss': r[4], 'count': r[5], 'kind': k,
             'tier': tier(r[5], k), 'senses': senses, 'renderings': json.loads(rend[0])[:8] if rend else [],

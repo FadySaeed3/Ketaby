@@ -1,12 +1,13 @@
 """update(lang, {dstrong: {eg, msa, en}}, gloss=None, batch=1, new=None): replace entry texts in a batch file;
-`new` = list of full word dicts to append (for new batches)."""
+`new` = list of full word dicts to append (for new batches); name = file stem instead of batch_NNN."""
 import json, os
 
 ROOT = __import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)), '..', '..', 'content', 'dictionary')
 
 
-def update(lang, entries, gloss=None, batch=1, new=None, about=None):
-    p = os.path.join(ROOT, lang, f'batch_{batch:03d}.json')
+def update(lang, entries, gloss=None, batch=1, new=None, about=None, name=None):
+    """name: file stem instead of batch_NNN (e.g. 'tierB_001')."""
+    p = os.path.join(ROOT, lang, (name or f'batch_{batch:03d}') + '.json')
     if os.path.exists(p):
         d = json.load(open(p, encoding='utf-8'))
     else:

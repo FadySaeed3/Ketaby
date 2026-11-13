@@ -10,6 +10,12 @@ to write (`ref`), the Van Dyke verse (`vd`) and the Van Dyke word aligned to thi
 **Every occurrence in the pack carries this exact dstrong, so you may quote it without checking.** Write from the pack.
 Use `ex.py` only for a verse that is not in the pack (and then it must show this dstrong), and never cite a verse from memory.
 
+**Alignment caveat:** the `ar` field and `renderings` come from an automatic word alignment, which is often wrong for
+rare words (it can point at a neighbouring word such as «الله» or «أو»). If `ar` does not fit the meaning, find the real
+Van Dyke words for it in `vd` and write those. If the pack's `gloss` or `lemma` looks wrong against `defs` and the verses,
+follow the defs and the verses, keep the pack's lemma string, and say so briefly in a note.
+`based_on` lists the open lexicons you actually used (keys present in `defs`).
+
 ## Shape
 - eg: `**المعنى:** ...` \n `**الاستخدامات والأمثلة:** ١) ... ٢) ... ٣) ...` \n `**في فاندايك:** ...` \n `**ملاحظة:** ...`
   - Meaning: 1–3 sentences (what it means, root or related word if useful, how the sense numbers split if there are several).

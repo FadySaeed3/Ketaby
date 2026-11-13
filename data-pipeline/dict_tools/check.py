@@ -44,6 +44,9 @@ def norm(s):
 PASS = re.compile(r'(?:^|[«\s])((?:و|ف|ب|هي|بي|ي|ت|بت|هت)?(?:ات|مت|يت|تت)[ء-ي]{2,})')
 OK = set("اتولد اتكتب اتقال اتعمل اتكسر اتسرق اتجوز اتصلب يتكلم بيتكلم اتكلم يتكلمون بتتكلم متأكد متبادلة يتعلم بيتعلم متعلم اتنين اتناشر".split())
 
+# everyday Egyptian verbs that start with ات/ت anyway (not passives): any form containing these stems is fine
+OK_STEMS = 'تمنى تمني ترجى ترجو اترج تأثر اتأثر تحول اتحول اتلم تلم اتجمع تجمع اتكل تكلم اتعلم تعلم اتفق تفق اتصل تصل اتحرك تحرك اتغير تغير اتمشى تمشى اتعشى اتغدى اتأخر تأخر اتولد اتجوز تجوز اتخانق اتنين اتناشر'.split()
+
 written = {}
 for f in glob.glob(os.path.join(HERE, '..', '..', 'content', 'dictionary', '*', '*.json')):
     for w in json.load(open(f, encoding='utf-8')).get('words', []):
@@ -85,10 +88,12 @@ for path in args:
         if t in ('C', 'D'):
             cnt = DB.execute('select count from lemmas where dstrong=?', (ds,)).fetchone()
             cnt = cnt[0] if cnt else None
-            m = re.search(r'([٠-٩]+) مر(?:ات|تين)', eg.split('**المواضع')[0].split('**الموضع')[0])
-            said = 1 if 'مرة واحدة' in eg.split('**الموضع')[0] else int(m.group(1).translate(AD)) if m else None
+            meaning = re.sub(r'«[^»]*»', ' ', re.split(r'\*\*الموضع|\*\*المواضع', eg)[0])   # the count claim lives in the Meaning section
+            m = re.search(r'([٠-٩]+) مر(?:ات|تين)', meaning)
+            said = 1 if 'مرة واحدة' in meaning else 2 if re.search(r'(?<![٠-٩] )مرتين', meaning) and not m else int(m.group(1).translate(AD)) if m else None
             if said is not None and cnt is not None and said != cnt: probs.append(f'count says {said}, DB {cnt}')
-        pas = [w for w in PASS.findall(re.sub(r'«[^»]*»', ' ', eg)) if w.lstrip('وفب') not in OK and w not in OK]
+        pas = [w for w in PASS.findall(re.sub(r'«[^»]*»', ' ', eg)) if w.lstrip('وفب') not in OK and w not in OK
+               and not any(st in w for st in OK_STEMS)]
         if pas: probs.append('check: ' + ' '.join(pas))
         total += bool(probs)
         print(ds, t, words, '|', '; '.join(probs) if probs else 'ok')

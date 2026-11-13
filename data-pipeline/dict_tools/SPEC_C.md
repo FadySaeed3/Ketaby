@@ -9,6 +9,12 @@ Your task gives a pack file made by `prep.py`. For these words the pack lists **
 (`defs`), the sense numbers of the same root (`senses`) and the Van Dyke renderings. Write from the pack; every occurrence
 in it carries this exact dstrong. Do not cite any other verse as an example of this word.
 
+**Alignment caveat:** the `ar` field and `renderings` come from an automatic word alignment, which is often wrong for
+rare words (it can point at a neighbouring word such as «الله» or «أو»). If `ar` does not fit the meaning, find the real
+Van Dyke words for it in `vd` and write those. If the pack's `gloss` or `lemma` looks wrong against `defs` and the verses,
+follow the defs and the verses, keep the pack's lemma string, and say so briefly in a note.
+`based_on` lists the open lexicons you actually used (keys present in `defs`).
+
 ## What matters for rare words
 - The meaning of a rare word is often uncertain. Say what the open lexicons give, and when they differ or the meaning
   rests mostly on context, say so plainly («المعنى مفهوم من السياق»، «القواميس بتختلف: ...»). Never sound surer than the evidence.

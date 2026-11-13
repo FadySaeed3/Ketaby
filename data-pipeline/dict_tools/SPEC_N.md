@@ -22,6 +22,12 @@ facts from memory beyond what is common knowledge about well-known biblical figu
   tell which person or place this number covers. Name the sister number with its code when it helps («يوحنا المعمدان G2491G»).
 - `based_on`: the open lexicons you actually used (only keys present in `defs`).
 
+**Alignment caveat:** the `ar` field and `renderings` come from an automatic word alignment, which is often wrong for
+rare words (it can point at a neighbouring word such as «الله» or «أو»). If `ar` does not fit the meaning, find the real
+Van Dyke words for it in `vd` and write those. If the pack's `gloss` or `lemma` looks wrong against `defs` and the verses,
+follow the defs and the verses, keep the pack's lemma string, and say so briefly in a note.
+`based_on` lists the open lexicons you actually used (keys present in `defs`).
+
 ## Shape
 - eg: `**مين ده:** ...` (or `**فين ده:**` for a place, `**مين دول:**` for a people) \n `**أهم المواضع:** ...` \n `**في فاندايك:** ...`
 - `eg` length: 25–100 words (well-known people near the top, obscure names in genealogies near the bottom).

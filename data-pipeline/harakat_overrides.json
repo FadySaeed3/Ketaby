@@ -1,0 +1,110 @@
+{
+ "about": "Hand-checked fixes for misplaced harakat in AraSVD 7.0.1 that the automatic rules in build_db.py cannot decide: the shadda written on the first letter instead of the lam (or mim). Each fix replaces \"from\" with \"to\" inside the one token of that verse that contains it; build_db.py fails if a \"from\" is not found.",
+ "fixes": [
+  {
+   "ref": "Num.33.32",
+   "from": "ثُّمَ",
+   "to": "ثُمَّ"
+  },
+  {
+   "ref": "Isa.25.4",
+   "from": "ظِّلاً",
+   "to": "ظِلاًّ"
+  },
+  {
+   "ref": "Matt.6.14",
+   "from": "زَّلاَتِهِمْ",
+   "to": "زَلاَّتِهِمْ"
+  },
+  {
+   "ref": "Matt.6.15",
+   "from": "زَّلاَتِهِمْ",
+   "to": "زَلاَّتِهِمْ"
+  },
+  {
+   "ref": "Matt.6.15",
+   "from": "زَّلاَتِكُمْ",
+   "to": "زَلاَّتِكُمْ"
+  },
+  {
+   "ref": "Matt.16.10",
+   "from": "سَّلاً",
+   "to": "سَلاًّ"
+  },
+  {
+   "ref": "Matt.18.35",
+   "from": "زَّلاَتِهِ",
+   "to": "زَلاَّتِهِ"
+  },
+  {
+   "ref": "Matt.27.34",
+   "from": "خَّلاً",
+   "to": "خَلاًّ"
+  },
+  {
+   "ref": "Matt.27.48",
+   "from": "خَّلاً",
+   "to": "خَلاًّ"
+  },
+  {
+   "ref": "Mark.11.25",
+   "from": "زَّلاَتِكُمْ",
+   "to": "زَلاَّتِكُمْ"
+  },
+  {
+   "ref": "Mark.11.26",
+   "from": "زَّلاَتِكُمْ",
+   "to": "زَلاَّتِكُمْ"
+  },
+  {
+   "ref": "Mark.15.36",
+   "from": "خَّلاً",
+   "to": "خَلاًّ"
+  },
+  {
+   "ref": "Luke.12.18",
+   "from": "غَّلاَتِي",
+   "to": "غَلاَّتِي"
+  },
+  {
+   "ref": "Luke.12.51",
+   "from": "كَّلاَّ",
+   "to": "كَلاَّ"
+  },
+  {
+   "ref": "John.19.29",
+   "from": "خَّلاً",
+   "to": "خَلاًّ"
+  },
+  {
+   "ref": "Rom.3.9",
+   "from": "كَّلاَ",
+   "to": "كَلاَّ"
+  },
+  {
+   "ref": "Rom.3.27",
+   "from": "كَّلاَّ",
+   "to": "كَلاَّ"
+  },
+  {
+   "ref": "2Cor.9.10",
+   "from": "غَّلاَتِ",
+   "to": "غَلاَّتِ"
+  },
+  {
+   "ref": "Rev.13.17",
+   "from": "إِّلاَّ",
+   "to": "إِلاَّ"
+  },
+  {
+   "ref": "Rev.14.3",
+   "from": "إِّلاَّ",
+   "to": "إِلاَّ"
+  },
+  {
+   "ref": "Rev.21.27",
+   "from": "إِّلاَّ",
+   "to": "إِلاَّ"
+  }
+ ]
+}

@@ -20,6 +20,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.core.content.res.ResourcesCompat
 import com.fadysaeed.ketaby.R
+import com.fadysaeed.ketaby.data.ArSearch
 import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.SearchHit
 import kotlinx.coroutines.Dispatchers
@@ -30,46 +31,10 @@ import java.util.Locale
 
 /** Where the searched words sit in a verse, widened to whole words so Arabic letters stay joined. */
 object SearchMarks {
-    private fun isHaraka(c: Char) = c in 'ً'..'ٟ' || c == 'ٰ' || c == 'ـ'
-    private fun isArabicWordChar(c: Char) = c in 'ء'..'ي' || isHaraka(c)
     private fun isLatinWordChar(c: Char) = c.isLetterOrDigit() || c == '\''
 
-    fun ranges(text: String, query: String, english: Boolean): List<IntRange> =
-        if (english) latin(text, query) else arabic(text, query)
-
-    private fun arabic(text: String, query: String): List<IntRange> {
-        val words = ArText.plainArabic(query).split(' ').filter { it.isNotBlank() }
-        if (words.isEmpty()) return emptyList()
-        // Same normalisation as ArText.plainArabic, keeping a map back to the original characters.
-        val norm = StringBuilder()
-        val map = ArrayList<Int>()
-        text.forEachIndexed { i, c ->
-            if (isHaraka(c)) return@forEachIndexed
-            val n = when (c) {
-                'أ', 'إ', 'آ', 'ٱ' -> 'ا'
-                'ى' -> 'ي'
-                'ة' -> 'ه'
-                else -> if (c in 'ء'..'ي') c else ' '
-            }
-            norm.append(n); map.add(i)
-        }
-        val out = ArrayList<IntRange>()
-        val ns = norm.toString()
-        for (w in words) {
-            var from = 0
-            while (true) {
-                val k = ns.indexOf(w, from)
-                if (k < 0) break
-                var s = map[k]
-                var e = map[k + w.length - 1] + 1
-                while (s > 0 && isArabicWordChar(text[s - 1])) s--
-                while (e < text.length && isArabicWordChar(text[e])) e++
-                out += s until e
-                from = k + w.length
-            }
-        }
-        return merge(out)
-    }
+    fun ranges(text: String, query: String, english: Boolean, mode: ArSearch.Mode): List<IntRange> =
+        if (english) latin(text, query) else ArSearch.ranges(text, query, mode)
 
     private fun latin(text: String, query: String): List<IntRange> {
         val words = query.lowercase().replace(Regex("[^a-z0-9 ]+"), " ").split(' ').filter { it.isNotBlank() }
@@ -90,19 +55,7 @@ object SearchMarks {
                 from = k + w.length
             }
         }
-        return merge(out)
-    }
-
-    private fun merge(rs: List<IntRange>): List<IntRange> {
-        if (rs.isEmpty()) return rs
-        val sorted = rs.sortedBy { it.first }
-        val out = ArrayList<IntRange>()
-        var cur = sorted[0]
-        for (r in sorted.drop(1)) {
-            cur = if (r.first <= cur.last + 1) cur.first..maxOf(cur.last, r.last) else { out += cur; r }
-        }
-        out += cur
-        return out
+        return ArSearch.merge(out)
     }
 
     fun annotated(text: String, ranges: List<IntRange>, color: Color, background: Color): AnnotatedString = buildAnnotatedString {
@@ -115,9 +68,9 @@ object SearchMarks {
 object SearchExport {
     private fun ref(h: SearchHit) = "${h.bookName} ${ArText.num(h.ch)}:${ArText.num(h.v)}"
 
-    private fun header(query: String, total: Int): List<String> = listOf(
+    private fun header(query: String, total: Int, english: Boolean, mode: ArSearch.Mode): List<String> = listOf(
         t("كتابي · نتايج البحث", "كتابي · نتائج البحث", "Ketaby · Search results"),
-        t("البحث: «$query»", "البحث: «$query»", "Search: \"$query\""),
+        t("البحث: «$query»", "البحث: «$query»", "Search: \"$query\"") + (if (english) "" else " · " + modeLabel(mode)),
         t("عدد الآيات: ${ArText.num(total)}", "عدد الآيات: ${ArText.num(total)}", "Verses: $total"),
         SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.US).format(Date()).let { ArText.num(it) },
     )
@@ -130,7 +83,7 @@ object SearchExport {
         ctx.contentResolver.openOutputStream(uri, "wt")!!.use { it.write(sb.toString().toByteArray(Charsets.UTF_8)) }
     }
 
-    suspend fun pdf(ctx: Context, uri: Uri, query: String, hits: List<SearchHit>, english: Boolean, plexScripture: Boolean) =
+    suspend fun pdf(ctx: Context, uri: Uri, query: String, hits: List<SearchHit>, english: Boolean, plexScripture: Boolean, mode: ArSearch.Mode) =
         withContext(Dispatchers.IO) {
             val W = 595; val H = 842; val M = 42f
             val width = (W - 2 * M).toInt()
@@ -189,7 +142,7 @@ object SearchExport {
             }
 
             newPage()
-            val head = header(query, hits.size)
+            val head = header(query, hits.size, english, mode)
             draw(layout(head[0], paint(plexBold, 17f, gold), uiRtl))
             y += 4f
             draw(layout(head[1], paint(plexBold, 13f, dark), uiRtl))
@@ -203,7 +156,7 @@ object SearchExport {
             for (h in hits) {
                 val refLayout = layout(ref(h), refPaint, uiRtl)
                 val s = SpannableString(h.text)
-                for (r in SearchMarks.ranges(h.text, query, english)) {
+                for (r in SearchMarks.ranges(h.text, query, english, mode)) {
                     s.setSpan(BackgroundColorSpan(markBg), r.first, r.last + 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
                     s.setSpan(ForegroundColorSpan(markText), r.first, r.last + 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
                 }

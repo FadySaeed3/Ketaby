@@ -8,12 +8,8 @@ object ArText {
     private val harakat = Regex("[\\u064B-\\u065F\\u0670\\u0640]")
     private val cantillation = Regex("[\\u0591-\\u05AF\\u05BD]")
 
-    /** Same normalisation as plain_ar() in build_db.py. */
-    fun plainArabic(s: String): String {
-        var t = harakat.replace(s, "")
-        t = t.replace(Regex("[أإآٱ]"), "ا").replace('ى', 'ي').replace('ة', 'ه')
-        return t.replace(Regex("[^\\u0621-\\u064A ]"), " ").trim()
-    }
+    /** Same normalisation as plain_ar() in build_db.py (see ArSearch). */
+    fun plainArabic(s: String): String = ArSearch.normalize(s, loose = false)
 
     fun stripHarakat(s: String): String = harakat.replace(s, "")
 

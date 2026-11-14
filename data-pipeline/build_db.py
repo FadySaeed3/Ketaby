@@ -157,6 +157,35 @@ def load_cards(db):
     return len(rows)
 
 
+HARAKA = '\u064b-\u0652\u0670'
+_AT_START = re.compile(r'^([' + HARAKA + r']+)([\u0621-\u064a])')
+_AFTER_SPACE = re.compile(r'( )([' + HARAKA + r']+)([\u0621-\u064a])')
+_AFTER_PUNCT = re.compile(r'([\u0621-\u064a][' + HARAKA + r']*)([،؛.:؟!«»()\[\]]+)([' + HARAKA + r']+)')
+_STRAY = re.compile(r'(?:^|[^\u0621-\u064a\u0640' + HARAKA + r'])[' + HARAKA + r']')
+_DOUBLE = re.compile(r'([\u064b-\u0652])\1')
+HARAKAT_LOG = []  # (ref, before, after, 'auto' | 'manual') for the build report
+
+
+def fix_harakat(s, word_start=True):
+    """AraSVD 7.0.1 has some harakat in the wrong place. A mark after a space belongs to the first
+    letter of the next word (كَاهِنًا ِللهِ -> كَاهِنًا لِلهِ); a mark after punctuation that follows a
+    letter belongs to that letter (الْحِمَار،ِ -> الْحِمَارِ، and و«َأَنَا -> وَ«أَنَا). word_start says whether
+    the text starts a word (the previous text ended with a space), so a leading mark moves too."""
+    if word_start:
+        s = _AT_START.sub(r'\2\1', s)
+    s = _AFTER_SPACE.sub(r'\1\3\2', s)
+    return _AFTER_PUNCT.sub(r'\1\3\2', s)
+
+
+def load_harakat_overrides():
+    """Hand-checked fixes that the rules cannot decide (harakat_overrides.json): ref -> [(from, to)]."""
+    d = json.load(open(os.path.join(HERE, 'harakat_overrides.json'), encoding='utf-8'))
+    out = collections.defaultdict(list)
+    for f in d['fixes']:
+        out[f['ref']].append([f['from'], f['to']])
+    return out
+
+
 def load_verses(db):
     """Van Dyke verses from the tagged OSIS file -> verses, units, tokens."""
     f = sorted(glob.glob(os.path.join(ARA, 'AraSVD_sb-7*.xml')))[-1]
@@ -164,6 +193,9 @@ def load_verses(db):
     vid = {}
     tok_rows, verse_rows = [], []
     tid = 0
+    overrides = load_harakat_overrides()
+    unused = {(r, f) for r, fs in overrides.items() for f, _ in fs}
+    stray = []
     for m in re.finditer(r"<verse osisID='([^']+)'>(.*?)</verse>", t, re.S):
         osis, body = m.group(1), m.group(2)
         b, c, v = osis.split('.')
@@ -171,12 +203,15 @@ def load_verses(db):
         verse_id = len(verse_rows) + 1
         vid[(book, int(c), int(v))] = verse_id
         idx, plain = 0, []
+        first_tok = len(tok_rows)
         for part in re.split(r'(<w [^>]*>.*?</w>)', body, flags=re.S):
             if not part:
                 continue
             wm = re.match(r'<w lemma="([^"]*)">(.*?)</w>', part, re.S)
             if wm:
                 txt = html.unescape(re.sub(r'<[^>]+>', '', wm.group(2)))
+                txt = wasl(osis, txt, tok_rows, plain, first_tok)
+                txt = fixed(osis, txt, not plain or plain[-1][-1:] in ' «(')
                 strongs = ' '.join(s.replace('strong:', '') for s in wm.group(1).split())
                 tid += 1
                 tok_rows.append((tid, verse_id, idx, txt, strongs or '-'))
@@ -185,15 +220,66 @@ def load_verses(db):
                 txt = html.unescape(re.sub(r'<[^>]+>', '', part))
                 if not txt:
                     continue
+                txt = fixed(osis, txt, not plain or plain[-1][-1:] in ' «(')
                 tid += 1
                 tok_rows.append((tid, verse_id, idx, txt, None))
                 plain.append(txt)
             idx += 1
+        for frm, to in overrides.get(osis, []):
+            for k in range(first_tok, len(tok_rows)):
+                tk = tok_rows[k]
+                if frm in tk[3]:
+                    tok_rows[k] = (tk[0], tk[1], tk[2], tk[3].replace(frm, to, 1), tk[4])
+                    plain[k - first_tok] = tok_rows[k][3]
+                    HARAKAT_LOG.append((osis, frm, to, 'manual'))
+                    unused.discard((osis, frm))
+                    break
         vt = re.sub(r'\s+', ' ', ''.join(plain)).strip()
+        if _STRAY.search(vt):
+            stray.append((osis, vt))
         verse_rows.append((verse_id, book, int(c), int(v), vt, plain_ar(vt)))
+    print(f'harakat: {sum(1 for x in HARAKAT_LOG if x[3] == "auto")} moved by rule, '
+          f'{sum(1 for x in HARAKAT_LOG if x[3] == "manual")} fixed from harakat_overrides.json')
+    for ref, a, b, how in HARAKAT_LOG:
+        print(f'  {how:6} {ref:12} {a} -> {b}')
+    if unused:
+        raise SystemExit(f'harakat_overrides.json: not found in the text: {sorted(unused)}')
+    if stray:
+        raise SystemExit('harakat after a space or punctuation remain in %d verses, e.g. %s' % (len(stray), stray[:5]))
     db.executemany('INSERT INTO verses VALUES (?,?,?,?,?,?)', verse_rows)
     db.executemany('INSERT INTO tokens VALUES (?,?,?,?,?)', tok_rows)
     return vid
+
+
+def wasl(ref, txt, tok_rows, plain, first_tok):
+    """A mark after a space that sits before a hamzat-wasl alif (الْكَذِب ِالَّذِي) cannot go on the
+    alif: it is the end vowel of the word before (الْكَذِبِ الَّذِي). Moves it to the end of the
+    previous token of the same verse, which keeps every token boundary."""
+    m = re.match('([' + HARAKA + ']+)ا', txt)
+    if not m or not plain or plain[-1] != ' ':
+        return txt
+    for k in range(len(tok_rows) - 1, first_tok - 1, -1):
+        prev = tok_rows[k][3]
+        if prev.strip():
+            if re.search(r'[\u0621-\u064a]$', prev):
+                tok_rows[k] = (tok_rows[k][0], tok_rows[k][1], tok_rows[k][2], prev + m.group(1), tok_rows[k][4])
+                plain[k - first_tok] = tok_rows[k][3]
+                HARAKAT_LOG.append((ref, prev.split()[-1] + ' ' + txt.split()[0], tok_rows[k][3].split()[-1] + ' ' + txt[len(m.group(1)):].split()[0], 'auto'))
+                return txt[len(m.group(1)):]
+            break
+    return txt
+
+
+def fixed(ref, txt, word_start):
+    """fix_harakat() on one token, logged; letters and token boundaries never change."""
+    new = fix_harakat(txt, word_start)
+    if len(_DOUBLE.findall(new)) > len(_DOUBLE.findall(txt)):
+        new = _DOUBLE.sub(r'\1', new)  # the moved mark was already on that letter: a stray copy
+    if new != txt:
+        if re.sub('[' + HARAKA + ']', '', new) != re.sub('[' + HARAKA + ']', '', txt):
+            raise SystemExit(f'fix_harakat changed letters in {ref}: {txt!r} -> {new!r}')
+        HARAKAT_LOG.append((ref, txt.strip(), new.strip(), 'auto'))
+    return new
 
 
 def load_owords(db, vid):
@@ -385,6 +471,8 @@ def main(out):
         'lex_entries': q('SELECT COUNT(*) FROM lex_entries'),
         'lex_links': q('SELECT COUNT(*) FROM lex_links'),
         'dict_entries': ndict, 'renderings': nrend,
+        'harakat_moved_by_rule': sum(1 for x in HARAKAT_LOG if x[3] == 'auto'),
+        'harakat_fixed_by_hand': sum(1 for x in HARAKAT_LOG if x[3] == 'manual'),
         **{'open_' + s_: n_ for s_, n_ in db.execute('SELECT src, COUNT(*) FROM lexdefs GROUP BY src')},
         'lemmas_with_halot': q("SELECT COUNT(*) FROM lemmas WHERE halot IS NOT NULL"),
         'lemmas_with_bdag': q("SELECT COUNT(*) FROM lemmas WHERE bdag IS NOT NULL"),

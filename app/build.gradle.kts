@@ -12,8 +12,8 @@ android {
         applicationId = "com.fadysaeed.ketaby"
         minSdk = 26
         targetSdk = 35
-        versionCode = 30
-        versionName = "0.5.16"
+        versionCode = 31
+        versionName = "0.5.17"
     }
 
     // A fixed signing key lets each new APK install over the old one.
@@ -56,4 +56,5 @@ dependencies {
     implementation("androidx.compose.material:material-icons-core")
     implementation("androidx.compose.ui:ui-tooling-preview")
     debugImplementation("androidx.compose.ui:ui-tooling")
+    testImplementation("junit:junit:4.13.2")
 }

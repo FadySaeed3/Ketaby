@@ -1,0 +1,31 @@
+# Shared cases for ar_search.py and ArSearch.kt (tab-separated).
+# norm	strict|loose	input	expected search form
+# match	whole|part|loose-whole	verse text (with harakat)	query	1 or 0
+# forms	-	word	a form that must be in forms(word)
+norm	strict	وَخُبْزًا لِلأَكْلِ،	وخبزا للاكل
+norm	strict	إِلهِ إِبْرَاهِيمَ	اله ابراهيم
+norm	strict	مُوسَى	موسي
+norm	strict	سُؤَالٌ	سؤال
+norm	loose	سُؤَالٌ	سوال
+norm	loose	خَطِيئَةٍ	خطييه
+norm	loose	السَّمَاءِ	السما
+norm	loose	جَاءُوا	جاوا
+match	whole	وَخُبْزًا لِلأَكْلِ	خبزا	1
+match	whole	وَلاَ سَبْعَ خُبْزَاتِ الأَرْبَعَةِ	خبزا	0
+match	part	وَلاَ سَبْعَ خُبْزَاتِ الأَرْبَعَةِ	خبزا	1
+match	whole	يَخْبِزَانِ خُبْزَتَيْنِ	خبز	0
+match	whole	وَبِالْخُبْزِ وَحْدَهُ	خبز	1
+match	whole	سَبِّحُوا لِلرَّبِّ	الرب	1
+match	whole	فَلِلرَّبِّ الأَرْضُ	الرب	1
+match	whole	قَالَ الرَّبُّ لِمُوسَى	موسى الرب	1
+match	whole	قَالَ الرَّبُّ لِمُوسَى	موسى هارون	0
+match	whole	لاَ سُؤَالَ	سوال	0
+match	loose-whole	لاَ سُؤَالَ	سوال	1
+match	loose-whole	وَلِلسَّمَاءِ	السماء	1
+forms	-	خبزا	وخبزا
+forms	-	خبزا	فبالخبزا
+forms	-	خبزا	للخبزا
+forms	-	خبزا	وللخبزا
+forms	-	الرب	للرب
+forms	-	الرب	وبالرب
+forms	-	الرب	فالرب

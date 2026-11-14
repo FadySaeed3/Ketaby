@@ -41,6 +41,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.fadysaeed.ketaby.data.ArSearch
 import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.Db
 import com.fadysaeed.ketaby.data.Lemma
@@ -58,6 +59,10 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -151,10 +156,14 @@ private object SearchMemory {
     val verses = mutableStateOf<List<SearchHit>?>(null)
     val versesEnglish = mutableStateOf(false)
     val total = mutableIntStateOf(0)
+    /** Arabic search: whole words (with proclitics) unless "part of a word" is on; loose hamza seats. */
+    val partWord = mutableStateOf(false)
+    val looseHamza = mutableStateOf(false)
     val lemmas = mutableStateOf<List<Lemma>?>(null)
     val refs = mutableStateOf<List<RefHit>>(emptyList())
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchScreen(nav: Nav) {
     var query by SearchMemory.query
@@ -166,6 +175,10 @@ fun SearchScreen(nav: Nav) {
     var lemmas by SearchMemory.lemmas
     var refs by SearchMemory.refs
     var shown by SearchMemory.shown
+    var partWord by SearchMemory.partWord
+    var looseHamza by SearchMemory.looseHamza
+    var loadingMore by remember { mutableStateOf(false) }
+    fun mode() = ArSearch.Mode(wholeWord = !partWord, loose = looseHamza)
     val scope = rememberCoroutineScope()
     val focus = remember { FocusRequester() }
     val ctx = LocalContext.current
@@ -175,7 +188,7 @@ fun SearchScreen(nav: Nav) {
     /** Every matching verse (the list on screen stops at 500). */
     suspend fun allHits(): List<SearchHit> =
         if (versesEnglish) Db.searchEnglish(prefs.english, shown, limit = 50000).first
-        else Db.searchArabic(shown, limit = 50000)
+        else Db.searchArabic(shown, mode(), limit = 50000)
 
     fun export(uri: android.net.Uri?, pdf: Boolean) {
         if (uri == null) return
@@ -183,8 +196,8 @@ fun SearchScreen(nav: Nav) {
         scope.launch {
             val ok = try {
                 val hits = allHits()
-                if (pdf) SearchExport.pdf(ctx, uri, shown, hits, versesEnglish, prefs.scriptureFont == "plex")
-                else SearchExport.txt(ctx, uri, shown, hits)
+                if (pdf) SearchExport.pdf(ctx, uri, shown, hits, versesEnglish, prefs.scriptureFont == "plex", mode())
+                else SearchExport.txt(ctx, uri, shown, hits, versesEnglish, mode())
                 true
             } catch (e: Exception) { false }
             busy = false
@@ -209,7 +222,7 @@ fun SearchScreen(nav: Nav) {
             lemmas = matchLemmas(Db.allLemmas(), q)
             when {
                 arabic -> {
-                    verses = Db.searchArabic(q); total = Db.countArabic(q); versesEnglish = false
+                    verses = Db.searchArabic(q, mode()); total = Db.countArabic(q, mode()); versesEnglish = false
                     tab = 0
                 }
                 latinRe.matches(q) && strongRe.find(q) == null -> {
@@ -222,6 +235,19 @@ fun SearchScreen(nav: Nav) {
                     tab = 1
                 }
             }
+        }
+    }
+
+    /** The next 500 verses of the same search. */
+    fun more() {
+        val have = verses ?: return
+        if (loadingMore) return
+        loadingMore = true
+        scope.launch {
+            val next = if (versesEnglish) Db.searchEnglish(prefs.english, shown, offset = have.size).first
+            else Db.searchArabic(shown, mode(), offset = have.size)
+            verses = have + next.filter { n -> have.none { it.verseId == n.verseId } }
+            loadingMore = false
         }
     }
 
@@ -264,6 +290,26 @@ fun SearchScreen(nav: Nav) {
                 ),
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp).focusRequester(focus),
             )
+            if (arabicRe.containsMatchIn(query) || (shown.isNotEmpty() && !versesEnglish)) {
+                Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    val chipColors = FilterChipDefaults.filterChipColors(
+                        containerColor = Panel, labelColor = Muted,
+                        selectedContainerColor = Gold.copy(alpha = 0.22f), selectedLabelColor = Gold,
+                    )
+                    FilterChip(
+                        selected = partWord,
+                        onClick = { partWord = !partWord; if (shown.isNotEmpty()) { query = shown; run() } },
+                        label = { Text(t("جزء من كلمة", "جزء من كلمة", "Part of a word"), fontSize = 13.sp) },
+                        colors = chipColors,
+                    )
+                    FilterChip(
+                        selected = looseHamza,
+                        onClick = { looseHamza = !looseHamza; if (shown.isNotEmpty()) { query = shown; run() } },
+                        label = { Text(t("همزات مرنة", "همزات مرنة", "Loose hamza"), fontSize = 13.sp) },
+                        colors = chipColors,
+                    )
+                }
+            }
             TabRow(selectedTabIndex = tab, containerColor = Color.Black, contentColor = Gold) {
                 Tab(selected = tab == 0, onClick = { tab = 0 }, text = {
                     Text(t("الآيات", "الآيات", "Verses") + (verses?.let { " (${ArText.num(total)})" } ?: ""))
@@ -306,16 +352,16 @@ fun SearchScreen(nav: Nav) {
                     if (vs != null && total > vs.size) item {
                         Text(
                             t(
-                                "بنعرض أول ${ArText.num(vs.size)} آية؛ ضيّق البحث بكلمة زيادة.",
-                                "تُعرض أول ${ArText.num(vs.size)} آية؛ أضف كلمة لتضييق البحث.",
-                                "Showing the first ${vs.size} verses; add a word to narrow the search.",
+                                "بنعرض أول ${ArText.num(vs.size)} آية من ${ArText.num(total)}؛ زرار «عرض ٥٠٠ كمان» تحت، والتصدير بيحفظ الكل.",
+                                "تُعرض أول ${ArText.num(vs.size)} آية من ${ArText.num(total)}؛ زر «عرض ٥٠٠ أخرى» في الأسفل، والتصدير يحفظ الكل.",
+                                "Showing the first ${vs.size} of $total verses; \"Show 500 more\" is at the bottom, and export saves them all.",
                             ),
                             color = Muted, fontSize = 12.sp,
                         )
                     }
                     items(vs.orEmpty(), key = { it.verseId }) { h ->
-                        val marked = remember(h.verseId, shown, versesEnglish) {
-                            SearchMarks.annotated(h.text, SearchMarks.ranges(h.text, shown, versesEnglish), Gold, Gold.copy(alpha = 0.22f))
+                        val marked = remember(h.verseId, shown, versesEnglish, partWord, looseHamza) {
+                            SearchMarks.annotated(h.text, SearchMarks.ranges(h.text, shown, versesEnglish, mode()), Gold, Gold.copy(alpha = 0.22f))
                         }
                         Column(
                             Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(Panel)
@@ -333,6 +379,19 @@ fun SearchScreen(nav: Nav) {
                                     modifier = Modifier.fillMaxWidth(), style = TextStyle(textDirection = TextDirection.Rtl),
                                 )
                             }
+                        }
+                    }
+                    if (vs != null && total > vs.size) item {
+                        OutlinedButton(
+                            onClick = { more() }, enabled = !loadingMore,
+                            border = BorderStroke(1.dp, Gold.copy(alpha = 0.6f)),
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            Text(
+                                if (loadingMore) t("بيحمّل…", "جارٍ التحميل…", "Loading…")
+                                else t("عرض ٥٠٠ كمان", "عرض ٥٠٠ أخرى", "Show 500 more") + " (${ArText.num(vs.size)} / ${ArText.num(total)})",
+                                color = Gold,
+                            )
                         }
                     }
                 } else {

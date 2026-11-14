@@ -341,7 +341,7 @@ object Db {
     }
 
     /** English search (case and punctuation ignored); every word of the query must appear. */
-    suspend fun searchEnglish(tr: String, q: String, limit: Int = 500): Pair<List<SearchHit>, Int> = withContext(Dispatchers.IO) {
+    suspend fun searchEnglish(tr: String, q: String, limit: Int = 500, offset: Int = 0): Pair<List<SearchHit>, Int> = withContext(Dispatchers.IO) {
         val words = q.lowercase().replace(Regex("[^a-z0-9 ]+"), " ").split(' ').filter { it.isNotBlank() }
         if (words.isEmpty()) return@withContext Pair(emptyList(), 0)
         val where = words.joinToString(" AND ") { "e.plain LIKE ?" }
@@ -349,7 +349,7 @@ object Db {
         val total = query("SELECT COUNT(*) FROM everses e WHERE e.tr=? AND $where", args) { it.getInt(0) }.first()
         val hits = query(
             "SELECT v.id, v.book, b.name_ar, b.name_en, v.ch, v.v, e.text FROM everses e JOIN verses v ON v.id=e.verse_id " +
-                "JOIN books b ON b.id=v.book WHERE e.tr=? AND $where ORDER BY v.id LIMIT $limit",
+                "JOIN books b ON b.id=v.book WHERE e.tr=? AND $where ORDER BY v.id LIMIT $limit OFFSET $offset",
             args,
         ) { SearchHit(it.getLong(0), it.getInt(1), if (ArText.english) it.getString(3) else it.getString(2), it.getInt(4), it.getInt(5), it.getString(6)) }
         Pair(hits, total)
@@ -387,21 +387,19 @@ object Db {
         query("SELECT book, ch, v FROM verses WHERE id=?", arrayOf("$verseId")) { Triple(it.getInt(0), it.getInt(1), it.getInt(2)) }.firstOrNull()
     }
 
-    /** Arabic search without harakat; every word of the query must appear in the verse. */
-    suspend fun searchArabic(q: String, limit: Int = 500): List<SearchHit> = withContext(Dispatchers.IO) {
-        val words = ArText.plainArabic(q).split(' ').filter { it.isNotBlank() }
-        if (words.isEmpty()) return@withContext emptyList()
-        val where = words.joinToString(" AND ") { "v.plain LIKE ?" }
-        query(
-            "SELECT v.id, v.book, b.name_ar, v.ch, v.v, v.text, b.name_en FROM verses v JOIN books b ON b.id=v.book WHERE $where ORDER BY v.id LIMIT $limit",
-            words.map { "%$it%" }.toTypedArray(),
-        ) { SearchHit(it.getLong(0), it.getInt(1), if (ArText.english) it.getString(6) else it.getString(2), it.getInt(3), it.getInt(4), it.getString(5)) }
-    }
+    /** Arabic search without harakat; every word of the query must appear in the verse (rules in ArSearch). */
+    suspend fun searchArabic(q: String, mode: ArSearch.Mode = ArSearch.Mode(), limit: Int = 500, offset: Int = 0): List<SearchHit> =
+        withContext(Dispatchers.IO) {
+            val (where, args) = ArSearch.sql("v.plain", q, mode) ?: return@withContext emptyList()
+            query(
+                "SELECT v.id, v.book, b.name_ar, v.ch, v.v, v.text, b.name_en FROM verses v JOIN books b ON b.id=v.book " +
+                    "WHERE $where ORDER BY v.id LIMIT $limit OFFSET $offset",
+                args.toTypedArray(),
+            ) { SearchHit(it.getLong(0), it.getInt(1), if (ArText.english) it.getString(6) else it.getString(2), it.getInt(3), it.getInt(4), it.getString(5)) }
+        }
 
-    suspend fun countArabic(q: String): Int = withContext(Dispatchers.IO) {
-        val words = ArText.plainArabic(q).split(' ').filter { it.isNotBlank() }
-        if (words.isEmpty()) return@withContext 0
-        val where = words.joinToString(" AND ") { "plain LIKE ?" }
-        query("SELECT COUNT(*) FROM verses WHERE $where", words.map { "%$it%" }.toTypedArray()) { it.getInt(0) }.first()
+    suspend fun countArabic(q: String, mode: ArSearch.Mode = ArSearch.Mode()): Int = withContext(Dispatchers.IO) {
+        val (where, args) = ArSearch.sql("plain", q, mode) ?: return@withContext 0
+        query("SELECT COUNT(*) FROM verses WHERE $where", args.toTypedArray()) { it.getInt(0) }.first()
     }
 }

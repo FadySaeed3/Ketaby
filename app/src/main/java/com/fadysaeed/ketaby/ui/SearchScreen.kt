@@ -192,20 +192,20 @@ fun SearchScreen(nav: Nav) {
     var partWord by SearchMemory.partWord
     var looseHamza by SearchMemory.looseHamza
     var loadingMore by remember { mutableStateOf(false) }
-    var scope by SearchMemory.scope
+    var searchScope by SearchMemory.scope
     var vdTotal by SearchMemory.vdTotal
     fun mode() = ArSearch.Mode(wholeWord = !partWord, loose = looseHamza)
     val scope = rememberCoroutineScope()
     val focus = remember { FocusRequester() }
     val ctx = LocalContext.current
     val hasJesuit = Jesuit.version.intValue >= 0 && Jesuit.has(ctx)
-    LaunchedEffect(hasJesuit) { if (!hasJesuit) scope = 0 }
+    LaunchedEffect(hasJesuit) { if (!hasJesuit) searchScope = 0 }
     var menu by remember { mutableStateOf(false) }
 
     /** One page of Arabic results in the chosen scope: Van Dyke verses first, then Jesuit ones. */
     suspend fun arabicPage(q: String, offset: Int, limit: Int = 500): List<SearchHit> {
         val m = mode()
-        return when (scope) {
+        return when (searchScope) {
             0 -> Db.searchArabic(q, m, limit, offset)
             1 -> Jesuit.search(ctx, q, m, limit, offset)
             else -> if (offset < vdTotal) {
@@ -253,12 +253,12 @@ fun SearchScreen(nav: Nav) {
             lemmas = matchLemmas(Db.allLemmas(), q)
             when {
                 arabic -> {
-                    vdTotal = if (scope == 1) 0 else Db.countArabic(q, mode())
-                    total = vdTotal + if (scope == 0) 0 else Jesuit.count(ctx, q, mode())
+                    vdTotal = if (searchScope == 1) 0 else Db.countArabic(q, mode())
+                    total = vdTotal + if (searchScope == 0) 0 else Jesuit.count(ctx, q, mode())
                     verses = arabicPage(q, 0); versesEnglish = false
                     android.util.Log.d(
                         "KetabyReader",
-                        "search \"$q\" scope=$scope whole=${!partWord} loose=$looseHamza total=$total vd=$vdTotal shown=${verses?.size}",
+                        "search \"$q\" scope=$searchScope whole=${!partWord} loose=$looseHamza total=$total vd=$vdTotal shown=${verses?.size}",
                     )
                     tab = 0
                 }
@@ -348,16 +348,16 @@ fun SearchScreen(nav: Nav) {
                         val labels = listOf(t("فاندايك", "فاندايك", "Van Dyke"), t("اليسوعية", "اليسوعية", "Jesuit"), t("الاتنين", "كلاهما", "Both"))
                         var open by remember { mutableStateOf(false) }
                         FilterChip(
-                            selected = scope != 0,
+                            selected = searchScope != 0,
                             onClick = { open = true },
-                            label = { Text(labels[scope] + " ▾", fontSize = 13.sp) },
+                            label = { Text(labels[searchScope] + " ▾", fontSize = 13.sp) },
                             colors = chipColors,
                         )
                         DropdownMenu(expanded = open, onDismissRequest = { open = false }, containerColor = PanelHi) {
                             labels.forEachIndexed { i, l ->
                                 DropdownMenuItem(
-                                    text = { Text(l, color = if (i == scope) Gold else Ink) },
-                                    onClick = { open = false; scope = i; if (shown.isNotEmpty()) { query = shown; run() } },
+                                    text = { Text(l, color = if (i == searchScope) Gold else Ink) },
+                                    onClick = { open = false; searchScope = i; if (shown.isNotEmpty()) { query = shown; run() } },
                                 )
                             }
                         }

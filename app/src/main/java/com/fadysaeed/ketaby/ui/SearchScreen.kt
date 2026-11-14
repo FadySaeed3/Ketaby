@@ -302,13 +302,13 @@ fun SearchScreen(nav: Nav) {
                     IconButton(onClick = { if (!busy) menu = true }) {
                         Icon(Icons.Filled.Share, t("تصدير النتايج", "تصدير النتائج", "Export results"), tint = if (busy) Muted else Ink)
                     }
-                    DropdownMenu(expanded = menu, onDismissRequest = { menu = false }, containerColor = PanelHi) {
+                    KDropdownMenu(expanded = menu, onDismissRequest = { menu = false }, containerColor = PanelHi) {
                         DropdownMenuItem(
-                            text = { Text(t("حفظ كملف نص (TXT)", "حفظ كملف نصي (TXT)", "Save as text (TXT)"), color = Ink) },
+                            text = { Text(t("حفظ كملف نص (TXT)", "حفظ كملف نصي (TXT)", "Save as text (TXT)"), color = Ink, maxLines = 1) },
                             onClick = { menu = false; txtLauncher.launch(fileName("txt")) },
                         )
                         DropdownMenuItem(
-                            text = { Text(t("حفظ كملف PDF", "حفظ كملف PDF", "Save as PDF"), color = Ink) },
+                            text = { Text(t("حفظ كملف PDF", "حفظ كملف PDF", "Save as PDF"), color = Ink, maxLines = 1) },
                             onClick = { menu = false; pdfLauncher.launch(fileName("pdf")) },
                         )
                     }
@@ -353,7 +353,7 @@ fun SearchScreen(nav: Nav) {
                             label = { Text(labels[searchScope] + " ▾", fontSize = 13.sp) },
                             colors = chipColors,
                         )
-                        DropdownMenu(expanded = open, onDismissRequest = { open = false }, containerColor = PanelHi) {
+                        KDropdownMenu(expanded = open, onDismissRequest = { open = false }, containerColor = PanelHi) {
                             labels.forEachIndexed { i, l ->
                                 DropdownMenuItem(
                                     text = { Text(l, color = if (i == searchScope) Gold else Ink) },

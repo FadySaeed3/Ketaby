@@ -188,7 +188,7 @@ private fun ViewMenu(hasJesuit: Boolean, onJesuit: () -> Unit, onHome: () -> Uni
     val prefs = LocalPrefs.current
     var open by remember { mutableStateOf(false) }
     IconButton(onClick = { open = true }) { Icon(Icons.Filled.MoreVert, t("طريقة العرض", "طريقة العرض", "View"), tint = Ink) }
-    DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+    KDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
         val item: @Composable (String, Boolean, () -> Unit) -> Unit = { label, checked, onClick ->
             MenuItem(label, checked) { onClick(); open = false }
         }

@@ -82,9 +82,15 @@ object SearchExport {
 
     suspend fun txt(ctx: Context, uri: Uri, query: String, hits: List<SearchHit>, english: Boolean, mode: ArSearch.Mode) = withContext(Dispatchers.IO) {
         val sb = StringBuilder("\uFEFF")
-        header(query, hits.size, english, mode).forEach { sb.append(it).append('\n') }
+        // Lines in Arabic start with a right-to-left mark, so text editors lay them out right to left
+        // even when they begin with a digit or a Latin word (the date, "Jesuit · …").
+        val rlm = if (ArText.ui != "en") "\u200F" else ""
+        header(query, hits.size, english, mode).forEach { sb.append(rlm).append(it).append('\n') }
         sb.append('\n')
-        for (h in hits) sb.append(ref(h)).append('\n').append(h.text).append("\n\n")
+        for (h in hits) {
+            sb.append(rlm).append(ref(h)).append('\n')
+            sb.append(if (english) "\u200E" else "\u200F").append(h.text).append("\n\n")
+        }
         ctx.contentResolver.openOutputStream(uri, "wt")!!.use { it.write(sb.toString().toByteArray(Charsets.UTF_8)) }
     }
 

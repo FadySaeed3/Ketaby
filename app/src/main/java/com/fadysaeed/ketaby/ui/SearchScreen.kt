@@ -52,6 +52,16 @@ import com.fadysaeed.ketaby.data.Book
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextDirection
+import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.ui.platform.LocalContext
 
 private val strongRe = Regex("^\\s*([HhGg])\\s*0*(\\d{1,4})([A-Za-z]?)\\s*$")
 private val arabicRe = Regex("[\\u0621-\\u064A]")
@@ -135,6 +145,8 @@ private fun matchLemmas(all: List<Lemma>, q: String): List<Lemma> {
 /** The last search stays on screen when you come back to it from a verse. */
 private object SearchMemory {
     val query = mutableStateOf("")
+    /** The query that produced the results on screen (the box may have changed since). */
+    val shown = mutableStateOf("")
     val tab = mutableIntStateOf(0)
     val verses = mutableStateOf<List<SearchHit>?>(null)
     val versesEnglish = mutableStateOf(false)
@@ -153,13 +165,45 @@ fun SearchScreen(nav: Nav) {
     var total by SearchMemory.total
     var lemmas by SearchMemory.lemmas
     var refs by SearchMemory.refs
+    var shown by SearchMemory.shown
     val scope = rememberCoroutineScope()
     val focus = remember { FocusRequester() }
+    val ctx = LocalContext.current
+    var menu by remember { mutableStateOf(false) }
+    var busy by remember { mutableStateOf(false) }
+
+    /** Every matching verse (the list on screen stops at 500). */
+    suspend fun allHits(): List<SearchHit> =
+        if (versesEnglish) Db.searchEnglish(prefs.english, shown, limit = 50000).first
+        else Db.searchArabic(shown, limit = 50000)
+
+    fun export(uri: android.net.Uri?, pdf: Boolean) {
+        if (uri == null) return
+        busy = true
+        scope.launch {
+            val ok = try {
+                val hits = allHits()
+                if (pdf) SearchExport.pdf(ctx, uri, shown, hits, versesEnglish, prefs.scriptureFont == "plex")
+                else SearchExport.txt(ctx, uri, shown, hits)
+                true
+            } catch (e: Exception) { false }
+            busy = false
+            Toast.makeText(
+                ctx,
+                if (ok) t("الملف اتحفظ", "حُفظ الملف", "File saved") else t("ما قدرتش أحفظ الملف", "تعذّر حفظ الملف", "Could not save the file"),
+                Toast.LENGTH_SHORT,
+            ).show()
+        }
+    }
+    val txtLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/plain")) { export(it, false) }
+    val pdfLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/pdf")) { export(it, true) }
+    fun fileName(ext: String) = t("بحث", "بحث", "search") + " - " + shown.replace(Regex("[\\\\/:*?\"<>|]"), " ").trim().take(40) + "." + ext
 
     fun run() {
         val q = query.trim()
         if (q.isEmpty()) return
         scope.launch {
+            shown = q
             refs = findRefs(q, Db.books())
             val arabic = arabicRe.containsMatchIn(q)
             lemmas = matchLemmas(Db.allLemmas(), q)
@@ -185,7 +229,26 @@ fun SearchScreen(nav: Nav) {
 
     Scaffold(
         containerColor = Color.Black,
-        topBar = { KTopBar(t("بحث", "بحث", "Search"), onBack = { nav.pop() }) { HomeAction(nav) } },
+        topBar = {
+            KTopBar(t("بحث", "بحث", "Search"), onBack = { nav.pop() }) {
+                if (tab == 0 && !verses.isNullOrEmpty()) {
+                    IconButton(onClick = { if (!busy) menu = true }) {
+                        Icon(Icons.Filled.Share, t("تصدير النتايج", "تصدير النتائج", "Export results"), tint = if (busy) Muted else Ink)
+                    }
+                    DropdownMenu(expanded = menu, onDismissRequest = { menu = false }, containerColor = PanelHi) {
+                        DropdownMenuItem(
+                            text = { Text(t("حفظ كملف نص (TXT)", "حفظ كملف نصي (TXT)", "Save as text (TXT)"), color = Ink) },
+                            onClick = { menu = false; txtLauncher.launch(fileName("txt")) },
+                        )
+                        DropdownMenuItem(
+                            text = { Text(t("حفظ كملف PDF", "حفظ كملف PDF", "Save as PDF"), color = Ink) },
+                            onClick = { menu = false; pdfLauncher.launch(fileName("pdf")) },
+                        )
+                    }
+                }
+                HomeAction(nav)
+            }
+        },
     ) { pad ->
         Column(Modifier.padding(pad).fillMaxSize()) {
             OutlinedTextField(
@@ -251,6 +314,9 @@ fun SearchScreen(nav: Nav) {
                         )
                     }
                     items(vs.orEmpty(), key = { it.verseId }) { h ->
+                        val marked = remember(h.verseId, shown, versesEnglish) {
+                            SearchMarks.annotated(h.text, SearchMarks.ranges(h.text, shown, versesEnglish), Gold, Gold.copy(alpha = 0.22f))
+                        }
                         Column(
                             Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(Panel)
                                 .clickable { nav.push(Screen.Reader(h.book, h.ch, h.v)) }.padding(12.dp),
@@ -258,12 +324,12 @@ fun SearchScreen(nav: Nav) {
                             Text("${h.bookName} ${ArText.num(h.ch)}:${ArText.num(h.v)}", color = Gold, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
                             if (versesEnglish) {
                                 Text(
-                                    h.text, fontFamily = FontFamily.Serif, fontSize = 17.sp, color = Ink, lineHeight = 26.sp,
+                                    marked, fontFamily = FontFamily.Serif, fontSize = 17.sp, color = Ink, lineHeight = 26.sp,
                                     modifier = Modifier.fillMaxWidth(), style = TextStyle(textDirection = TextDirection.Ltr),
                                 )
                             } else {
                                 Text(
-                                    h.text, fontFamily = scriptureFamily(), fontSize = 18.sp, color = Ink, lineHeight = 32.sp,
+                                    marked, fontFamily = scriptureFamily(), fontSize = 18.sp, color = Ink, lineHeight = 32.sp,
                                     modifier = Modifier.fillMaxWidth(), style = TextStyle(textDirection = TextDirection.Rtl),
                                 )
                             }

@@ -95,7 +95,7 @@ for path in args:
             m = re.search(r'([٠-٩]+) مر(?:ات|تين)', meaning)
             said = 1 if 'مرة واحدة' in meaning else 2 if re.search(r'(?<![٠-٩] )مرتين', meaning) and not m else int(m.group(1).translate(AD)) if m else None
             if said is not None and cnt is not None and said != cnt: probs.append(f'count says {said}, DB {cnt}')
-        leak = [w for w in (r'الباك\b', r'الداتا', r'\bpack\b', r'dataset', r'مشيت ورا', r'اللي قبلها', r'اللي قبله\b', r'اللي بعده\b', r'اللي بعدها')
+        leak = [w for w in (r'الباك\b', r'الداتا', r'\bpack\b', r'dataset', r'مشيت ورا', r'اللي قبلها', r'اللي قبله\b', r'اللي بعده\b', r'اللي بعدها', r'««')
                 if any(re.search(w, e['entry'][k]) for k in ('eg', 'msa', 'en'))]
         if leak: probs.append('talks about the pack/itself: ' + ' '.join(leak))
         odd = set(re.findall(r'[\u0400-\u04ff\u0530-\u058f\u0e00-\u0e7f\u3040-\u30ff\u4e00-\u9fff\uac00-\ud7af]', ' '.join(e['entry'].values()) + ' '.join(e['gloss'].values())))

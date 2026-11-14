@@ -140,6 +140,11 @@ private fun Main(prefs: Prefs, nav: Nav, sheetStrong: String?) {
             // "jread:1:1:3" opens the Jesuit reader (emulator smoke test)
             val p = sheetStrong.removePrefix("jread:").split(':').map { it.toInt() }
             nav.push(Screen.JReader(p[0], p[1], p[2]))
+        } else if (sheetStrong?.startsWith("search:") == true) {
+            // "search:<0|1|2>:<url-encoded query>" opens the search and runs it (emulator smoke test)
+            val p = sheetStrong.removePrefix("search:").split(':', limit = 2)
+            startSearch(java.net.URLDecoder.decode(p.getOrElse(1) { "" }, "UTF-8"), p[0].toIntOrNull() ?: 0)
+            nav.push(Screen.Search)
         } else if (sheetStrong == "jesuit") {
             // "jesuit" opens the Jesuit translation screen (emulator smoke test)
             nav.push(if (Jesuit.has(ctxMain)) Screen.JBooks else Screen.JesuitSetup)

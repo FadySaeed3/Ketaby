@@ -66,7 +66,8 @@ object SearchMarks {
 
 /** Saves search results as a plain text file or a PDF. */
 object SearchExport {
-    private fun ref(h: SearchHit) = "${h.bookName} ${ArText.num(h.ch)}:${ArText.num(h.v)}"
+    private fun ref(h: SearchHit) = (if (h.jesuit) t("اليسوعية · ", "اليسوعية · ", "Jesuit · ") else "") +
+        "${h.bookName} ${ArText.num(h.ch)}:${ArText.num(h.v)}${h.sub}"
 
     private fun header(query: String, total: Int, english: Boolean, mode: ArSearch.Mode): List<String> = listOf(
         t("كتابي · نتايج البحث", "كتابي · نتائج البحث", "Ketaby · Search results"),
@@ -75,9 +76,13 @@ object SearchExport {
         SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.US).format(Date()).let { ArText.num(it) },
     )
 
-    suspend fun txt(ctx: Context, uri: Uri, query: String, hits: List<SearchHit>) = withContext(Dispatchers.IO) {
-        val sb = StringBuilder("﻿")
-        header(query, hits.size).forEach { sb.append(it).append('\n') }
+    fun modeLabel(mode: ArSearch.Mode): String =
+        (if (mode.wholeWord) t("كلمة كاملة", "كلمة كاملة", "whole word") else t("جزء من كلمة", "جزء من كلمة", "part of a word")) +
+            (if (mode.loose) t("، همزات مرنة", "، همزات مرنة", ", loose hamza") else "")
+
+    suspend fun txt(ctx: Context, uri: Uri, query: String, hits: List<SearchHit>, english: Boolean, mode: ArSearch.Mode) = withContext(Dispatchers.IO) {
+        val sb = StringBuilder("\uFEFF")
+        header(query, hits.size, english, mode).forEach { sb.append(it).append('\n') }
         sb.append('\n')
         for (h in hits) sb.append(ref(h)).append('\n').append(h.text).append("\n\n")
         ctx.contentResolver.openOutputStream(uri, "wt")!!.use { it.write(sb.toString().toByteArray(Charsets.UTF_8)) }

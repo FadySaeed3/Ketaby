@@ -63,6 +63,88 @@ object Jesuit {
         try { db?.close() } catch (_: Exception) {}
         db = null
         hasLinks = null
+        try { sdb?.close() } catch (_: Exception) {}
+        sdb = null
+        bookNames = null
+    }
+
+    // ---- search ----
+    // The package has no search column, so the phone builds its own index of the imported text the
+    // first time it is searched (jesuit_search.db next to the package). It is rebuilt when the package
+    // changes and deleted with it; like the package, it never leaves the phone.
+    private const val INDEX_VERSION = 1
+    private var sdb: SQLiteDatabase? = null
+    private var bookNames: Map<Int, String>? = null
+
+    private fun indexFile(ctx: Context) = File(File(ctx.filesDir, "tr"), "jesuit_search.db")
+
+    @Synchronized
+    private fun searchDb(ctx: Context): SQLiteDatabase? {
+        sdb?.let { return it }
+        val src = db(ctx) ?: return null
+        val pkg = file(ctx)
+        val stamp = "${pkg.length()}:${pkg.lastModified()}:$INDEX_VERSION"
+        val f = indexFile(ctx)
+        var d = SQLiteDatabase.openOrCreateDatabase(f, null)
+        val current = try {
+            d.rawQuery("SELECT value FROM meta WHERE key='stamp'", null).use { c -> c.moveToFirst() && c.getString(0) == stamp }
+        } catch (e: Exception) { false }
+        if (!current) {
+            d.close()
+            f.delete()
+            d = SQLiteDatabase.openOrCreateDatabase(f, null)
+            d.beginTransaction()
+            try {
+                d.execSQL("CREATE TABLE meta(key TEXT PRIMARY KEY, value TEXT)")
+                d.execSQL("CREATE TABLE js(id INTEGER PRIMARY KEY, book INTEGER, ch INTEGER, v INTEGER, sub TEXT, text TEXT, plain TEXT)")
+                val ins = d.compileStatement("INSERT INTO js(book, ch, v, sub, text, plain) VALUES (?,?,?,?,?,?)")
+                src.rawQuery("SELECT book, ch, v, sub, text FROM jitems WHERE kind='v' AND v IS NOT NULL ORDER BY book, ch, seq", null).use { c ->
+                    while (c.moveToNext()) {
+                        val text = plain(c.getString(4) ?: "").replace('\n', ' ')
+                        ins.clearBindings()
+                        ins.bindLong(1, c.getLong(0)); ins.bindLong(2, c.getLong(1)); ins.bindLong(3, c.getLong(2))
+                        ins.bindString(4, c.getString(3) ?: ""); ins.bindString(5, text); ins.bindString(6, ArSearch.normalize(text))
+                        ins.executeInsert()
+                    }
+                }
+                d.execSQL("INSERT INTO meta VALUES('stamp', ?)", arrayOf<Any>(stamp))
+                d.setTransactionSuccessful()
+            } finally {
+                d.endTransaction()
+            }
+        }
+        sdb = d
+        return d
+    }
+
+    private fun names(ctx: Context): Map<Int, String> = bookNames ?: run {
+        val m = HashMap<Int, String>()
+        db(ctx)?.rawQuery("SELECT id, short FROM jbooks", null)?.use { c -> while (c.moveToNext()) m[c.getInt(0)] = c.getString(1) }
+        m.also { bookNames = it }
+    }
+
+    /** Arabic search in the imported text, with the same rules as the Van Dyke search. */
+    suspend fun search(ctx: Context, q: String, mode: ArSearch.Mode, limit: Int = 500, offset: Int = 0): List<SearchHit> =
+        withContext(Dispatchers.IO) {
+            val d = searchDb(ctx) ?: return@withContext emptyList()
+            val (where, args) = ArSearch.sql("plain", q, mode) ?: return@withContext emptyList()
+            val nm = names(ctx)
+            d.rawQuery("SELECT book, ch, v, sub, text FROM js WHERE $where ORDER BY id LIMIT $limit OFFSET $offset", args.toTypedArray()).use { c ->
+                val out = ArrayList<SearchHit>(c.count)
+                while (c.moveToNext()) {
+                    out += SearchHit(
+                        0L, c.getInt(0), nm[c.getInt(0)] ?: "", c.getInt(1), c.getInt(2), c.getString(4),
+                        jesuit = true, sub = c.getString(3) ?: "",
+                    )
+                }
+                out
+            }
+        }
+
+    suspend fun count(ctx: Context, q: String, mode: ArSearch.Mode): Int = withContext(Dispatchers.IO) {
+        val d = searchDb(ctx) ?: return@withContext 0
+        val (where, args) = ArSearch.sql("plain", q, mode) ?: return@withContext 0
+        d.rawQuery("SELECT COUNT(*) FROM js WHERE $where", args.toTypedArray()).use { c -> if (c.moveToFirst()) c.getInt(0) else 0 }
     }
 
     /** Packages built before v0.5.1 have no `links` column in jmargin. */
@@ -121,6 +203,7 @@ object Jesuit {
     fun delete(ctx: Context) {
         closeDb()
         file(ctx).delete()
+        indexFile(ctx).delete()
         version.intValue++
     }
 

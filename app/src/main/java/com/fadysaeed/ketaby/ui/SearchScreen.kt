@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.sp
 import com.fadysaeed.ketaby.data.ArSearch
 import com.fadysaeed.ketaby.data.ArText
 import com.fadysaeed.ketaby.data.Db
+import com.fadysaeed.ketaby.data.Jesuit
 import com.fadysaeed.ketaby.data.Lemma
 import com.fadysaeed.ketaby.data.SearchHit
 import kotlinx.coroutines.launch
@@ -159,8 +160,21 @@ private object SearchMemory {
     /** Arabic search: whole words (with proclitics) unless "part of a word" is on; loose hamza seats. */
     val partWord = mutableStateOf(false)
     val looseHamza = mutableStateOf(false)
+    /** Arabic search scope: 0 Van Dyke, 1 Jesuit (when imported), 2 both. */
+    val scope = mutableIntStateOf(0)
+    /** How many of `total` are Van Dyke verses (they come first when the scope is both). */
+    val vdTotal = mutableIntStateOf(0)
+    /** Set by [startSearch] so the screen runs the search when it opens. */
+    var pending = false
     val lemmas = mutableStateOf<List<Lemma>?>(null)
     val refs = mutableStateOf<List<RefHit>>(emptyList())
+}
+
+/** Opens the search with a query already typed (the emulator smoke test uses "search:<scope>:<query>"). */
+fun startSearch(query: String, scope: Int) {
+    SearchMemory.query.value = query
+    SearchMemory.scope.intValue = scope.coerceIn(0, 2)
+    SearchMemory.pending = true
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -178,17 +192,34 @@ fun SearchScreen(nav: Nav) {
     var partWord by SearchMemory.partWord
     var looseHamza by SearchMemory.looseHamza
     var loadingMore by remember { mutableStateOf(false) }
+    var scope by SearchMemory.scope
+    var vdTotal by SearchMemory.vdTotal
     fun mode() = ArSearch.Mode(wholeWord = !partWord, loose = looseHamza)
     val scope = rememberCoroutineScope()
     val focus = remember { FocusRequester() }
     val ctx = LocalContext.current
+    val hasJesuit = Jesuit.version.intValue >= 0 && Jesuit.has(ctx)
+    LaunchedEffect(hasJesuit) { if (!hasJesuit) scope = 0 }
     var menu by remember { mutableStateOf(false) }
+
+    /** One page of Arabic results in the chosen scope: Van Dyke verses first, then Jesuit ones. */
+    suspend fun arabicPage(q: String, offset: Int, limit: Int = 500): List<SearchHit> {
+        val m = mode()
+        return when (scope) {
+            0 -> Db.searchArabic(q, m, limit, offset)
+            1 -> Jesuit.search(ctx, q, m, limit, offset)
+            else -> if (offset < vdTotal) {
+                val a = Db.searchArabic(q, m, limit, offset)
+                if (a.size < limit) a + Jesuit.search(ctx, q, m, limit - a.size, 0) else a
+            } else Jesuit.search(ctx, q, m, limit, offset - vdTotal)
+        }
+    }
     var busy by remember { mutableStateOf(false) }
 
     /** Every matching verse (the list on screen stops at 500). */
     suspend fun allHits(): List<SearchHit> =
         if (versesEnglish) Db.searchEnglish(prefs.english, shown, limit = 50000).first
-        else Db.searchArabic(shown, mode(), limit = 50000)
+        else arabicPage(shown, 0, limit = 100000)
 
     fun export(uri: android.net.Uri?, pdf: Boolean) {
         if (uri == null) return
@@ -222,7 +253,13 @@ fun SearchScreen(nav: Nav) {
             lemmas = matchLemmas(Db.allLemmas(), q)
             when {
                 arabic -> {
-                    verses = Db.searchArabic(q, mode()); total = Db.countArabic(q, mode()); versesEnglish = false
+                    vdTotal = if (scope == 1) 0 else Db.countArabic(q, mode())
+                    total = vdTotal + if (scope == 0) 0 else Jesuit.count(ctx, q, mode())
+                    verses = arabicPage(q, 0); versesEnglish = false
+                    android.util.Log.d(
+                        "KetabyReader",
+                        "search \"$q\" scope=$scope whole=${!partWord} loose=$looseHamza total=$total vd=$vdTotal shown=${verses?.size}",
+                    )
                     tab = 0
                 }
                 latinRe.matches(q) && strongRe.find(q) == null -> {
@@ -245,13 +282,17 @@ fun SearchScreen(nav: Nav) {
         loadingMore = true
         scope.launch {
             val next = if (versesEnglish) Db.searchEnglish(prefs.english, shown, offset = have.size).first
-            else Db.searchArabic(shown, mode(), offset = have.size)
-            verses = have + next.filter { n -> have.none { it.verseId == n.verseId } }
+            else arabicPage(shown, have.size)
+            val seen = have.mapTo(HashSet()) { it.key }
+            verses = have + next.filter { it.key !in seen }
             loadingMore = false
         }
     }
 
-    LaunchedEffect(Unit) { if (query.isEmpty()) focus.requestFocus() }
+    LaunchedEffect(Unit) {
+        if (SearchMemory.pending) { SearchMemory.pending = false; run() }
+        else if (query.isEmpty()) focus.requestFocus()
+    }
 
     Scaffold(
         containerColor = Color.Black,
@@ -302,6 +343,25 @@ fun SearchScreen(nav: Nav) {
                         label = { Text(t("جزء من كلمة", "جزء من كلمة", "Part of a word"), fontSize = 13.sp) },
                         colors = chipColors,
                     )
+                    if (hasJesuit) {
+                        Spacer(Modifier.weight(1f))
+                        val labels = listOf(t("فاندايك", "فاندايك", "Van Dyke"), t("اليسوعية", "اليسوعية", "Jesuit"), t("الاتنين", "كلاهما", "Both"))
+                        var open by remember { mutableStateOf(false) }
+                        FilterChip(
+                            selected = scope != 0,
+                            onClick = { open = true },
+                            label = { Text(labels[scope] + " ▾", fontSize = 13.sp) },
+                            colors = chipColors,
+                        )
+                        DropdownMenu(expanded = open, onDismissRequest = { open = false }, containerColor = PanelHi) {
+                            labels.forEachIndexed { i, l ->
+                                DropdownMenuItem(
+                                    text = { Text(l, color = if (i == scope) Gold else Ink) },
+                                    onClick = { open = false; scope = i; if (shown.isNotEmpty()) { query = shown; run() } },
+                                )
+                            }
+                        }
+                    }
                     FilterChip(
                         selected = looseHamza,
                         onClick = { looseHamza = !looseHamza; if (shown.isNotEmpty()) { query = shown; run() } },
@@ -359,15 +419,19 @@ fun SearchScreen(nav: Nav) {
                             color = Muted, fontSize = 12.sp,
                         )
                     }
-                    items(vs.orEmpty(), key = { it.verseId }) { h ->
+                    items(vs.orEmpty(), key = { it.key }) { h ->
                         val marked = remember(h.verseId, shown, versesEnglish, partWord, looseHamza) {
                             SearchMarks.annotated(h.text, SearchMarks.ranges(h.text, shown, versesEnglish, mode()), Gold, Gold.copy(alpha = 0.22f))
                         }
                         Column(
                             Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(Panel)
-                                .clickable { nav.push(Screen.Reader(h.book, h.ch, h.v)) }.padding(12.dp),
+                                .clickable { nav.push(if (h.jesuit) Screen.JReader(h.book, h.ch, h.v) else Screen.Reader(h.book, h.ch, h.v)) }.padding(12.dp),
                         ) {
-                            Text("${h.bookName} ${ArText.num(h.ch)}:${ArText.num(h.v)}", color = Gold, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+                            Text(
+                                (if (h.jesuit) t("اليسوعية · ", "اليسوعية · ", "Jesuit · ") else "") +
+                                    "${h.bookName} ${ArText.num(h.ch)}:${ArText.num(h.v)}${h.sub}",
+                                color = if (h.jesuit) Teal else Gold, fontSize = 13.sp, fontWeight = FontWeight.SemiBold,
+                            )
                             if (versesEnglish) {
                                 Text(
                                     marked, fontFamily = FontFamily.Serif, fontSize = 17.sp, color = Ink, lineHeight = 26.sp,

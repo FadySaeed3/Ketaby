@@ -61,7 +61,14 @@ data class ConcHit(
     val english: EVerse? = null,
 )
 
-data class SearchHit(val verseId: Long, val book: Int, val bookName: String, val ch: Int, val v: Int, val text: String)
+/** A verse found by search. Van Dyke hits carry the verse id; Jesuit hits (jesuit = true) carry the
+ *  Jesuit book number in `book`, and `sub` for verses the edition splits (12a, 12b). */
+data class SearchHit(
+    val verseId: Long, val book: Int, val bookName: String, val ch: Int, val v: Int, val text: String,
+    val jesuit: Boolean = false, val sub: String = "",
+) {
+    val key: String get() = if (jesuit) "j$book:$ch:$v$sub" else "v$verseId"
+}
 
 /** Read-only access to ketaby.db (built by data-pipeline/build_db.py and shipped as an asset). */
 object Db {

@@ -196,6 +196,14 @@ for spot in 40:7:28 40:5:47; do
   sleep 10
   shot "21_read_${spot//:/_}"
 done
+# Search: Arabic whole-word matching on Van Dyke (خبزا = 115 verses, 122 as part of a word)
+q=$(python3 -c "import urllib.parse; print(urllib.parse.quote('خبزا'))")
+adb logcat -c
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong "search:0:$q"
+sleep 12
+shot 21s_search_vd
+adb logcat -d -s KetabyReader:D | grep 'search ' | tail -3
+adb logcat -d -s KetabyReader:D | grep -q 'scope=0 whole=true loose=false total=115 ' && echo "SEARCH CHECK OK vd" || echo "SEARCH CHECK FAIL vd"
 # Jesuit translation: first without a package (the import screen), then with a tiny fake package
 adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jesuit
 sleep 10
@@ -210,6 +218,16 @@ adb shell run-as $PKG ls -l files/tr
 adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jesuit
 sleep 10
 shot 23_jesuit_books
+# Search in the (fake) Jesuit package: the phone builds its index the first time
+q=$(python3 -c "import urllib.parse; print(urllib.parse.quote('تجريبية'))")
+adb logcat -c
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong "search:2:$q"
+sleep 12
+shot 23s_search_both
+adb logcat -d -s KetabyReader:D | grep 'search ' | tail -3
+adb logcat -d -s KetabyReader:D | grep -Eq 'scope=2 .* total=[1-9][0-9]* vd=0 ' && echo "SEARCH CHECK OK jesuit" || echo "SEARCH CHECK FAIL jesuit"
+adb shell am start -S -n $PKG/.MainActivity --es sheetStrong jesuit
+sleep 8
 tap_text '^التكوين$' center
 sleep 2
 shot 23b_jesuit_chapters
